@@ -1,0 +1,59 @@
+body{ background: none;}
+.abt-container { 
+    background-color: #22a5da; 
+    color: #fff!important; 
+    text-align: center!important;
+    }
+
+.navbar-topaz > .container .navbar-brand, 
+.navbar-topaz > .container-fluid .navbar-brand{ padding: 0px!important; padding-top: 2px;}
+
+#about .big_title_txt,
+#about .text_und_big_title, 
+#about P,
+#about H3
+{ color: #fff!important;}
+#about H3 IMG{ margin-right: 5px;}
+
+.abt1{background:#22a5da; color#fff!important; text-align:center}
+
+.carousel-caption{ top: 20%; text-align: left; color: #fff;}
+@media only screen and (max-width : 992px) {
+    .carousel-caption{ top: 40px;text-align: center; bottom: auto!important}
+}
+
+.carousel-caption h3{ font-size: 48px; text-transform: uppercase}
+.carousel-caption P{ font-size: 18px; color: #fff;}
+.carousel-caption .btn{ border-radius: 0px; font-size: 16px; padding: 15px 20px; background: #ee4d15; border: 0px; text-transform: uppercase; font-weight: bold}
+
+#services h3{ font-size: 18px; text-transform: uppercase; font-weight: bold; margin-top: 10px;}
+#services P{ font-size: 15px; margin-bottom: 10px}
+#services .col-lg-4{ margin-bottom: 30px;}
+.sol1{ 
+    background: #84c054; 
+    color: #fff!important; 
+    text-align: center!important;
+    }
+.sol1 h3{ padding: 0px; margin: 0px; margin-bottom: 10px; font-size: 18px;}
+.sol1 p{ font-size: 15px; color: #fff;}
+.sol1 .big_title{ margin-bottom: 0px;}
+.sol1 .row{ margin-bottom: 30px;}
+.sol1  .img-responsive{ padding-bottom: 15px;}
+
+.cont1{ 
+    background: #4c4c4c;
+    color: #fff!important; 
+}
+.cont1 .big_title{ margin-bottom: 0px;}
+.cont1 a{ color: #fff}
+.cont1 .contact_right_details{ margin-top: 0px;}
+.cont1 h3{ text-transform: uppercase; font-size: 18px;}
+.cont1 P{ font-size: 13px; color: #fff;}
+.cont1 .content_big_title{background:#2d313c; color:#fff; display: block; padding: 10px;}
+.cont1 SELECT{ border-radius: 0px; height: auto; padding: 10px; margin-top:1px}
+.cont1 LABEL{ display: none;}
+
+.cont1 h3,
+.sol1 h3,
+#services h3
+{font-family: 'Montserrat', sans-serif;}

@@ -1,0 +1,14 @@
+.navbar-fixed-top{
+	background:#12171b;
+	color:#fff;
+	padding-top:0px; padding-bottom:0px;
+		border-bottom:1px solid #717476;
+		font-family: 'Ubuntu', sans-serif;
+		text-transform:uppercase;
+		font-size:14px;
+		
+	}
+.navbar-brand{
+	height:auto;
+	line-height:auto;
+	}

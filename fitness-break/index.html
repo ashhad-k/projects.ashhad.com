@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Fitness Break</title>
+
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="css/agency.css" rel="stylesheet">
+<link href="css/table.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,500' rel='stylesheet' type='text/css'>
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map');
+        var mapOptions = {
+          center: new google.maps.LatLng(25.098184, 55.176301),
+          zoom: 18,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</head>
+
+<body id="page-top" class="index">
+
+
+
+<!-- Header -->
+<header>
+  <div class="container-fluid" style="padding:0px; margin:0px">
+    <div class="intro-text"> 
+      
+      <!-- main slider carousel -->
+      <div class="row">
+        <div class="col-md-12" id="slider">
+          <div class="col-md-12" id="carousel-bounding-box">
+            <div id="myCarousel" class="carousel slide"> 
+            <!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container"> 
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand page-scroll" href="#page-top"><img src="img/logo-fitnessbreak.png" /></a> </div>
+    
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="hidden"> <a href="#page-top"></a> </li>
+        <li> <a class="page-scroll" href="#page-top">Home</a> </li>
+        <li> <a class="page-scroll" href="#classes">Classess</a> </li>
+        <li> <a class="page-scroll" href="#trainers">Trainers</a> </li>
+        <!-- <li> <a class="page-scroll" href="#testimonials">Testimonials</a> </li>-->
+        <li> <a class="page-scroll" href="#gallery">Gallery</a> </li>
+        <li> <a class="page-scroll" href="#pricing">Pricing</a> </li> 
+        <li> <a class="page-scroll" href="#contact">Contact</a> </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse --> 
+  </div>
+  <!-- /.container-fluid --> 
+</nav>
+              <!-- main slider carousel items -->
+              <div class="carousel-inner">
+                <div class="active item hdr1" data-slide-number="0">
+                  <div class="container">
+                  <div class="intro-heading">Break Away <br/> Through Fitness</div>
+                  <div class=" bar white"></div>
+                  <div class="intro-lead-in">Escape the chaos of your daily life and come take a fitness break at our gm; at "Fitness Break" you will live a great unforgettable fitness experience through our friendly staff and knowledgable perosnal trainer specialists. It's a place where you will literally "break away through fitness"</div>
+                  <a href="#classes" class="page-scroll btn btn-xl">More Info</a> 
+                  </div><!--container-->
+                  </div>
+                <!--1-->
+                <div class="item hdr1" data-slide-number="1">
+                   <div class="container">
+                  <div class="intro-heading">Strongman, Circuit Training, Plyo-Cardio </br> and much more ...</div>
+                  <div class=" bar white"></div>
+                  <div class="intro-lead-in">If you lack the motivation and the energy to do your workout on your own  then group exercises are the perfect way to get you motivated and energetic. Fitness Break offers a variety of fitness classes including circuit training, plyo-cardio and yoga-Lates	</div>
+                  <a href="#classes" class="page-scroll btn btn-xl">View our Special Classes</a> 
+                  </div><!--container-->
+                   </div>
+                <!--2-->
+                <div class="item hdr1" data-slide-number="2">
+                   <div class="container">
+                  <div class="intro-heading">Take your Fitness state<br />
+                    into the next level </div>
+                  <div class=" bar white"></div>
+                  <div class="intro-lead-in">Training  gets you into a healthier mental and physical state. At Fitness Break we are determined and dedicated to get our members into a better shape.. Join us when you are ready to take your fitness state into the next level.</div>
+                  <a href="#classes" class="page-scroll btn btn-xl">Become a member now</a> 
+                  </div><!--container-->
+                   </div>
+                <!--3--> 
+              </div>
+              <!-- main slider carousel nav controls --> 
+              <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a> <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a> </div>
+          </div>
+        </div>
+      </div>
+      <!-- thumb navigation carousel -->
+       <div class="container">
+      <div class="col-lg-12 hidden-sm hidden-xs" id="slider-thumbs"> 
+        
+        <!-- thumb navigation carousel items -->
+        <ul class="list-inline">
+          <li class=" col-lg-4"> <a id="carousel-selector-0" class="selected"> Introduction </a></li>
+          <li class=" col-lg-4"><a id="carousel-selector-1"> Special Classes </a></li>
+          <li class=" col-lg-4"> <a id="carousel-selector-2"> become a member </a></li>
+        </ul>
+      </div>
+      </div><!--container-->
+      <!--/main slider carousel--> 
+      
+    </div>
+  </div>
+</header>
+
+<!-- Classes Section -->
+<section id="classes">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">OUR SPECIAL CLASSES</h2>
+        <div class="bar orange"></div>
+        <p class="cl-p1">Take advantage of our fitness classes to tone your body, increase your flexibility, build strength, muscular and cardiovascular endurance, increase your metabolism and shred your body fat.</p>
+      </div>
+    </div>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+        <div class="row text-center">
+      <div class="col-md-4">
+        <div class=" classes-item"> <img src="img/classess/functional.png" class="img-responsive" alt="">
+          <div class="caption">
+            <h4> Functional training</h4>
+            <div class="bar white"></div>
+            <p>involves training the body for the activities performed in your daily life</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class=" classes-item"> <img src="img/classess/plyocardio.png" class="img-responsive" alt="">
+          <div class="caption">
+            <h4>Plyo-cardio:</h4>
+            <div class="bar white"></div>
+            <p>involves repeated rapid jumping and rebounding, to increase muscle power and strength</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class=" classes-item"> <img src="img/classess/circuit.png" class="img-responsive" alt="">
+          <div class="caption">
+            <h4>Circuit training:</h4>
+            <div class="bar white"></div>
+            <p>It's a form of resistance training, using high intensity aerobics to build strength and muscular endurance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--row--> 
+     
+    </div><!--1-->
+    <div class="item">
+        <div class="row text-center">
+      <div class="col-md-4">
+        <div class=" classes-item"> <img src="img/classess/strongman.png" class="img-responsive" alt="">
+          <div class="caption">
+            <h4>Strongman training:</h4>
+            <div class="bar white"></div>
+            <p>It's designed to stimulate your central nervous system for the ultimate strength, metabolic conditioning and Burning fat</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class=" classes-item"> <img src="img/classess/yogalates.png" class="img-responsive" alt="">
+          <div class="caption">
+            <h4>Yoga-lates</h4>
+            <div class="bar white"></div>
+            <p>fusion of yoga and Pilates that focus on flexibility and core</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class=" classes-item"> <img src="img/classess/taebo.png" class="img-responsive" alt="">
+          <div class="caption">
+            <h4>Tae-bo</h4>
+            <div class="bar white"></div>
+            <p>involves cardio kick-boxing for fitness that focus on abs, clutes and thighs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--row--> 
+     
+    </div><!--2-->
+    
+      <div class="item">
+        <div class="row text-center">
+      <div class="col-md-4">
+        <div class=" classes-item"> <img src="img/classess/bootcamp.png" class="img-responsive" alt="">
+          <div class="caption">
+            <h4>Body toning bootcamp</h4>
+            <div class="bar white"></div>
+            <p>involves variety of fitness exercises performed in circuits.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class=" classes-item"> <img src="img/classess/dance.png" class="img-responsive" alt="">
+          <div class="caption">
+            <h4>Dance for fitness </h4>
+            <div class="bar white"></div>
+            <p>Fusion of Zumba, Salsa and hip-hop. Before you know it,you getting fit.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class=" classes-item"> <img src="img/classess/yoga.png" class="img-responsive" alt="">
+          <div class="caption">
+            <h4>Yoga</h4>
+            <div class="bar white"></div>
+            <p>involves strength flexibility, stretching, relaxation and meditation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--row--> 
+     
+    </div><!--3-->
+  
+  </div>
+
+
+</div>
+ 
+  </div>
+  
+</section>
+
+<!--  About Section -->
+<section id="about" class="bg-light-gray" style="padding-top:0px;">
+  <div class="container">
+    <div class="row">
+      <div  id="trainers" class="col-lg-6 text-center" style="padding-top:80px;">
+        <h2 class="section-heading">SPECIAL TRAINers</h2>
+        <div class="bar white"></div>
+        <p class="gl-p1">Lorem ipsuvm dolor sit amet, consectetur adipiscing elit, sed do eiusmodt tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div id="carousel-example-generic2" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic2" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic2" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic2" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+     <div class="media">
+          <img src="img/about/mudi.png"  class="img-responsive pull-left" >
+          <div class="media-body">
+            <h4 class="media-heading">MODI BUDIAB</h4>
+            <div class="bar"></div>
+            <p>A CanFitPro certified personal trainer with over 15 years of experience in the fitness industry. Specialized in training seniors and people with injuries. </p>
+            <i class="fa fa-facebook-square"></i> <i class="fa fa-twitter-square"></i> <i class="fa fa-instagram"></i> <i class="fa fa-file"></i> </div>
+        </div>
+         <div class="media">
+        <img src="img/about/neal.png"  class="img-responsive pull-right" >
+          <div class="media-body">
+            <h4 class="media-heading">Aidrick Neal Palas</h4>
+            <div class="bar"></div>
+            <p>Young & Talented personal trainer with over 6 years of experience in the fitness industry...</p>
+            <i class="fa fa-facebook-square"></i> <i class="fa fa-twitter-square"></i> <i class="fa fa-linkedin-square"></i> </div>
+        </div>
+     
+    </div><!--1-->
+    <div class="item">
+       <div class="media">
+          <img src="img/about/lance.png"  class="img-responsive pull-left" >
+          <div class="media-body">
+            <h4 class="media-heading">Jasper Lance Dotimas</h4>
+            <div class="bar"></div>
+            <p>ISSA and REPS certified personal trainer level 3, extensive knowledge in different types of trainings and fitness classes.</p>
+            <i class="fa fa-facebook-square"></i> <i class="fa fa-twitter-square"></i> <i class="fa fa-linkedin-square"></i> </div>
+        </div>
+         <div class="media">
+        <img src="img/about/elias.png"  class="img-responsive pull-right" >
+          <div class="media-body">
+            <h4 class="media-heading">Elias Achkar</h4>
+            <div class="bar"></div>
+            <p>ISSA certified personal trainer, more than 16 years of experience in Body Building and Power Training. Winner of 2014 UAE strongest Athlete. </p>
+            <i class="fa fa-facebook-square"></i> <i class="fa fa-twitter-square"></i> <i class="fa fa-linkedin-square"></i> </div>
+        </div>
+    </div><!--2-->
+     <div class="item">
+       <div class="media">
+          <img src="img/about/sean.png"  class="img-responsive pull-left" >
+          <div class="media-body">
+            <h4 class="media-heading">Sean Jaftha</h4>
+            <div class="bar"></div>
+            <p>20 years of experience, certified in spinning pilates and yoga. Sean has worked for all major fitness club in Dubai and South Africa.</p>
+            <i class="fa fa-facebook-square"></i> <i class="fa fa-twitter-square"></i> <i class="fa fa-linkedin-square"></i> </div>
+        </div>
+         
+    </div><!--3-->
+  
+  </div>
+
+ 
+
+</div> <!-- carousel -->
+       
+      </div>
+      <!--6-->
+      <div class="col-lg-6 text-center"  id="testimonials" style="padding-top:80px;" >
+        <h2 class="section-heading">TESTIMONIALS</h2>
+        <div class="bar white"></div>
+        <p class="gl-p1">Lorem ipsuvm dolor sit amet, consectetur adipiscing elit, sed do eiusmodt tempor incididunt ut labore et dolore magna aliqua.</p>
+       
+        
+        <div id="carousel-example-generic3" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic3" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic3" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic3" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <div class="tst text-center">
+        <img src="img/testimonials/pic1.png" width="545" height="232" alt="" class="img-responsive"/> 
+        <p>Over the course of two years, Modi was able to inspire and motivate me to improve my health and stamina. He is a respectful, calm and trustworthy professional. Modi has in-depth knowledge about strength training & nutrition. If you are looking for a professional, I encourage you to work with Modi.</p>
+        <div class="bar orange"></div>
+        <h4>Vicky</h4>
+        <div class="clearfix"></div>
+        </div> 
+    </div><!--1-->
+    <div class="item">
+       <div class="tst text-center">
+        <img src="img/testimonials/pic2.png" width="545" height="232" alt="" class="img-responsive"/> 
+        <p> I've been training with Neal since last 3 months with a goal to reduce weight and increase muscle strength; and already seeing very good results. He is different from other trainers because he understands each person's physical capability and makes a well balanced training regime with a lot of individual focus.</p>
+        <div class="bar orange"></div>
+        <h4>Abdul Aziz Syed</h4>
+        <div class="clearfix"></div>
+        </div>
+    </div><!--2-->
+     <div class="item">
+       <div class="tst text-center">
+        <img src="img/testimonials/pic3.png" width="545" height="232" alt="" class="img-responsive"/> 
+        <p>I would highly recommend Modi to anybody looking for a personal trainer who has extensive knowledge, is professional, committed, results oriented and as invested in your health and wellness goals as you are. If you are serious about reaching, and even exceeding, your fitness targets, Modi is the right trainer for you.</p>
+        <div class="bar orange"></div>
+        <h4>Lina Guerra</h4>
+        <div class="clearfix"></div>
+        </div>
+    </div><!--3-->
+   
+  </div>
+
+  
+  
+</div><!-- carousel -->
+
+      </div>
+      <!--6--> 
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">fitness break’s gallery</h2>
+        <div class="bar orange"></div>
+        <p class="gl-p1">Live the "Fitness Break" experience through our gym colors; the blue in the weights room is to keep you focused, the yellow and orange in the group exercise zone are to speed your metabolism, increase your concentration and get you enthusiastic and cheerful.</p>
+      </div>
+    </div>
+   
+     
+
+    <!-- Generated by Jssor Slider Maker Online. -->
+    <!-- This demo works without jquery library. -->
+
+    <script type="text/javascript" src="js/jssor.slider.min.js"></script>
+    <!-- use jssor.slider.debug.js instead for debug -->
+    <script>
+        jssor_1_slider_init = function() {
+            
+            var jssor_1_SlideshowTransitions = [
+              {$Duration:1200,x:0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:-0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:-0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:0.3,$During:{$Top:[0.3,0.7]},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:-0.3,$SlideOut:true,$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:-0.3,$During:{$Top:[0.3,0.7]},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:0.3,$SlideOut:true,$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,$Cols:2,$During:{$Left:[0.3,0.7]},$ChessMode:{$Column:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,$Cols:2,$SlideOut:true,$ChessMode:{$Column:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:0.3,$Rows:2,$During:{$Top:[0.3,0.7]},$ChessMode:{$Row:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:0.3,$Rows:2,$SlideOut:true,$ChessMode:{$Row:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:0.3,$Cols:2,$During:{$Top:[0.3,0.7]},$ChessMode:{$Column:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:-0.3,$Cols:2,$SlideOut:true,$ChessMode:{$Column:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,$Rows:2,$During:{$Left:[0.3,0.7]},$ChessMode:{$Row:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:-0.3,$Rows:2,$SlideOut:true,$ChessMode:{$Row:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,y:0.3,$Cols:2,$Rows:2,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$ChessMode:{$Column:3,$Row:12},$Easing:{$Left:$Jease$.$InCubic,$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,y:0.3,$Cols:2,$Rows:2,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$SlideOut:true,$ChessMode:{$Column:3,$Row:12},$Easing:{$Left:$Jease$.$InCubic,$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,$Delay:20,$Clip:3,$Assembly:260,$Easing:{$Clip:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,$Delay:20,$Clip:3,$SlideOut:true,$Assembly:260,$Easing:{$Clip:$Jease$.$OutCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,$Delay:20,$Clip:12,$Assembly:260,$Easing:{$Clip:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,$Delay:20,$Clip:12,$SlideOut:true,$Assembly:260,$Easing:{$Clip:$Jease$.$OutCubic,$Opacity:$Jease$.$Linear},$Opacity:2}
+            ];
+            
+            var jssor_1_options = {
+              $AutoPlay: true,
+              $SlideshowOptions: {
+                $Class: $JssorSlideshowRunner$,
+                $Transitions: jssor_1_SlideshowTransitions,
+                $TransitionsOrder: 1
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $ThumbnailNavigatorOptions: {
+                $Class: $JssorThumbnailNavigator$,
+                $Cols: 10,
+                $SpacingX: 8,
+                $SpacingY: 8,
+                $Align: 360
+              }
+            };
+            
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+            
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizing
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 1005);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", $Jssor$.$WindowResizeFilter(window, ScaleSlider));
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            //responsive code end
+        };
+    </script>
+
+<link href="css/jssort.css" rel="stylesheet">
+
+
+    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1005px; height: 540px; overflow: hidden; visibility: hidden; background-color: #24262e;">
+        <!-- Loading Screen -->
+        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+        </div>
+        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1005px; height: 457px; overflow: hidden;">
+            <div data-p="144.50" style="display: none;">
+                <img data-u="image" src="img/gallery/00.png" />
+                <img data-u="thumb" src="img/gallery/thumb-00.png" />
+            </div>
+            <div data-p="144.50" style="display: none;">
+                <img data-u="image" src="img/gallery/01.png" />
+                <img data-u="thumb" src="img/gallery/thumb-01.png" />
+            </div>
+            <div data-p="144.50" style="display: none;">
+                <img data-u="image" src="img/gallery/02.png" />
+                <img data-u="thumb" src="img/gallery/thumb-02.png" />
+            </div>
+            <div data-p="144.50" style="display: none;">
+                <img data-u="image" src="img/gallery/03.png" />
+                <img data-u="thumb" src="img/gallery/thumb-03.png" />
+            </div>
+            <div data-p="144.50" style="display: none;">
+                <img data-u="image" src="img/gallery/04.png" />
+                <img data-u="thumb" src="img/gallery/thumb-04.png" />
+            </div>
+            <div data-p="144.50" style="display: none;">
+                <img data-u="image" src="img/gallery/05.png" />
+                <img data-u="thumb" src="img/gallery/thumb-05.png" />
+            </div>
+            <div data-p="144.50" style="display: none;">
+                <img data-u="image" src="img/gallery/06.png" />
+                <img data-u="thumb" src="img/gallery/thumb-06.png" />
+            </div>
+            <div data-p="144.50" style="display: none;">
+                <img data-u="image" src="img/gallery/07.png" />
+                <img data-u="thumb" src="img/gallery/thumb-07.png" />
+            </div>
+          
+        </div>
+        <!-- Thumbnail Navigator -->
+        <div data-u="thumbnavigator" class="jssort01" style="position:absolute;left:0px;bottom:0px;width:1005px;height:69px;" data-autocenter="1">
+            <!-- Thumbnail Item Skin Begin -->
+            <div data-u="slides" style="cursor: default;">
+                <div data-u="prototype" class="p">
+                    <div class="w">
+                        <div data-u="thumbnailtemplate" class="t"></div>
+                    </div>
+                    <div class="c"></div>
+                </div>
+            </div>
+            <!-- Thumbnail Item Skin End -->
+        </div>
+        <!-- Arrow Navigator -->
+        <span data-u="arrowleft" class="jssora05l" style="top:200px;left:1px;width:40px;height:40px;"></span>
+        <span data-u="arrowright" class="jssora05r" style="top:200px;right:8px;width:40px;height:40px;"></span>
+       
+    </div>
+    <script>
+        jssor_1_slider_init();
+    </script>
+
+    <!-- #endregion Jssor Slider End -->
+   
+  </div>
+</section>
+
+<section id="pricing">
+<div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">Pricing</h2>
+        <div class="bar white"></div>
+        <p class="gl-p1"> Live the "Fitness Break" experience through our gym colors; the blue in the weights room is to keep you focused, the yellow and orange in the group exercise zone are to speed your metabolism, increase your concentration and get you enthusiastic and cheerful.</p>
+      </div>
+      
+      <div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active "><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Membership</a></li>
+    <li role="presentation" ><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Private</a></li>
+    <li role="presentation" ><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Classes</a></li>
+<div class="clearfix"></div>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane  fade in active" id="home">
+     <div class="container">
+
+      
+
+        <div class="row flat">
+            <div class="col-lg-3 col-md-3 col-xs-12">
+                <ul class="plan plan1">
+                    <li class="plan-name">
+                        1 Month / 350 AED
+                    </li>
+                    <li class="plan-price">
+                        <strong>1</strong> Free workout plan
+                    </li>
+                    <li>
+                        <strong>Nutrition</strong> Tips
+                    </li>
+                    <li>
+                        <strong>4</strong> Free Classes
+                    </li>
+                    <li class="plan-action">
+                        <a href="#contact" class="btn btn-danger btn-lg page-scroll">Signup</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-xs-12">
+                <ul class="plan plan2">
+                    <li class="plan-name">
+                        3 Month / 950 AED
+                    </li>
+                    <li class="plan-price">
+                        <strong>3</strong> free workout plans
+                    </li>
+                    <li>
+                        <strong>Nutrition</strong> Tips
+                    </li>
+                    <li>
+                        <strong>12</strong> Free Classes
+                    </li>
+                    
+                    <li class="plan-action">
+                     <a href="#contact" class="btn btn-danger btn-lg page-scroll">Signup</a>
+                 </li>
+             </ul>
+         </div>
+
+         <div class="col-lg-3 col-md-3 col-xs-12">
+            <ul class="plan plan3 featured">
+                <li class="plan-name">
+                    6 Month / 1800 AED
+                </li>
+                <li class="plan-price">
+                    <strong>6</strong> free workout plans
+                </li>
+                <li>
+                    <strong>Nutrition</strong> Tips
+                </li>
+                <li>
+                    <strong>24</strong> Free Classes
+                </li>
+                
+                <li class="plan-action">
+                 <a href="#contact" class="btn btn-danger btn-lg page-scroll">Signup</a>
+             </li>
+         </ul>
+     </div>
+
+     <div class="col-lg-3 col-md-3 col-xs-12">
+        <ul class="plan plan4">
+            <li class="plan-name">
+                1 Year / 3000AED
+            </li>
+            <li class="plan-price">
+                <strong>12</strong> free workout plans
+            </li>
+            <li>
+                <strong>Nutrition</strong> Tips
+            </li>
+            <li>
+                <strong>48</strong> Free Classes
+            </li>
+            
+            <li class="plan-action">
+             <a href="#contact" class="btn btn-danger btn-lg page-scroll">Signup</a>
+         </li>
+     </ul>
+ </div>
+</div>
+
+</div> <!-- /container -->
+    </div><!--1-->
+    <div role="tabpanel" class="tab-pane  fade" id="profile"><div class="container">
+
+      
+
+        <div class="row flat">
+            <div class="col-lg-4 col-md-4 col-xs-6">
+                <ul class="plan plan1">
+                    <li class="plan-name">
+                        On The Go / 350 AED
+                    </li>
+                    <li class="plan-price">
+                        <strong>1 Hour</strong> of personal training
+                    </li>
+                    <li>
+                        <strong>Free</strong> Gym Access
+                    </li>
+                    <li>
+                        <strong>Nutrition</strong> Tips
+                    </li>
+                    <li class="plan-action">
+                        <a href="#contact" class="btn btn-danger btn-lg page-scroll">Signup</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-xs-6">
+                <ul class="plan plan2">
+                    <li class="plan-name">
+                        Package of 10 / 3000 AED
+                    </li>
+                    <li class="plan-price">
+                        <strong>Customized</strong> workout plan
+                    </li>
+                    <li>
+                         <strong>1 Hour</strong> of personal training <strong>(10 Sessions)</strong>
+                    </li>
+                    <li>
+                        <strong>Nutrition</strong> Tips
+                    </li>
+                    
+                    <li class="plan-action">
+                     <a href="#contact" class="btn btn-danger btn-lg page-scroll">Signup</a>
+                 </li>
+             </ul>
+         </div>
+
+         <div class="col-lg-4 col-md-4 col-xs-6">
+            <ul class="plan plan3 ">
+                 <li class="plan-name">
+                        Package of 16 / 4000 AED
+                    </li>
+                    <li class="plan-price">
+                        <strong>Customized</strong> workout plan
+                    </li>
+                    <li>
+                         <strong>1 Hour</strong> of personal training <strong>(16 Sessions)</strong>
+                    </li>
+                    <li>
+                        <strong>Nutrition</strong> Tips
+                    </li>
+                
+                <li class="plan-action">
+                 <a href="#contact" class="btn btn-danger btn-lg page-scroll">Signup</a>
+             </li>
+         </ul>
+     </div>
+
+     
+</div>
+
+</div></div><!--2-->
+    <div role="tabpanel" class="tab-pane  fade" id="messages">
+    <div class="container">
+
+      
+
+        <div class="row flat">
+            <div class="col-lg-6 col-md-6 col-xs-6">
+                <ul class="plan plan1">
+                    <li class="plan-name">
+                        Members
+                    </li>
+                    <li class="plan-price">
+                        <strong>30 AED</strong> Drop In
+                    </li>
+                    <li>
+                        <strong>250 AED</strong> 10 Classess
+                    </li>
+                    <li>
+                        <strong>Specified</strong> Classes
+                    </li>
+                    <li class="plan-action">
+                        <a href="#contact" class="btn btn-danger btn-lg page-scroll">Signup</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-xs-6">
+                <ul class="plan plan2">
+                    <li class="plan-name">
+                        Non-Members
+                    </li>
+                    <li class="plan-price">
+                        <strong>50 AED</strong> Drop In
+                    </li>
+                    <li>
+                        <strong>450 AED</strong> 10 Classes
+                    </li>
+                    <li>
+                        <strong>Specified</strong> Classes
+                    </li>
+                    
+                    <li class="plan-action">
+                     <a href="#contact" class="btn btn-danger btn-lg page-scroll">Signup</a>
+                 </li>
+             </ul>
+         </div>
+
+         
+
+     
+</div>
+
+</div>
+</div><!--3-->
+  </div>
+<div class="text-center daily-plan"><strong>DAILY PLAN: </strong> 50 AED for one day access.</div>
+
+</div>
+
+    </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">Contact Us</h2>
+        <div class="bar white"></div>
+        <p class="g1-p1">Thinking about getting into shape? Simply give us a ring or drop us an email.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <form name="sentMessage" id="contactForm" novalidate>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
+                <p class="help-block text-danger"></p>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
+                <p class="help-block text-danger"></p>
+              </div>
+              <div class="form-group">
+                <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <textarea class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-lg-12 text-center">
+              <div id="success"></div>
+              <button type="submit" class="btn btn-xl">Send Message</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+ <div id="map">
+</div>
+<footer>
+  <div class="container" >
+    <div class="row text-center">
+      <div class="col-md-12"> 
+      <div class="ft-logo"><img src="img/logo.png"  class=" img-responsive img-centered"/></div>
+      <div class="ft-contact"><span><a href="mailto:info@fitnessbreak.net"><i class="fa fa-envelope-o"></i> info@fitnessbreak.net</a></span> <span><a href="tel: 00971 55 5737027"><i class="fa fa-phone"></i> 00971 55 5737027</a></span>  <span><a href="tel: 00971 52 5712155"><i class="fa fa-phone"></i> 00971 52 571215</a></span></div> </div>
+      <div class="col-md-12">
+        <ul class="list-inline social-buttons">
+          <li><a href="#"><i class="fa fa-instagram"></i></a> </li>
+          <li><a href="#"><i class="fa fa-facebook"></i></a> </li>
+          <li><a href="#"><i class="fa fa-google-plus"></i></a> </li>
+        </ul>
+      </div>
+      <div class="col-md-12">
+        <ul class="list-inline quicklinks">
+         <li> <a class="page-scroll" href="#page-top">Home</a> </li>
+        <li> <a class="page-scroll" href="#classes">Classess</a> </li>
+        <li> <a class="page-scroll" href="#about">About Us</a> </li>
+        <li> <a class="page-scroll" href="#gallery">Gallery</a> </li> 
+        <li> <a class="page-scroll" href="#contact">Contact</a> </li>
+        </ul>
+ © 2015 FitnessBreak - International. All Rights Reserved
+      </div>
+     
+    </div>
+  </div>
+</footer>
+
+
+
+<!-- jQuery --> 
+<script src="js/jquery.js"></script> 
+
+<!-- Bootstrap Core JavaScript --> 
+<script src="js/bootstrap.min.js"></script> 
+
+<!-- Plugin JavaScript --> 
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script> 
+<script src="js/classie.js"></script> 
+<script src="js/cbpAnimatedHeader.js"></script> 
+
+<!-- Contact Form JavaScript --> 
+<script src="js/jqBootstrapValidation.js"></script> 
+<script src="js/contact_me.js"></script> 
+
+<!-- Custom Theme JavaScript --> 
+<script src="js/agency.js"></script> 
+<script>
+    $('#myCarousel').carousel({
+    interval: 4000
+});
+
+// handles the carousel thumbnails
+$('[id^=carousel-selector-]').click( function(){
+  var id_selector = $(this).attr("id");
+  var id = id_selector.substr(id_selector.length -1);
+  id = parseInt(id);
+  $('#myCarousel').carousel(id);
+  $('[id^=carousel-selector-]').removeClass('selected');
+  $(this).addClass('selected');
+});
+
+// when the carousel slides, auto update
+$('#myCarousel').on('slid', function (e) {
+  var id = $('.item.active').data('slide-number');
+  id = parseInt(id);
+  $('[id^=carousel-selector-]').removeClass('selected');
+  $('[id=carousel-selector-'+id+']').addClass('selected');
+});
+    </script>
+</body>
+</html>
