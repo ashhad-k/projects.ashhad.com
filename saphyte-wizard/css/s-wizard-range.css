@@ -1,0 +1,145 @@
+
+.range {
+  position: relative;
+  width: 900px;
+  height: 5px;
+	
+}
+
+.range input {
+  width: 100%;
+  position: absolute;
+  top: 2px;
+	left: 0px;
+  height: 0;
+  -webkit-appearance: none;
+	border: 2px solid #3c4055;
+}
+
+
+.range input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 25px;
+  height: 20px;
+  margin: -8px 0  0;
+  border-radius: 4px;
+/*  background: #ffffff;*/
+	background: url("../img/tracker.png") no-repeat 0px -1px ;
+	cursor: ew-resize;
+	
+  border: 0 !important;
+	position: relative;
+}
+.range input::-webkit-slider-thumb:after{ content: "-"; display: block;  height: 14px; width: 12px; left: 4px; background: red;}
+
+
+.range input::-moz-range-thumb {
+  width: 25px;
+  height: 20px;
+  margin: -8px 0  0;
+  border-radius: 4px;
+  background: #494c57;
+  cursor: pointer;
+  border: 0 !important;
+}
+
+.range input::-ms-thumb {
+  width: 25px;
+  height: 20px;
+  margin: -8px 0  0;
+  border-radius: 4px;
+  background: #494c57;
+  cursor: pointer;
+  border: 0 !important;
+}
+
+.range input::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: #494c57;
+}
+
+.range input::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: #b2b2b2;
+}
+
+.range input::-ms-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: #b2b2b2;
+}
+
+.range input:focus {
+  background: none;
+  outline: none;
+}
+
+.range input::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+.range-labels {
+  margin: 18px -50px 0;
+  padding: 0;
+  list-style: none;
+	position: absolute; 
+}
+
+.range-labels li {
+  position: relative;
+  float: left;
+  width: 124px;
+  text-align: center;
+  color: #494c57;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.range-labels li::before {
+  position: absolute;
+  top: -25px;
+  right: 0;
+  left: 0;
+  content: "";
+  margin: 0 auto;
+  width: 9px;
+  height: 9px;
+  background: #b2b2b2;
+  border-radius: 50%;
+	visibility: hidden;
+}
+
+.range-labels .active {
+  color: #4daad4;
+}
+
+.range-labels .selected::before {
+  background: #4daad4;
+}
+
+.range-labels .active.selected::before {
+  display: none;
+}
+
+
+.Rounded_Rectangle_5_copy {
+  background-image: -moz-linear-gradient( 0deg, rgb(167,69,224) 0%, rgb(77,170,212) 100%);
+  background-image: -webkit-linear-gradient( 0deg, rgb(167,69,224) 0%, rgb(77,170,212) 100%);
+  background-image: -ms-linear-gradient( 0deg, rgb(167,69,224) 0%, rgb(77,170,212) 100%);
+  position: absolute;
+  left: 702px;
+  top: 588px;
+  width: 383px;
+  height: 6px;
+  z-index: 4;
+}
+
