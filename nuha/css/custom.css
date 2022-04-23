@@ -1,0 +1,739 @@
+/*@import url("ticker.css");
+enable if ticker container is active
+*/
+/* Search*/
+@import url("search.css");
+
+
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-weight: 400;
+}
+
+/**
+ * Firefox specific rule
+ */
+
+@-moz-document url-prefix() {
+  body {
+    font-weight: lighter !important;
+
+  }
+}
+
+body{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	color: #556577;
+}
+
+
+
+/* 
+* ==========================================================
+*     Fonts declration
+* ==========================================================
+*/
+@font-face {
+    font-family: "CeraGR";
+    src: url("../fonts/CeraGR.otf");
+	font-weight: 100;
+}
+@font-face {
+    font-family: "CeraGR";
+    src: url("../fonts/CeraGR-Thin.otf");
+  font-weight: 200;
+}
+@font-face {
+    font-family: "CeraGR";
+    src: url("../fonts/CeraGR-Light.otf");
+  font-weight: 300;
+}
+@font-face {
+    font-family: "CeraGR";
+    src: url("../fonts/CeraGR.otf");
+    font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+    font-family: "CeraGR";
+    src: url("../fonts/CeraGR-Medium.otf");
+  font-weight: 500;
+}
+
+@font-face {
+    font-family: "CeraGR";
+    src: url("../fonts/CeraGR-Bold.otf");
+    font-weight: 600;
+}
+@font-face {
+    font-family: "CeraGR";
+    src: url("../fonts/CeraGR-Black.otf");
+    font-weight: 800;
+}
+@font-face {
+    font-family: "GE_Flow_Regular";
+    src: url("../fonts/GE_Flow_Regular.otf");
+    font-weight: 400;
+}
+
+h1{ font-weight: 600; font-family: 'CeraGR', sans-serif; font-size: 45px; color: var(--color1)}
+h2{ font-weight: 800; font-family: 'CeraGR', sans-serif; font-size: 24px; color: var(--color1)}
+h3{ font-weight: 800; font-family: 'CeraGR', sans-serif; font-size: 36px; color: var(--color1)}
+h4{ font-weight: 600; font-family: 'CeraGR', sans-serif; font-size: 20px; color: var(--color1); letter-spacing: 2px;}
+h4 span{ display: block; height: 4px; width: 63px; background:var(--color2); margin: 20px auto;}
+
+#search-box input[type="text"],
+.bg-yellow #pg-tab2.nav-tabs a.nav-link,
+.fold2 .four-boxes a,
+h5{ font-weight: 400; font-family: 'CeraGR', sans-serif; font-size: 18px; color: #333; letter-spacing: 0px;}
+
+P{ font-size: 18px;}
+
+
+
+.sidebar-anchors > a{ font-weight: 400; font-family: 'CeraGR', sans-serif;}
+
+#search-button,
+.btn-primary,
+.v2 .top1 a,
+.v2 .top2 a{ font-weight: 400; font-family: 'CeraGR', sans-serif;}
+
+.font-arabic,
+.font-arabic a{ font-weight: 600; font-family: 'GE_Flow_Regular', sans-serif!important;}
+.font-arabic a{ font-weight: 600; font-family: 'GE_Flow_Regular', sans-serif!important;}
+
+
+
+/* Font - Montserrat*/
+.fold1-pg P,
+.v1 > header
+{font-family: 'Montserrat', sans-serif;}
+
+
+/* 
+* ==========================================================
+*     General Styles
+* ==========================================================
+*/
+.fold2 .v-menu a, a,
+.v2 .top2 a{
+	transition: 0.2s
+}
+.btn-primary { background:var(--color1); border-radius: 0px; text-transform: uppercase; color: #fff; font-size: 15px;  border: 0px; padding: 15px 20px; cursor: pointer; transition: 0.5s all; }
+.btn-primary:hover { background:var(--color3);}
+.btn-primary:hover i{ transform: translate(10px, 0px) ;}
+
+i.arrow-rhs{ background: url(../img/icons/arrow-rhs.png) no-repeat; display: inline-block; width: 20px; height: 20px; vertical-align: middle; margin-left: 5px;transition: 0.5s all;}
+i.arrow-rhs2{ background: url(../img/icons/arrow-rhs2.png) no-repeat; display: inline-block; width: 20px; height: 20px; vertical-align: middle; margin-left: 5px;transition: 0.5s all;}
+i.arrow-rhs3{ background: url(../img/icons/arrow-rhs3.png) no-repeat; display: inline-block; width: 30px; height: 30px; vertical-align: middle; margin-left: 5px;transition: 0.5s all;}
+
+.spacer50px{ display: block; height: 50px;}
+.spacer100px{ display: block; height: 100px;}
+
+.bg-lite-blue{ background: #f6fdff;}
+
+/* 
+* ==========================================================
+*     Variables
+* ==========================================================
+*/
+:root {
+  --color1: #146688;
+  --color2: #cebe2b;
+  --color3: #073242;
+	
+
+}
+/*
+color:var(--color1);
+*/
+
+
+
+
+
+/* 
+* ==========================================================
+*     Vertical panels
+* ==========================================================
+*/
+.cn-v{ display: flex; flex-flow: row wrap}
+
+
+.sidebar{ width: 136px;  text-transform: uppercase; color: #fff; text-align: center; min-height: 100vh;
+	position: fixed;
+	top:0;
+	z-index: 99999;
+background: #216382;
+background: -moz-linear-gradient(left, #216382 0%, #3a829f 100%);
+background: -webkit-linear-gradient(left, #216382 0%,#3a829f 100%);
+background: linear-gradient(to right, #216382 0%,#3a829f 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#216382', endColorstr='#3a829f',GradientType=1 );
+}
+.sidebar > header{ background: #21485e; font-size: 12px; height: 38px; line-height: 38px;}
+
+.sidebar a{ color: #fff;}
+.sidebar-anchors {}
+.sidebar-anchors > a{
+	font-size: 14px;
+	display: block;
+	text-decoration: none!important;
+	border-bottom: 1px solid #3084ab;
+	padding: 30px 0;
+	transition: 0.5s all;
+}
+.sidebar-anchors > a:hover, 
+.sidebar-anchors > a.active {
+	background: url(../img/siderbar-hover.png) top left no-repeat;
+	color: var(--color1);transition: 0.5s all;
+	
+}
+
+.sidebar-anchors > a i {
+	display: block;
+	font-size: 22px;
+	margin-bottom: 10px;
+}
+.sidebar-anchors > a:last-child, .follow-link a {
+	border-bottom: 0px solid #3b2c8c;
+}
+
+/* 
+* ==========================================================
+*     Mobile Menu
+* ==========================================================
+*/
+
+.mob-menu{ 
+background: #216382;
+background: -moz-linear-gradient(left, #216382 0%, #3a829f 100%);
+background: -webkit-linear-gradient(left, #216382 0%,#3a829f 100%);
+background: linear-gradient(to right, #216382 0%,#3a829f 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#216382', endColorstr='#3a829f',GradientType=1 );
+color: #fff;
+	padding-left: 0px; padding-right: 0px; padding-bottom: 0px;
+}
+
+.mob-menu .navbar-toggler{ margin-left: 10px; margin-bottom: 10px;}
+.mob-menu .navbar-brand IMG{ width: 100px;}
+.mob-menu .top1{ text-align: right;}
+.mob-menu .top1 a{  font-size: 15px; color: #fff; }
+.mob-menu .top1 .nav{flex-grow: 1; justify-content: right;}
+.mob-menu .top1 a.active{ background-color:var(--color1); font-weight: bold}
+.mob-menu .navbar-nav{ }
+.mob-menu .sidebar-anchors > a{ color: #fff; text-transform: uppercase; text-align: left; padding: 10px 20px;}
+.mob-menu .sidebar-anchors > a{ color: #fff;}
+.mob-menu .sidebar-anchors > a:hover, 
+.mob-menu .sidebar-anchors > a.active {
+	background:var(--color2);
+	transition: 0.5s all;
+	
+}
+
+/* 
+* ==========================================================
+*     RHS Vertical panel
+* ==========================================================
+*/
+
+.v2{ flex-grow: 1; margin-left: 136px;}
+.mob-menu .top1,
+.v2 .top1{ background: #303030; display: flex; justify-content: space-between}
+
+.mob-menu .top1,
+.v2 .top1 a{ text-transform: uppercase; font-size: 13px; color:#abaaa2;}
+
+.mob-menu .top1,
+.v2 .top1 a.active{ color: #eeecd4;}
+
+.mob-menu .top1,.v2 .top1 .nav-tabs {  border-bottom-color: transparent;}
+.v2 .top1 .nav-tabs a{ font-size: 15px; border: 0px; border-radius: 0px; }
+.v2 .top1 .nav-tabs a.active{ background-color: var(--color1); color: #fff; text-decoration: underline;}
+.v2 .top1 .nav-tabs a.font-arabic{ font-size: 15px;}
+
+
+
+.v2 .top2{ background: url(../img/bg/top2.png)  top right #becec3; background-size:  cover;text-align: right; padding: 10px 20px; color: #fff;}
+.v2 .top2 a{ color: #fff; text-transform: uppercase;  font-size: 13px; margin: 0px 20px;}
+.v2 .top2 .font-arabic a{ font-size: 16px;}
+
+
+/* 
+* ==========================================================
+*     Fold1
+* ==========================================================
+*/
+
+.fold1{ background: url(../img/bg/header.jpg) no-repeat; background-size: cover; min-height:  calc(100vh - 82px - 00px); position: relative; display: flex;}
+.fold1 .lhs{ display: flex; flex-flow: row wrap; align-content: center;  padding-left: 90px;}
+.fold1 .logo1{ margin-bottom: 40px; flex: 1 100%;}
+.fold1 .logo1 IMG{ width: 324px;}
+.fold1 h1{ font-size: 45px; flex: 1 100%;}
+.fold1 h1 span{ display: block; height: 4px; width: 63px; background:var(--color2); margin: 40px 0px;}
+
+.fold1 P{ margin-right: 100px; line-height: 30px; margin-bottom: 40px; flex: 1 100%; }
+
+.cn-ticker{ display: block; position: absolute; bottom: 0px; left: 0px; right: 0px; z-index: 10; background: #073242; height: 70px;}
+
+
+/* 
+* ==========================================================
+*     Folds 2
+* ==========================================================
+*/
+.fold2{ padding-top: 70px; padding-bottom: 100px; text-align: center;background: #fff}
+.fold2 .box h5{margin-bottom: 15px; margin-top: 30px}
+.fold2 .box P{font-size: 17px; max-width: 420px; margin:20px auto}
+
+.fold2 h4{ text-transform: uppercase;}
+
+.fold3{ padding-top: 70px; padding-bottom: 100px; text-align: center;background: #f6fdff}
+.fold3 .box P{font-size: 17px; max-width: 420px; margin:20px auto}
+.fold3 .box{position: relative; z-index: 1;}
+.fold3 .box .char{ font-size: 400px; position: absolute; z-index:-1; color: #fff; text-align: left; font-weight: 800;  line-height: 200px; top: 0px; left: 50%; margin-left: -25%;}
+
+.fold4{ padding-top: 70px; padding-bottom: 100px; text-align: center;background: #f6fdff}
+
+
+/* fold5 */
+.fold5{ border-top:4px solid var(--color1); background: #fff }
+.fold5 > div{padding: 0px;}
+.fold5 .box{ border-right: 1px solid #d5e3ea;display: flex; align-items: center; justify-content: space-between; padding-left: 30px; cursor: pointer; }
+
+.fold5 .box:last-child{ border-right: 0px solid #d5e3ea}
+.fold5 .box h4{ color: #333 ; font-weight: 600; font-family: 'CeraGR', sans-serif; transition: 0.5s all;}
+.fold5 .box:hover h4{ color: #fff;  transform: translate(20px, 0px) ;}
+.fold5 .box:hover i{background: url(../img/icons/arrow-rhs.png) no-repeat; transform: translate(10px, 0px) ; }
+
+.fold5 .box.hvr-sweep-to-right:before{ background: #4a89a3}
+.fold5 .box.hvr-sweep-to-top:before{ background: #4a89a3}
+.fold5 .box.hvr-sweep-to-bottom:before{ background: #4a89a3}
+.fold5 .box.hvr-sweep-to-left:before{ background: #4a89a3}
+
+
+
+/* fold6 */
+.fold6{}
+.fold6 > div{padding: 0px;}
+.fold6 .box{ cursor: pointer;position: relative; min-height: 280px; padding: 180px 100px 10px 30px}
+
+
+.fold6 .box h4{ color: #333 ; font-weight: 600; font-family: 'CeraGR', sans-serif; transition: 0.5s all;}
+.fold6 .box P{ font-size: 14px; transition: 0.5s all; color: #333333;}
+.fold6 .box:hover h4{ color: #fff;  transform: translate(20px, 0px) ;}
+.fold6 .box:hover i{background: url(../img/icons/arrow-rhs4.png) no-repeat; transform: translate(10px, 0px) ; }
+.fold6 .box:hover p{ transform: translate(20px, 0px) ; color: #fff; }
+.fold6 .box i{ position: absolute; bottom: 30px; right: 30px;}
+
+.fold6 .box:nth-child(1){ background: url(../img/fold6-img1.jpg) no-repeat; background-size: cover;}
+.fold6 .box:nth-child(2){ background: url(../img/fold6-img2.jpg) no-repeat; background-size: cover;}
+.fold6 .box:nth-child(3){ background: url(../img/fold6-img3.jpg) no-repeat; background-size: cover;}
+.fold6 .box:nth-child(4){ background: url(../img/fold6-img4.jpg) no-repeat; background-size: cover;}
+
+.fold6 .box.hvr-sweep-to-right:before{ background: var(--color1); opacity: 0.8}
+.fold6 .box.hvr-sweep-to-top:before{ background: var(--color1); opacity: 0.8}
+.fold6 .box.hvr-sweep-to-bottom:before{ background: var(--color1); opacity: 0.8}
+.fold6 .box.hvr-sweep-to-left:before{ background: var(--color1); opacity: 0.8}
+
+
+/* fold7*/
+.fold7{ background: url(../img/bg/footer.jpg) no-repeat; background-size: cover; padding-top: 100px;  padding: 100px 20px 30px 20px; color: #87a7b5;}
+.fold7 a{ color: #87a7b5;}
+.fold7 .logo2{  margin-bottom: 20px;}
+.fold7 small{ font-size: 13px; line-height: 26px; }
+.fold7  hr{ display: block; background: #335d75; height: 2px; width: 100%; margin: 30px 0px;}
+
+.fold7 h2{ color: #fff;}
+
+.fold7 nav{  margin-top: 30px;}
+.fold7 nav a.nav-link{ font-size: 14px; border-top:1px solid #355b6c; padding: 20px 10px 20px 28px; background: url(../img/icons/arrow-rhs.png) left center no-repeat; background-size: 16px 16px; }
+.fold7 nav a.nav-link:hover{ color: #fff;}
+.fold7 P{ font-size: 16px; line-height: 34px; margin: 20px 0px;}
+
+.fold7 .input-group{ margin-top: 30px;}
+.fold7 .input-group INPUT{ border-radius: 20px!important; font-size: 14px; border: 0px; z-index: 0;}
+.fold7 .input-group INPUT:focus{ z-index: 0;}
+.fold7 .input-group INPUT:hover{ z-index: 0;}
+.fold7 .input-group INPUT:active{ z-index: 0;}
+
+.fold7 .input-group .btn{ border-radius: 20px; background: #cfc027; padding-left: 40px; padding-right: 40px; font-size: 14px; color: #fff; cursor: pointer; font-weight: 600;}
+.fold7 .input-group .input-group-append{ margin-left: -30px; z-index: 1;}
+
+.fold7 .social i{ font-size: 20px; margin-right: 10px; display: inline-block; cursor: pointer;}
+.fold7 .social i:hover{color: #fff}
+
+
+
+/* 
+* ==========================================================
+*     Internal Page - Fold1
+* ==========================================================
+*/
+
+.fold1-pg{ background: url(../img/bg/fold1-pg.png) bottom right no-repeat; background-size: cover; min-height:  calc(100vh - 82px - 00px); position: relative; display: flex;}
+.fold1-pg .lhs{ display: flex; flex-flow: row wrap; align-content: center; padding-left: 90px;}
+.fold1-pg .rhs{ display: flex;  align-items: center;}
+.fold1-pg .rhs IMG{ max-width:100%; margin: 0 auto;}
+.fold1-pg .logo1{ margin-bottom: 40px; flex: 1 100%;}
+.fold1-pg .logo1 IMG{ width: 324px;}
+.fold1-pg h1{ font-size: 45px; flex: 1 100%; color: #303030; text-transform: uppercase}
+.fold1-pg h1 span{ display: block; height: 4px; width: 63px; background:var(--color2); margin: 40px 0px;}
+.fold1-pg P{ margin-right: 100px; line-height: 30px; margin-bottom: 40px; flex: 1 100%; font-size: 18px; }
+
+/* fold2-pg*/
+.fold2 .four-boxes{ display: flex; text-align: center; }
+.fold2 .four-boxes .child{ flex: 1;  width: 0;  border-right: 1px solid #eee; transition: 0.5s all; padding: 0px 60px;}
+.fold2 .four-boxes .child:last-child{border-right: 0px solid #eee;}
+.fold2 .four-boxes a{ color: #a4a4a4;transition: 0.5s all; font-size: 18px!important; text-decoration: none}
+.fold2 .four-boxes:hover a{ color:#256d8d}
+.fold2 .four-boxes IMG{ -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */ filter: grayscale(100%); opacity: 0.5; transition: 0.5s all;}
+.fold2 .four-boxes .child:hover IMG{ -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */ filter: grayscale(0%);opacity: 1;transform: translate(00px, 10px) ;}
+
+
+.bg-yellow{ background: url(../img/bg/yellow.png) no-repeat; background-size: cover;}
+
+.bg-yellow #pg-tab2{}
+.bg-yellow #pg-tab2.nav-tabs{ background: #fff; border-radius: 30px; justify-content: center;}
+.bg-yellow #pg-tab2.nav-tabs a.nav-link{ color: #bbb590; font-size: 16px!important; font-weight: 400; text-transform: uppercase; letter-spacing: 2px; padding: 10px 50px; border-radius: 30px;}
+.bg-yellow #pg-tab2.nav-tabs a.nav-link:hover{border-color: transparent; background: #eee;}
+.bg-yellow #pg-tab2.nav-tabs a.nav-link.active{ color: #858169; background: #eee9c8; border: 0px;}
+
+.bg-yellow #pg-tab2Content{ text-align: left; padding-top:100px; padding-bottom: 50px; }
+.bg-yellow #pg-tab2Content h1{ font-size: 30px; margin-bottom: 30px; text-transform: uppercase; }
+.bg-yellow #pg-tab2Content h4{ font-size: 20px; margin-bottom: 20px;  color: #474747; letter-spacing: 0px;}
+.bg-yellow #pg-tab2Content p{ font-size: 16px; margin-bottom: 20px;  color: #585b6c; letter-spacing: 0px;}
+
+.bg-yellow #pg-tab2Content .lhs{ text-align: center}
+.bg-yellow #pg-tab2Content .rhs{ display: flex; flex-flow: row wrap; align-content: center;}
+
+.bg-yellow .btn-primary{ border-radius: 30px;  padding: 10px 30px; transition: 0.5s all;}
+.bg-yellow .btn-primary i{transition: 0.5s all; margin-right: 10px; font-size: 20px}
+
+
+
+/* 
+* ==========================================================
+*     Login Page
+* ==========================================================
+*/
+
+/* LHS */
+.cn-login{position: relative}
+.cn-login .btn-play{  width: 100px; height:  100px; position: absolute; top: 50%; margin-top: -48px; left: 50%; margin-left: -50px; z-index: 1; background: #fff; border-radius: 50%;}
+.cn-login .btn-play i{ font-size: 104px; color: #cfc027; margin-top: -2px;}
+
+.cn-login .container-fluid{ margin: 0px; padding: 0px;}
+.cn-login .lhs{ min-height:  calc(100vh - 75px); display: flex; flex-flow: row wrap; align-content: center; }
+.cn-login .lhs { }
+
+.cn-login .lhs h1{ font-size: 50px; color: #b7b7b7; letter-spacing: 0px; flex: 1 100%; margin-bottom: 40px; }
+.cn-login .lhs h1 span{  color: #000; }
+.cn-login .lhs h4 { letter-spacing: 0px; flex: 1 100%; color: #828282; font-weight: 200;  margin-bottom: 40px;  }
+
+.cn-login .lhs small{  color: #828282; flex: 1 100%; margin: 30px 0px;}
+.cn-login .lhs small a{ color: #000;}
+
+.cn-login .lhs .cn-login2{ flex: 1 100%;}
+
+.cn-login .lhs .cn-login2 .btn{ font-size: 18px;  border-radius: 5px; padding: 10px 40px;}
+.cn-login .lhs .cn-login2 .btn-dark{ color: #fff; }
+.cn-login .lhs .cn-login2 .btn-outline-dark{  color: #828282; border-color: #828282 }
+.cn-login .lhs .cn-login2 .form-check{padding-left: 00px; padding-bottom: 30px;}
+.cn-login .lhs .cn-login2 .form-check-input{ margin-left: 0px!important;}
+
+.cn-login .lhs .cn-login2-fields {
+	margin-bottom: 40px;
+	border: 1px solid #eee;
+  background-color:#fff;
+  box-shadow: 0px 25px 30px 0px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+  
+}
+.cn-login .lhs .cn-login2-fields .form-group{ border-bottom: 1px solid #eee; margin-bottom: 0px; border-left: 4px solid transparent; transition: 0.5s all;}
+.cn-login .lhs .cn-login2-fields .form-group:last-child{ border-bottom: 0px }
+.cn-login .lhs .cn-login2-fields .form-group:hover{ border-left: 4px solid #cfc027 }
+.cn-login .lhs .cn-login2-fields .form-group:active LABEL{color: #000;  }
+.cn-login .lhs .cn-login2-fields LABEL{ color: #b6b6b6!important; font-size: 16px; padding:20px 0px 0px 20px; transition: 00.5s all }
+.cn-login .lhs .cn-login2-fields INPUT{ color: #333!important; font-size: 20px; border: 0px; border-radius: 0px; padding:00px 0px 20px 20px  }
+.cn-login .lhs .cn-login2-fields INPUT:focus{border: 0px; box-shadow: none; }
+.cn-login .lhs .cn-login2-fields INPUT:active{border: 0px; }
+
+.cn-login .lhs   a{ color: #000;}
+
+/* RHS */
+.cn-login .rhs{ min-height: calc(100vh - 75px);}
+.cn-login .rhs IMG{ height: 100vh}
+.cn-login  #carouselExampleControls{height: 100vh; background: #ccc; display: flex; align-items: center; justify-content: center;}
+ 
+.cn-login .carousel-control-prev, 
+.cn-login .carousel-control-next{ opacity: 1;}
+
+.cn-login .carousel-control-prev .btn{ position: absolute; bottom: 40px; right: -40px;}
+.cn-login .carousel-control-next .btn{ position: absolute; bottom: 40px;}
+
+
+
+
+/* 
+* ==========================================================
+*     About Page
+* ==========================================================
+*/
+
+.pg-about{}
+.pg-about.fold2{ padding-bottom: 0px;}
+.pg-about.fold2 .container-fluid{ padding: 0px;}
+.pg-about.fold2 .img-overlap{}
+.pg-about.fold2 .img-overlap .col-md-6{ display: flex; align-items: center;}
+.pg-about.fold2 .img-overlap .pg-ab-cn1{  background: url(../img/bg/pg-ab-cn1.png) left bottom no-repeat  rgba(13, 103, 142, 0.95);    color: #fff; padding: 120px 150px 150px; text-align: right; margin-left: 60px; margin-right: -130px; z-index: 1  }
+.pg-about.fold2 .img-overlap .pg-ab-cn1 h3{  color: #fff; line-height: 48px; font-weight: 300; font-family: 'CeraGR', sans-serif; margin-bottom: 50px;  }
+.pg-about.fold2 .img-overlap .pg-ab-cn1 p{ font-size: 16px; line-height: 30px;  }
+
+.pg-about.fold2 .img-overlap IMG{ max-width: 100%;  margin-right: auto;}
+
+.pg-about .three-ways{}
+.pg-about .three-ways h3{ font-weight: 400;  color: #3a3b3b; margin-bottom: 100px; }
+
+.pg-about .cn2{ display: flex; flex-grow: 1; }
+.pg-about .cn2 .child{ flex-grow: 1; flex-basis: 0; border: 1px solid #eee; padding: 80px 40px;}
+.pg-about .cn2 .child MAIN{max-width: 330px; margin: 0 auto; text-align: left;}
+
+.pg-about .cn2 .child h4{ font-weight: 600; text-transform: uppercase; margin-bottom: 5px;}
+.pg-about .cn2 .child P{ font-size: 16px;}
+.pg-about .cn2 .child i{ background: red; border-radius: 50%; width: 56px; height: 56px; color: #fff; text-align: center; line-height: 56px; font-size: 30px; display: inline-block;  margin-right: 10px; float: left; }
+
+.pg-about .cn2 .child:nth-child(1) i{ background: #136284}
+.pg-about .cn2 .child:nth-child(1) h4{ color: #136284}
+
+.pg-about .cn2 .child:nth-child(2) i{ background: #3a3b3b}
+.pg-about .cn2 .child:nth-child(2) h4{ color: #3a3b3b}
+
+.pg-about .cn2 .child:nth-child(3) i{ background: #cfc027}
+.pg-about .cn2 .child:nth-child(3) h4{color: #cfc027}
+
+
+
+.pg-about.fold3{ text-align: left; padding-top: 170px; padding-bottom: 170px; background: #fff; position: relative;}
+.pg-about.fold3 aside{ background: #f0fdff; position: absolute; width: 350px; top: 0px; bottom: 0px; left: 200px;}
+
+.pg-about.fold3 IMG{width: 90%;}
+.pg-about.fold3 .container-fluid{ padding: 0px;}
+.pg-about.fold3 h4{text-transform: uppercase}
+.pg-about.fold3 h4 span{ margin: 20px 0px;}
+.pg-about.fold3 .cn3{ display: flex; flex-flow: row wrap; align-content: center}
+.pg-about.fold3 .cn3 i{ font-size: 20px; color: #87a7b5; margin: 20px 20px 20px 0px;}
+
+
+
+
+/* 
+* ==========================================================
+*     Accounts Page
+* ==========================================================
+*/
+
+
+.pg-accounts{}
+
+
+.fold3.pg-accounts{ text-align: left; padding-top: 150px; padding-bottom: 150px;}
+.fold3.pg-accounts h4 span{ margin: 40px 0px;}
+
+.pg-accounts .carousel-indicators {  cursor: pointer;}
+.pg-accounts .carousel-indicators .active{ background: #136284}
+
+.pg-accounts .cn2{ display: flex; flex-grow: 1; align-items: flex-start; margin: 0px 60px; justify-content: space-around; }
+
+.pg-accounts .cn2 .child{  flex-basis: 30%; border: 1px solid #eee; background: #fff; margin: 0px 00px; border-left: 4px solid #e3e3e3; box-shadow: 0px 0px 49px 0px rgba(0, 0, 0, 0.14);position: relative;  transition: 0.5s all}
+.pg-accounts .cn2 .child MAIN{text-align: left; padding: 25px 40px 25px 50px; margin-bottom: -40px;}
+
+.pg-accounts .cn2 .child P{ font-size: 16px;}
+.pg-accounts .cn2 .child .graph{ position: absolute; left: -40px; top: 0px; width: 80px; height: 80px; border-radius: 50%; border: 4px solid #e3e3e3; background: #fff; text-align: center; line-height: 80px; transition: 0.5s all}
+.pg-accounts .cn2 .child .btn{border-radius: 30px; opacity: 0;  margin-bottom: 00px;}
+.pg-accounts .cn2 .child:hover .btn{  opacity: 1; margin-bottom: 00px;  transform: translate(00px, 10px); transition: 0.5s all}
+.pg-accounts .cn2 .child:hover .graph{ transform: translate(00px, 20px) ;}
+
+.pg-accounts .cn2 .child:nth-child(1) .graph{ border-color:  #136284; color: #136284 }
+.pg-accounts .cn2 .child:nth-child(1) h4{ color: #136284}
+.pg-accounts .cn2 .child:nth-child(1) .btn{ background: #136284}
+
+.pg-accounts .cn2 .child:nth-child(2) .graph{  border-color: #3a3b3b; color:  #3a3b3b}
+.pg-accounts .cn2 .child:nth-child(2) h4{ color: #3a3b3b}
+.pg-accounts .cn2 .child:nth-child(2) .btn{ background: #3a3b3b}
+
+.pg-accounts .cn2 .child:nth-child(3) .graph{ border-color: #cfc027; color:  #cfc027}
+.pg-accounts .cn2 .child:nth-child(3) h4{color: #cfc027}
+.pg-accounts .cn2 .child:nth-child(3) .btn{ background: #cfc027}
+
+
+
+
+/* 
+* ==========================================================
+*     Learn Page
+* ==========================================================
+*/
+
+.pg-learn{}
+.pg-learn.fold2{ padding: 150px 100px; text-align: left;}
+.pg-learn.fold2 .cn2{}
+.pg-learn.fold2 .cn2 .child{ }
+.pg-learn.fold2 .cn2 .child:hover SECTION{transform: translate(00px, 20px) ;}
+.pg-learn.fold2 .cn2 SECTION{ background: #fff; padding: 30px 20px 30px 0px; box-shadow: 0px 6px 46px 0px rgba(0, 0, 0, 0.07); margin-right: 50px; margin-top: -50px; position: relative; transition: 0.5s all;}
+.pg-learn.fold2 .cn2 SECTION h4{ padding-left: 30px; border-left: 4px solid #136284; letter-spacing: 0px; margin-bottom: 10px;  line-height: 30px}
+.pg-learn.fold2 .cn2 SECTION p{ padding-left: 30px; font-size: 16px;  }
+.pg-learn.fold2 .cn2 IMG{ width: 100%;  }
+
+
+.pg-learn.fold3{ padding: 150px 0px;text-align: left;}
+.pg-learn.fold3 .child{ background: #fff; margin-left: -50px;}
+.pg-learn.fold3 .child{ padding: 30px 60px 30px 0px; box-shadow: 0px 6px 46px 0px rgba(0, 0, 0, 0.07);   margin-left: -150px}
+.pg-learn.fold3 .child SECTION h4{ padding-left: 60px; border-left: 4px solid #136284; letter-spacing: 0px; margin-bottom: 10px;  line-height: 30px}
+.pg-learn.fold3 .child SECTION p{ padding-left: 60px; font-size: 16px;  }
+.pg-learn.fold3 .child SECTION SMALL{ padding-left: 60px;  }
+.pg-learn.fold3 .child SECTION .btn{ margin-left: 60px;  }
+
+
+.pg-learn.fold4{ background: url(../img/bg/pg-learn-fold4.jpg) center no-repeat; background-size: cover; color: #fff;}
+.pg-learn.fold4{ padding: 80px 0px 60px 0px;}
+.pg-learn.fold4 h4{ letter-spacing: 0px; text-transform: uppercase; color: #fff}
+
+.pg-learn.fold5{ background: url(../img/bg/pg-learn-fold5.jpg) center no-repeat; background-size: cover;}
+.pg-learn.fold5{ padding: 150px 0px 150px 0px;}
+.pg-learn.fold5 h4 SPAN{ margin: 20px 00px}
+.pg-learn.fold5 p{ font-size: 16px; margin: 00px 0px 30px 0px}
+.pg-learn.fold5 .btn{ border-radius: 30px; padding: 10px 40px}
+.pg-learn.fold5 .rhs{ display: flex; flex-flow: row wrap; align-content: center}
+
+
+
+/* 
+* ==========================================================
+*     Regulations Page
+* ==========================================================
+*/
+
+.pg-regulations.fold2{ background: #fff;  padding-top: 150px; padding-bottom: 150px;}
+.pg-regulations.fold2 .cn2{ display: flex; align-items: flex-end; padding-bottom: 80px }
+.pg-regulations.fold2 .cn2 .white-box{ background: #fff; text-align: left; padding: 100px 30px 30px 100px; margin-left: -100px;}
+.pg-regulations.fold2 .cn2 .white-box  h4 {text-transform: uppercase; letter-spacing: 0px;}
+.pg-regulations.fold2 .cn2 .white-box  h4 SPAN{ margin: 20px 00px}
+.pg-regulations.fold2 .cn2 .white-box  P{ font-size: 16px}
+
+
+.pg-regulations.fold2 .cn2 .white-box2{ background: #fff; text-align: right; padding: 100px 100px 30px 30px; margin-right: -100px; z-index: 1; position: relative;}
+.pg-regulations.fold2 .cn2 .white-box2  h4 {text-transform: uppercase; letter-spacing: 0px;}
+.pg-regulations.fold2 .cn2 .white-box2  h4 SPAN{ margin: 20px 0px 20px auto;}
+.pg-regulations.fold2 .cn2 .white-box2 P{ font-size: 16px}
+
+
+
+/* 
+* ==========================================================
+*     Technology Page
+* ==========================================================
+*/
+.pg-tech.fold2{ text-align: left;padding-bottom: 200px;}
+.pg-tech.fold2 .cn1{ padding-bottom: 0px;}
+.pg-tech.fold2 .cn1 .lhs{ background: url(../img/bg/pg-tech-1.png) no-repeat #f7f7f7; background-size: cover; font-size: 30px; color: #585b6c;  display: flex; align-items: center; padding: 0px 80px}
+.pg-tech.fold2 .cn1 .rhs{ position: relative}
+.pg-tech.fold2 .cn1 .rhs .blankbox{ position: absolute; width: 160px; height:200px; background: #f7f7f7;}
+.pg-tech.fold2 .cn1 .rhs IMG{ width: 100%; margin-bottom: -200px; padding-top: 200px; }
+
+.pg-tech.fold2 h3{ font-size: 26; font-weight: 200;}
+
+.pg-tech.fold2 .cn2{}
+.pg-tech.fold2 .cn2 P{ margin: 80px 40px 0px 40px; position: relative; font-size: 18px;}
+.pg-tech.fold2 .cn2 P SPAN.line-h{position: absolute; top: 10px; left: -100px; width: 80px; height: 2px; background: #cfc027;}
+
+.pg-tech.fold3{ text-align: left; padding: 0px; position: relative; overflow: hidden;}
+.pg-tech.fold3 .blankbox{ position: absolute; left: 0px; width: 25%; height: 100vh; background: #fff;}
+.pg-tech.fold3 .lhs{ padding: 90px 0px;}
+.pg-tech.fold3 .rhs{ display: flex; align-items: center;}
+.pg-tech.fold3 .child{}
+
+.pg-tech.fold3 P{position:relative}
+.pg-tech.fold3 SPAN.line-h{position: absolute; top: 10px; left: -100px; width: 80px; height: 2px; background: #cfc027;}
+
+
+/* 
+* ==========================================================
+*     Trading Page
+* ==========================================================
+*/
+
+.pg-trading.fold2{ text-align: left; padding-bottom: 110px; padding-top: 110px;}
+.pg-trading.fold2 .lhs{}
+.pg-trading.fold2 .rhs{}
+.pg-trading.fold2 .rhs a{ color: #a4a4a4; background: none; font-weight: 500; padding: 0px 0px 0px 60px; position: relative; margin-bottom: 30px; line-height: 26px; min-height: 44px; display: flex; align-items: center;}
+.pg-trading.fold2 .rhs a IMG{ position: absolute; left: 0px; top: 0px;  
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%); 
+	opacity: 0.5; 
+	transition: 0.5s all;
+}
+.pg-trading.fold2 .rhs a.active{ color: #256d8d;}
+.pg-trading.fold2 .rhs a.active IMG{-webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%); opacity: 1; }
+
+
+/* fold3*/
+.pg-trading.fold3{ text-align: left;}
+.pg-trading.fold3 .lhs{}
+.pg-trading.fold3 .lhs .nav-link{ background: #fff; position: relative; color: #585b6c; padding: 30px 30px 10px 50px; margin-bottom: 15px; font-size: 16px;}
+.pg-trading.fold3 .lhs .nav-link i{ position: absolute; left: -50px; top: 50%; margin-top: -42px;}
+
+
+
+.pg-trading.fold3 i{ background: #fff; width: 84px; height: 84px; border-radius: 50%; margin: 20px 0px; line-height: 84px; text-align: center; font-size: 30px; 
+	box-shadow: 0px 0px 20px 0px rgba(208, 198, 115, 0.20); color: #a4a4a4;}
+.pg-trading.fold3 H4{ text-transform: uppercase; letter-spacing: 0px; color: #a4a4a4;}
+.pg-trading.fold2 H4 SPAN,
+.pg-trading.fold3 H4 SPAN{ margin: 20px 00px 30px 0px;}
+
+.pg-trading.fold3 .lhs .nav-link.active P{ color: #585b6c}
+.pg-trading.fold3 .lhs .nav-link{ transition: 0.5s all}
+
+.pg-trading.fold3 .lhs .nav-link.active,
+.pg-trading.fold3 .lhs .nav-link.active H4,
+.pg-trading.fold3 .rhs H4,
+.pg-trading.fold3 .lhs .nav-link.active i,
+.pg-trading.fold3 .rhs  i
+{ color: #15678c}
+
+
+/* 
+* ==========================================================
+*     Analysis Page
+* ==========================================================
+*/
+
+.pg-analysis.fold2{ background: #fffef6; text-align: left; padding: 150px 90px}
+.pg-analysis.fold2 .container-fluid{}
+.pg-analysis.fold2 .card{ border: 0px; }
+.pg-analysis.fold2 .card-body{ padding: 40px 40px 20px 40px }
+.pg-analysis.fold2 .card-title{ color: #15678c; font-size: 30px; font-weight:600; margin-bottom: 15px; text-transform: uppercase}
+.pg-analysis.fold2 .card-footer{ background: #fff; border: 0px; border-top:1px solid #f4f4f4; padding: 20px 30px; font-size: 16px; display: flex;}
+.pg-analysis.fold2 .card-footer i{ color: #a2a2a2; margin-right: 10px;}
+
+
+
+/**/
+#v-pills-navmenuContent{
+	background: red;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 10%;
+    opacity: 0.5;
+/*	display: none;*/
+}
+
+#v-pills-navmenu{}
+#v-pills-navmenu a:hover #v-pills-navmenuContent { display: block;}
+
+

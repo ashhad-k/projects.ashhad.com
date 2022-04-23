@@ -1,0 +1,111 @@
+@media (max-width: 991px) {
+	
+	body{ text-align: center; overflow-x: hidden; }
+	
+	h1{ font-size:36px!important;}
+	h2{ font-size:30px!important; line-height: 1.2}
+	P{ font-size:18px!important;}
+	
+	.sidebar{ display: none;}
+	.v2{ margin-left: 0px; margin-top: 58px;}
+	.v2 .top1{ display: none;}
+	.v2 .top2{ display: none;}
+	
+	.fold1-pg h1{ color: #fff;}
+	.fold1-pg h1 span,
+	.fold1 h1 span{ margin: 40px auto;}
+	
+
+	
+	.fold1{ background-size: cover; background-repeat: no-repeat; background-position: right top; padding-top: 80px; padding-bottom: 100px;  min-height: auto; }
+	.fold1 .lhs{ padding-left: 15px;}
+	.fold1 P{ margin-right: 0px;}
+	.fold1 .btn-primary{ min-width: 280px; margin-bottom: 10px}
+	
+	.fold1-pg .lhs{ background-size: cover; background-repeat: no-repeat; background-position: right top; padding: 80px 15px 100px 15px; min-height: auto;  color: #fff; display: block;}
+	.fold1-pg P{ margin-right: 0px;}
+	
+
+	/*	 Trading*/
+	.fold2.pg-trading{}
+	.pg-trading.fold2 H4,
+	.pg-trading.fold3 H4 { text-align: center;} 
+	.pg-trading.fold2 H4 SPAN, 
+	.pg-trading.fold3 H4 SPAN{ margin: 20px  auto 30px auto}
+	.pg-trading.fold2 .rhs{margin-top: 50px;}
+	.pg-trading.fold2 .lhs {text-align: center;}
+	.pg-trading.fold2 .lhs IMG{ width: 50%;}
+	.pg-trading.fold2 .rhs p{text-align: center;padding-bottom: 30px;}
+	
+	.pg-trading.fold3{}
+	.pg-trading.fold3 .lhs .nav-link{ text-align: center; padding: 20px;}
+	.pg-trading.fold3{ text-align: center;}
+	.pg-trading.fold3 .lhs .nav-link{ padding-left: 80px;}
+	.pg-trading.fold3 .lhs .nav-link i{ left: 10px; background: none; box-shadow: none;}
+
+
+	
+	.cn-ticker{ display: none;}
+	
+	
+	.fold2{ padding-top: 80px; padding-bottom: 100px;}
+	.fold2 .box{  margin-bottom: 50px;}
+	.fold2 .box:last-child{  margin-bottom: 00px;}
+	.fold2 .spacer100px{   display: none}
+	
+	.fold3{ padding-top: 80px; padding-bottom: 100px;}
+	.fold3 .box{  margin-bottom: 50px;}
+	.fold3 .box:last-child{  margin-bottom: 00px;}
+	.fold3 .spacer100px{   display: none}
+	.fold3 .box .char{display: none}
+	
+	.fold4{ padding-top: 80px; padding-bottom: 100px;}
+	
+	
+	.fold5{ padding:  0px;}
+	
+	
+	.fold6{ padding: 0px; text-align: left}
+	
+	.fold7{ padding-top: 80px; padding-bottom: 50px;}
+	.fold7 h2{ padding-top: 40px;}
+	
+	
+	
+	
+/*	------------------/992px end*/
+}
+@media (max-width:768px){
+	body{ overflow-x: hidden;}
+	.mobhide{ display: none!important}
+	.mobshow{ display: block!important}
+	
+	
+}
+
+
+@media(min-width:1024px) {
+.desktop-hidden {
+	display: none!important
+	}
+	
+}
+
+
+/* disable scrollme for mobile*/
+@media (max-width: 767px){
+	.animateme, .scrollme{
+		transform: none !important;
+		opacity: 1 !important;
+	}
+}
+
+
+
+/* updated responsive for all devices */
+@media(max-width:768px) and (min-width:642px){
+	
+	}
+	@media(max-width:1024px) and (min-width:868px){
+		
+	}
