@@ -1,0 +1,170 @@
+/*
+* ==========================================================
+*     GENERAL STYLES
+* ==========================================================
+PURPLE - #b013e4
+BLUE - #2000ac
+DARK BLUE - #121332;
+*/
+
+/*Titalium Font*/
+a.navbar-brand {
+ font-family: 'Titillium Web', sans-serif;
+}
+
+
+.card-deck.accTab .card-footer
+{
+background: #8409b0;
+background: -moz-linear-gradient(left, #8409b0 1%, #3f12b6 100%);
+background: -webkit-linear-gradient(left, #8409b0 1%,#3f12b6 100%);
+background: linear-gradient(to right, #8409b0 1%,#3f12b6 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8409b0', endColorstr='#3f12b6',GradientType=1 );
+	transition: 0.5s;
+}
+
+
+nav.navbar{
+	padding-top: 0px!important;
+	padding-bottom: 0px!important;
+	color: #333;
+	background: #fff;
+	
+}
+nav.navbar .container-fluid{ padding: 0px!important;}
+/*brand lhs*/
+nav .navbar-header{ background: #ccc;} 
+a.navbar-brand{ color:#fff!important; padding: 20px 30px; background: url( ../img/bg_logo.png) top; }
+nav.navbar .navbar-brand .brand-small{  min-width: 60px; text-align: center;}
+
+/*center heading*/
+.page-header1{ margin: 0px; }
+.page-header1 h2{ margin: 0px;  font-size:16px; text-transform: uppercase; color: #ccc; font-weight: 600;}
+/*for mobile*/
+.page-header.page-header1{  display: none!important}
+
+/* Top Center*/
+UL.nav-menu{}
+.btn-outline-primary{ margin: 0px 5px; border-color: #1f03a1!important; color: #1f03a1!important}
+.btn-outline-primary:hover{ margin: 0px 5px; background: #1f03a1!important; color: #fff!important}
+
+@media (max-width: 1199px) {
+	nav UL.nav-menu .btn-outline-primary{ display: none!important}
+	nav .page-header1 h2{ display: none!important}
+	.page-header.page-header1{ display: flex!important; align-items: center; padding-left: 15px; padding-right: 15px;}
+
+	
+}
+
+nav .nav-link { padding: 25px 15px!important;}
+nav.navbar .badge{ border: 2px solid #a114d3; width: 10px; height: 10px;}
+nav.navbar .nav-item > a span{ top: 25px; right: 6px;}
+
+.nav-menu .search{ padding: 0px 10px;}
+.nav-menu .notifications{  border-left: 1px solid #e7e7e7; margin-left: 10px;}
+.nav-menu .messages{ border-right:0px solid #e7e7e7; margin-right: 10px;}
+.nav-menu .user-info{ border-left: 1px solid #e7e7e7}
+.nav-menu .user-info > a{ padding: 18px 15px !important}
+
+.nav-menu .user-info .msg-profile2{ width: 44px; height: 44px; border: 1px solid #ccc; border-radius: 50%; line-height: 30px;}
+.nav-menu .user-info .dropdown-menu a{ padding: 5px 10px!important;}
+
+/*dropdown*/
+nav.navbar .dropdown-menu{margin-top: 0px}
+
+
+/*Inner Section*/
+.head1{}
+H5.head1 { font-weight: 600; text-transform: uppercase;}
+H5.head1 SMALL{ font-weight: 300; text-transform:none;}
+#accordion1 .card{ margin-bottom: 0px;}
+#accordion1 .card:last-child{ margin-bottom: 20px;}
+#accordion1 .card-header{padding: 0px; text-transform: uppercase}
+#accordion1 .card-header:hover{ background: #f8f8f8}
+#accordion1 .card-header h5{ color: #332d85;}
+#accordion1 .card-header a{ display: block; text-align: left; font-size:14px; font-weight: 600; padding: 15px 15px;}
+#accordion1 .card-body { }
+
+#accordion1 .card-header a .fa{ position: absolute; right: 20px; font-size:16px;}
+[data-toggle="collapse"] i:before{   content: "\f107";}
+[data-toggle="collapse"].collapsed i:before{ content: "\f106";}
+[data-toggle="collapse"]{ background:#fafafa;}
+
+#accordion1 .card-body .btn{ font-weight: 600!important; text-transform: uppercase; font-size: 14px;}
+/*#accordion1 .card-body .collapse.show{ background: #f9f9f9}*/
+
+#accordion1 .card-body .form-row > .col, 
+#accordion1 .card-body .form-row > [class*="col-"]{ padding-left: 0px; padding-right: 10px;}
+
+/*Trading Accounts*/
+.table-ta{ margin-bottom: 0px;}
+.table-ta TH{ font-weight: 600; text-transform: uppercase; font-size: 14px; padding: 1.15rem}
+.table-ta TD{ }
+.table-ta tbody tr:hover{ background: #f9fafb; transition: 0.2s}
+.table-striped tbody tr:nth-of-type(2n+1){background: #f9fafb;}
+
+/*Stats for 3 boxes header*/
+.statistic1 { margin-bottom: 20px!important; border-radius: 4px; padding: 20px;}
+.statistic1 HEADER{ text-transform: uppercase; font-size:14px; color: #454b55; font-weight: 600}
+.statistic1 h1{ font-size:26px; color: #24278b; font-weight: 600; padding-top: 5px;margin-bottom: 0px;}
+
+/*news*/
+.news{  display: flex; justify-content: space-between; flex-wrap: wrap}
+.news .statistic { border-radius: 4px;}
+.news .statistic.col-lg-6 {}
+.news .statistic > IMG { border-top-left-radius: 4px;border-bottom-left-radius: 4px;}
+.news .statistic > .text { padding: 10px; color: #333333; display: flex; flex-wrap: wrap;flex-direction: column; justify-content: space-around}
+.news .statistic > .text SMALL { color: #5c5c5c; font-size:12px;}
+.news .statistic > .text a { color: #a114d3; font-size:14px;}
+
+.news .statistic:last-of-type {  margin-bottom: auto}
+
+@media (min-width: 1199px) {
+.news .statistic.col-lg-6 { flex-basis: 49%; }	
+.news .statistic > .text { padding: 20px;}
+}
+
+/*dashboard-counts tools*/
+.dashboard-counts.tools { padding: 0px;}
+section.dashboard-counts .row{ padding: 20px 10px}
+.dashboard-counts.tools .title{ color:#a114d3; padding-top: 10px; font-size: 14px; }
+.dashboard-counts.tools .title SPAN{ color:#8a8ef8; margin-left: 10px}
+
+/*accounts*/
+.page-accounts{}
+#accountTab{ border: 0px;}
+#accountTab.nav-tabs .nav-link{ border:0px;text-transform: uppercase; font-size: 16px; color: #121332; position: relative; font-weight: 600}
+
+#accountTab.nav-tabs .nav-link.active, 
+#accountTab.nav-tabs .nav-item.show .nav-link{ color: #a114d3; }
+#accountTab.nav-tabs a.active:after { content: ""; display: block; position: absolute; bottom: -20px; height: 4px;  background:#a114d3; left: 0px; right: 0px;}
+#accountTab.nav-tabs {}
+
+
+@media (max-width: 1199px) {
+	.page-accounts HEADER.page-header{ display: block!important}
+	.page-accounts HEADER.page-header .ml-auto{ margin: 20px auto !important; display: block!important;}
+	
+	#accountTab.nav-tabs a.active::after{ bottom:0px;}
+	#accountTab.nav-tabs .nav-link{}
+	.card-deck.accTab{}
+	.card-deck.accTab .card{ display: block; margin: 0 auto;  margin-bottom: 40px }
+	
+}
+
+/*Account Tabs Cards*/
+.card-deck.accTab {}
+.card-deck.accTab .card{ border-radius: 5px; background: #fff; max-width: 320px; position: relative}
+
+.card-deck.accTab .card .card-close{ border-radius: 5px; color: #24278b; border: 2px solid #24278b }
+.card-deck.accTab .card .card-close .fa{ font-size: 18px;  color: #24278b;}
+.card-deck.accTab .card .card-body{ font-weight: 600; padding-bottom: 0px }
+.card-deck.accTab .card .card-body:nth-child(1){ border-top-left-radius: 5px; border-top-right-radius: 5px;  line-height: 1.7;}
+.card-deck.accTab .card .card-body:nth-child(1) UL LI:nth-child(odd){ color: #454b55; text-transform: uppercase; font-size: 14px;}
+.card-deck.accTab .card .card-body:nth-child(1) UL LI:nth-child(even){ color: #24278b;  font-size: 18px; margin-bottom: 20px;}
+
+.card-deck.accTab .card .card-body:nth-child(2){ background: #f9fafd; border-top: 1px solid #e8eaf2;}
+.card-deck.accTab .card .card-body:nth-child(2) .col{ margin-bottom: 30px; padding: 0px;}
+
+.card-deck.accTab .card-footer{ text-transform: uppercase; font-size: 14px; font-weight: 600; color: #fff; text-align: center; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;}
+.card-deck.accTab .card-footer a{ color: #fff}

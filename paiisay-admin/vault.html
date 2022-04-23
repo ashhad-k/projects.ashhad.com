@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vault</title>
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=0" />
+
+<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900|Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+<link rel="stylesheet" href="assets/css/style.css">
+	
+</head>
+<body>
+
+<div class="d-flex mobileBlock align-items-stretch mainBg">
+	<!-- -----Left Panle--- -->
+	<div class="leftSidebar">
+		<ul>
+			<li><a href="index.html"><img src="assets/images/logo.png"><br>admin</a></li>
+			<li><a href="index.html"><img src="assets/images/menu-icon1.png"><br>dashboard</a></Li>
+			<li class="active"><a href="vault.html"><img src="assets/images/menu-icon2.png"><br>Vault</a></li>
+			<li><a href="agents.html"><img src="assets/images/menu-icon3.png"><br>Agents</a></li>
+			<li><a href="merchants.html"><img src="assets/images/menu-icon4.png"><br>Merchant</a></li>
+			<li><a href="customers.html"><img src="assets/images/menu-icon5.png"><br>Customer</a></li>
+			<li><a href="javascript:;"><img src="assets/images/menu-icon6.png"><br>Wpp</a></li>
+			<li><a href="report.html"><img src="assets/images/menu-icon7.png"><br>Reports</a></li>
+			<li><a href="audit-servicetax.html"><img src="assets/images/menu-icon8.png"><br>Audit</a></li>
+			<li><a href="helpdesk.html"><img src="assets/images/menu-icon9.png"><br>Helpdesk</a></li>
+			<li><a href="settings.html"><img src="assets/images/menu-icon10.png"><br>settings</a></li>
+		</ul>
+	</div>
+	<!-- -----Left Panle--- -->
+
+	<!-- -----Center Area--- -->
+	
+	<div class="page-holder d-flex flex-wrap">
+		<header class="header">
+			<div class="xsLogo">
+	            <a href="#">Logo</a>
+
+	            <div id="nav-icon4" class="">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+	        </div>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+							<div class="topHead">
+								<h2>Dashboard</h2>
+							</div>
+						</div>
+						<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-right">
+							<div class="topClientInfo">
+								<ul>
+									<li>
+										<a id="notifications" href="javaScript:;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa fa-bell-o" aria-hidden="true"></i></a>
+							              <div aria-labelledby="notifications" class="dropdown-menu"><a href="javascript:;" class="dropdown-item">
+							                  <div class="d-flex align-items-center">
+							                    <div class="icon icon-sm bg-violet"><i class="fa fa-twitter"></i></div>
+							                    <div class="text ml-2">
+							                      <p class="mb-0">You have 2 followers</p>
+							                    </div>
+							                  </div></a><a href="javascript:;" class="dropdown-item"> 
+							                  <div class="d-flex align-items-center">
+							                    <div class="icon icon-sm bg-green"><i class="fa fa-envelope"></i></div>
+							                    <div class="text ml-2">
+							                      <p class="mb-0">You have 6 new messages</p>
+							                    </div>
+							                  </div></a><a href="javascript:;" class="dropdown-item">
+							                  <div class="d-flex align-items-center">
+							                    <div class="icon icon-sm bg-blue"><i class="fa fa-upload"></i></div>
+							                    <div class="text ml-2">
+							                      <p class="mb-0">Server rebooted</p>
+							                    </div>
+							                  </div></a><a href="javascript:;" class="dropdown-item">
+							                  <div class="d-flex align-items-center">
+							                    <div class="icon icon-sm bg-violet"><i class="fa fa-twitter"></i></div>
+							                    <div class="text ml-2">
+							                      <p class="mb-0">You have 2 followers</p>
+							                    </div>
+							                  </div></a>
+							                <div class="dropdown-divider"></div><a href="javascript:;" class="dropdown-item text-center"><small class="font-weight-bold headings-font-family text-uppercase">View all notifications</small></a>
+							              </div>
+									</li>
+									<li>
+										<a id="userInfo" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">
+						                <img src="assets/images/client.png" class="img-fluid rounded-circle my-border user-img">
+						                <p><strong>Steve Brown<i class="fa fa-caret-down"></i></strong>
+
+						                </p>
+						              </a>
+
+										<div aria-labelledby="userInfo" class="dropdown-menu">
+								                <a href="javascript:;" class="dropdown-item">
+								                    <strong class="d-block text-uppercase headings-font-family">Steve Brown</strong><small>Web Developer</small></a>
+								                <div class="dropdown-divider"></div><a href="javascript:;" class="dropdown-item">Settings</a><a href="javascript:;" class="dropdown-item">Activity log</a>
+								                <div class="dropdown-divider"></div><a href="javaScript:;" class="dropdown-item">Logout</a>
+								              </div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+							<div class="subLinks">
+								<ul>
+									<li><a href="javascript:;">Deposit</a></li>
+									<li class="active"><a href="javascript:;">withdrawals</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+							<div class="showDrop alignRight">
+									Export all the transactions in
+										<select>
+											<option>PDF</option>
+											<option>Excel</option>
+											<option>Word</option>
+										</select> format
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+		</header>
+
+
+		<div class="m50">
+			<div class="row">
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+					<div class="BgSearch">
+						<div class="topSearch">
+							<button type="submit" class="fa fa-search"></button>
+							<input type="text" placeholder="Type your keyword here" name="">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+					<div class="text-right">
+						<div class="sortMain">
+							Sort by
+							<select>
+								<option>Processing</option>
+								<option>Processing</option>
+								<option>Processing</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+					<div class="tableSecMain table-responsive">
+						<table class="table table-striped table-borderless firstBlue">
+							<thead>
+									<tr>
+										<th>Referencee no</th>
+										<th>Customer Name</th>
+										<th>total amount</th>
+										<th>Status</th>
+										<th>action</th>
+									</tr>
+							</thead>
+							<tbody>
+									<tr>
+										<td>PACMW371572426834</td>
+										<td>Patrick Tomi</td>
+										<td>$ 1000</td>
+										<td><a href="javascript:;" class="radiusBtn" data-toggle="modal" data-target=".bd-example-modal-lg2">Processing</a></td>
+
+										<td>
+											<ul class="tableAction">	
+												<li class="moneyHover"><a href="javascript:;" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Fail / Restore</a></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>PACMW371572426834</td>
+										<td>Patrick Tomi</td>
+										<td>$ 1000</td>
+										<td><a href="javascript:;" class="radiusBtn red"  data-toggle="modal" data-target=".bd-example-modal-lg2">Pending</a></td>
+
+										<td>
+											<ul class="tableAction">	
+												<li class="moneyHover"><a href="javascript:;" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Fail / Restore</a></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>PACMW371572426834</td>
+										<td>Patrick Tomi</td>
+										<td>$ 1000</td>
+										<td><a href="javascript:;" class="radiusBtn" data-toggle="modal" data-target=".bd-example-modal-lg2">Processing</a></td>
+
+										<td>
+											<ul class="tableAction">	
+												<li class="moneyHover"><a href="javascript:;" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Fail / Restore</a></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>PACMW371572426834</td>
+										<td>Patrick Tomi</td>
+										<td>$ 1000</td>
+										<td><a href="javascript:;" class="radiusBtn gren"  data-toggle="modal" data-target=".bd-example-modal-lg2">Completed</a></td>
+										<td>
+											<ul class="tableAction">	
+												<li class="moneyHover"><a href="javascript:;" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Fail / Restore</a></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>PACMW371572426834</td>
+										<td>Patrick Tomi</td>
+										<td>$ 1000</td>
+										<td><a href="javascript:;" class="radiusBtn" data-toggle="modal" data-target=".bd-example-modal-lg2">Processing</a></td>
+
+										<td>
+											<ul class="tableAction">	
+												<li class="moneyHover"><a href="javascript:;" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Fail / Restore</a></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>PACMW371572426834</td>
+										<td>Patrick Tomi</td>
+										<td>$ 1000</td>
+										<td><a href="javascript:;" class="radiusBtn" data-toggle="modal" data-target=".bd-example-modal-lg2">Processing</a></td>
+
+										<td>
+											<ul class="tableAction">	
+												<li class="moneyHover"><a href="javascript:;" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Fail / Restore</a></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>PACMW371572426834</td>
+										<td>Patrick Tomi</td>
+										<td>$ 1000</td>
+										<td><a href="javascript:;" class="radiusBtn" data-toggle="modal" data-target=".bd-example-modal-lg2">Processing</a></td>
+
+										<td>
+											<ul class="tableAction">	
+												<li class="moneyHover"><a href="javascript:;" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Fail / Restore</a></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>PACMW371572426834</td>
+										<td>Patrick Tomi</td>
+										<td>$ 1000</td>
+										<td><a href="javascript:;" class="radiusBtn" data-toggle="modal" data-target=".bd-example-modal-lg2">Processing</a></td>
+
+										<td>
+											<ul class="tableAction">	
+												<li class="moneyHover"><a href="javascript:;" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Fail / Restore</a></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>PACMW371572426834</td>
+										<td>Patrick Tomi</td>
+										<td>$ 1000</td>
+										<td><a href="javascript:;" class="radiusBtn" data-toggle="modal" data-target=".bd-example-modal-lg2">Processing</a></td>
+
+										<td>
+											<ul class="tableAction">	
+												<li class="moneyHover"><a href="javascript:;" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Fail / Restore</a></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>PACMW371572426834</td>
+										<td>Patrick Tomi</td>
+										<td>$ 1000</td>
+										<td><a href="javascript:;" class="radiusBtn" data-toggle="modal" data-target=".bd-example-modal-lg2">Processing</a></td>
+
+										<td>
+											<ul class="tableAction">	
+												<li class="moneyHover"><a href="javascript:;" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Fail / Restore</a></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>PACMW371572426834</td>
+										<td>Patrick Tomi</td>
+										<td>$ 1000</td>
+										<td>
+										<a href="javascript:;" class="radiusBtn" data-toggle="modal" data-target=".bd-example-modal-lg2"> Processing</a>
+										</td>
+
+										<td>
+											<ul class="tableAction">	
+												<li class="moneyHover"><a href="javascript:;" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Fail / Restore</a></li>
+											</ul>
+										</td>
+									</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+					<div class="showDrop">
+							Showing
+								<select>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+								</select>
+								out of <strong>85 entries</strong>
+					</div>
+				</div>
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+					<ul class="pagi">
+						<li><a href="javascript:;"><i class="fa fa-caret-left" aria-hidden="true"></i></a></li>
+						<li><a href="javascript:;">1</a></li>
+						<li><a href="javascript:;" class="active">2</a></li>
+						<li><a href="javascript:;">3</a></li>
+						<li><a href="javascript:;"><i class="fa fa-caret-right" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		
+
+	</div>
+	<!-- -----Center Area--- -->
+
+	<!-- -----Right Panle--- -->
+	<div class="rightSideBg">
+		<div class="rmainPad">
+			<h2>Send Money</h2>
+			<div class="row">
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-12">
+					<div class="bgForm">
+						<div class="field">
+							<p>Country</p>
+							<img src="assets/images/flag.jpg">
+						</div>
+
+						<div class="field">
+							<p>Phone NUmber</p>
+							<input type="text" name="" value="52 8599 934">
+						</div>
+
+						<div class="field">
+							<p>Total Amouny</p>
+							<input type="text" name="" value="$ 500.00">
+						</div>
+						<div class="field">
+							<input type="text" name="" placeholder="Enter Passcode">
+						</div>
+						<div class="field submit">
+							<input type="submit" value="+topup" name="">
+						</div>
+					</div>	
+				</div>
+			
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-12">
+					<div class="transSec">
+						<h5>recent transactions</h5>
+						<ul class="halfMain">
+							<li>
+								<h6><i><img src="assets/images/down-icon.png"></i> Mohan Paul</h6>
+								<p><strong>ID</strong> PATXN10005540</p>
+								<p><i class="fa fa-phone"></i> + 971 50 5555 545 </p>
+							</li>
+							<li>
+								<h4>$ 1,000.00</h4>
+								<p><i class="fa fa-calendar"> </i>October 9, 2019 at 8:31 PM
+
+								</p>
+
+							</li>
+						</ul>
+
+						<ul class="halfMain">
+							<li>
+								<h6><i><img src="assets/images/down-icon.png"></i> Mohan Paul</h6>
+								<p><strong>ID</strong> PATXN10005540</p>
+								<p><i class="fa fa-phone"></i> + 971 50 5555 545 </p>
+							</li>
+							<li>
+								<h4>$ 1,000.00</h4>
+								<p><i class="fa fa-calendar"> </i>October 9, 2019 at 8:31 PM
+
+								</p>
+
+							</li>
+						</ul>
+
+						<ul class="halfMain active">
+							<li>
+								<h6><i><img src="assets/images/icon-active-up.png"></i> Mohan Paul</h6>
+								<p><strong>ID</strong> PATXN10005540</p>
+								<p><i class="fa fa-phone"></i> + 971 50 5555 545 </p>
+							</li>
+							<li>
+								<h4>$ 1,000.00</h4>
+								<p><i class="fa fa-calendar"> </i>October 9, 2019 at 8:31 PM
+
+								</p>
+
+							</li>
+						</ul>
+
+						<ul class="halfMain">
+							<li>
+								<h6><i><img src="assets/images/down-icon.png"></i> Mohan Paul</h6>
+								<p><strong>ID</strong> PATXN10005540</p>
+								<p><i class="fa fa-phone"></i> + 971 50 5555 545 </p>
+							</li>
+							<li>
+								<h4>$ 1,000.00</h4>
+								<p><i class="fa fa-calendar"> </i>October 9, 2019 at 8:31 PM
+
+								</p>
+
+							</li>
+						</ul>
+
+						<ul class="halfMain active">
+							<li>
+								<h6><i><img src="assets/images/icon-active-up.png"></i> Mohan Paul</h6>
+								<p><strong>ID</strong> PATXN10005540</p>
+								<p><i class="fa fa-phone"></i> + 971 50 5555 545 </p>
+							</li>
+							<li>
+								<h4>$ 1,000.00</h4>
+								<p><i class="fa fa-calendar"> </i>October 9, 2019 at 8:31 PM
+
+								</p>
+
+							</li>
+						</ul>
+						<ul class="halfMain active">
+							<li>
+								<h6><i><img src="assets/images/icon-active-up.png"></i> Mohan Paul</h6>
+								<p><strong>ID</strong> PATXN10005540</p>
+								<p><i class="fa fa-phone"></i> + 971 50 5555 545 </p>
+							</li>
+							<li>
+								<h4>$ 1,000.00</h4>
+								<p><i class="fa fa-calendar"> </i>October 9, 2019 at 8:31 PM
+
+								</p>
+
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- -----Right Panle--- -->
+
+
+</div>
+	
+
+
+
+
+
+<!-- Modal -->
+<div class="modal widrwFail fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+      		<div>
+      			<h3>Withdrawal failed or restored reason</h3>
+	      		<h4>ID <span>PACMW37157246834</span>  |  Customer Name Patrick Tomi</h4>
+      		</div>
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      	<div class="borderBox">
+      			<div class="fieldTxt">
+					<h5>description</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<p>
+				</div>
+      	</div>	
+      <div class="modal-footer">
+      		<button type="button" class="btn btn-primary sendBtn">SUBMIT</button>
+        	<button type="button" class="btn btn-secondary cancleBtn" data-dismiss="modal">CANCLE</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Modal -->
+<div class="modal reportDetail vaultReceipt fade bd-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+      		<div class="DtlModalHead">
+      			<h3>Customer Details</h3>
+      			<div class="row">
+      				<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+      					<div class="fieldTxt">
+							<h5>Customer name</h5>
+							<h4><span>Erik Johnson</span></h4>
+						</div>
+      				</div>
+
+      				<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+      					<div class="fieldTxt">
+							<h5>Customer Email ID</h5>
+							<h4><span>erik.johnson@gmail.com</span></h4>
+						</div>
+      				</div>
+
+      				<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+      					<div class="fieldTxt">
+							<h5>Phone Number</h5>
+							<h4><span>+ 971 52 8599 945</span></h4>
+						</div>
+      				</div>
+      			</div>
+      		</div>
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      	<div class="reportModalBg">
+        	<div class="row grid-divider">
+        		<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        			<div class="BgTxt">
+        				<h3>Withdrawal Details</h3>
+        				<div class="fieldTxt">
+							<h5>Reference Number</h5>
+							<h4><span>PACMW351571223314</span><a href="javascript:;" class="activeBtn">completed</a></h4>
+						</div>
+
+						<div class="row">
+							<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+								<div class="fieldTxt">
+									<h5>Request Amount</h5>
+									<h4><span>$500.00</span></h4>
+								</div>
+							</div>
+							<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+								<div class="fieldTxt">
+									<h5>Withdrawal Fee</h5>
+									<h4><span>$500.00</span></h4>
+								</div>
+							</div>
+
+							<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+								<div class="fieldTxt">
+									<h5>Total Amount</h5>
+									<h4><span>$500.00</span></h4>
+								</div>
+							</div>
+							<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+								<div class="fieldTxt">
+									<h5>Amount To Be Sent</h5>
+									<h4><span>$500.00</span></h4>
+								</div>
+							</div>
+						</div>
+        			</div>
+        		</div>
+        		
+        		<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        			<div class="BgTxt">
+        				<h3>Bank Details</h3>
+        				<div class="fieldTxt">
+							<h5>Account Holder Nameq</h5>
+							<h4><span>Erik Johnson</span></h4>
+						</div>
+						<div class="fieldTxt">
+							<h5>Bank Name</h5>
+							<h4><span>Standard Chartered Bank</span></h4>
+						</div>
+						<div class="fieldTxt">
+							<h5>account number</h5>
+							<h4><span>0002 9458 6674</span></h4>
+						</div>
+        			</div>
+        		</div>
+
+
+        	</div>	
+        </div>
+      <div class="modal-footer">
+      	<select class="blueSelect">
+      		<option>Action</option>
+      		<option>Action</option>
+      		<option>Action</option>
+      	</select>
+        <button type="button" class="btn btn-secondary cancleBtn" data-dismiss="modal">CANCLE</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/popper.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/scripts.js"></script>
+
+
+
+
+</body>
+</html>

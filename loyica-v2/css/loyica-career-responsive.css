@@ -1,0 +1,96 @@
+@import url(loyica-home-responsive.css);
+
+@media (max-width:1024px){
+    .fs-form-wrap{
+    display: block
+}
+.container {
+    margin: 0px auto 0;
+    width: 100%;
+    padding: 0;
+}
+.fs-fields {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    top: 0;
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+}
+.fs-form {
+    top: inherit;
+    right: inherit;
+    left: inherit;
+    padding: 70px 100px 70px 20px;
+    width: auto;
+    font-size: 2em;
+    position: static;
+    height: 100vh;
+}
+.fs-message-error {
+    position: static;
+    bottom: inherit;
+    left: inherit;
+    z-index: 800;
+    padding-left: 20px;
+}
+.fs-controls{
+    display: block;
+    clear: both;
+    width: 100%;
+    text-align: right;
+    padding: 0 100px 0 0;
+}
+button.fs-continue {
+    position: static;
+    right: inherit;
+    bottom: inherit;
+    margin: inherit;
+}  
+}
+@media (max-width:668px){
+button.fs-continue {
+    bottom: -30px;
+    text-indent: -999999999999px;
+    position: relative!important;
+    right: 32px;
+}
+button.fs-continue::before {
+    text-indent: 0;
+}
+.fs-message-error {
+    bottom: 0px;
+    font-size: 11px;
+    font-weight: normal;
+    z-index: 0;
+    padding: 0 0 0 20px;
+    bottom: -40px;
+    position: relative
+}
+.fs-form {
+    padding: 70px 20px 00px 20px;
+    height: 90vh;
+}
+.js .fs-form-full .fs-fields > li{
+    width: 90%;
+    font-size: 16px;
+}
+.fs-controls {
+    padding: 0 20px 0;
+    display: table;
+    width: 20%;
+    text-align: right;
+    float: right;
+}
+.fs-nav-dots button{
+    width: 8px;
+    height: 8px;  
+}
+.fs-form-full .fs-fields > li label[data-info]::before{
+font-size: 0.7em;
+}
+.fs-form-full, .fs-message-error {
+    max-width: 100%;
+}
+}

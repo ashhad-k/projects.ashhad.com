@@ -1,0 +1,758 @@
+/* RESPONSIVE */
+@media(max-width:1024px) {
+.navbar+div{ margin-top: 0!important;}
+.hvr-forward:hover, .hvr-forward:focus, .hvr-forward:active{
+-webkit-transform: translateX(0px);
+		transform: translateX(0px);
+}
+.search.searchbox {
+	padding: 5em 30px 0;
+	position: fixed;
+}
+.search input.search-input {
+	font-size: 18px;
+}
+.search .searchsubmit {
+	display: table;
+	padding: .3em;
+	text-align: center;
+	margin: 50px auto 0;
+	background: #ea7e3c;
+	color: #FFFFFF;
+}
+.mbl {
+	display: block!important;
+}
+.mob-hidden{ display:none!important;}
+
+.dsk {
+	display: none!important
+}
+.faqs-fold1 .faqs-hdr-btm {
+	min-width: 100%;
+}
+.faqs-fold1 INPUT {
+	font-size: 14px;
+}
+.fold3 {
+	height: inherit!important
+}
+.fold3 .nav-tabs {
+	padding: 10px 25px;
+}
+.fold3 .nav-tabs a {
+	font-size: 14px;
+}
+.fold3 .card h1.card-title, .fold3 .card h4.card-title {
+	font-size: 18px!important;
+}
+.card-text:last-child {
+	font-size: 14px!important
+}
+.fold3 .card-body p {
+	font-size: 14px!important
+}
+.fold3 .card img {
+	max-height: 150px;
+}
+.fold4 {
+	padding-top: 80px!important
+}
+.fold4 .card, .fold4 .col-lg-7 {
+	text-align: left;
+}
+.fold4 .card:nth-child(2) {
+	margin-left: 0!important
+}
+.fold4 h6 {
+	font-size: 18px;
+}
+.services-dd, .services-dd2{ z-index:99}
+.services-dd2 button {
+	padding: 20px 30px
+}
+	.fold3 .nav-tabs{display: none}
+.bg-blue .services-dd2  a.dropdown-item{
+	color: #333!important; text-transform: uppercase
+}
+.bg-blue .services-dd2.dropdown-menu.show{ right: 0px!important;}
+
+.services-dd button {
+	border-radius: 00px!important;
+	padding: 15px 30px;
+	
+}
+.services-dd a {
+	color: #333;
+}
+	
+.align-md-center {
+	text-align: center;
+}
+.align-md-left {
+	text-align: left;
+}
+.align-md-right {
+	text-align: right;
+}
+.d-flex {
+	display: block!important
+}
+.services-fold2-lhs UL {
+	display: block;
+	clear: both;
+	margin-bottom: 30px
+}
+.services-fold2-lhs UL LI {
+	width: 100%;
+	float: left;
+	font-size: 16px;
+}
+.btn-register {
+	display: table;
+	margin: 0 auto;
+	clear: both;
+}
+.services-fold2-rhs ul {
+	list-style-type: none;
+}
+.services-fold2-rhs {
+	box-shadow: 0 1px 0 0 #eeeeee!important;
+	margin-bottom: 50px;
+	padding: 30px 20px!important;
+}
+.fold3 .carousel-control-prev, .fold3 .carousel-control-next {
+	display: none;
+}
+.heading-spacer-orange {
+	margin: 20px auto 50px auto!important;
+}
+
+	.about-fold1-lhs{ padding-top: 80px!important}
+	.about-fold1-lhs h1{ font-size: 30px;}
+.about-fold2 .p-5 {
+	padding: 2rem!important;
+}
+.about-fold2 .col-md-12 {
+	padding: 0rem!important;
+}
+	.about-fold3 h4{}
+.contactaddress {
+	text-align: left;
+}
+	.about-fold4 {
+	padding-top: 30px;
+	padding-bottom: 50px;
+
+}
+footer .lhs .col {
+	width: 33.33%;
+	max-width: 33.33%;
+	min-width: 33.33%
+}
+FOOTER .socialmedia a i {
+	width: 45px!important;
+	height: 45px!important;
+	line-height: 40px!important;
+}
+.navbar-light .navbar-toggler {
+	background-color: #ea7e3c;
+	outline: 0
+}
+.navbar {
+	padding: 5px 10px;
+	min-height: 50px!important;
+}
+.navbar img{
+	max-width: 60%;
+}
+	.fold-faqs {
+	text-align: left;
+	padding-bottom: 10px!important;
+}
+.hidden-lg {
+	display: block!important;
+}
+.navbar-text.bg-blue.align-self-stretch.p-md-4, .navbar-text.bg-orange.align-self-stretch.p-md-4, .services-navigation {
+	display: none!important
+}
+.fold2, .fold3, .fold4 {
+	text-align: center;
+}
+.fold2 .bg-white {
+	box-shadow: none!important;
+	background: none!important
+}
+.fold3 .card {
+	min-width: 40%;
+	margin: 20px 20px 0;
+	text-align: center
+}
+.fold3 .nav-item {
+	display: table;
+	width: 100%;
+	text-align: center;
+}
+.fold4 .text-right {
+	text-align: center!important;
+}
+.fold4 .card {
+	min-width: 100%;
+	width: 100%;
+	text-align: center;
+	max-width: 100%;
+	margin: 0 0 20px;
+	padding-bottom: 0!important
+}
+.btn-orange {
+	font-size: 16px;
+	padding: 20px 20px;
+}
+.choosetopic {
+	width: 100%;
+	min-width: 100%;
+	margin: 0!important;
+}
+.faqbox {
+	width: 44%;
+	margin: 20px;
+	flex: 0 0 44%;
+	max-width: 44%;
+}
+.testimonials .d-flex {
+	display: block!important;
+}
+.testimonials .d-flex .p-2 {
+	background: rgba(255,255,255,.8);
+}
+.testimonials {
+	text-align: center;
+	background-position: top;
+	min-height: auto;
+	padding-top: 40px;
+	background-size: cover;
+}
+.testimonials .testimonialsbox {
+	width: 100%;
+	max-width: 100%;
+}
+.testimonials .media-body {
+	text-align: left;
+}
+.testimonials .card {
+	display: block!important;
+	width: 100%;
+	max-width: 100%;
+}
+.fold-testi .testimonialsbox P{ font-size:18px!important; padding-bottom: 10px; margin-top: 10px;}
+.fold-testi .card{ padding: 20px 10px;}
+	
+.fold-faqs .card {
+	width: 48%;
+	float: left;
+	margin: 0 1%;
+	min-height: 290px;
+}
+footer {
+	text-align: center;
+}
+footer.d-flex {
+	display: block!important;
+	width: 100%;
+	max-width: 100%;
+}
+footer .lhs {
+	padding: 20px;
+}
+.fold-email input::placeholder {
+font-size:26px;
+}
+.fold-email INPUT {
+	font-size: 26px;
+}
+.fold-email P {
+	margin-bottom: 10px;
+	font-size: 18px;
+}
+.fold-email { padding: 30px 10px;}
+footer .rhs {
+	background-size: cover;
+	padding: 70px 20px 70px!important;
+}
+footer .align-items-end {
+	position: relative;
+	bottom: 0%;
+}
+.w-75 {
+	width: 100% !important;
+}
+FOOTER ul.socialmedia {
+	text-align: center;
+}
+FOOTER ul.socialmedia li {
+	float: none
+}
+.blog-fold1 .rhs IMG {
+	width: 100%;
+	object-fit: cover;
+	height: 100%;
+}
+.blog-fold1 .lhs h2 {
+	font-size: 18px;
+	line-height: 1.5;
+}
+.blog-fold1 .lhs P {
+	font-size: 14px;
+	line-height: 1.5;
+}
+#toolsModal .modal-header{
+	text-align: center 
+}
+#toolsModal .modal-body .one{
+    width: 100%;
+    max-width: 100%;
+	text-align: center;
+	margin-bottom: 15px;
+}
+#toolsModal .modal-body .three {
+    width: 100%;
+    max-width: 100%;
+	text-align: center;
+	margin-bottom: 15px;
+}
+#toolsModal .tools-footer{
+	text-align: center;
+}
+	#toolsModal .tools-footer INPUT{
+		border: 1px solid #ccc;
+		margin-bottom: 10px;
+}
+#toolsModal .tools-footer .btn-orange{ width:100%}
+#toolsModal .small div{float:left}
+#toolsModal .small div+div{float:right}
+#toolsModal .modal-body .two {
+    width: 100%!important;
+    max-width: 100%!important;
+    padding: 0!important;
+}
+	#toolsModal .modal-body #doughnutChart {
+		margin: 0 auto;
+}
+
+.chartjs-render-monitor{
+	margin: 0 auto!important;
+}
+.blog-sub-nav , .blog-sub-nav .lhs {
+	display: grid;
+	margin:15px auto;
+	text-align: center
+}
+}
+@media(max-width:768px) {
+.navbar {
+	box-shadow: 0 10px 30px -15px #ddd;
+}
+.fp-tableCell, .fp-section.fp-table, .fp-slide.fp-table {
+	display: block!important;
+	height: inherit!important;
+}
+.fold2 { padding-top: 4rem;}
+.fold4 .card {
+	width: 100%;
+	max-width: 100%;
+	margin-left: 0!important;
+	margin-right: 0!important;
+}
+.fold4 .card, .fold4 .col-lg-7 {
+	text-align: center!important;
+}
+.faqs-fold1 a.badge-orange {
+	font-size: 14px!important;
+	padding: 10px 15px!important;
+	margin-bottom: 5px;
+}
+.faqs-fold1 .faqs-hdr-btm {
+	text-align: center
+}
+.fold-testi .carousel-indicators{ left: none; right: none; bottom: -15px;}
+
+
+	.text-left {
+	text-align: center!important;
+}
+.faqs-fold1 .faq-most-search {
+	margin: 30px 0!important;
+}
+.faqs-fold1 .faq-most-search h6 {
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+.faqs-fold1 .faqs-hdr-btm .faqs-card {
+	width: 50%;
+	max-width: 50%;
+}
+.blog-fold1 .lhs {
+	text-align: center!important;
+	padding: 20px;
+}
+.blog-fold1 .lhs .btn-info {
+	margin: 0px auto 15px auto;
+}
+.blog-sub-nav .rhs, .blog-fold1 .text-right {
+	text-align: center!important;
+}
+.blog-sub-nav .lhs a {
+	padding: 10px 15px;
+}
+.blog-fold2 {
+	text-align: center;
+}
+	.blog-fold2 .card { margin-bottom: 30px;}
+	.blog-fold2 .card h5.card-title {
+	font-size: 15px;
+}
+	.blog-fold2 .card .card-footer .font-weight-bold{ font-weight: 300!important
+}	
+}
+ @media(max-width:767px) {
+.fold1 {
+	padding-top: 30px;
+	padding-bottom: 120px;
+}
+.fold1 h1 {
+	font-size: 1.75rem;
+}
+.fold1 P {
+	font-size: 14px;
+}
+.fold-faqs .card {
+	width: 100%;
+	float: left;
+	margin: 0 1% 10px!important;
+}
+.fold-faqs {
+	text-align: center;
+}
+.fold4 .card {
+	min-width: 100%;
+	width: 100%;
+	text-align: center;
+	max-width: 100%;
+	margin: 0 0 20px;
+	padding-bottom: 0px
+}
+.fold-faqs {
+	text-align: center;
+}
+.faqbox {
+	width: 100%;
+	margin: 0px;
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+footer .lhs .col {
+	width: 100%;
+	max-width: 100%;
+	min-width: 100%;
+}
+footer .align-items-end {
+	position: relative;
+	bottom: 0%!important;
+}
+}
+@media(max-width:668px) {
+.blog-sub-nav .lhs{display: block!important;}	
+.card-footer{
+		display: block!important;
+}
+.card-footer span{
+    display: table;
+    clear: both;
+    width: 100%;
+}
+.card-footer span.font-weight-bold{
+	font-weight: normal!important
+}
+footer .font-weight-bold{
+	font-weight: normal!important
+}
+.fold1 h1 {
+	font-size: 1.75rem;
+	margin-top: 2em;
+}
+.fold2 h1 {
+	font-weight: 400!important;
+	font-size: 1.2em;
+	margin-bottom: 15px!important;
+}
+.fold2 P {
+	font-size: 16px;
+	line-height: 1.5;
+}
+.fold2 .box1,
+.fold2 .card-body{ padding: 15px 0px!important}
+.fold2 .col-md-12 .btn-orange{ display: none}
+	
+.fold3 .nav-tabs {
+	padding: 10px 15px;
+	border-radius: 15px;
+}
+.fold3 h5{ font-size:18px; margin-bottom: 30px;}
+	.fold3 .card-img-overlay{  padding: 2rem 0px;}
+	.fold3 .card .card-body a{ font-size:16px}
+
+.fold4 p{ font-size:18px;}
+.fold4 .col-md-12 .btn-orange{ display: none}
+.fold4 h1{ font-size: 22px;}
+	
+.fold1 .input-group.input-group-lg {
+	width: 100%;
+	display: block;
+	float: left;
+	clear: both;
+}
+.fold1 .input-group.input-group-lg input, 
+.fold1 .input-group.input-group-lg button {
+	width: 100%;
+	display: block;
+	border-radius: 0!important;
+	text-align: center;
+	box-shadow: none;
+	border: 1px solid iceblue;
+	line-height: 2.5rem;
+	font-size:16px!important;
+}
+.fold1 .hvr-bounce-to-left{ padding: 16px!important}
+.contactaddress.tl {
+	text-align: center;
+}
+
+	.fold-faqs P{ font-size: 20px;}
+.faqs-fold1 INPUT {
+	font-size: 14px;
+	padding: 25px 30% 25px 20px;
+	text-overflow: ellipsis;
+	margin: 20px 0px;
+}
+.fold1 .input-group-btn{
+		border: none;
+	}
+.fold1 .form-control, 
+.fold1 .input-group-btn{
+		box-shadow: none;
+	border: 1px solid #ccc;
+	border-bottom: 0px;
+	}
+	
+	.faqs-fold1 h1{ font-size:2rem; padding-bottom: 20px;}
+	.faqs-fold1 .faqs-hdr-btm .faqs-card {
+	width: 100%;
+	max-width: 100%;
+}
+	.faqs-fold1 .faqs-hdr-btm .faqs-card{ padding: 15px 20px;}
+	.faqs-fold1 .faqs-hdr-btm .faqs-card:nth-child(2){ border: 0px!important}
+	.faqs-fold1 .faqs-hdr-btm h6{ margin-bottom: 0px; font-size:16px;}
+	.faqs-fold1 .faqs-hdr-btm .media-body {
+    padding-left: 20px;
+    font-size: 16px;
+    padding-top: 10px;
+}
+	.faqs-fold2-lhs{ padding: 40px 10px!important;}
+	.faqs-fold2-rhs{ padding: 40px 10px!important}
+	.faqs-fold2-rhs #accordion .card{ font-size:16px!important}
+	.faqs-fold2-lhs UL LI{ font-size:16px!important;}
+	
+	.services-fold1{
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.services-fold1 h1 {
+	font-size: 2rem;	
+}
+	.services-fold1 P{
+		font-size: 18px;
+	}
+	.services-fold1-rhs{
+		text-align: center;
+	}
+	#sticky.stick{
+		padding: 00px!important;
+		top:50px;
+		z-index: 100;
+	}
+	#sticky.stick .btn-block{
+		border-radius: 0px;
+		
+		
+	}
+}
+@media(max-width:1600px) and (min-width:968px) {
+.fp-tableCell {
+	height: inherit!important;
+}
+.services-fold1 h1 {
+	font-size: 2.75rem;
+}
+.services-fold1 P {
+	font-size: 16px;
+}
+.services-fold1 UL LI {
+	line-height: 1.5rem;
+ font-size: .8rem;
+}
+.services-fold2-lhs .p-lg-4 {
+	padding: 1.0rem !important;
+}
+.services-fold2-lhs UL LI {
+	font-size: 16px;
+	font-weight: 800;
+	padding: 10px 0px;
+}
+/* Full Screen */
+.fold1 {
+	padding-bottom: 0px!important;
+	padding-top: 0px!important;
+}
+.fold1 h1 {
+	font-size: 3.0rem!important;
+}
+.fold2 {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.fold2 h1 {
+	font-size: 1.5em;
+}
+.fold2 P {
+	font-size: 16px;
+}
+.fold2 .box1 {
+	padding: 10px!important;
+}
+.fold2 .box1 IMG {
+	margin-bottom: 30px!important;
+	width: 20%!important;
+}
+.fold2 .row-eq-height h4 {
+	font-size: 16px!important;
+}
+.fold2 .row-eq-height P {
+	font-size: 14px!important;
+}
+.fold3 {
+	padding-top: 20px!important;
+	padding-bottom: 0px!important;
+}
+.fold3 h5 {
+	font-size: 14px!important;
+	margin-bottom: 1em!important;
+}
+.fold3 .nav-tabs {
+	padding: 10px 25px;
+}
+.fold3 .nav-tabs a {
+	font-size: 14px;
+}
+.fold3 .card h1.card-title, .fold3 .card h4.card-title {
+	font-size: 18px!important;
+}
+.card-text:last-child {
+	font-size: 14px!important
+}
+.fold3 .card-body p {
+	font-size: 14px!important
+}
+.services-fold1 {
+	padding-bottom: 0
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+	font-size: 11px;
+}
+.fold3 .card-img-overlay {
+	padding: 1rem;
+	color: #47516b;
+}
+.fold-faqs .card .btn-orange.btn-block {
+	padding: 20px 10px!important;
+	font-size: 12px;
+}
+.fold3 .carousel-control-prev, .fold3 .carousel-control-next {
+	top: 0;
+}
+.fold4 {
+	padding-top: 0;
+	padding-bottom: 0px;
+}
+.fold4 p {
+	font-size: 16px!important;
+}
+.fold4 .mt-lg-5, .fold4 .my-lg-5 {
+	margin-top: 0rem !important;
+}
+.fold4 h1 {
+	font-size: 18px!important;
+}
+.fold4 .card-body {
+	padding: 1rem;
+}
+.fold4 .text-muted {
+	font-size: 14px;
+	margin-bottom: 10px!important;
+}
+.fold-orange {
+	padding: 20px!important
+}
+.fold4 p {
+	margin-bottom: 10px!important
+}
+FOOTER .lhs {
+	float: left;
+}
+.fold-email.p-lg-5 {
+	padding: 1rem !important;
+}
+.fold-email P {
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+.fold-email INPUT {
+	font-size: 40px;
+}
+.fold-email input::placeholder {
+ font-size:40px;
+}
+.hidden-box {
+	display: none!important;
+}
+footer .align-items-end {
+	bottom: -20%;
+}
+.d-block {
+	font-size: 18px;
+}
+.fold-testi .testimonialsbox P {
+	font-size: 18px;
+}
+.fold-testi .carousel-indicators {
+	bottom: -10px;
+}
+.faqs-fold1 INPUT {
+	font-size: 14px
+}
+.services-nav a {
+	padding: 10px 18px;
+}
+.blog-fold1 .lhs h2 {
+	font-size: 18px!important;
+	line-height: 1.4!important;
+}
+.faqs-fold2-lhs UL LI a {
+	font-size: 14px;
+}
+#toolsModal .modal-body .one .btn{
+	font-size: 14px;
+}
+.fold-testi{
+	background-position:right 130%;
+}
+}

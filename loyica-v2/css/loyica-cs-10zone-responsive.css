@@ -1,0 +1,249 @@
+@import url(loyica-home-responsive.css);
+
+@media(max-width:1024px){
+    body{
+    overflow: visible!important
+}
+.pg-casestudy .item5 .child .typo-info .child {
+    transform: none !important;
+    opacity: 1 !important;
+}
+
+.pg-casestudy .item1 {
+    background-size: 0, cover;
+    padding-top:100px;
+}
+.cn > div[class^="item"], .cn {
+    height: inherit!important;
+}
+.pg-casestudy .item1 .child:first-child {
+    padding: 40px;
+    display: block;
+    flex-direction: inherit;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    flex: none!important;
+}
+.pg-casestudy .item1 h1 {
+    font-size: 50px;
+}
+.pg-casestudy .item1 h2 {
+    font-size: 26px;
+}
+.pg-casestudy .item1 P {
+    line-height: 1;
+}
+.pg-casestudy .item2 , .pg-casestudy .item3   {
+    padding: 0!important;
+    display: block;
+    flex: none;
+    flex-flow: inherit;
+    height: inherit!important;
+    margin: 0
+}
+.pg-casestudy .item2 > DIV.child .display-1{
+    font-size: 40px;
+    padding-top: 40px;
+}
+.pg-casestudy .item2 > DIV.child {
+    flex: none;
+    position: relative;
+    display: block;
+    padding: 0;
+    text-align: center;
+}
+.three-boxes > DIV {
+    flex-basis: inherit;
+    padding: 30px 20px;
+    text-align: center;
+}
+.three-boxes .cn-ic1 {
+    margin: 0 auto;
+}
+.three-boxes h1{
+    font-size: 26px;
+}
+ .pg-casestudy .item3 h2{
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+.three-boxes p,.pg-casestudy .item3 p {
+    font-size: 18px;
+    line-height: 2;
+    padding: 20px;
+}
+.pg-casestudy .item3 > .child:first-child {
+    background: #000;
+    padding: 0;
+    display: block;
+    flex-direction: inherit;
+    justify-content: center;
+    flex: none!important;
+}
+.pg-casestudy .item3 h1 {
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    line-height: 1;
+    padding-top: 50px;
+}
+.pg-casestudy .item3 .child~.child{
+    display: none;
+}
+.pg-casestudy .item4,.pg-casestudy .item5 {
+    display: block;
+    background: #fff;
+    color: #5c5c5c;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    flex: none!important;
+}
+.pg-casestudy .item4 > .child {
+    flex: none!important;
+    flex-basis: inherit;
+    position: relative;
+    display: block;
+    height: inherit;
+}
+.three-boxes > DIV {
+    width: 100%;
+    flex: none;
+}
+.pg-casestudy .item5 .col-5, .item7 .col-md-4{
+    width: 100%;
+    flex: none!important;
+    max-width: 100%;
+    padding:0 30px;
+}
+.item7 .col-md-3{ 
+    flex: none;
+    max-width: 50%;
+}
+.pg-casestudy .item5 .child .typo-info .child {
+    text-align: center;
+    color: #fff;
+    padding: 40px;
+    display: block;
+    justify-content: center;
+    flex-direction: column;
+    flex-basis: inherit;
+    width: 100%;
+}
+.pg-casestudy .item5 .child h4, .pg-casestudy .item5 .child h5 {
+    margin-top: 30px;
+}
+.pg-casestudy .item5 .child .color-info,.pg-casestudy .item5 .child .color-info2 {
+    
+    justify-content: center;
+    text-align: center;
+    margin: 10px 0px;
+    width: 100%;
+}
+.pg-casestudy .item5 > .child {
+    flex: none;
+    position: relative;
+    text-align: center;
+}
+.pg-casestudy .no-cn{
+    padding-left: 0!important
+}
+.pg-casestudy .item5a {
+    padding: 0;
+    display: block;
+	background: none!important;
+}
+.pg-casestudy .item5a.two{ display: flex; flex-direction: column;}
+	.pg-casestudy .item5a.two .col-md-4	{ /*background: red!important;*/ order: 1;}
+	.pg-casestudy .item5a.two .col-md-6	{ /*background: yellow!important; */order: 2;}
+.pg-casestudy .item5a .col-md-4{
+    text-align: center;
+    width: 100%;
+    flex: none!important;
+    max-width: 100%;
+    padding:0 30px;
+}
+.item5a .three-boxes > DIV{
+    padding-top: 0;
+    padding-bottom:0
+}
+.item5a .col-md-4, 
+.item5a .col-md-6{
+    margin-top: 30px;
+}
+	.item5a.one .col-md-6 IMG{ width: 100%;}
+	.item5a.two .col-md-6 IMG{ width: 100%;}
+	.item5a.three .col-md-6 IMG{ width: 100%;}
+	
+.item5a .col-md-4 .three-boxes > DIV{
+       padding-top:30px
+}
+.pg-casestudy .item6 .bg-dark main{
+    font-size: 34px
+}
+.pg-casestudy .item6 .col-md-8{
+    text-align: center;
+    width: 100%;
+    flex: none!important;
+    max-width: 100%;
+    padding:0 30px;
+}
+
+.pg-casestudy .item9.tpl-pics .d-flex {
+    display: flex!important;
+}
+.pg-casestudy .item9.tpl-pics .d-flex IMG {
+    width: 50%;
+    height: 100%;
+}
+.pg-casestudy .item6 .bg-dark{
+    padding:0px 0px 40px 0px!important;
+}
+	
+.pg-casestudy .item7{
+    padding-left: 20px;
+    padding-right: 20px;
+	display: none;
+}
+
+.pg-casestudy .item8{ margin: 0px; min-height: auto; margin-bottom: 40px}
+.pg-casestudy .item8 IMG{ transform: translateY(0px)!important; max-width: 600px}
+	
+.pg-casestudy .item7 main {
+    font-size: 34px;
+}
+.pg-casestudy .item6 {
+    padding: 0;
+    background: #0e0e0f;
+    margin: 0;
+    display: block;
+    width: 100%;
+}
+.pg-casestudy .item5 .child h5:after{
+    display: none
+}
+}
+
+@media(max-width:868px){
+    .item5a .three-boxes {
+        justify-content: space-between;
+        display: block;
+        padding: 0 10px;
+    }    
+    .pg-casestudy .item5 .child .color-info2 div:nth-of-type(even){
+        padding:0
+    }
+.pg-casestudy .item5 .child .color-info,.pg-casestudy .item5 .child .color-info2 {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    margin: 10px 0px;
+    justify-content: center;
+    text-align: center;
+    margin: 10px 0px;
+    width: 100%;
+}
+
+}

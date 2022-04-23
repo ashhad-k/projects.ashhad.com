@@ -1,0 +1,35 @@
+@import url(loyica-home-responsive.css);
+
+@media(max-width:1024px){
+
+#contact .tab-content, #contact iframe.cn-iframe{
+    height: 75vh;
+    width: 100%;
+    display: block;
+    clear: both;
+}
+.cn-contact .lhs .nav-tabs .nav-item{
+    flex: 1 40%;
+}
+}
+@media (max-width:668px) {
+    .cn-contact .rhs {
+            padding: 0px!important;
+    }
+    #contact iframe.cn-iframe, #dn-tab-contet {
+            padding: 0!important;
+            margin:0
+    }
+    #cn-tab-contet{
+        height: inherit!important;
+    }
+    
+    .cn-contact .rhs .vcn2 .call, 
+	.cn-contact .rhs .vcn2 .email {
+            width: 100%;
+		margin-bottom: 30px;
+    }
+	.cn-contact .rhs .vcn2{ padding-bottom: 40px;}
+	
+	
+}

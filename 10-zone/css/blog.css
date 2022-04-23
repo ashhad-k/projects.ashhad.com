@@ -1,0 +1,66 @@
+.fw-500{ font-weight: 500}
+.fw-600{ font-weight: 600}
+.fw-700{ font-weight: 700}
+.fw-800{ font-weight: 800}
+
+
+.blog-fold1 {
+	text-align: center;
+	background: url(../img/bg_services_header.jpg) bottom no-repeat;
+	background-size: cover;
+	padding: 80px 0px;
+	display: flex;
+}
+/*LHS */
+.blog-fold1 .blog-header{ background: #fff; box-shadow: 0px 1px 50px 0px rgba(0, 0, 0, 0.18);}
+
+.blog-fold1 .lhs{ padding:50px; background: #fff; text-align: left;box-shadow: 0px 1px 50px 0px rgba(0, 0, 0, 0.18); display: flex; flex-direction: column}
+.blog-fold1 .lhs .btn-info{ background:#7bccff; font-size:15px; font-weight: 800; color:#fff; text-transform: uppercase; border: 0px; margin-bottom: 15px; align-self: flex-start;}
+.blog-fold1 .lhs h2{ font-size:30px; line-height:1.75; font-weight: 600; color:#312366}
+.blog-fold1 .lhs P{ font-size:18px; line-height:1.75;}
+.blog-fold1 .lhs FOOTER{ font-size:15px;}
+
+/*RHS -pic*/
+.blog-fold1 .rhs{ padding:00px; background: #fff; box-shadow: 0px 1px 50px 0px rgba(0, 0, 0, 0.18); max-height: 538px; overflow: hidden;}
+.blog-fold1 .rhs IMG{ width: 100%}
+
+
+/*blog-sub-nav*/
+.blog-sub-nav{ font-size:16px; font-weight: 600;text-transform: uppercase; min-height: 100px;}
+.blog-sub-nav .lhs{ display:flex}
+.blog-sub-nav .lhs a {
+    color: #312366;
+    padding: 10px 30px;
+	align-self: center;
+	
+}
+.blog-sub-nav .rhs {
+    align-self: center;
+    justify-content: end;
+
+}
+.blog-sub-nav .rhs a{ color: #ea7e3c; align-self: flex-end}
+
+
+/*blog-fold2*/
+.blog-fold2{ background: #f9f9f9;}
+.blog-fold2 .card{ box-shadow: 0px 1px 50px 0px rgba(0, 0, 0, 0.18); border: 0px;}
+.blog-fold2 .card .btn-info{ background:#7bccff; font-size:13px; font-weight: 800; color:#fff; text-transform: uppercase; border: 0px; margin-bottom: 15px; }
+.blog-fold2 .card h5.card-title{ font-size:20px; font-weight: 600; color:#312366; margin-bottom: 0px}
+.blog-fold2 .card .card-footer{ justify-content: space-between; display: flex; background: none; border: none;  font-size:15px;padding-bottom: 20px;}
+
+.blog-fold1-reverse{ background: #f9f9f9!important; padding: 20px 0px;}
+
+
+/* blog-fold-orange*/
+.blog-fold-orange{
+	background: url(../img/bg_-blog-fold-orange.jpg) bottom no-repeat;
+	background-size: cover;
+	padding: 80px 0px;
+	display: flex;
+	
+}
+.blog-fold-orange .lhs{ background: none; color: #fff!important; box-shadow: none; padding:40px 0px }
+.blog-fold-orange .lhs h2{ color: #fff!important}
+.blog-fold-orange .lhs footer{ background: none!important; }
+.blog-fold-orange .lhs a{ color:#fff;}

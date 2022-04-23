@@ -1,0 +1,78 @@
+
+/*
+* ==========================================================
+*     Slide4 -  Contact
+* ==========================================================
+*/
+.cn-contact{ display: flex; flex-basis: 100%; font-weight: 200; position: relative}
+.cn-contact a{ color: #fd6400; }
+.cn-contact  SMALL{font-size:14px; color:#fff; opacity: 0.10; padding-bottom: 0px; display: inline-block;}
+.cn-contact h1{ font-weight: 200;}
+
+.cn-contact .lhs{ flex: 1;  display: flex; flex-direction: column; position: relative; z-index:1; overflow: hidden; justify-content: space-between;}
+
+/*tabs LHS*/
+.cn-contact .lhs .nav-tabs{background: #15171b; border-bottom: 0px; z-index: 1; }
+.cn-contact .lhs .nav-tabs .nav-item{ flex-grow: 1; margin-bottom: 0px; border:none;}
+.cn-contact .lhs .nav-tabs .nav-item a.nav-link{ border-radius: 0px; color: #41464b; font-size:15px; fadeInUpBigfont-weight: 200; border: none; padding: 20px; border-left: 1px solid #1b2026;  border-bottom: 1px solid #1b2026; text-transform: uppercase; fadeInUpBigfont-weight: 200; padding-top: 30px; padding-bottom: 30px; text-align: center;}
+.cn-contact .lhs .nav-tabs .nav-item a.nav-link.active{ background: #fd6400;  border-bottom: 1px solid transparent; color:#fff }
+.cn-contact .lhs .nav-tabs .nav-item a.nav-link:hover{border-color:transparent}
+.cn-contact .lhs .nav-tabs .nav-item a.nav-link h6{ font-size: 18px; fadeInUpBigfont-weight: 200; text-transform: uppercase; color: #fff; margin: 0px;}
+.cn-contact .lhs .tab-content{flex-grow: 1}
+
+
+.cn-contact .rhs{ flex: 1; max-width: 650px; background-color: rgba(21, 23, 27, 1);  display: flex; /*flex-direction: column; justify-content: space-between; */ flex-flow: row wrap; align-content: space-between; line-height: 1.8; position: relative; z-index: 1;}
+.cn-contact .rhs > DIV{ flex: 1 1 100%;}
+
+.cn-contact .rhs h2{font-size:20px; color:#fff; font-weight: 200; margin: 10px 0px;}
+.cn-contact .rhs a{ color:#919292;}
+.cn-contact .rhs a:hover{ color:#fd6400;}
+
+
+.cn-contact .rhs FORM{ display: flex; flex-flow: row wrap;}
+.cn-contact .rhs FORM > DIV{ flex: 1 1 100%;}
+
+
+.cn-contact .rhs .email a{ color:#fd6400;}
+
+.cn-contact .rhs .company-info { }
+.cn-contact .rhs .company-info IMG{ width: 170px; opacity: 0.3}
+
+.cn-contact .rhs .orange-box{ position: absolute; bottom: 75px; right: 17px; vertical-align: middle; line-height: 70px; text-align: center; transition:0.5s all}
+.cn-contact .rhs .orange-box:hover{ opacity: 0.5;}
+.cn-contact .cn-iframe{ position: absolute; width:calc(100vw - 50px); height: 100vh; z-index: 0; opacity: 1; border: 0px; }
+
+.cn-contact .rhs h6{ color:#5c5d61; font-size:15px; font-weight: 200;}
+.cn-contact .rhs .vcn1{}
+
+/*tabs RHS*/
+.cn-contact .rhs .vcn1 .nav-tabs{background: #0f1114; border-bottom: 0px }
+.cn-contact .rhs .vcn1 .nav-tabs .nav-item{ flex-grow: 1; margin-bottom: 0px; border:none;}
+.cn-contact .rhs .vcn1 .nav-tabs .nav-item a.nav-link{ border-radius: 0px; color: #41464b; font-size:15px; font-weight: 200; border: none; padding: 20px 40px; border-left: 1px solid #1b2026;  border-bottom: 1px solid #1b2026;}
+.cn-contact .rhs .vcn1 .nav-tabs .nav-item a.nav-link.active{ background: #000;  border-bottom: 1px solid transparent; }
+.cn-contact .rhs .vcn1 .nav-tabs .nav-item a.nav-link:hover{border-color:transparent; cursor: pointer;}
+.cn-contact .rhs .vcn1 .nav-tabs .nav-item a.nav-link h6{ font-size: 18px; fadeInUpBigfont-weight: 200; text-transform: uppercase; color: #fff; margin: 0px;}
+.cn-contact .rhs .vcn1 .tab-content{ padding: 40px;padding-bottom: 10px;}
+.cn-contact .rhs .vcn1 .tab-content h4{text-transform: uppercase; margin-bottom: 30px;}
+.cn-contact .rhs .vcn1 .tab-content LABEL{text-transform: uppercase;}
+.cn-contact .rhs .vcn1 .tab-content .form-group{margin-bottom: 20px;}
+.cn-contact .rhs .vcn1 .tab-content {}
+.cn-contact .rhs .vcn1 .tab-content INPUT,
+.cn-contact .rhs .vcn1 .tab-content TEXTAREA{ background: #121417; border: 1px solid #34373d; border-radius: 0px; font-size:14px; color:#c0c0c0; padding: 15px; }
+.cn-contact .rhs .vcn1 .tab-content INPUT:focus,
+.cn-contact .rhs .vcn1 .tab-content TEXTAREA:focus{ background: #121417; border: 1px solid #fd6400; box-shadow: none }
+.cn-contact .rhs .vcn1 .tab-content LABEL { color:#41464b; font-size:15px; font-weight: 200;}
+
+
+
+.cn-contact .rhs .vcn2{ background: #0f1114; border-top:1px solid #1b2026; padding: 40px 40px 10px 40px; align-self: flex-end}
+
+.cn-contact .rhs .social-links{ margin-bottom: 15px; margin-top: 0px}
+.cn-contact .rhs .social-links a{ border: 0px solid #373a3f; border-radius: 50%;  /*width:40px; height: 40px;*/ text-align: center; margin-right: 10px; display: inline-block; transition:0.2s all; font-size: 18px; }
+.cn-contact .rhs .social-links a i{ color: #373a3f; margin-top: 10px;}
+.cn-contact .rhs .social-links a{ color: #fd6400;transition:0.2s all; padding-right: 15px!important; }
+.cn-contact .rhs .social-links a:hover i { color: #fd6400;transition:0.2s all }
+.cn-contact .rhs .social-links a:hover { border-color: #fff; }
+
+.cn-contact .rhs .vcn2 .call,
+.cn-contact .rhs .vcn2 .email{ width:50%; }

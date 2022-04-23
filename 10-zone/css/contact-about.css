@@ -1,0 +1,152 @@
+/* Contact Us*/
+footer .bg-intern{
+	background:#ebedf1!important
+}
+.contact-fold1{background: url(../img/bg_services_header.jpg) bottom no-repeat;
+    background-size: cover;
+    padding-bottom: 78px;
+	padding-top: 78px; 
+	vertical-align: middle;
+}
+
+.tc{
+	text-align: center;
+}
+.tl{
+	text-align: left
+}
+.tr{
+	text-align: right
+}
+.contact-fold2 P {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+.contact-fold2 h4{
+	color:#312366;
+	font-size: 30px;
+}
+.contact-fold2 a{
+	color:#312366;
+	font-size: 18px;
+}
+.secondary-text.link{
+	color:#ea7e3c
+}
+.font-uppercase{
+	text-transform: uppercase;
+}
+.spacerhight2{
+	height: 30px; display: block; clear: both;
+}
+.spacerhight{
+	height: 70px; display: block; clear: both;
+}
+
+.formbox {
+	background: #f4fafc;
+	padding: 20px;
+	max-width: 100%;
+	box-sizing: border-box
+}
+.formbox label {
+	width: 100%;
+	color: #4d5359;
+	transition: 200ms all ease-in-out;
+	text-transform: uppercase
+}
+.formbox label:focus, .formbox label:active, .formbox label:hover {
+	transition: 200ms all ease-in-out;
+}
+.formbox label input, .formbox label textarea {
+	clear: both;
+	width: 100%;
+	background: none;
+	border: 0;
+	border-bottom: 2px solid #4a5467;
+	padding: 10px 0;
+	margin: 20px 0;
+	outline: 0!important
+}
+.formbox label textarea {
+	min-width: 100%;
+	width: 100%;
+	max-width: 100%;
+	min-height: 100px;
+	max-height: 200px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.pd0{
+	padding:0!important;
+}
+hr {
+	height: 1px;
+	background: #f4f4f4;
+	display: table;
+	width: 100%;
+	border: 0;
+}
+.socialicons a {
+	background: #1b2746;
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	text-align: center;
+	border-radius: 100%;
+	padding-top: 15px;
+	font-size: 20px;
+	margin-right: 10px;
+	color:#FFFFFF
+}
+.socialicons a:hover {
+    background: #e26011;
+}
+a,a:hover,a:focus{
+	text-decoration: none!important
+}
+
+
+/*About Us */
+
+
+.heading-spacer-orange{
+	background: #ea7e3c;
+	height: 4px;
+	width: 50px;
+	margin: 20px 0 50px 0;
+}
+.heading-spacer-purple{
+	background: #b2119e;
+	height: 4px;
+	width: 25px;
+	margin: 10px auto;
+}
+.scrolltext{ margin-top: 150px}
+.scrolltext a{ color:#a0bcc5; font-size: 11px;}
+.about-fold1-rhs{
+	background: url(../img/about-bg.jpg);
+	background-size:cover; 
+}
+.about-fold3 h4{
+	font-size: 18px;
+}
+.about-fold3 p{
+	font-size: 20px;
+}
+.about-fold4{
+	background:url(../img/pattern1.jpg) repeat 0 0 ;
+}
+.border-right{
+	border-right: 1px solid #DDDDDD;
+}
+.about-fold4 h4{
+	font-size: 18px;
+	font-weight: bold;
+}
+.about-fold4 p{
+	font-size: 20px;
+
+}

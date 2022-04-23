@@ -1,0 +1,69 @@
+
+
+/*--------------RESPONSIVE STYLING START HERE---------------*/
+@media (min-width:1282px) and (max-width: 1366px) {}
+@media (min-width:1170px) and (max-width: 1281px) {}
+@media (min-width:1000px) and (max-width: 1169px) {}
+@media (min-width: 768px) and (max-width: 999px) {}
+@media (max-width: 767px) {
+
+/*#sidebar { display: none; }*/
+.main-pad { padding: 25px; }
+.wel-txt h3 { font-size: 22px; }
+.wel-txt p { font-size: 16px; }
+.main-btn { margin-top: 15px; min-width: 270px; text-align: left; display: block; margin: 15px auto; }
+.main-btn+.main-btn {margin: 0px auto 15px;}
+.top-box {margin-bottom: 15px; padding: 15px 0 70px 0; min-height: inherit; }
+.top-box h3 { font-size: 40px; margin: 10px 0 0 0;}
+.top-box h5 {    margin: 0 0 10px 0;}
+
+.chart-bg {    margin: 20px 0 0 0;}
+.chart-info h3 { font-size: 35px; }
+.chart-info h4 {    margin: 0 0 15px 0;}
+.pie-chart { padding: 15px; }
+.pie-chart .chart-detail { max-width: 40%;}
+.chart-info ul li { font-size: 16px;margin: 0px 0 5px 0; }
+
+ul.flex-last-right li h3 { font-size: 20px; margin: 0 0 15px 0; }
+ul.flex-last-right { flex-wrap: wrap; padding: 20px 0 12px 0; }
+ul.flex-last-right li, ul.flex-last-right li:last-child {width: 100%;}
+.total-amont h2 { font-size: 30px;margin: 0 0 10px 0;}
+.total-amont { min-height: inherit; margin-bottom: 25px;  }
+.total-amont h4 { font-size: 16px; margin: 0 0 15px 0; }
+
+
+.ticketInfoChart { flex-wrap: wrap;}
+.ticketChart { width: 100%; padding: 20px; }
+.ticketInfo { width: 100%; padding-bottom: 25px; }
+.ticketInfo ul { margin: 10px 0 0 0; position: relative; }
+.ticketInfo h6 { margin: 0 0 0px; padding: 10px 25px; font-size: 16px; line-height: 24px; }
+.ticketInfo h3 {font-size: 40px;    padding: 0 25px;}
+.ticketInfo h5 {padding: 0 25px;}
+.ticketInfo ul li { font-size: 16px; }
+
+
+.calander-bg { margin: 25px 0 0 0; }
+.calander-bg .calander-info { width: 100%; }
+.calander-bg .calander { width: 100%; }
+.calander-bg {    flex-wrap: wrap;}
+
+.calander-bg .calander-info h3 { padding: 22px 20px; }
+.calander-bg .calander-info h6 {padding: 20px 25px; font-size: 16px; line-height: 24px; }
+.calander-bg .dragable-info ul li { padding: 20px; margin: 0 16px 6px; font-size: 15px;}
+.calander-bg .dragable-info ul li>i { margin-right: 15px; }
+.calander-bg .dragable-info ul li:last-child { margin-bottom: 10px; }
+
+
+.field { margin: 0 0 20px 0; }
+.whitBgForm {    margin: 20px 0;}
+
+
+}
+
+
+@media (max-width: 360px) {}
+@media (max-width: 320px) {}
+/* Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+
+}

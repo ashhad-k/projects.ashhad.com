@@ -1,0 +1,431 @@
+@media (max-width: 991px) {
+	
+	body{ text-align: center; overflow-x: hidden; }
+	
+	h1{ font-size:36px!important;}
+	h2{ font-size:30px!important; line-height: 1.2}
+	P{ font-size:18px!important;}
+	
+	NAV{ padding: 10px 10px!important; transition: .5s; box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.2); background: #f4f4f4!important }
+	NAV .navbar-brand{ padding: 0px; margin: 0px;}
+	NAV.top1-min .navbar-brand{ width: auto;}
+	NAV.fixed-top{ background: #f4f4f4!important}
+	.navbar-nav{ margin-top: 40px; display: block}
+	.navbar-nav a.nav-link{ padding: 5px 10px;}
+	
+	
+	.fold1{ padding: 000px 00px 000px 0px;  background: url(../img/bg_fold1.jpg) center bottom; background-size: cover; background-repeat: no-repeat; margin-top: 70px; }
+	
+	.fold1 .lhs{ display: block; padding: 100px 00px 400px 0px; background: rgba(40,40,50,0.5)}
+	.fold1 h2{ color: #fff; }
+	.fold1 P{ color: #fff; width: 100%!important; margin: 20px 0px; padding: 0px 20px;}
+	.fold1 .rhs{display: none;}
+	.cup1{padding: 20px;}
+	.cup1 IMG{ width: 100%;}
+	
+	.cn-smoke{width:auto; right: 00px; left: 0px; top:-400px}
+	.cn-smoke #viewport{width:auto;}
+	
+	
+	.fold2{ padding: 20px; }
+	.fold2 HEADER{ position: relative; padding: 60px 20px; width: 100%!important; top: 0px; margin-bottom: 40px;}
+	.fold2 HEADER h1{margin-bottom: 10px}
+	.fold2 DIV.box{ margin: 20px 20px 150px 20px; padding: 30px 60px 120px 40px}
+	.fold2 DIV.box h3{ margin: 20px 0px;}
+	.fold2 DIV.box P{ padding-bottom: 20px;}
+	.fold2 DIV.box SMALL{ text-align: center;}
+	.fold2 DIV.box .objects{ left: 00px;}
+	.fold2 DIV.box .cup2{ left: 0px;}
+	
+	.leaves1{ text-align: left;}
+	.leaves1 IMG{ margin: 0px; max-width: 90%;}
+	
+	.fold3{ padding: 60px 20px;  }
+	.fold3 .lhs{ padding-bottom: 0px; }
+	.fold3 h1{ margin: 20px 0px; padding: 20px 0px;}
+	.fold3 P{ margin-bottom: 0px;}
+	
+	.fold3 .rhs{display: none;}
+	.cup3{ display: none}
+	
+	.fold4{padding: 20px; }
+	.fold4 HEADER{ position: relative; padding: 60px 20px; width: 100%!important; top: 0px; margin-bottom: 40px; left: 0px}
+	.fold4 HEADER h1{margin-bottom: 10px}
+	.fold4 .cup1{ position: relative}
+	.fold4 .cup1 IMG{ margin: 0px; padding: 0px; width: 100%; height: auto;}
+
+	
+	.fold5{ padding: 60px 20px;}
+	.fold5 HEADER{ position: relative; padding: 60px 20px; width: 100%!important; top: 0px; margin-bottom: 40px; left: 0px}
+	.fold5 HEADER h1{margin-bottom: 10px}
+	.fold5 .three-columns .row{ display: block}
+	.fold5 .three-columns .box{ width: 100%!important; padding: 40px 20px; }
+	.fold5 .three-columns .box h3{ padding-bottom: 0px;}
+	
+	
+	.fold6{ padding: 00px 20px 60px 20px;}
+	.fold6 HEADER{ position: relative; padding: 60px 20px; width: 100%!important; top: 0px; margin-bottom: 00px; left: 0px}
+	.fold6 .fold6-cn-img P{left: 0px; right: 0px;}
+	
+	.fold7{ padding: 60px 20px 60px 20px;}
+	.fold7 HEADER{ position: relative; padding: 00px 00px; width: 100%!important; top: 0px; margin-bottom: 00px; left: 0px}
+	.fold7 .info{ padding: 20px 0px; }
+	.fold7 .blank-box{ display: none;}
+	.fold7 .details{ margin-top: 50px}
+	.fold7 .details .text-right{ text-align: center!important;}
+	.fold7 .details .text-right IMG{width: 50%;}
+	
+	.fold8{display: flex; }
+	.fold8 > DIV{ width: 50%;}
+	.fold8 > DIV IMG{ width: 100%;}
+	
+	FOOTER{ display: block; height: auto;}
+	FOOTER > DIV{ width: 100%; display: block;}
+	FOOTER .lhs > DIV{ margin-bottom: 40px;}
+	FOOTER .rhs{ height: auto;}
+	
+	FOOTER .lhs DIV.copyright { display: block; margin-bottom: 0px;}
+	FOOTER .copyright SPAN{ display: block;}
+	FOOTER .copyright .share-anchor{ padding: 20px 0px; text-align: center!important;}
+	
+	FOOTER .rhs{height: 400px;}
+	
+/*	------------------/992px end*/
+}
+@media (max-width:768px){
+	body{ overflow-x: hidden;}
+	.mobhide{ display: none!important}
+	.mobshow{ display: block!important}
+	
+	.navbar-brand img{		width: 200px;	}
+	
+}
+
+
+@media(min-width:1024px) {
+.desktop-hidden {
+	display: none!important
+	}
+}
+
+
+/* disable scrollme for mobile*/
+@media (max-width: 767px){
+	.animateme, .scrollme{
+		transform: none !important;
+		opacity: 1 !important;
+	}
+}
+
+
+
+/* updated responsive for all devices */
+@media(max-width:768px) and (min-width:642px){
+	.scrollme img, .cn-smoke, .animateme{
+		transform: none!important;
+		opacity: 1!important;
+	}
+	.fold1 .lhs {
+		width: 100%;
+		max-width: 100%;
+		flex: none;
+	}
+	.fold2 HEADER{
+		padding: 30px 30px;
+		width: 100%;
+		position: static;
+		max-width: 100%;
+		text-align: center;
+		margin:0;
+	}
+	.fold2 HEADER h1 {
+		white-space: normal;
+		margin-bottom: 20px;
+	}
+	
+	.fold2 DIV.box {
+		display: inline-block;
+		width: 45%;
+		max-width: 100%;
+		flex: none;
+		margin: 5% 2.5% 10%;
+		padding: 30px 20px 60px 40px;
+	}
+	.fold2 DIV.box SMALL{
+		text-align: right;
+		padding:0 0 50px 0
+	}
+	.fold3 .lhs {
+		padding-bottom: 0px;
+		width: 100%;
+		max-width: 100%;
+		flex: none;
+		text-align: center;
+		margin: 0;
+	}
+	.fold4 HEADER{
+		max-width: 100%;
+		flex: none;
+		padding: 30px;
+	}
+	.cup1.my-paroller{
+		margin-top: -120px;
+		width: 40%;
+		display: table;
+		text-align: right;
+	}
+	.fold5 HEADER{
+		max-width: 50%;
+		flex: none;
+		padding: 30px;
+		margin-top: -270px;
+		float: right;
+	}
+	.fold5 .three-columns {
+		width: 100%;
+		max-width: 100%;
+		flex: none;
+		display: block;
+	}
+	.fold5 .three-columns .box {
+		width: 100%!important;
+		padding: 40px 20px 0;
+		max-width: 100%;
+		flex: none;
+		text-align: center;
+		display: inline-block;
+	}
+	.fold6 HEADER {
+		position: relative;
+		padding: 30px 20px;
+		width: 100%!important;
+		top: 0px;
+		margin-bottom: 00px;
+		left: 0px;
+		max-width: 100%;
+	}
+	.fold6 HEADER h1 {
+		white-space: normal;
+		margin-bottom: 30px;
+	}
+	.fold6 .fold6-cn-img {
+		position: relative;
+		max-width: 100%;
+		flex: none;
+		text-align: center;
+	}
+	.fold6 .fold6-cn-img P {
+		left: 0px;
+		right: 0px;
+		text-align: center;
+		width: 100%;
+		max-width: 100%;
+		flex: none;
+		bottom: inherit;
+		top: 40%;
+		font-size: 28px!important;
+	}
+	.fold6 {
+		padding: 00px 20px 00px 20px;
+	}
+	.fold7 HEADER{
+		display: inline-block;
+		max-width: 50%;
+	}
+	.fold7 .info {
+		padding: 20px 0px;
+		width: 100%;
+		max-width: 100%;
+		flex: none;
+		text-align: center;
+		margin: 0;
+	}
+	.fold7 .info p{
+		font-size: 28px!important;
+	}
+	.fold7 .details .offset-md-5{
+		width: 100%;
+		max-width: 100%;
+		flex: none;
+		margin: 0;
+	}
+	.fold7 .details .text-right img{
+		width: 15%;
+		margin-bottom:20px
+	}
+	.fold7 .details {
+		margin-top: 0;
+	}
+	FOOTER .copyright SPAN {
+		display: inline-block;
+	}
+	}
+	@media(max-width:1024px) and (min-width:868px){
+		.navbar, .navbar-expand-lg .navbar-collapse{
+			display:inline-block!important;
+			flex:none!important;
+			width: 100%;
+		}
+		.navbar-nav {
+		display: inline-block;
+	}
+		.navbar-nav li{
+			display: inline-block
+		}
+		NAV.fixed-top {
+		padding: 5px 0px;
+		text-align: center;
+	}
+	.fold1 {
+		background-position:right 10%;
+		background-size: 55%;
+	}
+	.fold1 .lhs {
+		margin-left: 30px;
+	}
+	.fold2 HEADER{
+		padding: 30px 30px;
+		width: 100%;
+		position: static;
+		max-width: 100%;
+		text-align: center;
+		margin:0;
+	}
+	.fold2 DIV.box {
+		display: inline-block;
+		width: 45%;
+		max-width: 100%;
+		flex: none;
+		margin: 5% 2.5% 10%;
+		padding:30px 20px 30px 40px;
+	}
+	.fold2 DIV.box .objects{
+		left:-30px
+	}
+	.fold2 HEADER h1 {
+		white-space: normal;
+		margin-bottom: 20px;
+	}
+	.scrollme img, .cn-smoke, .animateme{
+		transform: none!important;
+		opacity: 1!important;
+	}
+	.rhs.my-paroller {
+		margin: 0
+	}
+	.rhs.my-paroller img{
+		width: 100%
+	}
+	
+	.fold4 
+	{
+		padding:0!important;
+	}
+	.fold4 h1.display-1 {
+		font-size: 8rem;
+		z-index: 1;
+		position: relative;
+		margin-left: 40px;
+		margin-top: 30px;
+	}
+	header h1{
+		font-size: 35px
+	}
+	.fold4 HEADER {
+		position: absolute;
+		background: var(--colorGray);
+		color: #fff;
+		padding: 50px 60px 20px;
+		right: inherit;
+		position: static;
+		width: 100%;
+		max-width: 100%;
+		flex: none;
+	}
+	.fold5 HEADER {
+		display: block;
+		position: absolute;
+		background: #498dac;
+		padding: 90px 60px;
+		color: #fff;
+		top: -100px;
+		left: 0px;
+		position: static;
+		width: 100%;
+		max-width: 100%;
+		flex: none;
+		padding: 30px;
+		text-align: center;
+	}
+	.fold5{
+		padding:60px 50px 80px 50px
+	}
+	.fold5 HEADER h1{
+		white-space: normal;
+		margin-bottom: 20px;
+	}
+	
+	.fold5 .text-center{
+		margin: 0;
+		width: 100%;
+		max-width: 100%;
+		flex: none;
+	}
+	.fold5 .three-columns .box {
+		padding: 50px 10px;
+	}
+	.fold6 {
+		padding-top:0;
+		padding-bottom:100px;
+	}
+	.fold6 HEADER {
+		padding: 50px 40px;
+		width: 50%;
+		max-width: 50%;
+	}
+	.fold6 .fold6-cn-img P {
+		position: absolute;
+		font-size: 40px;
+		font-weight: 200;
+		bottom: 50px;
+		color: #fff;
+		margin: 40px;
+		width: 55%;
+	}
+	.fold7{
+		padding-bottom: 100px
+	}
+	.fold7 HEADER {
+		width: 50%;
+		max-width: 30%;
+	}
+	.fold7 .blank-box {
+		background: #ecf3f7;
+		height: 370px;
+		position: absolute;
+	}
+	
+	.fold7 .details .offset-md-5{
+		width: 80%;
+		max-width: 80%;
+		flex: none;
+		margin-left: 100px;
+		margin-top: 15%;
+	}
+	
+	.fold8 > DIV img{
+		width: 100%;
+	}
+	FOOTER .copyright > SPAN{
+		width: 100%;
+		max-width: 100%;
+		flex: none;
+		display: block
+	}
+	FOOTER .copyright .share-anchor a{
+		margin-left:0;
+	}
+	FOOTER .copyright .share-anchor {
+		text-align: left;
+	}
+	}

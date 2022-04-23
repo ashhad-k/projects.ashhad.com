@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<!--Custom CSS-->
+<link href="css/custom.css" rel="stylesheet" type="text/css">
+<link href="css/responsive.css" rel="stylesheet" type="text/css">
+
+<!--Google Fonts-->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700" rel="stylesheet">
+
+<!--Font Awesome-->
+<link href="fontawesome-free-5.0.2/css/fontawesome-all.css" rel="stylesheet" type="text/css">
+<!--Hover CSS-->
+<link href="css/hover.css" rel="stylesheet" type="text/css">
+<!--AOS CSS-->
+<link rel="stylesheet" href="css/aos.css" />
+<!--Animate CSS-->
+<link rel="stylesheet" href="css/animate.css" />
+<title>Billing - I.T Module</title>
+</head>
+<body class="page-billing">
+<div class="button1" tabindex="0"  id="topbtn"><img src="img/icons/30x30-burger.png" width="30" height="30" alt=""/></div> 
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn">&times;</a>
+  
+   <a href="index.html"><i class="icon48-dashboard"></i> Dashboard</a> 
+   <a href="monitoring.html"> <i class="icon48-monitoring"></i> Monitoring</a> 
+   <a href="control-panel.html"> <i class="icon48-cp "></i> Control Panel</a> 
+   <a href="billing.html" class="active"><i class="icon48-billing "></i> Billing</a> 
+   <a href="support.html"><i class="icon48-support"></i>Support</a>
+   <hr>
+    <div class="search-box">
+   
+    <form id="searchForm" action="#" role="search">
+     <i><img src="img/icons/search.png" width="30" height="30" alt=""/></i>
+      <input type="search" placeholder="What are you looking for..." class="form-control">
+    </form>
+  </div>
+  <hr>
+   <a href="#"> Logout</a>
+
+</div>
+<!-- Search Box-->
+<div id="main">
+<div class="top1">
+  <div class="search-box">
+    <button class="dismiss"><i class="far fa-times-circle"></i></button>
+    <form id="searchForm" action="#" role="search">
+      <input type="search" placeholder="What are you looking for..." class="form-control">
+    </form>
+  </div>
+  <div class="brand">  <a href="index.html" ><img src="img/logo/brand-48x48.png" width="48" height="48" alt="Profintech"/><br>
+    IT</a></div>
+  <div class="grow"> <a href="index.html"><i class="icon48-dashboard"></i> Dashboard</a> <a href="monitoring.html"> <i class="icon48-monitoring"></i> Monitoring</a> <a href="control-panel.html"> <i class="icon48-cp "></i> Control Panel</a> <a href="billing.html" class="active"><i class="icon48-billing "></i> Billing</a> <a href="support.html"><i class="icon48-support"></i>Support</a> </div>
+  <!--/grow -->
+  <div class="rhs">
+    <div class="child"> <a href="#" id="search" data-toggle="tooltip" data-placement="bottom" title="Search"><img src="img/icons/search.png" width="30" height="30" alt=""/></a></div>
+    <div class="child">
+      <div class="dropdown show"> <a id="dd-notifications" data-toggle="dropdown"> <img src="img/icons/notifications.png" width="30" height="30" alt=""/></a>
+        <ul  class="dropdown-menu  dropdown-menu-right">
+          <li><a rel="nofollow" href="#" class="dropdown-item">
+            <div class="notification">
+              <div class="notification-content"><i class="fa fa-envelope bg-green"></i>You have 6 new messages </div>
+              <div class="notification-time"><small>4 minutes ago</small></div>
+            </div>
+            </a></li>
+          <li><a rel="nofollow" href="#" class="dropdown-item">
+            <div class="notification">
+              <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>You have 2 followers</div>
+              <div class="notification-time"><small>4 minutes ago</small></div>
+            </div>
+            </a></li>
+          <li><a rel="nofollow" href="#" class="dropdown-item">
+            <div class="notification">
+              <div class="notification-content"><i class="fa fa-upload bg-orange"></i>Server Rebooted</div>
+              <div class="notification-time"><small>4 minutes ago</small></div>
+            </div>
+            </a></li>
+          <li><a rel="nofollow" href="#" class="dropdown-item">
+            <div class="notification">
+              <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>You have 2 followers</div>
+              <div class="notification-time"><small>10 minutes ago</small></div>
+            </div>
+            </a></li>
+          <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>view all notifications </strong></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="child"> <a href="#" data-toggle="tooltip" data-placement="bottom" title="Logout"><img src="img/icons/sqaures.png" width="30" height="30" alt=""/></a> </div>
+  </div>
+</div>
+<!--/top1-->
+<div class="head2">
+  <div class="child">
+    <h1>Billing</h1>
+    <small>Some text will be placed over here regarding monitoring ... </small> </div>
+  <!--/-->
+  <div class="child">
+    <div class="cn-labels"><span class="text-green2">some stats here </span> </div>
+  </div>
+  <!--/-->
+  <div class="child">
+    <ul class="nav nav-tabs" id="pg-mntr-tabs">
+      <li class="nav-item"> <a class="nav-link active" id="pg-billing-one-tab" data-toggle="tab" href="#pg-billing-one" >Billing</a> </li>
+      <li class="nav-item"> <a class="nav-link" id="pg-billing-two-tab" data-toggle="tab" href="#pg-billing-two" >History</a> </li>
+      <li class="nav-item"> <a class="nav-link" id="pg-billing-three-tab" data-toggle="tab" href="#pg-billing-three" >Add Payment Method</a> </li>
+    </ul>
+  </div>
+  <div class="child"> </div>
+</div>
+<!--/head2-->
+
+<section>
+  <div class="tab-content one-row" id="pg-billing-contents">
+    <div class="tab-pane fade show active" id="pg-billing-one">
+      <h4 class="mb-3 text-uppercase">Billing Information</h4>
+      <p class="mb-3">Lorem ip dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <div class="billing-form row1">
+        <div class="form-group ">
+          <label for="Name">Name</label>
+          <input type="text" class="form-control effect-1" id="Name" placeholder="Syed M. Imran Abid">
+        </div>
+        <div class="form-group">
+          <label for="Gender">Gender</label>
+          <input type="text" class="form-control" id="Gender" placeholder="Male">
+        </div>
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="text" class="form-control" id="dob" placeholder="16 Feb 1984">
+        </div>
+
+      </div> 
+       <div class="billing-form row1">
+        <div class="form-group">
+          <label for="country">Country</label>
+          <input type="text" class="form-control" id="country" placeholder="Pakistan">
+        </div>
+        <div class="form-group">
+          <label for="VAT">VAT</label>
+          <input type="text" class="form-control" id="VAT" placeholder="6699">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="text" class="form-control" id="Phone" placeholder="Phone">
+        </div>
+
+      </div>
+      <!--/billing form-->
+      <hr>
+      <h4 class="mb-3 text-uppercase">payment method</h4>
+      <p>Lorem ip dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <div class="billing-cards"> 
+        <!--     http://muffinresear.ch/payment-icons/-->
+        <div class="child">
+          <div class="badge">Default </div>
+          <img src="img/icons/cards/amex.svg" alt=""/> </div>
+        <div class="child"> <img src="img/icons/cards/visa.svg" alt=""/></div>
+        <div class="child"><small>Add another card</small></div>
+      </div>
+      <div> <a class="btn btn-secondary btn-lg btn-orange" href="#"> Proceed </a></div>
+    </div>
+    <!--/1-->
+    <div class="tab-pane fade" id="pg-billing-two"> History </div>
+    <!--/2-->
+    <div class="tab-pane fade" id="pg-billing-three"> Add Payment Method </div>
+    <!--/3--> 
+    
+  </div>
+</section>
+</div>
+<!-- jQuery first, then Popper.js, then Bootstrap JS --> 
+<script type="text/javascript"  src="js/jquery.min.js"></script> 
+<script type="text/javascript"  src="js/popper.min.js"></script> 
+<script type="text/javascript"  src="js/bootstrap.min.js"></script> 
+<script type="text/javascript"  src="js/ticker.js"></script> 
+<script type="text/javascript"  src="js/aos.js"></script> 
+<script type="text/javascript"  src="js/custom.js"></script> 
+<script src="js/chart.js/Chart.bundle.min.js"></script> 
+<script src="js/charts-custom.js"></script> 
+<script>
+	  //AOS
+	AOS.init({
+      offset: 200,
+      duration: 300,
+      easing: 'ease-in-sine',
+      delay: 100,
+		  disable: 'mobile',
+    });
+		
+		AOS.refresh();
+
+      //setInterval(addItem, 300);
+	
+	   //toggle image
+	$("#demo-img1").click(function() {
+    $(this).find('img').toggle();
+	});   
+	//toggle image
+	$("#demo-img2").click(function() {
+    $(this).find('img').toggle();
+	});
+	   
+
+	   
+	</script>
+</body>
+</html>

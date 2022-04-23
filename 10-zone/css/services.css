@@ -1,0 +1,92 @@
+/*services*/
+
+.bg-orange {
+	background: #ea7e3c;
+	color: #fff!important;
+}
+.bg-orange a
+{
+	color: #fff!important;
+}
+.bg-orange a:hover{
+	color: #312366!important;
+}
+
+
+/*Services - Fold1*/
+.services-fold1 {
+	background: url(../img/bg_services_header.jpg) bottom no-repeat;
+	background-size: cover;
+	padding-bottom: 78px;
+	padding-top: 78px;
+}
+
+.services-fold1 h1 {
+	margin-bottom: 30px;
+	font-size: 3.75rem
+}
+.services-fold1 h1 SPAN {
+	color: #b2119e
+}
+.services-fold1 P {
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+.services-fold1 UL LI{ line-height: 2rem}
+
+.services-fold1-rhs{
+	background: url(../img/pattern1.jpg);
+	background-size: cover;
+	
+	border-radius: 4px;
+	color:#5c5c5c;
+	
+	-webkit-box-shadow: -10px 10px 20px 5px rgba(181,220,233,1);
+-moz-box-shadow: -10px 10px 20px 5px rgba(181,220,233,1);
+box-shadow: -10px 10px 20px 5px rgba(181,220,233,1);
+	
+}
+.services-fold1-rhs INPUT,
+.services-fold1-rhs .btn.dropdown-toggle,
+.services-fold1-rhs SELECT{ border:1px solid #e7e7e7; border-radius: 0px; font-size: 20px; line-height: 2.5rem; color:#5c5c5c; background: #fff}
+.services-fold1-rhs input::placeholder{ font-weight:100; color:#d0d0d0; }
+.services-fold1-rhs .text-muted{ font-size:13px; color:#8b8b8b}
+.services-fold1-rhs .btn-orange{ border-radius: 4px; border: 0px; cursor: pointer; margin-bottom: 10px;}
+
+.services-fold1-rhs .btn-orange{ background: #ea7e3c; border-bottom: 5px solid #d57033;}
+.services-fold1-rhs .btn-orange:hover{ background: #e26011}
+.services-fold1-rhs .hvr-sweep-to-left:before{ background: #d57033}
+
+/*----------------------*
+/* Service Navigation*/
+.services-nav{ background:#571f7e; text-transform: uppercase; font-size: 20px; font-weight: 800; box-shadow: 0px 10px 18px 0px rgba(142, 142, 142, 0.5);}
+.services-nav a{ color: #fff; padding: 10px 30px;}
+.services-nav a:hover{ color: #ea7e3c}
+
+/*----------------------*
+/* Services Fold 2*/
+.services-fold2 {
+	background: url(../img/pattern1.jpg);
+	padding-top: 00px;
+	padding-bottom: 00px;
+}
+.services-fold2 P {
+	font-size: 18px;
+	line-height: 1.7;
+	margin-bottom: 30px;
+}
+.services-fold2 .row-eq-height{}
+.services-fold2 .row-eq-height h4{ font-size:20px; color:#312366; margin-bottom: 0px;}
+.services-fold2 .row-eq-height P{  font-size: 16px;}
+.services-fold2 .box1{ padding:30px 40px;}
+.services-fold2 .box1 IMG{ margin-bottom: 30px}
+
+.services-fold2-lhs{}
+.services-fold2-lhs UL LI{ font-size: 20px; font-weight: 800; padding: 10px 20px;}
+.services-fold2-lhs UL LI a{color:#5c5c5c}
+.services-fold2-lhs UL LI a:hover{color:#e26011}
+.services-fold2-lhs UL LI a.active{color:#312366}
+
+.services-fold2-rhs{ font-size:18px; line-height: 2rem}
+
+

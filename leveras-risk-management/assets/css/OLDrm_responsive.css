@@ -1,0 +1,495 @@
+.hidedesk{display: none;}
+#megamenu{display: none;}
+@media(max-width:1024px){
+.cn-profile.two-col > .rhs .hdr1 .btn-lg{
+        padding:15px 10px
+}
+.cn-symbol2 > header, .cn-symbol2 > MAIN > .other-detals div.child, .cn-symbol2 > MAIN > .other-detals h4  {
+        display: block;
+}
+.cn-profile.two-col, .cn-profile .lhs .list-group{
+    display: block!important;
+}
+.cn-profile.two-col > .lhs a.list-group-item{
+    display: inline-block;
+    width: 32.9%;
+}
+    
+.navbar .navbar-nav > li.summary {
+    margin: 0;
+}
+.cn-user {
+    margin-top: 0;
+}
+.header-menu .gsd1 {
+        padding: 18px 10px;
+    }
+    .header-menu .cn1 {
+        padding: 10px 10px;
+        font-size: 13px;
+        max-width: 13%;
+    }
+    .header-menu .cn2 div:first-child {
+        min-width: 150px;
+    }
+    .header-menu .cn2 {
+        display: inline-block;
+    }
+    .header-menu .cn2 div.child {
+        flex: none;
+        background: #eaf2f2;
+        color: #38495c;
+        padding: 8px 10px;
+        border-right: 1px solid #cad4ef;
+        max-width: 100px;
+        float: left;
+    }
+
+    .gn1.card .card-title {
+        font-size: 12px;
+    }
+
+    .card-body .tab-content>.tab-pane {
+        overflow-x: scroll;
+    }
+    .gn1 .tbl1 TD h3 {
+         font-size: 16px;
+    }
+    .gn1 .tbl1 TD {
+        padding: 10px!important;
+        font-size: 12px!important;
+    }
+
+
+    aside.left-panel {
+        padding: 0;
+}
+
+
+
+.cn-mwatch1 {
+    display: block
+}
+
+.cn-clients .badge {
+    font-size: 11px;
+    padding: 15px 10px;
+}
+.accordian-body .col-md-8 {
+    max-width: 100%;
+    width: 100%;
+    flex: none;
+}
+.accordian-body .col-md-4    {
+    max-width: 100%;
+    width: 100%;
+    flex: none;
+    margin-top: 20px
+}
+.cn-tools.two-col > .rhs #tools-tab1-item1 .row1 {
+    padding-left: 0;
+    padding-right: 0;
+}
+.cn-tools.two-col > .rhs #tools-tab1-item2b .row1 SECTION {
+    display: block;
+}
+.cn-tools.two-col > .rhs #tools-tab1-item2b .row2 .table tr td:first-child {
+    line-height: 22px;
+}
+}
+
+@media(max-width:868px){
+    .header-menu .cn2 div.child{
+        font-size: 10px;
+    }
+    .header-menu .cn2 div:first-child {
+        min-width: 90px;
+    }
+    .header-menu .cn1 {
+        padding: 10px 10px;
+        font-size: 12px;
+        max-width: 20%;
+    }
+    .header-menu .date {
+        padding: 10px 10px;
+    }
+    .header-menu .gsd1 {
+        padding: 30px 10px;
+    }
+    
+    .header-menu .col-sm-2.cn1{
+        display: none;
+        }
+        .header-menu .card {
+            min-width: 80px;
+        }
+.header-menu .card {
+    min-width: 80px;
+}
+.header-menu .gsd1 .gsd-box1 {
+    max-width: 48%;
+    margin-bottom: 15px;
+}
+.content .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 50%;
+}
+.gn1 .tbl2 TD {
+    width: 25%;
+}
+.content .col-lg-7.col-md-12 .col-lg-6{
+    padding:0!important
+}
+.cn-netexp1 .cn-clock1 {
+    display: block;
+}
+.cn-netexp1 .cn-clock1 .child.featured, .cn-netexp1 .cn-clock1 .child {
+    display: inline-block;
+}
+.cn-netexp1 .cn-clock1 .child.featured img{
+    max-width: 98px; height: 98px; 
+}
+.cn-netexp1 .cn-clock1 .child {
+    padding: 15px!important;
+}
+.cn-netexp1 .cn-stats2 .tab-pane .d-flex {
+    display: block!important;
+}
+.cn-netexp1 .cn-stats2 .tab-pane .child {
+    flex: none;
+    width: 32.90%;
+    display: inline-block;
+    float: left;
+}
+.cn-netexp1 .cn-stats2 .limit footer {
+    height: 40px;
+}
+.two-col {
+    display: block;
+}
+
+.content .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.cn-clients .cn-badges{
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+.cn-clients .badge {
+    font-size: 14px;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+}
+.cn-clients h2{
+    text-align: center
+}
+
+.cn-clients-tbl{
+    overflow-x:scroll 
+}
+.cn-tools.two-col > .rhs #tools-tab1-item1 .row1{
+    background: none;
+    margin-bottom: 10px;
+    float: left;
+    width: 100%;
+}
+#profile-tab1-item6 main table, .cn-profile.two-col .rhs #profile-tab1-item4 .tbl3{
+    overflow-x: scroll;
+    width: 600px;
+    display: block;
+    white-space: nowrap
+}
+
+.cn-profile.two-col > .rhs .lhs, .cn-profile.two-col > .rhs .rhs{
+    max-width: 100%;
+    text-align: center!important;
+    width: 100%;
+    min-width: 100%;
+    margin-bottom: 20px;
+}
+}
+
+@media(max-width:668px){
+
+    .row {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .open aside.left-panel {
+        max-width: 100%;
+        width: 100%;
+    }
+    .navbar-brand {
+        margin: 0!important;
+    }
+    .navbar-brand img{
+        max-width: 57px!important;
+    }
+    .open .right-panel {
+        margin: 0!important;
+    }
+    .header-menu{
+        display: table!important;
+        width: 100%;
+    }
+    .right-panel header.header{
+        padding:0
+    }
+    .header-menu .gsd1 .mega-dropdown-menu {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 135px;
+    }
+    .keep-open{
+        display: none;
+    }
+
+    .keep-open.show{
+        display: block!important;
+    }
+    .header-menu .cn2 {
+        display: table;
+        margin: 20px auto;
+        flex: none;
+        float: none;
+    }
+    .header-menu .date{
+        width: 100%!important;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .content .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .gn1 .tbl1 TD h3 {
+        font-weight: normal;
+        font-size: 25px;
+    }
+    .navbar .navbar-nav li {
+        transition: 0.5s all;
+        width: 32%;
+        display: inline-block;
+    }
+    .navbar-nav{
+        display: block;
+    }
+    .navbar .navbar-nav > li.summary.show{
+        width: 100%;
+    }
+    .summary .dropdown-menu > .cn1 {
+        padding: 10px;
+        min-width: 100%;
+    }
+    .cn-mwatch1 > .mw-lhs1 .widget1 {
+        width: 100%;
+}
+.gn1.card .card-title {
+    margin: 10px;
+    font-size: 14px
+}
+.cn-mwatch1 > .mw-rhs1{
+    padding:0;
+} .cn-mwatch1 > .mw-rhs1 .cn-box {
+    float:left;
+}
+.gn1 .tbl1 h5{
+    font-size: 15px;
+}
+.tbl2 TD, .tbl2 Th {
+    white-space: nowrap;
+}
+.cn-netexp1 .cn-clock1 .child.featured, .cn-netexp1 .cn-clock1 .child {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+.cn-netexp1 .cn-stats2 .tab-pane .child {
+    width: 100%;
+}
+.cn-exp-slider .child{
+    width:100%;
+}
+.cn-exp-slider {
+     overflow: hidden;
+}
+.exp-tab1{
+    width: 100%;
+}
+.cn-exposure .float-right{
+    display: block!important;
+    align-items: center!important;
+    width: 100%!important;
+}
+.cn-exposure .float-right .mr-2{
+    display: inline-block;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.cn-exposure .float-right #exp-tab1{
+    float: right;
+    margin-bottom: 20px;
+}
+.cn-exposure .gsd-search {
+    margin-left: 0;
+}
+.cn-exp-slider .tbl2{
+    min-width: inherit!important;
+}
+.wrapper2 {
+    width: 100%;
+}
+.cn-exp-slider SECTION {
+    text-align: left;
+    margin: 10px 0;
+}
+.cn-exp-slider FOOTER {
+    text-align: left;
+    text-transform: uppercase;
+    margin: 20px 0px;
+}
+.cn-exp-slider FOOTER h4{
+    
+    font-size: 13px;
+}
+.cn-exposure .card-header .card-title {
+    font-size: 25px;
+}
+.cn-netexp1 .cn-stats2 h3 {
+    font-size: 13px;
+} 
+.header-menu .gsd1 .gsd-box1 {
+    max-width: 100%;
+    margin-bottom: 15px;
+    width: 100%!important;
+    min-height: 50px;
+    padding: 15px;
+}
+.right-panel header.header div.col-md-2{
+    width: 100%!important;
+    max-width: 100%!important;
+    flex:none!important;
+    margin-bottom: 10px;
+    margin-top:10px;
+}
+.right-panel header.header div[class*="col"]{
+    padding:15px
+}
+.two-col > .rhs{
+    padding-left:0;
+    padding-right:0
+}
+.cn-tools.two-col > .rhs #tools-tab1-item1 .row1 .nav {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #dba465;
+    border-radius: 5px;
+    margin-top: 0;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.row2.head{
+    display: none!important;
+}
+.cn-tools.two-col > .rhs #tools-tab1-item1 .row2 {
+    margin: 5px 20px;
+    border: 1px solid #e5e6ec;
+    padding: 10px 20px;
+    display: block;
+}
+.row2.line { text-align: right}
+.hidedesk{display: inline-block; font-weight: bold; float:left}
+.cn-user .dropdown-menu {
+    top: 40px!important;
+    left: -30px!important;
+}
+.cn-notification .dropdown-menu {
+    top: 55px;
+    position: absolute;
+    left: -40px!important;
+}
+.open aside.left-panel .navbar .navbar-nav > li
+{
+    text-align: center;
+}
+
+#megamenu {
+    background: #38495c;
+    padding: 0 25px;
+    float: right;
+    display: table!important;
+    width: auto!important;
+    max-height: 10px;
+}
+#megamenu.header-menu .gsd1 .mega-dropdown-menu.show::before {
+    position: absolute!important;
+   }
+   #megamenu.header-menu .gsd1 .mega-dropdown-menu {
+    margin-top: 0!important;
+}
+#megamenu.header-menu .gsd1 {
+    padding: 12px 0!important;
+}
+.cn-user.user-area a, .cn-notification.for-notification a{
+    vertical-align: text-bottom!important;
+    min-height: 65px!important;
+    line-height: 60px!important;
+}
+.cn-user.user-area .user-menu a, .cn-notification.for-notification div a{
+    line-height: 26px !important;
+    min-height: 30px !important;
+}
+.cn-profile .lhs .list-group .list-group-item P{
+    display: none!important;
+}
+.cn-profile.two-col > .lhs a.list-group-item {
+    width: 49%;
+}
+.cn-symbol2 > MAIN > .other-symbols > SECTION, .cn-symbol2 > MAIN > .other-detals div.child {
+    flex: 0 0 100%;
+}
+.cn-symbol2 > MAIN > .other-symbols > footer{
+    text-align: center;
+}
+.cl1 .child{
+    width: 100%!important;
+}
+.cl2 FOOTER h4 {
+    font-size: 15px;
+    text-transform: capitalize;
+    display: block;
+    clear: both;
+    max-width: 100%!important;
+    flex: none;
+    margin-bottom: 10px;
+}.cl2 FOOTER {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.cl2 .badge {
+    margin-bottom: 10px;
+}
+.cl2 .cn-badges{
+    text-align: center;
+}
+.ftr4 .pagination {
+    float: none;
+    margin: 10px auto;
+    width: 90%;
+}
+.ftr4 .col-md-6{
+    text-align: center;
+}
+.cn-stats .tbl3 td {
+    white-space: nowrap;
+}
+}

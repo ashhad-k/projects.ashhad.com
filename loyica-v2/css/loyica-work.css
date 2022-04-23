@@ -1,0 +1,69 @@
+
+body{ transition: background-color 1s ease;}
+
+.sidetextmenu{ background:#161718;position: fixed; }
+
+
+/* work - Ssection1 */
+.pg-work  .item1 .overlay{z-index: 1}
+.pg-work  .item1 .frame{position: relative; z-index: 10; cursor: pointer;text-align: center;}
+
+.pg-work  .item1 h1{ font-size:80px; text-transform: uppercase; letter-spacing: 4px; padding-top: 00px; text-align: center; margin-bottom: 00px; font-weight: 200;}
+.pg-work  .item1 h2{ font-size:25px; letter-spacing: 0px; font-weight: 200; }
+
+.ml3, .ml4, .ml5, .ml6, .blank_text{ padding: 0px;}
+
+.pg-work .cn-work{min-height: 100vh;    width: 100vw;    border: 00px solid #ccc;    position: relative;    padding-left: 70px; }
+
+/* work - Ssection2 */
+.pg-work  .item2{ display: flex; flex:1; flex-direction: column;margin: 0px 88px; background: none; padding-bottom: 60px;}
+
+	.pg-work  .item2 .box{ display: flex; /*flex: 1; height: 100vh;*/}
+	
+	/* LHS BOX LEFT IMAGE	*/
+	.pg-work  .item2 .box:nth-of-type(odd){ border: 0px solid yellow;}
+	.pg-work  .item2 .box:nth-of-type(odd) .child:nth-child(1){ border: 10px solid yellow;}
+	.pg-work  .item2 .box:nth-of-type(odd) .child:nth-child(2){ border: 0px solid red;/* background: #161718;*/}
+	
+	/* RHS IMG*/
+	.pg-work  .item2 .box:nth-of-type(even){ border: 0px solid green;}
+	.pg-work  .item2 .box:nth-of-type(even) .child:nth-child(1){order:2; border: 10px solid green;}
+	.pg-work  .item2 .box:nth-of-type(even) .child:nth-child(2){ order:1; }
+
+	.pg-work  .item2 .box:nth-of-type(even) .child:nth-child(1){}
+	.pg-work  .item2 .box:nth-of-type(even) .child:nth-child(2){}
+
+	.pg-work  .item2 .box .child{ flex-grow: 1; flex-basis: 50%; display: flex; font-weight: 300; color: #9e9e9e;}
+	
+	.pg-work  .item2 .box .child:nth-child(1){ padding-top: 00px; /*background: #333;*/ osition: relative;  margin-bottom: -60px; z-index: 1}
+	.pg-work  .item2 .box .child:nth-child(2){ padding: 90px; display: flex; flex-direction: column; justify-content: space-between; margin-top: 60px;  }
+
+
+	
+	.pg-work  .item2 .box .child img{ width: auto; height: auto}
+	.pg-work  .item2 .box .child dt{ font-size: 60px; color: #fff; font-weight: 200;}
+	.pg-work  .item2 .box .child dd{ font-size: 18px; line-height: 2;}
+	.pg-work  .item2 .box .child small{ font-size: 16px; font-weight: 200;  text-transform: uppercase; letter-spacing: 1px; padding: 10px 0px; border-bottom: 1px solid #212325}
+	.pg-work  .item2 .box .child a{ font-size: 20px;}
+	.pg-work  .item2 .box .child.my-paroller a:after{content: ""; display: inline-block; background: url(../img/icon-arrow-right.png); width: 32px; height: 16px; margin-left: 20px; transition:0.5s all; margin-top: 5px;}
+	.pg-work  .item2 .box .child a:hover{color: #f96201}
+	.pg-work  .item2 .box .child a:hover:after{margin-left: 10px;}
+
+
+/*	removing flex to set width of images*/
+	.pg-work  .item2 .box:nth-of-type(odd) .child:nth-child(1){ border: 0px solid red; display: block; text-align: right;}
+	.pg-work  .item2 .box:nth-of-type(odd) .child:nth-child(1) IMG{ width: 100%; height: auto;}
+
+	.pg-work  .item2 .box:nth-of-type(even) .child:nth-child(1){order:2; border: 0px solid red;  display: block; }	
+	.pg-work  .item2 .box:nth-of-type(even) .child:nth-child(1) IMG{ width: 100%; height: auto;}	
+	.pg-work  .item2 .box:nth-of-type(even) .child:nth-child(1) IMG:after{ display: none}
+
+
+
+
+
+
+
+
+
+

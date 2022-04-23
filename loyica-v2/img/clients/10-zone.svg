@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 201.4 48.6" style="enable-background:new 0 0 201.4 48.6;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#XMLID_39_);}
+	.st1{fill:url(#XMLID_40_);}
+	.st2{fill:#C12C27;}
+	.st3{fill:#302765;}
+</style>
+<g id="XMLID_10_">
+	<linearGradient id="XMLID_39_" gradientUnits="userSpaceOnUse" x1="9.2904" y1="-9.5789" x2="41.6214" y2="20.5702">
+		<stop  offset="0" style="stop-color:#212F4E"/>
+		<stop  offset="0.441" style="stop-color:#212F4E"/>
+		<stop  offset="0.4982" style="stop-color:#423047"/>
+		<stop  offset="0.6135" style="stop-color:#7E3339"/>
+		<stop  offset="0.7115" style="stop-color:#AB352F"/>
+		<stop  offset="0.7873" style="stop-color:#C63729"/>
+		<stop  offset="0.8317" style="stop-color:#D03727"/>
+	</linearGradient>
+	<path id="XMLID_12_" class="st0" d="M48.7,0.9h-42C3,0.9,0,3.9,0,7.6c0,3.7,3,6.8,6.8,6.8h42c3.7,0,6.8-3,6.8-6.8
+		C55.5,3.9,52.5,0.9,48.7,0.9z"/>
+	<linearGradient id="XMLID_40_" gradientUnits="userSpaceOnUse" x1="3.2502" y1="47.1631" x2="52.2359" y2="1.4832">
+		<stop  offset="0" style="stop-color:#AB1061"/>
+		<stop  offset="1" style="stop-color:#E74D22"/>
+	</linearGradient>
+	<path id="XMLID_11_" class="st1" d="M54.1,3.6c-2.2-3-6.5-3.6-9.5-1.3l-42,33.4c-3,2.2-3.6,6.5-1.3,9.5s6.5,3.6,9.5,1.3l42-33.4
+		C55.8,10.8,56.4,6.5,54.1,3.6z"/>
+</g>
+<circle id="XMLID_9_" class="st2" cx="48.7" cy="41" r="6.8"/>
+<g id="XMLID_5_">
+	<path id="XMLID_6_" class="st3" d="M84.2,47.8c-13.2,0-23.9-10.7-23.9-23.9S71.1,0,84.2,0s23.9,10.7,23.9,23.9S97.4,47.8,84.2,47.8
+		z M84.2,3c-11.5,0-20.9,9.4-20.9,20.9c0,11.5,9.4,20.9,20.9,20.9s20.9-9.4,20.9-20.9C105.1,12.4,95.7,3,84.2,3z"/>
+</g>
+<g id="XMLID_3_">
+	<polygon id="XMLID_4_" class="st3" points="154.2,48.6 122.1,5.3 122.1,47.8 119.2,47.8 119.2,0 121.8,0 153.9,43.3 153.9,0.9 
+		156.8,0.9 156.8,48.6 	"/>
+</g>
+<polygon id="XMLID_2_" class="st3" points="201.4,3.6 201.4,0.6 172.3,0.6 172.3,47.2 201.4,47.2 201.4,44.2 175.3,44.2 175.3,25.4 
+	198.8,25.4 198.8,22.4 175.3,22.4 175.3,3.6 "/>
+</svg>

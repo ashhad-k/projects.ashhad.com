@@ -1,0 +1,15 @@
+
+
+/* 
+/* 
+* ==========================================================
+*     overriding owl values
+* ==========================================================
+*/
+.owl-carousel .owl-stage-outer{ height: 100vh; background: #000}
+.owl-carousel .owl-stage{ height: 100vh}
+.owl-carousel .owl-item{ height: 100vh; border: 00px solid #ccc}
+.owl-nav{ margin: 0px; padding: 0px; position: absolute; right: 0px; bottom: 00px}
+.owl-theme .owl-nav [class*='owl-'] { margin: 1px; padding: 10px;}
+.owl-carousel{ height: 100vh}
+.owl-theme .owl-dots{ display: none;}

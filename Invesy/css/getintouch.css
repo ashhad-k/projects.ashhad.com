@@ -1,0 +1,367 @@
+/* Buttons */
+
+.btn--hidden {
+	pointer-events: none;
+	opacity: 0;
+}
+
+
+/* Reset contact Input */
+
+.contact__input {
+	border: 0;
+	background: transparent;
+	border-radius: 0;
+	-webkit-appearance: none;
+}
+
+.contact__input:focus {
+	outline: none;
+}
+
+.contact FOOTER{ width: 75%; display: flex; justify-content: space-between; margin: 0 auto}
+
+/* Links */
+
+
+.hidden {
+	position: absolute;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+
+
+/* Icons */
+
+.icon {
+	display: block;
+	width: 1.5em;
+	height: 1.5em;
+	margin: 0 auto;
+	fill: #FFFFFF;
+}
+
+
+/* Bottom nav */
+
+.bottom-nav {
+	position: relative;
+	width: 100%;
+	margin: auto 0 0 0;
+	padding: 2.5em 2.75em 2.5em 2em;
+}
+
+
+
+@media screen and (max-width: 40em) {
+	.contact-wrap {
+		font-size: 0.85em;
+		position: absolute;
+		top: 2.15em;
+		right: 2em;
+	}
+	.bottom-nav {
+		padding: 0.5em;
+    }
+    
+}
+@media (max-width:768px) {
+.contact__input {
+    font-size: 5vw!important;
+}
+textarea.contact__input{
+    font-size: 5vw!important
+}
+}
+/* Layout for contact container */
+.contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.js .contact {
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	width: 100%;
+    height: 100vh;
+    background: #060919
+}
+
+/*
+.contact::before,
+.contact::after {
+	content: '';
+	position: absolute;
+	width: calc(100% + 15px);
+	height: calc(100% + 15px);
+	pointer-events: none;
+    border-width: 1.5em;
+    border-style: solid;
+    border-radius: 100%;
+    border-top-color:  rgba(238, 98, 25,.4);
+    border-bottom-color:  rgba(238, 98, 25,.4);
+    border-left-color: rgba(225, 67, 31, .4);
+    border-right-color: rgba(225, 67, 31, .4);
+}
+
+.contact::before {
+	top: 0;
+	left: 0;
+	border-right-width: 0;
+	border-bottom-width: 0;
+}
+
+.contact::after {
+	right: 0;
+	bottom: 0;
+	border-top-width: 0;
+	border-left-width: 0;
+}
+*/
+
+.btn--contact-close {
+	font-size: 3em;
+	position: absolute;
+	top: 1.25em;
+	right: 1.25em;
+    display: none;
+    background: none!important;
+    outline: 0!important
+}
+
+.js .btn--contact-close {
+    display: block;
+    background: none!important;
+    outline: 0!important;
+    z-index: 9999999999;
+}
+
+.contact__form {
+	margin: 5em 0;
+}
+
+.contact__input {
+	font-family: inherit;
+	font-size: 2vw;
+	font-weight: 100;
+	line-height: 1;
+	display: inline-block;
+	box-sizing: border-box;
+	width: 75%;
+	padding: 0.5em 0;
+	color: #ccc;
+    border-bottom: 1px solid #666;
+    margin: 15px auto;
+}
+textarea.contact__input{
+    resize: none;
+    overflow: auto;
+    min-height: 200px;
+    font-size: 2vw
+}
+
+.contact__input::-webkit-input-placeholder {
+	/* WebKit, Blink, Edge */
+	opacity: 0.2;
+    color: #CCCCCC;
+    font-weight: 100
+}
+.contact__input:hover:-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    font-size: 1em!important;
+}
+
+
+.contact__input::-moz-placeholder {
+	opacity: 0.3;
+	/* Mozilla Firefox 19+ */
+    color: #CCCCCC;
+}
+
+.contact__input:-ms-input-placeholder {
+	/* Internet Explorer 10-11 */
+	opacity: 0.3;
+    color: #CCCCCC;
+}
+
+.contact__input::-webkit-contact-cancel-button,
+.contact__input::-webkit-contact-decoration {
+	-webkit-appearance: none;
+}
+
+.contact__input::-ms-clear {
+	display: none;
+}
+
+.contact__info {
+	font-size: 90%;
+	font-weight: bold;
+	display: inline-block;
+	width: 50%;
+/*	margin: 0 auto;*/
+	padding: 0.85em 0;
+	text-align: left;
+	color: #EFEFEF;
+}
+
+
+.error__info {
+	font-size: 100%;
+	font-weight: bold;
+	display: inline-block;
+/*	width: 25%;*/
+/*	margin: 0 auto;*/
+	padding: 0.85em 0;
+	text-align: right;
+	color: #666;
+}
+
+
+.contact__related {
+	display: flex;
+	width: 75%;
+	pointer-events: none;
+}
+
+.contact__suggestion {
+	width: 33.33%;
+	text-align: left;
+}
+
+.contact__suggestion:nth-child(2) {
+	margin: 0 3em;
+}
+
+.contact__suggestion h3 {
+	font-size: 1.35em;
+	margin: 0;
+}
+
+.contact__suggestion h3::before {
+	content: '\21FE';
+	display: inline-block;
+	padding: 0 0.5em 0 0;
+}
+
+.contact__suggestion p {
+	font-size: 1.15em;
+	line-height: 1.4;
+	margin: 0.75em 0 0 0;
+}
+
+/************************/
+/* Transitions 			*/
+/************************/
+
+.js .contact {
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.5s;
+    z-index: 9999999999999999;
+}
+
+.js .contact--open {
+	pointer-events: auto;
+    opacity: 1;
+}
+
+/* Border */
+.contact::before,
+.contact::after {
+	transition: transform 0.5s;
+}
+
+.contact::before {
+	transform: translate3d(-15px, -15px, 0);
+}
+
+.contact::after {
+	transform: translate3d(15px, 15px, 0);
+}
+
+.contact--open::before,
+.contact--open::after {
+	transform: translate3d(0, 0, 0);
+}
+
+/* Close button */
+.btn--contact-close {
+	opacity: 0;
+	transform: scale3d(0.8, 0.8, 1);
+	transition: opacity 0.5s, transform 0.5s;
+    cursor: pointer;
+    outline: 0!important;
+}
+
+.contact--open .btn--contact-close {
+	opacity: 1;
+    background: none!important;
+}
+.btn--contact-close:hover {    
+transform: scale3d(1, 1, 1);
+ 
+}
+
+/* contact form with input and description */
+.js .contact__form {
+	opacity: 0;
+	transform: scale3d(0.8, 0.8, 1);
+	transition: opacity 0.5s, transform 0.5s;
+}
+
+.js .contact--open .contact__form {
+	opacity: 1;
+	transform: scale3d(1, 1, 1);
+}
+
+.contact__suggestion {
+	opacity: 0;
+	transform: translate3d(0, -30px, 0);
+	transition: opacity 0.5s, transform 0.5s;
+}
+
+.contact--open .contact__suggestion {
+	opacity: 1;
+	transform: translate3d(0, 0, 0);
+}
+
+.contact--open .contact__suggestion:nth-child(2) {
+	transition-delay: 0.1s;
+}
+
+.contact--open .contact__suggestion:nth-child(3) {
+	transition-delay: 0.2s;
+}
+
+@media screen and (max-width:40em) {
+	.contact__form {
+		margin: 5em 0 1em;
+	}
+	.btn--contact-close {
+		font-size: 1.25em;
+		top: 1.5em;
+		right: 1.5em;
+	}
+	.contact__info {
+		text-align: left;
+	}
+	.contact__suggestion {
+		font-size: 80%;
+		width: 100%;
+	}
+	.contact__suggestion:nth-child(2),
+	.contact__suggestion:nth-child(3) {
+		display: none;
+	}
+	
+	.contact FOOTER{ flex-direction: column}
+	.contact__info{ width: auto; text-align: center; order: 2;}
+	.error__info{ width: 100%; text-align: center; order: 1}
+
+}

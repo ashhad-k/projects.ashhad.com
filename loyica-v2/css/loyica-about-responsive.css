@@ -1,0 +1,179 @@
+@import url(loyica-home-responsive.css);
+
+@media(max-width:1024px){
+    body{
+    overflow: visible!important
+}
+.cn > div[class^="item"] > FOOTER{
+    bottom:70px;
+}
+.pg-about .item2 FOOTER, .pg-about .item3 FOOTER, .pg-about .item4 FOOTER, .pg-about .item5 FOOTER, .pg-about .item6 FOOTER{
+    display: none!important;
+}
+.scrollme, #button-1, #button-2, #button-3 {
+    transform: none !important;
+    opacity: 1 !important;
+}
+
+
+.pagination{
+    display: none;
+}
+.pg-about .item2, .pg-about .item3, .pg-about .item5, .pg-about .item6{
+    padding: 0!important;
+    display: block;
+    flex: none;
+    flex-flow: inherit;
+    height: inherit!important;
+    margin: 0
+
+}
+.pg-about .item2 > DIV.child:first-child, .pg-about .item3 > DIV.child:first-child {
+    padding-left: 0;
+    text-align: center;
+    flex: none!important;
+    padding: 50px 0;
+}
+.pg-about .item2 > DIV.child:first-child P, .pg-about .item3 > DIV.child:first-child P {
+    max-width: inherit;
+    text-align: center;
+    line-height: 1.8
+}
+.three-boxes .cn-ic1 {
+    margin: 10px auto;
+}
+
+.three-boxes > DIV {
+    text-align: center;
+    width: 48%;
+    flex: none!important;
+    display: inline-block;
+    clear: none;
+    padding: 0px;
+    transform: none!important;
+}
+.three-boxes > DIV:hover{
+    background: none!important;
+}
+.pg-about .item2 > DIV.child:first-child .display-1, .pg-about .item3 > DIV.child:first-child .display-1{
+    font-size: 30px;
+    margin-bottom:5px
+}
+.pg-about .item2 > DIV.child:first-child:before, .pg-about .item3 > DIV.child:first-child:before{
+    display: none
+}
+.pg-about .item2 > DIV P, .pg-about .item3 > DIV P {
+    font-size: 16px;
+    padding: 0 20px;
+	line-height: 1.8;
+}
+.pg-about .item2{
+    flex:none!important;
+    height: inherit!important;
+}
+.pg-about .item3 .three-boxes, .three-boxes {
+    justify-content: inherit;
+    display: inline-block;
+    clear: both;
+    flex: none!important;
+    padding: 0px 20px!important;
+    margin: 0px;
+    width: 100%;
+}
+.cn >  FOOTER {
+    position: static!important;
+}
+#stats{  height: inherit!important}
+.pg-about .item4 .head-with-line{
+    flex:none!important;
+    width: 100%;
+    padding-top:20px;
+}
+.pg-about .item4 .head-with-line P {
+    text-transform: none!important;
+    font-size: 16px!important;
+    margin: 30px 30px!important;
+    max-width: 100%!important;
+    letter-spacing: 0px!important;
+}
+.pg-about .item4 .ss2-details P{ font-size: 16px; line-height: 1.8; padding: 10px 0px; text-align:left}
+
+	.pg-about .item4{
+    padding: 0!important;
+    height: inherit!important
+}
+.pg-about .item4 .ss2 {
+    flex-flow: inherit;
+    align-items: left;
+    position: relative;
+    margin:0;
+    flex: none;
+    text-align: left;
+    width: 100%;
+    padding: 50px 0 80px 20px;
+}
+	.pg-about .item4 .ss2-details .social{ text-align:left;}
+.frame ul{
+    transform:translateX(0px)
+}
+#crew{
+    height:inherit!important
+}
+.pg-about .item4 .ss2 .item > span{
+    left:30px;
+}
+.three-boxes h4{
+    font-size:1rem
+}
+.cn-scrollbar{
+    position: static;
+    clear: both;
+    display: block;
+    margin: 0;
+    width: 100%;
+}
+#clients{
+    height: inherit!important
+}
+}
+@media(max-width:768px){
+    .cn{
+        width: 100%!important;
+    }
+.pg-about .item3 .three-boxes > DIV{
+        padding:30px;
+	margin-bottom: 30px;
+    }
+.three-boxes > DIV{
+        text-align: center;
+        width: 100%;
+        flex: none!important;
+        display: block;
+        clear: both;
+        padding: 0px;
+        transform: none!important;
+	margin-bottom: 50px;
+    }
+.three-boxes h1 {
+        margin: 0;
+	font-size: 30px;
+	font-weight: 200!important;
+	margin-bottom: 20px;
+    }
+.three-boxes p {
+        line-height: 1.8;
+        padding:0!important
+    }
+.pg-about .item5 .child > DIV.sub-child DIV.el2 {
+        flex: none;
+        text-align: center;
+        padding: 50px 0;
+    }
+    .pg-about .item5 .child > DIV.sub-child {
+        flex: 1 50%!important;
+        border-right: 0px!important;
+		border-bottom: 1px solid #282a2c;
+    }   
+	.pg-about .item5 .child > DIV.sub-child DIV.el2 IMG{ opacity: 1; width: 150px;}
+	
+}    

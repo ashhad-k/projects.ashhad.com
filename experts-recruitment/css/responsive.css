@@ -1,0 +1,92 @@
+
+
+
+@media (max-width: 991px) {
+	body {
+		text-align: center;
+		overflow-x: hidden;
+	}
+	
+	h1 {
+	font-size: 36px!important;
+	}
+	h2 {
+		font-size: 30px!important;
+		line-height: 1.2
+	}
+	P {
+		font-size: 18px!important;
+	}
+	
+	/*	 fold1*/
+	.hp.fold1{ padding-bottom: 00px;height: auto; }
+	.hp.fold1 .child.featured{ display: block; padding: 40px 20px; position: static;  margin: 40px 10px;}
+	.hp.fold1 .child.featured .child2{ width: auto;}
+	
+	
+	/*	 fold2*/	
+	.fold2{ padding-top: 100px; padding-bottom: 50px;}
+	.hp.fold2{}
+	.hp.fold2 .card-deck{ padding-top: 00px; display: block;}
+	.hp.fold2 .card-deck .card{  display: block; border: 0px; }
+	.hp.fold2 .card-deck .card HEADER{ margin: 20px 20px 0px 20px; padding: 20px 0px 20px 0px}
+	.hp.fold2 .card-deck .card .card-body{ padding: 00px 20px;}
+	.hp.fold2 .card-deck .card-footer{ padding-top: 10px;}
+
+	
+	/*	fold4*/
+	.carousel-item.active, .carousel-item-next, .carousel-item-prev{ display: block;}
+	
+	.fold4{}
+	.hp.fold4{  padding-top: 100px; padding-bottom: 100px;}
+	.hp.fold4 .lhs h2{margin-bottom: 20px}
+
+	.hp.fold4 .rhs .card-body{  padding:20px}
+	.hp.fold4 .rhs .card-footer{ text-align: left; padding: 20px;}
+	.hp.fold4 .rhs .card-footer p{margin-bottom: 0px; font-weight: 500; display: inline-block}
+	.hp.fold4 .rhs .card-footer small{font-style: italic; color: #4ea2f2; display: block;}
+	.hp.fold4 .rhs .card-footer .avatar{ display: inline-block;}
+	.hp.fold4 .rhs .card-footer .avatar IMG{ border-radius: 50%; margin-top: -20px;}
+	.hp.fold4 .view-all{ text-align: right; padding: 20px 60px; color: #81b2df;}
+	.hp.fold4 .view-all a{color: #81b2df;}
+
+	
+	/*	 fold5*/
+	.hp.fold5{  padding-top: 000px; padding-bottom:00px; }
+	.hp.fold5 .lhs { display: block; padding-bottom: 40px; padding-top: 100px;  background: #f9f9f9;}
+	.hp.fold5 .rhs {  padding-top: 40px; padding-bottom: 40px;}
+	.hp.fold5 .lhs P{  padding: 20px; margin: 0px;}
+	
+	.hp.fold5 .sml-logos{ position:static; margin: 20px auto;}
+	.hp.fold5 .sml-logos IMG{ margin-top: 12px;}
+	.hp.fold5 .sml-logos:nth-child(1){ top: 30%}
+	.hp.fold5 .sml-logos:nth-child(2){ top: 60%}
+	
+	
+	
+}
+/* media 990 end*/
+
+@media (max-width:768px) {
+body {
+	overflow-x: hidden;
+}
+.mobhide {
+	display: none!important
+}
+.mobshow {
+	display: block!important
+}
+.navbar-brand img {
+	width: 200px;
+}
+}
+/* max-width:768px*/
+
+
+ @media(min-width:1024px) {
+.desktop-hidden {
+	display: none!important
+}
+}
+/* min-width:1024px*/

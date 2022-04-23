@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<!--Custom CSS-->
+<link href="css/custom.css" rel="stylesheet" type="text/css">
+<link href="css/responsive.css" rel="stylesheet" type="text/css">
+
+<!--Google Fonts-->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700" rel="stylesheet">
+
+<!--Font Awesome-->
+<link href="fontawesome-free-5.0.2/css/fontawesome-all.css" rel="stylesheet" type="text/css">
+<!--Hover CSS-->
+<link href="css/hover.css" rel="stylesheet" type="text/css">
+<!--AOS CSS-->
+<link rel="stylesheet" href="css/aos.css" />
+<!--Animate CSS-->
+<link rel="stylesheet" href="css/animate.css" />
+<title>Dashboard - I.T Module</title>
+
+
+</head>
+<body>
+<div class="button1" tabindex="0"  id="topbtn"><img src="img/icons/30x30-burger.png" width="30" height="30" alt=""/></div> 
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn">&times;</a>
+  
+   <a href="index.html" class="active"><i class="icon48-dashboard"></i> Dashboard</a> 
+   <a href="monitoring.html"> <i class="icon48-monitoring"></i> Monitoring</a> 
+   <a href="control-panel.html"> <i class="icon48-cp "></i> Control Panel</a> 
+   <a href="billing.html"><i class="icon48-billing "></i> Billing</a> 
+   <a href="support.html"><i class="icon48-support"></i>Support</a>
+   <hr>
+    <div class="search-box">
+   
+    <form id="searchForm" action="#" role="search">
+     <i><img src="img/icons/search.png" width="30" height="30" alt=""/></i>
+      <input type="search" placeholder="What are you looking for..." class="form-control">
+    </form>
+  </div>
+  <hr>
+   <a href="#"> Logout</a>
+
+</div>
+    
+<!-- Search Box-->
+<div id="main">
+<div class="top1">
+  <div class="search-box">
+    <button class="dismiss"><i class="far fa-times-circle"></i></button>
+    <form id="searchForm" action="#" role="search">
+      <input type="search" placeholder="What are you looking for..." class="form-control">
+    </form>
+  </div>
+  <div class="brand"  data-aos="fade" data-aos-delay="100" > <a href="index.html" ><img src="img/logo/brand-48x48.png" width="48" height="48" alt="Profintech"/><br>
+    IT</a> </div>
+  <div class="grow" data-aos="fade" data-aos-delay="400" > <a href="index.html" class="active"><i class="icon48-dashboard"></i> Dashboard</a> 
+   <a href="monitoring.html"> <i class="icon48-monitoring"></i> Monitoring</a> 
+   <a href="control-panel.html"> <i class="icon48-cp "></i> Control Panel</a> 
+   <a href="billing.html"><i class="icon48-billing "></i> Billing</a> 
+   <a href="support.html"><i class="icon48-support"></i>Support</a> 
+
+  </div>
+  <!--/grow -->
+  <div class="rhs" data-aos="fade" data-aos-delay="200" >
+   
+    <div class="child"> <a href="#" id="search" data-toggle="tooltip" data-placement="bottom" title="Search"><img src="img/icons/search.png" width="30" height="30" alt=""/></a></div>
+    <div class="child">
+      <div class="dropdown show"> <a id="dd-notifications" data-toggle="dropdown"> <img src="img/icons/notifications.png" width="30" height="30" alt=""/></a>
+        <ul  class="dropdown-menu  dropdown-menu-right">
+          <li><a rel="nofollow" href="#" class="dropdown-item">
+            <div class="notification">
+              <div class="notification-content"><i class="fa fa-envelope bg-green"></i>You have 6 new messages </div>
+              <div class="notification-time"><small>4 minutes ago</small></div>
+            </div>
+            </a></li>
+          <li><a rel="nofollow" href="#" class="dropdown-item">
+            <div class="notification">
+              <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>You have 2 followers</div>
+              <div class="notification-time"><small>4 minutes ago</small></div>
+            </div>
+            </a></li>
+          <li><a rel="nofollow" href="#" class="dropdown-item">
+            <div class="notification">
+              <div class="notification-content"><i class="fa fa-upload bg-orange"></i>Server Rebooted</div>
+              <div class="notification-time"><small>4 minutes ago</small></div>
+            </div>
+            </a></li>
+          <li><a rel="nofollow" href="#" class="dropdown-item">
+            <div class="notification">
+              <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>You have 2 followers</div>
+              <div class="notification-time"><small>10 minutes ago</small></div>
+            </div>
+            </a></li>
+          <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>view all notifications </strong></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="child"> <a href="#" data-toggle="tooltip" data-placement="bottom" title="Logout"><img src="img/icons/sqaures.png" width="30" height="30" alt=""/></a> </div>
+  </div>
+</div>
+<!--/top1-->
+
+<div class="head1">
+  <div class="box1"  data-aos="fade" data-aos-delay="100" >
+    <div>
+      <h5>hosting services</h5>
+      <ul class="list-unstyled">
+        <li> <i class="fa fa-clock"></i> 01:34 am</li>
+        <li> <i class="fa fa-calendar"></i> 16 Feb 2018</li>
+      </ul>
+      <p> All servers are operating <strong class="text-green">normally</strong>.</p>
+    </div>
+    <div class="ml-auto"> <img src="img/icons/160x160-hosting-services.png" width="160" height="160"  class="ml-auto"/> </div>
+  </div>
+  <!--/box-->
+  <div class="box1" data-aos="fade" data-aos-delay="200"  >
+    <div>
+      <h5>Office 365</h5>
+      <ul class="list-unstyled">
+        <li> <i class="fa fa-clock"></i> 01:34 am</li>
+        <li> <i class="fa fa-calendar"></i> 16 Feb 2018</li>
+      </ul>
+      <p>Services <strong class="text-orange">Degredation</strong><br>
+        <a href="#"> Contact Support</a> </p>
+    </div>
+    <div class="ml-auto"> <img src="img/icons/160x160-office-365.png" width="160" height="160"  class="ml-auto"/> </div>
+  </div>
+  <!--/box-->
+  <div class="box1" data-aos="fade" data-aos-delay="300"  >
+    <div>
+      <h5>VoIP</h5>
+      <ul class="list-unstyled">
+        <li> <i class="fa fa-clock"></i> 01:34 am</li>
+        <li> <i class="fa fa-calendar"></i> 16 Feb 2018</li>
+      </ul>
+      <p> All servers are operating <strong class="text-green">normally</strong>.</p>
+    </div>
+    <div class="ml-auto"> <img src="img/icons/160x160-voip.png" width="160" height="160"  class="ml-auto"/> </div>
+  </div>
+  <!--/box-->
+  
+  <div class="box1" data-aos="fade" data-aos-delay="400"  >
+    <div class="d-flex">
+      <h5>Trading Platforms</h5>
+      <small class="text-right">Last updated <strong>01:38 AM</strong></small> </div>
+    <div class="tp">
+      <div class="box2 orange"> <img src="img/icons/80x50-servers-2.png" width="80" height="50" alt=""/>
+        <h6>Services</h6>
+        <div class="animated infinite fadeIn "><img src="img/icons/glow.png" width="32" height="32" alt=""/></div>
+      </div>
+      <div class="box2"> <img src="img/icons/80x50-feeds.png" width="80" height="50" alt=""/>
+        <h6>Feeds</h6>
+      </div>
+      <div class="box2"> <img src="img/icons/80x50-bridge.png" width="80" height="50" alt=""/>
+        <h6>Bridge</h6>
+      </div>
+    </div>
+  </div>
+  <!--/box1--> 
+  
+</div>
+<!--/head-->
+
+<div class="pg-db-stats">
+  <div class="grow"  data-aos="fade" >
+  <div class="map">
+  	
+  </div>
+<!--    <iframe src="https://snazzymaps.com/embed/52662" width="100%" height="600px" style="border:none; z-index: 0"/>-->
+ </div>
+  <div class="rhs">
+    <div class="flexChild">
+      <div class="box1 flex-column">
+        <div class="one-row" data-aos="fade" data-aos-delay="000" >
+          <h4>MT4 DC3 OSAKA </h4>
+          <small class="text-right text-orange "> <img src="img/icons/glow.png" width="32" height="32" alt=""  class="animated infinite fadeIn "/>DOWN</small> </div>
+        <div class="one-row" data-aos="fade" data-aos-delay="300" > 231.47.116.32</div>
+        <div class=" alert alert-warning" data-aos="fade" data-aos-delay="600" >
+          <h4 class="text-white">MT4 SERVICE</h4>
+          <h5 class="text-orange">STOPPED / UNRESPONSIVE</h5>
+          <div class="d-flex"> <span> Incident started: <strong>01:38 AM</strong></span> <span class="ml-auto"><i class="far fa-calendar-alt"></i> Sunday, November 26</span> </div>
+        </div>
+      </div>
+    </div>
+    <!--/-->
+    <div  class="twox2">
+     <div class="flexChild" data-aos="fade" data-aos-delay="000" >
+     	<small>CPU</small>
+     	 <canvas id="lineChartExample1"></canvas>
+     </div><!--/child1-->
+    <div class="flexChild" data-aos="fade" data-aos-delay="300" >
+     	<small>MEMORY</small>
+     	<canvas id="lineChartExample"></canvas>
+     </div><!--/child2-->
+     <div class="flexChild" data-aos="fade" data-aos-delay="600" >
+    <div><small>DISC</small></div>
+      <div class="stop-start1">
+         
+      <i class="fas fa-cog fa-3x fa-fw"></i>
+      <a href="#" class="btn btn-outline-success">START SERVICE</a>
+      </div>
+     </div><!--/child3-->
+     <div class="flexChild" data-aos="fade" data-aos-delay="900" >
+     <div><small>MT4 SERVER SERVICE</small></div>
+     <div class="stop-start1">
+      <i class="fas fa-cog fa-spin fa-3x fa-fw"></i>
+      <a href="#" class="btn btn-outline-danger">STOP SERVICE</a>
+      </div>
+     </div><!--/child4-->
+      
+    </div>
+    <!--2--> 
+  </div>
+  <!--/RHS--> 
+</div>
+
+
+<div class="cn-head-slim cn-ticker" data-aos="fade" data-aos-delay="100" >
+  <div class="child">
+    <h5> upcoming maintenance</h5>
+  </div>
+  <div class="grow">
+    <div id="ticker-roll" class="ticker">
+      <ul>
+        <li>Profintech gives you a vast array of tools to take your idea or business online today! From site building tools and templates, to our one-click application installer, everything you need to launch a website is literally at your fingertips.</li>
+        <li>For example, our own Profintech Website Builder provides an incredibly convenient drag-and-drop building experience. </li>
+        <li> You can choose from a wide selection of themes, and even pre-built sections, to craft your own amazing website and publish it in no time!</li>
+      </ul>
+    </div>
+  </div>
+  <div class="child"><a href="#" class="link-red"><i class="fas fa-caret-right"></i> Contact Support</a></div>
+</div>
+<!--/containre-ticker-->
+<div class="pg-db-btm">
+  <div class="box1"  data-aos="fade" data-aos-delay="100" >
+    <div class="one-row">
+      <h5>MESSAGES</h5>
+      <ul class="nav nav-tabs" id="pg-db-msgs-tabs">
+        <li class="nav-item"> <a class="nav-link active" id="pg-db-msgs-all-tab" data-toggle="tab" href="#pg-db-msgs-all" >ALL</a> </li>
+        <li class="nav-item"> <a class="nav-link" id="pg-db-msgs-read-tab" data-toggle="tab" href="#pg-db-msgs-read" >READ</a> </li>
+        <li class="nav-item"> <a class="nav-link" id="pg-db-msgs-unread-tab" data-toggle="tab" href="#pg-db-msgs-unread" >UNREAD</a> </li>
+      </ul>
+    </div>
+    <div class="tab-content one-row" id="pg-db-msgs-contents">
+      <div class="tab-pane fade show active" id="pg-db-msgs-all">
+        <div class="table-responsive">
+          <table class="table table-dark table-bordered table-hover table-striped table-sm">
+            <tbody>
+              <tr>
+                <th><i class="fas fa-exclamation bg-red round"></i> Critical Updates Downloaded</th>
+                <td>Profintech</td>
+                <td><i class="far fa-calendar-alt"></i> 12 March 2018</td>
+              </tr>
+              <tr>
+                <th><i class="far fa-envelope bg-green round"></i> Known issue</th>
+                <td>Profintech</td>
+                <td><i class="far fa-calendar-alt"></i> 12 March 2018</td>
+              </tr>
+              <tr>
+                <th><i class="far fa-envelope bg-green round"></i> Known issue</th>
+                <td>Profintech</td>
+                <td><i class="far fa-calendar-alt"></i> 12 March 2018</td>
+              </tr>
+              <tr>
+                <td><i class="far fa-envelope-open bg-gray round"></i> Known issue</td>
+                <td>Profintech</td>
+                <td><i class="far fa-calendar-alt"></i> 12 March 2018</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="pg-db-msgs-read" role="tabpanel">
+        <div class="table-responsive">
+          <table class="table table-dark table-bordered table-hover table-striped table-sm">
+            <tbody>
+              <tr>
+                <td><i class="far fa-envelope-open bg-gray round"></i> New Features</td>
+                <td>Profintech</td>
+                <td><i class="far fa-calendar-alt"></i> 12 March 2018</td>
+              </tr>
+              <tr>
+                <td><i class="far fa-envelope-open bg-gray round"></i> Known issue</td>
+                <td>Profintech</td>
+                <td><i class="far fa-calendar-alt"></i> 12 March 2018</td>
+              </tr>
+              <tr>
+                <td><i class="far fa-envelope-open bg-gray round"></i> Known issue</td>
+                <td>Profintech</td>
+                <td><i class="far fa-calendar-alt"></i> 12 March 2018</td>
+              </tr>
+              <tr>
+                <td><i class="far fa-envelope-open bg-gray round"></i> Known issue</td>
+                <td>Profintech</td>
+                <td><i class="far fa-calendar-alt"></i> 12 March 2018</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="pg-db-msgs-unread" role="tabpanel">
+        <div class="table-responsive">
+          <table class="table table-dark table-bordered table-hover table-striped table-sm">
+            <tbody>
+              <tr>
+                <th><i class="far fa-envelope bg-green round"></i> New Features</th>
+                <td>Profintech</td>
+                <td><i class="far fa-calendar-alt"></i> 12 March 2018</td>
+              </tr>
+              <tr>
+                <th><i class="far fa-envelope bg-green round"></i> Known issue</th>
+                <td>Profintech</td>
+                <td><i class="far fa-calendar-alt"></i> 12 March 2018</td>
+              </tr>
+              <tr>
+                <th><i class="far fa-envelope bg-green round"></i> Known issue</th>
+                <td>Profintech</td>
+                <td><i class="far fa-calendar-alt"></i> 12 March 2018</td>
+              </tr>
+              <tr>
+                <td><i class="far fa-envelope bg-green round"></i> Known issue</td>
+                <td>Profintech</td>
+                <td><i class="far fa-calendar-alt"></i> 12 March 2018</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--1-->
+  
+  <div class="box1" data-aos="fade" data-aos-delay="300" >
+    <div class="one-row">
+      <h5>USERS</h5>
+      <ul class="nav nav-tabs" id="pg-db-users-tabs">
+        <li class="nav-item"> <a class="nav-link active" id="pg-db-users-one-tab" data-toggle="tab" href="#pg-db-users-one" >RECENT</a> </li>
+        <li class="nav-item"> <a class="nav-link" id="pg-db-users-two-tab" data-toggle="tab" href="#pg-db-users-two" >LAST WEEK</a> </li>
+        <li class="nav-item"> <a class="nav-link" id="pg-db-users-three-tab" data-toggle="tab" href="#pg-db-users-three" >MONTHLY</a> </li>
+      </ul>
+    </div>
+    <div class="tab-content one-row" id="pg-db-users-contents">
+      <div class="tab-pane fade show active" id="pg-db-users-one">
+        <div class="table-responsive">
+          <table class="table table-dark table-bordered table-hover table-striped table-sm">
+            <tbody>
+              <tr>
+                <th>John Evans</th>
+                <td>Created</td>
+                <td>VOiP</td>
+                <td class="text-right"><i class="fas fa-pencil-alt bg-green round"></i> <i class="far fa-trash-alt bg-red round"></i></td>
+              </tr>
+              <tr>
+                <th>Imran Abid</th>
+                <td>Created</td>
+                <td>VOiP</td>
+                <td class="text-right"><i class="fas fa-pencil-alt bg-green round"></i> <i class="far fa-trash-alt bg-red round"></i></td>
+              </tr>
+              <tr>
+                <th>Kevin Owens</th>
+                <td>Created</td>
+                <td>VOiP</td>
+                <td class="text-right"><i class="fas fa-pencil-alt bg-green round"></i> <i class="far fa-trash-alt bg-red round"></i></td>
+              </tr>
+              <tr>
+                <th>Ali </th>
+                <td>Created</td>
+                <td>VOiP</td>
+                <td class="text-right"><i class="fas fa-pencil-alt bg-green round"></i> <i class="far fa-trash-alt bg-red round"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="pg-db-users-two" role="tabpanel">
+        <div class="table-responsive">
+          <table class="table table-dark table-bordered table-hover table-striped table-sm">
+            <tbody>
+              <tr>
+                <th>John Evans</th>
+                <td>Created</td>
+                <td>VOiP</td>
+                <td class="text-right"><i class="fas fa-pencil-alt bg-green round"></i> <i class="far fa-trash-alt bg-red round"></i></td>
+              </tr>
+              <tr>
+                <th>Imran Abid</th>
+                <td>Created</td>
+                <td>VOiP</td>
+                <td class="text-right"><i class="fas fa-pencil-alt bg-green round"></i> <i class="far fa-trash-alt bg-red round"></i></td>
+              </tr>
+              <tr>
+                <th>Kevin Owens</th>
+                <td>Created</td>
+                <td>VOiP</td>
+                <td class="text-right"><i class="fas fa-pencil-alt bg-green round"></i> <i class="far fa-trash-alt bg-red round"></i></td>
+              </tr>
+              <tr>
+                <th>Ali </th>
+                <td>Created</td>
+                <td>VOiP</td>
+                <td class="text-right"><i class="fas fa-pencil-alt bg-green round"></i> <i class="far fa-trash-alt bg-red round"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="pg-db-users-three" role="tabpanel">
+        <div class="table-responsive">
+          <table class="table table-dark table-bordered table-hover table-striped table-sm">
+            <tbody>
+              <tr>
+                <th>John Evans</th>
+                <td>Created</td>
+                <td>VOiP</td>
+                <td class="text-right"><i class="fas fa-pencil-alt bg-green round"></i> <i class="far fa-trash-alt bg-red round"></i></td>
+              </tr>
+              <tr>
+                <th>Imran Abid</th>
+                <td>Created</td>
+                <td>VOiP</td>
+                <td class="text-right"><i class="fas fa-pencil-alt bg-green round"></i> <i class="far fa-trash-alt bg-red round"></i></td>
+              </tr>
+              <tr>
+                <th>Kevin Owens</th>
+                <td>Created</td>
+                <td>VOiP</td>
+                <td class="text-right"><i class="fas fa-pencil-alt bg-green round"></i> <i class="far fa-trash-alt bg-red round"></i></td>
+              </tr>
+              <tr>
+                <th>Ali </th>
+                <td>Created</td>
+                <td>VOiP</td>
+                <td class="text-right"><i class="fas fa-pencil-alt bg-green round"></i> <i class="far fa-trash-alt bg-red round"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!--2-->
+  <div class="box1" data-aos="fade" data-aos-delay="600" >
+    <div class="one-row">
+      <h5>SERVER LOGS</h5>
+      <ul class="nav nav-tabs" id="pg-db-logs-tabs">
+        <li class="nav-item"> <a class="nav-link active" id="pg-db-logs-one-tab" data-toggle="tab" href="#pg-db-logs-one" >RECENT</a> </li>
+        <li class="nav-item"> <a class="nav-link" id="pg-db-logs-two-tab" data-toggle="tab" href="#pg-db-logs-two" >LAST WEEK</a> </li>
+        <li class="nav-item"> <a class="nav-link" id="pg-db-logs-three-tab" data-toggle="tab" href="#pg-db-logs-three" >MONTHLY</a> </li>
+      </ul>
+    </div>
+    <div class="tab-content one-row" id="pg-db-logs-contents">
+      <div class="tab-pane fade show active" id="pg-db-logs-one">
+        <div class="table-responsive">
+          <table class="table table-dark table-bordered table-hover table-striped table-sm">
+            <tbody>
+              <tr>
+                <th>SeaMe V3</th>
+                <td>84% System is running in critical condition</td>
+              </tr>
+              <tr>
+                <th>Sea V5</th>
+                <td>Working Good</td>
+              </tr>
+              <tr>
+                <th>SeaMe V3</th>
+                <td>84% System is running in critical condition</td>
+              </tr>
+              <tr>
+                <th>SeaMe V3</th>
+                <td>84% System is running in critical condition</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="pg-db-logs-two" role="tabpanel">
+        <div class="table-responsive">
+          <table class="table table-dark table-bordered table-hover table-striped table-sm">
+            <tbody>
+              <tr>
+                <th>SeaMe V3</th>
+                <td>84% System is running in critical condition</td>
+              </tr>
+              <tr>
+                <th>Sea V6</th>
+                <td>Working Good</td>
+              </tr>
+              <tr>
+                <th>SeaMe V3</th>
+                <td>84% System is running in critical condition</td>
+              </tr>
+              <tr>
+                <th>SeaMe V3</th>
+                <td>84% System is running in critical condition</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="pg-db-logs-three" role="tabpanel">
+        <div class="table-responsive">
+          <table class="table table-dark table-bordered table-hover table-striped table-sm">
+            <tbody>
+              <tr>
+                <th>SeaMe V3</th>
+                <td>84% System is running in critical condition</td>
+              </tr>
+              <tr>
+                <th>SeaMe V3</th>
+                <td>84% System is running in critical condition</td>
+              </tr>
+              <tr>
+                <th>SeaMe V3</th>
+                <td>84% System is running in critical condition</td>
+              </tr>
+              <tr>
+                <th>SeaMe V3</th>
+                <td>84% System is running in critical condition</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--3--> 
+</div>
+<!--/head1-->
+	</div>
+<!-- jQuery first, then Popper.js, then Bootstrap JS --> 
+<script type="text/javascript"  src="js/jquery.min.js"></script> 
+<script type="text/javascript"  src="js/popper.min.js"></script> 
+<script type="text/javascript"  src="js/bootstrap.min.js"></script> 
+<script type="text/javascript"  src="js/ticker.js"></script> 
+<script type="text/javascript"  src="js/aos.js"></script>
+<script type="text/javascript"  src="js/custom.js"></script>
+ <script src="js/chart.js/Chart.bundle.min.js"></script>
+ <script src="js/charts-custom.js"></script>
+   <script>
+	  //AOS
+	AOS.init({
+      offset: 200,
+      duration: 300,
+      easing: 'ease-in-sine',
+      delay: 100,
+		  disable: 'mobile',
+    });
+		
+		AOS.refresh();
+
+     
+
+	 
+	</script>
+
+
+</body>
+</html>

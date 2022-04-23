@@ -1,0 +1,92 @@
+@import url(loyica-home-responsive.css);
+
+@media(max-width:1024px){
+    body{
+    overflow: visible!important
+}
+.pg-about .item2 FOOTER, .pg-about .item3 FOOTER, .pg-about .item4 FOOTER, .pg-about .item5 FOOTER, .pg-about .item6 FOOTER{
+    display: none!important;
+}
+.scrollme, #button-1, #button-2, #button-3 {
+    transform: none !important;
+    opacity: 1 !important;
+}
+
+.pg-work .cn-work {
+    padding-left: 0;
+    display: block;
+    flex-direction: inherit;
+    flex: inherit;
+}
+.pg-work .item1 h1 {
+    font-size: 40px;
+
+}
+.pg-work .item2 .box, .pg-work .item3 .box {
+    display: block;
+    flex-flow: inherit;
+    height: inherit;
+}
+.pg-work .item2, .pg-work .item3 {
+    display: block;
+    flex: none;
+    flex-direction: inherit;
+    margin: 0px 0px;
+    background: none;
+    padding-bottom: 00px;
+    height: auto;
+}
+.pg-work .item2 .box .child, .pg-work .item3 .box .child {
+    flex: none!important;
+    background-size: cover;
+    position: relative;
+    padding: 30px 0 0;
+    overflow: hidden;
+    flex-direction: inherit;
+    justify-content: center;
+    display: block;
+    padding-right: 0;
+    height: inherit;
+}
+.pg-work .item2 .box .child .overlay2, .pg-work .item3 .box .child .overlay2{
+    display: none;
+}
+.pg-work  ul, .pg-work ul{
+    text-align: left;
+    display: table;
+    margin: 0 auto;
+	font-size: 16px;
+}
+.pg-work .item2 .box .child:nth-child(2) {
+    padding: 50px 90px;
+    display: block;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 0;
+}
+.pg-work .box .child dt {
+    font-size: 30px;
+}
+	.pg-work .item2 .box .child dt{ font-size: 40px}
+.pg-work .box .child P {
+    font-size: 16px;
+}
+.pg-work .item4 {
+    padding: 100px 0px;
+}
+.footer .item6 {
+    margin-left: 0;
+    display: block;
+}
+}
+@media(max-width:1024px){
+    .pg-work .item2 .box .child:nth-child(2), .pg-work .item3 .box .child:nth-child(2),.pg-work .item3 .box .child:nth-child(2),
+    .pg-work .item4 .box .child:nth-child(2), .pg-work .item5 .box .child:nth-child(2),.pg-work .item6 .box .child:nth-child(2),
+    .pg-work .item7 .box .child:nth-child(2), .pg-work .item8 .box .child:nth-child(2), .pg-work .item9 .box .child:nth-child(2){
+    padding:30px 20px;
+
+}
+.pg-work .item2 .box .child{
+    margin-bottom: 0!important;
+}
+}

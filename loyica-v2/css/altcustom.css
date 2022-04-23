@@ -1,0 +1,19 @@
+.removeframe{display: none;}
+
+.gray_bg{	    
+	background: #0c0c0c !important;
+	transition: 10ms all ease-in;
+	    
+}
+
+.dark_bg{
+	    background: #000 !important;
+	    transition: 10ms all ease-in;
+	  
+}
+
+
+ 
+
+
+

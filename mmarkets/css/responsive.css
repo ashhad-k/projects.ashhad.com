@@ -1,0 +1,1245 @@
+@media (max-width: 991px) {
+body {
+	text-align: center;
+	overflow-x: hidden;
+}
+h1 {
+	font-size: 36px!important;
+}
+h2 {
+	font-size: 30px!important;
+	line-height: 1.2
+}
+P {
+	font-size: 18px!important;
+}
+.fold1 {
+	padding: 000px 00px 000px 0px;
+	background: url(../img/bg_fold1.jpg) center bottom;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-top: 70px;
+}
+.fold1 .lhs {
+	display: block;
+	padding: 100px 00px 400px 0px;
+	background: rgba(40,40,50,0.5)
+}
+.fold1 h2 {
+	color: #fff;
+}
+.fold1 P {
+	color: #fff;
+	width: 100%!important;
+	margin: 20px 0px;
+	padding: 0px 20px;
+}
+.fold1 .rhs {
+	display: none;
+}
+.cup1 {
+	padding: 20px;
+}
+.cup1 IMG {
+	width: 100%;
+}
+.cn-smoke {
+	width: auto;
+	right: 00px;
+	left: 0px;
+	top: -400px
+}
+.cn-smoke #viewport {
+	width: auto;
+}
+.fold2 {
+	padding: 20px;
+}
+.fold2 HEADER {
+	position: relative;
+	padding: 60px 20px;
+	width: 100%!important;
+	top: 0px;
+	margin-bottom: 40px;
+}
+.fold2 HEADER h1 {
+	margin-bottom: 10px
+}
+.fold2 DIV.box {
+	margin: 20px 20px 150px 20px;
+	padding: 30px 60px 120px 40px
+}
+.fold2 DIV.box h3 {
+	margin: 20px 0px;
+}
+.fold2 DIV.box P {
+	padding-bottom: 20px;
+}
+.fold2 DIV.box SMALL {
+	text-align: center;
+}
+.fold2 DIV.box .objects {
+	left: 00px;
+}
+.fold2 DIV.box .cup2 {
+	left: 0px;
+}
+.leaves1 {
+	text-align: left;
+}
+.leaves1 IMG {
+	margin: 0px;
+	max-width: 90%;
+}
+.fold3 {
+	padding: 60px 20px;
+}
+.fold3 .lhs {
+	padding-bottom: 0px;
+}
+.fold3 h1 {
+	margin: 20px 0px;
+	padding: 20px 0px;
+}
+.fold3 P {
+	margin-bottom: 0px;
+}
+.fold3 .rhs {
+	display: none;
+}
+.cup3 {
+	display: none
+}
+.fold4 {
+	padding: 20px;
+}
+.fold4 HEADER {
+	position: relative;
+	padding: 60px 20px;
+	width: 100%!important;
+	top: 0px;
+	margin-bottom: 40px;
+	left: 0px
+}
+.fold4 HEADER h1 {
+	margin-bottom: 10px
+}
+.fold4 .cup1 {
+	position: relative
+}
+.fold4 .cup1 IMG {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: auto;
+}
+.fold5 {
+	padding: 60px 20px;
+}
+.fold5 HEADER {
+	position: relative;
+	padding: 60px 20px;
+	width: 100%!important;
+	top: 0px;
+	margin-bottom: 40px;
+	left: 0px
+}
+.fold5 HEADER h1 {
+	margin-bottom: 10px
+}
+.fold5 .three-columns .row {
+	display: block
+}
+.fold5 .three-columns .box {
+	width: 100%!important;
+	padding: 40px 20px;
+}
+.fold5 .three-columns .box h3 {
+	padding-bottom: 0px;
+}
+.fold6 {
+	padding: 00px 20px 60px 20px;
+}
+.fold6 HEADER {
+	position: relative;
+	padding: 60px 20px;
+	width: 100%!important;
+	top: 0px;
+	margin-bottom: 00px;
+	left: 0px
+}
+.fold6 .fold6-cn-img P {
+	left: 0px;
+	right: 0px;
+}
+.fold7 {
+	padding: 60px 20px 60px 20px;
+}
+.fold7 HEADER {
+	position: relative;
+	padding: 00px 00px;
+	width: 100%!important;
+	top: 0px;
+	margin-bottom: 00px;
+	left: 0px
+}
+.fold7 .info {
+	padding: 20px 0px;
+}
+.fold7 .blank-box {
+	display: none;
+}
+.fold7 .details {
+	margin-top: 50px
+}
+.fold7 .details .text-right {
+	text-align: center!important;
+}
+.fold7 .details .text-right IMG {
+	width: 50%;
+}
+.fold8 {
+	display: flex;
+}
+.fold8 > DIV {
+	width: 50%;
+}
+.fold8 > DIV IMG {
+	width: 100%;
+}
+FOOTER {
+	display: block;
+	height: auto;
+}
+FOOTER > DIV {
+	width: 100%;
+	display: block;
+}
+FOOTER .lhs > DIV {
+	margin-bottom: 40px;
+}
+FOOTER .rhs {
+	height: auto;
+}
+FOOTER .lhs DIV.copyright {
+	display: block;
+	margin-bottom: 0px;
+}
+FOOTER .copyright SPAN {
+	display: block;
+}
+FOOTER .copyright .share-anchor {
+	padding: 20px 0px;
+	text-align: center!important;
+}
+FOOTER .rhs {
+	height: 400px;
+}
+/*	------------------/992px end*/
+}
+@media (max-width:768px) {
+body {
+	overflow-x: hidden;
+}
+.mobhide {
+	display: none!important
+}
+.mobshow {
+	display: block!important
+}
+.navbar-brand img {
+	width: 200px;
+}
+}
+ @media(min-width:1024px) {
+.desktop-hidden {
+	display: none!important
+}
+}
+
+
+/* disable scrollme for mobile*/
+@media (max-width: 767px) {
+.animateme, .scrollme {
+	transform: none !important;
+	opacity: 1 !important;
+}
+}
+
+
+
+/* updated responsive for all devices */
+@media(max-width:768px) and (min-width:642px) {
+.scrollme img, .cn-smoke, .animateme {
+	transform: none!important;
+	opacity: 1!important;
+}
+.fold1 .lhs {
+	width: 100%;
+	max-width: 100%;
+	flex: none;
+}
+.fold2 HEADER {
+	padding: 30px 30px;
+	width: 100%;
+	position: static;
+	max-width: 100%;
+	text-align: center;
+	margin: 0;
+}
+.fold2 HEADER h1 {
+	white-space: normal;
+	margin-bottom: 20px;
+}
+.fold2 DIV.box {
+	display: inline-block;
+	width: 45%;
+	max-width: 100%;
+	flex: none;
+	margin: 5% 2.5% 10%;
+	padding: 30px 20px 60px 40px;
+}
+.fold2 DIV.box SMALL {
+	text-align: right;
+	padding: 0 0 50px 0
+}
+.fold3 .lhs {
+	padding-bottom: 0px;
+	width: 100%;
+	max-width: 100%;
+	flex: none;
+	text-align: center;
+	margin: 0;
+}
+.fold4 HEADER {
+	max-width: 100%;
+	flex: none;
+	padding: 30px;
+}
+.cup1.my-paroller {
+	margin-top: -120px;
+	width: 40%;
+	display: table;
+	text-align: right;
+}
+.fold5 HEADER {
+	max-width: 50%;
+	flex: none;
+	padding: 30px;
+	margin-top: -270px;
+	float: right;
+}
+.fold5 .three-columns {
+	width: 100%;
+	max-width: 100%;
+	flex: none;
+	display: block;
+}
+.fold5 .three-columns .box {
+	width: 100%!important;
+	padding: 40px 20px 0;
+	max-width: 100%;
+	flex: none;
+	text-align: center;
+	display: inline-block;
+}
+.fold6 HEADER {
+	position: relative;
+	padding: 30px 20px;
+	width: 100%!important;
+	top: 0px;
+	margin-bottom: 00px;
+	left: 0px;
+	max-width: 100%;
+}
+.fold6 HEADER h1 {
+	white-space: normal;
+	margin-bottom: 30px;
+}
+.fold6 .fold6-cn-img {
+	position: relative;
+	max-width: 100%;
+	flex: none;
+	text-align: center;
+}
+.fold6 .fold6-cn-img P {
+	left: 0px;
+	right: 0px;
+	text-align: center;
+	width: 100%;
+	max-width: 100%;
+	flex: none;
+	bottom: inherit;
+	top: 40%;
+	font-size: 28px!important;
+}
+.fold6 {
+	padding: 00px 20px 00px 20px;
+}
+.fold7 HEADER {
+	display: inline-block;
+	max-width: 50%;
+}
+.fold7 .info {
+	padding: 20px 0px;
+	width: 100%;
+	max-width: 100%;
+	flex: none;
+	text-align: center;
+	margin: 0;
+}
+.fold7 .info p {
+	font-size: 28px!important;
+}
+.fold7 .details .offset-md-5 {
+	width: 100%;
+	max-width: 100%;
+	flex: none;
+	margin: 0;
+}
+.fold7 .details .text-right img {
+	width: 15%;
+	margin-bottom: 20px
+}
+.fold7 .details {
+	margin-top: 0;
+}
+FOOTER .copyright SPAN {
+	display: inline-block;
+}
+}
+ @media(max-width:1024px) and (min-width:868px) {
+NAV.fixed-top {
+	padding: 5px 0px;
+	text-align: center;
+}
+.fold1 {
+	background-position: right 10%;
+	background-size: 55%;
+}
+.fold1 .lhs {
+	margin-left: 30px;
+}
+.fold2 HEADER {
+	padding: 30px 30px;
+	width: 100%;
+	position: static;
+	max-width: 100%;
+	text-align: center;
+	margin: 0;
+}
+.fold2 DIV.box {
+	display: inline-block;
+	width: 45%;
+	max-width: 100%;
+	flex: none;
+	margin: 5% 2.5% 10%;
+	padding: 30px 20px 30px 40px;
+}
+.fold2 DIV.box .objects {
+	left: -30px
+}
+.fold2 HEADER h1 {
+	white-space: normal;
+	margin-bottom: 20px;
+}
+.scrollme img, .cn-smoke, .animateme {
+	transform: none!important;
+	opacity: 1!important;
+}
+.rhs.my-paroller {
+	margin: 0
+}
+.rhs.my-paroller img {
+	width: 100%
+}
+.fold4 {
+	padding: 0!important;
+}
+.fold4 h1.display-1 {
+	font-size: 8rem;
+	z-index: 1;
+	position: relative;
+	margin-left: 40px;
+	margin-top: 30px;
+}
+header h1 {
+	font-size: 35px
+}
+.fold4 HEADER {
+	position: absolute;
+	background: var(--colorGray);
+	color: #fff;
+	padding: 50px 60px 20px;
+	right: inherit;
+	position: static;
+	width: 100%;
+	max-width: 100%;
+	flex: none;
+}
+.fold5 HEADER {
+	display: block;
+	position: absolute;
+	background: #498dac;
+	padding: 90px 60px;
+	color: #fff;
+	top: -100px;
+	left: 0px;
+	position: static;
+	width: 100%;
+	max-width: 100%;
+	flex: none;
+	padding: 30px;
+	text-align: center;
+}
+.fold5 {
+	padding: 60px 50px 80px 50px
+}
+.fold5 HEADER h1 {
+	white-space: normal;
+	margin-bottom: 20px;
+}
+.fold5 .text-center {
+	margin: 0;
+	width: 100%;
+	max-width: 100%;
+	flex: none;
+}
+.fold5 .three-columns .box {
+	padding: 50px 10px;
+}
+.fold6 {
+	padding-top: 0;
+	padding-bottom: 100px;
+}
+.fold6 HEADER {
+	padding: 50px 40px;
+	width: 50%;
+	max-width: 50%;
+}
+.fold6 .fold6-cn-img P {
+	position: absolute;
+	font-size: 40px;
+	font-weight: 200;
+	bottom: 50px;
+	color: #fff;
+	margin: 40px;
+	width: 55%;
+}
+.fold7 {
+	padding-bottom: 100px
+}
+.fold7 HEADER {
+	width: 50%;
+	max-width: 30%;
+}
+.fold7 .blank-box {
+	background: #ecf3f7;
+	height: 370px;
+	position: absolute;
+}
+.fold7 .details .offset-md-5 {
+	width: 80%;
+	max-width: 80%;
+	flex: none;
+	margin-left: 100px;
+	margin-top: 15%;
+}
+.fold8 > DIV img {
+	width: 100%;
+}
+FOOTER .copyright > SPAN {
+	width: 100%;
+	max-width: 100%;
+	flex: none;
+	display: block
+}
+FOOTER .copyright .share-anchor a {
+	margin-left: 0;
+}
+FOOTER .copyright .share-anchor {
+	text-align: left;
+}
+}
+
+/* Custom Responsive */
+/* 1024 */
+@media (max-width: 1024px) {
+.menuactive {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	top: 0;
+	z-index: 99999999;
+	width: 100vw;
+	height: 100vh;
+}
+.navbar-expand-lg .navbar-toggler {
+	display: block;
+	background: red
+}
+.navbar .navbar-brand {
+	display: table;
+}
+#mouse-scroll {
+	display: none!important;
+}
+.hp-fold1 .lhs {
+	display: inline-block;
+	vertical-align: top;
+	max-width: 40%;
+}
+.hp-fold1 .rhs {
+	display: inline-block;
+	vertical-align: top;
+	max-width: 45%;
+	margin: 0
+}
+.hp-fold1 h2 {
+	font-size: 26px;
+	max-width: 90%;
+}
+.hp-fold1 p {
+	max-width: 90%;
+}
+.cn-signup p {
+	max-width: 100%;
+	text-align: center
+}
+.row {
+	display: block!important;
+	margin: 0;
+	width: 100%;
+	max-width: 100%;
+}
+.hp-fold1 {
+	margin-top: 100px;
+	padding-bottom: 30px
+}
+.hp-fold2 {
+	padding-top: 30px
+}
+.hp-fold2 .col-md-6, .hp-fold3 .col-md-6 {
+	max-width: 100%;
+	margin: 0
+}
+.hp-fold2 .four-boxes {
+	margin: 0;
+	max-width: 100%;
+}
+.hp-fold2 .box {
+	margin: 0;
+	max-width: 45%;
+	display: inline-block;
+}
+.hp-fold3 {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+#hp-tab1Content h4, #hp-tab2Content h4, #hp-tab1Content p, #hp-tab2Content p {
+	text-align: center;
+	max-width: 100%;
+}
+.hp-fold4a > .row:first-child .rhs {
+	display: inline-table;
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+}
+.hp-fold4a > .row:first-child .rhs ul {
+	display: block;
+	text-align: center;
+	margin-bottom: 25px
+}
+.hp-fold4a > .row:first-child .lhs {
+	max-width: 80%;
+	margin: 50px 0 100px 100px
+}
+.hp-fold4a #hp-fold4a-tab a {
+	font-size: 18px;
+	padding: 15px;
+}
+.hp-fold4a > .row:first-child .rhs li {
+	display: inline-block;
+}
+#hp-fold4a-tabContent .col-md-5, #hp-fold4a-tabContent .col-md-4 {
+	display: inline;
+}
+.hp-fold4a img {
+	width: 40%;
+	display: block;
+	margin: 0 auto;
+}
+#hp-fold4a-tabContent h4, #hp-fold4a-tabContent p {
+	text-align: center
+}
+.hp-fold4b {
+	background-size: cover;
+}
+.hp-fold5 .row > .lhs {
+	max-width: 100%;
+	margin: 0
+}
+.hp-fold5 .row > .rhs {
+	max-width: 90%;
+	margin: 25px auto 0;
+	text-align: center
+}
+.hp-fold5 .row > .lhs div {
+	max-width: 80%;
+}
+.hp-clients .col-md-8, .hp-clients .col-md-10 {
+	max-width: 100%;
+	margin: 0
+}
+footer {
+	background-size: cover;
+}
+footer .col-lg-2, footer .col-lg-4, footer .col-lg-3 {
+	max-width: 100%;
+	text-align: center;
+	margin: 0
+}
+.ftr1 .col-md-6 {
+	display: inline;
+}
+}
+/* 768 */
+@media (max-width: 768px) {
+.pg-accounts, .pg-partners, .pg-ptools, .pg-tp, .pg-who-we-are {
+	background-size: 150%;
+}
+.pg-accounts .hp-fold1 .lhs, .pg-partners .hp-fold1 .lhs, .pg-ptools .hp-fold1 .lhs, .pg-tp .hp-fold1 .lhs, .pg-who-we-are .hp-fold1 .lhs {
+	display: inline-block;
+	vertical-align: top;
+	max-width: 90%;
+}
+.pg-accounts .hp-fold1, .pg-partners .hp-fold1, .pg-ptools .hp-fold1, .pg-tp .hp-fold1, .pg-who-we-are .hp-fold1 {
+	min-height: 465px
+}
+.pg-who-we-are .fold2 {
+	padding-bottom: 0;
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
+	max-width: 100%;
+	margin: 0
+}
+.pg-accounts .fold2 {
+	text-align: center;
+	margin-bottom: 50px;
+}
+.pg-accounts .fold4 .five-boxes .box, .pg-partners .fold3 .five-boxes .box {
+	background: #fff;
+	width: 48%;
+	display: inline-block;
+	margin-bottom: 40px!important;
+}
+.pg-ptools .hp-fold5 .row > .rhs .three-boxes .box {
+	display: inline-block;
+	text-align: left;
+	width: 100%;
+	max-width: 100%;
+}
+.hp-fold1 .lhs {
+	text-align: left
+}
+.hp-fold2 .col-md-4 {
+	text-align: center;
+	margin: 0 auto
+}
+#hp-carousel .col-md-10 {
+	max-width: 100%;
+	margin: 0
+}
+.hp-fold3 {
+	padding-bottom: 50px
+}
+.hp-fold4a #hp-fold4a-tab a {
+	font-size: 22px;
+	padding: 20px;
+}
+.hp-fold4a .col-md-10, .hp-fold4b .col-md-8, .hp-fold4b .col-md-10 {
+	max-width: 100%;
+	margin: 0
+}
+.hp-fold5 .row > .lhs div, .hp-fold5 .row > .lhs p {
+	max-width: 80%;
+	margin: 0 auto;
+	width: 80%!important;
+}
+.hp-fold5 .row > .lhs div h2 {
+	font-size: 45px!important
+}
+.hp-fold5 .row > .lhs div h2 br {
+	display: none!important
+}
+.hp-fold5 .card-deck .card h3 {
+	font-size: 28px;
+}
+.hp-clients {
+	padding-bottom: 0
+}
+FOOTER {
+	padding-top: 200px;
+	background-position: -100px top;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.pg-tp .fold2 .lhs .nav-pills a, .pg-tp .fold2 .lhs .nav-pills a.active {
+	margin-right: 0
+}
+.fold2 img {
+	max-width: 100%;
+}
+html {
+	overflow-x: hidden;
+}
+.ftr2 { 
+	display: none!important;
+}
+FOOTER { 
+	padding-bottom: 0!important; 
+	border:0
+}
+.hp-fold4a img {
+	width: 65%;
+}	
+
+}
+
+/* 668 */
+@media (max-width: 668px) {
+	.ftr1 .text-right , .ftr1 .text-right a{
+	display: block;
+	text-align: center
+}
+.hp-fold4a img {
+		width: 95%;
+}	
+.pg-ptools .hp-fold5 .row > .lhs IMG {
+	width: 100%;
+}
+.pg-partners .fold2 .lhs UL.nav-tabs li.nav-item a:before, .spacer100 {
+	display: none;
+}
+.pg-partners .fold2 .lhs UL.nav-tabs {
+	margin: 20px 0;
+	border: 0
+}
+.pg-partners .fold2 .lhs UL.nav-tabs li.nav-item {
+	padding: 0
+}
+.pg-partners .fold2 {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.pg-partners .fold2 .lhs .three-boxes {
+	display: block
+}
+.pg-partners .fold2 .lhs .three-boxes .box {
+	flex: none;
+	text-align: center;
+	margin: 20px 0;
+	width: 100%;
+	padding: 0;
+}
+.fold2 .lhs UL.nav-tabs li.nav-item a.active {
+	background-image: -moz-linear-gradient( 0deg, rgb(32,0,172) 0%, rgb(42,163,217) 100%);
+	background-image: -webkit-linear-gradient( 0deg, rgb(32,0,172) 0%, rgb(42,163,217) 100%);
+	background-image: -ms-linear-gradient( 0deg, rgb(32,0,172) 0%, rgb(42,163,217) 100%);
+	color: #FFFFFF!important
+}
+.hp-fold1 .lhs, .hp-fold1 .rhs {
+	width: 100%;
+	max-width: 100%;
+	text-align: center!important
+}
+.hp-fold1 .lhs h2, .hp-fold1 .lhs p {
+	max-width: 100%;
+	margin-bottom: 20px;
+}
+.hp-fold2 .box {
+	max-width: 100%;
+}
+#hp-tab1, #hp-tab2 {
+	background: none;
+	display: inline-block;
+	flex-flow: inherit;
+	position: relative;
+}
+#hp-tab1 li.nav-item, #hp-tab2 li.nav-item {
+	flex-grow: inherit;
+	width: 33%;
+	text-align: center;
+	max-width: 33%;
+	flex: none;
+	display: inline-block;
+}
+#hp-carousel .carousel-control-prev {
+	background: #166f97;
+	left: 0px;
+}
+#hp-carousel .carousel-control-next {
+	background: #061124;
+	right: 0;
+}
+.hp-fold4a > .row:first-child .lhs {
+	max-width: 100%;
+	margin: 50px 0 100px 0px;
+	padding: 0 15px;
+}
+.pg-accounts, .pg-ptools, .pg-tp, .pg-who-we-are, .pg-home {
+	background-size: 400%;
+}
+.pg-partners {
+	background-size: 500%;
+}
+.pg-accounts .hp-fold1 .lhs, .pg-partners .hp-fold1 .lhs, .pg-ptools .hp-fold1 .lhs, .pg-tp .hp-fold1 .lhs, .pg-who-we-are .hp-fold1 .lhs {
+	display: inline-block;
+	vertical-align: top;
+	max-width: 90%;
+}
+.pg-accounts .hp-fold1, .pg-partners .hp-fold1, .pg-ptools .hp-fold1, .pg-tp .hp-fold1, .pg-who-we-are .hp-fold1 {
+	min-height: 650px
+}
+.pg-who-we-are .fold2 {
+	padding-bottom: 0;
+}
+.hp-fold1 .btn-primary, .hp-fold1 .btn-outline-primary {
+	display: block;
+	margin-bottom: 20px;
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
+	max-width: 100%;
+	margin: 0
+}
+.pg-accounts .fold2 {
+	text-align: center;
+	margin-bottom: 50px;
+}
+.pg-accounts .fold4 .five-boxes .box, .pg-partners .fold3 .five-boxes .box {
+	background: #fff;
+	width: 48%;
+	display: inline-block;
+	margin-bottom: 40px!important;
+}
+.pg-ptools .hp-fold5 .row > .rhs .three-boxes .box {
+	display: inline-block;
+	text-align: left;
+	width: 100%;
+	max-width: 100%;
+}
+.hp-fold1 .lhs {
+	text-align: left
+}
+.hp-fold2 .col-md-4 {
+	text-align: center;
+	margin: 0 auto
+}
+#hp-carousel .col-md-10 {
+	max-width: 100%;
+	margin: 0
+}
+.hp-fold3 {
+	padding-bottom: 50px
+}
+.hp-fold4a #hp-fold4a-tab a {
+	font-size: 18px;
+	padding: 10px;
+}
+.tab-content > .tab-pane {
+	padding: 0 15px;
+}
+.hp-fold4b .col-md-10 {
+	display: block
+}
+.hp-fold4b .second-row div.child:nth-child(1) {
+	margin-top: 0%
+}
+.hp-fold5 {
+	margin-top: -100px;
+}
+.hp-fold4b .second-row div.child .dot {
+	margin: 0px auto 0px auto;
+}
+.hp-fold4a .col-md-10, .hp-fold4b .col-md-8, .hp-fold4b .col-md-10 {
+	max-width: 100%;
+	margin: 0
+}
+.hp-fold5 .row > .lhs div, .hp-fold5 .row > .lhs p {
+	max-width: 80%;
+	margin: 0 auto;
+	width: 80%!important;
+}
+.hp-fold5 .row > .lhs div h2 {
+	font-size: 45px!important
+}
+.hp-fold5 .row > .lhs div h2 br {
+	display: none!important
+}
+.hp-fold5 .card-deck .card h3 {
+	font-size: 28px;
+}
+.hp-clients {
+	padding-bottom: 0
+}
+FOOTER {
+	padding-top: 200px;
+	background-position: -350px top;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.pg-tp .fold2 .lhs .nav-pills a, .pg-tp .fold2 .lhs .nav-pills a.active {
+	margin-right: 0
+}
+.fold4 .cn2 {
+	padding: 10px!important;
+}
+.fold4 .cn2 input {
+	margin-bottom: 10px;
+}
+FOOTER .share-anchor a {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	margin-right: 10px;
+	font-size: 20px;
+}
+.pricing .panel {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	flex: none;
+	margin-bottom: 20px;
+}
+.pg-accounts .fold4 .five-boxes .box, .pg-partners .fold3 .five-boxes .box {
+	background: #fff;
+	width: 100%;
+	display: inline-block;
+	margin-bottom: 40px!important;
+}
+}
+/* SmallRes */
+@media (min-width: 991px) and (max-width: 1600px) {
+.nav-rhs{
+		min-width: 320px;
+}
+#mouse-scroll {
+	overflow: hidden;
+	padding-top: 30px;
+}
+.hp-fold1 {
+	margin-top: 150px;
+}
+.hp-fold1 .lhs {
+	display: inline-block;
+}
+.hp-fold1 .lhs h2 {
+	font-size: 36px;
+	max-width: 90%;
+	margin-bottom: 30px;
+}
+.hp-fold1 .lhs P {
+	font-size: 16px;
+	max-width: 90%;
+	margin-bottom: 30px;
+}
+.hp-fold1 .lhs a {
+	margin-bottom: 30px;
+}
+.hp-fold1 .rhs P {
+	font-size: 16px;
+}
+.hp-fold1 .rhs .form-group INPUT {
+	padding: 5px 10px;
+	margin-bottom: 10px;
+}
+#hp-tab1Content P, #hp-tab2Content P {
+	max-width: 100%;
+}
+.hp-fold4a #hp-fold4a-tab a {
+	padding: 5px 20px;
+	font-size: 18px;
+}
+.hp-fold5 .rhs h3 {
+	font-size: 24px;
+	margin-left: 40px;
+}
+.hp-fold5 .row > .rhs+ h3 {
+	margin-left: 00px;
+}
+.hp-fold5 .card-deck .card .card-body {
+	padding: 20px 20px 10px 20px;
+}
+.hp-fold5 .card-deck .card h3 {
+	font-size: 24px;
+}
+.hp-fold5 .row > .rhs .btn-primary {
+	color: #fff;
+	margin: 0 auto;
+	display: table;
+}
+.hp-clients .col-md-10 {
+	max-width: 100%;
+	margin: 0;
+	text-align: center;
+	width: 100%;
+	display: block;
+	flex: none
+}
+FOOTER {
+	background-size: cover
+}
+FOOTER .share-anchor a {
+	width: 50px;
+	height: 50px;
+	line-height: 46px;
+}
+.pg-accounts .hp-fold1 .lhs, .pg-partners .hp-fold1 .lhs, .pg-ptools .hp-fold1 .lhs, .pg-tp .hp-fold1 .lhs, .pg-who-we-are .hp-fold1 .lhs {
+	max-width: 60%;
+	flex: none;
+}
+.pg-ptools .hp-fold5 .row > .rhs h3 + p {
+	font-size: 18px;
+	padding: 20px 0px;
+	margin-left: 40px;
+}
+.styled-checkbox + label {
+	font-size: 14px;
+}
+}
+ @media (max-width:1024px) {
+.collapse.navbar-collapse, .nav-rhs {
+	display: none!important;
+}
+.navbar .navbar-brand {
+	width: 120px!important;
+	height: 30px!important;
+	padding: 0;
+	margin: 10px!important;
+}
+.navbar-brand img {
+	width: 80px!important
+}
+.mob-menu {
+	display: block!important;
+}
+.collapse.navbar-collapse {
+	margin-left: 100%;
+	transition: 500ms all ease-in-out;
+	transition-delay: 6s;
+}
+}
+@media (max-width:668px) {
+.topnav.menutoggle .navbar-nav a.nav-link {
+	font-size: 16px!important;
+}
+.topnav.menutoggle .nav-rhs {
+	font-size: 16px!important;
+	padding: 20px 0;
+}
+}
+/* BergerMenu */
+.menutoggle .navbar {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99999;
+	background: rgba(0,0,0,1);
+}
+.menutoggle .navbar .navbar-brand {
+	padding: 0px;
+	margin: 10px auto;
+	display: block;
+	clear: both;
+	position: absolute;
+	top: 0;
+}
+.menutoggle .collapse.navbar-collapse {
+	text-align: center;
+	padding-right: 0;
+	flex-flow: inherit;
+	display: block!important;
+	clear: both;
+	width: 100%;
+	flex: none!important;
+	max-width: 100%;
+	margin-top: 90px;
+	margin-left: 0%!important;
+	transition: 500ms all ease-in-out;
+}
+.menutoggle .nav-rhs {
+	width: 100%;
+	height: auto;
+	z-index: 999999999999999;
+	display: table!important;
+	font-size: 22px;
+}
+.menutoggle .navbar:before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100vw;
+	height: 100vh;
+	background: url(../img/bg/hp-fold1.png) center center;
+	background-size: cover;
+	z-index: -99;
+}
+.menutoggle .navbar-nav a.nav-link {
+	font-size: 22px!important;
+}
+.mob-menu {
+	position: fixed;
+	top: 20px;
+	right: 30px;
+	height: 20px;
+	width: 20px;
+	z-index: 99999999;
+	display: none;
+}
+label.burger {
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	z-index: 9999999;
+}
+label.burger span {
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	top: 50%;
+	margin-top: -1px;
+	left: 0;
+	display: block;
+	background: #009aff;
+	transition: .5s;
+}
+label.burger span:first-child {
+	top: 3px;
+}
+label.burger span:last-child {
+	top: 17px;
+}
+label.burger:hover {
+	cursor: pointer;
+}
+.menutoggle label.burger span {
+	opacity: 0;
+	top: 50%;
+}
+.menutoggle label.burger span:first-child {
+	opacity: 1;
+	transform: rotate(405deg);
+}
+.menutoggle label.burger span:last-child {
+	opacity: 1;
+	transform: rotate(-405deg);
+}

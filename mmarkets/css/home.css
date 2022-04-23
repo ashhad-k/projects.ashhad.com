@@ -1,0 +1,572 @@
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-weight: 400;
+}
+
+/**
+ * Firefox specific rule
+ */
+
+@-moz-document url-prefix() {
+  body {
+    font-weight: lighter !important;
+  }
+}
+
+body{
+	color: #5c5c5c;
+	font-family: CeraProRegular;
+	overflow-x: hidden
+}
+
+@font-face {
+    font-family: CeraProLight;
+    src: url(../fonts/Cera_GR_Light.woff);
+    font-weight:200;
+}
+@font-face {
+    font-family: CeraProRegular;
+    src: url(../fonts/Cera_GR.woff);
+    font-weight:400;
+}
+@font-face {
+    font-family: CeraProBold;
+    src: url(../fonts/Cera_GR_Bold.woff);
+    font-weight:600;
+}
+
+FOOTER .ftr2,
+FOOTER .ftr2 P,
+.hp-fold5 .card-deck .card h3,
+.btn-primary{
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+/* font light*/
+.hp-fold4a >.lhs
+{font-family: CeraProLight;}
+
+
+/* font- regular*/
+.navbar-nav .nav-link
+{font-family: CeraProRegular;}
+
+
+/* font - bold*/
+.hp-fold5 .card-deck .card SMALL,
+.hp-fold4a #hp-fold4a-tab a,
+h1,h2,h3,h4
+{font-family: CeraProBold;}
+
+
+
+
+h1{ font-size: 60px; font-weight: 600;   }
+h2{ font-size: 45px; } 
+h3{ font-size: 30px; font-weight: 600; }
+h4{ font-size: 25px; font-weight: 600; }
+
+P{ font-size: 22px;}
+
+.btn-primary,
+a{ transition: 0.25s ease-in-out}
+
+
+
+
+/* 
+* ==========================================================
+*     Variables
+* ==========================================================
+*/
+
+:root {
+  --colorDarkBlue: #061124;
+  --colorBrown: #b78f62;
+  --colorBlue: #498dac;
+  --colorCream: #e9e5d9;
+}
+/*
+color:var(--colorMain);
+*/
+
+
+/* 
+* ==========================================================
+*     General Styles
+* ==========================================================
+*/
+
+FOOTER .subc .btn:hover,
+.btn-primary{ 
+background-image: -moz-linear-gradient( 0deg, rgb(32,0,172) 0%, rgb(42,163,217) 100%);
+  background-image: -webkit-linear-gradient( 0deg, rgb(32,0,172) 0%, rgb(42,163,217) 100%);
+  background-image: -ms-linear-gradient( 0deg, rgb(32,0,172) 0%, rgb(42,163,217) 100%);
+}
+
+
+.btn-primary{ 
+  box-shadow: 0px 2px 62px 0px rgba(0, 176, 255, 0.21);	
+	text-transform: uppercase;  font-size: 16px; letter-spacing: 4px; padding: 20px 35px; border: 0px;
+}
+
+
+.btn-primary:hover{ background:#2547c0; border: 0px;  }	
+.btn-primary:active{ background:var(--colorBlue); border: 0px;  }	
+
+.btn-primary:not(:disabled):not(.disabled):active, 
+.btn-primary:not(:disabled):not(.disabled).active, 
+.show > .btn-primary.dropdown-toggle{ background: #498dac!important; border-color:#498dac}
+
+.scrollme{ perspective:600px;}
+.animateme{}
+.my-paroller{}
+
+
+
+
+
+/* 
+* ==========================================================
+*     Navbar
+* ==========================================================
+*/
+NAV.fixed-top{ padding: 00px 0px;  }
+.navbar-nav{ width: 100%; justify-content: flex-end; align-items: center;}
+.navbar-nav a.nav-link{ font-size: 15px; text-transform: uppercase; color: #fff; letter-spacing: 2px; margin: 0px 10px}
+.navbar-nav a.nav-link:hover{ color:#54c0f8;}
+.navbar .navbar-brand{  width: 120px; height: 70px; padding:0; margin: 10px 30px; }
+
+
+a.nav-link.active{color: #54c0f8;}
+a.nav-link.active:hover{color: #54c0f8;}
+
+
+li.current a.navbar-brand{ background: none;}
+
+.collapse.navbar-collapse{ text-align: right; padding-right: 20px; flex-flow: row wrap}
+.collapse.navbar-collapse .navbar-nav:first-child a.nav-link{  font-size: 12px; }
+
+
+.nav-rhs{ border: 1px solid #54c0f8; background: #0e2f4b; padding: 20px 40px; text-align: center; color: #009aff; letter-spacing: 2px; text-transform: uppercase; font-size: 14px;}
+.nav-rhs dt{ margin-bottom: 10px;}
+.nav-rhs a{ padding: 0px 10px; color: #fff;}
+
+.top1-min{ background: #091a35;}
+
+/* 
+* ==========================================================
+*     BGs page wise
+* ==========================================================
+*/
+.pg-home{background: url(../img/bg/hp-fold1.png) left top ; background-size: 100%; background-repeat: no-repeat; }
+
+/* 
+* ==========================================================
+*     hp Fold1 - header
+* ==========================================================
+*/
+	
+.hp-fold1{ margin-top: 220px; padding-bottom: 100px; }
+.hp-fold1 .lhs{ display: flex; justify-content:space-between; flex-flow: row wrap;  color: #fff}
+.hp-fold1 .lhs DIV{flex: 1 100%}
+.hp-fold1 .lhs h2{padding: 0px;}
+.hp-fold1 P{ padding: 0px; color: #dedfe1 }
+.hp-fold1 .cn-ticker{ display: block; width: 100%;  min-height: 60px; padding-right: 40px;}
+
+.hp-fold1 .rhs{ }
+.hp-fold1 .rhs P{ color: #061124;margin-bottom: 40px;}
+.hp-fold1 .rhs .cn-signup{ background: #fff; border-radius: 40px; padding: 40px;}
+.hp-fold1 .rhs .form-group{ margin-bottom: 00px;}
+.hp-fold1 .rhs .form-group INPUT{padding: 15px 20px; margin-bottom: 30px;}
+.hp-fold1 .rhs .form-group .btn-primary{ text-transform: capitalize;}
+
+
+
+/* 
+* ==========================================================
+*     hp Fold2 
+* ==========================================================
+*/
+
+.hp-fold2{ text-align: center; padding-top: 100px; padding-bottom: 80px;}
+.hp-fold2 h3{ color: #061124; margin-bottom: 40px;}
+.hp-fold2 P{ margin-bottom: 40px;}
+
+
+.four-boxes{ margin-top: 60px;}
+.four-boxes .box{}
+.four-boxes .box IMG{ background: #fff; width: 152px; height: 152px; border-radius: 20px;  box-shadow: 0px 26px 51px 0px rgba(3, 69, 99, 0.17); margin-bottom: 60px;}
+.four-boxes .box h4{ color: #061124; padding-bottom: 40px;}
+.four-boxes .box P{font-size: 18px; padding-bottom: 30px;}
+
+
+
+
+/* 
+* ==========================================================
+*     hp Fold3 
+* ==========================================================
+*/
+
+.hp-fold3{  padding: 10px 0px 100px 0px;}
+.hp-fold3 h1{ color: #061124;}
+.hp-fold3 p{padding-bottom: 60px;}
+
+
+#hp-carousel{width: 100%;}
+#hp-carousel:after{ content: ""; position: absolute; width: 100%; height: 10px; display: block; background: url(../img/bg/dot.png) repeat-x; top: 200px; z-index: -1;}
+
+#hp-carousel .carousel-control-prev, 
+#hp-carousel .carousel-control-next{ background: #000; border-radius: 50%; width: 50px; height: 50px; top: 175px; opacity: 1}
+
+#hp-carousel .carousel-control-prev{ background: #166f97; left: 50px;}
+#hp-carousel .carousel-control-next{ background: #061124; right: 50px;}
+
+/* tabs 1*/
+#hp-tab1,
+#hp-tab2{ background:none; display: flex; flex-flow: row; position: relative;}
+#hp-tab1 li.nav-item,
+#hp-tab2 li.nav-item{flex-grow: 1; flex-basis: 25%; text-align: center; }
+#hp-tab1 li.nav-item a,
+#hp-tab2 li.nav-item a{border:1px solid #fff;  border-radius: 0px;padding: 0px; color:#fff; position: relative; display: flex; align-items: center; justify-content: center;}
+
+#hp-tab1 li.nav-item a.nav-link.active,
+#hp-tab2 li.nav-item a.nav-link.active{ color: #2aa3d9;}
+
+#hp-tab1 li.nav-item IMG,
+#hp-tab2 li.nav-item IMG{ width: 100%;}
+#hp-tab1 li.nav-item h4,
+#hp-tab2 li.nav-item h4{ position: absolute;  z-index: 1;}
+
+#hp-tab1Content h4,
+#hp-tab2Content h4{ padding: 40px 0px 30px 0px; color: #101a2d; }
+#hp-tab1Content P,
+#hp-tab2Content P{ max-width: 70%; font-size: 20px}
+
+
+
+/* 
+* ==========================================================
+*     Fold4a - 
+* ==========================================================
+*/
+.hp-fold4a{ background: url(../img/bg/hp-fold4a.png) center top #061124; background-size: 100%; background-repeat: no-repeat; padding: 60px 0px; color: #fff;}
+.hp-fold4a .row{ align-items: center}
+.hp-fold4a > .row:first-child .lhs{}
+.hp-fold4a > .row:first-child .lhs h2{ padding-bottom: 40px;}
+.hp-fold4a > .row:first-child .rhs{}
+
+.hp-fold4a #hp-fold4a-tab{ background:#166f97; padding: 10px 0px; color: #fff;}
+.hp-fold4a #hp-fold4a-tab a{color: #1a4051; font-size: 22px; padding-top: 15px; padding-bottom: 15px; padding: 20px;}
+.hp-fold4a #hp-fold4a-tab a.active{color: #fff;}
+
+#hp-fold4a-tabContent{ color: #a0a2a5; font-size: 20px;}
+#hp-fold4a-tabContent h4{ color: #fff; padding-bottom: 15px;}
+
+
+
+/* 
+* ==========================================================
+*     Fold4 b -  
+* ==========================================================
+*/
+.hp-fold4b{ background: url(../img/bg/hp-fold4b.png) center top #fff; background-size: 100%; background-repeat: no-repeat; padding: 60px 0px 230px 0px; color: #fff; text-align: center;}
+.hp-fold4b > .row:first-child h2{ padding-bottom: 40px;}
+.hp-fold4b > .row:first-child P{ color: #a0a2a5;}
+
+
+
+.hp-fold4b .second-row { display: flex; justify-content: space-between; padding-top: 70px; padding-bottom: 140px;}
+.hp-fold4b .second-row P{ font-size: 16px;color: #a0a2a5;}
+
+.hp-fold4b .second-row div.child{ text-align: center; }
+.hp-fold4b .second-row div.child p{padding: 0px 40px; }
+
+.hp-fold4b .second-row div.child .dot{ position: relative; display: block;  width: 68px; height: 68px; background: url(../img/dot.png) no-repeat; margin: 0 auto 40px auto;}
+
+.hp-fold4b .second-row div.child:nth-child(1) { margin-top: 116px;}
+.hp-fold4b .second-row div.child:nth-child(2) { margin-top: 44px;}
+.hp-fold4b .second-row div.child:nth-child(3) { margin-top: 110px;}
+.hp-fold4b .second-row div.child:nth-child(4) { margin-top: 0px;}
+
+
+.hp-fold4b .third-row { display: block; text-align: center}
+.hp-fold4b .third-row { display: block; text-align: center}
+.hp-fold4b .third-row .btn{  margin-bottom: 20px;}
+.hp-fold4b .third-row  small {color: #2f3b52; display: block;}
+
+
+
+/* 
+* ==========================================================
+*     hp Fold5 
+* ==========================================================
+*/
+
+.hp-fold5{ padding-left: 0px; padding-right: 0px;}
+.hp-fold5 .row{ align-items: center}
+.hp-fold5 .row > .lhs{ background: url(../img/bg/hp-fold5.png) left center #fff; background-size: auto; background-repeat: no-repeat; color: #fff; min-height: 1050px; display: flex; flex-flow: row wrap; align-items: center; align-content: center;}
+.hp-fold5 .row > .lhs div{ flex: 1 100%;}
+
+/*RHS*/
+.hp-fold5 .row > .rhs{}
+.hp-fold5 .row > .rhs h3{ color: #101a2d}
+.hp-fold5 .row > .rhs .btn-primary{color: #fff}
+
+	.hp-fold5 .card-deck{ padding: 70px 0px}
+	.hp-fold5 .card-deck .card{ background: #f2f2f2; border-radius: 0px; border: 0px; }
+	.hp-fold5 .card-deck .card .card-body{ padding: 30px 30px 15px 30px; }
+	.hp-fold5 .card-deck .card h3{  font-size: 35px; font-weight: 600; margin: 0px; color: #101a2d;}
+	.hp-fold5 .card-deck .card P{  font-size: 15px; line-height: 25px; }
+	.hp-fold5 .card-deck .card P.card-text{  font-size: 20px;color: #101a2d; }
+	.hp-fold5 .card-deck .card hr{ background:#dad8d8; margin: 35px 0px;}
+	.hp-fold5 .card-deck .card SMALL{ color: #101a2d; text-transform: uppercase; font-size: 17px; opacity: 0.5; padding-bottom: 70px; display: block;}
+
+	.hp-fold5 .card-deck .card.featured{ background: #061124; color: #fff;  }
+	.hp-fold5 .card-deck .card.featured SMALL{color: #e5c015!important;opacity: 1  }
+	.hp-fold5 .card-deck .card.featured h3{color: #fff;  }
+	.hp-fold5 .card-deck .card.featured P{color: #63738f!important;  }
+	.hp-fold5 .card-deck .card.featured hr{opacity: 0.5  }
+
+
+
+.fold5{ position: relative;  padding: 300px 50px 150px 50px}
+.fold5 HEADER{ display: block; position: absolute; background: #498dac; padding: 90px 60px; color: #fff; top: -100px; left: 0px;}
+.fold5 HEADER h1{ white-space: pre-line; margin-bottom: 50px;}
+.fold5 HEADER P{ margin: 00px 0px;}
+
+.hp-fold5 .three-columns{ display: flex;}
+.hp-fold5 .three-columns .box{ padding: 50px 80px;}
+.hp-fold5 .three-columns .box IMG{ padding-bottom: 30px}
+.hp-fold5 .three-columns .box h3{ padding-bottom: 20px; color: #000; text-transform: uppercase;}
+
+
+/* 
+* ==========================================================
+*     Fold6 - clients
+* ==========================================================
+*/
+
+.hp-clients{ padding-top:130px; padding-bottom: 130px; text-align: center}
+.hp-clients h3{color:#061124}
+.hp-clients P{ padding-bottom: 60px;}
+
+
+
+/* 
+* ==========================================================
+*     Footer - pix
+* ==========================================================
+*/
+
+
+
+FOOTER{ background: url(../img/bg/footer.png) left top #fff; padding-top:160px; padding-bottom: 60px; color:#8599bc; font-size: 15px; }
+FOOTER a{ color:#fff;}
+FOOTER a:hover{ color:#a114d4;}
+FOOTER h4{ font-size:20px; letter-spacing: 2px; margin-bottom: 20px; text-transform: uppercase}
+FOOTER LI{ padding: 5px 0px;}
+FOOTER .ftr1{ border-top:1px solid #1b1b3f; border-bottom: 1px solid #1b1b3f; padding: 30px 0px; font-size:15px; margin-top: 40px; color: #8599bc; }
+FOOTER .ftr2{padding-top: 40px; }
+FOOTER .ftr2 P{ font-size:13px;color: #2d3646;}
+
+FOOTER .get-started{ color:#fff; background: #a114d4; padding: 30px; border-top-left-radius: 40px; border-bottom-right-radius: 40px; position: relative; margin-top: -140px; width:250px; }
+FOOTER .get-started h4{font-weight: 600;}
+FOOTER .get-started a{color:#fff}
+
+FOOTER .share-anchor{ position: relative; bottom: auto;}
+FOOTER .share-anchor a { background: #101a2d; border-radius:50%;
+	width: 60px;
+	height: 60px;
+	line-height: 56px;
+	color: #fff;
+	margin-right:15px;
+	text-align: center;
+	font-size: 24px;
+	display: inline-block;
+	border: 0px;
+	margin: 0px
+}
+FOOTER .share-anchor a:hover{ background: #2896c9; border: 0px;}
+
+FOOTER .subc{  }
+FOOTER .subc .btn{ background: #2896c9; border: 0px; border-radius: 0px 0px 5px !important ; padding-left: 50px; padding-right: 50px; font-size:15px!important; line-height: 50px;  color: #fff;}
+
+FOOTER .subc INPUT{ border: 0px; font-size:16px!important; border-radius: 0px!important; line-height: 50px!important;}
+
+
+/* 
+* ==========================================================
+*    Custom check
+* ==========================================================
+*/
+
+.styled-checkbox {
+  position: absolute;
+  opacity: 0;
+}
+.styled-checkbox + label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+.styled-checkbox + label:before {
+  content: '';
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 20px;
+  height: 20px;
+  background: white;
+	border: 1px solid #ccc;
+}
+.styled-checkbox:hover + label:before {
+  background: #f35429;
+}
+.styled-checkbox:focus + label:before {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+.styled-checkbox:checked + label:before {
+  background: #f35429;
+}
+.styled-checkbox:disabled + label {
+  color: #b8b8b8;
+  cursor: auto;
+}
+.styled-checkbox:disabled + label:before {
+  box-shadow: none;
+  background: #ddd;
+}
+.styled-checkbox:checked + label:after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 9px;
+  background: white;
+  width: 2px;
+  height: 2px;
+  box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+/* 
+* ==========================================================
+*    Mouse Scroll SVG
+* ==========================================================
+*/
+
+#mouse-scroll {
+	overflow: hidden;
+	padding-top: 100px;
+}
+#mouse-scroll {
+ 
+	font-size:12px;
+	letter-spacing: 3px;
+	color: #666;
+	text-transform: uppercase;
+	
+}
+#mouse-scroll span{
+  display: block;
+  width: 5px; 
+  height: 5px;
+  -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+       transform: rotate(45deg);
+       transform: rotate(45deg);
+  border-right: 2px solid #666; 
+  border-bottom: 2px solid #666;
+  margin: 0 0 3px 5px;
+}
+#mouse-scroll .mouse {
+  height: 21px;
+  width: 14px;
+  border-radius: 10px;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  border: 2px solid #666;
+  top: 00px;
+	margin: 0 auto;
+}
+#mouse-scroll .down-arrow-1 {
+  margin-top: 6px;
+}
+#mouse-scroll .down-arrow-1, #mouse-scroll .down-arrow-2, #mouse-scroll .down-arrow-3 {
+  -webkit-animation: mouse-scroll 1s infinite; 
+    -moz-animation: mouse-scroll 1s infinite:
+}
+#mouse-croll .down-arrow-1 {
+   -webkit-animation-delay: .1s; 
+   -moz-animation-delay: .1s;
+   -webkit-animation-direction: alternate;
+}
+#mouse-scroll .down-arrow-2 {
+  -webkit-animation-delay: .2s; 
+  -moz-animation-delay: .2s;
+  -webkit-animation-direction: alternate;
+}
+#mouse-scroll .down-arrow-3 {
+   -webkit-animation-delay: .3s;
+   -moz-animation-dekay: .3s;
+   -webkit-animation-direction: alternate;
+}
+#mouse-scroll .mouse-in {
+  height: 5px;
+  width: 2px;
+  display: block; 
+  margin: 5px auto;
+  background: #ffffff;
+  position: relative;
+}
+#mouse-scroll .mouse-in {
+ -webkit-animation: animated-mouse 1.2s ease infinite;
+  moz-animation: mouse-animated 1.2s ease infinite;
+}
+
+.mouse-arrow{ position: relative; left: 50%; margin-left: -8px; margin-bottom: 15px;}
+
+@-webkit-keyframes animated-mouse {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+     opacity: 0;
+    -webkit-transform: translateY(6px);
+    -ms-transform: translateY(6px);
+    transform: translateY(6px);
+  }
+}
+@-webkit-keyframes mouse-scroll {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  } 
+}
+@keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+

@@ -1,0 +1,258 @@
+@import url(loyica-home-responsive.css);
+
+@media(max-width:1024px){
+    body{
+    overflow: visible!important;
+    text-align:center
+}
+.item .content-flex >div.child {
+    flex: none;
+    display: inline-block;
+    width: 32%;
+    vertical-align: top;
+}
+.robust2 .mb-show{display: inline-block!important;}
+.robust2 .aa, .robust2 .bb, .robust2 .cc, .robust2 .dd,
+ .forms2 .aa, .forms2 .bb, .forms2 .cc,.forms2 .dd,
+ .workflows2 .aa, .workflows2 .bb, .workflows2 .cc /*.workflows2 .dd, .workflows2 .ee */{
+    display: none!important;
+}
+.my-paroller{ transform: none!important;}
+.pg-pro-crm .item1 P{
+    font-size: 16px!important;
+}
+#main h2{
+    font-size: 26px;
+}
+#main p{
+    font-size: 18px;
+    margin: 0
+}
+.pg-pro-crm{
+    width: 100%;
+}
+.pg-pro-crm .cn {
+    padding-left: 0;
+    display: block;
+    background-size: 0, cover;
+    align-items: stretch;
+    position: relative;
+    flex: none!important;
+    width: 100%;
+}
+.pg-pro-crm .item1{
+    display: block;
+}
+.pg-pro-crm .item1 .child:first-child{
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    flex: none!important;
+    flex-direction: inherit;
+    justify-content: center;
+    padding: 200px 100px;
+}
+.pg-pro-crm .item1 {
+    background-size: 0, cover;
+}
+.pg-pro-crm .item1 h1 {
+    font-size: 36px;
+}
+.pg-pro-crm .item1 h1{
+    font-size: 40px;
+}
+.pg-pro-crm .item1 h2{
+    font-size: 26px
+}
+.pg-pro-crm .item1 P {
+    line-height: 1.5
+}
+.pg-pro-crm .item1 h2, .pg-pro-crm .item1 p{
+    max-width: inherit;
+}
+header h2{
+    padding:30px
+}
+header p{
+    padding:0 30px;
+}
+#section-forms header{
+    padding-bottom: 30px;
+}
+#section-crm-form .child{
+    margin: 30px 0 0;
+}
+.three-boxes {
+    justify-content: space-between;
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+.three-boxes > DIV {
+    flex-basis: inherit;
+    background: #fff;
+    transition: 0.5s all;
+    padding: 30px 20px;
+    text-align: center;
+    width: 30.33%;
+    display: inline-block;
+    vertical-align: top;
+}
+.col-md-8, .pg-pro-crm .item1 h2, .pg-pro-crm .item1 p, .col-md-5, .col-md-3, .col-md-2, .col-md-6{
+    width: 100%;
+    max-width: 100%;
+    flex:none!important;
+}
+.forms2 .aa,.forms2 .bb,.forms2 .cc, .forms2 .dd, .robust2 .dd, .robust2 .cc, .robust2 .bb, .robust2 .aa{
+    position: relative;
+}
+
+.pg-pro-crm .cn{
+    padding-left:0
+}
+.pg-pro-crm .item1 .child:first-child{
+    width: 100%;
+    display: block;
+    flex:none!important;
+    margin: 0;
+}
+.pg-pro-crm .item1 h2, .pg-pro-crm .item1 p{
+    max-width: inherit;
+}
+.pg-pro-crm .item2{
+    max-height:15px;
+    visibility: hidden;
+}
+.item .content-flex {
+    display: block;
+    flex-flow: inherit;
+    flex: none!important;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center
+}
+.forms2 .aa,.forms2 .bb,.forms2 .cc, .forms2 .dd, .robust2 .dd, .robust2 .cc, .robust2 .bb, .robust2 .aa{
+    position: relative;
+}
+.item .robust2 img{
+    opacity:1;
+}
+.col-md-8{
+    max-width: 100%;
+    width: 100%;
+    flex: none!important;
+    text-align: center
+}
+
+.item-clients h4,.item-clients h2, .item-clients h5, .item-clients p,
+.item-trading h4,.item-trading h2, .item-trading h5, .item-trading p
+{
+    text-align: center;
+    max-width: 100%;
+    width: 100%;
+}
+#section-graphs header {
+    text-align: center;
+    padding: 70px 0px 0px;
+}
+.pg-pro-crm .child{
+    padding-left:20px;
+    padding-right:20px;
+}
+.item-clients .child>child{
+    display: none;
+}
+.item-trading .child{
+    width: 100%;
+    flex:none;
+    max-width: 100%;
+}
+.item-trading .child.col-md-6 img{
+    transform: translate(-100px)!important;
+}
+.item-graphs P{
+    margin: 0;
+    padding:0 30px
+}
+.three-boxes {
+    justify-content: center;
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+.col-md-4{
+    width: 100%;
+    max-width: 100%;
+    flex: none!important;
+}
+.crm-form h2, .item-trading h2, .item-clients h2, header h2, .crm-form P{
+    text-align: center
+}
+.crm-form {
+    padding: 60px 0px 1px;
+}
+.footer .item6 {
+    margin-left: 0;
+    display: block;
+}
+.workflows2{
+    min-height:inherit!important ;
+}
+.crm-form .child:nth-child(2) h4, .item h4{
+    margin-top:30px;
+}
+#section-trading .item h4{
+    margin-top:0!important
+}
+}
+@media(max-width:668px){
+    .item-graphs img{
+        display: none!important
+    }
+    .item-graphs {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    #section-trading .child.col-md-6 img{
+        transform: translateX(-15%)!important;
+        width: 150%
+    }
+    .item-clients{
+        display: block;
+    }
+    .item-clients .child img{
+        transform: translateX(-5%)!important;
+        width: 150%
+    }
+    .pg-pro-crm .item1 .child:first-child{
+        padding: 100px 30px;
+    }
+    SECTION.spacer{
+        display: none;
+    }
+    .my-paroller{ transform: none!important; width: 100%;}
+    .robust2.col-md-6 img, .forms2.col-md-5 img{ width: 100% }
+    .workflows2.col-md-6 img{ width: auto!important;    height: 350px }
+    .workflows2.col-md-6 .dd{
+        position: static;
+        top: inherit;
+        left: inherit;
+        margin: 30px 0;
+    }
+    .item .content-flex >div.child{  width: 100%!important;}
+    #section-robust  header, #section-forms header,#section-workflows header, #section-clients header,  #section-graphs header,  #section-trading header,  #section-other header, #section-integration header { text-align: center; padding: 70px 0px 20px; }
+    .three-boxes > DIV {
+        flex-basis: inherit;
+        background: #fff;
+        transition: 0.5s all;
+        padding: 30px 20px;
+        text-align: center;
+        width: 100%;
+        display: block;
+        vertical-align: top;
+    }
+}
+.robust2 .mb-show{display: none!important;}

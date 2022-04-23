@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
+
+	<!-- Bootstrap CSS -->
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+
+	<!-- Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700" rel="stylesheet">
+	<link href="fontawesome-free-5.0.2/css/fontawesome-all.css" rel="stylesheet" type="text/css">
+
+	<!-- CSS Frameworkds -->
+	<link href="css/hover.css" rel="stylesheet" type="text/css">
+	<link href="css/aos.css" rel="stylesheet" type="text/css">
+	<link href="css/animate.css" rel="stylesheet" type="text/css">
+
+	<!-- Other CSS -->
+	<link href="css/animation-home.css" rel="stylesheet" type="text/css">
+	<link href="css/menu.css" rel="stylesheet" type="text/css">
+	<link href="css/search2.css" rel="stylesheet" type="text/css">
+	<link href="css/scrollify.css" rel="stylesheet" type="text/css">
+
+	<!--Custom CSS-->
+	<link href="css/loyica-main.css" rel="stylesheet" type="text/css">
+	<!--<link href="css/loyica-contact.css" rel="stylesheet" type="text/css">-->
+	<link rel="stylesheet" type="text/css" href="css/fs-form-component.css" />
+	<link href="css/loyica-startproject-responsive.css" rel="stylesheet" type="text/css">
+	<script src="js/modernizr.custom.js"></script>
+
+
+	<title>Start a Project</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117949014-1"></script> <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-117949014-1');</script>
+</head>
+
+<body>
+	<!--  Sidebar fixed-->
+	<div class="sidetextmenu">
+		<h6>Start a project</h6>
+	</div>
+	<div class="container cn-contact">
+
+		<div class="fs-form-wrap rhs" id="fs-form-wrap" style="max-width: none; ">
+
+			<form id="cn3" class="fs-form fs-form-full" autocomplete="off" data-id="5ad44eac8f5c5a29315b0350">
+
+
+				Hello!
+				<input name="company_name" placeholder="Company name " type="text"> is looking for
+				<select name="service" id="select">
+
+
+
+					<option selected disabled>Services</option>
+					<option value="Bespoke Development" class="sml-font1">Bespoke Development</option>
+					<option value="User Oriented Designs " class="sml-font1">User Oriented Designs </option>
+					<option value="Development" class="sml-font1">Development</option>
+					<option value="Digital Marketing " class="sml-font1">Digital Marketing </option>
+					<option value="Animation" class="sml-font1">Animation</option>
+					<option value="Branding" class="sml-font1">Branding</option>
+					<option value="Other Service">Other Service</option>
+				</select>
+				for their
+
+				<select name="product" id="select2">
+					<option selected disabled>Product</option>
+					<option value="Website" class="sml-font1">Website</option>
+					<option value="Mobile App" class="sml-font1">Mobile App</option>
+					<option value="Desktop App" class="sml-font1">Desktop App</option>
+					<option value="Product" class="sml-font1">Product</option>
+
+				</select>
+				<br>
+				<br> We’d love to schedule a call and chat about the scope of our project.
+				<br> You can email us at
+				<input name="email" placeholder="your email" type="email">
+				<br>
+				<br> Sincerely,
+
+				<br>
+				<input name="name" placeholder="your name" type="text" class="ml-0">
+				<input name="message" type="hidden">
+				<br>
+				<br>
+
+				<!--
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" checked style="margin-top: 10px;">
+    <label class="form-check-label" for="exampleCheck1"></label>
+  </div> 
+   
+-->
+				<!--<div  class="form-check mb-4">
+    
+ <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1">
+
+    <label for="styled-checkbox-1" style="margin-left: 0px;"><span style="margin-top: -6px;">Oh! And yeah! Our budget is much higher than <strong style="display: inline">$5,000</strong> :)</span></label>
+  </div>-->
+
+
+
+				<div class="form-group">
+					<button type="submit" class="btn btn-warning">SEND MESSAGE</button>
+				</div>
+
+				<!-- /fs-fields -->
+				<!--<button class="fs-submit btn btn-warning hvr-float-shadow" type="submit">Send answers</button>-->
+			</form>
+			<!-- /fs-form -->
+		</div>
+		<!-- /fs-form-wrap -->
+
+
+	</div>
+	<!-- /container -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script src="js/classie.js"></script>
+	<script src="js/fullscreenForm.js"></script>
+	<script src="js/forms.js"></script>
+	<script>
+		(function () {
+			var formWrap = document.getElementById('fs-form-wrap');
+
+			[].slice.call(document.querySelectorAll('select.cs-select')).forEach(function (el) {
+				new SelectFx(el, {
+					stickyPlaceholder: false,
+					onChange: function (val) {
+						document.querySelector('span.cs-placeholder').style.backgroundColor = val;
+					}
+				});
+			});
+
+			$('input,select').change(function () {
+				var formData = $('#cn3').serializeObject();
+				var gf = function (n) { return (formData[n] || ''); };
+
+				var val = 'Hello! ' + gf('company_name') + ' is looking for ' + gf('service') + ' for their ' + gf('product') + '.'
+					+ "\nWe'd love to schedule a call and chat about the scope of our project."
+					+ "\nYou can email us at " + gf('email') + ' .'
+					+ "\n\nSincerely,\n\n" + gf('name');
+
+				$('input[name="message"]').val(val);
+			})
+
+			/*new FForm(formWrap, {
+				onReview: function () {
+					classie.add(document.body, 'overview'); // for demo purposes only
+				}
+			});*/
+		})();
+	</script>
+</body>
+
+</html>

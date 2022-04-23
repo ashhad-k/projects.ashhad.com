@@ -1,0 +1,115 @@
+.fw-500{ font-weight: 500}
+.fw-600{ font-weight: 600}
+.fw-700{ font-weight: 700}
+.fw-800{ font-weight: 800}
+
+
+.faqs-fold1 {
+	text-align: center;
+	background: url(../img/bg_services_header.jpg) bottom no-repeat;
+	background-size: cover;
+	padding-top: 050px;
+}
+.faqs-fold1 INPUT {
+	box-shadow: 0px 1px 0px 0px rgba(142, 142, 142, 0.18);
+	background: url(../img/icon-faq-search.png) no-repeat #fff;
+	background-position: right 45px center;
+	border: 0px;
+	border-radius: 60px;
+	padding: 25px 40px;
+}
+.faqs-fold1 .faq-most-search {
+}
+.faqs-fold1 .faq-most-search h6 {
+	color: #3c636f;
+	text-transform: capitalize;
+	font-weight: 600
+}
+.faqs-fold1 a.badge-orange {
+box-sizing: border-box;
+vertical-align: middle;
+color: #fff;
+font-weight: 600;
+font-size: 16px;
+background: #ea7e3c;
+	padding: 15px 30px;
+	
+}
+.faqs-fold1 a.badge-orange{ text-decoration: none;}
+.faqs-fold1 a.badge-orange:hover{ background: #312366}
+
+/*bottom 3 boxes*/
+.faqs-fold1 .faqs-hdr-btm{   justify-content:center; border-bottom: 1px solid #d8e7ec; margin: 0 auto!important}
+.faqs-fold1 .faqs-hdr-btm .col-md-4{ background: #fff; padding: 20px 30px; text-align: left}
+.faqs-fold1 .faqs-hdr-btm .col-md-4:nth-child(2){ border-left: 1px solid #d8e7ec;border-right: 1px solid #d8e7ec;}
+.faqs-fold1 .faqs-hdr-btm .media-body{ color:#312366; padding-left: 20px; font-size: 18px; font-weight: 400;}
+.faqs-fold1 .faqs-hdr-btm h6{ color:#312366;text-transform: uppercase; font-size: 18px}
+.faqs-fold1 .faqs-hdr-btm a{color:#312366;}
+
+/* Fold 2 FAQS*/
+.faqs-fold2-lhs{}
+.faqs-fold2-lhs UL LI{ font-size: 20px; font-weight: 800; padding: 10px 20px;}
+.faqs-fold2-lhs UL LI a{color:#5c5c5c}
+.faqs-fold2-lhs UL LI a:hover{color:#e26011}
+.faqs-fold2-lhs UL LI a.active{color:#312366}
+
+.faqs-fold2-lhs .card {
+	background: #e9f7fd;
+	padding: 20px 10px;
+	color: #5c5c5c;
+}
+.faqs-fold2-lhs .card h4 {
+	font-size: 25px;
+	font-weight: 600
+}
+.faqs-fold2-lhs P{
+	font-size: 20px;
+	font-weight: 400;
+	
+}
+.faqs-fold2-lhs a.text-info { color:#3da2ce; font-size: 20px;font-weight: 500;}
+.faqs-fold2-rhs{ font-size:18px; line-height: 2rem}
+.faqs-fold2-rhs #accordion{}
+.faqs-fold2-rhs #accordion .card{ font-size: 20px; font-weight: 400; margin-bottom: 15px;}
+
+
+.faqs-fold2-rhs #accordion .card-header{ background: #e4f2f7; border: 0px; border-radius: 0px; padding:0;}
+.faqs-fold2-rhs #accordion .card-header:hover{ background: #d7e4e9; transition:0.5s;}
+
+.faqs-fold2-rhs #accordion .card-header a{ color:#5c5c5c; display: block; padding: 1.5rem 1.75rem; text-decoration: none;}
+.faqs-fold2-rhs #accordion .card-header.active{ background: #ffeee4!important;}
+.faqs-fold2-rhs #accordion .card-header.active a{ color:#ea7e3c;  font-weight: 800;}
+
+/* Tools Modal*/
+#toolsModal{ font-weight: 600;}
+#toolsModal .modal-lg{ max-width: 1500px!important}
+#toolsModal .modal-content{ border-radius: 0px;}
+
+
+#toolsModal .modal-header{ border-bottom: 0px;}
+#toolsModal .modal-header .modal-title{ font-size: 22px; color:#213156;}
+
+#toolsModal .modal-body .one { text-align:left}
+#toolsModal .modal-body .one .text-muted{ font-weight:800; margin-top: 15px; display: inline-block; color:#fff!important;}
+#toolsModal .modal-body .one  .btn{ border:0px; margin-bottom:15px; padding: 15px 18px;}
+#toolsModal .modal-body .one  .btn:nth-child(1){ background: #7746a1;}
+#toolsModal .modal-body .one  .btn:nth-child(2){ background: #54bfc0;}
+#toolsModal .modal-body .one  .btn:nth-child(3){ background: #a758b5;}
+#toolsModal .modal-body .one  .btn:nth-child(4){ background: #8277ba;}
+
+#toolsModal .modal-body .two{ padding-right: 80px;}
+
+#toolsModal .modal-body .three{}
+#toolsModal .modal-body .three label{ font-size: 18px;}
+#toolsModal .modal-body .three .custom-select{ font-size: 16px; height: calc(2.85rem + 2px); color: #5c5c5c; border-radius: 2px; border-color: #e7e7e7}
+#toolsModal .modal-body .three .rangeslider{}
+#toolsModal .modal-body .three .text-muted{ color: rgba(92, 92, 92, 0.6);}
+
+
+#toolsModal .tools-footer{ background: #f9f9f9; padding: 40px; justify-content: flex-start; border-top:1px solid #e8e8e8}
+#toolsModal .tools-footer h6{ color: #213156; font-weight: 700; text-transform: none;}
+#toolsModal .tools-footer INPUT{ border: 0px; color: #463f63; font-size: 16px; border-radius: 0px;}
+#toolsModal .tools-footer .btn-orange{ background: #d75638; border-radius: 0px;}
+
+
+

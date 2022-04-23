@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<!--Custom CSS-->
+<link href="css/custom.css" rel="stylesheet" type="text/css">
+<link href="css/responsive.css" rel="stylesheet" type="text/css">
+
+<!--Google Fonts-->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700" rel="stylesheet">
+
+<!--Font Awesome-->
+<link href="fontawesome-free-5.0.2/css/fontawesome-all.css" rel="stylesheet" type="text/css">
+<!--Hover CSS-->
+<link href="css/hover.css" rel="stylesheet" type="text/css">
+<!--AOS CSS-->
+<link rel="stylesheet" href="css/aos.css" />
+<!--Animate CSS-->
+<link rel="stylesheet" href="css/animate.css" />
+<title>Monitoring - I.T Module</title>
+</head>
+<body class="page-monitoring">
+<div class="button1" tabindex="0"  id="topbtn"><img src="img/icons/30x30-burger.png" width="30" height="30" alt=""/></div> 
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn">&times;</a>
+  
+   <a href="index.html"><i class="icon48-dashboard"></i> Dashboard</a> 
+   <a href="monitoring.html" class="active"> <i class="icon48-monitoring"></i> Monitoring</a> 
+   <a href="control-panel.html"> <i class="icon48-cp "></i> Control Panel</a> 
+   <a href="billing.html"><i class="icon48-billing "></i> Billing</a> 
+   <a href="support.html"><i class="icon48-support"></i>Support</a>
+   <hr>
+    <div class="search-box">
+   
+    <form id="searchForm" action="#" role="search">
+     <i><img src="img/icons/search.png" width="30" height="30" alt=""/></i>
+      <input type="search" placeholder="What are you looking for..." class="form-control">
+    </form>
+  </div>
+  <hr>
+   <a href="#"> Logout</a>
+
+</div>
+<!-- Search Box-->
+<div id="main">
+<div class="top1">
+  <div class="search-box">
+    <button class="dismiss"><i class="far fa-times-circle"></i></button>
+    <form id="searchForm" action="#" role="search">
+      <input type="search" placeholder="What are you looking for..." class="form-control">
+    </form>
+  </div>
+  <div class="brand">  <a href="index.html" ><img src="img/logo/brand-48x48.png" width="48" height="48" alt="Profintech"/><br>
+    IT</a></div>
+  <div class="grow"> <a href="index.html"><i class="icon48-dashboard"></i> Dashboard</a> <a href="monitoring.html" class="active"> <i class="icon48-monitoring"></i> Monitoring</a> <a href="control-panel.html"> <i class="icon48-cp "></i> Control Panel</a> <a href="billing.html"><i class="icon48-billing "></i> Billing</a> <a href="support.html"><i class="icon48-support"></i>Support</a> 
+   
+  </div>
+  <!--/grow -->
+  <div class="rhs">
+    <div class="child"> <a href="#" id="search" data-toggle="tooltip" data-placement="bottom" title="Search"><img src="img/icons/search.png" width="30" height="30" alt=""/></a></div>
+    <div class="child">
+      <div class="dropdown show"> <a id="dd-notifications" data-toggle="dropdown"> <img src="img/icons/notifications.png" width="30" height="30" alt=""/></a>
+        <ul  class="dropdown-menu  dropdown-menu-right">
+          <li><a rel="nofollow" href="#" class="dropdown-item">
+            <div class="notification">
+              <div class="notification-content"><i class="fa fa-envelope bg-green"></i>You have 6 new messages </div>
+              <div class="notification-time"><small>4 minutes ago</small></div>
+            </div>
+            </a></li>
+          <li><a rel="nofollow" href="#" class="dropdown-item">
+            <div class="notification">
+              <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>You have 2 followers</div>
+              <div class="notification-time"><small>4 minutes ago</small></div>
+            </div>
+            </a></li>
+          <li><a rel="nofollow" href="#" class="dropdown-item">
+            <div class="notification">
+              <div class="notification-content"><i class="fa fa-upload bg-orange"></i>Server Rebooted</div>
+              <div class="notification-time"><small>4 minutes ago</small></div>
+            </div>
+            </a></li>
+          <li><a rel="nofollow" href="#" class="dropdown-item">
+            <div class="notification">
+              <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>You have 2 followers</div>
+              <div class="notification-time"><small>10 minutes ago</small></div>
+            </div>
+            </a></li>
+          <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>view all notifications </strong></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="child"> <a href="#" data-toggle="tooltip" data-placement="bottom" title="Logout"><img src="img/icons/sqaures.png" width="30" height="30" alt=""/></a> </div>
+  </div>
+</div>
+<!--/top1-->
+<div class="head2">
+  <div class="child">
+    <h1>Monitoring</h1>
+    <small>Some text will be placed over here regarding monitoring ... </small> </div>
+  <!--/-->
+  <div class="child">
+    <div class="cn-labels"> <span class="text-red">devices 27</span> <span class="text-green">sensors 5</span> <span class="text-yellow">alarms 2</span> </div>
+  </div>
+  <!--/-->
+  <div class="child">
+    <ul class="nav nav-tabs" id="pg-mntr-tabs">
+      <li class="nav-item"> <a class="nav-link active" id="pg-mntr-one-tab" data-toggle="tab" href="#pg-mntr-one" >DEVICES</a> </li>
+      <li class="nav-item"> <a class="nav-link" id="pg-mntr-two-tab" data-toggle="tab" href="#pg-mntr-one" >SENSORS</a> </li>
+      <li class="nav-item"> <a class="nav-link" id="pg-mntr-three-tab" data-toggle="tab" href="#pg-mntr-one" >ALARMS</a> </li>
+      <li class="nav-item"> <a class="nav-link" id="pg-mntr-four-tab" data-toggle="tab" href="#pg-mntr-four" >MAPS</a> </li>
+    </ul>
+  </div>
+  <div class="child">
+    <div class="dropdown show"> <a class="btn btn-lg dropdown-toggle btn-orange" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" > ADD GROUP </a>
+      <div class="dropdown-menu  dropdown-menu-right"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a> </div>
+    </div>
+  </div>
+</div>
+<!--/head2-->
+
+
+
+  <div class="tab-content one-row" id="pg-mntr-contents">
+    <div class="tab-pane fade show active" id="pg-mntr-one">
+     
+       <div class="cn-head-slim cn-ticker">
+  <div class="grow">
+    <input type="search" placeholder="Search here..." class="search-field" >
+  </div>
+  <div class="child">
+    <div class="btn-group">
+      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> All Devices </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        <button class="dropdown-item" type="button">All Devices</button>
+        <button class="dropdown-item" type="button">All Sensors</button>
+        <button class="dropdown-item" type="button">All Alarms</button>
+      </div>
+    </div>
+  </div>
+  <div class="child"><a href="#"><i class="fas fa-search"></i> Search</a></div>
+</div>
+<!--/containre-ticker-->  <section>
+      <div class="table-responsive">
+        <table class="table table-dark table-bordered table-hover table-striped table-sm">
+          <tbody>
+            <tr>
+              <th>Device Name</th>
+              <th>Sensors</th>
+              <th>Status</th>
+              <th>&nbsp;</th>
+            </tr>
+            <tr data-toggle="collapse" data-target="#demo1" class="accordion-toggle" id="demo-img1">
+              <td><i class="fas fa-desktop text-red"></i> Profintech</td>
+              <td><span class="badge1"> <i class="fas fa-check text-green2"></i> 4 SENSORS</span></td>
+              <td class="text-red">DISCONNECTED</td>
+              <td><a href="#" > <img src="img/icons/plus-30x30.png" width="30" height="30" alt=""/> <img src="img/icons/minus-30x30.png" width="30" height="30" alt="" style="display: none"/> </a></td>
+            </tr>
+            <tr>
+              <td colspan="4" class="hiddenRow"><div class="accordian-body collapse" id="demo1">
+                  <div class="cn-toggle1-td">
+                    <h5>ECI MT4 Live </h5>
+                    <div> <span class="badge1"> <i class="fas fa-check text-green2"></i> 4 SENSORS</span> <span class="badge1"> <i class="fas fa-ban text-red"></i> 4 SENSORS</span> <span class="badge1"> <i class="fas fa-laptop text-yellow"></i> 4 SENSORS</span> <span class="badge1"> <i class="fas fa-bug text-red"></i> 4 SENSORS</span> </div>
+                  </div>
+                </div></td>
+            </tr>
+           <tr data-toggle="collapse" data-target="#demo2" class="accordion-toggle" id="demo-img2">
+              <td><i class="fas fa-desktop text-green2"></i> Profintech</td>
+              <td><span class="badge1"> <i class="fas fa-check text-green2"></i> 4 SENSORS</span></td>
+              <td class="text-green2">CONNECTED</td>
+              <td><a href="#" > <img src="img/icons/plus-30x30.png" width="30" height="30" alt=""/> <img src="img/icons/minus-30x30.png" width="30" height="30" alt="" style="display: none"/> </a></td>
+            </tr>
+              <tr>
+              <td colspan="4" class="hiddenRow"><div class="accordian-body collapse" id="demo2">
+                  <div class="cn-toggle1-td">
+                    <h5>ECI MT4 Live </h5>
+                    <div> <span class="badge1"> <i class="fas fa-check text-green2"></i> 4 SENSORS</span> <span class="badge1"> <i class="fas fa-ban text-red"></i> 4 SENSORS</span> <span class="badge1"> <i class="fas fa-laptop text-yellow"></i> 4 SENSORS</span> <span class="badge1"> <i class="fas fa-bug text-red"></i> 4 SENSORS</span> </div>
+                  </div>
+                </div></td>
+            </tr>
+            <tr>
+              <td>Sea Me V5</td>
+              <td>Working Good</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+        <footer>
+    <div><small>Showing 15 out of 27 devices</small></div>
+    <div><span class="badge1"><i class="fas fa-caret-left mr-4"></i> <i class="fas fa-caret-right"></i></span></div>
+  </footer>
+    </section>
+    </div>
+    <div class="tab-pane fade" id="pg-mntr-two" role="tabpanel">
+       <section>
+       2
+       </section>
+    </div>
+    <div class="tab-pane fade" id="pg-mntr-three">
+      <section>
+      3
+       </section>
+    </div><!--/3-->
+    
+     <div class="tab-pane fade" id="pg-mntr-four">
+      <section>
+<!--    /map img-->
+       </section>
+        <div class="cn-head-slim cn-ticker">
+ <div class="child">
+ <h4 class="text-white">MT4 SERVICE <small class="ml-4">231.47.116.32</small></h4>
+ 
+ </div>
+ <div class="grow"></div>
+  <div class="child">
+    <span class="mr-4"> Incident started: <strong>01:38 AM</strong></span>
+    <span><i class="far fa-calendar-alt"></i> Sunday, November 26</span>
+  </div>
+ 
+</div>
+<!--/containre-ticker--> 
+   
+   
+<div class="head1">
+  <div class="box1">
+    <div>
+     <small>CPU</small>
+      <p>Some text will be placed over here regarding monitoring ... </p>
+    </div>
+    <div><img src="img/chart-small.png" width="197" height="117" alt=""/> </div>
+  </div>
+  <!--/box-->
+ <div class="box1">
+    <div>
+     <small>MEMORY</small>
+      <p>Some text will be placed over here regarding monitoring ... </p>
+    </div>
+    <div><img src="img/chart-small.png" width="197" height="117" alt=""/> </div>
+  </div>
+ 
+  <!--/box-->
+  <div class="box1">
+    <div>
+     <small>DISC</small>
+      <p>Some text will be placed over here regarding monitoring ... </p>
+    </div>
+    <div><img src="img/chart-small.png" width="197" height="117" alt=""/> </div>
+  </div>
+  <!--/box-->
+  
+   <div class="box1">
+    <div>
+     <small>MT4 SERVER SERVICES</small>
+      <p>Some text will be placed over here regarding monitoring ... </p>
+    </div>
+    <div class="text-center">
+      <i class="fas fa-cog fa-spin fa-3x fa-fw text-red"></i>
+      <a href="#" class="btn btn-outline-danger">STOP SERVICE</a>
+     </div>
+  </div>
+  <!--/box-->
+  
+
+  
+</div>
+<!--/head-->
+    </div><!--/4-->
+  </div>
+   </div>
+
+
+
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS --> 
+<script type="text/javascript"  src="js/jquery.min.js"></script> 
+<script type="text/javascript"  src="js/popper.min.js"></script> 
+<script type="text/javascript"  src="js/bootstrap.min.js"></script> 
+<script type="text/javascript"  src="js/ticker.js"></script> 
+<script type="text/javascript"  src="js/aos.js"></script> 
+<script type="text/javascript"  src="js/custom.js"></script> 
+<script src="js/chart.js/Chart.bundle.min.js"></script> 
+<script src="js/charts-custom.js"></script> 
+<script>
+	  //AOS
+	AOS.init({
+      offset: 200,
+      duration: 300,
+      easing: 'ease-in-sine',
+      delay: 100,
+		  disable: 'mobile',
+    });
+		
+		AOS.refresh();
+
+      //setInterval(addItem, 300);
+	
+	   //toggle image
+	$("#demo-img1").click(function() {
+    $(this).find('img').toggle();
+	});   
+	//toggle image
+	$("#demo-img2").click(function() {
+    $(this).find('img').toggle();
+	});
+	   
+
+	   
+	</script>
+</body>
+</html>

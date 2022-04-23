@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Withdrawal History</title>
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=0" />
+
+<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+<link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/wtf-forms.css'>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900|Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+<link rel="stylesheet" href="assets/css/style.css">
+	
+</head>
+<body>
+
+<div class="d-flex mobileBlock align-items-stretch mainBg">
+	<!-- -----Left Panle--- -->
+	<div class="leftSidebar">
+		<ul>
+			<li><a href="index.html"><img src="assets/images/logo.png"><br>Merchant</a></li>
+			<li><a href="index.html"><i class="fa fa-clock-o" aria-hidden="true"></i><br>Dashboard</a></li>
+			<li><a href="countries.html"><i class="fa fa-clock-o" aria-hidden="true"></i><br>Country</a></li>
+			<li><a href="business-category.html"><i class="fa fa-clock-o" aria-hidden="true"></i><br>Business Category</a></li>
+			<li><a href="send-money.html"><i class="fa fa-clock-o" aria-hidden="true"></i><br>Send Money</a></li>
+			<li><a href="javascript:;"><i class="fa fa-clock-o" aria-hidden="true"></i><br>Transcations</a>
+				<div class="submenu">
+					<ul>
+						<li><a href="cc-history.html">C-C History</a></li>
+						<li><a href="cm-history.html">C-M History</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="refund-transcations.html"><i class="fa fa-clock-o" aria-hidden="true"></i><br>Refund Transcations</a></li>
+			<li><a href="events.html"><i class="fa fa-clock-o" aria-hidden="true"></i><br>Events</a></li>
+			<li><a href="sub-admin.html"><i class="fa fa-clock-o" aria-hidden="true"></i><br>SubAdmin</a></li>
+			<li><a href="finance-admin.html"><i class="fa fa-clock-o" aria-hidden="true"></i><br>Finance Admin</a></li>
+			<li class="active"><a href="withdrawals.html"><i class="fa fa-clock-o" aria-hidden="true"></i><br>withdrawals</a></li>
+
+			<li><a href="javascript:;"><i class="fa fa-clock-o" aria-hidden="true"></i><br>Audit Managment</a>
+				<div class="submenu">
+					<ul>
+						<li><a href="service-tex.html">Service Tax</a></li>
+						<li><a href="referral.html">Referral</a></li>
+						<li><a href="rpay-fee.html">Rpay Fees</a></li>
+						<li><a href="withdrawal-fees.html">Withdrawal Fees</a></li>
+						<li><a href="rpay-transaction-limits.html">Rpay Transaction Limits</a></li>
+						<li><a href="merchant-withdrawal-fees.html">Merchant Withdrawal Fees</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="merchant-withdrawals.html"><i class="fa fa-clock-o" aria-hidden="true"></i><br>Merchant Withdrawals</a></li>
+			<li><a href="bank-list.html"><i class="fa fa-clock-o" aria-hidden="true"></i><br>Bank List</a></li>
+			<li><a href="javascript:;"><i class="fa fa-clock-o" aria-hidden="true"></i><br>Request TopUp</a>
+				<div class="submenu">
+					<ul>
+						<li><a href="customer-request.html">Customer Request</a></li>
+						<li><a href="merchant-request.html">Merchant Request</a></li>
+						<li><a href="agent-request.html">Agent Request</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="admin-report.html"><i class="fa fa-clock-o" aria-hidden="true"></i><br>Admin Report</a></li>
+		</ul>
+	</div>
+	<!-- -----Left Panle--- -->
+
+	<!-- -----Center Area--- -->
+	
+	<div class="page-holder full d-flex flex-wrap">
+		<header class="header">
+			<div class="xsLogo">
+	            <a href="#">Logo</a>
+
+	            <div id="nav-icon4" class="">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+	        </div>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-7 col-sm-7 col-md-6 col-lg-6 col-xl-6">
+							<div class="topHead">
+								<h2>Withdrawal History</h2>
+							</div>
+						</div>
+						<div class="col-5 col-sm-5 col-md-6 col-lg-6 col-xl-6 text-right">
+							<div class="topClientInfo">
+								<ul>
+									<li>
+										<a id="notifications" href="javaScript:;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa fa-bell-o" aria-hidden="true"></i></a>
+							              <div aria-labelledby="notifications" class="dropdown-menu"><a href="javascript:;" class="dropdown-item">
+							                  <div class="d-flex align-items-center">
+							                    <div class="icon icon-sm bg-violet"><i class="fa fa-twitter"></i></div>
+							                    <div class="text ml-2">
+							                      <p class="mb-0">You have 2 followers</p>
+							                    </div>
+							                  </div></a><a href="javascript:;" class="dropdown-item"> 
+							                  <div class="d-flex align-items-center">
+							                    <div class="icon icon-sm bg-green"><i class="fa fa-envelope"></i></div>
+							                    <div class="text ml-2">
+							                      <p class="mb-0">You have 6 new messages</p>
+							                    </div>
+							                  </div></a><a href="javascript:;" class="dropdown-item">
+							                  <div class="d-flex align-items-center">
+							                    <div class="icon icon-sm bg-blue"><i class="fa fa-upload"></i></div>
+							                    <div class="text ml-2">
+							                      <p class="mb-0">Server rebooted</p>
+							                    </div>
+							                  </div></a><a href="javascript:;" class="dropdown-item">
+							                  <div class="d-flex align-items-center">
+							                    <div class="icon icon-sm bg-violet"><i class="fa fa-twitter"></i></div>
+							                    <div class="text ml-2">
+							                      <p class="mb-0">You have 2 followers</p>
+							                    </div>
+							                  </div></a>
+							                <div class="dropdown-divider"></div><a href="javascript:;" class="dropdown-item text-center"><small class="font-weight-bold headings-font-family text-uppercase">View all notifications</small></a>
+							              </div>
+									</li>
+									<li>
+										<a id="userInfo" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">
+						                <img src="assets/images/client.png" class="img-fluid rounded-circle my-border user-img">
+						                <p><strong>Steve Brown<i class="fa fa-caret-down"></i></strong>
+
+						                </p>
+						              </a>
+
+										<div aria-labelledby="userInfo" class="dropdown-menu">
+								                <a href="settings.html" class="dropdown-item">Settings</a>
+								                <a href="customers.html" class="dropdown-item">Customer</a>
+								                <a href="merchants.html" class="dropdown-item">Merchant</a>
+								                <a href="agents.html" class="dropdown-item">Agent</a>
+								                <a href="feeds.html" class="dropdown-item">Feed</a>
+								                <div class="dropdown-divider"></div><a href="javaScript:;" class="dropdown-item">Logout</a>
+								        </div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+		</header>
+
+
+		<div class="m50">
+
+			<div class="row">
+				<div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+
+						<!-- partial:index.partial.html -->
+							<label class="file mTop50">
+							  <input type="file" id="file" aria-label="File browser example">
+							  <span class="file-custom"></span>
+							</label>
+							<!-- partial -->
+
+				</div>
+				<div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+					<div class="topClndSrchBtn">
+						<ul>
+							<li><img src="assets/images/top-calander.png"></li>
+							<li><a href="javaScript:;" class="searchBtn">Search</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row padTop30">
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+					<div class="BgSearch">
+						<div class="topSearch">
+							<button type="submit" class="fa fa-search"></button>
+							<input type="text" placeholder="Type your keyword here" name="">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+					<div class="text-right">
+						<div class="sortMain">
+							Show
+							<select>
+								<option>05</option>
+								<option>10</option>
+								<option>15</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="tableSecMain table-responsive">
+				<table class="table table-striped table-borderless">
+					<thead>
+						<tr>
+							<th>S.No</th>
+							<th>Requested Date</th>
+							<th>Merchant Name</th>
+							<th>Reference ID</th>
+							<th>Requested Amount</th>
+							<th>Fee Amount</th>
+							<th>Total Amount</th>
+							<th>Status</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>01</td>
+							<td>10/12/2019 - 02:58 PM</td>
+							<td>Forum</td>
+							<td>WM0009</td>
+							<td>INR 10.00</td>
+							<td>INR 2.00</td>
+							<td>INR 15.00</td>
+							<td>Completed</td>
+							<td><a href="javascript:;" class="activeBtn">ACTIVE</a></td>
+						</tr>
+						<tr>
+							<td>01</td>
+							<td>10/12/2019 - 02:58 PM</td>
+							<td>Forum</td>
+							<td>WM0009</td>
+							<td>INR 10.00</td>
+							<td>INR 2.00</td>
+							<td>INR 15.00</td>
+							<td>Completed</td>
+							<td><a href="javascript:;" class="activeBtn">ACTIVE</a></td>
+						</tr>
+						<tr>
+							<td>01</td>
+							<td>10/12/2019 - 02:58 PM</td>
+							<td>Forum</td>
+							<td>WM0009</td>
+							<td>INR 10.00</td>
+							<td>INR 2.00</td>
+							<td>INR 15.00</td>
+							<td>Completed</td>
+							<td><a href="javascript:;" class="activeBtn">ACTIVE</a></td>
+						</tr>
+						<tr>
+							<td>01</td>
+							<td>10/12/2019 - 02:58 PM</td>
+							<td>Forum</td>
+							<td>WM0009</td>
+							<td>INR 10.00</td>
+							<td>INR 2.00</td>
+							<td>INR 15.00</td>
+							<td>Completed</td>
+							<td><a href="javascript:;" class="activeBtn">ACTIVE</a></td>
+						</tr>
+						<tr>
+							<td>01</td>
+							<td>10/12/2019 - 02:58 PM</td>
+							<td>Forum</td>
+							<td>WM0009</td>
+							<td>INR 10.00</td>
+							<td>INR 2.00</td>
+							<td>INR 15.00</td>
+							<td>Completed</td>
+							<td><a href="javascript:;" class="activeBtn">ACTIVE</a></td>
+						</tr>
+						<tr>
+							<td>01</td>
+							<td>10/12/2019 - 02:58 PM</td>
+							<td>Forum</td>
+							<td>WM0009</td>
+							<td>INR 10.00</td>
+							<td>INR 2.00</td>
+							<td>INR 15.00</td>
+							<td>Completed</td>
+							<td><a href="javascript:;" class="activeBtn">ACTIVE</a></td>
+						</tr>
+						<tr>
+							<td>01</td>
+							<td>10/12/2019 - 02:58 PM</td>
+							<td>Forum</td>
+							<td>WM0009</td>
+							<td>INR 10.00</td>
+							<td>INR 2.00</td>
+							<td>INR 15.00</td>
+							<td>Completed</td>
+							<td><a href="javascript:;" class="activeBtn">ACTIVE</a></td>
+						</tr>
+						<tr>
+							<td>01</td>
+							<td>10/12/2019 - 02:58 PM</td>
+							<td>Forum</td>
+							<td>WM0009</td>
+							<td>INR 10.00</td>
+							<td>INR 2.00</td>
+							<td>INR 15.00</td>
+							<td>Completed</td>
+							<td><a href="javascript:;" class="activeBtn">ACTIVE</a></td>
+						</tr>
+						<tr>
+							<td>01</td>
+							<td>10/12/2019 - 02:58 PM</td>
+							<td>Forum</td>
+							<td>WM0009</td>
+							<td>INR 10.00</td>
+							<td>INR 2.00</td>
+							<td>INR 15.00</td>
+							<td>Completed</td>
+							<td><a href="javascript:;" class="activeBtn">ACTIVE</a></td>
+						</tr>
+						<tr>
+							<td>01</td>
+							<td>10/12/2019 - 02:58 PM</td>
+							<td>Forum</td>
+							<td>WM0009</td>
+							<td>INR 10.00</td>
+							<td>INR 2.00</td>
+							<td>INR 15.00</td>
+							<td>Completed</td>
+							<td><a href="javascript:;" class="activeBtn">ACTIVE</a></td>
+						</tr>
+						<tr>
+							<td>01</td>
+							<td>10/12/2019 - 02:58 PM</td>
+							<td>Forum</td>
+							<td>WM0009</td>
+							<td>INR 10.00</td>
+							<td>INR 2.00</td>
+							<td>INR 15.00</td>
+							<td>Completed</td>
+							<td><a href="javascript:;" class="activeBtn">ACTIVE</a></td>
+						</tr>
+					</tbody>
+
+				</table>
+			</div>
+
+			<div class="row">
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+					<div class="showDrop">
+							Showing
+								<select>
+									<option>PDF</option>
+									<option>Excel</option>
+									<option>Word</option>
+								</select>
+								out of <strong>85 entries</strong>
+					</div>
+				</div>
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+					<ul class="pagi">
+						<li><a href="javascript:;"><i class="fa fa-caret-left" aria-hidden="true"></i></a></li>
+						<li><a href="javascript:;">1</a></li>
+						<li><a href="javascript:;" class="active">2</a></li>
+						<li><a href="javascript:;">3</a></li>
+						<li><a href="javascript:;"><i class="fa fa-caret-right" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<!-- -----Center Area--- -->
+
+</div>
+	
+
+
+
+
+
+
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/popper.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/scripts.js"></script>
+
+
+
+
+</body>
+</html>

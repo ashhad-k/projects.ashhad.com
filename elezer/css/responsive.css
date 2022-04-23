@@ -1,0 +1,126 @@
+@media(max-width:668px) {
+	
+	BODY{ text-align: center;}
+	P{ font-size:20px!important;}
+	
+	
+
+	.line1,
+	.line2,
+	.navbar.fixed-bottom,
+	#toggle2,
+	#motion{
+		display: none;
+	}
+	.nav-desktop{ display: none}
+	.nav-mobile { background: #1d3344; text-align: left; text-transform: uppercase;}
+	.nav-mobile .navbar-nav{ padding: 10px;}
+	.nav-mobile .navbar-nav a.active{ color: #ff5000!important;}
+	.nav-mobile .social{padding-top: 20px;}
+	.nav-mobile .social a{ color: #fff!important; font-size: 24px; padding-top: 20px; margin-right: 10px;}
+	.nav-mobile .social a:hover{ color: #ff5000!important;}
+	
+	.owl-carousel{ height: auto!important; overflow-y: scroll!important; float: left}
+	.owl-carousel{ height: auto!important; overflow-y: scroll!important; float: left}
+	.owl-carousel .owl-item{ height: auto!important; overflow: scroll!important;}
+	.owl-carousel .owl-item{ }
+	
+	#slide1{padding: 100px 10px 20px 10px; display: flex!important; align-items: center; flex-wrap: wrap; align-content: center;	justify-content: center; height: 100vh!important}
+	#slide1 IMG{ max-width: 80%; height: auto;}
+	#slide1 P{ width: 80%;}
+
+	#slide2{padding: 10px 10px 20px 10px;display: block;}
+
+	#slide2 h1{ font-size: 50px; text-align: center;}
+	#slide2 P{  text-align: center; padding: 20px 0px; margin: 0px;}
+	#slide2 IMG{ width: 80%; padding-bottom: 20px;}
+	
+	#slide3{padding: 100px 10px 20px 10px;display: block; }
+	#slide3 h1{ font-size: 50px; text-align: center;}
+	#slide3 P{  text-align: center; padding: 20px 0px; margin: 0px;}
+	#slide3 NAV{ display: block; text-align: center; margin: 0 auto;}
+	#slide3 nav a.active::after{ bottom: 0px; height: 2px;}
+	#slide3 DIV.rhs{ display: block; max-width: auto; height: auto;}
+	#slide3 .tab-content > .tab-pane{ margin: 0 auto;}
+	#slide3 DIV.rhs { margin-top: 40px}
+	#slide3 DIV.rhs .child{ width: auto;}
+	
+	#slide4{padding: 100px 10px 20px 10px;display: block; }
+	#slide4 h1{ font-size: 50px; text-align: center;}
+	#slide4 P{  text-align: center; padding: 20px 0px; margin: 0px;}
+	
+	#slide4 .tab-pane{ height: auto; width:auto; padding: 20px 20px 0px 20px}
+	#slide4 .custom-scroll{ margin-top: 20px; border: none;}
+	#slide4 .content .demo > div{ overflow: auto!important; max-height: none!important}
+	#slide4 .rhs IMG{ width: 40%;}
+	
+	#slide4 .scroll-wrapper > .scroll-content{ padding: 0px;}
+	#slide4 .tab-pane h4{ padding-top: 10px; text-align: center;}
+	#slide4 .tab-pane P{ margin-top: 20px;}
+	
+	#slide4 #grow-tabs.nav-tabs {  padding: 40px 0px 10px 10px;justify-content: center;}
+	#slide4 #grow-tabs.nav-tabs a.active { background: #ff5000;    color: white;    border-radius: 0px;}
+	
+	#slide5{padding: 100px 10px 20px 10px;display: block; margin-bottom: 0px;			background: url(../img/bg_consultancy.png) no-repeat #ff5000; background-size: cover;  }
+	#slide5 h1{ font-size: 50px; text-align: center; margin-bottom: 20px}
+	#slide5 P{  text-align: center; padding: 20px 0px; margin: 0px;}
+	
+	#slide6{padding: 100px 10px 20px 10px; display: block; margin: 0px; }
+	#slide6 h1{ font-size: 50px; text-align: center;}
+	#slide6 P{text-align: center; padding: 20px 0px; margin: 0px;}
+	
+	#slide6 .card-deck{ margin-top: 20px}
+	#slide6 .card-deck .card{ display: block; text-align: center; margin-top: 20px; margin-bottom: 20px;}
+	
+	.mob-footer{ 
+		display: block; 
+		padding: 20px 10px; 
+	text-transform:uppercase;
+	font-size:14px;
+	font-family: 'Montserrat', sans-serif;
+	color:#ccc;
+	background:#1d3344;
+	}
+	
+/*	div[id^='slide']{}*/
+	/* TEN */
+
+.hamburger .line{
+  width: 30px;
+  height: 3px;
+  background-color: #ecf0f1;
+  display: block;
+  margin: 6px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover{
+  cursor: pointer;
+}
+
+/* ONE */
+
+#hamburger-1.is-active .line:nth-child(2){
+  opacity: 0;
+}
+
+#hamburger-1.is-active .line:nth-child(1){
+  -webkit-transform: translateY(9px) rotate(45deg);
+  -ms-transform: translateY(9px) rotate(45deg);
+  -o-transform: translateY(9px) rotate(45deg);
+  transform: translateY(9px) rotate(45deg);
+}
+
+#hamburger-1.is-active .line:nth-child(3){
+  -webkit-transform: translateY(-9px) rotate(-45deg);
+  -ms-transform: translateY(-9px) rotate(-45deg);
+  -o-transform: translateY(-9px) rotate(-45deg);
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+	
+}
+
+

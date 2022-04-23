@@ -1,0 +1,513 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Dashboard - Leveras Client Portal</title>
+<meta name="description" content="Leveras - Risk Management">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" >
+<link rel="apple-touch-icon" href="apple-icon.png">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="assets/css/normalize.css">
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/scss/style.css">
+<link rel="stylesheet" href="assets/scss/custom.css">
+<link rel="stylesheet" href="assets/scss/responsive.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
+
+<link rel="stylesheet" href="assets/css/rm_responsive.css">
+</head>
+<body class="open">
+
+<!-- Left Panel -->
+
+<aside id="left-panel" class="left-panel">
+  <nav class="navbar navbar-expand-sm navbar-default">
+    <div class="navbar-header">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation"> <i class="fa fa-bars"></i> </button>
+      <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>
+      <div id="megamenu" class="header-menu"></div>
+    </div>
+    <div id="main-menu" class="main-menu collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"> <a href="index.html"> <i class="menu-icon mn-dashboard"></i>Dashboard </a> </li>
+        <li> <a href="accounts.html"> <i class="menu-icon mn-clients"></i>Accounts </a> </li>
+        <li> <a href="vault.html"> <i class="menu-icon mn-vault"></i>My Vault </a> </li>
+        <li> <a href="transaction.html"> <i class="menu-icon mn-transaction"></i>Transaction </a> </li>
+        <li> <a href="download.html"> <i class="menu-icon mn-download"></i>Download</a> </li>
+        <li> <a href="tools.html"> <i class="menu-icon mn-tools"></i>Tools</a> </li>
+        <li> <a href="support.html"> <i class="menu-icon mn-support"></i>Support </a> </li>
+        <li> <a href="doc.html"> <i class="menu-icon mn-doc"></i>Doc </a> </li>
+        <li class="cn-user user-area dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" > <img class="user-avatar rounded-circle" src="images/admin.jpg" alt="User Avatar"> </a>
+          <div class="user-menu dropdown-menu"> <a class="nav-link" href="profile.html"><i class="fa fa-user"></i> My Profile</a> <a class="nav-link" href="#"><i class="fa fa-bell"></i> Notifications </a> <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings</a> <a class="nav-link" href="#"><i class="fa fa-power-off"></i> Logout</a> </div>
+        </li>
+        <li class="cn-notification dropdown for-notification"> <a class="dropdown-toggle bg-transparent"  id="notification" data-toggle="dropdown"> <i class="menu-icon mn-bell"></i></a> <span class="count">5</span>
+          <div class="dropdown-menu" > <a class="dropdown-item" href="#">Link 1</a> <a class="dropdown-item" href="#">Link 2</a> <a class="dropdown-item" href="#">Link 3</a> </div>
+        </li>
+        <li> <a href="markets.html"> <i class="menu-icon mn-settings"></i></a> </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse --> 
+  </nav>
+</aside>
+<!-- /#left-panel --> 
+
+<!-- Left Panel --> 
+
+<!-- Right Panel -->
+
+<div id="right-panel" class="right-panel"> 
+  
+  <!-- Header-->
+  <header id="header" class="header">
+    <div class="header-menu no-gutters"> 
+      
+      <!--     /gsd1-->
+      <div class="col-sm-12 col-md-3 cn1"> <a href="#" class="btn btn-info">quick deposit</a> </div>
+      <div class="col-sm-12 col-md-6 cn2">
+        <section>My Vault</section>
+        <section><b>$</b><span>800,000</span></section>
+      </div>
+      <div class="col-sm-12 col-md-3 cn3"> <a href="#" class="btn btn-success">Open Live Account</a> <a href="#" class="btn btn-danger">Open Demo Account</a> </div>
+    </div>
+  </header>
+  <!-- /header --> 
+  <!-- Header-->
+  
+  <div class="content mt-3">
+    <div class="row">
+      <div class="col-lg-4 col-md-12">
+        <div class="card gn1">
+          <div class="card-header"> <strong class="card-title">some heading </strong></div>
+          <div class="card-body">    <table  class="table table-bordered table-responsive-lg tbl2 tbl-alert t1">
+              <tbody>
+                <tr>
+                  <td><span class="img-tbl1">
+                   <img src="images/icons/user1.png" alt=""/></span>
+                    <h4 class="text-success">$31,601.582</h4>
+                    <h5>Total Deposits</h5>
+                    <img src="images/graphs/graph-green.png" alt=""/></td>
+                  <td><span class="img-tbl1"><img src="images/icons/user1.png" alt=""/></span>
+                    <h4 class="text-danger">$31,601.58</h4>
+                    <h5>Total Withdrawl</h5>
+                    <img src="images/graphs/graph-red.png" alt=""/></td>
+                </tr>
+              
+                <tr>
+                  <th> Total Widthdrawals </th>
+                  <th><span class=" text-warning">1,000,000,000</span></th>
+                </tr>
+              </tbody>
+            </table> </div>
+        </div>
+        <!--/card--> 
+       
+        
+          <div class="card gn1">
+          <div class="card-header"> <strong class="card-title">some heading </strong></div>
+          <div class="card-body">    <table  class="table table-bordered table-responsive-lg tbl2 tbl-alert t1">
+              <tbody>
+                <tr>
+                  <td><span class="img-tbl1">
+                   <img src="images/icons/user1.png" alt=""/></span>
+                    <h4>1250LOTS</h4>
+                    <h5>Total Volume</h5>
+                    <img src="images/graphs/graph-green.png" alt=""/></td>
+                  <td><span class="img-tbl1"><img src="images/icons/user1.png" alt=""/></span>
+                    <h4 class="text-danger">$-31,601.58</h4>
+                    <h5>Closed P/L</h5>
+                    <img src="images/graphs/graph-red.png" alt=""/></td>
+                </tr>
+                 <tr>
+                  <td><span class="img-tbl1">
+                   <img src="images/icons/user1.png" alt=""/></span>
+                    <h4 class="text-success">EURUSD</h4>
+                    <h5>MOST TARDE SYM</h5>
+                    <img src="images/graphs/graph-green.png" alt=""/></td>
+                  <td><span class="img-tbl1"><img src="images/icons/user1.png" alt=""/></span>
+                    <h4 class="text-danger">$31,601.58</h4>
+                    <h5>Total Withdrawl</h5>
+                    <img src="images/graphs/graph-red.png" alt=""/></td>
+                </tr>
+              
+              
+              </tbody>
+            </table> </div>
+        </div>
+        <!--/card--> 
+        
+      </div>
+      <div class="col-lg-6 col-md-12">
+        <div class="card gn1">
+          <div class="card-header"> <strong class="card-title">some heading </strong></div>
+          <div class="card-body"> 
+          <div class="row">
+          	<div class="col-md-4 col-xs-12">
+          		  <div class="db-widget">
+          <header>EUR USD</header>
+          <section><img src="images/graphs/graph6.png" alt=""/></section>
+          	<footer>
+          	<div>
+          		<h4>3</h4>
+          		<small>Sell</small>
+				</div>	
+          	<div>
+          		<h4>3</h4>
+          		<small>Neutral</small>
+				</div>	
+          	<div>
+          		<h4>3</h4>
+          		<small>Buy</small>
+          	</div>
+          	
+          		
+          	</footer>
+          </div><!--/db-widget-->
+          
+          
+          	</div>
+          	<div class="col-md-4 col-xs-12">
+          		  <div class="db-widget">
+          <header>EUR USD</header>
+          <section><img src="images/graphs/graph6.png" alt=""/></section>
+          	<footer>
+          	<div>
+          		<h4>3</h4>
+          		<small>Sell</small>
+				</div>	
+          	<div>
+          		<h4>3</h4>
+          		<small>Neutral</small>
+				</div>	
+          	<div>
+          		<h4>3</h4>
+          		<small>Buy</small>
+          	</div>
+          	
+          		
+          	</footer>
+          </div><!--/db-widget-->
+          
+          
+          	</div>
+          	<div class="col-md-4 col-xs-12">
+          		  <div class="db-widget">
+          <header>EUR USD</header>
+          <section><img src="images/graphs/graph6.png" alt=""/></section>
+          	<footer>
+          	<div>
+          		<h4>3</h4>
+          		<small>Sell</small>
+				</div>	
+          	<div>
+          		<h4>3</h4>
+          		<small>Neutral</small>
+				</div>	
+          	<div>
+          		<h4>3</h4>
+          		<small>Buy</small>
+          	</div>
+          	
+          		
+          	</footer>
+          </div><!--/db-widget-->
+          
+          
+          	</div>
+          	<div class="col-md-4 col-xs-12">
+          		  <div class="db-widget">
+          <header>EUR USD</header>
+          <section><img src="images/graphs/graph6.png" alt=""/></section>
+          	<footer>
+          	<div>
+          		<h4>3</h4>
+          		<small>Sell</small>
+				</div>	
+          	<div>
+          		<h4>3</h4>
+          		<small>Neutral</small>
+				</div>	
+          	<div>
+          		<h4>3</h4>
+          		<small>Buy</small>
+          	</div>
+          	
+          		
+          	</footer>
+          </div><!--/db-widget-->
+          
+          
+          	</div>
+          	<div class="col-md-4 col-xs-12">
+          		  <div class="db-widget">
+          <header>EUR USD</header>
+          <section><img src="images/graphs/graph6.png" alt=""/></section>
+          	<footer>
+          	<div>
+          		<h4>3</h4>
+          		<small>Sell</small>
+				</div>	
+          	<div>
+          		<h4>3</h4>
+          		<small>Neutral</small>
+				</div>	
+          	<div>
+          		<h4>3</h4>
+          		<small>Buy</small>
+          	</div>
+          	
+          		
+          	</footer>
+          </div><!--/db-widget-->
+          
+          
+          	</div>
+          	<div class="col-md-4 col-xs-12">
+          		  <div class="db-widget">
+          <header>EUR USD</header>
+          <section><img src="images/graphs/graph6.png" alt=""/></section>
+          	<footer>
+          	<div>
+          		<h4>3</h4>
+          		<small>Sell</small>
+				</div>	
+          	<div>
+          		<h4>3</h4>
+          		<small>Neutral</small>
+				</div>	
+          	<div>
+          		<h4>3</h4>
+          		<small>Buy</small>
+          	</div>
+          	
+          		
+          	</footer>
+          </div><!--/db-widget-->
+          
+          
+          	</div>
+          </div><!--/row-->
+        
+          </div>
+        </div>
+        <!--/card--> 
+        
+      </div>
+      <div class="col-lg-2 col-md-12">
+        <div class="card gn1">
+          <div class="card-header"> <strong class="card-title">transfer Funds </strong></div>
+          <div class="card-body">
+            <div class="box-tf">
+              <header> <small>$</small>800,000</header>
+              <section>
+                <form>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">FROM</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">TO</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                  </div>
+                  <label for="exampleFormControlInput1">AMOUNT</label>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend"> <span class="input-group-text">$</span> </div>
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    <div class="input-group-append"> <span class="input-group-text">.00</span> </div>
+                  </div>
+                </form>
+                <a href="#" class="btn btn-primary btn-block btn-lg">send request</a> </section>
+            </div>
+            <!--/box-tf--> 
+            
+          </div>
+        </div>
+        <!--/card--></div>
+    </div>
+    <!--/row-->
+    
+    <div class="row">
+      <div class="col-lg-6 col-md-12">
+        <div class="card gn1">
+          <div class="card-header"> <strong class="card-title">most exposed NET exposure </strong> <span class="float-right"> </span> </div>
+          <div class="card-body">
+            <table class="table  table-responsive-lg table-hover tbl2">
+              <tbody>
+                <tr>
+                  <td>SYMBOLS</td>
+                  <td>NET LONG</td>
+                  <td>NET SHORT</td>
+                  <td>NET EXPOSURE</td>
+                  <td>FLOATING PNL</td>
+                  <td>PROFIT</td>
+                </tr>
+                <tr>
+                  <td class="symbol"><i class="fa fa-plus"></i> <span>AUDCAD </span><i class="fa  fa-caret-down text-danger"></i></td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>$87003303</td>
+                  <td>-7,943.55</td>
+                </tr>
+                <tr>
+                  <td class="symbol"><i class="fa fa-plus"></i> <span>AUDCAD </span> <i class="fa  fa-caret-up text-success"></i></td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>$87003303</td>
+                  <td>-7,943.55</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!--/7-->
+      <div class="col-lg-6 col-md-12">
+        <div class="card gn1">
+          <div class="card-header"> <strong class="card-title">Transactions </strong> </div>
+          <div class="card-body">
+            <table class="table  table-responsive-lg table-hover tbl2">
+              <tbody>
+                <tr>
+                  <td>DATA</td>
+                  <td>TYPE</td>
+                  <td>METHOD</td>
+                  <td>SOURCE ACC</td>
+                  <td>TARGET ACC</td>
+                  <td>REQ. ACC.</td>
+                  <td>APP. ACC.</td>
+                  <td>RESULT</td>
+                </tr>
+                <tr>
+                  <td class="symbol">2018-01-08</td>
+                  <td>Deposit</td>
+                  <td>Own</td>
+                  <td><strong>9082901</strong></td>
+                  <td>Vault USD</td>
+                  <td>$150</td>
+                  <td>$100</td>
+                  <td><span class="text-success">APPROVED</span></td>
+                </tr>
+                <tr>
+                  <td class="symbol">2018-01-08</td>
+                  <td>Deposit</td>
+                  <td>Own</td>
+                  <td><strong>9082901</strong></td>
+                  <td>Vault USD</td>
+                  <td>$150</td>
+                  <td>$100</td>
+                  <td><span class="text-danger">REJECTED</span></td>
+                </tr>
+                <tr>
+                  <td class="symbol">2018-01-08</td>
+                  <td>Deposit</td>
+                  <td>Own</td>
+                  <td><strong>9082901</strong></td>
+                  <td>Vault USD</td>
+                  <td>$150</td>
+                  <td>$100</td>
+                  <td><span class="text-success">APPROVED</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/row-->
+    
+    <div class="row">
+      <div class="col-lg-6 col-md-12">
+        <div class="card gn1">
+          <div class="card-header"> <strong class="card-title">ALERTS </strong> </div>
+          <div class="card-body">
+            <table  class="table table-bordered table-responsive-lg tbl1 tbl-alert">
+              <tbody>
+                <tr>
+                  <td><span class="img-tbl1"><img src="images/icons/user1.png" alt=""/></span>
+                    <h4>2</h4>
+                    <h5>account openings</h5></td>
+                  <td><span class="img-tbl1"><img src="images/icons/user1.png" alt=""/></span>
+                    <h4>6</h4>
+                    <h5>companies</h5></td>
+                  <td rowspan="2" class="tx3 bg-success"><h5>Margin Volumn</h5>
+                    <span>$ 10,800</span></td>
+                </tr>
+                <tr>
+                  <td><span class="img-tbl1"><img src="images/icons/user1.png" alt=""/></span>
+                    <h4>5</h4>
+                    <h5>Pending Widthdrawls</h5></td>
+                  <td><span class="img-tbl1"><img src="images/icons/user1.png" alt=""/></span>
+                    <h4>2</h4>
+                    <h5>Pending Posts</h5></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!--/7-->
+      <div class="col-lg-6 col-md-12">
+        <div class="card gn1">
+          <div class="card-header"> <strong class="card-title">WEEKLY ACTIVITY </strong> </div>
+          <div class="card-body">
+            <table  class="table table-bordered table-responsive-lg tbl1 tbl-weekly-activty">
+              <tbody>
+                <tr>
+                  <td rowspan="3"><img src="images/graphs/graph5.png" alt="" class="img-fluid"/></td>
+                  <td><h4 class="text-danger">24</h4>
+                    <small>Winning Trades</small></td>
+                </tr>
+                <tr>
+                  <td><h4 class="text-success">14</h4>
+                    <small>Loosing Trades</small></td>
+                </tr>
+                <tr>
+                  <td><h4 class="text-info">36</h4>
+                    <small>Total  Trades</small></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/row--> 
+    
+  </div>
+  <!-- .content --> 
+</div>
+<!-- /#right-panel --> 
+
+<!-- Right Panel --> 
+
+<!-- Modal -->
+<div class="modal fade" id="nav-summary1" tabindex="-1" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+      </div>
+      <div class="modal-body"> ... </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="assets/js/jquery.min.js"></script> 
+<script src="assets/js/popper.min.js"></script> 
+<script src="assets/js/plugins.js"></script> 
+<script src="assets/js/main.js"></script>
+</body>
+</html>

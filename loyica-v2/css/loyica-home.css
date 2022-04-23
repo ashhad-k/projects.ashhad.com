@@ -1,0 +1,324 @@
+
+
+/* 
+* ==========================================================
+*     Slide1  - moved to Main.css
+* ==========================================================
+*/
+
+/* 
+* ==========================================================
+*     Slide2 - Technology
+* ==========================================================
+*/
+
+.cn-tech{ display: flex; flex:auto; }
+.cn-tech .overlay{ 
+	display: none;
+	width: 50vw;	width: 50vw;
+	height: 100vh;
+	z-index: 0;
+	transition: 2s all; 
+
+	}
+.cn-tech > DIV{ position: relative; flex-direction: column; text-align: center; font-size: 22px; font-weight: 200; }
+/*.cn-tech > DIV:hover .overlay{display: block; position: absolute; left: 0px; top: 0px; opacity: 1; z-index: 10; transition: 2s all; }*/
+
+.cn-about2 DIV.rhs .child:after,
+.cn-tech > DIV:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: -moz-linear-gradient(-45deg, rgba(248,98,0,0.4) 0%, rgba(248,98,0,0) 60%, rgba(248,98,0,0) 00%);
+background: -webkit-linear-gradient(-45deg, rgba(248,98,0,0.4) 0%,rgba(248,98,0,0) 60%,rgba(248,98,0,0) 00%);
+background:          linear-gradient(135deg, rgba(248,98,0,0.4) 0%,rgba(248,98,0,0) 60%,rgba(248,98,0,0) 00%);
+	
+  transition: opacity 0.5s ease-out;
+  z-index: 2;
+  opacity: 0;
+}
+.cn-about2 DIV.rhs .child:hover:after,
+.cn-tech > DIV:hover:after {opacity: 1;}
+
+
+.cn-tech .btn{padding: 20px 55px; }
+
+.cn-tech .lhs{ flex-basis: calc(50% - 0px) ; background: #000; display: flex; align-items: center; justify-content: center;}
+.cn-tech .rhs{ flex-basis: calc(50% - 0px); background: #000; display: flex; align-items: center; justify-content: center; background: #000!important}
+
+.cn-tech .collapse{ z-index: 10; /* animation-delay: 6s;*/ }
+.cn-tech .collapse DIV{	}
+.cn-tech .collapse P{	}
+
+.cn-tech .frame{width: 352px; height: 120px; background: url(../img/bg_tech_h4.png) center no-repeat; position: relative; z-index: 10; cursor: pointer}
+.cn-tech h4{ font-size:40px; text-transform: uppercase; letter-spacing: 4px; padding-top: 40px; text-align: center;}
+.cn-tech .cn-iframe{ height: 75vh; width:calc(50vw - 35px); position: absolute; z-index: 0; border: 0px; overflow: hidden; opacity: 0.3}
+.cn-tech > DIV:hover .cn-iframe{opacity: 0.7; transition: 2s all;}
+
+/* sOLUTIONS*/
+.cn-sol1 .overlay{z-index: 1}
+.cn-sol1 .cn-iframe{ height: 80vh; width:calc(100vw - 35px); position: absolute; z-index: 0; border: 0px; overflow: hidden; opacity: 0.3}
+.cn-sol1 .frame{width: 750px;  background: url(../img/bg_tech_h4.png) top center no-repeat; position: relative; z-index: 10; cursor: pointer;text-align: center;}
+
+.cn-sol1 h4{ font-size:40px; text-transform: uppercase; letter-spacing: 4px; padding-top: 40px; text-align: center; margin-bottom: 60px;}
+.cn-sol1 h2{ font-size:30px; text-transform: uppercase; letter-spacing: 0px; font-weight: 300; }
+
+
+
+
+/* 
+* ==========================================================
+*     Slide3 - About
+* ==========================================================
+*/
+.cn-about{ display: flex; flex:auto; position: relative;}
+
+.cn-about .lhs{ flex-basis: calc(50% - 0px) ; background: #fff; display: flex;  justify-content: center; align-items:left; flex-direction: column; color: #121618; padding: 120px;}
+.cn-about .lhs H1{ font-size: 40px; font-weight: 200; letter-spacing: 1px;}
+.cn-about .lhs P{ font-size: 20px; line-height: 1.8; font-weight: 200;border-left: 4px solid #f86200; padding: 20px 0px 10px 30px; margin: 70px 0px; max-width: 430px;}
+
+.cn-about .rhs{ flex-basis: calc(50% - 0px); background: url(../img/bg_about.png) center left; background-size:cover ; display: flex; align-items: center; justify-content: center; position: relative;}
+.cn-about .rhs .orange-box{ position: absolute; top: 100px; right: 0px;}
+
+.cn-about .btn{ border: 0px; border-radius: 0px; padding: 20px 55px; background: #f86200; letter-spacing: 3px; font-size: 14px; color: #fff; text-transform: uppercase}
+
+.cn-about .cn4{ width: 1000px; height: 200px;  position: absolute; bottom: 0px; left: 50%; margin-left:-500px; overflow: hidden; z-index: 10;}
+.cn-about .cn4 .line1{width: 600px; height: 600px; border: 1px solid #f86200;  border-radius: 50%; margin: 30px auto; position: relative}
+
+.cn-about .cn4 .dotted1{width: 540px; height: 540px; border: 2px dotted #333; border-radius: 50%; margin: 30px auto; opacity: 0.2; -webkit-animation: rotation 60s infinite linear; }
+
+
+.cn-about .cn4 .line1 button.dots{ position: absolute; color: #333!important; font-weight: 500;font-size: 14px; ;letter-spacing: 3px; background: none; border: none; text-transform: uppercase; cursor: pointer; outline: none; transition: 0.5s all;}
+.cn-about .cn4 .line1 button.dots:after{ content: ""; position: absolute; width:10px; height: 10px; background:#f86200; border-radius: 50%;}
+.cn-about .cn4 .line1 button.dots.dot1{ top:110px; left: -50px; }
+.cn-about .cn4 .line1 button.dots.dot1:after{ right: -28px; top:8px}
+
+.cn-about .cn4 .line1 button.dots.dot2{ top:-35px; left: 50%; margin-left: -40px; }
+.cn-about .cn4 .line1 button.dots.dot2:after{ top: 29px; left:34px}
+
+.cn-about .cn4 .line1 button.dots.dot3{ top:110px; right: -60px; }
+.cn-about .cn4 .line1 button.dots.dot3:after{ left: -21px; top:8px}
+
+.cn-about .large-char{ position: absolute; top: 50%; left: 50%; z-index: 1;}
+.cn-about .large-char IMG{ margin-left: -50%; margin-top: -60%;}
+
+
+.large-char2.animated,
+.large-char1.animated,
+.large-char3.animated {
+ 	-webkit-animation-duration: 1s; */
+     animation-duration: 1s; 
+     -webkit-animation-fill-mode: both; 
+     animation-fill-mode: both; 
+ }
+
+.cn-about .cn4 .line1 button.active{ color:#f86200!important}
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(360deg);
+		}
+}
+
+
+
+/* 
+* ==========================================================
+*     Slide3A - About
+* ==========================================================
+*/
+.cn-about2{ display: flex; flex:auto; position: relative;}
+
+.cn-about2 .lhs{ flex-basis: calc(50% - 0px) ; background: #fff; display: flex;  justify-content: center; align-items:left; flex-direction: column; color: #121618; padding: 120px;}
+
+.cn-about2 .lhs h2{ font-size:45px; font-weight: 200;margin-top: 20px;  color:#5c5c5c; margin-bottom: 80px; line-height: 1.3}
+.cn-about2 .lhs h2 SPAN{ color:#ff6400;}
+.cn-about2 .lhs h4{ font-size:18px; text-transform: uppercase;  letter-spacing: 3px; font-weight: 200; margin-bottom: 30px; color: #5c5c5c; }
+
+.cn-about2 .lhs h5{ font-size:15px; text-transform: uppercase;  letter-spacing: 2px; font-weight: 400; color: #5c5c5c; margin-bottom: 20px; }
+.cn-about2 .lhs P{ font-size:20px; line-height: 1.5; color: #5c5c5c; margin-bottom: 30px; }
+
+
+.cn-about2 .rhs{ flex-basis: calc(50% - 0px); display: flex;  justify-content: center; position: relative;}
+
+
+.cn-about2 DIV.rhs{ align-self: stretch; display: flex; flex-wrap: wrap; max-width:100%; border-left: 1px solid #eaeaea;height: 100vh }
+.cn-about2 DIV.rhs .child{ width:50%;  min-width: 250px;  border-right: 1px solid #eaeaea; border-bottom: 1px solid #eaeaea; display: flex; flex-direction: column;align-items: center; justify-content: center; padding: 20px; text-align: center;  background: #fff; position: relative; flex-flow: row wrap; align-content: center}
+
+
+.cn-about2 .rhs h2,
+.cn-about2 .rhs h5,
+.cn-about2 .rhs P,
+.cn-about2 .rhs h2:after{ transition:0.25s ease-in; flex: 1 1 100%; }
+
+.cn-about2 .rhs h2{ font-size:40px; font-weight: 200;  color:#5c5c5c; }
+.cn-about2 .rhs h2 SPAN{ color:#ff6400;}
+.cn-about2 .rhs h2:after { display: none; content:"";  position: absolute; height: 2px; width: 25px; background: #ff6400; left: 50%; margin-left: -12px; margin-top: 10px;  }
+.cn-about2 .rhs h5{ position: absolute; bottom: 20px;}
+
+.cn-about2 .rhs h5{ font-size:15px; text-transform: uppercase;  letter-spacing: 2px; font-weight: 200; color: #aaa; }
+.cn-about2 .rhs P{ font-size:16px; line-height: 1.5; color: #5c5c5c; margin-bottom: 00px;padding: 0px 20px; visibility: hidden}
+
+
+.cn-about2 DIV.rhs .child:hover{ background:  #000; transition: 0.25s  }
+.cn-about2 DIV.rhs .child:hover h2 { color: #fff; transform: translateY(-20px); position: relative;}
+.cn-about2 DIV.rhs .child:hover h2:after { display: block;}
+.cn-about2 DIV.rhs .child:hover h5 { opacity: 0;}
+.cn-about2 DIV.rhs .child:hover P { display: block; transform: translateY(-10px); visibility: visible}
+
+
+
+/*
+* ==========================================================
+*     Slide4 -  Contact
+* ==========================================================
+*/
+.cn-contact{ display: flex; flex-basis: 100%; font-weight: 200; position: relative}
+.cn-contact a{ color: #fd6400; }
+.cn-contact  SMALL{font-size:14px; color:#fff; opacity: 0.50; padding-bottom: 0px; display: inline-block; font-weight: 200;}
+.cn-contact h1{ font-weight: 200; cursor: pointer;}
+
+.cn-contact .lhs{ flex-grow: 1;  display: flex; flex-direction: column; position: relative; z-index:1;}
+.cn-contact .lhs > DIV{ flex:1; display: flex; align-items: center; padding-left: 90px; padding-right: 90px;position: relative; z-index: 1; transition:0.5s all; }
+.cn-contact .lhs > DIV {}
+.cn-contact .lhs > DIV:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+    background: -moz-linear-gradient(-45deg, rgba(248,98,0,0.4) 0%, rgba(248,98,0,0) 60%, rgba(248,98,0,0) 00%);
+background: -webkit-linear-gradient(-45deg, rgba(248,98,0,0.4) 0%,rgba(248,98,0,0) 60%,rgba(248,98,0,0) 00%);
+background:          linear-gradient(135deg, rgba(248,98,0,0.4) 0%,rgba(248,98,0,0) 60%,rgba(248,98,0,0) 00%);
+
+  transition: opacity 0.5s ease-out;
+  z-index: -1;
+  opacity: 0;
+}
+.cn-contact .lhs > DIV:hover:after {opacity: 1;}
+.cn-contact .lhs > DIV a{ color: #fff!important}
+.cn-contact .lhs > DIV a:hover{ color: var(--colorMain)!important}
+
+.cn-contact .lhs .one{}
+.cn-contact .lhs .two{ border-top:1px solid #232323; border-bottom: 1px solid #232323}
+.cn-contact .lhs .three{}
+
+.cn-contact .rhs{ flex-basis: 564px; background-color: rgba(18, 22, 24, 0.75); padding: 60px 180px 60px 60px; display: flex;  flex-flow: row wrap; line-height: 1.8; position: relative; z-index: 1; align-content: space-between}
+.cn-contact .rhs > div{flex: 1 1 100%;}
+.cn-contact .rhs h2{font-size:27px; color:#fff; font-weight: 200; margin: 10px 0px;}
+.cn-contact .rhs a{ color:#919292;}
+.cn-contact .rhs a:hover{ color:#fd6400;}
+
+.cn-contact .rhs .quick-links SMALL{margin-bottom: 15px;}
+
+.cn-contact .rhs .email a{ color:#fd6400;}
+
+.cn-contact .rhs .social-links{ display: flex; justify-content: space-between; margin-top: 15px; margin-right: 100px;}
+.cn-contact .rhs .social-links a{ font-size: 22px;}
+
+.cn-contact .rhs .company-info { display: flex; flex-direction: column; align-self: flex-end}
+.cn-contact .rhs .company-info IMG{ width: 170px; opacity: 0.3; margin-bottom: 15px;}
+
+.cn-contact .rhs .orange-box{ position: absolute; bottom: 60px; right: 17px; vertical-align: middle; line-height: 70px; text-align: center; transition:0.5s all}
+.cn-contact .rhs .orange-box:hover{ opacity: 0.5;}
+.cn-contact .cn-iframe{ position: absolute; width:calc(100vw - 50px); height: 100vh; z-index: 0; opacity: 0.5; border: 0px; }
+
+/**/
+/* BG Line Container 4 Services*/ 
+
+.cn-ic1{ position: relative}
+.cn-ic1 IMG{transition: 0.25s ease; }
+.cn-ic1 .cr1,
+.cn-ic1 .cr2{width: 120px; height: 120px; border-radius: 50%; border: 2px solid #fd6400; display: inline-block; position: absolute;  top: 0px;opacity: 0.2; transition: 0.5s all;}
+.cn-ic1 .cr1{ left: 10px;}
+.cn-ic1 .cr2{ right: 10px;}
+
+.cn-contact .lhs > DIV:hover .cn-ic1 IMG,
+.cn-contact .lhs > DIV:hover .cn-ic1 .cr1,
+.cn-contact .lhs > DIV:hover .cn-ic1 .cr2{
+	-webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+	
+}
+.cn-contact .lhs > DIV:hover .cr1{left:40px; opacity: 0.10}
+.cn-contact .lhs > DIV:hover .cr2{right:40px; opacity: 0.10}
+
+/*.cn-contact .lhs > DIV IMG{ margin-right: 20px;}*/
+
+.bglc-ser{ 
+	height: 130px; position: absolute; 
+	opacity: 0.2;
+	z-index: 10;
+}
+
+.bglc-ser:before{
+	content: ""; width: 120px; height: 120px; border-radius: 50%; border: 2px solid red;  display: inline-block;
+	animation-name: before;
+    animation-duration: 3s;    
+    animation-fill-mode: forwards;
+	
+}
+.bglc-ser:after{content: ""; width: 120px; height: 120px; border-radius: 50%; border: 2px solid #fd6400;  display: inline-block; 
+	animation-name: after;
+    animation-duration: 3s;    
+    animation-fill-mode:  forwards;
+}
+
+@keyframes before {
+    from {margin-right: 120px; }
+    to {margin-right:-50px;  }
+}
+@keyframes after {
+    from {margin-left: 120px; }
+    to {margin-left:-50px; }
+}
+
+
+.display{
+    display: inline-block !important;
+     -webkit-animation-duration: 1s !important;
+    animation-duration: 1s !important;
+    -webkit-animation-fill-mode: both !important;
+    animation-fill-mode: both !important;
+  }
+  .nodisplay{
+    display: none !important;
+     -webkit-animation-duration: 4s !important;
+    animation-duration: 4s !important;
+    -webkit-animation-fill-mode: both !important;
+    animation-fill-mode: both !important;
+  }
+
+  .cn-about.animated{
+ 
+    transition: 3ms all ease-out !important;
+  opacity: 0 !important;
+
+  }
+
+ 
+.cn-about2.animated .lhs{
+      transition: 1000ms all ease-in !important;
+     opacity: 1 !important;
+}
+.cn-about2 .lhs{
+   transition: 1000ms all ease-in !important;
+   opacity: 0;
+}
+
+.cn-about2.animated .rhs{
+      transition: 1000ms all ease-in !important;
+     opacity: 1 !important;
+}
+.cn-about2 .rhs{
+   transition: 1000ms all ease-in !important;
+   opacity: 0;
+}

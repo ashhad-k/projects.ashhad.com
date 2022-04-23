@@ -1,0 +1,303 @@
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-weight: 400;
+}
+
+/**
+ * Firefox specific rule
+ */
+
+@-moz-document url-prefix() {
+  body {
+    font-weight: lighter !important;
+
+  }
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	color: #4b4b4b;
+	
+
+}
+
+
+/*.f4-boxes .child,*/
+.btn-lg:hover
+{ transition: all 0.2s ease-in-out!important;}
+
+/* calling custom font*/
+@font-face {
+    font-family: "CeraGR";
+    src: url("../fonts/CeraGR.otf");
+	font-weight: 100;
+}
+@font-face {
+    font-family: "CeraGR";
+    src: url("../fonts/CeraGR-Thin.otf");
+    font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+    font-family: "CeraGR";
+    src: url("../fonts/CeraGR-Medium.otf");
+    font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+    font-family: "CeraGR";
+    src: url("../fonts/CeraGR-Bold.otf");
+    font-weight: 600;
+}
+@font-face {
+    font-family: "CeraGR";
+    src: url("../fonts/CeraGR-Black.otf");
+    font-weight: 800;
+}
+
+
+h6,
+.btn-lg,
+.top1 .btn-outline-primary
+{
+	font-family: 'CeraGR', sans-serif;
+}
+
+.fold6 FOOTER,
+.fold6 .orange-box P,
+.f4-boxes P,
+.f4-boxes h6,
+.fold3 P,
+P.lead,
+.three-col
+{
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1{ font-weight: 100; font-size: 50px; padding: 30px 0px 40px; color: #0a0135}
+h6{ font-weight: 600; font-size: 15px; letter-spacing: 2px; text-transform: uppercase}
+
+P.lead{ font-size: 22px; font-weight: 300; margin-bottom: 80px; line-height: 1.7}
+
+/*
+* ==========================================================
+*     Custom Styles
+* ==========================================================
+Orange - #fff8912
+Dark - #c3002c
+lite #fceee9
+*/
+/**/
+
+
+.font-weight-light{ font-weight: 300}
+.font-weight-regular{ font-weight: 400}
+.font-weight-medium{ font-weight: 500}
+.font-weight-bold{ font-weight: 700}
+
+/*Gradient */
+.btn-lg,
+.gr1
+{
+background: rgb(195,0,44);
+background: -moz-linear-gradient(left, rgba(195,0,44,1) 0%, rgba(255,137,18,1) 100%);
+background: -webkit-linear-gradient(left, rgba(195,0,44,1) 0%,rgba(255,137,18,1) 100%);
+background: linear-gradient(to right, rgba(195,0,44,1) 0%,rgba(255,137,18,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c3002c', endColorstr='#ff8912',GradientType=1 );}
+
+.anchor{ position: relative}
+.anchor > a.im {position: absolute;  left: 0px;  top: -92px;}
+
+/*
+* ==========================================================
+*    Top1
+* ==========================================================
+*/
+
+.top-right a.disc{ font-size: 14px; font-weight: 500; text-transform: uppercase; color: #333;}
+.top-right a.disc:hover{ color: #fff!important; text-decoration: none; opacity: 0.5}
+.top-right a.toggle{ font-size:25px; color: #333;}
+.top-right a.toggle:hover{ font-size:25px; color: #333!important;}
+
+.tr-circle{ position:fixed; right: -340px; top: -370px; width: 953px; height: 953px; animation: antiClockwiseSpin 50s infinite linear; /*background: url(../img/tr-circle1.png) no-repeat center center;*/    background-size: contain; z-index: 1030; }
+
+.tr-circle {-webkit-animation: rotation 30s infinite linear;}
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}
+/*.tr-circle:hover{ z-index: 1030}*/
+
+.bg-waves-small{
+  position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../svg/bg-waves-small.svg) no-repeat center center;
+    background-size: contain;
+    /*animation: rotate 80s infinite linear;*/
+	animation: antiClockwiseSpin 50s infinite linear;
+    z-index: 1;
+}
+.top1{
+	padding: 15px 40px 15px 40px;
+	display: flex;
+	align-items: center;
+	background: #fff;
+	box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.20); 
+}
+.top1 .btn-outline-primary{ border-radius: 0px; margin-right: 60px; color: #333333; border-color: #333333; z-index: 1; font-weight: 100; border-width: 2px; letter-spacing: 1px; }
+.top1 .btn-outline-primary:hover{color:#fff; background: #f36c19;}
+
+
+.line1{ width: 10px; height:286px; display: block; background: url(../img/line1.png) center no-repeat; left: 0px; right: 0px; margin: 0px auto;}
+.line-h{ width: 302px; height: 8px; display: block; background: url(../img/line-h.png) center no-repeat; }
+
+/*
+* ==========================================================
+*    Fold1 - header carousel
+* ==========================================================
+*/
+.fold1{ height: calc(100vh - 00px); padding-top: 92px; padding-left: 40px; padding-right: 40px; position: relative; }
+.fold1-c{ position: absolute; top: 0px; right: 0px; left: 0px; bottom: 0px; background: #333; opacity: 0.5; z-index: 1;}
+
+
+
+/*
+Forces image to be 100% width and not max width of 100%
+*/
+#carousel{z-index: 10;}
+.carousel-item {
+  width:100%;
+	height: calc(100vh - 92px);
+}
+
+
+
+/* 
+anchors are inline so you need ot make them block to go full width
+*/
+.carousel-item a {
+  display: block;
+  width:100%;
+}
+.carousel-caption {  text-align: left; left: 60px; bottom: 60px;  right: 40%;}
+.carousel-caption P{ font-size: 50px;margin-bottom: 40px; line-height: 1.1;}
+.btn-lg{ color: #fff; font-size: 15px; padding: 20px 40px; border-radius: 0px; border: 0px; font-weight: 100; letter-spacing: 2px}
+.btn-lg:hover{ color: #fff; cursor: pointer}
+
+.carousel-control-prev, 
+.carousel-control-next{ bottom: 80px;  top: auto; border: 2px solid #fff; border-radius: 50%; width: 60px; height: 60px;}
+.carousel-control-next{ right: 50px; }
+.carousel-control-prev{ left: auto; right: 130px;}
+.carousel-indicators{ display: none}
+
+/*
+* ==========================================================
+*    Fold2 - 
+* ==========================================================
+*/
+.fold2{ text-align: center; padding-top: 240px; position: relative; background: url(../img/bg_fold1.jpg) center center; background-size: cover;}
+.fold2 .line1{ position: absolute; top: -140px;}
+
+.fold2 h6{ position: relative;}
+.fold2 h6:after{ width: 26px; height: 3px; background: #f36c19; content: ""; display: block; position: absolute; left: 0px; right: 0px; margin: 20px auto;}
+.fold2 h1{}
+.fold2 P.lead{ }
+
+.three-col{ display: flex; justify-content: space-between}
+.three-col > DIV.child{ flex-basis: 28%; }
+.three-col h4{ text-transform: uppercase; letter-spacing: 1px; font-size: 24px; font-weight: 600; padding: 30px 0px 40px 0px; }
+.three-col P{ font-size: 18px; font-weight: 300; line-height: 1.8}
+.three-col .child{position: relative}
+.three-col .line-h{ position: absolute; left: 80%; top:50px; }
+.fold2 .three-col .icon1{ border-radius: 50%; background: url(../img/bg_icon1.png) center no-repeat; width:144px; height: 144px; display: flex; align-items: center; margin: 0 auto;}
+.fold2 .three-col .icon1:hover{ background: #fbe1d8; transition: 0.5s all; }
+
+
+
+/*
+* ==========================================================
+*    Fold3 - WORK WITH US
+* ==========================================================
+*/
+.fold3{ text-align: center; padding-top: 20px; position: relative ; background: url(../img/bg_fold3.jpg) left top no-repeat;}
+.fold3a{background: url(../img/bg_fold3a.jpg) right top  no-repeat;}
+.fold3 .line1{ margin-bottom: 60px;}
+
+
+.fold3 h6{ position: relative; margin-bottom: 50px; text-align: left;}
+.fold3 h6:after{ width: 26px; height: 3px; background: #f36c19; content: ""; display: block; position: absolute; left: 0px; right: 0px; margin: 20px auto;}
+
+.fold3 h5{ font-weight: 500; margin-bottom: 30px;}
+.fold3 P.lead{ text-align: center}
+.fold3 P{ text-align: left; font-size:18px; line-height: 1.8; font-weight: 300;}
+
+.fold3 .t1-container{ display: flex; margin-bottom: 50px; align-items: center;}
+.fold3 .t1-container h6:after{ display: none}
+
+/*
+* ==========================================================
+*    Fold4 - SERVICES
+* ==========================================================
+*/
+.fold4{ text-align: center; padding-top: 20px; position: relative;  background: url(../img/bg_fold4.png) center bottom no-repeat;}
+.fold4 .line1{ margin-bottom: 60px;}
+
+.fold4 h6{ position: relative; letter-spacing: 0px}
+.fold4 h6:after{ width: 26px; height: 3px; background: #f36c19; content: ""; display: block; position: absolute; left: 0px; right: 0px; margin: 20px auto;}
+.fold4 h1{ margin-bottom: 70px;}
+.fold4 P.lead{ }
+
+
+
+.f4-boxes{ text-align: left; padding-bottom: 100px;}
+.f4-boxes h6{  margin-bottom: 30px; font-size:20px;}
+.f4-boxes h6:after{ display: none;}
+.f4-boxes P{ font-size:18px; font-weight: 300;}
+.f4-boxes DIV.child{ padding: 60px 40px; background: #fff; box-shadow: 0px 10px 10px 0px rgba(232, 232, 232, 0.5); transition: all 0.5s ease-in-out!important; }
+.f4-boxes .child:hover{ box-shadow: 10px 20px 20px 10px rgba(232, 232, 232, 1); background: url( ../img/bg_child1.png) right bottom no-repeat  #232222; color: #fff; }
+.f4-boxes .child:hover h6{  color: #f26c19;  }
+
+
+.f4-boxes2{ display: flex; flex-wrap: wrap; justify-content: space-between; }
+.f4-boxes2 .child{ width: 49%;}
+
+.fold4 .child{ box-shadow: 0px 2px 0px 0px rgba(142, 142, 142, 0.10); margin-bottom: 20px; background: #fff;  border-radius: 4px;}
+
+
+
+
+/*
+* ==========================================================
+*    Fold5 - Blank
+* ==========================================================
+*/
+.fold5{ text-align: center; padding-top: 80px; position: relative}
+.fold5 .line1{ margin-bottom: 40px;}
+
+
+/*
+* ==========================================================
+*    Fold6 - Last orange
+* ==========================================================
+*/
+.fold6{ padding-left: 40px; padding-right: 40px; margin-top: 50px; text-align: center; }
+.fold6 .orange-box{ padding-top: 150px; padding-bottom: 100px; background: url(../img/orange-box.jpg) center no-repeat;color: #fff; background-size: cover}
+.fold6 .orange-box P{font-size: 22px;}
+.fold6 .btn-lg{ background:#f36c19; margin-top: 50px;}
+.fold6 h1{ color: #fff;}
+.fold6 FOOTER a{ color: #f36c19}
+
+.fold6 FOOTER{ text-align: left; padding: 30px 20px; font-size: 15px; font-weight: 300; background: #232222; color: #fff}

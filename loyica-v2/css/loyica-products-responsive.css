@@ -1,0 +1,83 @@
+@import url(loyica-home-responsive.css);
+
+@media(max-width:1024px){
+    body{
+    overflow: visible!important
+}
+.pg-about .item2 FOOTER, .pg-about .item3 FOOTER, .pg-about .item4 FOOTER, .pg-about .item5 FOOTER, .pg-about .item6 FOOTER{
+    display: none!important;
+}
+.scrollme, #button-1, #button-2, #button-3 {
+    transform: none !important;
+    opacity: 1 !important;
+}
+
+.pg-products .cn-products {
+    padding-left: 0;
+    display: block;
+    flex-direction: inherit;
+    flex: inherit;
+}
+.pg-products .item1 h1 {
+    font-size: 40px;
+
+}
+.pg-products .item2 .box, .pg-products .item3 .box {
+    display: block;
+    flex-flow: inherit;
+    height: inherit;
+}
+.pg-products .item2, .pg-products .item3 {
+    display: block;
+    flex: none;
+    flex-direction: inherit;
+    margin: 0px 0px;
+    background: none;
+    padding-bottom: 00px;
+    height: auto;
+}
+.pg-products .item2 .box .child, .pg-products .item3 .box .child {
+    flex: none!important;
+    background-size: cover;
+    position: relative;
+    padding: 30px 0;
+    overflow: hidden;
+    flex-direction: inherit;
+    justify-content: start;
+    display: inline-block;
+    padding-right: 0;
+    height: inherit;
+    vertical-align: top;
+    min-height: 45vh;
+}
+.pg-products .item2 .box .child .overlay2, .pg-products .item3 .box .child .overlay2{
+    display: none;
+}
+.pg-products .box .child dt {
+    font-size: 30px;
+}
+.pg-products .box .child P {
+    font-size: 14px;
+}
+.pg-products .item4 {
+    padding: 100px 0px 100px;
+}
+.footer .item6 {
+    margin-left: 0;
+    display: block;
+}
+}
+@media(max-width:768px){
+.pg-products .item2 .box .child, .pg-products .item3 .box .child {
+    min-height: inherit!important;
+}
+}
+@media(max-width:668px){
+    .pg-products .item2 .box .child, .pg-products .item3 .box .child {
+        display: block;
+    }
+}
+.pg-products .item4 .btn-outline-light{
+    position: relative;
+    z-index: 999999999;
+}

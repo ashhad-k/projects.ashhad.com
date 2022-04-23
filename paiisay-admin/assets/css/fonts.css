@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../fonts/AvenirLTStd-Light.woff2') format('woff2'),
+        url('../fonts/AvenirLTStd-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('../fonts/Avenir-Roman.woff2') format('woff2'),
+        url('../fonts/Avenir-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir LT 65';
+    src: url('../fonts/AvenirLT-Medium.woff2') format('woff2'),
+        url('../fonts/AvenirLT-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+
+@font-face {
+    font-family: 'AvantGarde LT';
+    src: url('../fonts/AvantGardeLT-Bold.woff2') format('woff2'),
+        url('../fonts/AvantGardeLT-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvantGarde LT';
+    src: url('../fonts/AvantGardeLT-Medium.woff2') format('woff2'),
+        url('../fonts/AvantGardeLT-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvantGarde LT';
+    src: url('../fonts/AvantGardeLT-BoldObl.woff2') format('woff2'),
+        url('../fonts/AvantGardeLT-BoldObl.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+

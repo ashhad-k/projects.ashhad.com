@@ -1,0 +1,663 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Net Exp - Leveras Risk Management</title>
+<meta name="description" content="Leveras - Risk Management">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" href="apple-icon.png">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="assets/css/normalize.css">
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+ <link rel="stylesheet" href="assets/css/lib/datatable/dataTables.bootstrap.min.css">
+   
+<link rel="stylesheet" href="assets/scss/style.css">
+<link rel="stylesheet" href="assets/scss/custom.css">
+<link rel="stylesheet" href="assets/scss/responsive.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
+<link rel="stylesheet" href="assets/css/rm_responsive.css">
+
+</head>
+<body class="open">
+
+<!-- Left Panel -->
+
+<aside id="left-panel" class="left-panel">
+  <nav class="navbar navbar-expand-sm navbar-default">
+    <div class="navbar-header">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation"> <i class="fa fa-bars"></i> </button>
+      <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>
+      <div id="megamenu" class="header-menu"></div></div>
+    <div id="main-menu" class="main-menu collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="summary dropdown"> <a class="dropdown-toggle"  id="summary" data-toggle="dropdown"> <i class="menu-icon mn-summary"></i>Summary </a>
+          <div class="dropdown-menu" >
+            <div class="cn1">
+              <h5> top 5 symbols</h5>
+              <div class="box">
+                <h4>gold</h4>
+                <ul>
+                  <li>
+                    <h4>865.22</h4>
+                    <small>Buy</small> </li>
+                  <li>
+                    <h4>865.22</h4>
+                    <small>SELL</small> </li>
+                  <li>
+                    <h4>865.22</h4>
+                    <small>NET EXP</small> </li>
+                  <li>
+                    <h4>68,889.24</h4>
+                    <small>PROFIT</small> </li>
+                </ul>
+              </div>
+              <!--/box-->
+              <div class="box">
+                <h4>OIL</h4>
+                <ul>
+                  <li>
+                    <h4>865.22</h4>
+                    <small>Buy</small> </li>
+                  <li>
+                    <h4>865.22</h4>
+                    <small>SELL</small> </li>
+                  <li>
+                    <h4>865.22</h4>
+                    <small>NET EXP</small> </li>
+                  <li>
+                    <h4>68,889.24</h4>
+                    <small>PROFIT</small> </li>
+                </ul>
+              </div>
+              <!--/box-->
+              <div class="box">
+                <h4>OGDC</h4>
+                <ul>
+                  <li>
+                    <h4>865.22</h4>
+                    <small>Buy</small> </li>
+                  <li>
+                    <h4>865.22</h4>
+                    <small>SELL</small> </li>
+                  <li>
+                    <h4>865.22</h4>
+                    <small>NET EXP</small> </li>
+                  <li>
+                    <h4>68,889.24</h4>
+                    <small>PROFIT</small> </li>
+                </ul>
+              </div>
+              <!--/box-->
+              <div class="box">
+                <h4>DUB</h4>
+                <ul>
+                  <li>
+                    <h4>865.22</h4>
+                    <small>Buy</small> </li>
+                  <li>
+                    <h4>865.22</h4>
+                    <small>SELL</small> </li>
+                  <li>
+                    <h4>865.22</h4>
+                    <small>NET EXP</small> </li>
+                  <li>
+                    <h4>68,889.24</h4>
+                    <small>PROFIT</small> </li>
+                </ul>
+              </div>
+              <!--/box-->
+              
+              <hr>
+              <h5> volume & pnl</h5>
+              <ul class="s-vol1">
+                <li>
+                  <h4>205.62 LOTS</h4>
+                  <small>volume</small> </li>
+                <li>
+                  <h4>$6,975,223.96 </h4>
+                  <small>volume</small> </li>
+                <li>
+                  <h4>$6,975,223.96 </h4>
+                  <small>volume</small> </li>
+                <li>
+                  <h4>$-19,560.46 </h4>
+                  <small>volume</small> </li>
+                <li>
+                  <h4>$114,320.55 </h4>
+                  <small>volume</small> </li>
+              </ul>
+            </div>
+            <!--/cn1--> 
+          </div>
+        </li>
+        <!--         <li class="summary"> <a class="dropdown-toggle"  data-toggle="modal" data-target="#nav-summary1"> <i class="menu-icon mn-summary"></i>Summary </a> </li>-->
+        
+        <li> <a href="index.html"> <i class="menu-icon mn-dashboard"></i>Dashboard </a> </li>
+        <li> <a href="markets.html"> <i class="menu-icon mn-markets"></i>Markets </a> </li>
+        <li> <a href="online.html"> <i class="menu-icon mn-online"></i>Online </a> </li>
+        <li class="active"> <a href="net-exp.html"> <i class="menu-icon mn-netexp"></i>Net Exp </a> </li>
+        <li> <a href="stats.html"> <i class="menu-icon mn-stats"></i>Stats</a> </li>
+        <li> <a href="clients.html"> <i class="menu-icon mn-clients"></i>Clients </a> </li>
+        <li> <a href="reports.html"> <i class="menu-icon mn-reports"></i>Reports </a> </li>
+        <li> <a href="tools.html"> <i class="menu-icon mn-tools"></i>Tools</a> </li>
+        <li> <a href="#"> <i class="menu-icon mn-markets"></i>User </a> </li>
+        <li class="cn-user user-area dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" > <img class="user-avatar rounded-circle" src="images/admin.jpg" alt="User Avatar"> </a>
+          <div class="user-menu dropdown-menu"> <a class="nav-link" href="profile.html"><i class="fa fa-user"></i> My Profile</a> <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings</a> <a class="nav-link" href="#"><i class="fa fa-power-off"></i> Logout</a> </div>
+        </li>
+        <li class="cn-notification dropdown for-notification"> <a class="dropdown-toggle bg-transparent"  id="notification" data-toggle="dropdown"> <i class="menu-icon mn-bell"></i></a> <span class="count">5</span>
+          <div class="dropdown-menu" > <a class="dropdown-item" href="#">Link 1</a> <a class="dropdown-item" href="#">Link 2</a> <a class="dropdown-item" href="#">Link 3</a> </div>
+        </li>
+        <li> <a href="markets.html"> <i class="menu-icon mn-settings"></i></a> </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse --> 
+  </nav>
+</aside>
+<!-- /#left-panel --> 
+
+<!-- Left Panel --> 
+
+<!-- Right Panel -->
+
+<div id="right-panel" class="right-panel"> 
+  
+  <!-- Header-->
+  <header id="header" class="header">
+    <div class="header-menu no-gutters">
+      <div class="gsd1" id="megamove"> <a href="#" class="dropdown-toggle  mega-dropdown" data-toggle="dropdown"> <i class="a2"><img src="images/icons/gsd1.png" alt=""/></i> <span class="a1">A</span></a>
+        <div class="dropdown-menu mega-dropdown-menu row keep-open">
+          <div class="gsd-item1">
+            <div class="row">
+              <div class="col-md-6">
+                <h4>A-book <span class="badge badge-primary">Selected</span></h4>
+              </div>
+              <div class="col-md-2 ml-auto">
+                <div class="input-group gsd-search">
+                  <input type="text" id="input3-group2" name="input3-group2" placeholder="Search Symbols" class="form-control">
+                  <div class="input-group-btn">
+                    <button class="btn"><i class="fa fa-search"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div id="carousel1" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="gsd-box1 col-md-1 select">
+                        <h4>xqq-uvi</h4>
+                        <small> 10 Clients</small> </div>
+                      <div class="gsd-box1 col-md-1">
+                        <h4>xqq-uvi</h4>
+                        <small> 10 Clients</small> </div>
+                      <div class="gsd-box1 col-md-1">
+                        <h4>xqq-uvi</h4>
+                        <small> 10 Clients</small> </div>
+                      <div class="gsd-box1 col-md-1">
+                        <h4>xqq-uvi</h4>
+                        <small> 10 Clients</small> </div>
+                      <div class="gsd-box1 col-md-1">
+                        <h4>xqq-uvi</h4>
+                        <small> 10 Clients</small> </div>
+                    </div>
+                    <!--    /item-->
+                    <div class="carousel-item"> 2 </div>
+                    <!--    /item-->
+                    <div class="carousel-item"> 3 </div>
+                    <!--    /item--> 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row gsd-ftr">
+              <div class="col-md-6 mr-auto">3 out of 58 selected</div>
+              <div class="col-md-2 ml-auto"> <a  href="#carousel1"  data-slide="prev"><i class="fa fa-arrow-circle-o-left"></i></a> <a  href="#carousel1"  data-slide="next"><i class="fa fa-arrow-circle-o-right"></i></a> </div>
+            </div>
+          </div>
+          <!--  /gsd-item1-->
+          
+          <div class="gsd-item2">
+            <div class="row">
+              <div class="col-md-6">
+                <h4>B-book <span class="badge badge-light">Select</span></h4>
+              </div>
+              <div class="col-md-2 ml-auto">
+                <div class="input-group gsd-search">
+                  <input type="text" id="input3-group3" name="input3-group3" placeholder="Search Symbols" class="form-control">
+                  <div class="input-group-btn">
+                    <button class="btn"><i class="fa fa-search"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div id="carousel2" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="gsd-box1 col-md-1 selected">
+                        <h4>xqq-uvi</h4>
+                        <small> 10 Clients</small> </div>
+                      <div class="gsd-box1 col-md-1 selected">
+                        <h4>xqq-uvi</h4>
+                        <small> 10 Clients</small> </div>
+                      <div class="gsd-box1 col-md-1">
+                        <h4>xqq-uvi</h4>
+                        <small> 10 Clients</small> </div>
+                      <div class="gsd-box1 col-md-1">
+                        <h4>xqq-uvi</h4>
+                        <small> 10 Clients</small> </div>
+                      <div class="gsd-box1 col-md-1">
+                        <h4>xqq-uvi</h4>
+                        <small> 10 Clients</small> </div>
+                    </div>
+                    <!--    /item-->
+                    <div class="carousel-item"> 2 </div>
+                    <!--    /item-->
+                    <div class="carousel-item"> 3 </div>
+                    <!--    /item--> 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row gsd-ftr">
+              <div class="col-md-6 mr-auto">3 out of 58 selected</div>
+              <div class="col-md-2 ml-auto"> <a  href="#carousel2"  data-slide="prev"><i class="fa fa-arrow-circle-o-left"></i></a> <a  href="#carousel2"  data-slide="next"><i class="fa fa-arrow-circle-o-right"></i></a> </div>
+            </div>
+          </div>
+          <!--  /gsd-item2-->
+          
+          <div class="gsd-item3">
+            <div class="row">
+              <div class="col-md-6">
+                <h4>C-book <span class="badge badge-light">Select</span></h4>
+              </div>
+              <div class="col-md-2 ml-auto">
+                <div class="input-group gsd-search">
+                  <input type="text" id="input3-group4" name="input3-group4" placeholder="Search Symbols" class="form-control">
+                  <div class="input-group-btn">
+                    <button class="btn"><i class="fa fa-search"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div id="carousel3" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="gsd-box1 col-md-1 selected">
+                        <h4>xqq-uvi</h4>
+                        <small> 10 Clients</small> </div>
+                      <div class="gsd-box1 col-md-1 selected">
+                        <h4>xqq-uvi</h4>
+                        <small> 10 Clients</small> </div>
+                      <div class="gsd-box1 col-md-1">
+                        <h4>xqq-uvi</h4>
+                        <small> 10 Clients</small> </div>
+                      <div class="gsd-box1 col-md-1">
+                        <h4>xqq-uvi</h4>
+                        <small> 10 Clients</small> </div>
+                      <div class="gsd-box1 col-md-1 selected">
+                        <h4>xqq-uvi</h4>
+                        <small> 10 Clients</small> </div>
+                    </div>
+                    <!--    /item-->
+                    <div class="carousel-item"> 2 </div>
+                    <!--    /item-->
+                    <div class="carousel-item"> 3 </div>
+                    <!--    /item--> 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row gsd-ftr">
+              <div class="col-md-6 mr-auto">3 out of 58 selected</div>
+              <div class="col-md-2 ml-auto"> <a  href="#carousel3"  data-slide="prev"><i class="fa fa-arrow-circle-o-left"></i></a> <a  href="#carousel3"  data-slide="next"><i class="fa fa-arrow-circle-o-right"></i></a> </div>
+            </div>
+          </div>
+          <!--  /gsd-item3--> 
+          
+        </div>
+      </div>
+      <!--     /gsd1-->
+      <div class="col-sm-2 cn1"> quick<br>
+        net exposure </div>
+      <div class="col-sm-6 cn2">
+        <div class="child"> Gold <small>Symbol</small> <i class="fa fa-arrow-down"></i> </div>
+        <div class="child"> 85,429 <small>buy</small> </div>
+        <div class="child"> 78598 <small>sell</small> </div>
+        <div class="child"> 65895 <small>net</small> </div>
+        <div class="child"> 85,429.67 <small>p&L</small> </div>
+      </div>
+      <div class="col-sm-2  date"> <i class="fa fa-calendar"></i> Tuesday, September 4th<br>
+        <i class="fa fa-clock-o"></i> 7:08 PM </div>
+      <div class="card  bg-success">
+        <div class="card-body"> Stable </div>
+      </div>
+    </div>
+  </header>
+  <!-- /header --> 
+  <!-- Header-->
+  
+  <div class="content cn-netexp1 ">
+   <div class="cn-clock1">
+   	<div class="child featured">
+  			<div class="mr-2">	<img src="images/icons/clock-server.png" alt=""/></div>
+  			<div class="ml-2">
+  			<h5>Server Time</h5>
+   		
+   		<div class="time">8:30:47 am</div>
+   		<div class="date">Wed, Sept 5th 2018</div>
+   		</div>
+   			
+   		
+   	</div>
+   	<div class="child">
+   	<div class="clock">
+   	<img src="images/icons/clock.png" alt=""/></div>
+   		<h5>Sydney</h5>
+   		
+   		<div class="time">8:30:47 am</div>
+   		<div class="date">Wed, Sept 5th 2018</div>
+   	</div><!--/child-->
+   	<div class="child">
+   	<div class="clock"><img src="images/icons/clock.png" alt=""/></div>
+   		<h5>New York</h5>
+   		
+   		<div class="time">8:30:47 am</div>
+   		<div class="date">Wed, Sept 5th 2018</div>
+   	</div><!--/child-->
+   	<div class="child">
+   	<div class="clock"><img src="images/icons/clock.png" alt=""/></div>
+   		<h5>Tokyo</h5>
+   		
+   		<div class="time">8:30:47 am</div>
+   		<div class="date">Wed, Sept 5th 2018</div>
+   	</div><!--/child-->
+   	<div class="child">
+   	<div class="clock"><img src="images/icons/clock.png" alt=""/></div>
+   		<h5>Dubai</h5>
+   		
+   		<div class="time">8:30:47 am</div>
+   		<div class="date">Wed, Sept 5th 2018</div>
+   	</div><!--/child-->
+   
+   </div><!--/cn-clock-->
+   
+   <div class="cn-stats2 ">
+   	 <div class="nav flex-column nav-pills" id="v-pills-tab" >
+      <a class="nav-link active" id="v-pills-d-tab" data-toggle="pill" href="#v-pills-d">D</a>
+      <a class="nav-link border-bottom-0 border-top-0" id="v-pills-w-tab" data-toggle="pill" href="#v-pills-w" >W</a>
+      <a class="nav-link" id="v-pills-m-tab" data-toggle="pill" href="#v-pills-m" >M</a>
+    </div>
+     <div class="tab-content" id="v-pills-tabContent">
+      <div class="tab-pane fade show active" id="v-pills-d">
+      <div  class="d-flex">
+      	
+     
+      	<div class="child bg-light">
+      		<h4>Volume</h4>
+      		<h3>1,250<span class="small">LOTS</span></h3>
+      		<div class="graph"><img src="images/graphs/sml-hrz.png" alt=""/></div>
+      	</div><!--/child-->
+      	<div class="child bg-success">
+      		<h4>CURRENT FPNL
+</h4>
+      		<h3>$6,940,462.88</h3>
+      		<div class="graph"><img src="images/graphs/graph-green.png" alt=""/></div>
+      	</div><!--/child-->
+      	<div class="child bg-danger">
+      		<h4>pnl change</h4>
+      		<h3>$ -31,601.58</h3>
+      		<div class="graph"><img src="images/graphs/graph-red.png" alt=""/></div>
+      	</div><!--/child-->
+      	<div class="child bg-success">
+      		<h4>closed pnl</h4>
+      		<h3>$ 10,800</h3>
+      		<div class="graph"><img src="images/graphs/graph-green.png" alt=""/></div>
+      	</div><!--/child-->
+      	<div class="child bg-danger">
+      		<h4>profit pnl</h4>
+      		<h3>$ 10,800</h3>
+      		<div class="graph"><img src="images/graphs/graph-red.png" alt=""/></div>
+      	</div><!--/child-->
+      		<div class="child  limit">
+      		<h4>daily risk limit</h4>
+      		<h3>$ 10,800</h3>
+      		<footer>Limiter</footer>
+      	</div><!--/child-->
+      	 </div>
+      </div><!--/tab D-->
+      <div class="tab-pane fade" id="v-pills-w">...</div><!--/tab W-->
+      <div class="tab-pane fade" id="v-pills-m">...</div><!--/tab M-->
+
+    </div>
+   </div><!--/stats-->
+   
+	</div>
+  <!-- .content --> 
+  
+  <div class="cn-exposure">
+  	<div class="card gn1">
+        <div class="card-header"> <strong class="card-title">Net exposure </strong> 
+        <span class="float-right">
+         <h5 class="mr-2">view options</h5> 
+         <ul class="nav nav-tabs" id="exp-tab1">
+          
+            <li class="nav-item" title="Table View"> 
+            <a class="nav-link active show" id="exp-tab1-item2head" data-toggle="tab" href="#exp-tab1-item1"><i class="view-table"></i></a> </li>
+          
+            <li class="nav-item" title="List View"> 
+            <a class="nav-link " id="exp-tab1-item1head" data-toggle="tab" href="#exp-tab1-item2" ><i class="view-list"></i></a> </li>
+           
+          </ul>
+          <div class="gsd-search"> <div class="input-group">
+                  <input type="text" id="input8" name="input3-group2" placeholder="Search Symbols" class="form-control">
+                  <div class="input-group-btn">
+                    <button class="btn"><i class="fa fa-search"></i></button>
+                  </div>
+                </div> </div>
+         
+          
+          </span> </div>
+        <div class="card-body">
+          <div class="tab-content" id="exp-tab1Content">
+            <div class="tab-pane fade active show" id="exp-tab1-item1">
+          
+       <table class="table  table-responsive-lg table-hover tbl2"  >
+                <tbody>
+                  <tr>
+                    <th rowspan="2"><h5>SYMBOLS <i class="fa fa-sort"></i></h5></th>
+                    <th colspan="3"><h5>Clients </h5></th>
+                    <th colspan="3"><h5>Hedge</h5></th>
+                    <th colspan="3"><h5>Net</h5></th>
+                    <th rowspan="2"><h5>FLOATING PNL <i class="fa fa-sort"></i></h5></th>
+                    <th rowspan="2"><h5>PROFIT <i class="fa fa-sort"></i></h5></th>
+                  </tr>
+                   <tr>
+                    <th>LONG <i class="fa fa-sort"></i></th>
+                    <th>SHORT <i class="fa fa-sort"></i></th>
+                    <th  class="br1">NET  <i class="fa fa-sort"></i></th>
+                    <th>LONG <i class="fa fa-sort"></i></th>
+                    <th>SHORT <i class="fa fa-sort"></i></th>
+                    <th class="br1">NET  <i class="fa fa-sort"></i></th>
+                    <th>LONG <i class="fa fa-sort"></i></th>
+                    <th>SHORT <i class="fa fa-sort"></i></th>
+                    <th>NET <i class="fa fa-sort"></i> </th>
+                  </tr>
+                  <tr>
+                    <td class="symbol">
+                    <i class="fa fa-plus"></i> <span>AUDCAD </span><i class="fa  fa-caret-down text-danger"></i></td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td class="bg-primary">-$87003303</td>
+                    <td class="bg-success">-7,943.55</td>
+                  </tr>
+                   <tr>
+                    <td class="symbol">
+                    <i class="fa fa-plus"></i>  <span>AUDCAD </span> <i class="fa  fa-caret-up text-success"></i></td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td class="bg-primary">$87003303</td>
+                    <td class="bg-danger">-7,943.55</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+          
+            </div><!--/tab1-->
+            <div class="tab-pane fade" id="exp-tab1-item2">
+            	
+            	<div class="cn-exp-slider">
+            		<div class="child">
+            			<table class="table  table-responsive-lg table-hover tbl2"  >
+  <tbody>
+    <tr>
+      <th width="63"><h5>SYMBOLS <i class="fa fa-sort"></i></h5></th>
+    </tr>
+    <tr>
+      <th><h5>Clients </h5>
+      </th>
+    </tr>
+    <tr>
+      <th>LONG <i class="fa fa-sort"></i></th>
+    </tr>
+    <tr>
+      <th>SHORT <i class="fa fa-sort"></i></th>
+    </tr>
+    <tr>
+      <th>NET <i class="fa fa-sort"></i></th>
+    </tr>
+    <tr>
+      <th><h5>Hedge</h5></th>
+    </tr>
+    <tr>
+      <th>LONG <i class="fa fa-sort"></i></th>
+    </tr>
+    <tr>
+      <th>SHORT <i class="fa fa-sort"></i></th>
+    </tr>
+    <tr>
+      <th>NET <i class="fa fa-sort"></i></th>
+    </tr>
+    <tr>
+      <th><h5>Net</h5></th>
+    </tr>
+    <tr>
+      <th>LONG <i class="fa fa-sort"></i></th>
+    </tr>
+    <tr>
+      <th>SHORT <i class="fa fa-sort"></i></th>
+    </tr>
+    <tr>
+      <th>NET <i class="fa fa-sort"></i></th>
+    </tr>
+    <tr>
+      <th><h5>FLOATING PNL <i class="fa fa-sort"></i></h5>
+      </th>
+    </tr>
+    <tr>
+      <th><h5>PROFIT <i class="fa fa-sort"></i></h5></th>
+    </tr>
+  </tbody>
+</table>
+            		</div><!--/col1-->
+            		<div class="child featured">
+   <div class="wrapper2">
+  
+  <div class="scroll-container">
+    <ul class="list-container">
+      <li>
+      <table class="table table-responsive-lg table-hover tbl2" ><tbody><tr><td class="symbol"><i class="fa fa-plus"></i> <span>AUDCAD </span><i class="fa fa-caret-down text-danger"></i></td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>147</td></tr><tr><td>147</td></tr><tr><td class="bg-danger">-98578924</td></tr><tr><td class="bg-success">1458,099</td></tr></tbody></table>
+      </li>
+      <li><table class="table table-responsive-lg table-hover tbl2" ><tbody><tr><td class="symbol"><i class="fa fa-plus"></i> <span>AUDCAD </span><i class="fa fa-caret-down text-danger"></i></td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>147</td></tr><tr><td>147</td></tr><tr><td class="bg-danger">-98578924</td></tr><tr><td class="bg-success">1458,099</td></tr></tbody></table></li>
+      <li><table class="table table-responsive-lg table-hover tbl2" ><tbody><tr><td class="symbol"><i class="fa fa-plus"></i> <span>AUDCAD </span><i class="fa fa-caret-down text-danger"></i></td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>147</td></tr><tr><td>147</td></tr><tr><td class="bg-danger">-98578924</td></tr><tr><td class="bg-success">1458,099</td></tr></tbody></table></li>
+      <li><table class="table table-responsive-lg table-hover tbl2" ><tbody><tr><td class="symbol"><i class="fa fa-plus"></i> <span>AUDCAD </span><i class="fa fa-caret-down text-danger"></i></td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>147</td></tr><tr><td>147</td></tr><tr><td class="bg-danger">-98578924</td></tr><tr><td class="bg-success">1458,099</td></tr></tbody></table></li>
+      <li>
+       <table class="table table-responsive-lg table-hover tbl2" ><tbody><tr><td class="symbol"><i class="fa fa-plus"></i> <span>AUDCAD </span><i class="fa fa-caret-down text-danger"></i></td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>147</td></tr><tr><td>147</td></tr><tr><td class="bg-danger">-98578924</td></tr><tr><td class="bg-success">1458,099</td></tr></tbody></table>
+        
+      </li>
+      <li><table class="table table-responsive-lg table-hover tbl2" ><tbody><tr><td class="symbol"><i class="fa fa-plus"></i> <span>AUDCAD </span><i class="fa fa-caret-down text-danger"></i></td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>147</td></tr><tr><td>147</td></tr><tr><td class="bg-danger">-98578924</td></tr><tr><td class="bg-success">1458,099</td></tr></tbody></table></li>
+      <li><table class="table table-responsive-lg table-hover tbl2" ><tbody><tr><td class="symbol"><i class="fa fa-plus"></i> <span>AUDCAD </span><i class="fa fa-caret-down text-danger"></i></td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>147</td></tr><tr><td>147</td></tr><tr><td class="bg-danger">-98578924</td></tr><tr><td class="bg-success">1458,099</td></tr></tbody></table></li>
+      <li><table class="table table-responsive-lg table-hover tbl2" ><tbody><tr><td class="symbol"><i class="fa fa-plus"></i> <span>AUDCAD </span><i class="fa fa-caret-down text-danger"></i></td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>147</td></tr><tr><td>147</td></tr><tr><td class="bg-danger">-98578924</td></tr><tr><td class="bg-success">1458,099</td></tr></tbody></table></li>
+      <li><table class="table table-responsive-lg table-hover tbl2" ><tbody><tr><td class="symbol"><i class="fa fa-plus"></i> <span>AUDCAD </span><i class="fa fa-caret-down text-danger"></i></td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>147</td></tr><tr><td>147</td></tr><tr><td class="bg-danger">-98578924</td></tr><tr><td class="bg-success">1458,099</td></tr></tbody></table></li>
+      <li><table class="table table-responsive-lg table-hover tbl2" ><tbody><tr><td class="symbol"><i class="fa fa-plus"></i> <span>AUDCAD </span><i class="fa fa-caret-down text-danger"></i></td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>147</td></tr><tr><td>147</td></tr><tr><td class="bg-danger">-98578924</td></tr><tr><td class="bg-success">1458,099</td></tr></tbody></table></li>
+      <li>
+       <table class="table table-responsive-lg table-hover tbl2" ><tbody><tr><td class="symbol"><i class="fa fa-plus"></i> <span>AUDCAD </span><i class="fa fa-caret-down text-danger"></i></td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>147</td></tr><tr><td>147</td></tr><tr><td class="bg-danger">-98578924</td></tr><tr><td class="bg-success">1458,099</td></tr></tbody></table>
+      </li>
+      <li><table class="table table-responsive-lg table-hover tbl2" ><tbody><tr><td class="symbol"><i class="fa fa-plus"></i> <span>AUDCAD </span><i class="fa fa-caret-down text-danger"></i></td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>&nbsp;</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>147</td></tr><tr><td>147</td></tr><tr><td class="bg-danger">-98578924</td></tr><tr><td class="bg-success">1458,099</td></tr></tbody></table></li>
+    </ul>
+  </div>
+</div>
+
+            			
+            			<section>
+            				<div class="slidecontainer">
+  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+</div>
+           				
+            				
+            			</section>
+            			<footer>
+            				<h4>showing <span id="counter"></span> of 40 symbols</h4>
+            			</footer>
+
+            			</div>
+            		</div>
+            		
+            	</div>
+            </div>
+           <div class="alert alert-success alert-dismissible fade show mt-5">
+              <a href="net-exp-data-table.html"> Bootstrap Data Table File</a> </div>
+          </div>
+        </div>
+      </div>
+  </div><!--/exposure-->
+    
+  
+</div>
+<!-- /#right-panel --> 
+
+<!-- Right Panel --> 
+
+
+<script src="assets/js/jquery.min.js"></script> 
+<script src="assets/js/popper.min.js"></script> 
+<script src="assets/js/plugins.js"></script> 
+<script src="assets/js/main.js"></script>
+
+<script>var slider = document.getElementById("myRange");
+var output = document.getElementById("counter");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+    output.innerHTML = this.value;
+}</script>
+
+</body>
+</html>

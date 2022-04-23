@@ -1,0 +1,66 @@
+
+/* ===========================================
+   SmoothState styling
+   =========================================== */
+.m-scene .scene-main {
+  -webkit-animation-duration: .25s;
+          animation-duration: .25s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.m-scene .scene-main--fadein {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+}
+.m-scene.is-exiting .scene-main {
+  -webkit-animation-direction: alternate-reverse;
+          animation-direction: alternate-reverse;
+}
+.m-scene .scene-nav {
+  -webkit-animation-duration: .25s;
+          animation-duration: .25s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-name: width;
+          animation-name: width;
+}
+.m-scene.is-exiting .scene-nav {
+  -webkit-animation-direction: alternate-reverse;
+          animation-direction: alternate-reverse;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes width {
+  0% {
+    width: 300px;
+  }
+  100% {
+    width: 50vw;
+  }
+}
+@keyframes width {
+  0% {
+    width: 300px;
+  }
+  100% {
+    width: 50vw;
+  }
+}

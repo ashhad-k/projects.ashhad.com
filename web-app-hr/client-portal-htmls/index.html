@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard</title>
+    <meta name="description" content="">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=0" />
+    <meta name="robots" content="all,follow">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+<!-- CALANDER CSS -->
+<link href='css/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+<link rel='stylesheet' href='css/fullcalendar.min.css'>
+<link rel='stylesheet' href='css/semantic.min.css'>
+<!-- CALANDER CSS -->
+
+
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom-style.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.png?3">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+   
+    <!-- navbar-->
+      <header class="header">
+      
+          <nav class="navbar navbar-expand-lg bg-white">
+            <ul class="ml-auto d-flex align-items-center list-unstyled mb-0 w-100">
+              <li class="nav-item dropdown ml-auto py-2 xsLogo">
+                  <div class="">
+                        <a href="#">Logo</a>
+                  </div>
+              </li>
+              <li class="nav-item dropdown ml-auto py-2">
+                <a id="userInfo" href="javascript:;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">
+                  <img src="img/avatar-6.png" alt="Jason Doe" class="img-fluid rounded-circle my-border user-img"></a>
+                <div aria-labelledby="userInfo" class="dropdown-menu">
+                    <a href="#" class="dropdown-item">My Profile</a><a href="#" class="dropdown-item">Change Password</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="javaScript:;" class="dropdown-item">Logout</a>
+                </div>
+              </li>
+
+            </ul>
+          </nav>
+      </header>
+    <div class="d-flex align-items-stretch">
+
+       <div class="overlay"></div>
+      <div id="sidebar" class="sidebar py-3 shrink">
+        <div class="left-menu">
+            <a href="javascript:;" class="sidebar-toggler text-gray-500 Menubtn lead">
+              <!-- <i class="fas fa-align-left"></i> -->
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+            <ul class="sidebar-menu list-unstyled">
+                  <li class="sidebar-list-item">
+                    <a href="index.html" class="sidebar-link text-muted active"><i class="fas fa-tachometer-alt text-gray mr-3"></i><span>Dashboard</span></a></li>
+
+                  <li class="sidebar-list-item"><a href="projects.html" class="sidebar-link text-muted "><i class="fas fa-tasks mr-3 text-gray"></i><span>Projects</span></a> </li>
+
+                  <li class="sidebar-list-item"><a href="tasks.html" class="sidebar-link text-muted"><i class="fas fa-list mr-3 text-gray"></i><span>Tasks</span></a> </li>
+
+                  <li class="sidebar-list-item"><a href="invoices.html" class="sidebar-link text-muted"><i class="fas fa-info mr-3 text-gray"></i><span>Invoices</span></a> </li>
+
+                  <li class="sidebar-list-item"><a href="invoices-payments.html" class="sidebar-link text-muted"><i class="fas fa-credit-card mr-3 text-gray"></i><span>Invoices Payments</span></a> </li>
+
+                  <li class="sidebar-list-item"><a href="change-password.html" class="sidebar-link text-muted"><i class="fas fa-lock mr-3 text-gray"></i><span>Change Password</span></a> </li>
+
+
+                  <li class="sidebar-list-item"><a href="logout.html" class="sidebar-link text-muted"><i class="fas fa-sign-out-alt text-gray mr-3"></i><span>logout</span></a></li>
+            </ul>
+        </div>
+      </div>
+      <div class="page-holder w-100 d-flex flex-wrap">
+        <div class="container-fluid main-pad">
+          <div class="row">
+            <div class="col-12 col-md-12">
+                <div class="wel-txt">
+                  <h3>Welcome back, Shaleena!</h3>
+                  <p> Today is Thursday, 29 August 2019</p>
+                </div>
+            </div>
+          </div>
+        <div class="row pad-top50">
+              <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+                  <div class="left-icon-box">
+                      <span><i class="far fa-copy"></i></span>
+                      <h3>1
+                        <strong>Paid Invoice</strong>
+                      </h3>
+                  </div>
+              </div>
+
+              <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+                  <div class="left-icon-box two">
+                      <span><i class="fas fa-table"></i></span>
+                      <h3>2
+                        <strong>unpaid Invoice</strong>
+                      </h3>
+                  </div>
+              </div>
+
+              <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+                  <div class="left-icon-box three">
+                      <span><i class="fas fa-tasks"></i></span>
+                      <h3><strong>In Progress</strong>
+                        <small>Project 1</small>
+                      </h3>
+                  </div>
+              </div>
+
+
+              <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+                  <div class="left-icon-box four">
+                      <span><i class="fas fa-tasks"></i></span>
+                      <h3>
+                        <strong>Completed</strong>
+                        <small>Project 0</small>
+                      </h3>
+                  </div>
+              </div>
+
+
+
+              <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+                  <div class="left-icon-box two">
+                      <span><i class="far fa-copy"></i></span>
+                      <h3>$250.00
+                        <strong>Paid Amount</strong>
+                      </h3>
+                  </div>
+              </div>
+
+              <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+                  <div class="left-icon-box">
+                      <span><i class="fas fa-table"></i></span>
+                      <h3>$300.00
+                        <strong>Due Amount</strong>
+                      </h3>
+                  </div>
+              </div>
+
+              <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+                  <div class="left-icon-box four">
+                      <span><i class="fas fa-tasks"></i></span>
+                      <h3><strong>Not Started</strong>
+                        <small>Project 0</small>
+                      </h3>
+                  </div>
+              </div>
+
+
+              <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+                  <div class="left-icon-box three">
+                      <span><i class="fas fa-tasks"></i></span>
+                      <h3>
+                        <strong>Deferred</strong>
+                        <small>Project 1</small>
+                      </h3>
+                  </div>
+              </div>
+
+
+
+              <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                    <div class="whitBgForm">
+                        <h3>My Projects</h3>
+                        <div class="table-responsive">
+                            <table class="table table-striped-bg table-striped table-hover card-text firstRowBlue">
+                                      <thead>
+                                        <tr>
+                                          <th>Project Summary</th>
+                                          <th>Priority</th>
+                                          <th>End Date</th>
+                                          <th>Progress</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td width="35%">Test 3</td>
+                                          <td width="15%"><span class="bg-secondary bgTxt">Highest</span></td>
+                                          <td width="20%">Jun-06-2018 </td>
+                                          <td width="30%">
+                                              Completed 47%
+                                            <div class="progress">
+                                               <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td width="35%">CodeIgniter</td>
+                                          <td width="15%"><span class="bg-secondary bgTxt">Highest</span></td>
+                                          <td width="20%">May-18-2018</td>
+                                          <td width="30%">
+                                              Completed 46%
+                                            <div class="progress">
+                                               <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                            </table>
+                          </div>
+                        <div class="col-12 padBot25">
+                          <hr>
+                            <a href="invoices.html" class="myBtn blueBtn">View Company</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                    <div class="whitBgForm">
+                        <h3>List All Invoices</h3>
+                            <div class="card table-responsive">
+                                <table class="table table-striped-bg table-striped table-hover card-text firstRowBlue">
+                                  <thead>
+                                    <tr>
+                                      <th>Invoice#</th>
+                                      <th>Project</th>
+                                      <th>Total</th>
+                                      <th>Invoice Date</th>
+                                      <th>Due Date</th>
+                                      <th>Status</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                      <tr>
+                                        <td>INV-00014</td>
+                                        <td>CodeIgniter</td>
+                                        <td>$100.00</td>
+                                        <td>Mar-21-2019</td>
+                                        <td>Mar-23-2019</td>
+                                        <td>UnPaid</td>
+                                      </tr>
+                                      <tr>
+                                        <td>INV-00013</td>
+                                        <td>Test 3</td>
+                                        <td>$200.00</td>
+                                        <td>Mar-21-2019</td>
+                                        <td>Mar-23-2019</td>
+                                        <td>UnPaid</td>
+                                      </tr>
+                                      <tr>
+                                        <td>INV-00012</td>
+                                        <td>CodeIgniter</td>
+                                        <td>$100.00</td>
+                                        <td>Mar-21-2019</td>
+                                        <td>Mar-23-2019</td>
+                                        <td>Paid</td>
+                                      </tr>
+                                  </tbody>
+                                </table>
+                            </div>
+                            <div class="col-12 padBot25">
+                          <hr>
+                            <a href="projects.html" class="myBtn blueBtn">All Invoices</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+<!-- Delete Content -->
+<div id="delete" class="modal fade delete-file" role="dialog">
+  <div class="modal-dialog modal-md modal-dialog-centered">
+
+    <!-- Delete Content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>DELETE ROLE</h3>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to delete <strong>James Cameron</strong> record?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="myBtn orngBtn" data-dismiss="modal">Delete</button>
+        <button type="button" class="myBtn gryBtn" data-dismiss="modal">Cancle</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+    <!-- javaScript files-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+    <script src="js/front.js"></script>
+
+
+  </body>
+</html>

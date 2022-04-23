@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Invoices</title>
+    <meta name="description" content="">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=0" />
+
+    <meta name="robots" content="all,follow">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+            <!-- Summer Note text editor-->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-lite.css" rel="stylesheet">
+<!-- CALANDER CSS -->
+<link href='css/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+<link rel='stylesheet' href='css/fullcalendar.min.css'>
+<link rel='stylesheet' href='css/semantic.min.css'>
+<!-- CALANDER CSS -->
+    <!-- orion icons-->
+    <link rel="stylesheet" href="css/orionicons.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom-style.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.png?3">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+   
+    <!-- navbar-->
+    <header class="header">
+          <nav class="navbar navbar-expand-lg bg-white">
+            <ul class="ml-auto d-flex align-items-center list-unstyled mb-0 w-100">
+              <li class="nav-item dropdown ml-auto py-2 xsLogo">
+                  <div class="">
+                        <a href="#">Logo</a>
+                  </div>
+              </li>
+              <li class="nav-item dropdown ml-auto py-2">
+                <a id="userInfo" href="javascript:;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">
+                  <img src="img/avatar-6.png" alt="Jason Doe" class="img-fluid rounded-circle my-border user-img"></a>
+                <div aria-labelledby="userInfo" class="dropdown-menu">
+                    <a href="#" class="dropdown-item">My Profile</a><a href="#" class="dropdown-item">Change Password</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="javaScript:;" class="dropdown-item">Logout</a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+    </header>
+    <div class="d-flex align-items-stretch">
+
+       <div class="overlay"></div>
+      <div id="sidebar" class="sidebar py-3 shrink">
+        <div class="left-menu">
+            <a href="javascript:;" class="sidebar-toggler text-gray-500 Menubtn lead">
+              <!-- <i class="fas fa-align-left"></i> -->
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+            <ul class="sidebar-menu list-unstyled">
+                  <li class="sidebar-list-item">
+                    <a href="index.html" class="sidebar-link text-muted"><i class="fas fa-tachometer-alt text-gray mr-3"></i><span>Dashboard</span></a></li>
+
+                  <li class="sidebar-list-item"><a href="projects.html" class="sidebar-link text-muted "><i class="fas fa-tasks mr-3 text-gray"></i><span>Projects</span></a> </li>
+
+                  <li class="sidebar-list-item"><a href="tasks.html" class="sidebar-link text-muted"><i class="fas fa-list mr-3 text-gray"></i><span>Tasks</span></a> </li>
+
+                  <li class="sidebar-list-item"><a href="invoices.html" class="sidebar-link text-muted"><i class="fas fa-info mr-3 text-gray"></i><span>Invoices</span></a> </li>
+
+                  <li class="sidebar-list-item"><a href="invoices-payments.html" class="sidebar-link text-muted active"><i class="fas fa-credit-card mr-3 text-gray"></i><span>Invoices Payments</span></a> </li>
+
+                  <li class="sidebar-list-item"><a href="change-password.html" class="sidebar-link text-muted "><i class="fas fa-lock mr-3 text-gray"></i><span>Change Password</span></a> </li>
+
+
+                  <li class="sidebar-list-item"><a href="logout.html" class="sidebar-link text-muted"><i class="fas fa-sign-out-alt text-gray mr-3"></i><span>logout</span></a></li>
+            </ul>
+        </div>
+      </div>
+      <div class="page-holder w-100 d-flex flex-wrap">
+        <div class="container-fluid main-pad">
+          <div class="row">
+            <div class="col-12 col-md-5">
+                <div class="wel-txt">
+                  <h3>Invoice Payments</h3>
+                  <p> Home  / Invoice Payments</p>
+                </div>
+            </div>
+          </div>
+
+<div class="search-bg mar-top50">
+                <div class="row justify-content">
+                  <div class="col-12 col-md-10 col-lg-10">
+                      <form id="searchForm" class="ml-auto d-lg-block search-icon-input">
+                        <div class="form-group position-relative mb-0">
+                          <button type="submit" class="position-absolute bg-white border-0 p-0"><i class="o-search-magnify-1 text-gray"></i></button>
+                          <input type="search" placeholder="Search here..." class="form-control form-control-sm border-0 no-shadow pl-4">
+                        </div>
+                      </form>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2">
+                      <div class="field-textarea">
+                            <h6>Status</h6>
+                            <select>
+                              <option>Active</option>
+                              <option>De-Active</option>
+                            </select>
+                      </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="whiteBg mt15 radius10">
+              <div class="card table-responsive">                          
+                    <table class="table table-striped-bg table-striped table-hover card-text firstRowBlue">
+                      <thead>
+                        <tr>
+                          <th>Invoice#</th>
+                          <th>Date</th>
+                          <th>Amount</th>
+                          <th>Payment Method</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                            <td>INV-00012</td>
+                            <td>Mar-21-2019</td>
+                            <td>$250.00</td>
+                            <td>Paypal</td>
+                            <td>Invoice Payments</td>
+                          </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class="pagiList">
+                      <h4>Showing 1 to 10 of 28 entries</h4>
+                  </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class="customPagination">
+                    <ul>
+                      <li><a href="javascript:;"><i class="fas fa-arrow-left"></i> Prev</a></li>
+                      <li><a href="javascript:;">1</a></li>
+                      <li><a href="javascript:;">2</a></li>
+                      <li><a href="javascript:;">3</a></li>
+                      <li><a href="javascript:;">...</a></li>
+                      <li><a href="javascript:;">20</a></li>
+                      <li><a href="javascript:;">21</a></li>
+                      <li><a href="javascript:;">Next <i class="fas fa-arrow-right"></i></a></li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+<!-- Delete Content -->
+<div id="delete" class="modal fade delete-file" role="dialog">
+  <div class="modal-dialog modal-md modal-dialog-centered">
+
+    <!-- Delete Content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>DELETE ROLE</h3>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to delete <strong>James Cameron</strong> record?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="myBtn orngBtn" data-dismiss="modal">Delete</button>
+        <button type="button" class="myBtn gryBtn" data-dismiss="modal">Cancle</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+    <!-- javaScript files-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-lite.js"></script>
+    <script src="js/front.js"></script>
+
+<script>
+   $('.texteditor').summernote({
+        placeholder: 'Description',
+        tabsize: 2,
+        height: 350
+      });
+ </script>
+
+  </body>
+</html>

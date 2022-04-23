@@ -1,0 +1,25 @@
+
+.demo-4 {
+	--color-text: #fff;
+	--color-bg: #101010;
+	--color-link: #fe0e55;
+	--color-link-hover: #fff;
+	--color-info: #333;
+	--color-title: #fff;
+	--color-subtitle: #fff;
+	--color-subtitle-bg: #fe0e55;
+
+}
+
+@media screen and (max-width: 55em) {
+	.content__title {
+		font-size: 3.5em;
+	}
+	.content__subtitle {
+		font-size: 0.85em;
+	}
+	.demo-4 {
+		background-position: 50% 20em;	
+	}
+}
+
