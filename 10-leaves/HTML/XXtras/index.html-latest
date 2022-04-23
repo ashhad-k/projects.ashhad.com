@@ -1,0 +1,557 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- Meta Tags -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="10 Leaves" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
+
+<!-- Resrouces -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/10leaves.css">
+<link rel="stylesheet" href="css/jquery.fullPage.css">
+<link rel="stylesheet" href="fontawsome/font-awesome.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<!--<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900" rel="stylesheet">-->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+<title>10 Leaves</title>
+</head>
+<body  id="top">
+  <div class="loader" id="loader">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+<div class="search">
+  <button id="btn-search-close" class=" secondary-bg noborder btn--search-close" aria-label="Close search form"><img src="img/close-menu.png"></button>
+  <form class="search__form" action="">
+    <input class="search__input" name="search" type="search" placeholder="Search here" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+    <span class="search__info">Type your search & press ENTER to search or press ESC to close</span>
+  </form>
+</div>
+<div class="overlay hide">
+  <ul class="sidebar">
+      <li><a id="collapse-sidebar" class="togglemenu" href="index.html" title=""><img src="img/logo.svg"  width="250px"/></a></li>
+      <li><a href="landing.html">DIFC</a></li>
+      <li><a href="#">AGDM</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="services.html">SERVICES</a></li>
+      <li><a href="publications.html">PUBLICATIONS</a></li>
+      <li><a href="funds.html">Funds</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </div>
+  <div class="header">
+    <div class="menu-toggle pull-left"><a id="collapse-sidebar" class="togglemenu" href="#" title=""><img src="img/bar-menu.png"></a></div>
+    <div class="top-logo pull-left"><a href="index.html"><img src="img/logo.svg" width="250" height="80px" /></a></div>
+    <div class="top-nav-section">
+      <ul class="topnav">
+        <li><a href="index.html" class="active">HOME</a></li>
+        <li><a href="landing.html">DIFC</a></li>
+        <li><a href="#">AGDM</a></li>
+        <li><a href="about.html" >ABOUT</a></li>
+        <li><a href="services.html">SERVICES</a></li>
+        <li><a href="publications.html">PUBLICATIONS</a></li>
+        <li><a href="funds.html">Funds</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </div>
+  <div class="rightcorner">
+    <div class="share-icon"><a href="#"><img src="img/share-light.png" ></a>
+      <ul class="topsocial hide">
+        <li><a href="#" title="Facebook" data-toggle="tooltip" data-placement="bottom" ><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#" title="Twitter" data-toggle="tooltip" data-placement="bottom" ><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#" title="LinkedIn" data-toggle="tooltip" data-placement="bottom" ><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="#" title="Google+" data-toggle="tooltip" data-placement="bottom" ><i class="fa fa-google-plus"></i></a></li>
+        <li><a href="#" title="Youtube" data-toggle="tooltip" data-placement="bottom" ><i class="fa fa-youtube"></i></a></li>
+      </ul>
+    </div>
+    <div class="searchbox" id="btn-search"><a href="#"><img src="img/search-ico.png"></a></div>
+  </div>
+</div>
+<div class="mainscreen" id="fullpage">
+  <div class="section introduction" id="section0"> 
+    <div class="col-1 sidetextmenu"> 
+      <!-- Share anchor -->
+      <div class="share-anchor"> <a href=""><img src="img/share-light.png" /></a> </div>
+      <h6>INTRODUCTION</h6>
+    </div>
+    <div class="financial bigboxes mob-hide">
+        <div class="squarebox tc">
+          <h4 class="font-l">I am looking for</h4>
+          <span class="spacer"></span>
+          <h2 class="font-l">Dubai International<br>Financial Centre</h2>
+          <p class="font-20 font-l">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="" class="btn primary-btn">Get Started<img src="img/btn-arrow.png"></a> </div>
+      </div>
+      <div class="global bigboxes mob-hide">
+        <div class="squarebox tc">
+          <h4 class="font-l">I am looking for</h4>
+          <span class="spacer"></span>
+          <h2 class="font-l">Abu Dhabi<br>Global Market</h2>
+          <p class="font-20 font-l">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="" class="btn secondary-btn">Get Started<img src="img/btn-arrow.png"></a> </div>
+      </div>
+      <div class="mousescroll"><a href="#aboutus10leaves" class="font-l"><img src="img/scroll-down.gif" width="24px" height="50px"><br>
+        Scroll to Explore</a></div>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide w100hvh">
+              <div class="financial bigboxes">
+                  <div class="squarebox tc">
+                    <h4 class="font-l">I am looking for</h4>
+                    <span class="spacer"></span>
+                    <h2 class="font-l">Dubai International<br>Financial Centre</h2>
+                    <p class="font-20 font-l">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="" class="btn primary-btn">Get Started<img src="img/btn-arrow.png"></a> </div>
+                </div>
+        </div>
+        <div class="swiper-slide w100hvh">
+              <div class="global bigboxes">
+                  <div class="squarebox tc">
+                    <h4 class="font-l">I am looking for</h4>
+                    <span class="spacer"></span>
+                    <h2 class="font-l">Abu Dhabi<br>Global Market</h2>
+                    <p class="font-20 font-l">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="" class="btn secondary-btn">Get Started<img src="img/btn-arrow.png"></a> </div>
+                </div>
+            
+        </div>
+        </div>
+        <div class="swiper-button-next swiper-button-black"></div>
+        <div class="swiper-button-prev swiper-button-black"></div>
+        
+        
+        </div>
+
+
+
+
+
+
+    
+  </div>
+  <div class="section about10leaves" id="section1">
+    <div class="col-1 sidetextmenu"> 
+      <!-- Share anchor -->
+      <div class="share-anchor"> <a href=""><img src="img/share-light.png" /></a> </div>
+      <h6>ABOUT 10 LEAVES</h6>
+    </div>
+    <div class="container-fluid goldenratio-spacing" id="about">
+      <div class="container" id="about10leaves">
+       <div class="row justify-content-around">
+        <div class="col-lg-10 col-md-12 col-sm-12 tc">
+            <h2 class="font-30 font-n font-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+            <span class="spacer headingtext"></span>
+            <div class="empty">&nbsp;</div>
+          </div>
+          <div class="col-lg-5 col-md-12 col-sm-12 order-lg-2 hide-md">
+            <div class="empty">&nbsp;</div>
+            <img src="img/about-image.png" class="centerimage desk-auto mob-100" />
+            <div class="empty">&nbsp;</div>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12">
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+            <div class="empty">&nbsp;</div>
+            <div class="note-section col-12"> <span class="col-1 pull-left"><img src="img/share-dark.png" /></span>
+              <p class="col-11 pull-left font-20">Some <a href="#" class="font-n" >stats will be shown here</a>, 787 lorem ipsum dolor sit met</p>
+            </div>
+            <div class="note-section col-12"> <span class="col-1 pull-left"><img src="img/share-dark.png" /></span>
+              <p class="col-11 pull-left font-20">Some <a href="#" class="font-n">stats will be shown here</a>, 787 lorem ipsum dolor sit met</p>
+            </div>
+            <div class="empty">&nbsp;</div>
+            <a href="" class="btn secondary-btn">Explore More <img src="img/btn-arrow.png"></a>
+    </div>
+  </div>
+      </div>
+    </div>
+  </div>
+  <div class="section whatweoffer-section circle-slider " id="section2">
+    <div class="col-1 sidetextmenu"> 
+      <!-- Share anchor -->
+      <div class="share-anchor"> <a href=""><img src="img/share-light.png" /></a> </div>
+      <h6>WHAT DO WE OFFER</h6>
+    </div>
+    <div class="container-fluid goldenratio-topspacing" id="whatwedooffer">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 tc row">
+          <div class="col-lg-2 col-md-12 col-sm-12 offset-lg-1 whatdo-carouseltext">
+            <ul class="whatdolist fp-slidesNav">
+              <li><a href="#"class="active">COMPLIANCE</a></li>
+              <li><a href="#">AUTHORISATION</a></li>
+              <li><a href="#">CFO</a></li>
+              <li><a href="#">HR</a></li>
+              <li><a href="#">LEGAL</a></li>
+              <li><a href="#">WEBMARKETING</a></li>
+              <li><a href="#">TRAINING</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-7 col-md-12 col-sm-12 ml-md-auto mr-md-auto circle-slider-bg">
+            <div class="slidersection tc">
+              <div class="slide" id="slide1">
+                <div class="slide-content"> <img src="img/compliance.png" />
+                  <div class="empty">&nbsp;</div>
+                  <h4>Compliance</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <div class="tc">
+                    <div class="fp-controlArrow fp-next"><img src="img/btn-arrow-left.png"></div>
+                    <div class="fp-controlArrow fp-prev"><img src="img/btn-arrow.png"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide" id="slide2">
+                <div class="slide-content"> <img src="img/compliance.png" />
+                  <div class="empty">&nbsp;</div>
+                  <h4>Authorisation </h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <div class="tc">
+                    <div class="fp-controlArrow fp-next"><img src="img/btn-arrow-left.png"></div>
+                    <div class="fp-controlArrow fp-prev"><img src="img/btn-arrow.png"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-12 col-sm-12 order-3 position-bottom"> <span><a href="" class="btn secondary-btn">Explore More <img src="img/btn-arrow.png"></a></span> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section publications-section " id="section3">
+    <div class="col-1 sidetextmenu"> 
+      <!-- Share anchor -->
+      <div class="share-anchor"> <a href=""><img src="img/share-light.png" /></a> </div>
+      <h6>PUBLICATIONS</h6>
+    </div>
+    <div class="container-fluid goldenratio-topspacing" id="whatwedooffer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 tc">
+            <h2 class="font-30 font-n font-dark col-lg-10 ml-md-auto mr-md-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h2>
+            <span class="spacer secondary-bg"></span> </div>
+        </div>
+      </div>
+      <div class="container-fluid goldenratio-topspacing whatweoffer" >
+        <div class="nav nav-tabs-offer desk-hide"><a  href="#1" data-toggle="tab" class="">Latest</a><a href="#2" data-toggle="tab" class="active ">Featured</a><a href="#3" data-toggle="tab"  class="">eBooks</a></div>        
+        <div class="tab-content">
+          <div class="tab-pane active row" id="1">
+            <div class="col-lg-3 col-md-3 col-sm-12 tc white-bg"> <img src="img/whatweoffer-sample.png">
+              <h3><a href="#"  class="font-25 font-dark font-l">Loremasdmet elit sed do tempor</a></h3>
+              <p class="font-16 font-dark font-l">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+              <a href="" class="secondary-text font-l m10-0">READ MORE</a> </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 tc white-bg"> <img src="img/whatweoffer-sample2.png">
+              <h3><a href="#"  class="font-25 font-dark font-l">Loremasdmet elit sed do tempor</a></h3>
+              <p class="font-16 font-dark font-l">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+              <a href="" class="secondary-text font-l m10-0">READ MORE</a> </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 tc white-bg"> <img src="img/whatweoffer-sample.png">
+              <h3><a href="#"  class="font-25 font-dark font-l">Loremasdmet elit sed do tempor</a></h3>
+              <p class="font-16 font-dark font-l">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+              <a href="" class="secondary-text font-l m10-0">READ MORE</a> </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 tc white-bg"> <img src="img/whatweoffer-sample2.png">
+              <h3><a href="#"  class="font-25 font-dark font-l">Loremasdmet elit sed do tempor</a></h3>
+              <p class="font-16 font-dark font-l">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+              <a href="" class="secondary-text font-l m10-0">READ MORE</a> </div>
+          </div>
+          <div class="tab-pane" id="2">
+            <div class="col-lg-3 col-md-3 col-sm-12 tc white-bg"> <img src="img/whatweoffer-sample2.png">
+              <h3><a href="#"  class="font-25 font-dark font-l">Lorem ipsum dolor sit amet elit sed do tempor</a></h3>
+              <p class="font-16 font-dark font-l">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+              <a href="" class="secondary-text font-l m10-0">READ MORE</a> </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 tc white-bg"> <img src="img/whatweoffer-sample.png">
+              <h3><a href="#"  class="font-25 font-dark font-l">Lorem ipsum dolor sit amet elit sed do tempor</a></h3>
+              <p class="font-16 font-dark font-l">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+              <a href="" class="secondary-text font-l m10-0">READ MORE</a> </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 tc white-bg"> <img src="img/whatweoffer-sample2.png">
+              <h3><a href="#"  class="font-25 font-dark font-l">Lorem ipsum dolor sit amet elit sed do tempor</a></h3>
+              <p class="font-16 font-dark font-l">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+              <a href="" class="secondary-text  font-l m10-0">READ MORE</a> </div>
+              <div class="col-lg-3 col-md-3 col-sm-12 tc white-bg"> <img src="img/whatweoffer-sample.png">
+              <h3><a href="#"  class="font-25 font-dark font-l">Lorem ipsum dolor sit amet elit sed do tempor</a></h3>
+              <p class="font-16 font-dark font-l">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+              <a href="" class="secondary-text  font-18 font-l m10-0">READ MORE</a> </div>
+            </div>
+          <div class="tab-pane" id="3">
+            <div class="col-lg-3 col-md-3 col-sm-12 tc white-bg"> <img src="img/whatweoffer-sample.png">
+              <h3><a href="#"  class="font-25 font-dark font-l">Lorem ipsum  do tempor</a></h3>
+              <p class="font-16 font-dark font-l">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+              <a href="" class="secondary-text font-18 font-l m10-0">READ MORE</a> </div>
+              <div class="col-lg-3 col-md-3 col-sm-12 tc white-bg"> <img src="img/whatweoffer-sample2.png">
+              <h3><a href="#"  class="font-25 font-dark font-l">Lorem ipsum  do tempor</a></h3>
+              <p class="font-16 font-dark font-l">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+              <a href="" class="secondary-text font-18 font-l m10-0">READ MORE</a> </div>
+              <div class="col-lg-3 col-md-3 col-sm-12 tc white-bg"> <img src="img/whatweoffer-sample.png">
+              <h3><a href="#"  class="font-25 font-dark font-l">Lorem ipsum  do tempor</a></h3>
+              <p class="font-16 font-dark font-l">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+              <a href="" class="secondary-text font-18 font-l m10-0">READ MORE</a> </div>
+              <div class="col-lg-3 col-md-3 col-sm-12 tc white-bg"> <img src="img/whatweoffer-sample2.png">
+              <h3><a href="#"  class="font-25 font-dark font-l">Lorem ipsum  do tempor</a></h3>
+              <p class="font-16 font-dark font-l">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+              <a href="" class="secondary-text font-18 font-l m10-0">READ MORE</a> </div>
+            </div>
+        </div>
+        <div class="spacerhight hidden-xs">&nbsp;</div>
+        <div class="col-lg-12 col-md-12 col-sm-12 pd0 nav nav-tabs-offer mob-hide"><a  href="#1" data-toggle="tab" class="">Latest</a><a href="#2" data-toggle="tab" class="active ">Featured</a><a href="#3" data-toggle="tab"  class="">eBooks</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="section happening  fp-auto-height " id="section4">
+    <div class="col-1 sidetextmenu"> 
+      <!-- Share anchor -->
+      <div class="share-anchor"> <a href=""><img src="img/share-light.png" /></a> </div>
+      <h6>WHAT'S HAPPENING</h6>
+    </div>
+    <div class="container-fluid goldeanratio-spacing" id="happening">
+      <div class="container2">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 pd0">
+            <div class="whitebox boxes  pd40">
+              <h2>Lorem ipsum dolor sit amet elit sed do eiusmod tempor</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
+                <br>
+                Ut enim ad minim veniam, quis nostrud exercitation. ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>
+                <br>
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 pd0">
+            <div class="bluebox boxes">
+              <h4 class="font-20">LINKEDIN FEEDS <i class="fa fa-linkedin fa-2x pull-right"></i></h4>
+              <p class="font-18">Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+              <div class="tweetext font-22 font-l">@Tenleaves<br />
+                <span class="font-18 font-l">2 November 2017</span></div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12  pd0">
+            <div class="Eventbox boxes">
+              <h4 class="font-20">EVENTS </h4>
+              <div class="tweetext font-white  font-22 font-l">Lorem ipsum dolor sit amet<br>
+                elit sed do <br />
+                <span class="font-18 font-l"> <i class="fa fa-calendar-o"></i> 2 November 2017</span></div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 pd0">
+            <div class="bluebox2 boxes">
+              <h4 class="font-20">TWITTER FEEDS <i class="fa fa-twitter fa-2x pull-right"></i></h4>
+              <p>Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+              <div class="tweetext font-22 font-l">@Tenleaves<br />
+                <span class="font-18 font-l">2 November 2017</span></div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12  pd0">
+            <div class="videobox boxes">
+              <h4 class="font-20">VIDEOS </h4>              
+              <div class="playavis font-white"><iframe class="happeingvideo" width="100%" height="500px" src="https://www.youtube.com/embed/dp3NK7TMMzw?controls=0&showinfo=0&rel=0&autoplay=0&loop=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 pd0">
+            <div class="promotoionbox boxes">
+              <h4 class="font-20">PROMOTION </h4>
+              <div class="tweetext  font-22 font-l font-white">Any article or ePub you want
+                to promote here</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-12 col-sm-12  pd0">
+            <div class="greybox boxes">
+              <h4 class="font-dark font-20">FINANCE NEWS <i class="fa fa-newspaper-o fa-2x pull-right"></i></h4>             
+             
+              <dt class="font-16"><i class="fa fa-calendar-o"></i> 2 November 2017</dt>
+              <dd class="font-20 secondary-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</dd>
+              
+              <dt class="font-16"><i class="fa fa-calendar-o"></i> 4 November 2017</dt>
+              <dd class="font-20 secondary-text">Lorem ipsum dolor sit amet, consectetur adipiscing</dd>
+                
+              <dt class="font-16"><i class="fa fa-calendar-o"></i> 6 November 2017</dt>
+              <dd class="font-20 secondary-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  aliqua</dd>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section fp-auto-height lookingfor" id="section5">
+    <div class="smallcontent">
+      <div class="container-fluid pd0">
+        <div class="col-12">
+          <div class="row">
+            <div class="col-lg-1 hidden-xs">&nbsp;</div>
+            <div class="col-lg-11 col-md-12">
+              <div class="spacerhight">&nbsp;</div>
+              <div class="spacerhight">&nbsp;</div>
+              <h3 class="font-50 font-dark font-b">Looking to form a business in UAE?</h3>
+              <p><a href="#"  class="font-30 font-dark">Schedule a complimentry tour</a></p>
+              <div class="spacerhight">&nbsp;</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section fp-auto-height footer-section" id="section5">
+    <div class="footer">
+      <div class="footercontent">
+        <div class="footer-spacer">&nbsp;</div>
+        <div class="container-fluid footer-side-border pd0 animatedParent animateOnce">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 row">
+              <div class="col-lg-2 col-md-6 col-sm-12 animated fadeInLeft delay-250">
+                <div class="spacerhight">&nbsp;</div>
+                <ul>
+                  <li>
+                    <h4>DIFC services</h4>
+                  </li>
+                  <li><a href="#">Service 1</a></li>
+                  <li><a href="#">Service 2</a></li>
+                  <li><a href="#">Service 3</a></li>
+                  <li><a href="#">Service 4</a></li>
+                  <li><a href="#">Service 5</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-2 col-md-6 col-sm-12 animated fadeInRight delay-250">
+                <div class="spacerhight">&nbsp;</div>
+                <ul>
+                  <li>
+                    <h4>ADGM services</h4>
+                  </li>
+                  <li><a href="#">Service 1</a></li>
+                  <li><a href="#">Service 2</a></li>
+                  <li><a href="#">Service 3</a></li>
+                  <li><a href="#">Service 4</a></li>
+                  <li><a href="#">Service 5</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-2 col-md-6 col-sm-12 animated fadeInLeft delay-250">
+                <div class="spacerhight">&nbsp;</div>
+                <ul>
+                  <li>
+                    <h4>CONTACT US</h4>
+                  </li>
+                  <li>Contact us today to schedule a complimetry tour</li>
+                  <li>&nbsp;</li>
+                  <li><a href="#"  class="secondary-text">Get In Touch</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12 animated fadeInRight delay-250">
+                <div class="spacerhight">&nbsp;</div>
+                <ul>
+                  <li>
+                    <h4>SUBSCRIBE NOW</h4>
+                  </li>
+                  <li>Be the first to know about 10 Leaves newsest offerings.</li>
+                  <li>&nbsp;</li>
+                  <li><a href="#"  class="secondary-text">Subscribe Now</a></li>
+                </ul>
+              </div>
+              <div class="spacerheight empty col-lg-12">&nbsp;</div>
+              <div class="col-lg-3 col-md-6 col-sm-12 ">
+                <div class="spacerhight">&nbsp;</div>
+                <ul>
+                  <li><span class="pull-left"><img src="img/email-ico.png" /></span><span class="pull-left">
+                    <h5>Email us at</h5>
+                    <a href="#"  class="secondary-text">info@10leaves.com</a></span></li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="spacerhight">&nbsp;</div>
+                <ul>
+                  <li><span class="pull-left"><img src="img/tel-ico.png" /></span><span class="pull-left">
+                    <h5>Call us at</h5>
+                    <a href="tel:+971528888888"  class="font-white">+971 52 8888 888</a></span></li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="spacerhight">&nbsp;</div>
+                <ul>
+                  <li class="font-white"><span class="pull-left"><img src="img/tel-ico.png" /></span><span class="pull-left">4600 E Washington St<br />
+                    Phoenix, Arizona</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12 socialmedia">
+                <div class="spacerhight">&nbsp;</div>
+                <ul>
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                  <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <p align="left">© 2017 - 10 LEAVES. All rights reserved. <a href="" class="secondary-text">Terms & Conditions</a> <span class="pull-right"><img src="img/logo.svg"  width="150px"/></span></p>
+      </footer>
+    </div>
+  </div>
+</div>
+<a href="contact.html" class="contact-fixed"><img src="img/contact-ico.png"> CONTACT</a>
+<a href="#introduction" class="gotop top-mob-hide"> <i class="fa fa-long-arrow-up font-white "></i></a>
+<a href="#top" class="gotop top-desk-hide"> <i class="fa fa-long-arrow-up font-white "></i></a>
+
+
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+<script type="text/javascript"  src="js/jquery-3.2.1.slim.min.js"></script>
+<script type="text/javascript"  src="js/popper.min.js"></script>
+<script type="text/javascript"  src="js/bootstrap.min.js"></script>
+<script type="text/javascript"  src="js/jquery.fullPage.js"></script>
+<script type="text/javascript"  src="js/scrolloverflow.js"></script>
+<script type="text/javascript"  src="js/jquery.touch.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+
+<script src="js/swiper.min.js"></script>
+
+<script>
+       var swiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+  </script>
+
+<script>
+	$(document).ready(function() {
+		$('#fullpage').fullpage({
+			verticalCentered: true,
+			anchors: ['introduction', 'aboutus10leaves', 'whatdoweoffer', 'publications', 'whatshappening', 'lookingfor', 'contact'],
+			menu: '#menu',
+			responsiveWidth: 1200,
+      navigation: true,
+			navigationPosition: 'right',
+	});
+  });
+  </script>
+
+
+
+<script>
+  function load(url) {
+    // display loading image here...
+    document.getElementById('loader').visible = true;
+    // request your data...
+    var req = new XMLHttpRequest();
+    req.open("POST", url, true);
+
+    req.onreadystatechange = function () {
+        if (req.readyState == 4 && req.status == 200) {
+            // content is loaded...hide the gif and display the content...
+            if (req.responseText) {
+                document.getElementById('content').innerHTML = req.responseText;
+                document.getElementById('loadingImg').visible = false;
+            }
+        }
+    };
+    request.send(vars);
+}
+</script>
+
+</html>
