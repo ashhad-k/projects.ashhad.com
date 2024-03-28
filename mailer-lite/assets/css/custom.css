@@ -1,0 +1,199 @@
+/* ===================================*/
+/* bootstrap overrides */
+
+/* grid*/
+@media (min-width: 1200px) {
+  .container-xxl {
+    max-width: 1440px !important;
+  }
+}
+
+/* btn */
+.btn-group-lg > .btn, .btn-lg {
+  --bs-btn-padding-y: 0.8rem;
+  --bs-btn-padding-x: 1.6rem;
+  --bs-btn-font-size: 1.20rem;
+}
+
+
+/* ===================================*/
+/* color variables*/ :root {
+  --txt-950: #000000;
+  --txt-700: #4D4D4D;
+  --txt-500: #808080;
+  --txt-300: #B3B3B3;
+  --txt-100: #E5E5E5;
+  --txt-0: #fff;
+    
+    
+  --green-50: #E2FEF0;
+  --green-100: #C5FCE1;
+  --green-200: #8AFAC4;
+  --green-300: #50F7A6;
+  --green-400: #15F488;
+  --green-500: #09C269;
+  --green-600: #079C54;
+  --green-700: #05753F;
+  --green-800: #044E2A;
+  --green-900: #022715;
+  --green-950: #01130B
+}
+
+
+/* ===================================*/
+/* default tags */
+body {
+  color: var(--txt-700);
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+   background: url("../img/bg/fusion2.svg") no-repeat center 100px ;
+    background-size: cover;
+
+}
+h1, h2, h3, h4, h5, h6 {
+  color: var(--txt-950)
+}
+h1 {
+  font-weight: 700;
+  font-size: 4rem;
+  letter-spacing: -.025em;
+  line-height: 1.25;
+}
+P {
+  line-height: 1.625;
+  color: var(--txt-700);
+    margin-bottom: 0.5rem;
+}
+
+
+/* ===================================*/
+/* custom classes*/
+
+section.hero{   background: url("../img/bg/gradient.svg") repeat-x bottom ; padding-bottom: 2rem;}
+section.hero .top1{ padding-top: 4rem; padding-bottom: 4rem}
+section.hero h1{ padding-left: 2rem; padding-right: 2rem;}
+
+
+.box1 { position: relative}
+.box1:not(:only-child) {
+  margin-bottom: 3rem;
+  margin-right: 1rem;
+  margin-left: 1rem
+}
+
+
+.box1:hover{}
+.box1 > h5 > span{  border-radius: 4px;  padding: 6px 8px; margin-left: -6px;  transition: 0.5s ease; background-color: transparent;}
+.box1:hover > h5 > span{ background-color: var(--green-100);}
+section .box1:hover > h5 > span{ background-color: var(--txt-0);}
+
+.box1:hover > .card{}
+
+.box1:only-child {
+    margin-bottom: 3rem;
+  margin-right: 1rem;
+  margin-left: 1rem}
+
+.box1 > h5 {
+  font-weight: 600;
+  font-size: 1.0rem;
+/*  position: relative;*/
+  padding-right: 30px;
+}
+.box1 > h5 a{ color: var(--txt-950); text-decoration: none;}
+
+.box1 > h5::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  background: url("../img/icons/arrow-right-20x20.svg");
+  display: inline-block;
+  vertical-align: text-bottom;
+  transition: transform 0.3s ease;
+}
+.box1:hover h5::after {
+  transform: translate(6px, 00px);
+}
+
+/* box1 card*/
+.box1 > .card {
+  box-shadow: 0px 4px 34px 0px rgba(2, 51, 28, 0.10);
+  border: none;
+}
+
+.box1 > .card > .card-body{ text-align: center;}
+
+.box1.email{margin-bottom: 3rem}
+
+
+/* ===================================*/
+/* copied few styles from mailerlite.com to keep sizing consistent */
+
+h1,.h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -.025em;
+}
+
+
+/* ===================================*/
+/* media queries */
+
+@media (min-width: 768px) {
+    h1,.h1 {
+        font-size:3rem
+    }
+}
+
+@media (min-width: 1024px) {
+    h1,.h1 {
+        font-size:3rem
+    }
+    .box1:last-child { margin-bottom:1rem }
+    
+}
+
+@media (max-width: 576px) {
+    .create1 {display: none;}
+    .desc{ padding-left: 2rem; padding-right: 2rem;}
+   
+   
+}
+
+@media (max-width: 768px) {
+         .cta{ display: flex; justify-content: center}
+   
+}
+
+@media (max-width: 991.98px) {
+    
+    
+
+}
+
+
+@media (min-width: 1280px) {
+    
+    h1,.h1 {
+        font-size:4rem
+    }
+    
+    .box1.email{margin-bottom: 6rem}
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    
+    .box1 > .card .card-body{ min-height: 250px;  display: flex; align-items: center; justify-content: center;}
+    
+    
+}
+
+
+
+
+
