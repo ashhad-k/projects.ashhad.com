@@ -1,0 +1,96 @@
+
+/*--------------------------------------------------------------
+# AI Doodle CSS 1.0 
+# ai-main.css
+#
+# structure
+# |-- ai-main.css
+# |----| mode [lite/dark]
+# |----| type [float/pinned]
+# |----| lang [eng/ar]
+#
+#
+# 
+--------------------------------------------------------------*/
+
+:root {
+    /* == premetives colors ==*/
+
+    --ai-blue-500:#4361EE;
+    --ai-blue-400:#61BFF4;
+    --ai-blue-300:#81cfff; 
+   
+    --ai-dark-600:#444;
+    --ai-dark-500:#444;
+    --ai-dark-400:#666;
+    --ai-time-stamp:#888;
+    --ai-placeholder:var(--ai-placeholder);
+    
+    --ai-white-200:#E8EBF0;
+    --ai-white-150:#F3F5F6;
+    --ai-white-100:#ffffff;
+    
+    /*subtle indicators*/
+    --ai-subtle-danger:#FFE4E0;
+    --ai-subtle-success:#E0FFE5;
+    --ai-subtle-warning:#FFFCE0;
+    
+    /*normal indicators*/
+    --ai-danger:#EE4343;
+    --ai-success:#43EE7D;
+    --ai-warning:#EBEE43;
+    
+    /* == semantic colors on lite theme ==*/
+    
+    --ai-primary:#3C096C;
+    --ai-primary2:#5A189A;
+    --ai-primary3:#7B2CBF;
+  
+    --ai-surface:#5A189A;
+    --ai-surface2:#3C096C;
+    --ai-surface3:#2D3740;
+    
+    --ai-negative:var(--ai-white-100);
+   
+    --ai-text:var(--ai-white-100);
+    
+}
+
+
+/* == scrollbar == */
+#chat-messages::-webkit-scrollbar-track
+{
+	background-color: #10002B;
+}
+
+
+
+.chat-container{background-color:#15191C}
+/*.chat-messages{background-color:#15191C}*/
+.chat-messages {
+    border-top: 1px solid  var( --ai-surface3);
+    border-bottom: 1px solid  var( --ai-surface3);
+}
+.chat-footer{background-color:#000000}
+
+.chat-messages .system-message{ background:#5A189A}
+
+
+/* dark text*/
+.chat-footer .ai-tags > div{ color: var(--ai-dark-500);}
+
+/* white text - prevent overwrite from other sites*/
+.chat-messages .user-message, 
+.chat-messages P, .chat-messages h1, .chat-messages h2, .chat-messages h3, .chat-messages h4, .chat-messages h5, .chat-messages h6{ color: var(--ai-white-100)!important;}
+
+/* white bg*/
+.dot {
+    background-color: var(--ai-white-100);
+}
+
+.chat-messages .message-details > img{ background:var(--ai-primary2) }
+.chat-messages .message-details .msg-feedback{background: #C77DFF}
+
+.chat-header {
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.40);
+}
