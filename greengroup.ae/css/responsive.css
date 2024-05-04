@@ -1,0 +1,81 @@
+@media(max-width:1199px){.mobilemenu li,.mobilemenu ul,.projectcontent ul{display:block!important}.mobilemenu,.topnav{background:rgba(0,0,0,.90)}#mmtoggle span,.mobilemenu{transition:.4s ease-in-out}#mmtoggle span,.projectcontent li,header li a,video{width:100%}#eleventhsection h2,#fifthsection h2,#secondsection h2,.herosection h1{font-size:60px}.purposebox h5,.slidetwobox h5{font-size:28px!important}.p-5{padding:25px!important}p{font-size:18px!important;line-height:24px}.mt-5.pt-5{padding-top:0!important;margin-top:0!important}#fourthsection p{padding:25px 0!important}.sectiontitle{font-size:50px!important}.imagehead{margin-top:150px!important}#mmtoggle span:nth-child(2),.bigspacer,.emptyspacer{display:none!important}#ninethsection .col-md-8 img{margin:50px 0!important;max-height: 55%;}.nav-pills .nav-link{padding:10px 0!important}.tab-content img{height:inherit!important}.tab-content{border-top:1px solid #a95f43;padding-top:20px!important}.slidebox .slider-caption h5{font-size:28px!important;max-width:100%!important;left:15px!important}.slidetwobox h5{margin-top:20px!important}.slidertwo .slick-dots{right:0;bottom:20px;width:80%;left:35px}.slidetwobox p{padding-bottom:100px}footer h5,footer small,footer ul li a{text-align:left!important;display:block!important}#newheading img,.socialicons a{margin:0!important}.socialicons{text-align:left!important}.footernav{margin:20px 0}.footernav ul li a:after{display:none}.mobilemenu li{width:100%}.mobilemenu{margin-left:-100%;position:fixed;width:90%;left:0;top:72px;height:100%}.mobilemenu.openmenu{margin-left:0}header li a{padding:10px 0;display:block}header li a:hover{color:#eaeaea!important}header ul li a:after{background:#f7e8d3;bottom:0}.topnav{padding:15px 0!important;z-index:99999999!important;background-color:rgba(0,0,0,.898)!important}.topnav img{height:42px}.btn-primary:hover{transform:scale(.9)}#mmtoggle{border:1px solid #eaeaea;width:32px;height:32px;background:0 0;position:fixed;right:20px;top:20px;display:block}#mmtoggle span{height:2px;background:#fff;display:table;margin:4px 0}#mmtoggle.clicked{background-color:rgba(0,0,0,.35)}#mmtoggle.clicked span:first-child{transform:rotate(45deg) translateX(3px);margin-left:-2px}#mmtoggle.clicked span:nth-child(3){transform:rotate(-45deg) translateX(3px);margin-left:-2px}video{height:100%;object-fit:cover;z-index:-100;background-position:50%;background-size:cover;margin:auto;position:absolute;top:-100%;bottom:-100%;left:-100%;right:-100%}header .btn-primary{background:0 0!important;color:#f7e8d3;margin-top:25px;transition:.3s ease-in-out!important}header .btn-primary:hover{border:2px solid #f7e8d3!important;transform:scale(.9)!important;color:#a95f43!important}.slidertwo img{max-height:70vh;object-fit: cover;}.projectsdetails{max-width:90%}.projectcontent{height:70%;overflow:auto;padding:30px}.projectsdetails img{max-height:30vh!important}.projectsdetails li{margin-bottom:15px}.projectbox{height:100vh}body{overflow-x:hidden!important}.sticktop.topnav{top:0!important;background: rgba(0,0,0,.898)!important;}.accordion-button, .accordion-button:focus{padding-left:0!important}footer.px-5{padding-left:30px!important}.bgvision .sectiontitle{position: static;}.innerbg{padding:0!important}.maskimg{display:none}.secondsection{height:100vh;position:absolute}.secondsection #newheading{position:fixed;opacity:1;transform:scale(.8);color:#fff}.purposebox{min-height:450px}#fourthsection h5{margin:50px 0 60px}.bgvision{padding:0!important}.bgvision video{width: 100%;height: 90vh;background: none!important;position: relative;z-index: -3!important;top: inherit;left: 0;}.imagehead2{max-width: 100%;width: 100%;min-width: 100%; transform: scale(1);}#tenthsection img{height:50vh}.masterminding h5{font-size:50px;left:30px!important}.close{background:#fff;color:#222;top:200px}.txtblock h2{font-size: 50px;}.footernav ul, .footernav ul li , .footernav ul li a{text-align: left!important; display: block; width: 100%!important;}body #secondsection h2{background:none!important}
+#mmtoggle:before{content:'';position: absolute; top:17px; left:7px; height: 2px; width: 17px; background-color: #FFFFFF;}
+#mmtoggle:after{content:'';position: absolute; top:10px; left:7px; height: 2px; width: 17px; background-color: #FFFFFF}
+#mmtoggle.clicked:before{transform:rotate(45deg) translate(-2px, -2px);}
+#mmtoggle.clicked:after{transform: rotate(-45deg) translate(-3px, 3px);}
+#thirdsection{background-position: center center;}
+#secondsection h2{transform: none!important;}
+.w-reponsive{width: 100%!important;min-width:100%!important;max-width:100%!important;}
+.slidertwo .slick-arrow{bottom: -30px;}
+.heading-lg{font-size:40px!important}
+.heading-sm{font-size:32px!important}
+.para-sm{font-size:20px}
+.purposebox{min-height: inherit; padding:30px}
+#fourthsection h5{margin:20px 0}
+.accordion-item .accordion-item button{font-size:26px!important}
+.accordion-item .accordion-item .accordion-body{padding:0;font-size:20px}
+.accordion-item .accordion-item .accordion-header .accordion-button:after {
+    position: absolute;
+    left: -40px;
+    top: 40px;
+}
+.accordion-item  .accordion-body {
+    margin-left: 20px!important;
+}
+.accordion-item .accordion-item  .accordion-body {
+    margin-left: 0px!important;
+}   
+#thirdsection{
+    height: inherit!important;
+}
+#fourteenthsection .col-md-3.w-reponsive-sm{
+    width: 33.33%!important;
+    min-width: 33.33%!important;
+    max-width: 33.33%!important;
+}
+#fourteenthsection .d-flex.w-reponsive-sm{
+    display: flex!important;
+}
+#eightsection .col-md-3{max-width: 50%;}
+.thinkbetterimg{max-width: 300px;}
+}
+@media (max-width:991px){
+    #tenthsection img{
+        object-fit: cover;
+    }
+    .teamcard img{max-height:230px}
+    .bgvision video{height:100%!important}
+}
+@media (max-width:568px){
+    #tenthsection img{
+        height:38vh!important;
+        object-fit: cover;
+    }
+    .slidertwo img{
+        max-height: 40vh;
+    }
+
+#fourteenthsection .col-md-3.w-reponsive-sm{
+    width: 100%!important;
+    min-width: 100%!important;
+    max-width: 100%!important;
+}
+#fourteenthsection .col-md-3.w-reponsive-sm img{
+    min-height: 400px;
+}
+#fourteenthsection .d-flex.w-reponsive-sm{
+    display: block!important;
+}
+    .w-reponsive-sm{width: 100%!important;min-width:100%!important;max-width:100%!important;display: block!important;}
+}
+@media (max-width:1400px){
+    .herosection video{ height: 100vh; object-fit:cover}
+}
+
+html {-webkit-text-size-adjust: none;}
+@media (max-width:991px) and (min-width:391px){
+    #tenthsection img {
+        height: 100vh!important;
+    }
+}  
+
