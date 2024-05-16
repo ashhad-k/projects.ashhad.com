@@ -144,9 +144,6 @@ h6 {
 
 p {
   color: var(--paragraph-color);
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
   margin-bottom: 10px;
 }
 
@@ -4073,6 +4070,12 @@ ul {
   background: var(--main-color);
 }
 
+
+.single-list-inner.style-check li:not(:empty){padding-left: 30px; position: relative; }
+.single-list-inner.style-check li .fa-check{position: absolute; left: 0px; top: 5px;} 
+
+
+
 .single-team-inner {
   background: #F4F8FF;
   position: relative;
@@ -4361,6 +4364,9 @@ ul {
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
+
+.single-work-inner .count-inner h2 img{ height: 40px}
+
 
 .single-work-inner .count-inner:after {
   content: "";
@@ -7334,8 +7340,9 @@ ul {
 
 .banner-area-4 .banner-inner .title {
   position: relative;
-  font-size: 60px;
+  font-size: 50px;
     line-height: 1.15;
+    letter-spacing: -2px;
 }
 
 .banner-area-4 .banner-inner .title .title-line {
@@ -8854,7 +8861,7 @@ ul {
 --------------------------------------------------------------*/
 
 .ai-agents{}
-.ai-agents .count-wrap{ text-align: center}
+.ai-agents .count-wrap{ text-align: center; margin-bottom: 20px;}
 .ai-agents > .col-lg-3{ padding-left: 6px; padding-right: 6px;}
 .ai-agents > .col-lg-3 .single-work-inner.style-two{ height: 100%}
 .ai-agents > .col-lg-3 ul{ font-size: 16px;}
