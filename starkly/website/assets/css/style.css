@@ -4365,13 +4365,13 @@ ul {
   transition: 0.4s;
 }
 
-.single-work-inner .count-inner h2 img{ height: 40px}
+.single-work-inner .count-inner h2 img{ height: 40px; margin-top: 16px;}
 
 
 .single-work-inner .count-inner:after {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 47%;
   left: 50%;
   height: 126px;
   width: 126px;
@@ -8875,7 +8875,9 @@ section.section-4 .ai-agents > .col:nth-child(2){ background:  url("../img/icon-
 section.section-4 .ai-agents > .col:nth-child(3){ background:  url("../img/icon-bg1.svg")  top center no-repeat; padding-top: 100px;} 
 section.section-4 .ai-agents > .col:nth-child(4){ background:  url("../img/icon-bg1.svg")  top center no-repeat; padding-top: 100px;} 
 
-
+.ai-agents .item{ padding: 20px;}
+.ai-agents .item UL{ font-size: 16px;}
+.ai-agents .item UL LI{ margin-bottom: 16px; border-bottom: 1px dotted #ccc;}
 
 /*--------------------------------------------------------------
 # CTA Last section - redefine.
