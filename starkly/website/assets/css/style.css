@@ -2381,7 +2381,8 @@ ul {
 }
 
 .sticky-active.navbar-area-3 {
-  background: var(--heading-color);
+/*  background: var(--heading-color);*/
+  background:  beige;
 }
 
 .sticky-active.navbar-area-3 .nav-container {
@@ -5036,13 +5037,16 @@ ul {
   bottom: 0;
 }
 
+.project-slider:hover{ cursor:grab}
+.project-slider:focus{ cursor:grabbing}
+
 .project-slider .owl-prev {
   position: absolute;
   left: -23px;
   top: 50%;
   margin-top: -100px !important;
-  visibility: hidden;
-  opacity: 0;
+/*  visibility: hidden;*/
+/*  opacity: 0;*/
 }
 
 .project-slider .owl-next {
@@ -5050,8 +5054,8 @@ ul {
   right: -30px;
   top: 50%;
   margin-top: -100px !important;
-  visibility: hidden;
-  opacity: 0;
+/*  visibility: hidden;*/
+/*  opacity: 0;*/
 }
 
 .project-slider:hover .owl-prev {
@@ -8859,7 +8863,7 @@ ul {
 /*--------------------------------------------------------------
 # AI Agents
 --------------------------------------------------------------*/
-
+.s-smartaiagents{ max-width: 1920px; overflow: hidden; margin: 0 auto}
 .ai-agents{}
 .ai-agents .count-wrap{ text-align: center; margin-bottom: 20px;}
 .ai-agents > .col-lg-3{ padding-left: 6px; padding-right: 6px;}
@@ -8878,6 +8882,11 @@ section.section-4 .ai-agents > .col:nth-child(4){ background:  url("../img/icon-
 .ai-agents .item{ padding: 20px;}
 .ai-agents .item UL{ font-size: 16px;}
 .ai-agents .item UL LI{ margin-bottom: 16px; border-bottom: 1px dotted #ccc;}
+
+
+
+.owl-carousel.owl-loaded{ display: block!important}
+.slider-control-round .owl-nav .owl-prev{margin-left: -10px;}
 
 /*--------------------------------------------------------------
 # CTA Last section - redefine.

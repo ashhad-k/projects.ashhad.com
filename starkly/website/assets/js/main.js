@@ -157,9 +157,9 @@
         $('.project-slider').owlCarousel({
             loop: true,
             margin: 0,
-            nav: false,
+            nav: true,
             dots: false,
-            smartSpeed: 1500,
+            smartSpeed: 1000,
             navText: [ leftArrow, rightArrow],
             responsive: {
                 0: {
@@ -172,10 +172,10 @@
                     items: 3
                 },
                 1200: {
-                    items: 4
+                    items: 2
                 },
                 1600: {
-                    items: 4
+                    items: 2
                 },
             }
         });
