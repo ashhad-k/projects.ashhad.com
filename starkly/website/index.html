@@ -11,11 +11,8 @@
 <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/css/animate.min.css">
 <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-<link rel="stylesheet" href="assets/css/custom-icon.css">
-<link rel="stylesheet" href="assets/css/nice-select.min.css">
-<link rel="stylesheet" href="assets/css/magnific.min.css">
 <link rel="stylesheet" href="assets/css/owl.min.css">
-<link rel="stylesheet" href="assets/css/slick.min.css">
+
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
@@ -42,20 +39,20 @@
             </button>
         </div>
         <div class="logo">
-            <a class="d-none d-lg-inline-block" href="index.html"><img src="assets/img/logo-dark.svg" alt="img"></a>
-            <a class="d-lg-none d-inline-block" href="index.html"><img src="assets/img/logo-dark.svg" alt="img"></a>
+            <a class="d-none d-lg-inline-block" href="#home"><img src="assets/img/logo-dark.svg" alt="StarklyAI.com"></a>
+            <a class="d-lg-none d-inline-block" href="#home"><img src="assets/img/logo-dark.svg" alt="StarklyAI.com"></a>
         </div>
-        <div class="nav-right-part nav-right-part-mobile">
-            <a class="search-bar-btn" href="#"><i class="fa fa-search"></i></a>
-        </div>
+       
         <div class="collapse navbar-collapse" id="Iitechie_main_menu">
             <ul class="navbar-nav menu-open text-lg-end">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
+<!--                <li><a href="#home">Home</a></li>-->
+                <li><a href="#about">About</a></li>
+                <li><a href="#ai-agents">Smart AI Agents</a></li>
+                <li><a href="#marketplace">Marketplace</a></li>
               
               
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="#process">How it works</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
         <div class="nav-right-part nav-right-part-desktop align-self-center">
@@ -70,7 +67,7 @@
 <div id="smooth-wrapper">
   <div id="smooth-content"> 
     <!-- banner area start -->
-    <div class="banner-area banner-area-4">
+    <div class="banner-area banner-area-4" id="home">
       <div class="bg-cover" style="background-image: url('./assets/img/banner/bg.jpg');">
           
           <div class="container">
@@ -97,10 +94,8 @@
       </div>
     </div>
     <!-- banner area end --> 
-    
-    <!-- pricing area start -->
-    <!-- solutions area start -->
-<div class="solutions-area pd-top-100 pd-bottom-60">
+ 
+<div class="solutions-area pd-top-100 pd-bottom-60" id="about">
   <div class="container">
     <div class="section-title text-center">
       <div class="row justify-content-center">
@@ -111,7 +106,7 @@
       </div>
     </div>
     <div class="row justify-content-center">
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6 pb-5">
         <div class="single-solution-inner style-two">
           <div class="thumb">
             <div class="media-left mb-3">
@@ -128,7 +123,7 @@
         </div>
       </div>
       <!--/1-->
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6 pb-5">
         <div class="single-solution-inner style-two">
           <div class="thumb">
             <div class="media-left mb-3">
@@ -145,7 +140,7 @@
         </div>
       </div>
       <!--/2-->
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6 pb-5">
         <div class="single-solution-inner style-two">
           <div class="thumb">
             <div class="media-left mb-3">
@@ -183,7 +178,7 @@
           <div class="col-lg-6 align-self-center order-lg-first">
             <div class="section-title mb-0">
               <p class="lead">Why StarklyAI Stands Out</p>
-              <h2 class="title mb-4"> <img src="assets/img/about/01.webp" alt="img"> Experience the Difference with Human-Augmented AI </h2>
+              <h2 class="title mb-4"> Experience the Difference with Human-Augmented AI </h2>
               <p class="content mb-lg-4">Transform your customer interactions with Human-Augmented AI, where cutting-edge technology meets human expertise. Achieve unparalleled precision, efficiency, and satisfaction by integrating intelligent agents tailored to your needs. Elevate your business operations today!.</p>
                 
               <a class="btn btn-base" href="team.html">Discover More</a>
@@ -192,7 +187,7 @@
           </div>
         </div>
           
-        <div class="row">
+        <div class="row pd-top-60">
           <div class="col-lg-4">
             <div class="icon-img mb-3"> <img src="assets/img/icon/unlock.svg" alt="img"> </div>
             <div class="media single-choose-inner">
@@ -226,7 +221,7 @@
     <!-- end --> 
     
     <!-- agent start-->
-    <section class="section-4 pd-top-100 s-smartaiagents">
+    <section class="section-4 pd-top-100 s-smartaiagents" id="ai-agents">
       <div class="container px-4">
           <h2 class="title mb-4 text-center"> Our Smart AI Agents</h2>
 <div class="project-slider slider-control-round owl-carousel ai-agents">
@@ -337,7 +332,7 @@
     <!--/agents--> 
     
     <!-- start -->
-    <div class="about-area px-lg-0 px-md-5 px-4 pd-top-100 pd-bottom-60">
+    <div class="about-area px-lg-0 px-md-5 px-4 pd-top-100 pd-bottom-60" id="marketplace">
           <div class="container">
        
       <div class="row">
@@ -347,13 +342,14 @@
         <div class="col-xl-6 col-lg-6 align-self-center">
           <div class="section-title mb-0">
             <p class="lead">Build the Future with AI Agent Marketplace</p>
-            <h2 class="title mb-4"> <img src="assets/img/about/01.webp" alt="img"> AI Agents Marketplace</h2>
+            <h2 class="title mb-4"> <img src="assets/img/01.webp" alt="img"> AI Agents Marketplace</h2>
             <p class="content mb-lg-5"> At StarklyAI, we believe in the power of collaboration and innovation. Our AI Agents Marketplace is designed to empower developers to develop and publish cutting-edge AI agents that businesses will use to transform their operations. Showcase your skills, reach a broader audience, and make a significant impact on businesses worldwide. </p>
-            <ul class="single-list-inner style-check my-3">
-              <li><i class="fa fa-check"></i>Wide Range of Capabilities: Create diverse AI agents for various business needs.</li>
-              <li><i class="fa fa-check"></i>Easy Integration: Ensure your AI agents integrate seamlessly with business systems.</li>
-              <li><i class="fa fa-check"></i>Customizable Pricing: Set your pricing and earn revenue from your innovations.</li>
-              <li><i class="fa fa-check"></i>Global Exposure: Gain recognition and reach businesses around the world.</li>
+            <ul class="single-list-inner style-check my-3 mb-5">
+              <li><i><img src="assets/img/tick.svg" alt=""/></i>
+                  Wide Range of Capabilities: Create diverse AI agents for various business needs.</li>
+              <li><i><img src="assets/img/tick.svg" alt=""/></i>Easy Integration: Ensure your AI agents integrate seamlessly with business systems.</li>
+              <li><i><img src="assets/img/tick.svg" alt=""/></i>Customizable Pricing: Set your pricing and earn revenue from your innovations.</li>
+              <li><i><img src="assets/img/tick.svg" alt=""/></i>Global Exposure: Gain recognition and reach businesses around the world.</li>
             </ul>
             <a class="btn btn-base" href="team.html">Discover More</a> 
           </div>
@@ -372,7 +368,7 @@
           </div>
           <div class="col-lg-6 align-self-center order-lg-first">
             <div class="section-title mb-0">
-              <h2 class="title mb-4"> Explore<span> how our AI Agents can revolutionize your operations:</span> <img src="assets/img/about/01.webp" alt="img"> </h2>
+              <h2 class="title mb-4"> Explore<span> how our AI Agents can revolutionize your operations:</span> <img src="assets/img/01.webp" alt="img"> </h2>
               <p>At StarklyAI, we are committed to transforming your operations with advanced AI solutions. Our AI agents are designed to enhance efficiency, drive growth, and ensure data security. Join us in building a future powered by AI.</p>
 			  <p><b>Elevate Operational Efficiency:</b>Streamline your workflows and eliminate inefficiencies. Our AI agents are designed to automate routine tasks, allowing your team to focus on strategic initiatives that propel your business forward.</p>
               <div class="btn-wrap pt-4"> <a class="btn btn-base me-2 mb-2 mb-md-0" href="blog.html">Discover More</a> <a class="btn btn-border-base me-2" href="team.html">Watch A Demo</a> </div>
@@ -397,7 +393,7 @@
                         </h2>
                       
                         
-                         <p class="content mt-2 mb-5">Harness the power of AI agents to streamline and enhance various aspects of your business operations. From customer support to process automation, our AI solutions are designed to improve efficiency, drive innovation, and deliver measurable results.</p>
+                         <p class="content mt-2 mb-lg-5">Harness the power of AI agents to streamline and enhance various aspects of your business operations. From customer support to process automation, our AI solutions are designed to improve efficiency, drive innovation, and deliver measurable results.</p>
                     </div>
                 </div>
             </div>
@@ -424,7 +420,7 @@
           </div>
           </div>
 		  
-		  <div class="how-it-work-area pd-top-100 pd-bottom-90">
+		  <div class="how-it-work-area pd-top-100 pd-bottom-90" id="process">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-10 col-md-10">
@@ -504,7 +500,7 @@
      
     
     <!-- call to action start -->
-    <div class="call-to-action-area pd-top-120 pd-bottom-120 text-center">
+    <div class="call-to-action-area pd-top-120 pd-bottom-120 text-center" id="contact">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-10 col-md-12">
@@ -563,22 +559,14 @@
 </div>
 <!-- 2 divs closed for smooth scroll  --> 
 
-<!-- back to top area start -->
-<div class="back-to-top"><span class="back-top"><i class="fa fa-angle-up"></i></span></div>
-<!-- back to top area end --> 
 
 <!-- all plugins here --> 
 <script src="assets/js/jquery.min.js"></script> 
 <script src="assets/js/bootstrap.min.js"></script> 
 <script src="assets/js/fontawesome.min.js"></script> 
-<script src="assets/js/nice-select.min.js"></script> 
-<script src="assets/js/magnific.min.js"></script> 
-<script src="assets/js/isotope.min.js"></script> 
-<script src="assets/js/imageload.min.js"></script> 
 <script src="assets/js/owl.min.js"></script> 
 <script src="assets/js/slick.min.js"></script> 
-<script src="assets/js/tweenmax.min.js"></script> 
-<script src="assets/js/waypoint.js"></script> 
+
 
 <!-- main js --> 
 <script src="assets/js/main.js"></script> 

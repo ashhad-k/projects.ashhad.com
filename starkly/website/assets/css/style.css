@@ -1335,6 +1335,7 @@ ul {
 .single-list-inner.style-check li {
   list-style: none;
   padding-left: 0;
+    text-align: left;
 }
 
 .single-list-inner.style-check li:after {
@@ -4072,8 +4073,8 @@ ul {
 }
 
 
-.single-list-inner.style-check li:not(:empty){padding-left: 30px; position: relative; }
-.single-list-inner.style-check li .fa-check{position: absolute; left: 0px; top: 5px;} 
+.single-list-inner.style-check li:not(:empty){padding-left: 36px; position: relative; }
+.single-list-inner.style-check li i{position: absolute; left: 0px; top: 0px;} 
 
 
 
@@ -7397,7 +7398,7 @@ ul {
 .section-title .title img {
   position: absolute;
   left: 0;
-  top: 48px;
+  top: 38px;
   z-index: 0;
 }
 
@@ -8880,7 +8881,7 @@ section.section-4 .ai-agents > .col:nth-child(3){ background:  url("../img/icon-
 section.section-4 .ai-agents > .col:nth-child(4){ background:  url("../img/icon-bg1.svg")  top center no-repeat; padding-top: 100px;} 
 
 .ai-agents .item{ padding: 20px;}
-.ai-agents .item UL{ font-size: 16px;}
+.ai-agents .item UL{ font-size: 16px; text-align: left}
 .ai-agents .item UL LI{ margin-bottom: 16px; border-bottom: 1px dotted #ccc;}
 
 
