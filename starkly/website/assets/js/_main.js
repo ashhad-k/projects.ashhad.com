@@ -47,11 +47,11 @@
         /* -----------------------------------------------------
             Variables
         ----------------------------------------------------- */
-        var leftArrow = '<';
-        var rightArrow = '>';
+        var leftArrow = '<i class="fas fa-arrow-left"></i>';
+        var rightArrow = '<i class="fas fa-arrow-right"></i>';
 
-       
-
+ 
+      
         /*--------------------------------------------------
             project-slider
         ---------------------------------------------------*/
@@ -82,28 +82,36 @@
         });
 
 
-      
-        /*----------------------------------------
-           back to top
-        ----------------------------------------*/
-        $(document).on('click', '.back-to-top', function () {
-            $("html,body").animate({
-                scrollTop: 0
-            }, 2000);
+        /*--------------------------------------------------
+            project-slider 04 theme
+        ---------------------------------------------------*/
+        $('.project-slider-2').owlCarousel({
+            loop: true,
+            margin: 30,
+            nav: true,
+            dots:true,
+            smartSpeed: 1500,
+            navText: [ leftArrow, rightArrow],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 3
+                },
+                992: {
+                    items: 3
+                },
+                1200: {
+                    items: 4
+                },
+                1600: {
+                    items: 4
+                },
+            }
         });
 
-    });
-
-    $(window).on("scroll", function() {
-        /*---------------------------------------
-            back-to-top
-        -----------------------------------------*/
-        var ScrollTop = $('.back-to-top');
-        if ($(window).scrollTop() > 1000) {
-            ScrollTop.fadeIn(1000);
-        } else {
-            ScrollTop.fadeOut(1000);
-        }
+      
 
         /*---------------------------------------
             sticky-active
@@ -126,13 +134,7 @@
         var preLoder = $("#preloader");
         preLoder.fadeOut(0);
 
-        /*-----------------
-            back to top
-        ------------------*/
-        var backtoTop = $('.back-to-top')
-        backtoTop.fadeOut();
-
-        /*---------------------
+       /*---------------------
             Cancel Preloader
         ----------------------*/
         $(document).on('click', '.cancel-preloader a', function (e) {
