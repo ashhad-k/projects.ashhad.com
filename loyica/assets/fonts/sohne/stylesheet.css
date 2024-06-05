@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'So:hne Breit';
+    src: url('SohneBreit-Leicht.woff2') format('woff2'),
+        url('SohneBreit-Leicht.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'So:hne Breit';
+    src: url('SohneBreit-Buch.woff2') format('woff2'),
+        url('SohneBreit-Buch.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'So:hne Breit';
+    src: url('SohneBreit-Halbfett.woff2') format('woff2'),
+        url('SohneBreit-Halbfett.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'So:hne Breit';
+    src: url('SohneBreit-Kraftig.woff2') format('woff2'),
+        url('SohneBreit-Kraftig.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'So:hne Breit';
+    src: url('SohneBreit-Fett.woff2') format('woff2'),
+        url('SohneBreit-Fett.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
