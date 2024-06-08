@@ -1933,23 +1933,232 @@ box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, 0.0);
 
 .cn-modal1{ background:#020611; color:#ffffff; padding: 32px; border-radius: 40px; position: relative;}
 .cn-modal1 .btn-close{ position: absolute; right: 10px; top:10px; border-radius: 50%; padding: 10px; opacity: 1; border: 1px solid var(--main-color); color: #fff; line-height: 1;}
-.cn-modal1 .data{ background:#ffffff; padding: 32px; margin: 20px 0px; border-radius: 40px;}
+.cn-modal1 .data{ background:#ffffff; padding: 32px; margin: 20px 0px; border-radius: 40px; overflow-y: scroll;}
+.cn-modal1 .data::-webkit-scrollbar{ display: block;}
+.cn-modal1 .data .modal-body{ font-size:25px; color:#323B4C; line-height:2; max-height: 500px; }
 
-.cn-modal1 .data .modal-body{ font-size:25px; color:#323B4C; line-height:1.5}
+.cn-modal1 .modal.show .modal-dialog{overflow-y: scroll}
 
+/* Input container */
+.cn-modal1 .input-container {position: relative;  margin: 00px 5px; overflow-x: hidden}
+
+/* Input field */
+.cn-modal1 .input-field {
+  display: block;
+  width: 100%;
+    line-height: 26px;
+    min-width: 300px;
+  padding: 15px 10px 5px 10px;
+  border: none;
+  border-bottom: 2px solid #323B4C;
+  outline: none;
+  background-color: transparent;
+}
+
+/* Input label */
+.cn-modal1 .input-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  color: rgba(204, 204, 204, 0);
+  pointer-events: none;
+  transition: all 0.2s ease-in;
+}
+.cn-modal1  input[type=text]:focus{    border: 0px;}
+/* Input highlight */
+.cn-modal1 .input-highlight {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--main-color);
+  transition: all 0.3s ease;
+}
+
+/* Input field:focus styles */
+.cn-modal1 .input-field:focus + .input-label {
+  top: -5px;
+    left: 10px;
+  font-size: 12px;
+  color: var(--main-color)
+}
+.cn-modal1  ::placeholder { font-size: 14px; color: #A4A4A4;}
+
+
+.cn-modal1 .input-field:focus + .input-label + .input-highlight {
+  width: 100%;
+ 
+}
+/* radio*/
+.t-radio{ display: flex; column-gap: 4px; grid-row-gap: 8px;  flex-wrap: wrap; margin: 10px 0px}
+.t-radio :focus {
+  outline: 0;
+  border-color: #2260ff;
+  box-shadow: 0 0 0 4px #b5c9fc;
+}
+
+
+.t-radio input[type="radio"] {
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.t-radio input[type="radio"]:checked + span {
+  box-shadow: 0 0 0 0.0625em #0043ed;
+  background-color: #3B53F6;
+  z-index: 1;
+  color: #ffffff;
+}
+
+.t-radio label span {
+  display: block;
+  cursor: pointer;
+  background-color: #fff;
+  padding:0px 20px;
+    font-size: 18px;
+  position: relative;
+  box-shadow: 0 0 0 0.0625em #b5bfd9;
+  letter-spacing: .05em;
+  color: #3e4963;
+  text-align: center;
+  transition: background-color .5s ease;
+    border-radius: 100px;
+}
+
+
+
+.cn-modal1 .checkbox-group-blocks{}
+
+.checkbox-group-blocks ul {
+  list-style: none;
+    display: flex;
+    column-gap: 6px;
+    height: 40px;
+    
+    
+}
+.checkbox-group-blocks ul li {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+    line-height: 12px;
+    
+
+}
+.checkbox-group-blocks ul li label {
+  background-color: #fff;
+  border: 1px solid #3e4963;
+    border-radius: 100px;
+    height: 36px; line-height: 36px;
+    padding: 10px 20px;
+    font-size: 18px;
+    
+      color: #3e4963;
+  text-align: center;
+  transition: background-color .5s ease;
+}
+
+.checkbox-group-blocks ul li input[type=checkbox] {
+  display: none;
+}
+.checkbox-group-blocks ul li input[type=checkbox] + label {
+  cursor: pointer;
+  position: absolute;
+  line-height: inherit;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.checkbox-group-blocks ul li input[type=checkbox]:checked + label {
+  box-shadow: 0 0 0 0.0625em #0043ed;
+  background-color: #3B53F6;
+  color: white;
+  animation: push 0.2s 1 ease-out;
+/*    border-color: transparent;*/
+}
+
+/* scroller fix
+/* Hide scrollbar globally */
+::-webkit-scrollbar {
+  display: none;
+}
+
+.modal-xl{width: 1200px;}
+
+/* Specific div with visible vertical scrollbar inside the modal */
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar {
+  display: block;
+}
+
+/* Ensure scrolling only within the modal */
+.modal-dialog-scrollable .modal-body {
+  max-height: calc(100vh - 200px); /* Adjust height as needed */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Optional: Style scrollbar for better appearance */
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar-thumb {
+  background-color: #dddddd90;
+  border-radius: 10px;
+}
+
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar-track {
+  background: #dddddd30;
+}
+
+/* Prevent background scrolling when modal is open */
+body.modal-open {
+  overflow: hidden;
+/*    background: red*/
+}
+.modal-backdrop.show {
+    opacity: .8;
+}
 
 /*--------------------------------------------------
     ##  Page  >> Legal
 ---------------------------------------------------*/
 
 
-.cn-legal{ border-radius: 40px 40px 0px 00px; padding: 0px; background: #fff; display: flex; color: #333333; height: 100vh;}
+.cn-legal{ border-radius: 40px 40px 0px 00px; padding: 0px; background: #fff; display: flex; color: #333333; position: relative}
 
 .cn-legal .section-title{ border-bottom: 4px solid #333333; padding-bottom: 10px; margin-bottom: 24px;}
 
 .cn-legal .section-title P{margin-bottom: 0px;}
-.cn-legal .lhs{ background: #F4F4F4; padding: 40px 20px; width: 380px; border-top-left-radius: 40px;}
-.cn-legal .rhs{padding: 40px 20px}
+.cn-legal .lhs{ 
+    background: #F4F4F4; 
+    padding: 40px 20px; width: 380px; 
+    border-top-left-radius: 40px;
+    position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+}
+
+.cn-legal .rhs{
+    padding: 40px 20px; 
+    height: 100vh;
+      overflow-y: auto;
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+      padding-left: 20px;
+}
+.cn-legal .scrollspy {
+      scroll-snap-align: start;
+      padding: 40px 20px;
+    }
 
 .cn-legal P{margin-bottom: 30px; font-size: 18px; color: #333333}
 
@@ -1962,6 +2171,18 @@ box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, 0.0);
 .cn-legal .nav-pills .nav-link{ background: #E1E1E1; color: #000; margin-bottom: 8px; text-align: left; font-size: 16px;}
 
 
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.pinned {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.mrhs2{background: #dddddd}
 
 
 /*--------------------------------------------------
