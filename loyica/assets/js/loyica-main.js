@@ -53,6 +53,30 @@ gsap.utils.toArray(".sticky-panel").forEach((panel, i) => {
 });
 
 
+// pg hm hero
+gsap.to(".home-hero1", {
+    backgroundSize: "300%", // Final size
+    opacity:0.5,
+    scrollTrigger: {
+        trigger: ".home-hero1",
+        start: "top top", // Start animation when the top of .home-hero1 hits the top of the viewport
+        end: "bottom top", // End animation when the bottom of .home-hero1 hits the top of the viewport
+        scrub: true // Smooth animation linked to the scroll position
+    }
+});
+
+// pg-hm-fold2
+// Animation code
+gsap.to(".pg-hm-fold2", {
+    backgroundSize: "300%", // Final size
+    scrollTrigger: {
+        trigger: ".pg-hm-fold2",
+        start: "top bottom", // Start animation when the top of .pg-hm-fold2 hits the bottom of the viewport
+        end: "bottom top", // End animation when the top of .pg-hm-fold2 hits the top of the viewport
+        scrub: true // Smooth animation linked to the scroll position
+    }
+});
+
 // -- Prism panel starts -- //
 
 // Rotate prism on entering .cn-prism

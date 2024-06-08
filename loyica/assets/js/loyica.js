@@ -191,6 +191,7 @@ gsap.to('progress', {
 
 
 
+
 // Marquee animations
 ['.cn-marquee', '.cn-marquee1', '.cn-marquee2'].forEach((selector, i) => {
     gsap.timeline({

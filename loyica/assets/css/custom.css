@@ -300,7 +300,16 @@ mix-blend-mode: soft-light;
     ## Home - Hero
 ---------------------------------------------------*/
 
-.home-hero1 {background: url("../img/bg/hero-line.svg") center top  no-repeat; background-size: cover; position: relative;/*animation: rotateBackground 10s linear infinite;*/}
+.home-hero1 {background: url("../img/bg/hero-line.svg") center center  no-repeat;  position: relative;
+    
+  
+    background-size: 100%; /* Initial size */
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh; /* Adjust based on your layout */
+    
+    /*animation: rotateBackground 10s linear infinite;*/}
 
 .hero2 { margin:120px  0px 48px 0px; border-top:1px solid #2A2A2A; border-bottom: 0px solid #2A2A2A;}
 
@@ -329,7 +338,7 @@ mix-blend-mode: soft-light;
 
 .cn-mouse{ position: relative; z-index: 10; bottom: 50px; }
 .cn-mouse .mouse-icon{ margin-bottom: 50px;}
-.home-hero1  .hm1{ position: absolute; bottom: 0px; width: 100%;  bottom: -8px;}
+.home-hero1  .hm1{ position: absolute; bottom: 0px; width: 100%;  bottom: -8px; display: none}
 
 .cn-hdr-ball, 
 .cn-ftr-ball{ position: absolute; z-index: -1; opacity: 0.5;   border: 0px solid red;    transform: translate(-80%, -50%);}
@@ -448,6 +457,14 @@ UL.tabs-prism a.nav-link.active:hover h5{color: var(--main-color);}
   100% { transform: translateX(-100%); }  Adjust for text length 
 }
 */
+
+/*--------------------------------------------------
+    ## page home > fold 2
+---------------------------------------------------*/
+.pg-hm-fold2{ background-size: cover; height: 100vh; background-size: 200%; /* Initial size */
+    background-position: center;}
+
+
 
 /*--------------------------------------------------
     ## startup - 3 column .. 2nd center
