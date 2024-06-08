@@ -258,7 +258,58 @@
 <script src="assets/js/loyica.js"></script> 
 <script src="assets/js/loyica-legal.js"></script> 
 <script>
-  
+  // Ensure GSAP and ScrollTrigger are loaded
+gsap.registerPlugin(ScrollTrigger);
+
+// Function to switch to the next tab
+function switchToTab(index) {
+    const tabs = document.querySelectorAll('.nav-link');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+
+    if (index < tabs.length) {
+        // Remove active class from all tabs and panes
+        tabs.forEach(tab => tab.classList.remove('active'));
+        tabPanes.forEach(pane => pane.classList.remove('show', 'active'));
+
+        // Add active class to the current tab and pane
+        tabs[index].classList.add('active');
+        tabPanes[index].classList.add('show', 'active');
+    }
+}
+
+// Pin the section and apply class on pin
+gsap.to('.cn-legal', {
+    scrollTrigger: {
+        trigger: '.cn-legal',
+        start: 'top top',
+        end: () => `+=${document.querySelector('.cn-legal').offsetHeight * 5}`, // Adjust the multiplier based on your requirement
+        pin: true,
+        pinSpacing: true,
+        onEnter: () => {
+            document.querySelector('.cn-legal').classList.add('mrhs2');
+        },
+        onLeaveBack: () => {
+            document.querySelector('.cn-legal').classList.remove('mrhs2');
+        }
+    }
+});
+
+// Set up ScrollTriggers for each tab to switch at specific intervals
+const tabs = document.querySelectorAll('.nav-link');
+tabs.forEach((tab, index) => {
+    ScrollTrigger.create({
+        trigger: '.cn-legal',
+        start: () => `top+=${index * window.innerHeight * 0.5} top`, // Adjust based on your desired interval
+        end: () => `top+=${(index + 1) * window.innerHeight * 0.5} top`,
+        onEnter: () => {
+            switchToTab(index);
+        },
+        onEnterBack: () => {
+            switchToTab(index);
+        }
+    });
+});
+
   </script>
 </body>
 </html>
