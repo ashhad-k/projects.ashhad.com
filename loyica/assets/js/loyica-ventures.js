@@ -56,7 +56,8 @@ gsap.utils.toArray('.fx2').forEach(element => {
             start: "top 90%",
             end: "top 60%",
             ease: "linear",
-            toggleActions: "play none none reverse"
+            scrub:true,
+            toggleActions: "play reset none reverse"
         }
     });
 });
@@ -104,9 +105,37 @@ copies.forEach((el, i) => {
   }, (i * 2) || 0.001);
 })
 
-///==== FAQS
 
+///circles 
 
+const section = document.querySelector('.pg-vt-fold3');
+const circleElements = gsap.utils.toArray('.cr1, .cr2, .cr3, .cr4, .cr5, .cr6, .cr7'); // Select all circle elements
+
+// Pin the section
+ScrollTrigger.create({
+  trigger: section,
+  start: "top top", // Pin from the top of the viewport
+//  end: "bottom bottom", 
+      end: () => "+=1200",
+  pin: true
+});
+
+// Animate circle elements individually on scroll
+gsap.from(circleElements, {
+  y: 150, // Initial y-offset
+  opacity: 0, // Start invisible
+  duration: 1, // Animation duration
+  ease: "power3.inOut", // Easing function
+  stagger: {
+    each: 0.8, // Delay between each circle animation
+    from: "start" // Stagger from the beginning of the timeline
+  },
+  scrollTrigger: {
+    trigger: section,
+    start: "top top", // Start animation when the section hits the center of the viewport
+    toggleActions: "play none none reverse" // Play once on scroll down, reverse on scroll up
+  }
+});
 
 ///
 
