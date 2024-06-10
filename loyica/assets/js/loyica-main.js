@@ -69,6 +69,7 @@ gsap.to(".home-hero1", {
 // Animation code
 gsap.to(".pg-hm-fold2", {
     backgroundSize: "300%", // Final size
+    backgroundRotate:"90",
     scrollTrigger: {
         trigger: ".pg-hm-fold2",
         start: "top bottom", // Start animation when the top of .pg-hm-fold2 hits the bottom of the viewport
@@ -77,77 +78,113 @@ gsap.to(".pg-hm-fold2", {
     }
 });
 
+
 // -- Prism panel starts -- //
+document.addEventListener('DOMContentLoaded', function() {
+    // Register GSAP ScrollTrigger plugin
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-// Rotate prism on entering .cn-prism
-gsap.timeline({
-    scrollTrigger: {
-        trigger: '.pg-hm-digital',
-        scrub: 0.2,
-        start: 'top 50%',
-        end: "+=300%"
-    }
-}).to('.prism', {
-    rotation: 360,
-    duration: 4,
-    ease: 'yoyo',
-     scrub: 0.2
-});
-
-// Pin tabs
-const tabs = gsap.utils.toArray(".left-content li");
-const amount = tabs.length;
-const rightElements = document.querySelector(".right-content");
-let active;
-
-const tl = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.pg-hm-digital',
-        start: "top top",
-        end: "bottom top",
-        pin: true,
-        scrub: true,
-        snap: true,
-        snapDirection: "y",
-        markers: true
-    }
-});
-
-tl.to(rightElements, {
-    y: () => window.innerHeight - rightElements.scrollHeight,
-    ease: "ease-in",
-    duration: 2,
-    scrub:true
-});
-
-tabs.forEach((tab, i) => {
-    const position = i / (amount - 1);
-    const link = tab.querySelector("a");
-    tl.add("tab-" + (i + 1), position).call(() => {
-        if (active !== undefined) {
-            tabs[active].classList.toggle("selected");
+    // Rotate prism on entering .pg-hm-digital
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.pg-hm-digital',
+            scrub: 0.2,
+            start: 'top 50%',
+            end: 'bottom top'
         }
-        tab.classList.toggle("selected");
-        active = i;
-    }, null, position);
-    link.addEventListener("click", (e) => {
-        e.preventDefault();
-        gsap.to(window, {
-            scrollTo: {
-                y: tl.scrollTrigger.start + (tl.scrollTrigger.end - tl.scrollTrigger.start) * (position / tl.duration())
+    }).to('.prism', {
+        rotation: 360,
+        duration: 4,
+        ease: 'none'
+    });
+
+    // Pin tabs and manage tab switching
+    const tabs = gsap.utils.toArray(".left-content li");
+    const rightElements = gsap.utils.toArray(".right-element");
+    let active = 0;
+
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.pg-hm-digital',
+            start: 'top top',
+            end: 'bottom top',
+            pin: true,
+            scrub: 0.2,
+            snap: {
+                snapTo: 1 / (tabs.length - 1),
+                duration: { min: 0.2, max: 0.8 }, // Adjust snap duration
+                ease: 'power1.inOut',
+                delay: 0.5 // Add a small delay to avoid snapping too quickly
             },
-            duration: 1,
-            ease: "power1.inOut",
-            scrub:true
+            markers: true
+        }
+    });
+
+    // Set initial state
+    gsap.set(rightElements, { autoAlpha: 0 });
+    gsap.set(rightElements[0], { autoAlpha: 1 });
+
+    // Loop through each tab and set up the animations
+    tabs.forEach((tab, i) => {
+        const position = i / (tabs.length - 1);
+
+        // Add label at each position for snapping
+        tl.add("tab-" + (i + 1), position);
+
+        tl.to({}, {
+            duration: 0.1,
+            onStart: () => {
+                // Hide previous content
+                if (active !== undefined) {
+                    gsap.to(rightElements[active], { autoAlpha: 0 });
+                    tabs[active].classList.remove("selected");
+                }
+                // Show current content
+                gsap.to(rightElements[i], { autoAlpha: 1 });
+                tabs[i].classList.add("selected");
+                active = i;
+            },
+            onReverseComplete: () => {
+                // Handle backward scrolling
+                if (active !== undefined) {
+                    gsap.to(rightElements[active], { autoAlpha: 0 });
+                    tabs[active].classList.remove("selected");
+                }
+                gsap.to(rightElements[i], { autoAlpha: 1 });
+                tabs[i].classList.add("selected");
+                active = i;
+            }
+        }, position);
+    });
+
+    // Add click event listener to tabs
+    tabs.forEach((tab, i) => {
+        const position = i / (tabs.length - 1);
+        tab.querySelector('a').addEventListener('click', (e) => {
+            e.preventDefault();
+            gsap.to(window, {
+                scrollTo: {
+                    y: tl.scrollTrigger.start + (tl.scrollTrigger.end - tl.scrollTrigger.start) * position,
+                    autoKill: true // Ensure it smoothly scrolls to the target position
+                },
+                duration: 0.5, // Adjust duration for a smoother and quicker scroll
+                ease: 'power2.inOut',
+                onComplete: () => {
+                    // Ensure correct tab content is shown after scroll
+                    gsap.to(rightElements, { autoAlpha: 0 });
+                    gsap.to(rightElements[i], { autoAlpha: 1 });
+                    tabs.forEach(tab => tab.classList.remove('selected'));
+                    tabs[i].classList.add('selected');
+                    active = i;
+                }
+            });
         });
     });
 });
 
-tl.to({}, { duration: 0.1 });
 
 
-
-// -- Prism panel starts -- //
+// -- Prism panel END -- //
 
 
 // Line 3 columns section

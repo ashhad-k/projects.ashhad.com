@@ -199,7 +199,7 @@ gsap.to('progress', {
             trigger: selector,
             scrub: 0.2,
             start: 'top 80%',
-            markers: true,
+//            markers: true,
             end: "+=300%"
         }
     }).to(`${selector} .marquee-container`, {
