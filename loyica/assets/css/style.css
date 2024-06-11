@@ -3244,6 +3244,7 @@ ul {
 
 /* medium tablet layout 599px */
 @media only screen and (max-width: 575px) {
+    .navbar-collapse{ background: var(--bg1)}
   .navbar-area .nav-container {
     margin: 0px 0px;
   }
@@ -8794,7 +8795,7 @@ background-clip: text;
 
 @media all and (max-width: 991px) {
   .navbar-area-5 .nav-container .navbar-collapse .navbar-nav li a {
-    color: #333333 !important;
+/*    color: #333333 !important;*/
   }
 
   .banner-area-5 .bg-cover {
@@ -8805,6 +8806,7 @@ background-clip: text;
 @media all and (max-width: 575px) {
   .navbar-area-5 .nav-container {
     padding: 20px 15px !important;
+      background: var(--bg1)
   }
 
   .navbar-area-5.sticky-active {

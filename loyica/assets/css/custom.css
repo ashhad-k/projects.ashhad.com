@@ -2621,3 +2621,35 @@ grid-row-gap: 25px;
 .pg-csd-gallery .parent .div8 { grid-area: 5 / 2 / 6 / 3; text-align: right;  padding-right: 0px; padding-bottom: 0px; }
 .pg-csd-gallery .parent .div9 { grid-area: 6 / 1 / 7 / 3; padding: 0px; }
 
+
+/*--------------------------------------------------
+    ##  Responsive Override
+---------------------------------------------------*/
+
+
+  /* Default hidden */
+        .mobile-only {
+            display: none!important;
+        }
+        .desktop-only {
+            display: none!important;
+        }
+        /* Visible on mobile */
+@media (max-width: 767.98px) {
+            .mobile-only {
+                display: block!important;
+            }
+            
+.navbar-area-5 .nav-right-part .btn{}
+.navbar-area-5 .nav-right-part-desktop{margin: 10px 0px 0px 0px;}
+.navbar-area .nav-container .navbar-collapse .navbar-nav li a{ padding-left: 20px;}
+    .navbar-fixed-top{ position: fixed; top: 0px;}    
+        }
+
+
+ /* Visible on desktop */
+@media (min-width: 768px) {
+            .desktop-only {
+                display: block!important;
+            }
+        }
