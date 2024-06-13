@@ -1,3 +1,12 @@
+// AOS
+AOS.init({
+    offset: 100,
+    duration: 500,
+    easing: 'ease-in-out',
+    delay: 100,
+});
+
+
 
 // tab tree mage 
 const tabLinks = document.querySelectorAll('.nav-link');
@@ -10,7 +19,7 @@ tabLinks.forEach(link => {
   });
 });
 
-///
+/// change tabs to Dropdown for mobile 
 document.addEventListener('DOMContentLoaded', function () {
     function activateTab(targetTab) {
         // Activate tab
