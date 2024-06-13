@@ -1,0 +1,336 @@
+
+/*--------------------------------------------------
+    ## Custom Fonts
+---------------------------------------------------*/
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fw-m,
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+/*--------------------------------------------------
+    ## Globals
+---------------------------------------------------*/
+.gr-1{
+background: linear-gradient(90deg, #FFF 0%, #87DCFF 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+
+.cc1{/* center center */         display: flex; justify-content: center; align-items: center; position: relative; }
+.lb1{/* center center */         display: flex; justify-content: flex-start; align-items: flex-end; position: relative; }
+.bb1{/* border-bottom */         border-bottom: 1px solid #2A2A2A; padding-bottom: 14px; margin-bottom: 14px; }
+
+.bt1{/* border-bottom */         border-top: 1px solid #2A2A2A; padding-top: 14px; margin-top: 14px; }
+.br-40{/* border-radius*/        border-radius: 40px}
+.br-32{/* border-radius*/        border-radius: 32px}
+.br-20{/* border-radius*/        border-radius: 20px}
+.br-btm1{/*border-bottom*/       border-bottom: 1px solid  rgba(255, 255, 255, 0.20);}
+.br-top1{/*border-bottom*/       border-top: 1px solid  rgba(255, 255, 255, 0.20);}
+.text-right{ text-align: right}
+.sticky-panel{ z-index: -1;}
+.pd60{padding: 60px;}
+.z10{ z-index: 10; position: relative}
+.d-flex2{display: flex; justify-content: space-between; }
+.d-flex3-bl{display: flex; justify-content: space-between; align-items: flex-end}
+.lead{font-size: 18px;}
+
+h1{ font-size: 55px}
+h2{ font-size: 50px}
+h3{ font-size: 45px}
+h4{ font-size: 40px}
+h5{ font-size: 40px}
+h6{ font-size: 20px}
+
+
+/* gradient border 2*/
+.fold5,
+.gr-br-2 {  position: relative;}
+
+.fold6 .box::before,
+.fold5::before,
+.gr-br-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background: linear-gradient(90deg,   rgba(80, 63, 58, 0.1) 0%, rgba(142, 142, 142, 0.4) 100%) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+ 
+}
+
+.btn-gr-1{background: linear-gradient(90deg, #81D5F8 0%, #0691CA 100%);}
+
+.gr-3{
+background: linear-gradient(97deg, rgba(255, 255, 255, 0.60) 10.41%, #FFF 96.38%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;}
+
+
+/*--------------------------------------------------
+    ## Sections 
+---------------------------------------------------*/
+body{ background: #000000; color: #AFAFAF;}
+.navbar{ background:#080D17}
+
+.hdr1{ background:  url("../assets/bg-hdr1.webp") no-repeat; background-size: cover; min-height: calc(100vh - 100px)} 
+
+.fold2{  background:  url("../assets/bg-fold2.webp") no-repeat; background-size: cover;  text-align: center; border-radius: 20px; margin-top: -100px; margin-bottom: 6rem}
+.fold2 .data{ padding: 40px 30px 30px 30px; text-align: center;}
+
+@media (max-width: 767.98px) {
+ .fold2{   margin-top:50px; }
+}
+
+
+/* 3 boxes */
+.fold3{ margin-top:6rem; margin-bottom: 6rem}
+.fold3 .box{ border: 1px solid #202223; border-radius: 20px;background:  url("../assets/bg-rings.webp") center top no-repeat #0B0C10; padding: 40px;height: 100%;  }
+.fold3 .box .media{ text-align: center; padding-bottom: 80px;}
+.fold3 .box h6{ margin-bottom:20px}
+.fold3 .col-lg-4{ margin-bottom: 2rem;}
+
+
+@media (max-width: 767.98px) {
+.fold3 {margin-top: 2rem}
+.fold3 .col-lg-4{ margin-bottom: 2rem; padding-left: 2rem; padding-right: 2rem}
+}
+
+
+/* V TABS */
+.fold4{margin-bottom: 6rem; margin-top: 4rem } /*tabs*/
+.fold4 .lhs{ display: flex; align-items: center}
+.fold4 .lhs .one .btn-gr-1{ white-space: nowrap; cursor: none; padding: 14px 28px; color: #ffffff;}
+.fold4 .lhs .three .btn{ white-space: nowrap; }
+
+.fold4 .lhs UL.flex-column{ display: flex; grid-row-gap: 12px;}
+
+ .fold4 .dropdown,
+.fold4 .lhs a.nav-link{ border: 1px solid #1C1F2A; border-radius: 99px; background: #0F1017; padding: 10px 40px 10px 10px;  white-space: nowrap;}
+.fold4 .lhs a.nav-link SPAN{ background: #08090B; border: 1px solid #363636; padding: 3px;  border-radius: 99px; display: inline-block; margin-right: 8px;}
+.fold4 .lhs a.nav-link i{ border: 1px solid #363636; border-radius: 99px;  padding: 5px; display: inline-block; width:32px; height: 32px; line-height: 20px; text-align: center; color: #363636; position: relative}
+/*.fold4 .lhs a.nav-link i:after{position: absolute; content: ""; background: red; width: 100%; height: 100%;}*/
+.fold4 .lhs a.nav-link.active{ border: 1px solid var(--bs-primary); }
+.fold4 .lhs a.nav-link.active i{ border: 1px solid var(--bs-primary); background:  var(--bs-primary); color: #08090B; }
+.fold4 .lhs a.nav-link.active  SPAN{ background: #08090B; border: 1px solid  var(--bs-primary); }
+
+
+.fold4 .rhs{  }
+.fold4 .rhs .tab-content{ background: #0B0C10; padding: 40px; border: 1px solid #1C1F2A; margin-left: 40px;border-radius:20px;   }
+.fold4 .rhs .tab-content IMG{ border-radius: 10px; max-width: 100%; height: auto; margin-bottom: 1.5rem}
+
+.fold4 .dropdown { border-radius: 20px; margin-bottom: 10px; background: #121F30;}
+
+.fold4 .dropdown .btn {
+    white-space: nowrap;
+    color: white;
+    padding-left: 20px;
+    width: 100%; 
+    text-align: left;
+}
+.fold4 .dropdown .btn:focus{border: none}
+.fold4 .dropdown-toggle-split::after, 
+.fold4 .dropup .dropdown-toggle-split::after, 
+.fold4 .dropend .dropdown-toggle-split::after{ margin-left: 10px;}
+
+@media (max-width: 767.98px) {
+.fold4 {margin-top: 2rem}
+.fold4 .rhs .tab-content{ margin-left: 00px  }
+   
+}
+
+@media (max-width: 1199.98px) {
+.fold4 .lhs .one{display: none}
+.fold4 .lhs .two{display: none}
+.fold4 .lhs .three{display:block; width: 100%;}
+    .fold4 .lhs UL.flex-column{ display: none; width: 100%;}
+
+}
+@media (min-width: 1200px) { 
+    .fold4 .dropdown{display: none }
+  }
+
+
+/* Fold 5 - Tab variant*/
+.fold5{  background:  url("../assets/radial1.webp") center top  no-repeat #1E1E1E; background-size: cover;  border-radius: 20px; padding: 40px; margin-bottom: 7rem; position: relative}
+.fold5::before{z-index: -1}
+
+.fold5.eq-tabs  h6{margin-bottom: 0px;}
+.fold5.eq-tabs .strike{ text-decoration: line-through}
+.fold5.eq-tabs .h80px{ height: 80px;}
+.fold5.eq-tabs .h100px{ height: 100px;}
+.fold5.eq-tabs .h120px{ height: 120px;}
+
+.fold5.eq-tabs .nav.nav-tabs{  background: #08090B; border-radius: 10px; padding: 6px; display: inline-flex; width: auto; max-width: 100%;  border: none; gap:12px }
+.fold5.eq-tabs .nav-item .nav-link{ border-radius: 6px; border-color: transparent}
+.fold5.eq-tabs .nav-item .nav-link:hover{  border-color: var(--bs-primary);   }
+.fold5.eq-tabs .nav-item .nav-link.active{ background: var(--bs-primary);  }
+
+.fold5.eq-tabs .list-group-item{ background: none; color: #AFAFAF; padding: 16px; border: 1px solid #242628; transition: 0.2s ease-in-out}
+.fold5.eq-tabs .list-group-item:hover{ background: #18191A; }
+.fold5.eq-tabs .list-group-item.active{ background: var(--bs-primary);  font-weight: bold; color: #fff;}
+.fold5.eq-tabs .plus {width: 60%; border-radius: 20px}
+.fold5.eq-tabs .plus .list-group-item{ border-right: 0px; padding-right: 50px; }
+
+.fold5.eq-tabs .minus{width:40%; margin-left: -30px; background: #18191A; border-radius: 20px; position: relative; z-index: 10;}
+
+.fold5.eq-tabs .minus .list-group-item{ color: #fff}
+
+.list-group.have-2kids .list-group-item{ display: flex; text-align: center; align-items: center}
+.list-group.have-2kids .list-group-item > div { flex-shrink: 0; flex-grow: 1;}
+
+
+
+@media (max-width: 767.98px) {
+.fold5 {margin-bottom: 4rem}
+}
+
+
+
+/* Fold 6 - 3 boxes */
+.fold6{ margin-top:6rem; margin-bottom: 6rem}
+.fold6 .box{ border: 0px solid #202223; border-radius: 20px;  padding: 40px; height: 100%; position: relative;  transition: transform 0.3s ease-in-out; display: flex; flex-direction: column; }
+
+.fold6 .box h6,
+.fold6 .box p,
+.fold6 .box i{ transition: transform 0.3s ease-in-out;}
+
+.fold6 .box:hover h6,
+.fold6 .box:hover i{ color: var(--bs-primary)}
+
+.fold6 .box:hover{  background:  linear-gradient(127deg, rgba(6, 145, 202, 0.00) 40.47%, rgba(6, 145, 202, 0.15) 123.76%);}
+
+
+.fold6 .box .media{ text-align:left; padding-bottom: 20px; font-size: 40px;}
+
+
+
+.fold6 .box h6{ margin-bottom:20px}
+.fold6 .col-lg-4{ margin-bottom: 2rem;}
+
+
+@media (max-width: 767.98px) {
+.fold6 {margin-top: 2rem}
+.fold6 .col-lg-4{ margin-bottom: 2rem; padding-left: 2rem; padding-right: 2rem}
+}
+
+
+/* fold 7 laptop*/
+.fold7{  background:  url("../assets/bg-fold7d.webp") center bottom  no-repeat; background-size: contain;  padding-top: 6rem; text-align: center; margin-bottom: 6rem}
+
+@media (max-width: 767.98px) {
+.fold7{ background-size: cover;  padding-top: 1rem; padding-bottom: 2rem }
+}
+
+
+
+/* fold8*/
+.fold8{margin-top: 4rem; margin-bottom: 6rem}
+.fold8 .line1{ background: #303030; height: 1px; display: block; margin:2rem 2rem 2rem 0rem;}
+.fold8 .data.brr1{ border-right: 1px solid #303030 }
+
+.fold8 .data{padding:  1rem 2rem; }
+.fold8 .data h6{ padding-bottom: 1.25rem}
+.fold8 .img-discord {padding: 2rem 1rem}
+
+@media (max-width: 767.98px) {
+    .fold8{margin-top: 2rem; margin-bottom: 2rem}
+.fold8 .data.brr1{ border-right: 0px solid #303030 }
+.fold8 .data{ border-bottom: 1px solid #303030 }
+    .fold8 .line1{ display: none}
+}
+
+
+/* Fold 5 - Tab variant*/
+.fold9{  background:  url("../assets/bg-fold9.webp") left top  no-repeat #1E1E1E; background-size: cover;  border-radius: 20px; padding: 40px; margin-bottom: 9rem}
+
+@media (max-width: 767.98px) {
+.fold9 {margin-bottom: 4rem}
+}
+
+
+
+footer{    
+    margin-top: -18rem;
+    padding-top: 13rem; 
+    position: relative;   
+    padding-bottom: 3rem 
+/*
+    background: url(../assets/bg-footer.webp) right top no-repeat #030303;
+    background-size: cover;
+    z-index: -1;
+   
+*/
+}
+footer:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+       background: url(../assets/bg-footer.webp) right top no-repeat #030303;
+    background-size: cover;
+    z-index: -1;
+   
+ 
+}
+
+footer .social{ display: flex; column-gap: 12px; justify-content: flex-end}
+footer .social a{  border-radius: 10px;  height: 40px; width: 40px; text-align: center; border: 1px solid #ffffff40; transition: 0.25s; line-height: 40px;}
+footer .social a:hover{ background: #000000}
+
+footer .links{ text-align: right}
+footer .links a{  text-align: center;  transition: 0.25s; line-height: 40px; padding: 10px 20px; width: 33.33%; text-decoration: none; }
+footer .links a:hover{ background: #000000}
+
+
+@media (max-width: 767.98px) {
+
+footer{    
+    margin-top: -10rem;
+    padding-top: 8rem; 
+    position: relative;   
+}
+    footer .social{justify-content: flex-start}
+footer .links{ text-align: left; white-space: nowrap}  
+    
+}
+
+
