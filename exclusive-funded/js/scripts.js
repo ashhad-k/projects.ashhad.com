@@ -19,6 +19,7 @@ tabLinks.forEach(link => {
   });
 });
 
+
 /// change tabs to Dropdown for mobile 
 document.addEventListener('DOMContentLoaded', function () {
     function activateTab(targetTab) {
@@ -57,3 +58,45 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+// prices 
+ const priceMapping = {
+    'btn-2_5k': { price0: 10, price1: 10 },
+    'btn-5k': { price0: 34, price1: 20 },
+    'btn-10k': { price0: 67, price1: 30 },
+    'btn-25k': { price0: 167, price1: 100 },
+    'btn-50k': { price0: 277, price1: 200 },
+    'btn-100k': { price0: 577, price1: 500 }
+  };
+
+  function updatePricesAndButtons(buttonId) {
+    // Update prices in both tabs
+    document.getElementById('price0').textContent = `$${priceMapping[buttonId.replace('-tab2', '')].price0}`;
+    document.getElementById('price1').textContent = `$${priceMapping[buttonId.replace('-tab2', '')].price1}`;
+    document.getElementById('price0-tab2').textContent = `$${priceMapping[buttonId.replace('-tab2', '')].price0}`;
+    document.getElementById('price1-tab2').textContent = `$${priceMapping[buttonId.replace('-tab2', '')].price1}`;
+
+    // Update button states in both tabs
+    document.querySelectorAll('.list-group.plus button').forEach(button => {
+      button.classList.remove('active');
+      if (button.id === buttonId.replace('-tab2', '') || button.id === buttonId) {
+        button.classList.add('active');
+      }
+    });
+
+    // Ensure button state is consistent between tabs
+    document.getElementById(buttonId.replace('-tab2', '')).classList.add('active');
+    document.getElementById(`${buttonId.replace('-tab2', '')}-tab2`).classList.add('active');
+  }
+
+  document.querySelectorAll('.list-group.plus button').forEach(button => {
+    button.addEventListener('click', () => {
+      updatePricesAndButtons(button.id);
+    });
+  });
+
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    const activeButtonId = document.querySelector('.list-group.plus button.active').id;
+    updatePricesAndButtons(activeButtonId);
+  });
+ 

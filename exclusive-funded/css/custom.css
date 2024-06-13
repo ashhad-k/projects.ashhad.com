@@ -71,6 +71,7 @@ h4{ font-size: 40px}
 h5{ font-size: 40px}
 h6{ font-size: 20px}
 
+a{ text-decoration: none; transition: 0.5s ease-in-out}
 
 /* gradient border 2*/
 .fold5,
@@ -163,7 +164,18 @@ body{ background: #000000; color: #AFAFAF;}
     padding-left: 20px;
     width: 100%; 
     text-align: left;
+    border: none;
+    outline: none
 }
+.fold4 .dropdown-menu.show{    background: #273f5e;
+    color: #fff;
+    border-radius: 20px;
+    width: calc(100% - 20px);
+    padding: 20px;}
+.fold4 a.dropdown-item{ color: #fff; padding: 10px; transition: 0.5s }
+.fold4 a.dropdown-item:hover{background: #000000}
+
+.fold4 .dropdown-menu.show li{}
 .fold4 .dropdown .btn:focus{border: none}
 .fold4 .dropdown-toggle-split::after, 
 .fold4 .dropup .dropdown-toggle-split::after, 
@@ -205,6 +217,7 @@ body{ background: #000000; color: #AFAFAF;}
 .fold5.eq-tabs .list-group-item{ background: none; color: #AFAFAF; padding: 16px; border: 1px solid #242628; transition: 0.2s ease-in-out}
 .fold5.eq-tabs .list-group-item:hover{ background: #18191A; }
 .fold5.eq-tabs .list-group-item.active{ background: var(--bs-primary);  font-weight: bold; color: #fff;}
+
 .fold5.eq-tabs .plus {width: 60%; border-radius: 20px}
 .fold5.eq-tabs .plus .list-group-item{ border-right: 0px; padding-right: 50px; }
 
@@ -215,10 +228,27 @@ body{ background: #000000; color: #AFAFAF;}
 .list-group.have-2kids .list-group-item{ display: flex; text-align: center; align-items: center}
 .list-group.have-2kids .list-group-item > div { flex-shrink: 0; flex-grow: 1;}
 
-
+.fold5.eq-tabs  a:hover{ }
+.strike {
+      text-decoration: line-through;
+    }
 
 @media (max-width: 767.98px) {
-.fold5 {margin-bottom: 4rem}
+.fold5 {margin-bottom: 4rem; padding: 40px 10px}
+    .fold5 .list-group .list-group-item:first-child{ background: #000000}
+    
+    .fold5.eq-tabs .d-flex{display: block!important;}
+    .fold5.eq-tabs .plus{width: 100%}
+    .fold5.eq-tabs .plus .list-group-item{ border-right: 1px solid #242628; padding-right: 20px;display: flex;
+    flex-wrap: wrap;
+    gap: 16px; }
+
+.fold5.eq-tabs .minus{width: 100%; margin-left: auto; margin-top: 16px}
+.fold5.eq-tabs .h80px{ height: auto}
+.fold5.eq-tabs .h100px{ height: auto}
+.fold5.eq-tabs .h120px{ height: auto}
+    
+
 }
 
 
