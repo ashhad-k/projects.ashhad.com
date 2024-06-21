@@ -79,6 +79,7 @@ button:focus:not(:focus-visible){box-shadow: none}
 a{ transition: 0.5s ease-in-out; text-decoration: none}
 a:hover{color: var(--bs-nav-link-hover-color)}
 
+
 h1{ font-size: 100px}
 h2{ font-size: 64px}
 h3{ font-size: 48px}
@@ -162,8 +163,9 @@ ul.dual-list  li {
 /*--------------------------------------------------
     ## Section wise
 ---------------------------------------------------*/
-.navbar{ position: fixed; left: 0px; right: 0px; top: 0px; z-index: 10; transition: 0.5s ease-in-out; background: linear-gradient(0deg, rgba(25, 40, 108, 0.00) 0%, rgba(25, 40, 108, 0.60) 100%);}
+.navbar{ position: fixed; left: 0px; right: 0px; top: 0px; z-index: 10; transition: 0.5s ease-in-out; background:var(--bs-primary);}
 .navbar.scrolled-down{ background:var(--bs-primary); }
+#nav0{ background: linear-gradient(0deg, rgba(25, 40, 108, 0.00) 0%, rgba(25, 40, 108, 0.60) 100%)!important;}
 
 .navbar .rhs{}
 .navbar .rhs .b2{padding: 6px 10px;}
@@ -396,6 +398,8 @@ footer .three{margin-left: 2rem}
 .s-breadcrumb a{ color: #9EA1AC}
 
 .s-breadcrumb p.lead{font-size: 20px; color: var(--bs-primary)}
+.s-breadcrumb ul > li a{ color: var(--bs-primary); padding: 10px 0px;}
+
 
 .s-content,
 .s-content ul li{ font-size: 15px; line-height: 30px; margin-bottom: 16px;}

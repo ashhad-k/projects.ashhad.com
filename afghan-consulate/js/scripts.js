@@ -28,9 +28,9 @@ $(document).ready(function() {
   $(window).scroll(function() {
     var currentScrollPos = $(window).scrollTop();
     if (prevScrollPos < currentScrollPos) {
-      $("#nav1").addClass("scrolled-down");
+      $("#nav0").addClass("scrolled-down");
     } else {
-      $("#nav1").removeClass("scrolled-down");
+      $("#nav0").removeClass("scrolled-down");
     }
     prevScrollPos = currentScrollPos;
   });
