@@ -14,7 +14,7 @@ AOS.init({
 
 
 
-//
+// homepage carousel auto start
 const myCarouselElement = document.querySelector('#carousel1')
 const carousel = new bootstrap.Carousel(myCarouselElement, {
   interval: 2000,
