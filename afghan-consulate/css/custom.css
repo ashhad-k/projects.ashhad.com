@@ -164,8 +164,8 @@ ul.dual-list  li {
     ## Section wise
 ---------------------------------------------------*/
 .navbar{ position: fixed; left: 0px; right: 0px; top: 0px; z-index: 10; transition: 0.5s ease-in-out; background:var(--bs-primary);}
-.navbar.scrolled-down{ background:var(--bs-primary); }
-#nav0{ background: linear-gradient(0deg, rgba(25, 40, 108, 0.00) 0%, rgba(25, 40, 108, 0.60) 100%)!important;}
+.navbar.scrolled-down{ background:var(--bs-primary)!important; }
+#nav0{ background: linear-gradient(0deg, rgba(25, 40, 108, 0.00) 0%, rgba(25, 40, 108, 0.60) 100%)}
 
 .navbar .rhs{}
 .navbar .rhs .b2{padding: 6px 10px;}
@@ -175,6 +175,7 @@ ul.dual-list  li {
 .dropdown-menu li a.dropdown-item{ padding: 10px 24px; border-bottom: 1px solid #eeeeee}
 
 @media (max-width: 767.98px) {
+    #nav0{background:var(--bs-primary); }
 .navbar{  background:var(--bs-primary); position: fixed; left: 0px; right: 0px; top: 00px; z-index: 10; transition: 0.5s ease-in-out; padding-bottom: 12px!important}
     
     .navbar .lhs{}
