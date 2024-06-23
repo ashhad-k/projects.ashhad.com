@@ -296,11 +296,18 @@ ul.dual-list  li {
 }
 
 .vdo{ margin: 2rem 0px 4rem 0px; position: relative; cursor: pointer}
-
 .vdo .overlay{position: absolute; left: 0; right: 0; top:0; bottom:0; display: flex; justify-content: center; align-items: center; font-size: 74px;  transition: 0.3s ease-in; background:#00000050; border-radius: 16px;}
 
 .vdo .overlay a{color: #ffffff!important;}
 .vdo:hover .overlay{ background: #00000005; color: #fff;}
+
+
+#vdoModal iframe{ width: 100%; min-height: 450px;}
+@media (max-width: 767.98px) {
+    
+    #vdoModal iframe{ width: 100%; min-height: 350px;}
+}
+
 
 /*--------------------------------------------------
     ## Bottom
