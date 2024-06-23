@@ -126,6 +126,8 @@ h6{ font-size: 20px}
 .row-gap{ display: block; padding: 4rem 0rem}
 .section-title{padding-top: 2rem; padding-bottom: 1rem}
 
+.modal-backdrop{z-index: 1}
+
 ul.dual-list {
   display: flex;
     flex-wrap: wrap;
@@ -167,7 +169,13 @@ ul.dual-list  li {
 .navbar.scrolled-down{ background:var(--bs-primary)!important; }
 #nav0{ background: linear-gradient(0deg, rgba(25, 40, 108, 0.00) 0%, rgba(25, 40, 108, 0.60) 100%)}
 
-.navbar .rhs{}
+.navbar .rhs{ display: flex!important; }
+.navbar .rhs .dropdown-toggle::after{ color: #fff }
+.navbar .rhs .dropdown{border-radius: 20px;}
+.navbar .rhs .dropdown .form-control{ min-width: 220px;}
+.navbar .rhs .dropdown .btn{width: 100%; text-align: center}
+
+
 .navbar .rhs .b2{padding: 6px 10px;}
 .navbar .rhs .b0{border-color: #ffffff40}
 
@@ -180,7 +188,7 @@ ul.dual-list  li {
     
     .navbar .lhs{}
     .navbar .rhs{ display: flex!important; justify-content: space-between}
-    .navbar .b0{ display: inline-block; height: 40px; line-height: 1}
+    .navbar .b0{ display: inline-block; height: 40px;}
     .navbar .b1{ display: inline-block}
     .navbar .b2{ display: inline-block; width: 40px; height: 40px;}
 .navbar .rounded-circle .b2{display: inline-block; padding: 6px 10px;}
@@ -199,6 +207,17 @@ ul.dual-list  li {
 .dropdown-menu li a.dropdown-item{ padding: 10px 10px; }
 }
 
+
+#docModal{}
+#docModal .data{ display: flex;}
+#docModal .data .btn-primary {  padding-left: 20px; padding-right: 20px;margin-left: 12px;}
+
+@media (max-width: 767.98px) {
+   #docModal  .data{display: block!important;}
+   #docModal  .data INPUT{margin-bottom: 12px; margin-right: 0px;}
+   #docModal  .data .btn-primary { width: 100%; text-align: center;}
+    
+}
 
 /*--------------------------------------------------
 ## hero
@@ -275,7 +294,13 @@ ul.dual-list  li {
     .panel1 .one{ margin-top: 2rem; margin-bottom: 2rem}
     
 }
-.vdo{ margin: 2rem 0px 4rem 0px}
+
+.vdo{ margin: 2rem 0px 4rem 0px; position: relative; cursor: pointer}
+
+.vdo .overlay{position: absolute; left: 0; right: 0; top:0; bottom:0; display: flex; justify-content: center; align-items: center; font-size: 74px;  transition: 0.3s ease-in; background:#00000050; border-radius: 16px;}
+
+.vdo .overlay a{color: #ffffff!important;}
+.vdo:hover .overlay{ background: #00000005; color: #fff;}
 
 /*--------------------------------------------------
     ## Bottom
@@ -509,6 +534,8 @@ footer .three{margin-left: 2rem}
 .s-gallery .card .card-img-overlay{ background: linear-gradient(180deg, rgba(25, 40, 108, 0.00) 0%, #19286C 100%); top: auto; padding: 30px 30px; color: #fff}
 .s-gallery .card .card-img-overlay h6{color: #fff}
 
+
+/* search */
 
 
 

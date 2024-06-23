@@ -80,9 +80,48 @@
         <li class="nav-item"><a class="nav-link  active" href="contact.html">Contact</a></li>
       </ul>
       <div class="d-grid  d-md-block gap-3  rhs">
-        <a href="document-verification.html"  class="btn btn-outline-light rounded-pill me-md-2 b0"> <i class="bi bi-file-check"></i> Document Verification</a>
-        <button type="button" class="btn text-white-50  b1 "><i class="bi bi-search"></i></button>
-        <button type="button" class="btn btn-light rounded-circle b2"><i class="bi bi-person"></i></button>
+        <a data-bs-toggle="modal" data-bs-target="#docModal"  class="btn btn-outline-light rounded-pill me-md-2 b0"> <i class="bi bi-file-check"></i> Document Verification</a>
+
+<!-- Modal -->
+<div class="modal modal-lg fade" id="docModal" tabindex="-1" aria-labelledby="docModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="docModalLabel">Document verification</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+     
+          <div class="data">
+            <input type="text" class="form-control" placeholder="Enter Document No" aria-label="Enter Document No">
+       <button type="button" class="btn btn-primary">Verify</button>
+          </div>
+          
+      
+          
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
+       
+      </div>
+    </div>
+  </div>
+</div><div class="dropdown b1">
+  <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+    <i class="bi bi-search text-white"></i>
+  </button>
+  <form class="dropdown-menu dropdown-menu-end p-4">
+    <div class="mb-3">
+        <input type="input" class="form-control" id="search" placeholder="Search...">
+    
+    </div>
+   
+   
+    <button type="submit" class="btn btn-primary">Search</button>
+  </form>
+</div>
+        <a href="user-login.html" class="btn btn-light rounded-circle b2">
+        <i class="bi bi-person"></i>  </a>
       </div>
     </div>
   </div>

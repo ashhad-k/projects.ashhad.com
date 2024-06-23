@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="description" content="" />
 <meta name="author" content="" />
-<title>Afghan Consulate</title>
+<title>Afghan Consulate - User Login</title>
 <!-- Favicon-->
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
@@ -32,8 +32,7 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 small me-3 lhs">
-        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-        <li class="nav-item dropdown"> <a class="nav-link k active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Consulate </a>
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li> <li class="nav-item dropdown"> <a class="nav-link  dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Consulate </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
             <li><a class="dropdown-item" href="consulate-officer.html">Consulate Officer</a></li>
@@ -135,71 +134,81 @@
       <div class="col-lg-12">
         <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house-door"></i></a></li>
-            <li class="breadcrumb-item"><a href="consulate.html">Consulate</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Consulate Officer</li>
+            <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house-door"></i></a></li> 
+            <li class="breadcrumb-item active" aria-current="page">User Login</li>
           </ol>
         </nav>
       </div>
     </div>
   </div>
 </section>
-<section class="s-hero3 bg--buildings cc1">
-  <h2>Consulate Officer</h2>
+<section class="s-hero3 bg--information cc1">
+  <h2>User Login</h2>
 </section>
     <div class="s-gap-sm"></div>
 <section class="s-content mt-100negative">
   <div class="container">
     <div class="row  g-4">
-      <div class="col-12 col-md-6">
-        <div class="box2 with-pic">
-            <div class="pic"><img src="assets/tn-rahman-fida.jpg" alt=""/></div>
-            <div class="data text-primary">
-           <strong> ښاغلی عبدالرحمن (فدا) </strong><br>
-په دبۍ کې د افغانستان اسلامی امارت جنرال قونسل<br>
-Mr. Abdul Rahman (Fida )<br>
-Consul General of IAE in dubai, UAE
-            
-                <p><i class="me-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
-  <path d="M1.25 0.25H14.75C15.1642 0.25 15.5 0.58579 15.5 1V13C15.5 13.4142 15.1642 13.75 14.75 13.75H1.25C0.83579 13.75 0.5 13.4142 0.5 13V1C0.5 0.58579 0.83579 0.25 1.25 0.25ZM14 3.42844L8.05385 8.7535L2 3.41195V12.25H14V3.42844ZM2.38359 1.75L8.04642 6.7465L13.6257 1.75H2.38359Z" fill="#F2BD01"/>
-</svg></i><a href="mailto:fida@afghanconsulate.ae">fida@afghanconsulate.ae</a></p>
-                   <button type="button" class="btn btn-secondary"> Contact Me <i class="ms-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-  <path d="M10 0.5C15.52 0.5 20 4.98 20 10.5C20 16.02 15.52 20.5 10 20.5C4.48 20.5 0 16.02 0 10.5C0 4.98 4.48 0.5 10 0.5ZM10 9.5H6V11.5H10V14.5L14 10.5L10 6.5V9.5Z" fill="#19286C"/>
-</svg></i>
-            
-           
-            </button>
-            </div>
-          
+      
+      <div class="col-md-8 mx-auto">
+        
+  <form class="row g-3">
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Email</label>
+    <input type="email" class="form-control" id="inputEmail4">
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Password</label>
+    <input type="password" class="form-control" id="inputPassword4">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress" class="form-label">Address</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress2" class="form-label">Address 2</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+  </div>
+  <div class="col-md-6">
+    <label for="inputCity" class="form-label">City</label>
+    <input type="text" class="form-control" id="inputCity">
+  </div>
+  <div class="col-md-4">
+    <label for="inputState" class="form-label">State</label>
+    <select id="inputState" class="form-select">
+      <option selected>Choose...</option>
+      <option>...</option>
+    </select>
+  </div>
+  <div class="col-md-2">
+    <label for="inputZip" class="form-label">Zip</label>
+    <input type="text" class="form-control" id="inputZip">
+  </div>
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Check me out
+      </label>
+    </div>
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </div>
+</form>
         </div>
-      </div>
-      <div class="col-12 col-md-6">
-        <div class="box2 with-pic">
-            <div class="pic"><img src="assets/tn-haseebullah.jpg" alt=""/></div>
-            <div class="data text-primary">
-                
-
-                
-           <strong>
-                ښاغلی حسيب الله (محمدي)</strong><br>
-                
-دبۍ کې د ا.ا.ا. أول سکرتر او قونسلي چارو مسؤول<br>
-Mr.Hasibullah Mohammadi<br>
-First Secretary &amp; Consular Affairs Officer
-            
-                <p><i class="me-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
-  <path d="M1.25 0.25H14.75C15.1642 0.25 15.5 0.58579 15.5 1V13C15.5 13.4142 15.1642 13.75 14.75 13.75H1.25C0.83579 13.75 0.5 13.4142 0.5 13V1C0.5 0.58579 0.83579 0.25 1.25 0.25ZM14 3.42844L8.05385 8.7535L2 3.41195V12.25H14V3.42844ZM2.38359 1.75L8.04642 6.7465L13.6257 1.75H2.38359Z" fill="#F2BD01"/>
-</svg></i><a href="mailto:dubai@afghanconsulate.ae">dubai@afghanconsulate.ae </a></p>
-                   <button type="button" class="btn btn-secondary"> Contact Me <i class="ms-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-  <path d="M10 0.5C15.52 0.5 20 4.98 20 10.5C20 16.02 15.52 20.5 10 20.5C4.48 20.5 0 16.02 0 10.5C0 4.98 4.48 0.5 10 0.5ZM10 9.5H6V11.5H10V14.5L14 10.5L10 6.5V9.5Z" fill="#19286C"/>
-</svg></i>
-            
-           
-            </button>
-            </div>
-          
-        </div>
-      </div>
+      
+      
+      
+      
+      
+        
+      
+      
+        
+      
+      
+        
       
     </div>
   </div>
