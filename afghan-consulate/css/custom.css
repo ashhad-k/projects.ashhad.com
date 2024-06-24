@@ -409,6 +409,7 @@ footer{ background:  url("../assets/bg-footer1.webp") no-repeat center  bottom #
 footer header{ margin-bottom: 2rem}
 footer li{padding: 0.5rem 0rem}
 footer a{color:rgba(134, 147, 199, 1)  }
+footer img{max-width: 200px;}
 
 footer .four ul.list-unstyled {color:rgba(134, 147, 199, 1) }
 footer .four li{ display: flex;align-items: center;column-gap: 12px; color:rgba(134, 147, 199, 1)   }
