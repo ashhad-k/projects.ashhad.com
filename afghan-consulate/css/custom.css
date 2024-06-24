@@ -169,6 +169,8 @@ ul.dual-list  li {
 .navbar.scrolled-down{ background:var(--bs-primary)!important; }
 #nav0{ background: linear-gradient(0deg, rgba(25, 40, 108, 0.00) 0%, rgba(25, 40, 108, 0.60) 100%)}
 
+.navbar .navbar-brand IMG{max-width: 236px;}
+
 .navbar .rhs{ display: flex!important; }
 .navbar .rhs .dropdown-toggle::after{ color: #fff }
 .navbar .rhs .dropdown{border-radius: 20px;}
