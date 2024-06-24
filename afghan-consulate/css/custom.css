@@ -177,10 +177,10 @@ ul.dual-list  li {
 
 
 .navbar .rhs .b2{padding: 6px 10px;}
-.navbar .rhs .b0{border-color: #ffffff40}
+.navbar .rhs .b0{border-color: #ffffff40; font-size: 14px; }
 
 .dropdown-menu{padding: 00px;}
-.dropdown-menu li a.dropdown-item{ padding: 10px 24px; border-bottom: 1px solid #eeeeee}
+.dropdown-menu li a.dropdown-item{ padding: 10px 12px; border-bottom: 1px solid #33333350; font-size: 14px;}
 
 @media (max-width: 767.98px) {
     #nav0{background:var(--bs-primary); }
