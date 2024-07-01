@@ -29,16 +29,17 @@ OL.s1 {
 <body>
 <div class="container">
   <div class="row">
-    <div class="col-lg-3">
+     <div class="col-lg-3">
       <div class="position-fixed">
         <h4 class="pt-3">Project Listing </h4>
         <p><small>www.ashhad.com<br>
           Whatsapp: <a href="https://wa.me/923332259620" target="_blank">+92-333-2259620</a><br>
           Dribbble: <a href="https://dribbble.com/ashhad1"> Link</a>  <br>
-        Behance: <a href="https://www.behance.net/ashhad1"> Link</a> </small></p>
-        <p><small>Figma: <a href="https://www.figma.com/@ashhad" target="_blank">Link</a><br>
-          
-        </small></p>
+        Behance: <a href="https://www.behance.net/ashhad1"> Link</a> <br>
+Figma: <a href="https://www.figma.com/@ashhad" target="_blank">Link</a>
+            </small>
+           </p>
+       
       </div>
     </div>
     <div class="col-lg-9">
@@ -52,7 +53,7 @@ OL.s1 {
          const data = await response.json();
         let htmlString = '<ol>';
         for (let file of data) {
-          htmlString += <li><a href="${file.path}">${file.name}</a></li>;
+          htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
         }
         htmlString += '</ol>';
         document.getElementById('list').innerHTML = htmlString;
