@@ -1,0 +1,60 @@
+/*--------------------------------------------------
+    custom font declration
+---------------------------------------------------*/
+
+
+@font-face {
+	font-family: 'Gilory';
+	src: url('../fonts/gilory/gilroy-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Gilory';
+	font-weight: 500;
+	src: url('../fonts/gilory/gilroy-medium-webfont.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Gilory';
+	font-weight: 600;
+	src: url('../fonts/gilory/gilroy-bold-webfont.woff') format('woff');
+}
+
+
+/*--------------------------------------------------
+    ## Defaults
+---------------------------------------------------*/
+* {font-family: 'Gilory', sans-serif; }
+
+body{background-color: #121212; font-family: 'Gilory', sans-serif; }
+  
+a{ text-decoration: none; color: #333;}
+
+.txt-lite{ color: rgba(255, 255, 255, 0.60);}
+
+/*--------------------------------------------------
+    ## Custom
+---------------------------------------------------*/
+.cn1{ padding: 20px 16px 0px 16px; max-width: 430px;}
+.cn1 .row1{ display: flex; justify-content: space-between; margin-bottom: 20px;}
+.btn-primary{background: #103ACF; font-size: 16px; font-weight: 500; padding: 12px 20px;  }
+.btn-primary IMG{ vertical-align:text-bottom; margin-left: 10px; transition: transform 0.20s ease-in-out;}
+.btn-primary:hover IMG{ transform:translateX(5px) ;}
+
+.data1{ background: #ffffff; padding: 10px; border-radius: 8px; position: relative; padding-bottom: 16px; margin-bottom: 16px;}
+.data1 header{ position: absolute; left: 10px; top: 10px; padding: 16px 16px 20px 16px; border-bottom-right-radius: 20px; background: #ffffff; z-index: 10;}
+.data1 section{position: relative; overflow: hidden; border-top-left-radius: 8px; border-top-right-radius: 8px;}
+.data1 section .content{ position: absolute; left: 0px; right: 0px; bottom: 0px; height: 230px; color: #fff; display: flex; justify-content: flex-end; flex-direction: column; padding: 30px 20px;
+    border-radius: 0px 8px 8px 0px; background: linear-gradient(1deg, #121212 4.58%, rgba(18, 18, 18, 0.50) 74.03%, rgba(18, 18, 18, 0.00) 95.29%);}
+.data1 section .content h4{margin-bottom: 0px; font-size: 25px; font-weight: 600;}
+.data1 section .content P{margin-bottom: 0px;}
+
+.data1 .banner1{  }
+
+.data1 footer{ display: flex; justify-content: space-between; font-size: 16px; padding: 16px 16px 4px 16px; color: #333333;  font-weight: 500;  border: 0px; margin-top: 0px;  }
+
+
+
+
+footer{ display: flex; justify-content: space-between; font-size: 12px; padding: 10px 0px; color: #ffffff60; padding-top: 24px; padding-bottom: 24px; border-top:1px solid #2A2943; margin-top: 24px;}
+
