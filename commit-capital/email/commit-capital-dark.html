@@ -1,0 +1,551 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- utf-8 works for most cases -->
+<meta name="viewport" content="width=device-width">
+<!-- Forcing initial-scale shouldn't be necessary -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Use the latest (edge) version of IE rendering engine -->
+<title></title>
+<!-- The title tag shows in email notifications, like Android 4.4. --><!-- Web Font / @font-face : BEGIN --><!-- NOTE: If web fonts are not required, lines 9 - 26 can be safely removed. --><!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. --><!--[if !mso]>
+		<style type="text/css">@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900');
+		</style>
+		<link target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800" rel="stylesheet" target="_blank" type="text/css" /><!--<![endif]--><!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: https:stylecampaign.com/blog/2015/02/webfont-support-in-email/ --><!-- Web Font / @font-face : END --><!-- CSS Reset -->
+<style type="text/css">
+/* What it does: Remove spaces around the email design added by some email clients. */
+		/* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
+html, body {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+}
+/* What it does: Stops email clients resizing small text. */
+* {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+/* What is does: Centers email on Android 4.4 */
+div[style*="margin: 14px 0"] {
+    margin: 0 !important;
+}
+/* What it does: Stops Outlook from adding extra spacing to tables. */
+table, td {
+    mso-table-lspace: 0pt !important;
+    mso-table-rspace: 0pt !important;
+}
+/* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+table {
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    table-layout: fixed !important;
+    Margin: 0 auto !important;
+}
+table table table {
+    table-layout: auto;
+}
+/* What it does: Uses a better rendering method when resizing images in IE. */
+img {
+    -ms-interpolation-mode: bicubic;
+}
+/* What it does: A work-around for iOS meddling in triggered links. */
+.mobile-link--footer a, a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: underline !important;
+}
+</style>
+<!-- Progressive Enhancements -->
+<style type="text/css">
+/* What it does: Hover styles for buttons */
+
+
+
+
+
+.button-td, .button-a {
+    transition: all 100ms ease-in;
+}
+.button-td:hover, .button-a:hover {
+    background: #454e5f !important;
+    border-color: #454e5f !important;
+}
+.specialtd {
+    padding: 0 10px 0 30px;
+    width: 10%;
+    text-align: center;
+}
+.desktopoff {
+    display: none!important;
+}
+.desktopon {
+    display: table-row!important;
+}
+.imgbx img {
+    display: inline-block!important;
+}
+.imgbx span {
+    display: inline-block!important;
+    margin: 0 20px!important;
+    width: 70%!important;
+}
+.full-width {
+    margin-left: 30px;
+}
+.border-r {
+    border-right: 1px solid #dddddd;
+    padding-right: 15px;
+}
+.w60 {
+    width: 65%;
+    display: inline-block;
+}
+.w40 {
+    width: 45%;
+    display: inline-block;
+}
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.textblock, .imgblock {
+    box-sizing: border-box;
+}
+.smallcircle:last-child {
+    margin-bottom: 40px!important;
+}
+.smallcircle {
+    position: relative;
+    padding: 0!important;
+    padding-left: 80px!important;
+    padding-right: 20px!important;
+    min-height: 50px;
+    margin: 0!important;
+    font-size: 13px!important;
+}
+.smallcircle:before {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #DDDDDD;
+    border-radius: 100%;
+    content: '';
+    left: 40px;
+    top: 8px
+}
+.smallcircle:after {
+    position: absolute;
+    width: 1px;
+    height: 50px;
+    background: #DDDDDD;
+    border-radius: 100%;
+    content: '';
+    left: 43px;
+    top: 8px
+}
+p.smallcircle:nth-child(5):after {
+    display: none!important;
+}
+.smallcircle:nth-child(3):before, .smallcircle:nth-child(5):before {
+    background: #7cb445!important;
+    z-index: 99999999
+}
+.linespace br {
+    display: none!important;
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+.w60 {
+    width: 100%;
+    display: inline-block;
+}
+.w40 {
+    width: 100%;
+    display: inline-block;
+}
+.border-r {
+    border-right: 0px solid #dddddd;
+    padding-right: 0px;
+}
+.mobileoff {
+    display: none!important;
+}
+.img-container {
+    width: 100%;
+    height: auto!important;
+}
+.full-width.ml-0 {
+    margin-left: 0!important;
+}
+.imgbx img {
+    display: block!important;
+}
+.imgbx span {
+    display: block!important;
+    margin: 10px 0px!important;
+    width: 100%!important;
+}
+.full-width {
+    width: 100%;
+    height: auto!important;
+}
+.desktopoff {
+    display: grid!important;
+}
+.desktopon {
+    display: none!important;
+}
+.gridbox {
+    display: grid;
+}
+.gridimg {
+    width: 100%;
+    height: auto!important;
+}
+.imgbanner {
+    max-height: inherit;
+    height: auto;
+}
+.imgbanner2 {
+    width: 100% !important;
+    margin: auto !important;
+    max-width: 100%!important;
+    max-height: inherit;
+    height: auto;
+}
+.padd30 {
+    padding: 0 30px 20px!important;
+}
+.email-container {
+    width: 100% !important;
+    margin: auto !important;
+    max-width: 100%!important;
+}
+/* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+.fluid, .fluid-centered {
+    max-width: 100% !important;
+    height: auto !important;
+    Margin-left: auto !important;
+    Margin-right: auto !important;
+}
+/* And center justify these ones. */
+.fluid-centered {
+    Margin-left: auto !important;
+    Margin-right: auto !important;
+}
+/* What it does: Forces table cells into full-width rows. */
+.stack-column, .stack-column-center {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    direction: ltr !important;
+}
+/* And center justify these ones. */
+.stack-column-center {
+    text-align: center !important;
+}
+/* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+.center-on-narrow {
+    text-align: center !important;
+    display: block !important;
+    Margin-left: auto !important;
+    Margin-right: auto !important;
+    float: none !important;
+}
+table.center-on-narrow {
+    display: inline-block !important;
+}
+.right2 {
+    text-align: right!important;
+    display: block !important;
+    Margin-left: 0px !important;
+    Margin-right: auto !important;
+    float: right!important;
+}
+.text-center {
+    text-align: center!important;
+}
+.specialtd {
+    padding: 0 10px!important;
+    width: 20%;
+}
+.specialtd+td {
+    padding: 0 20px 0 10px!important;
+    width: 80%!important;
+}
+.webopti {
+    image-rendering: -webkit-optimize-contrast;
+}
+.padding1015 {
+    padding: 10px 15px 0;
+}
+.f13 {
+    font-size: 13px!important;
+}
+.margin-l0 {
+    margin-left: 0!important;
+}
+.sm-padding {
+    padding: 10px 0!important;
+}
+.pdbtm {
+    padding-bottom: 15px;
+}
+.d-flex {
+    display: block;
+}
+.textblock.fl-left {
+    margin-bottom: 25px;
+}
+.imgblock.fl-right {
+    margin-bottom: 0px;
+}
+.textblock.fl-right {
+    margin-bottom: 25px;
+    padding: 0 30px;
+}
+.imgblock.fl-right {
+    margin-bottom: 0px;
+}
+.d-flex {
+    padding: 0!important;
+}
+.imgblock.fl-right, .textblock.fl-left, .textblock.fl-right {
+    text-align: center!important;
+}
+.textblock.fl-left h3 {
+    font-size: 18px!important;
+    line-height: 20px!important;
+    margin: 0!important;
+}
+.textblock.fl-right h3 {
+    font-size: 24px!important;
+    line-height: 30px;
+    margin: 0!important;
+}
+.textmob {
+    font-size: 18px!important;
+    padding: 50px 30px 5px!important;
+}
+.mt150 {
+    margin-top: 175px;
+}
+.featable p {
+    display: block!important;
+    text-align: center!important;
+}
+.featable img {
+    display: table!important;
+    margin: 0 auto 15px!important
+}
+.featable p .smimg {
+    margin: 0!important;
+}
+.featable p {
+    padding-top: 0!important;
+    font-size: 16px!important;
+    margin-top: 10px
+}
+.featable .gridbox td {
+    padding-top: 5px!important;
+    padding-bottom: 10px!important;
+}
+p.heading2 {
+    padding: 30px 0px 10px 20px!important;
+    text-align: center!important;
+}
+p.heading2 br {
+    display: none!important;
+}
+.textblock {
+    text-align: center!important;
+}
+.textblock h3 {
+    text-align: center!important;
+}
+.textblock h3+a {
+    margin-left: auto!important;
+    margin-right: auto!important
+}
+.padding-0 {
+    padding-top: 0!important
+}
+div.imgblock.fl-right {
+    margin-top: 30px!important;
+}
+a.smimg {
+    margin-right: 0!important
+}
+.mt-0 {
+    margin-top: 0!important;
+}
+.pd20 {
+    padding: 20px!important
+}
+.bgnone {
+    background: none!important;
+}
+.smallcircle {
+    min-height: inherit!important;
+    padding-left: 60px!important;
+    padding-bottom: 30px!important;
+    padding-right: 15px!important
+}
+.smallcircle:after {
+    display: none!important;
+}
+.linespace br {
+    display: block!important;
+}
+.pd20.bgnone {
+    margin-top: 25px!important
+}
+.pad-left0 {
+    padding: 0 20px 30px!important;
+}
+.imgh {
+    width: 60%!important;
+    margin-top: 30px!important
+}
+}
+</style>
+<style type="text/css">
+:root {
+    color-scheme: light only;
+}
+table, a, p, div {
+    font-family: 'Montserrat', sans-serif
+}
+a.smimg {
+    margin-right: 0!important
+}
+</style>
+<center style="width: 100%; background: #000000;">
+  <!-- Visually Hidden Preheader Text : BEGIN -->
+  <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: 'Montserrat', sans-serif;">Empowering Traders Worldwide.</div>
+  <!-- Visually Hidden Preheader Text : END --><!-- Email Header : BEGIN -->
+  
+  <table align="center" border="0" cellpadding="0" cellspacing="0" class="email-container mobileoff" style="margin: auto;">
+    <tbody>
+      <tr>
+        <td style="padding: 10px 0; text-align: center">&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- Email Header : END --><!-- Email Body : BEGIN -->
+  
+  <table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" class="email-container" style="margin: auto; border-radius: 0px; max-width: 680px;" width="100%">
+    <!-- Hero Image, Flush : BEGIN -->
+    <tbody>
+      <!-- Thumbnail Left, Text Right : BEGIN -->
+      <tr>
+        <td align="center" dir="ltr" style="padding: 10px 10px 10px 10px; background-color: #242D55; border-top-left-radius: 00px; border-top-right-radius: 00px" valign="top" width="100%"><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+              <tr><!-- Column : BEGIN -->
+                <td width="30%"><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody>
+                      <tr>
+                        <td dir="ltr" style="padding: 10px 15px; text-align: left; font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 600; mso-height-rule: exactly; line-height: 20px; color: #2a2a2a;" valign="top"><a href="https://www.CommitCapital.com/" target="_blank"><img src="https://saphyte.io/portfolio/commit-capital/logo.png" alt="Commit Capital" width="213" height="30" style="image-rendering: -webkit-optimize-contrast" /></a></td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+                <!-- Column : END --><!-- Column : BEGIN -->
+                <td width="70%"><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody>
+                      <tr>
+                        <td dir="ltr" style="font-family: 'Montserrat', sans-serif;font-size: 15px;mso-height-rule: exactly;padding: 10px 05px 10px 25px;text-align: right;" valign="top"><a class="smimg" href="https://www.CommitCapital.com/#challenges" style=" text-decoration: none;mso-hide:all;color:#ffffff;border-radius:100px;background-color: #5874F6; background: linear-gradient(270deg, #5874F6 -8.33%, #5430D7 105.21%) #5874F6;padding: 10px 25px;text-align: center;font-size: 15px;display: inline-block;font-weight:500;" target="_blank">Get Funded</a></td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+                <!-- Column : END --> 
+              </tr>
+            </tbody>
+          </table></td>
+      </tr>
+      <tr>
+        <td align="center" dir="ltr" style="padding:0px; background-color: #030616;" valign="top"><span style="padding:0"><img alt="ThinkCapital" src="https://saphyte.io/portfolio/commit-capital/banner.png" width="100%" /></span></td>
+      </tr>
+    </tbody>
+  </table>
+  <table align="center" bgcolor="#030616" border="0" cellpadding="0" cellspacing="0" class="email-container" style="margin: auto; border-radius: 0px; max-width: 100%;" width="680px">
+    <!-- Hero Image, Flush : BEGIN -->
+    <tbody>
+      <!-- Thumbnail Left, Text Right : BEGIN --><!--Column Text : BEGIN --><!--Column Text : BEGIN -->
+      <tr class="gridbox">
+        <td align="left" style="padding: 50px 20px"><p style="text-align: left; color: #EAEAEA"><span style="font-size:14px;">Dear {{affiliate_name}},</span><br />
+            &nbsp;</p>
+          <p style="text-align: left;"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#EAEAEA;letter-spacing:0;word-break:normal;">We are excited to inform you that your latest commission from the Think Capital affiliate&nbsp;program has been successfully received!</span></p>
+          <p style="text-align: left;"><b><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#EAEAEA;letter-spacing:0;word-break:normal;">Commission Details:</span></b></p>
+          <table width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="20" align="center" valign="top"><span style="color:#EAEAEA;">&bull;</span></td>
+              <td  align="left" valign="top"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#EAEAEA;letter-spacing:0;word-break:normal;"><b>Amount:</b> {{currency}} {{amount}}</span></td>
+            </tr>
+            <tr>
+              <td align="center" valign="top"><span style="color:#EAEAEA;">&bull;</span></td>
+              <td align="left" valign="top"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#EAEAEA;letter-spacing:0;word-break:normal;"><b>Account:</b> {{order_description}}</span></td>
+            </tr>
+            <tr>
+              <td align="center" valign="top"><span style="color:#EAEAEA;">&bull;</span></td>
+              <td align="left" valign="top"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#EAEAEA;letter-spacing:0;word-break:normal;"><b>Date Processed:</b> {{processing_date}}</span></td>
+            </tr>
+          </table>
+          <p style="text-align: left;"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#EAEAEA;letter-spacing:0;word-break:normal;">Please note that your commission will be available for withdrawal after 14 days (about 2&nbsp;weeks). You can view the details of this transaction and track your earnings in your affiliate&nbsp;dashboard. We believe that timely and accurate commission payments are crucial to our&nbsp;partnership, and we are committed to ensuring you receive your earnings promptly.</span></p>
+          <p style="text-align: left;"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#EAEAEA;letter-spacing:0;word-break:normal;">Thank you for your continued efforts and dedication in promoting Think Capital. Your hard&nbsp;work is appreciated, and we look forward to many more successful collaborations.</span></p>
+          <p style="text-align: left;"><br />
+            <span style="font-size:14px; color: #EAEAEA">Best regards,<br />
+            Commit CapitalTeam</span></p>
+          
+          <!-- Add more content as needed --></td>
+      </tr>
+      <tr>
+        <td class="text-left" dir="ltr" style="padding:15px 20px 15px 20px" valign="top"><table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+              <tr>
+                <td class="text-left" dir="ltr" style="padding:0 0px" valign="top"><a class="smimg" href="https://www.CommitCapital.com/#challenges" style=" text-decoration: none;mso-hide:all;color:#ffffff;border-radius:100px;background-color: #5874F6; background: linear-gradient(270deg, #5874F6 -8.33%, #5430D7 105.21%) #5874F6;padding: 10px 25px;text-align: center;font-size: 15px;display: inline-block;font-weight:500;" target="_blank">Visit Us</a></td>
+                <td align="right" style="padding:0 0px"><a href="https://saphyte.io/portfolio/commit-capital/icon-x.png" style="margin:0 3px" target="_blank"><img alt="social" src="https://saphyte.io/portfolio/commit-capital/icon-x.png" style="width: 24px; height: 24px;" /></a> <a href="https://www.instagram.com/originfx_official/" style="margin:0 3px" target="_blank"><img alt="social" src="https://saphyte.io/portfolio/commit-capital/icon-insta.png" style="width: 24px; height: 24px;" /></a> <a href="https://www.facebook.com/profile.php?id=61559593946689" style="margin:0 3px" target="_blank"><img alt="social" src="https://saphyte.io/portfolio/commit-capital/icon-fb.png" style="width: 24px; height: 24px;" /></a> <a href="https://www.tiktok.com/@originfx_" style="margin:0 3px" target="_blank"><img alt="social" height="24" src="https://saphyte.io/portfolio/commit-capital/icon-tiktok.png" width="24" /></a> <a href="https://discord.gg/bzebQmBZm3" style="margin:0 3px" target="_blank"><img alt="social" src="https://saphyte.io/portfolio/commit-capital/icon-discord.png" style="width: 24px; height: 24px;" /></a></td>
+              </tr>
+            </tbody>
+          </table></td>
+      </tr>
+      <!-- Hero Image, Flush : END -->
+    </tbody>
+  </table>
+  <table align="center" bgcolor="#030616" border="0" cellpadding="0" cellspacing="0" class="email-container" style="margin: auto; max-width: 680px;" width="100%">
+    <tbody>
+      <tr>
+        <td height="20">&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="left" dir="ltr" style="padding: 20px 10px 10px 10px;border-top:1px solid #6A57B9" valign="top" width="100%"><table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+              <tr class="gridbox-ftr"><!-- Column : BEGIN -->
+                <td class="email-container"><table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody>
+                    </tbody>
+                  </table></td>
+              </tr>
+            </tbody>
+          </table></td>
+      </tr>
+      <tr>
+        <td style="padding: 10px 20px;width: 100%;font-size: 14px; font-family: 'Montserrat', sans-serif; font-weight: 400; mso-height-rule: exactly; line-height:22px; text-align: left; color: #8D8F9D;text-align:left"><p>Risk Warning: Leveraged products such as Forex carry a high degree of risk and may not suit all traders. Before you begin trading ensure you fully understand the risk involved taking into account your investment objectives and level of experience, and if necessary, seck independent advice. Commit Capital Ltd is a company registered in St Lucia Company number 2024-00036. Ground Floor, The Sotheby Building, Rodney Bay Gros-islet saint Lucia LC01 101.&nbsp;Commit Capital Pty Ltd is not a product issuer of over the counter (OTC) derivatives and as such, it will not make a market in such products, nor transact with clients as principal. It is authorised to perform financial services to wholesale clients only.</p></td>
+      </tr>
+      <tr>
+        <td style="padding: 10px 20px;width: 100%;font-size: 14px; font-family: 'Montserrat', sans-serif; font-weight: 400; mso-height-rule: exactly; line-height:22px; text-align: left; color: #8D8F9D;text-align:left"><table width="100%" border="0" align="left" cellpadding="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <td><a href="https://www.CommitCapital.com/" target="_blank"><img src="https://saphyte.io/portfolio/commit-capital/logo.png" alt="Commit Capital" height="30" style="image-rendering: -webkit-optimize-contrast" /></a></td>
+              </tr>
+              <tr>
+                <td style="padding: 10px 0px 10px 0px;width: 100%;font-size: 13px; font-family: 'Montserrat', sans-serif; font-weight: 400; mso-height-rule: exactly; line-height:22px; text-align: left; color: #8D8F9D;text-align:left"><p> Commit Capital Ltd 2024 All rights reserved</p></td>
+              </tr>
+            </tbody>
+          </table></td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- Email Footer : END -->
+</center>
+<div id="__genieContainer" style="all: initial; display: none;">&nbsp;</div>
