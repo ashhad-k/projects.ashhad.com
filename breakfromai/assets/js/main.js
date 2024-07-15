@@ -6,15 +6,35 @@ AOS.init({
     delay: 100,
 });
 
-
-//// Gsap
+// GSAP and ScrollTrigger initialization
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+// Function to initialize GSAP
+function initGSAP() {
   ScrollTrigger.normalizeScroll(true);
   let smoother = ScrollSmoother.create({
     smooth: 2,
     effects: true,
     normalizeScroll: true, 
   });
+}
+
+// Disable GSAP for mobile devices (screens with width less than 768px)
+if (window.innerWidth >= 768) {
+  initGSAP();
+}
+
+// Optional: Add an event listener to handle screen resize
+window.addEventListener('resize', function() {
+  if (window.innerWidth >= 768 && !ScrollSmoother.get()) {
+    // Initialize GSAP if the screen is resized to be larger and GSAP is not yet initialized
+    initGSAP();
+  } else if (window.innerWidth < 768 && ScrollSmoother.get()) {
+    // Kill GSAP instance if the screen is resized to be smaller
+    ScrollSmoother.get().kill();
+  }
+});
+
 
 
 //// Smooth Jump to

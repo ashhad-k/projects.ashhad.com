@@ -1,0 +1,99 @@
+body{color:#fff;}
+section{padding-top: 100px; padding-bottom: 80px;}
+
+.w200px{width: 200px; min-width:200px;}
+
+.site-footer {
+    display: none;
+}
+
+.capsule1{
+box-shadow: 0px 0px 5px 0px rgba(88, 116, 246, 0.25) inset;
+border-radius: 30px;
+border: 1px solid #5874F6;
+background: rgba(88, 116, 246, 0.20);
+padding: 10px 30px;
+font-weight: bold;
+display: flex;
+width: fit-content;
+}
+.txt-gr{
+    background: linear-gradient(90deg, #FFF 0%, #BAD2FF 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.txt-gr2{
+    background: linear-gradient(90deg, #FFF -6.52%, #6883FC 105.28%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+    
+}
+
+.box-t2b{
+    border-radius: 15px;
+    position:relative;
+background: linear-gradient(180deg, rgba(47, 51, 78, 0.10) 0%, rgba(18, 20, 34, 0.10) 100%);
+backdrop-filter: blur(10px)
+transition: 0.5s ease-in-out;
+    
+}
+.box-t2b::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background: linear-gradient(180deg, rgba(80, 63, 58, 0.1) 0%, rgba(142, 142, 142, 0.4) 100%) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;}
+  
+  
+  
+
+.box-b2t{
+    border-radius: 15px;
+    position:relative;
+background: linear-gradient(180deg, rgba(47, 51, 78, 0.10) 0%, rgba(18, 20, 34, 0.10) 100%);
+backdrop-filter: blur(10px);
+transition: 0.5s ease-in-out;
+    
+}
+.box-b2t::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background: linear-gradient(0deg, rgba(80, 63, 58, 0.1) 0%, rgba(142, 142, 142, 0.4) 100%) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;}
+
+
+.tags2{border:2px solid #4E5560; border-radius: 6px; color: #4E5560; 
+padding:15px 20px}
+.tags2.active{border:2px solid #6982FC; color:#6982FC!important; background:#EBEBFE;}
+
+
+p.elementor-heading-title{line-height:26px;}
+
+.box2{transition: 0.5s ease-in-out; padding:24px;}
+.box2:hover,
+.gr1{
+    border-radius: 15px;
+background: linear-gradient(180deg, rgba(3, 6, 22, 0.00) 5.5%, #212D8F 100%);
+backdrop-filter: blur(10px);
+    
+}
+
+
