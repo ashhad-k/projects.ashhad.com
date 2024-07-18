@@ -1,0 +1,558 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- utf-8 works for most cases -->
+<meta name="viewport" content="width=device-width">
+<!-- Forcing initial-scale shouldn't be necessary -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Use the latest (edge) version of IE rendering engine -->
+<title></title>
+<!-- The title tag shows in email notifications, like Android 4.4. --><!-- Web Font / @font-face : BEGIN --><!-- NOTE: If web fonts are not required, lines 9 - 26 can be safely removed. --><!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. --><!--[if !mso]>
+		<style type="text/css">@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900');
+		</style>
+		<link target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800" rel="stylesheet" target="_blank" type="text/css" /><!--<![endif]--><!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: https:stylecampaign.com/blog/2015/02/webfont-support-in-email/ --><!-- Web Font / @font-face : END --><!-- CSS Reset -->
+<style type="text/css">
+/* What it does: Remove spaces around the email design added by some email clients. */
+		/* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
+html, body {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+}
+/* What it does: Stops email clients resizing small text. */
+* {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+/* What is does: Centers email on Android 4.4 */
+div[style*="margin: 14px 0"] {
+    margin: 0 !important;
+}
+/* What it does: Stops Outlook from adding extra spacing to tables. */
+table, td {
+    mso-table-lspace: 0pt !important;
+    mso-table-rspace: 0pt !important;
+}
+/* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+table {
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    table-layout: fixed !important;
+    Margin: 0 auto !important;
+}
+table table table {
+    table-layout: auto;
+}
+/* What it does: Uses a better rendering method when resizing images in IE. */
+img {
+    -ms-interpolation-mode: bicubic;
+}
+/* What it does: A work-around for iOS meddling in triggered links. */
+.mobile-link--footer a, a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: underline !important;
+}
+</style>
+<!-- Progressive Enhancements -->
+<style type="text/css">
+/* What it does: Hover styles for buttons */
+
+
+
+
+
+.button-td, .button-a {
+    transition: all 100ms ease-in;
+}
+.button-td:hover, .button-a:hover {
+    background: #454e5f !important;
+    border-color: #454e5f !important;
+}
+.specialtd {
+    padding: 0 10px 0 30px;
+    width: 10%;
+    text-align: center;
+}
+.desktopoff {
+    display: none!important;
+}
+.desktopon {
+    display: table-row!important;
+}
+.imgbx img {
+    display: inline-block!important;
+}
+.imgbx span {
+    display: inline-block!important;
+    margin: 0 20px!important;
+    width: 70%!important;
+}
+.full-width {
+    margin-left: 30px;
+}
+.border-r {
+    border-right: 1px solid #dddddd;
+    padding-right: 15px;
+}
+.w60 {
+    width: 65%;
+    display: inline-block;
+}
+.w40 {
+    width: 45%;
+    display: inline-block;
+}
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.textblock, .imgblock {
+    box-sizing: border-box;
+}
+.smallcircle:last-child {
+    margin-bottom: 40px!important;
+}
+.smallcircle {
+    position: relative;
+    padding: 0!important;
+    padding-left: 80px!important;
+    padding-right: 20px!important;
+    min-height: 50px;
+    margin: 0!important;
+    font-size: 13px!important;
+}
+.smallcircle:before {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #DDDDDD;
+    border-radius: 100%;
+    content: '';
+    left: 40px;
+    top: 8px
+}
+.smallcircle:after {
+    position: absolute;
+    width: 1px;
+    height: 50px;
+    background: #DDDDDD;
+    border-radius: 100%;
+    content: '';
+    left: 43px;
+    top: 8px
+}
+p.smallcircle:nth-child(5):after {
+    display: none!important;
+}
+.smallcircle:nth-child(3):before, .smallcircle:nth-child(5):before {
+    background: #7cb445!important;
+    z-index: 99999999
+}
+.linespace br {
+    display: none!important;
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+.w60 {
+    width: 100%;
+    display: inline-block;
+}
+.w40 {
+    width: 100%;
+    display: inline-block;
+}
+.border-r {
+    border-right: 0px solid #dddddd;
+    padding-right: 0px;
+}
+.mobileoff {
+    display: none!important;
+}
+.img-container {
+    width: 100%;
+    height: auto!important;
+}
+.full-width.ml-0 {
+    margin-left: 0!important;
+}
+.imgbx img {
+    display: block!important;
+}
+.imgbx span {
+    display: block!important;
+    margin: 10px 0px!important;
+    width: 100%!important;
+}
+.full-width {
+    width: 100%;
+    height: auto!important;
+}
+.desktopoff {
+    display: grid!important;
+}
+.desktopon {
+    display: none!important;
+}
+.gridbox {
+    display: grid;
+}
+.gridimg {
+    width: 100%;
+    height: auto!important;
+}
+.imgbanner {
+    max-height: inherit;
+    height: auto;
+}
+.imgbanner2 {
+    width: 100% !important;
+    margin: auto !important;
+    max-width: 100%!important;
+    max-height: inherit;
+    height: auto;
+}
+.padd30 {
+    padding: 0 30px 20px!important;
+}
+.email-container {
+    width: 100% !important;
+    margin: auto !important;
+    max-width: 100%!important;
+}
+/* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+.fluid, .fluid-centered {
+    max-width: 100% !important;
+    height: auto !important;
+    Margin-left: auto !important;
+    Margin-right: auto !important;
+}
+/* And center justify these ones. */
+.fluid-centered {
+    Margin-left: auto !important;
+    Margin-right: auto !important;
+}
+/* What it does: Forces table cells into full-width rows. */
+.stack-column, .stack-column-center {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    direction: ltr !important;
+}
+/* And center justify these ones. */
+.stack-column-center {
+    text-align: center !important;
+}
+/* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+.center-on-narrow {
+    text-align: center !important;
+    display: block !important;
+    Margin-left: auto !important;
+    Margin-right: auto !important;
+    float: none !important;
+}
+table.center-on-narrow {
+    display: inline-block !important;
+}
+.right2 {
+    text-align: right!important;
+    display: block !important;
+    Margin-left: 0px !important;
+    Margin-right: auto !important;
+    float: right!important;
+}
+.text-center {
+    text-align: center!important;
+}
+.specialtd {
+    padding: 0 10px!important;
+    width: 20%;
+}
+.specialtd+td {
+    padding: 0 20px 0 10px!important;
+    width: 80%!important;
+}
+.webopti {
+    image-rendering: -webkit-optimize-contrast;
+}
+.padding1015 {
+    padding: 10px 15px 0;
+}
+.f13 {
+    font-size: 13px!important;
+}
+.margin-l0 {
+    margin-left: 0!important;
+}
+.sm-padding {
+    padding: 10px 0!important;
+}
+.pdbtm {
+    padding-bottom: 15px;
+}
+.d-flex {
+    display: block;
+}
+.textblock.fl-left {
+    margin-bottom: 25px;
+}
+.imgblock.fl-right {
+    margin-bottom: 0px;
+}
+.textblock.fl-right {
+    margin-bottom: 25px;
+    padding: 0 30px;
+}
+.imgblock.fl-right {
+    margin-bottom: 0px;
+}
+.d-flex {
+    padding: 0!important;
+}
+.imgblock.fl-right, .textblock.fl-left, .textblock.fl-right {
+    text-align: center!important;
+}
+.textblock.fl-left h3 {
+    font-size: 18px!important;
+    line-height: 20px!important;
+    margin: 0!important;
+}
+.textblock.fl-right h3 {
+    font-size: 24px!important;
+    line-height: 30px;
+    margin: 0!important;
+}
+.textmob {
+    font-size: 18px!important;
+    padding: 50px 30px 5px!important;
+}
+.mt150 {
+    margin-top: 175px;
+}
+.featable p {
+    display: block!important;
+    text-align: center!important;
+}
+.featable img {
+    display: table!important;
+    margin: 0 auto 15px!important
+}
+.featable p .smimg {
+    margin: 0!important;
+}
+.featable p {
+    padding-top: 0!important;
+    font-size: 16px!important;
+    margin-top: 10px
+}
+.featable .gridbox td {
+    padding-top: 5px!important;
+    padding-bottom: 10px!important;
+}
+p.heading2 {
+    padding: 30px 0px 10px 20px!important;
+    text-align: center!important;
+}
+p.heading2 br {
+    display: none!important;
+}
+.textblock {
+    text-align: center!important;
+}
+.textblock h3 {
+    text-align: center!important;
+}
+.textblock h3+a {
+    margin-left: auto!important;
+    margin-right: auto!important
+}
+.padding-0 {
+    padding-top: 0!important
+}
+div.imgblock.fl-right {
+    margin-top: 30px!important;
+}
+a.smimg {
+    margin-right: 0!important
+}
+.mt-0 {
+    margin-top: 0!important;
+}
+.pd20 {
+    padding: 20px!important
+}
+.bgnone {
+    background: none!important;
+}
+.smallcircle {
+    min-height: inherit!important;
+    padding-left: 60px!important;
+    padding-bottom: 30px!important;
+    padding-right: 15px!important
+}
+.smallcircle:after {
+    display: none!important;
+}
+.linespace br {
+    display: block!important;
+}
+.pd20.bgnone {
+    margin-top: 25px!important
+}
+.pad-left0 {
+    padding: 0 20px 30px!important;
+}
+.imgh {
+    width: 60%!important;
+    margin-top: 30px!important
+}
+}
+</style>
+<style type="text/css">
+:root {
+    color-scheme: light only;
+}
+table, a, p, div {
+    font-family: 'Montserrat', sans-serif
+}
+a.smimg {
+    margin-right: 0!important
+}
+</style>
+<center style="width: 100%;  background: #ffffff;">
+  <!-- Visually Hidden Preheader Text : BEGIN -->
+  <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: 'Montserrat', sans-serif;">Empowering Traders Worldwide.</div>
+  <!-- Visually Hidden Preheader Text : END --><!-- Email Body : BEGIN -->
+  
+  <table align="center"  cellpadding="0" cellspacing="0" class="email-container" style="margin: auto; border-radius: 0px; max-width: 600px;" width="100%" bgcolor="#FFFFFF" >
+    <tbody>
+      <tr>
+        <td height="5"><img style="width:600px;max-width:600px;text-align:center;font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif" alt="Hero image" src="https://saphyte.io/portfolio/rocketx/email/banner.png" align="center" width="600" height="" class="CToWUd a6T" data-bit="iit" tabindex="0"></td>
+      </tr>
+      <tr>
+        <td><table cellpadding="0" cellspacing="0" border="0" width="100%" style="max-width:600px;border-radius:8px;font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif;background-color:rgb(237,237,237)">
+            <tbody style="font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">
+                <tr>
+                <td width="30" height="30px">&nbsp;</td>
+                <td  align="left" height="30px" valign="top">&nbsp;</td>
+               <td width="30" height="30px">&nbsp;</td>
+              </tr>
+              <tr style="font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">
+                <td width="30" style="width:30px;font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">&nbsp;</td>
+                <td style="font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif;font-size:22px;line-height:28px" align="left" valign="top"><b style="font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif"> Dear client! </b></td>
+                <td width="30" style="width:30px;font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">&nbsp;</td>
+              </tr>
+              <tr style="font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">
+                <td height="30px" style="height:30px;line-height:30px;font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">&nbsp;</td>
+              </tr>
+              <tr style="font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">
+                <td width="30" style="width:30px;font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">&nbsp;</td>
+                <td style="font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif;font-size:17px;line-height:22px"> Thank you for registering with RocketX. </td>
+                <td width="30" style="width:30px;font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">&nbsp;</td>
+              </tr>
+               <tr>
+                <td width="30" height="30px">&nbsp;</td>
+                <td  align="left" height="30px" valign="top">&nbsp;</td>
+               <td width="30" height="30px">&nbsp;</td>
+              </tr>
+            </tbody>
+          </table></td>
+      </tr>
+      <tr>
+        <td>
+          <table cellpadding="0" cellspacing="0" border="0" width="100%" style="max-width:600px;background:repeat rgb(237,237,237);border-radius:8px;font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">
+                                        <tbody style="font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">
+                                        <tr>
+                <td width="30" height="30px">&nbsp;</td>
+                <td  align="left" height="30px" valign="top">&nbsp;</td>
+               <td width="30" height="30px">&nbsp;</td>
+              </tr>
+                                        <tr style="font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">
+                                            <td width="30" style="width:30px;font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">&nbsp;</td>
+                                            <td style="font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif;font-size:22px;line-height:28px">
+                                                <b style="font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">Email confirmation</b>
+                                            </td>
+                                            <td width="30" style="width:30px;font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">&nbsp;</td>
+                                        </tr>
+                                        <tr style="font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">
+                                            <td height="30px" style="height:30px;line-height:30px;font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">&nbsp;</td>
+                                        </tr>
+                                        <tr style="font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">
+                                            <td width="30" style="width:30px;font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">&nbsp;</td>
+                                            <td style="font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif;font-size:17px;line-height:28px">
+                                                Please confirm your email by entering PIN:&nbsp;<span style="font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif;color:rgb(239,68,35)"><b style="font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">65273</b></span>
+                                                <br>or clicking the button.
+                                            </td>
+                                            <td width="30" style="width:30px;font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">&nbsp;</td>
+                                        </tr>
+                                         <tr>
+                <td width="30" height="30px">&nbsp;</td>
+                <td  align="left" height="30px" valign="top">&nbsp;</td>
+               <td width="30" height="30px">&nbsp;</td>
+              </tr>
+                                        <tr style="font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">
+                                            <td width="30" style="width:30px;font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">&nbsp;</td>
+                                            <td style="font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif;font-size:15px;line-height:45px">
+                                                <a href="https://my.rocketx.io/register/7663302f-b1da-4808-81a6-4bc3ba67f82b/65273" title="Confirm with a link" style="border-radius:5px;padding:15px 45px;font-weight:bold;text-decoration:none;font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif;background-color:rgb(239,68,35);color:rgb(237,237,237)" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://my.rocketx.io/register/7663302f-b1da-4808-81a6-4bc3ba67f82b/65273&amp;source=gmail&amp;ust=1721396034580000&amp;usg=AOvVaw0vdkK2hqOGT8_ujFH_EZZe">
+                                                    Confirm with a link
+                                                </a>
+                                            </td>
+                                            <td width="30" style="width:30px;font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                <td width="30" height="30px">&nbsp;</td>
+                <td  align="left" height="30px" valign="top">&nbsp;</td>
+               <td width="30" height="30px">&nbsp;</td>
+              </tr>
+                                        <tr style="font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">
+                                            <td width="30" style="width:30px;font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">&nbsp;</td>
+                                            <td style="font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">
+                                                Your information will be used solely by RocketX for the purposes of
+                                                applying for your account with RocketX.
+                                            </td>
+                                            <td width="30" style="width:30px;font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                <td width="30" height="30px">&nbsp;</td>
+                <td  align="left" height="30px" valign="top">&nbsp;</td>
+               <td width="30" height="30px">&nbsp;</td>
+              </tr>
+                                        <tr style="font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">
+                                            <td width="30" style="width:30px;font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">&nbsp;</td>
+                                            <td style="font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif;font-size:17px;line-height:28px">
+                                                All the best,<br>
+                                                <b style="font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">RocketX</b>
+                                            </td>
+                                            <td width="30" style="width:30px;font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">&nbsp;</td>
+                                        </tr>
+ <tr>
+                <td width="30" height="30px">&nbsp;</td>
+                <td  align="left" height="30px" valign="top">&nbsp;</td>
+               <td width="30" height="30px">&nbsp;</td>
+              </tr>
+                                        </tbody>
+                                    </table>
+          </td>
+      </tr>
+    
+      <tr>
+        <td style="padding: 30px;background-color:rgb(20,29,36)"><table align="center" style="text-align:center;vertical-align:top; widows: 100%;  font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif;background-color:rgb(20,29,36)" width="100%">
+            <tbody style="font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">
+              <tr style="font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif">
+                <td style=" vertical-align:top;font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif"><img style="width:180px;max-width:180px;text-align:center;font-family:&quot;Helvetica Neue&quot;,Helvetica,&quot;Lucida Grande&quot;,tahoma,verdana,arial,sans-serif;color:rgb(255,255,255)" alt="Logo" src="https://ci3.googleusercontent.com/meips/ADKq_Naf0jB53egZGIixz-PWchyk8uBs2DcaRNZLLgXD8b3y0Hq1FP-wnanf8vVGQbwW_ZzXlDGY2FaAp1Sdm1b4tyyyPTK1-S8biwM-MxCDyRa_sTg=s0-d-e1-ft#https://rocketx.io/wp-content/uploads/2023/10/Logo_Light.png" align="center" width="180" height="" class="CToWUd" data-bit="iit">
+                  <p style="font-size:12px;font-family:Helvetica,Arial,sans-serif;font-weight:400;text-decoration:none;color:rgb(255,255,255)"> RocketX (Pty) Ltd, with company number 2020/824856/07, is an authorised Financial Service Provider (FSP) and Over-the-Counter Derivatives Provider (ODP), licenced and regulated by the Financial Sector Conduct Authority (FSCA) in South Africa, with FSP No. 52142 <br>
+                    <br>
+                    Need help? If you have any questions please contact us at <a href="mailto:support@rocketx.io" style="font-family:Helvetica,Arial,sans-serif" target="_blank">support@rocketx.io</a> <br>
+                    You are receiving this email because you are a registered member of RocketX. </p></td>
+              </tr>
+            </tbody>
+          </table></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <!-- Email Footer : END -->
+</center>
+<div id="__genieContainer" style="all: initial; display: none;">&nbsp;</div>

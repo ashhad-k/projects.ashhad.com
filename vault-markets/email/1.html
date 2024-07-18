@@ -1,0 +1,523 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- utf-8 works for most cases -->
+<meta name="viewport" content="width=device-width">
+<!-- Forcing initial-scale shouldn't be necessary -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Use the latest (edge) version of IE rendering engine -->
+<title></title>
+<!-- The title tag shows in email notifications, like Android 4.4. --><!-- Web Font / @font-face : BEGIN --><!-- NOTE: If web fonts are not required, lines 9 - 26 can be safely removed. --><!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. --><!--[if !mso]>
+		<style type="text/css">@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900');
+		</style>
+		<link target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800" rel="stylesheet" target="_blank" type="text/css" /><!--<![endif]--><!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: https:stylecampaign.com/blog/2015/02/webfont-support-in-email/ --><!-- Web Font / @font-face : END --><!-- CSS Reset -->
+<style type="text/css">
+/* What it does: Remove spaces around the email design added by some email clients. */
+		/* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
+html, body {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+}
+/* What it does: Stops email clients resizing small text. */
+* {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+/* What is does: Centers email on Android 4.4 */
+div[style*="margin: 14px 0"] {
+    margin: 0 !important;
+}
+/* What it does: Stops Outlook from adding extra spacing to tables. */
+table, td {
+    mso-table-lspace: 0pt !important;
+    mso-table-rspace: 0pt !important;
+}
+/* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+table {
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    table-layout: fixed !important;
+    Margin: 0 auto !important;
+}
+table table table {
+    table-layout: auto;
+}
+/* What it does: Uses a better rendering method when resizing images in IE. */
+img {
+    -ms-interpolation-mode: bicubic;
+}
+/* What it does: A work-around for iOS meddling in triggered links. */
+.mobile-link--footer a, a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: underline !important;
+}
+</style>
+<!-- Progressive Enhancements -->
+<style type="text/css">
+/* What it does: Hover styles for buttons */
+
+
+
+
+
+.button-td, .button-a {
+    transition: all 100ms ease-in;
+}
+.button-td:hover, .button-a:hover {
+    background: #454e5f !important;
+    border-color: #454e5f !important;
+}
+.specialtd {
+    padding: 0 10px 0 30px;
+    width: 10%;
+    text-align: center;
+}
+.desktopoff {
+    display: none!important;
+}
+.desktopon {
+    display: table-row!important;
+}
+.imgbx img {
+    display: inline-block!important;
+}
+.imgbx span {
+    display: inline-block!important;
+    margin: 0 20px!important;
+    width: 70%!important;
+}
+.full-width {
+    margin-left: 30px;
+}
+.border-r {
+    border-right: 1px solid #dddddd;
+    padding-right: 15px;
+}
+.w60 {
+    width: 65%;
+    display: inline-block;
+}
+.w40 {
+    width: 45%;
+    display: inline-block;
+}
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.textblock, .imgblock {
+    box-sizing: border-box;
+}
+.smallcircle:last-child {
+    margin-bottom: 40px!important;
+}
+.smallcircle {
+    position: relative;
+    padding: 0!important;
+    padding-left: 80px!important;
+    padding-right: 20px!important;
+    min-height: 50px;
+    margin: 0!important;
+    font-size: 13px!important;
+}
+.smallcircle:before {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #DDDDDD;
+    border-radius: 100%;
+    content: '';
+    left: 40px;
+    top: 8px
+}
+.smallcircle:after {
+    position: absolute;
+    width: 1px;
+    height: 50px;
+    background: #DDDDDD;
+    border-radius: 100%;
+    content: '';
+    left: 43px;
+    top: 8px
+}
+p.smallcircle:nth-child(5):after {
+    display: none!important;
+}
+.smallcircle:nth-child(3):before, .smallcircle:nth-child(5):before {
+    background: #7cb445!important;
+    z-index: 99999999
+}
+.linespace br {
+    display: none!important;
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+.w60 {
+    width: 100%;
+    display: inline-block;
+}
+.w40 {
+    width: 100%;
+    display: inline-block;
+}
+.border-r {
+    border-right: 0px solid #dddddd;
+    padding-right: 0px;
+}
+.mobileoff {
+    display: none!important;
+}
+.img-container {
+    width: 100%;
+    height: auto!important;
+}
+.full-width.ml-0 {
+    margin-left: 0!important;
+}
+.imgbx img {
+    display: block!important;
+}
+.imgbx span {
+    display: block!important;
+    margin: 10px 0px!important;
+    width: 100%!important;
+}
+.full-width {
+    width: 100%;
+    height: auto!important;
+}
+.desktopoff {
+    display: grid!important;
+}
+.desktopon {
+    display: none!important;
+}
+.gridbox {
+    display: grid;
+}
+.gridimg {
+    width: 100%;
+    height: auto!important;
+}
+.imgbanner {
+    max-height: inherit;
+    height: auto;
+}
+.imgbanner2 {
+    width: 100% !important;
+    margin: auto !important;
+    max-width: 100%!important;
+    max-height: inherit;
+    height: auto;
+}
+.padd30 {
+    padding: 0 30px 20px!important;
+}
+.email-container {
+    width: 100% !important;
+    margin: auto !important;
+    max-width: 100%!important;
+}
+/* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+.fluid, .fluid-centered {
+    max-width: 100% !important;
+    height: auto !important;
+    Margin-left: auto !important;
+    Margin-right: auto !important;
+}
+/* And center justify these ones. */
+.fluid-centered {
+    Margin-left: auto !important;
+    Margin-right: auto !important;
+}
+/* What it does: Forces table cells into full-width rows. */
+.stack-column, .stack-column-center {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    direction: ltr !important;
+}
+/* And center justify these ones. */
+.stack-column-center {
+    text-align: center !important;
+}
+/* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+.center-on-narrow {
+    text-align: center !important;
+    display: block !important;
+    Margin-left: auto !important;
+    Margin-right: auto !important;
+    float: none !important;
+}
+table.center-on-narrow {
+    display: inline-block !important;
+}
+.right2 {
+    text-align: right!important;
+    display: block !important;
+    Margin-left: 0px !important;
+    Margin-right: auto !important;
+    float: right!important;
+}
+.text-center {
+    text-align: center!important;
+}
+.specialtd {
+    padding: 0 10px!important;
+    width: 20%;
+}
+.specialtd+td {
+    padding: 0 20px 0 10px!important;
+    width: 80%!important;
+}
+.webopti {
+    image-rendering: -webkit-optimize-contrast;
+}
+.padding1015 {
+    padding: 10px 15px 0;
+}
+.f13 {
+    font-size: 13px!important;
+}
+.margin-l0 {
+    margin-left: 0!important;
+}
+.sm-padding {
+    padding: 10px 0!important;
+}
+.pdbtm {
+    padding-bottom: 15px;
+}
+.d-flex {
+    display: block;
+}
+.textblock.fl-left {
+    margin-bottom: 25px;
+}
+.imgblock.fl-right {
+    margin-bottom: 0px;
+}
+.textblock.fl-right {
+    margin-bottom: 25px;
+    padding: 0 30px;
+}
+.imgblock.fl-right {
+    margin-bottom: 0px;
+}
+.d-flex {
+    padding: 0!important;
+}
+.imgblock.fl-right, .textblock.fl-left, .textblock.fl-right {
+    text-align: center!important;
+}
+.textblock.fl-left h3 {
+    font-size: 18px!important;
+    line-height: 20px!important;
+    margin: 0!important;
+}
+.textblock.fl-right h3 {
+    font-size: 24px!important;
+    line-height: 30px;
+    margin: 0!important;
+}
+.textmob {
+    font-size: 18px!important;
+    padding: 50px 30px 5px!important;
+}
+.mt150 {
+    margin-top: 175px;
+}
+.featable p {
+    display: block!important;
+    text-align: center!important;
+}
+.featable img {
+    display: table!important;
+    margin: 0 auto 15px!important
+}
+.featable p .smimg {
+    margin: 0!important;
+}
+.featable p {
+    padding-top: 0!important;
+    font-size: 16px!important;
+    margin-top: 10px
+}
+.featable .gridbox td {
+    padding-top: 5px!important;
+    padding-bottom: 10px!important;
+}
+p.heading2 {
+    padding: 30px 0px 10px 20px!important;
+    text-align: center!important;
+}
+p.heading2 br {
+    display: none!important;
+}
+.textblock {
+    text-align: center!important;
+}
+.textblock h3 {
+    text-align: center!important;
+}
+.textblock h3+a {
+    margin-left: auto!important;
+    margin-right: auto!important
+}
+.padding-0 {
+    padding-top: 0!important
+}
+div.imgblock.fl-right {
+    margin-top: 30px!important;
+}
+a.smimg {
+    margin-right: 0!important
+}
+.mt-0 {
+    margin-top: 0!important;
+}
+.pd20 {
+    padding: 20px!important
+}
+.bgnone {
+    background: none!important;
+}
+.smallcircle {
+    min-height: inherit!important;
+    padding-left: 60px!important;
+    padding-bottom: 30px!important;
+    padding-right: 15px!important
+}
+.smallcircle:after {
+    display: none!important;
+}
+.linespace br {
+    display: block!important;
+}
+.pd20.bgnone {
+    margin-top: 25px!important
+}
+.pad-left0 {
+    padding: 0 20px 30px!important;
+}
+.imgh {
+    width: 60%!important;
+    margin-top: 30px!important
+}
+}
+  
+</style>
+<style type="text/css">
+:root {
+    color-scheme: light only;
+}
+table, a, p, div {
+    font-family: 'Montserrat', sans-serif
+}
+a.smimg {
+    margin-right: 0!important
+}
+</style>
+<center style="width: 100%;  background: #cccccc;">
+  <!-- Visually Hidden Preheader Text : BEGIN -->
+  <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: 'Montserrat', sans-serif;">Empowering Traders Worldwide.</div>
+  <!-- Visually Hidden Preheader Text : END --><!-- Email Body : BEGIN -->
+  
+
+  <table align="center"  cellpadding="0" cellspacing="0" class="email-container" style="margin: auto; border-radius: 0px; max-width: 700px;" width="100%" bgcolor="#FFFFFF" >
+    <tbody>
+      <tr>
+        <td height="5" style="font-size:20px;line-height:20px">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="5" style="font-size:20px;line-height:20px"><table align="center" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td height="40" colspan="2" style="font-size:40px;line-height:40px">&nbsp;</td>
+            </tr>
+            <tr style="background:repeat black">
+              <th width="200" align="center" style="padding: 20px; text-align:center; border-radius:10px;"> <a href="https://my.vaultmarkets.trade" title="Vault Markets" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://my.vaultmarkets.trade&amp;source=gmail&amp;ust=1721396034589000&amp;usg=AOvVaw1fcHh0k22of15fS3JsF0bw"> <img src="https://saphyte.io/portfolio/vault-markets/logonewma.png" alt="Vault Markets Logo" style="border:0px" class="CToWUd" data-bit="iit"> </a> </th>
+            </tr>
+          </tbody>
+        </table></td>
+      </tr>
+      <tr>
+        <td height="10" style="font-size:20px;line-height:20px">&nbsp;</td>
+      </tr>
+      <tr>
+        <th width="640" style="padding-left:30px;padding-right:30px;font-weight:400;text-align:left"> <h2>Dear {{affiliate_name}},</h2>
+          <p>&nbsp;</p>
+          <p>Your new trading account has been created.</p>
+          <p>&nbsp;</p>
+          <p>You can now proceed with funding your account through your <a style="color:rgb(63,181,139);"><strong>dashboard</strong></a> and start trading.</p>
+          <p>To add funds to your trading account you just need to transfer funds from your wallet after making a deposit.</p>
+          <p>You can download our MT5 Terminal from your dashboard menu.</p>
+          <p>&nbsp;</p>
+          <p>Below are your MT5 login credentials:</p>
+          <table align="center" cellpadding="0" cellspacing="0" width="100%" style="margin:0px auto;word-break:break-all">
+            <tbody>
+              <tr>
+                <th bgcolor="#DDDDDD" style="padding:20px;border-radius:10px;font-weight:400;font-size:14px;text-decoration:none;color:rgb(63,181,139); text-align: left"><p>MT5 Login: <strong>8652301</strong></p>
+                  <p>Password: <strong>_aOdD_1L</strong></p>
+                  <p>Investor password: <strong>mTUYB2-8</strong></p>
+                  <p>Server: VaultMarkets-Live</p>
+                  <p>The master password allows full access to a trading account, whereas the investor password is a read-only password.</p>
+                  <p>Your login credentials are confidential - we strongly advise against sharing them with any third party. Should you choose to do so, we cannot be held liable for the outcome.&nbsp;</p>
+                  <p>&nbsp;</p>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+          <p>Kind Regards<br>
+            &nbsp;</p>
+        </th>
+      </tr>
+      <tr>
+        <td height="20" style="font-size:20px;line-height:20px">&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+  <table border="0" align="center" cellpadding="0" cellspacing="0" width="700" style="font-family:sans-serif;font-size:8pt;color:rgb(68,68,68);" bgcolor="#EAEAEA">
+    <tbody style="font-family:sans-serif">
+      <tr height="10" style="font-family:sans-serif;background-color:rgb(18,18,18)">
+        <td style="font-family:sans-serif"></td>
+        <td style="font-family:sans-serif"></td>
+      </tr>
+      <tr style="font-family:sans-serif">
+        <td style="border-right-width:1px;border-right-style:solid;padding-right:50px;padding-left:50px; padding-bottom: 10px; padding-top: 10px; font-family:sans-serif;background-color:rgb(18,18,18);border-right-color:rgb(255,255,255)"><a href="https://my.vaultmarkets.trade" title="Vault Markets" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://my.vaultmarkets.trade&amp;source=gmail&amp;ust=1721396034589000&amp;usg=AOvVaw1fcHh0k22of15fS3JsF0bw"><img src="https://saphyte.io/portfolio/vault-markets/logonewma.png" alt="Vault Markets Logo" style="border:0px" class="CToWUd" data-bit="iit"></a></td>
+        <td valign="middle" style="line-height:1.4;padding-left:30px;padding-right:30px;font-family:sans-serif;background-color:rgb(18,18,18)"><span style="font-weight:bold;font-size:12pt;font-family:sans-serif;color:rgb(255,255,255)">Vault Markets Support</span><br>
+          <a href="mailto:help@vaultmarkets.trade" style="font-size:9pt;text-decoration:none;font-family:sans-serif;color:rgb(199,143,5)" target="_blank">help@vaultmarkets.trade</a><br>
+          <a href="tel:+27%20(0)10%20449%206045" style="font-size:9pt;text-decoration:none;font-family:sans-serif;color:rgb(199,143,5)" target="_blank">+27 (0)10 449 6045</a><br>
+          <a href="https://www.vaultmarkets.trade/" style="font-size:9pt;text-decoration:none;font-family:sans-serif;color:rgb(199,143,5)" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.vaultmarkets.trade/&amp;source=gmail&amp;ust=1721396034589000&amp;usg=AOvVaw3j5WWnDMPnYJMHfWElwnCx">www.vaultmarkets.trade</a></td>
+      </tr>
+      <tr height="10" style="font-family:sans-serif;background-color:rgb(18,18,18)">
+        <td style="font-family:sans-serif"></td>
+        <td style="font-family:sans-serif"></td>
+      </tr>
+      <tr style="font-family:sans-serif">
+        <td style="font-size:7pt;padding:10px 20px;line-height:1.5;font-family:sans-serif" colspan="2"><br>
+          <a href="tel:+27740246890" style="font-family:sans-serif" target="_blank"><img src="https://saphyte.io/portfolio/vault-markets/icon-whatsapp.png" style="font-family:sans-serif" class="CToWUd" data-bit="iit"></a> <a href="https://www.facebook.com/vaultmarkets.trade" style="font-family:sans-serif" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.facebook.com/vaultmarkets.trade&amp;source=gmail&amp;ust=1721396034589000&amp;usg=AOvVaw1h91P-Y5k-ItKu522KFldL"><img src="https://saphyte.io/portfolio/vault-markets/icon-fb.png" style="font-family:sans-serif" class="CToWUd" data-bit="iit"></a> <a href="https://www.instagram.com/vaultmarkets/" style="font-family:sans-serif" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.instagram.com/vaultmarkets/&amp;source=gmail&amp;ust=1721396034589000&amp;usg=AOvVaw00Jc6l51A3z0YXracs68wO"><img src="https://saphyte.io/portfolio/vault-markets/icon-insta.png" style="font-family:sans-serif" class="CToWUd" data-bit="iit"></a> <a href="https://twitter.com/vault_markets" style="font-family:sans-serif" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://twitter.com/vault_markets&amp;source=gmail&amp;ust=1721396034589000&amp;usg=AOvVaw2bKPzrZpmVsAzGS1cxiRan"><img src="https://saphyte.io/portfolio/vault-markets/icon-twitter.png" style="font-family:sans-serif" class="CToWUd" data-bit="iit"><br>
+            </a>
+         </td>
+      </tr>
+      <tr style="font-family:sans-serif">
+        <td style="font-size:7pt;padding:10px 20px;line-height:1.5;font-family:sans-serif" colspan="2">
+            <p style="font-size:12px;line-height:20px;font-family:sans-serif;color:rgb(136,136,136)"> 
+            <strong style="font-family:sans-serif">Confidentiality Note: </strong>This e-mail and any attachments are confidential and may be protected by legal privilege. If you are not the intended recipient, be aware that any disclosure, copying, distribution or use of this e-mail or any attachment is prohibited. If you have received this e-mail in error, please notify us immediately by returning it to the sender and delete this copy from your system. Thank you for your cooperation.</p></td>
+      </tr>
+        
+        <tr style="font-family:sans-serif">
+        <td style="font-size:7pt;padding:10px 20px;line-height:1.5;font-family:sans-serif" colspan="2"><p style="font-size:12px;line-height:20px;font-family:sans-serif;color:rgb(136,136,136)"><strong style="font-family:sans-serif">Risk Warning:</strong> Leveraged products such as Forex carry a high degree of risk and may not suit all traders. Before you begin trading ensure you fully understand the risk involved taking into account your investment objectives and level of experience, and if necessary, seck independent advice. FundedMarketplace Ltd is a company registered in St Lucia Company number 2024-00036. Ground Floor, The Sotheby Building, Rodney Bay Gros-islet saint Lucia LC01 101.&nbsp;FundedMarketplace Pty Ltd is not a product issuer of over the counter (OTC) derivatives and as such, it will not make a market in such products, nor transact with clients as principal. It is authorised to perform financial services to wholesale clients only.</p></td>
+      </tr>
+        
+        
+    </tbody>
+  </table>
+
+  <!-- Email Footer : END -->
+</center>
+<div id="__genieContainer" style="all: initial; display: none;">&nbsp;</div>
