@@ -1,0 +1,432 @@
+<body style="background: #3F4F99">
+
+    
+<div class="warpper2">
+  <input class="radio" id="one" name="group" type="radio" checked>
+  <input class="radio" id="two" name="group" type="radio">
+<!--
+  <div class="tabs">
+    <label class="tab" id="one-tab" for="one">One Phase Challenge</label>
+    <label class="tab" id="two-tab" for="two">Two Phase Challenge</label>
+  </div>
+-->
+     <div class="challenge-type">
+            <button id="one-tab" class="active">One Phase Challenge</button>
+            <button id="two-tab">Two Phase Challenge</button>
+          </div>
+  <div class="panels">
+    <div class="panel" id="one-panel">
+      <div class="lhs">
+        <h6 class="mb-10px"> Currency</h6>
+        <div class="currency mb-20px"> 
+         
+          <input name="usd" type="button" id="currency-usd" class="active" value="USD">
+          <input name="zar" type="button" id="currency-zar" value="ZAR">
+        </div>
+        <h6 class="mb-20px"> Select Amount</h6>
+       <div class="amount">
+  <input name="amount1" type="button" id="amount1" value="$5,000 Account" class="active">
+  <input name="amount2" type="button" id="amount2" value="$10,000 Account">
+  <input name="amount3" type="button" id="amount3" value="$25,000 Account">
+  <input name="amount4" type="button" id="amount4" value="$50,000 Account">
+  <input name="amount5" type="button" id="amount5" value="$100,000 Account">
+  <input name="amount6" type="button" id="amount6" value="$200,000 Account">
+</div>
+      </div>
+      <div class="rhs">
+        <section>
+          <h6> Select Broker</h6>
+         <div class="broker">
+  <button id="broker-rcg" class="active">
+    <img src="http://comit.saphyte.io/wp-content/uploads/2024/07/logo-rcg-markets.png" alt="RCG Markets"/>
+  </button>
+  <button id="broker-space">
+    <img src="http://comit.saphyte.io/wp-content/uploads/2024/07/logo-space-markets.png" alt="Space Markets"/>
+  </button>
+</div>
+        </section>
+        <section class="cn-challenge">
+            <div class="d-flex">
+              <h6 id="details-here">phase broker amount currency</h6>
+            
+                
+            </div>
+        
+          <div class="data">
+            <div class="column">
+             <div id="challenge-details">
+  <ul>
+    <li id="profit-target"> Profit Target: 10% </li>
+    <li id="min-days">Minimum Trading Days: 5 Days</li>
+    <li id="weekend-holding">Weekend Holding: Allowed</li>
+    <li id="daily-drawdown">Maximum Daily Drawdown: 5%</li>
+    <li id="overall-drawdown">Maximum Overall Drawdown: 10%</li>
+    <li id="profit-split">Profit Split: 75%</li>
+  </ul>
+</div>
+            </div>
+            <div class="column">
+               <ul>
+                <li>  Simulated Trading Days: <span>0</span> </li>
+                <li>  Minimum Trading Days: <span>5</span> </li>
+                <li>  Maximum Virtual Daily Loss: <span>5%</span> </li>
+                <li>  Maximum Virtual Total Loss: <span>10%</span> </li>
+                <li>  Profit Target (Virtual Phases): <span>10%</span> </li>
+                <li>  Leverage: <span>1:100</span> </li>
+                
+              </ul>
+            </div>
+          </div>
+        </section>
+          <div class="total">
+              
+              <span id="total-value">
+                $79.00
+              </span>
+               <input name="total" type="button" id="total" class="active" value="Continue">
+             
+        
+          </div>
+        
+      </div>
+    </div>
+  
+  </div>
+</div>
+<style>
+:root {
+  --blue2: #2196f3;
+    }
+    .mb-20px{margin-bottom: 20px}
+    .mb-10px{margin-bottom: 10px}
+    
+    .d-flex{ display: flex}
+    .d-flex2{ display: flex; justify-content: space-around; column-gap: 10px}
+    
+    .warpper2 a{ background: #fff; border: 1px solid #333; transition: transform 0.5s ease-in-out;}
+   .warpper2  a:hover{ background: #eee;  border-color: var(--blue2)}
+    .warpper2 a.active{border-color: var(--blue2)}
+    
+    .btn1{ padding: 10px; border: 1px solid #333; border-radius: 6px; }
+    .btn1.active{ }
+  
+    
+/*   tabs */
+.warpper2{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+    color: #54595f;
+    max-width: 1200px;
+}
+.tabs{display: flex;justify-content: center; align-items: center;}
+    
+.tab{
+  cursor: pointer;
+  padding:10px 20px;
+  margin:0px 2px;
+  background:#000;
+  display:inline-block;
+  color:#fff;
+  border-radius:3px 3px 0px 0px;
+    
+    border-radius: 6px 6px 0px 0px;
+    padding: 20px 40px;
+
+    background: #ccc;
+    color: #333;
+    border-bottom: 0px;
+}
+.panels{
+  width:100%;
+  overflow:hidden;
+ background:#FFFFFF30;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #fff;
+}
+.panel{
+  display:none;
+  animation: fadein .8s;
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+.radio{
+  display:none;
+}
+#one:checked ~ .panels #one-panel,
+#two:checked ~ .panels #two-panel{
+  display:flex;
+    column-gap: 20px;
+}
+  .challenge-type {
+    display: flex;
+    gap: 10px;
+  }
+
+  .challenge-type button {
+    padding: 14px 32px;
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    border-radius: 6px 6px 0px 0px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+      font-size: 20px;
+  }
+
+  .challenge-type button:hover {
+    background-color: #2196f3;
+    color: #fff;
+  }
+
+  .challenge-type button.active {
+    background-color: #2196f3;
+    color: #fff;
+  }
+ .warpper2 .panels .lhs{ width: 30%; flex-grow: 0; background: #fff; border-radius: 20px; padding: 20px;}
+
+
+    
+#one:checked ~ .tabs #one-tab,
+#two:checked ~ .tabs #two-tab{
+   background:var(--blue2);
+  color:#fff;
+    margin-bottom: -2px;
+    z-index: 10;
+
+}
+ .warpper2 .panels .lhs .currency{
+     display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    /* flex-flow: row; */ 
+    flex-direction: row;  
+    gap: 12px;
+
+  }
+.warpper2 .panels .lhs  a,
+.warpper2 .panels .lhs  button,
+.warpper2 .panels .lhs  input[type="button"] { 
+    flex-grow:1;
+    flex-shrink: 0;
+    text-align: center;
+    border-color:#333;
+    background: none;
+    color: #333;
+  }		
+.warpper2 .panels .lhs a.active,
+.warpper2 .panels .lhs input[type="button"].active{ background: var(--blue2); color: #fff;}
+    
+.warpper2 .panels .lhs  input[type="button"]:hover{background: #5874F620; border-color: var(--blue2)}
+    
+.warpper2 .panels .lhs .amount{display: flex; flex-direction: column;  gap: 12px; }
+.warpper2 .panels .lhs .amount > input[type="button"].active{ background:var(--blue2); color: #fff; }
+    
+    
+/* RHS  */
+.warpper2 .panels .rhs .broker{ display: flex; column-gap: 16px;}
+.warpper2 .panels .rhs .broker > button{ border: 5px solid #ccc; border-radius: 10px; padding: 0px; background: none; }
+.warpper2 .panels .rhs .broker > button IMG{border-radius: 10px;}
+.warpper2 .panels .rhs .broker > button.active { border-color:var(--blue2)}
+
+.warpper2 .panels .rhs{  
+    flex-grow: 1;  
+    display: flex;
+    /* flex-flow: column; */ 
+    flex-direction: column;  
+    gap: 20px;
+    }
+
+
+ .warpper2 .panels  .rhs > section{
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+ .warpper2 .panels  .rhs > section.cn-challenge{ }
+ .warpper2 .panels  .rhs > section.cn-challenge .data{ display: flex; column-gap: 16px;}
+ .warpper2 .panels  .rhs > section.cn-challenge .data > .column{  flex-grow: 1; border: 0px solid red; padding: 10px;}
+.warpper2 .panels  .rhs > section.cn-challenge .data .column UL{margin: 0px; padding: 0px; list-style-type: none; }
+    .warpper2 .panels  .rhs > section.cn-challenge .data .column UL LI{ border-bottom: 1px solid #ccc; padding: 5px 10px 5px 0px; display: flex; justify-content: space-between}
+    .warpper2 .panels  .rhs > section.cn-challenge .data .column UL LI span{ font-weight: bold}
+
+    .warpper2 .total{padding: 20px; display: flex;justify-content: end; align-items: flex-end; column-gap: 20px; background: #0D1331; color: #fff;border-radius: 20px; }
+    .warpper2 .total span{ font-size: 30px; color:#fff; font-weight: bold; }
+    .warpper2 INPUT#total{ border: 2px solid #ffffff50; color: #ffffff; border-radius:10px;}
+
+    @media (max-width: 767.98px) {
+        
+        .challenge-type{ display: block}  
+        .challenge-type button{ border-radius: 6px; display: inline; width: 100%; margin-bottom: 10px;}
+        .panels{padding: 0px; background: none; border-radius: 0px; border: 0px;}
+        #one-panel{display: block;}
+        
+        #one:checked ~ .panels #one-panel, #two:checked ~ .panels #two-panel{display: block;}
+        
+        .warpper2 .panels .lhs{width: auto; margin-bottom: 20px}
+        .warpper2 .panels .rhs > section.cn-challenge .data{display: block}
+        .warpper2 .total{ justify-content: center; }
+        .warpper2 .total span{line-height: 40px; color: #fff}  
+        
+    }
+    
+</style>
+    
+    
+<script>
+  // Function to change the amount values based on the selected currency
+  function changeCurrency(currency) {
+    const amounts = document.querySelectorAll('.amount input');
+
+    if (currency === 'USD') {
+      amounts[0].value = "$5,000 Account";
+      amounts[1].value = "$10,000 Account";
+      amounts[2].value = "$25,000 Account";
+      amounts[3].value = "$50,000 Account";
+      amounts[4].value = "$100,000 Account";
+      amounts[5].value = "$200,000 Account";
+    } else if (currency === 'ZAR') {
+      amounts[0].value = "R 100,000 Account";
+      amounts[1].value = "R 200,000 Account";
+      amounts[2].value = "R 500,000 Account";
+      amounts[3].value = "R 1,000,000 Account";
+      amounts[4].value = "R 2,000,000 Account";
+      amounts[5].value = "R 4,000,000 Account";
+    }
+  }
+
+  // Function to update the details displayed in the h6 element
+  function updateDetails() {
+    const phase = document.querySelector('.challenge-type button.active')?.textContent || 'Phase';
+    const broker = document.querySelector('.broker button.active')?.querySelector('img')?.alt || 'Broker';
+    const amount = document.querySelector('.amount input.active')?.value || 'Amount';
+    const currency = document.querySelector('.currency input.active')?.value || 'Currency';
+
+    document.getElementById('details-here').textContent = `${phase} ${broker} ${amount} ${currency}`;
+  }
+
+  // Function to update the total value
+  function updateTotalValue() {
+    const challengeType = document.querySelector('.challenge-type button.active')?.textContent.trim();
+    const currency = document.querySelector('.currency input.active')?.value.trim();
+    const amount = document.querySelector('.amount input.active')?.value.trim();
+
+    const totalValue = totalValues[challengeType]?.[currency]?.[amount] || 'Not available';
+    document.getElementById('total-value').textContent = totalValue;
+  }
+
+  // Function to handle the active class toggle within a specific container
+  function toggleActiveClass(containerSelector, updateCallback) {
+    const buttons = document.querySelectorAll(`${containerSelector} input, ${containerSelector} button`);
+    
+    buttons.forEach(button => {
+      button.addEventListener('click', function() {
+        buttons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        if (updateCallback) updateCallback();
+      });
+    });
+  }
+
+  // Add event listeners and toggle classes for different groups
+  toggleActiveClass('.challenge-type', updateDetails);
+  toggleActiveClass('.currency', function() {
+    updateDetails();
+    changeCurrency(document.querySelector('.currency input.active').value);
+  });
+  toggleActiveClass('.amount', function() {
+    updateDetails();
+    updateTotalValue();
+  });
+  toggleActiveClass('.broker', updateDetails);
+
+  // Define a mapping of amount values to their corresponding total values
+  const totalValues = {
+    "One Phase Challenge": {
+      "USD": {
+        "$5,000 Account": "$79.00",
+        "$10,000 Account": "$129.00",
+        "$25,000 Account": "$249.00",
+        "$50,000 Account": "$399.00",
+        "$100,000 Account": "$699.00",
+        "$200,000 Account": "$849.00"
+      },
+      "ZAR": {
+        "R 100,000 Account": "1,450.00 ZAR",
+        "R 200,000 Account": "2,360.00 ZAR",
+        "R 500,000 Account": "4,560.00 ZAR",
+        "R 1,000,000 Account": "7,300.00 ZAR",
+        "R 2,000,000 Account": "12,800.00 ZAR",
+        "R 4,000,000 Account": " 15,500.00 ZAR"
+      }
+    },
+    "Two Phase Challenge": {
+      "USD": {
+        "$5,000 Account": "$59.00",
+        "$10,000 Account": "$99.00",
+        "$25,000 Account": "$199.00",
+        "$50,000 Account": "$299.00",
+        "$100,000 Account": "$499.00",
+        "$200,000 Account": "$799.00"
+      },
+      "ZAR": {
+        "R 100,000 Account": "1,080.00 ZAR",
+        "R 200,000 Account": "1,830.00 ZAR",
+        "R 500,000 Account": "3,660.00 ZAR",
+        "R 1,000,000 Account": "5,470.00 ZAR",
+        "R 2,000,000 Account": " 9,130.00 ZAR",
+        "R 4,000,000 Account": "  14,260.00 ZAR"
+      }
+    }
+  };
+
+/////////=============
+document.getElementById('one-tab').addEventListener('click', function() {
+  updateChallengeDetails('One Phase Challenge');
+});
+
+document.getElementById('two-tab').addEventListener('click', function() {
+  updateChallengeDetails('Two Phase Challenge');
+});
+
+function updateChallengeDetails(challengeType) {
+  let details;
+
+  if (challengeType === 'Two Phase Challenge') {
+    details = `
+      <ul>
+        <li id="profit-target"> Profit Target: Step1 (10%) & Step 2 (6%) </li>
+        <li id="min-days">Minimum Trading Days: 5 Days</li>
+        <li id="weekend-holding">Weekend Holding: Allowed</li>
+        <li id="daily-drawdown">Maximum Daily Drawdown: 5%</li>
+        <li id="overall-drawdown">Maximum Overall Drawdown: 10%</li>
+        <li id="profit-split">Profit Split: 85%</li>
+      </ul>
+    `;
+  } else {
+    details = `
+      <ul>
+        <li id="profit-target"> Profit Target: 10% </li>
+        <li id="min-days">Minimum Trading Days: 5 Days</li>
+        <li id="weekend-holding">Weekend Holding: Allowed</li>
+        <li id="daily-drawdown">Maximum Daily Drawdown: 5%</li>
+        <li id="overall-drawdown">Maximum Overall Drawdown: 10%</li>
+        <li id="profit-split">Profit Split: 75%</li>
+      </ul>
+    `;
+  }
+
+  document.getElementById('challenge-details').innerHTML = details;
+}
+</script>
+
+</body>

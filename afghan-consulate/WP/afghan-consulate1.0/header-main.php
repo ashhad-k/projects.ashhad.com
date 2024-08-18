@@ -2,16 +2,23 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<meta name="description" content="" />
-<meta name="author" content="" />
-<!-- <title>Afghan Consulate</title> -->
+<meta name="description" content="The Consulate General of Afghanistan in Dubai provides consular services including visa processing, passport services, and support to Afghan nationals residing in the UAE. Contact us for more information on consular services, business inquiries, and cultural exchanges." />
+<meta name="keywords" content="Consulate General of Afghanistan Dubai, Afghan Consulate UAE, visa services, passport services, consular services, Afghan nationals in UAE, business inquiries, cultural exchange, Afghan embassy" />
+<meta name="author" content="Consulate General of Afghanistan in Dubai" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta property="og:title" content="Consulate General of the IEA Dubai" />
+<meta property="og:description" content="The Consulate General of Afghanistan in Dubai provides consular services including visa processing, passport services, and support to Afghan nationals residing in the UAE. Contact us for more information on consular services, business inquiries, and cultural exchanges." />
+<meta property="og:image" content="https://afghanconsulate.ae/wp-content/themes/afghan-consulate1.0/assets/logo3.png" />
+<meta property="og:url" content="https://www.afghanconsulate.ae/" />
+    
 <?php wp_head(); ?>
 </head>
 <body class="d-flex flex-column h-100 a1">
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg py-3 navbar-fixed-top " id="nav0">
-  <div class="container"> <a class="navbar-brand" href="/"><img src="<?php echo get_template_directory_uri(); ?>/assets/afghan-consulate.svg" alt="Afghan Consulate"/></a>
+  <div class="container"> <a class="navbar-brand" href="/"><img src="<?php echo get_template_directory_uri(); ?>/assets/afghan-consulate.svg" class="en" alt="Afghan Consulate"/>
+	  <img src="<?php echo get_template_directory_uri(); ?>/assets/afghan-consulate-ps.svg" class="ps" alt="Afghan Consulate"/></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
       
@@ -32,14 +39,47 @@
        // ) );
 
         ?>
-		  <?php get_template_part('/patterns/top-right-items'); ?>
-      </div>
+        <a class="btn btn-outline-light rounded-pill b0" data-bs-toggle="modal" data-bs-target="#docModal"> <i class="bi bi-file-check"></i> Document Verification</a> 
+        
+        <!-- Modal -->
+        <div id="docModal" class="modal modal-lg fade" tabindex="-1" aria-labelledby="docModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 id="docModalLabel" class="modal-title fs-5">Document verification</h1>
+              </div>
+              <div class="modal-body">
+                <div class="data">
+                  <input class="form-control" type="text" placeholder="Enter Document No" aria-label="Enter Document No" />
+                  <button class="btn btn-primary" type="button">Verify</button>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-outline-dark" type="button" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown b1">
+          <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"> <i class="bi bi-search text-white"></i> </button>
+          <form class="dropdown-menu dropdown-menu-end p-4" action="<?php echo home_url(); ?>" id="search-form" method="get">
+            <div class="mb-3"> 
+              <!--         <input type="input" class="form-control" id="search" placeholder="Search..."> -->
+              <input class="form-control" type="text" name="s" id="s" value="type your search" onblur="if(this.value=='')this.value='type your search'"
+  			  onfocus="if(this.value=='type your search')this.value=''" />
+              <input type="hidden" value="submit" />
+            </div>
+            <button type="submit" class="btn btn-primary" value="submit" / >
+            Search
+            </button>
+          </form>
+        </div>
+        <a href="https://test.ashhad.com/user-login/" class="btn btn-light rounded-circle b2"> <i class="bi bi-person"></i> </a> </div>
     </div>
   </div>
 </nav>
 <!-- Header-->
 <section class="s-hero">
-	
   <?php
  // wp_nav_menu( array(
    // 'theme_location' => 'header-rhs-menu',
@@ -47,9 +87,9 @@
   //) );
 
   ?>
-	<div class="sticky-right d-none d-md-block">
-	 <?php get_template_part('/patterns/hero-rhs-items'); ?>
-	</div>
+  <div class="sticky-right d-none d-md-block">
+    <?php get_template_part('/patterns/hero-rhs-items'); ?>
+  </div>
   <!--    /sticky end-->
   <div id="carousel1" class="carousel slide  carousel-fade">
     <div class="carousel-indicators">
@@ -67,7 +107,12 @@
               <div class="col-md-6">
                 <h1>Tourist Investment Opportunity</h1>
                 <p class="lead">Investment opportunities in the tourism sector can be diverse and depend on the specific location.</p>
-                <a href="/info-hub/afghanistan/" class="btn btn-lg btn-secondary me-3"><i class="bi bi-eye"></i> Discover More</a> </div>
+                  <div class="d-flex">
+                     <a href="/info-hub/afghanistan/" class="btn  btn-secondary me-3"> Discover More</a> <a href="/services/passport-renewal/" class="btn  btn-primary">Passport Renewal</a> 
+                  </div>
+             
+                
+                </div>
             </div>
           </div>
         </div>
@@ -90,7 +135,11 @@
               <div class="col-md-6">
                 <h1>Power &amp; Water Management</h1>
                 <p class="lead">Investment opportunities in the tourism sector can be diverse and depend on the specific location.</p>
-                <a href="/info-hub/afghanistan/" class="btn btn-lg btn-secondary me-3"><i class="bi bi-eye"></i> Discover More</a> </div>
+                  
+              <div class="d-flex">
+                     <a href="/info-hub/afghanistan/" class="btn  btn-secondary me-3"> Discover More</a> <a href="/services/passport-renewal/" class="btn  btn-primary">Passport Renewal</a> 
+                  </div>
+                </div>
             </div>
           </div>
         </div>
@@ -110,7 +159,9 @@
               <div class="col-md-6">
                 <h1>Hands Made Carpet And Antique</h1>
                 <p class="lead">Investment opportunities in the tourism sector can be diverse and depend on the specific location.</p>
-                <a href="/info-hub/afghanistan/" class="btn btn-lg btn-secondary me-3"><i class="bi bi-eye"></i> Discover More</a> </div>
+                <div class="d-flex">
+                     <a href="/info-hub/afghanistan/" class="btn  btn-secondary me-3"> Discover More</a> <a href="/services/passport-renewal/" class="btn  btn-primary">Passport Renewal</a> 
+                  </div> </div>
             </div>
           </div>
         </div>
@@ -130,7 +181,9 @@
               <div class="col-md-6">
                 <h1>Minerals Investment opportunity</h1>
                 <p class="lead">Investment opportunities in the tourism sector can be diverse and depend on the specific location.</p>
-                <a href="/info-hub/afghanistan/" class="btn btn-lg btn-secondary me-3"><i class="bi bi-eye"></i> Discover More</a> </div>
+               <div class="d-flex">
+                     <a href="/info-hub/afghanistan/" class="btn  btn-secondary me-3"> Discover More</a> <a href="/services/passport-renewal/" class="btn  btn-primary">Passport Renewal</a> 
+                  </div></div>
             </div>
           </div>
         </div>
@@ -163,7 +216,9 @@
               <div class="col-md-6">
                 <h1>Agricultural Investment opportunity</h1>
                 <p class="lead">Investment opportunities in the tourism sector can be diverse and depend on the specific location.</p>
-                <a href="/info-hub/afghanistan/" class="btn btn-lg btn-secondary me-3"><i class="bi bi-eye"></i> Discover More</a> </div>
+                <div class="d-flex">
+                     <a href="/info-hub/afghanistan/" class="btn  btn-secondary me-3"> Discover More</a> <a href="/services/passport-renewal/" class="btn  btn-primary">Passport Renewal</a> 
+                  </div> </div>
             </div>
           </div>
         </div>
