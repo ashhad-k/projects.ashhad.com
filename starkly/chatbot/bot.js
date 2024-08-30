@@ -64,7 +64,7 @@
              
                </div>
                <div>
-               <div class="chat-header-title">AI Doodle</div>
+               <div class="chat-header-title">CHEERS AI Agent</div>
                <div class="chat-header-sub-title">  <div id="connection-status" class="connection-status">Connecting to Agent...</div> Online</div>
                </div>              
                </div>
@@ -80,9 +80,9 @@
 
             <div class="chat-footer">
     <div class="ai-tags"> 
-    <div>🤔 What is AI Doodle?</div>
-    <div>💵 Price</div>
-    <div>🌐 Language</div>
+    <div>Book your rental</div>
+    <div>Request a Call Back</div>
+    <div>Contact Us</div>
 </div>
 
 <div class="textbox1">
@@ -92,8 +92,7 @@
                 </button>
 </div>
 <div class="poweredby">
-<span>Powered by: <a href="#" class="link">PLUTONIX</a></span>
-<span><a href="#" class="link">plutonix.ai</a></span>
+<span>Powered by: <a href="https://starklyai.com/" class="link">StarklyAI.</a></span>
 </div>
 
             </div>   
@@ -104,11 +103,11 @@
 
         <div class="chat-panel">
         <div class="chat-panel-message">
-        <span>Talk to AI Agent </span>
+        <span>Talk to CHEERS AI Agent </span>
         <span></span>
         </div>
         <div class="chat-panel-img vert-move">
-        <img id="eidChatPanel" src="./images/logo-dark.svg" alt="chat bot">
+        <img id="eidChatPanel" src="./images/logo-lite.svg" alt="chat bot">
         </div>
 <div>
             </div>
@@ -134,7 +133,7 @@
         messageDetails.classList.add('message-details');
         //loading
         const icon = document.createElement("img");
-        icon.setAttribute("src", "./images/icon-doodle.png");
+        icon.setAttribute("src", "./images/logo-lite.svg");
 
         const loadingDots = document.createElement("div");
         loadingDots.innerHTML = '<span class="dot"></span><span class="dot"></span><span class="dot"></span>';
@@ -333,7 +332,7 @@
     function displaySystemMessage(message) {
         const time = new Date().toLocaleTimeString();
         const messageContent = `${message}`;
-        const msg = createMessageElement('AI Doodle', messageContent, 'system-message', './images/icon-doodle.png', time, 'system');
+        const msg = createMessageElement('CHEERS AI Agent', messageContent, 'system-message', './images/logo-lite.svg', time, 'system');
         const chatMessages = document.getElementById("chat-messages");
         chatMessages.appendChild(msg);
         scrollToBottom(chatMessages);

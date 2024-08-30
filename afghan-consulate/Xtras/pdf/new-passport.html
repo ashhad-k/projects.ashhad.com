@@ -1,0 +1,362 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>New Passport</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<script defer="defer" src="main.js"></script>
+<link href="main.css" rel="stylesheet">
+<link href="extract.css" rel="stylesheet">
+<style data-emotion="css-global" data-s=""></style>
+
+<link rel="stylesheet" type="text/css" href="chunk.css">    
+<style>
+     body{
+       
+    padding: 0px; 
+        margin: 0px;
+    color: rgb(255, 255, 255);
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.334em;
+    font-family: Poppins, sans-serif;
+    background-color: rgb(16, 18, 27);
+    }
+    </style> 
+ </head>   
+
+<body>
+<div class="pdf-header"><img src="pdf-logo.png" alt="header"></div>
+<div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiTableContainer-root pdf-table css-2eyhgf">
+  <table class="MuiTable-root css-13pt2sb">
+    <tbody class="MuiTableBody-root css-1xnox0e">
+      <tr class="MuiTableRow-root css-2y3eq6">
+        <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" colspan="1" style="background-color: rgb(220, 220, 220); font-weight: bold; text-align: left; color: rgb(255, 255, 255);">PERSONAL DETAILS:</td>
+        <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" colspan="2" style="background-color: rgb(220, 220, 220); text-align: center; font-weight: 500; color: rgb(255, 255, 255);">New Passport Application Form</td>
+        <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" colspan="1" style="background-color: rgb(220, 220, 220); font-weight: bold; text-align: right; color: rgb(255, 255, 255);">ﺷﻬﺮت ﻣﮑﻤﻞ</td>
+      </tr>
+     
+
+<tr class="MuiTableRow-root css-1fdn2e9">
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium border-left css-vjfc7" scope="row" colspan="1" width="25%">Taskira Number :</td>
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7" colspan="1" width="25%">{{form.taskira_number}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-3oeuaf" colspan="1" width="25%">{{form.__42}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" colspan="1" align="right" dir="rtl" width="25%">شماره تاسکیرا </td>
+</tr>
+<tr class="MuiTableRow-root css-1fdn2e9">
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium border-left css-vjfc7" scope="row" colspan="1">Title:</td>
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7" colspan="1">{{form.title}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-3oeuaf" colspan="1">{{form.title_2}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" colspan="1" align="right" dir="rtl">ﻟﻘﺐ:</td>
+</tr>
+<tr class="MuiTableRow-root css-1fdn2e9">
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium border-left css-vjfc7" scope="row" colspan="1">Family Name&nbsp;</td>
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7" colspan="1">{{form.family_name}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-3oeuaf" colspan="1">{{form.__2}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" colspan="1" align="right" dir="rtl">اسم خانواد:</td>
+</tr>
+<tr class="MuiTableRow-root css-1fdn2e9">
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium border-left css-vjfc7" scope="row" colspan="1">Given Name</td>
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7" colspan="1">{{form.given_name}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-3oeuaf" colspan="1"> {{form.__3}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" colspan="1" align="right" dir="rtl">شهرت م:</td>
+</tr>
+<tr class="MuiTableRow-root css-1fdn2e9">
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium border-left css-vjfc7" scope="row" colspan="1">Father's Full Name&nbsp;*</td>
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7" colspan="1">{{form.fathers_full_name}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-3oeuaf" colspan="1">{{form.__4}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" colspan="1" align="right" dir="rtl">در اسم م:</td>
+</tr>
+<tr class="MuiTableRow-root css-1fdn2e9">
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium border-left css-vjfc7" scope="row" colspan="1">Grandfather's Full Name&nbsp;*</td>
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7" colspan="1">{{form.grandfathers_full_name}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-3oeuaf" colspan="1"> {{form.__5}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" colspan="1" align="right" dir="rtl">درلان اسم م:</td>
+</tr>
+<tr class="MuiTableRow-root css-1fdn2e9">
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium border-left css-vjfc7" scope="row" colspan="1"><label>Date of Birth (Gregorian)</label>
+    <br></td>
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7" colspan="1">{{form.date_of_birth_gregorian}} </td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-3oeuaf" colspan="1">{{form.__6}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" colspan="1" align="right" dir="rtl">درلان اسم م</td>
+</tr>
+
+      <tr class="MuiTableRow-root css-1fdn2e9">
+        <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7" colspan="2" style="font-weight: bold; text-align: left;">Place of Birth Details:</td>
+        <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" colspan="2" style="font-weight: bold; text-align: right;">:ﺟﺰﯾﺎت ﻣﺤﻞ ﺗﻮﻟﺪ</td>
+      </tr>
+      <tr class="MuiTableRow-root css-qljdv9">
+    <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">Country</th>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">{{form.country}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf">{{form.__8}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" align="right" dir="rtl">ممل ت</td>
+</tr>     
+<tr class="MuiTableRow-root css-qljdv9">
+    <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">Province/State *</th>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">{{form.provincestate}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf">{{form.__9}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" align="right" dir="rtl">ولا ت</td>
+</tr>     
+<tr class="MuiTableRow-root css-qljdv9">
+    <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">City/Town</th>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">{{form.citytown}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf">{{form.__41}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" align="right" dir="rtl">شهر/ ناحیه</td>
+</tr>     
+<tr class="MuiTableRow-root css-qljdv9">
+    <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">District / Village *</th>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">{{form.district_village}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf">{{form.__10}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" align="right" dir="rtl">ولسوا / ناح ه</td>
+</tr>     
+<tr class="MuiTableRow-root css-qljdv9">
+    <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">Country of Residence</th>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">{{form.country_of_residence}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf">{{form.__11}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" align="right" dir="rtl">ت محل اقامت</td>
+</tr>     
+<tr class="MuiTableRow-root css-qljdv9">
+    <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">Other Nationalities</th>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">{{form.other_nationalities}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf">{{form.__12}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" align="right" dir="rtl">گر ت های د ع تا</td>
+</tr>     
+<tr class="MuiTableRow-root css-qljdv9">
+    <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">Gender</th>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">{{form.gender}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf">{{form.gender_2}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" align="right" dir="rtl">&nbsp;</td>
+</tr>     
+<tr class="MuiTableRow-root css-qljdv9">
+    <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">Marital Status</th>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">{{form.marital_status}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf">{{form.__13}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" align="right" dir="rtl">حالت مد</td>
+</tr>     
+<tr class="MuiTableRow-root css-qljdv9">
+    <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">Child (under 18 years)</th>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">{{form.child_under_18_years}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf">{{form.__14}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" align="right" dir="rtl">طفل (زیر سن ۱۸)</td>
+</tr>     
+<tr class="MuiTableRow-root css-qljdv9">
+    <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">Height (cm)</th>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">{{form.height_cm}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf">{{form.__15}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" align="right" dir="rtl">ه سان م</td>
+</tr>     
+<tr class="MuiTableRow-root css-qljdv9">
+    <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">Eye Color</th>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">{{form.eye_color}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf">{{form.__16}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" align="right" dir="rtl">رنگ چشم</td>
+</tr>     
+<tr class="MuiTableRow-root css-qljdv9">
+    <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">Hair Color</th>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">{{form.hair_color}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf">{{form.__17}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" align="right" dir="rtl">رنگ مو</td>
+</tr>     
+<tr class="MuiTableRow-root css-qljdv9">
+    <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">Identification Marks</th>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">{{form.identification_marks}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf">{{form.__18}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" align="right" dir="rtl">نشانه های ت م</td>
+</tr> 
+
+        
+        <tr class="MuiTableRow-root css-1fdn2e9">
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7" colspan="2" style="font-weight: bold; text-align: left;">Contact Details</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" colspan="2" style="font-weight: bold; text-align: right;">اطلاعات تماس</td>
+</tr>
+        <tr class="MuiTableRow-root css-qljdv9">
+    <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">Current Address</th>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">{{form.current_address}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf"> {{form.__20}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" align="right" dir="rtl">آدرس فع </td>
+        </tr> 
+        <tr class="MuiTableRow-root css-qljdv9">
+    <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">Previous Address</th>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">{{form.previous_address}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf"> {{form.__21}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" align="right" dir="rtl">آدرس ق</td>
+        </tr>     
+        <tr class="MuiTableRow-root css-qljdv9">
+          <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">Email Address</th>
+          <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">{{form.email_address}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf">{{form.__22}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" align="right" dir="rtl">ست بر</td>
+</tr>     
+        <tr class="MuiTableRow-root css-qljdv9">
+          <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">Home Telephone Number</th>
+          <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">{{form.home_telephone_number}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf">{{form.__23}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" align="right" dir="rtl">لفون م ت</td>
+</tr>     
+        <tr class="MuiTableRow-root css-qljdv9">
+          <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">Mobile Number *</th>
+          <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">{{form.mobile_number}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf">{{form.__24}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" align="right" dir="rtl">لفون همرا</td>
+</tr>
+         <tr class="MuiTableRow-root css-1fdn2e9">
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7" colspan="2" style="font-weight: bold; text-align: left;">Employment Details</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" colspan="2" style="font-weight: bold; text-align: right;">ﺟﺰﺋﯿﺎت وﻇﯿﻔﻪ</td>
+</tr>
+<tr class="MuiTableRow-root css-qljdv9">
+    <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">Occupation</th>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">{{form.occupation}} </td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf"> {{form.occupation_2}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" align="right" dir="rtl">-</td>
+</tr>
+<tr class="MuiTableRow-root css-qljdv9">
+    <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">Employer</th>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">{{form.employer}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf"> {{form.employer_2}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" align="right" dir="rtl">-</td>
+</tr>
+<tr class="MuiTableRow-root css-qljdv9">
+    <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">Employer's Address </th>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">{{form.employers_address}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf"> {{form.__26}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" align="right" dir="rtl">ارفرما آدرس </td>
+</tr>
+<tr class="MuiTableRow-root css-qljdv9">
+    <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">Previous Employer </th>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">{{form.previous_employer}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf"> {{form.previous_employer_2}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" align="right" dir="rtl">-</td>
+</tr>
+<tr class="MuiTableRow-root css-qljdv9">
+    <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">Previous Employer's Address </th>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">
+
+
+
+
+
+
+
+{{form.previous_employers_address}} 
+</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf"> {{form.__27}}</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" align="right" dir="rtl">ارفرما آدرس</td>
+</tr>
+        <tr class="MuiTableRow-root css-1fdn2e9">
+          <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7" colspan="2" style="font-weight: bold; text-align: left;">Passport Details</td>
+          <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" colspan="2" style="font-weight: bold; text-align: right;">مشخصات پاسپورت</td>
+</tr>
+      <tr class="MuiTableRow-root css-qljdv9">
+          <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">Passport Type</th>
+          <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">{{form.passport_type}}</td>
+          <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf">{{form.__29}}</td>
+          <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf">ﻧﻮع ﭘﺎﺳﭙﻮرت:</td>
+      </tr>
+        <tr class="MuiTableRow-root css-qljdv9">
+          <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">Note: If Diplomatic or Service Passport, please write your job title:</th>
+          <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">{{form.note_if_diplomatic_or_service_passport_please_write_your_job_title}}</td>
+          <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf">{{form.__30}}</td>
+          <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf">ﻧﻮت: در ﺻﻮرﺗﯽ ﮐﻪ ﭘﺎﺳﭙﻮرت ﺳﯿﺎﺳﯽ ﯾﺎ ﺧﺪﻣﺖ ﺑﺎﺷﺪ، ﻟﻄﻔﺎً ﻣﻘﺎم ﺧﻮد را درج ﻧﻤﺎﺋﯿﺪ:</td>
+        </tr>
+<tr class="MuiTableRow-root css-qljdv9">
+  <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">Identification Document
+</th>
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">{{form.identification_document}}   
+
+  </td>
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf">{{form.__31}}</td>
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" align="right" dir="rtl">ﺳﻨﺪ ﺗﺸﺨﯿﺺ ﻫﻮﯾﺖ </td>
+</tr>
+<tr class="MuiTableRow-root css-qljdv9">
+  <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">Have you ever had an Afghan Passport?</th>
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">{{form.have_you_ever_had_an_afghan_passport}}  
+
+  </td>
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf">{{form.__32}}</td>
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" align="right" dir="rtl">آﯾﺎ ﮔﺎﻫﯽ ﭘﺎﺳﭙﻮرت اﻓﻐﺎﻧﯽ داﺷﺘﻪ اﯾﺪ؟ </td>
+</tr>
+<tr class="MuiTableRow-root css-qljdv9">
+  <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">Do you have a criminal record? *
+</th>
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">{{form.do_you_have_a_criminal_record}}  
+
+  </td>
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf">{{form.__38}}</td>
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" align="right" dir="rtl">آیا شما سابقه کیفری؟ </td>
+</tr>
+<tr class="MuiTableRow-root css-qljdv9">
+  <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">Purpose of Travel </th>
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">{{form.purpose_of_travel}}  
+
+  </td>
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf">{{form.__40}} </td>
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" align="right" dir="rtl">ﻫﺪف ﻣﺴﺎﻓﺮت </td>
+</tr>
+<tr class="MuiTableRow-root css-qljdv9">
+  <th class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" scope="row">New Passport Duration (مدت گذرنامه جدید) *
+</th>
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7">&nbsp;  
+
+  </td>
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf">&nbsp;</td>
+  <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-3oeuaf" align="right" dir="rtl">&nbsp;</td>
+</tr>
+        <tr class="MuiTableRow-root css-1fdn2e9">
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7" colspan="2" style="font-weight: bold; text-align: left;">Declaration</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" colspan="2" style="font-weight: bold; text-align: right">اعلام</td>
+</tr>
+<tr class="MuiTableRow-root css-qljdv9">
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" colspan="2">I declare to the best of my knowledge and belief that:</td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-3oeuaf" align="right" colspan="2"><strong>:من به بهترین دانش و باور خود اعلام می‌کنم که</strong>
+    </td>
+</tr><tr class="MuiTableRow-root css-qljdv9">
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-vjfc7" colspan="2">
+        - I am an Afghan citizen;
+<br>
+
+- The statements made in this application are true and correct; and<br>
+
+
+- I am responsible for its correctness.
+        </td>
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-3oeuaf" align="right" colspan="2">
+        من یک شهروند افغان هستم؛
+        <br>اظهارات مطرح شده در این درخواست درست و صحیح هستند؛
+<br>من مسئول صحت آنها هستم
+
+       </td>
+</tr>
+<tr class="MuiTableRow-root css-qljdv9">
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7" colspan="4" align="center" style="text-align: center"><strong>Attach Passport Copy</strong></td>
+    </tr>
+        <tr class="MuiTableRow-root css-qljdv9">
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7" colspan="4" align="center" style="text-align: center">{{form.signature_}}</td>
+    </tr>
+<tr class="MuiTableRow-root css-qljdv9">
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7" colspan="4" align="center" style="text-align: center"><strong>Passport Photograph (اﻣﻀﺄ)</strong></td>
+    </tr>
+        <tr class="MuiTableRow-root css-qljdv9">
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7" colspan="4" align="center" style="text-align: center">{{form.passport_photograph_}}</td>
+    </tr>
+        
+<tr class="MuiTableRow-root css-qljdv9">
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7" colspan="4" align="center" style="text-align: center"><strong>Application Date (ﺗﺎرﯾﺦ)
+</strong></td>
+    </tr>
+        <tr class="MuiTableRow-root css-qljdv9">
+    <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium center-seperator css-vjfc7" colspan="4" align="center" style="text-align: center">{{form.application_date_}}</td>
+    </tr>
+        
+
+       
+    </tbody>
+  </table>
+</div>
+
+
+</body>
+</html>
