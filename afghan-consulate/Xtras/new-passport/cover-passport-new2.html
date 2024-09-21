@@ -1,0 +1,303 @@
+<style type="text/css">
+body {
+    background: #eeeeee;
+    padding: 0px;
+    margin: 0px;
+}
+.tb1 {
+    border-collapse: collapse;
+}
+.data {
+    border-collapse: collapse;
+}
+.data tr {
+    border-bottom: 1px solid #000;
+}
+.data tr > td:nth-child(2) {
+    border-right: 2px solid #000
+}
+.data tr > td:nth-child(3) {
+    border-left: 2px solid #000
+}
+.data td {
+    border-bottom: 1px solid #000
+}
+.data th {
+    background: #DCDCDC;
+    border: 2px solid #000000;
+    border-left: 0px;
+    border-right: 0px;
+}
+td.logo, tr.logo {
+    text-align: center;
+    background-color: #1a2869;
+}
+</style>
+<table border="0" cellpadding="0" cellspacing="0" class="tb1" style="width: 100%;page-break-inside: avoid;margin-left:auto;margin-right:auto;">
+<tbody>
+<tr class="logo">
+  <td class="logo"><img src="https://afghanconsulate.saphyteapi.com/docs/media/images/top.png" style="width: 100%;" /></td>
+</tr>
+<tr>
+  <td style="background: #DCDCDC; border: 2px solid #000000;"><table border="0" cellpadding="10" cellspacing="0" width="100%">
+      <tbody>
+        <tr>
+          <td width="30%">&nbsp;</td>
+          <td align="center" width="40%"><strong>NEW PASSPORT APPLICATION FORM<br>
+              
+               {{request.number}} 
+</strong></td>
+          <td align="right" width="30%">&nbsp;</td>
+        </tr>
+      </tbody>
+    </table></td>
+</tr>
+<tr>
+  <td>
+      <table border="1" cellpadding="10" cellspacing="0" class="data" width="100%">
+      <tbody>
+        <tr>
+          <th align="left" colspan="2">Personal Information</th>
+          <th align="right" colspan="2">:اطلاعات شخصی</th>
+        </tr>
+        <tr>
+          <td>Taskira Number :</td>
+          <td>{{form.taskira_number}}</td>
+          <td>{{form.__42}}</td>
+          <td align="right" dir="rtl">شماره تاسکیرا </td>
+        </tr>
+        <tr>
+          <td width="25%">Title:</td>
+          <td width="25%">{{form.title}}</td>
+          <td width="25%"> {{form.title_2}}</td>
+          <td align="right" dir="rtl" width="25%">ﻟﻘﺐ:</td>
+        </tr>
+        <tr>
+          <td>Family Name&nbsp;</td>
+          <td>{{form.family_name}}  </td>
+          <td>{{form.__2}}</td>
+          <td align="right" dir="rtl">اسم خانواد:</td>
+        </tr>
+        <tr>
+          <td>Given Name</td>
+          <td>{{form.given_name}}</td>
+          <td>{{form.__3}}</td>
+          <td align="right" dir="rtl">شهرت م:</td>
+        </tr>
+        <tr>
+          <td>Father&#39;s Full Name</td>
+          <td>{{form.fathers_full_name}}</td>
+          <td>{{form.__4}}</td>
+          <td align="right" dir="rtl">در اسم م:</td>
+        </tr>
+        <tr>
+          <td>Grand Father&#39;s Full Name</td>
+          <td>{{form.grandfathers_full_name}}  </td>
+          <td>{{form.__5}}</td>
+          <td align="right" dir="rtl">د نیکه نوم / نام پدرکلان</td>
+        </tr>
+        <tr>
+          <td>Date of Birth (Gregorian) </td>
+          <td> {{form.date_of_birth_gregorian}}   </td>
+          <td> {{form.__6}}</td>
+          <td align="right" dir="rtl">د زیږدنې نیټه / تاریخ تولد (میلادي) </td>
+        </tr>
+        <tr>
+          <td>Birthplace Country</td>
+          <td>{{form.country}} </td>
+          <td> {{form.__8}}</td>
+          <td align="right" dir="rtl">د زېږېدنې ځای / محل تولد </td>
+        </tr>
+        <tr>
+          <td>State/Province *</td>
+          <td>{{form.provincestate}}</td>
+          <td>{{form.__9}}</td>
+          <td align="right" dir="rtl"> ولایت </td>
+        </tr>
+        <tr>
+          <td>District</td>
+          <td>{{form.district_village}} </td>
+          <td>{{form.__10}}</td>
+          <td align="right" dir="rtl">ولسوالي </td>
+        </tr>
+        <tr>
+          <td>Village/City</td>
+          <td>{{form.citytown}}  </td>
+          <td> {{form.__41}}</td>
+          <td align="right" dir="rtl"> کلی / قریه </td>
+        </tr>
+        <tr>
+          <td>ID Card No / </td>
+          <td>{{form.other_nationalities}}</td>
+          <td> {{form.__12}}</td>
+          <td align="right" dir="rtl">د تذکرې شمیره / شماره تذکره</td>
+        </tr>
+        <tr>
+          <td>Country of Residence</td>
+          <td>{{form.country_of_residence}}</td>
+          <td>{{form.__11}}</td>
+          <td align="right" dir="rtl">ت محل اقامت</td>
+        </tr>
+        <tr>
+          <td>Other Nationality</td>
+          <td> {{form.other_nationalities}} </td>
+          <td> {{form.__12}}</td>
+          <td align="right" dir="rtl">د بل هیواد تابعیت / تابعیت های دیگر</td>
+        </tr>
+        <tr>
+          <td>Gender</td>
+          <td>{{form.gender}}</td>
+          <td>{{form.gender_2}}</td>
+          <td align="right" dir="rtl">ﺟﻨﺲ</td>
+        </tr>
+        <tr>
+          <td>Marital Status / </td>
+          <td>{{form.marital_status}}</td>
+          <td>{{form.__13}}</td>
+          <td align="right" dir="rtl">مدني حالت / حالت مدني</td>
+        </tr>
+        <tr>
+          <td>Height</td>
+          <td>{{form.height_cm}} </td>
+          <td> {{form.__15}}</td>
+          <td align="right" dir="rtl">ه سان م</td>
+        </tr>
+        <tr>
+          <td>Eye Color</td>
+          <td>{{form.eye_color}}</td>
+          <td>{{form.__16}}</td>
+          <td align="right" dir="rtl">د سترګو رنګ / رنګ چشم</td>
+        </tr>
+        <tr>
+          <td>Hair Color</td>
+          <td>{{form.hair_color}}</td>
+          <td> {{form.__17}}</td>
+          <td align="right" dir="rtl">د وریښتانو رنګ / رنگ مو</td>
+        </tr>
+        <tr>
+          <td> Other Marks</td>
+          <td>{{form.other_distinguishing_marks}}</td>
+          <td>{{form.__18}}</td>
+          <td align="right" dir="rtl">د پيژندنې نورې نښې / علایم</td>
+        </tr>
+        <tr>
+          <th align="left" colspan="2">Contact Details</th>
+          <th align="right" colspan="2">اطلاعات تماس</th>
+        </tr>
+        <tr>
+          <td>Current Address</td>
+          <td>{{form.current_address}}</td>
+          <td>{{form.__20}}</td>
+          <td align="right" dir="rtl">آدرس فع</td>
+        </tr>
+        <tr>
+          <td>Previous Address</td>
+          <td>{{form.previous_address}} </td>
+          <td> {{form.__21}}</td>
+          <td align="right" dir="rtl">مخکنی پته / ادرس قبلي</td>
+        </tr>
+        <tr>
+          <td>Email Address</td>
+          <td>{{form.email_address}}</td>
+          <td> {{form.__21}}</td>
+          <td align="right" dir="rtl">ست بر</td>
+        </tr>
+        <tr>
+          <td>Home Telephone Number</td>
+          <td>{{form.home_tel}} </td>
+          <td>{{form.__23}}</td>
+          <td align="right" dir="rtl">لفون م ت</td>
+        </tr>
+        <tr>
+          <td>Mobile Number *</td>
+          <td>{{form.mobile_no}}</td>
+          <td>{{form.__24}}</td>
+          <td align="right" dir="rtl">لفون همرا</td>
+        </tr>
+        <tr>
+          <th align="left" colspan="2">Employment Details</th>
+          <th align="right" colspan="2">د دندې جزئیات / جزئیات وظیفه</th>
+        </tr>
+        <tr>
+          <td>Occupation</td>
+          <td>{{form.occupation}}  </td>
+          <td>{{form.occupation_2}}</td>
+          <td align="right" dir="rtl">دنده / شغل</td>
+        </tr>
+        <tr>
+          <td>Employer</td>
+          <td>{{form.employer}}  </td>
+          <td>{{form.employer_2}}</td>
+          <td align="right" dir="rtl">ګمارونکی / کارفرما</td>
+        </tr>
+        <tr>
+          <td>Employer's Address</td>
+          <td>{{form.employers_address}}  </td>
+          <td>{{form.__26}}</td>
+          <td align="right" dir="rtl">د ګمارونکی پته / ادرس کارفرما</td>
+        </tr>
+        <tr>
+          <td>Previous Employer</td>
+          <td>{{form.previous_employer}}  </td>
+          <td>{{form.previous_employer_2}}</td>
+          <td align="right" dir="rtl"> مخکنی ګمارونکی / کارفرما قبلی</td>
+        </tr>
+        <tr>
+          <td>Previous Employer's Address</td>
+          <td>{{form.previous_employers_address}}</td>
+          <td>{{form.__27}}</td>
+          <td align="right" dir="rtl"> مخکنی ګمارونکی / کارفرما قبلی</td>
+        </tr>
+        <tr>
+          <td>Have you ever had an Afghan Passport?</td>
+          <td>{{form.passport_type}}</td>
+          <td> {{form.__29}}</td>
+          <td align="right" dir="rtl">ایا کله مو د افغانستان پاسپورټ لرلی دی؟ / ایا تا بحال پاسپورت افغانی داشته اید؟</td>
+        </tr>
+        <tr>
+          <td>Do you have a criminal record? *</td>
+          <td>{{form.do_you_have_a_criminal_record}}</td>
+          <td>{{form.__38}}</td>
+          <td align="right" dir="rtl">آیا شما سابقه کیفری؟</td>
+        </tr>
+        <tr>
+          <td> Do you have a criminal record?</td>
+          <td>{{form.do_you_have_a_criminal_record}}  </td>
+          <td>{{form.__38}}</td>
+          <td align="right" dir="rtl">  ایا جرمي مخینه لرئ؟ / ایا سابقه جرمی دارید </td>
+        </tr>
+        <tr>
+          <td> If Yes, Please provide details below.</td>
+          <td> {{form.if_yes_please_provide_details_below}}  </td>
+          <td> {{form.__39}}</td>
+          <td align="right" dir="rtl"> که جواب مو هو وي، د مهرباني لمخې جزئیات وړاندي کړئ. / در صورت داشتن لطفا تشریح نمایید</td>
+        </tr>
+      <tr>
+        <th align="left" colspan="2">Passport Details</th>
+        <th align="right" colspan="2">مشخصات پاسپورت</th>
+      </tr>
+      <tr>
+        <td>New Passport Duration</td>
+        <td>--</td>
+        <td>&nbsp;</td>
+        <td align="right" dir="rtl">(مدت گذرنامه جدید) </td>
+      </tr>
+      <tr>
+        <td> Tazkira (Front Side) / تذکره لومړی مخ / تذکره صفحه اول</td>
+        <td>{{form.taskira_number}} </td>
+        <td> Tazkira (Back Side) / تذکره شاته مخ / تذکره صحفه دوهم</td>
+        <td> {{form.__42}}</td>
+      </tr>
+      <tr>
+        <td>Passport Photograph / د پاسپورټ انځور / عکس پاسپورت</td>
+        <td>{{form.passport_photograph_}}</td>
+        <td>Signature / لاسلیک / امضاء</td>
+        <td>{{form.signature_}}</td>
+      </tr>
+        </tbody>
+      
+    </table>
+      </td>
+    </tr>
+    </tbody>
+    </table>
