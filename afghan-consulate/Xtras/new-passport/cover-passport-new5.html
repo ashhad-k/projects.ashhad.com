@@ -1,0 +1,342 @@
+<meta charset="utf-8">
+<title></title>
+<style type="text/css">body {
+    background: #eeeeee;
+    padding: 0px;
+    margin: 0px;
+}
+.tb1 {
+    border-collapse: collapse;
+}
+.data {
+    border-collapse: collapse;
+}
+.data tr {
+    border-bottom: 1px solid #000;
+}
+.data tr > td:nth-child(2) {
+    border-right: 2px solid #000
+}
+.data tr > td:nth-child(3) {
+    border-left: 2px solid #000
+}
+.data td {
+    border-bottom: 1px solid #000
+}
+.data th {
+    background: #DCDCDC;
+    border: 2px solid #000000;
+    border-left: 0px;
+    border-right: 0px;
+}
+td.logo, tr.logo {
+    text-align: center;
+    background-color: #1a2869;
+}
+</style>
+<table border="0" cellpadding="0" cellspacing="0" class="tb1" style="width: 100%;page-break-inside: avoid;margin-left:auto;margin-right:auto;">
+	<tbody>
+		<tr class="logo">
+			<td class="logo"><img src="https://afghanconsulate.saphyteapi.com/docs/media/images/top.png" style="width: 100%;" /></td>
+		</tr>
+		<tr>
+			<td style="background: #DCDCDC; border: 2px solid #000000;">
+			<table border="0" cellpadding="10" cellspacing="0" width="100%">
+				<tbody>
+					<tr>
+						<td width="30%">&nbsp;</td>
+						<td align="center" width="40%"><strong>NEW PASSPORT APPLICATION FORM</strong><br />
+						<b>Application Reference Number: {{request.deal_number}}</b></td>
+						<td align="right" width="30%">&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<table border="1" cellpadding="10" cellspacing="0" class="data" width="100%">
+				<tbody>
+					<tr>
+						<th align="left" colspan="2">Personal Information</th>
+						<th align="right" colspan="2">:اطلاعات شخصی</th>
+					</tr>
+					<tr>
+						<td width="25%">Taskira Number :</td>
+						<td width="25%">{{form.id_card_no_}}</td>
+						<td width="25%">&nbsp;</td>
+						<td align="right" dir="rtl" width="25%">شماره تاسکیرا</td>
+					</tr>
+					<tr>
+						<td>Family Name&nbsp;</td>
+						<td>{{form.family_name}}</td>
+						<td style="text-align: right;">{{form.__2}}</td>
+						<td align="right" dir="rtl">اسم خانواد:</td>
+					</tr>
+					<tr>
+						<td>Given Name</td>
+						<td>{{form.given_names}}</td>
+						<td style="text-align: right;">{{form.__5}}</td>
+						<td align="right" dir="rtl">شهرت م:</td>
+					</tr>
+					<tr>
+						<td>Father&#39;s Full Name</td>
+						<td>{{form.fathers_name_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">در اسم م:</td>
+					</tr>
+					<tr>
+						<td>Grand Father&#39;s Full Name</td>
+						<td>{{form.grandfathers_name_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">د نیکه نوم / نام پدرکلان</td>
+					</tr>
+					<tr>
+						<td>Date of Birth (Gregorian)</td>
+						<td>{{form.date_of_birth_gregorian_}}</td>
+						<td style="text-align: right;">{{form.__3}}</td>
+						<td align="right" dir="rtl">د زیږدنې نیټه / تاریخ تولد (میلادي)</td>
+					</tr>
+					<tr>
+						<td>Birthplace Country</td>
+						<td>{{form.birthplace_country}}</td>
+						<td style="text-align: right;">{{form.__4}}</td>
+						<td align="right" dir="rtl">د زېږېدنې ځای / محل تولد</td>
+					</tr>
+					<tr>
+						<td>State/Province *</td>
+						<td>{{form.province_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">ولایت</td>
+					</tr>
+					<tr>
+						<td>District</td>
+						<td>{{form.district_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">ولسوالي</td>
+					</tr>
+					<tr>
+						<td>Village/City</td>
+						<td>{{form.village_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">کلی / قریه</td>
+					</tr>
+					<tr>
+						<td>ID Card No.</td>
+						<td>{{form.id_card_no_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">د تذکرې شمیره / شماره تذکره</td>
+					</tr>
+					<tr>
+						<td>Country of Residence</td>
+						<td>{{form.country_of_residence_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">ت محل اقامت</td>
+					</tr>
+					<tr>
+						<td>Other Nationality</td>
+						<td>{{form.other_nationality_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">د بل هیواد تابعیت / تابعیت های دیگر</td>
+					</tr>
+					<tr>
+						<td>Gender</td>
+						<td>{{form.gender_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">ﺟﻨﺲ</td>
+					</tr>
+					<tr>
+						<td>Marital Status /</td>
+						<td>{{form.marital_status_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">مدني حالت / حالت مدني</td>
+					</tr>
+					<tr>
+						<td>Height</td>
+						<td>{{form.height_cm_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">ه سان م</td>
+					</tr>
+					<tr>
+						<td>Eye Color</td>
+						<td>{{form.eye_color_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">د سترګو رنګ / رنګ چشم</td>
+					</tr>
+					<tr>
+						<td>Hair Color</td>
+						<td>{{form.hair_color_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">د وریښتانو رنګ / رنگ مو</td>
+					</tr>
+					<tr>
+						<td>Other Marks</td>
+						<td>{{form.other_marks_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">د پيژندنې نورې نښې / علایم</td>
+					</tr>
+					<tr>
+						<th align="left" colspan="2">Contact Details</th>
+						<th align="right" colspan="2">اطلاعات تماس</th>
+					</tr>
+					<tr>
+						<td>Current Address</td>
+						<td>{{form.current_address_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">آدرس فع</td>
+					</tr>
+					<tr>
+						<td>Previous Address</td>
+						<td>{{form.previous_address__2}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">مخکنی پته / ادرس قبلي</td>
+					</tr>
+					<tr>
+						<td>Email Address</td>
+						<td>{{form.email_address_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">ست بر</td>
+					</tr>
+					<tr>
+						<td>Home Telephone Number</td>
+						<td>{{form.home_tel__2}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">لفون م ت</td>
+					</tr>
+					<tr>
+						<td>Mobile Number *</td>
+						<td>{{form.mobile_no__2}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">لفون همرا</td>
+					</tr>
+					<tr>
+						<th align="left" colspan="2">Employment Details</th>
+						<th align="right" colspan="2">د دندې جزئیات / جزئیات وظیفه</th>
+					</tr>
+					<tr>
+						<td>Occupation</td>
+						<td>{{form.occupation_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">دنده / شغل</td>
+					</tr>
+					<tr>
+						<td>Employer</td>
+						<td>{{form.employer_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">ګمارونکی / کارفرما</td>
+					</tr>
+					<tr>
+						<td>Employer&#39;s Address</td>
+						<td>{{form.employers_address_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">د ګمارونکی پته / ادرس کارفرما</td>
+					</tr>
+					<tr>
+						<td>Previous Employer</td>
+						<td>{{form.previous_employer_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">مخکنی ګمارونکی / کارفرما قبلی</td>
+					</tr>
+					<tr>
+						<td>Have you ever had an Afghan Passport?</td>
+						<td>{{form.have_you_ever_had_an_afghan_passport_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">ایا کله مو د افغانستان پاسپورټ لرلی دی؟ / ایا تا بحال پاسپورت افغانی داشته اید؟</td>
+					</tr>
+					<tr>
+						<td>Previous Passport Number</td>
+						<td>{{form.previous_passport_number_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">مخکنی پاسپورټ نمبر / شماره پاسپورت قبلي</td>
+					</tr>
+					<tr>
+						<td>Issue Date</td>
+						<td>{{form.issue_date_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">د صدور نیټه / تاریخ صدور</td>
+					</tr>
+					<tr>
+						<td>Expiry Date</td>
+						<td>{{form.expiry_date_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">د ختم نیټه / تاریخ انقضا</td>
+					</tr>
+					<tr>
+						<td>Place of Issue</td>
+						<td>{{form.place_of_issue_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">د صدور ځای / محل صدور</td>
+					</tr>
+					<tr>
+						<td>Passport Type</td>
+						<td>{{form.passport_type_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">د مخکنی پاسپورټ ډول / نوعیت پاسپورت قبلي</td>
+					</tr>
+					<tr>
+						<td>Do you have a criminal record?</td>
+						<td>{{form.do_you_have_a_criminal_record_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">ایا جرمي مخینه لرئ؟ / ایا سابقه جرمی دارید</td>
+					</tr>
+					<tr>
+						<td>If Yes, Please provide details below.</td>
+						<td>{{form.if_yes_please_provide_details_below_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">که جواب مو هو وي، د مهرباني لمخې جزئیات وړاندي کړئ. / در صورت داشتن لطفا تشریح نمایید</td>
+					</tr>
+					<tr>
+						<th align="left" colspan="2">Passport Details</th>
+						<th align="right" colspan="2">مشخصات پاسپورت</th>
+					</tr>
+					<tr>
+						<td>New Passport Duration</td>
+						<td>{{form.new_passport_duration_}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">(مدت گذرنامه جدید)</td>
+					</tr>
+                    <tr>
+						<th align="left" colspan="2">Signature <small>(please sign within the box)</small> </th>
+						<th align="left" colspan="2">Passport Photograph:   <small>(please sign within the box)</small> </th>
+					</tr>
+					<tr>
+						<td colspan="2">
+                              <div class="MuiGrid-root css-f3rq8s" style="direction: rtl; text-align: right;">:اﻣﻀﺄ<br>
+                <small>(لطفا در داخل کادر امضا کنید)</small></div>
+                        <div class="MuiGrid-root css-887gtd">
+              <div style="border: 1px solid rgb(0, 0, 0); height: 260px; width: 70%; border-radius: 20px; margin: 20px auto "></div>
+            </div>
+                        </td>
+						<td colspan="2" valign="top">
+                       
+                            
+                              <div class="MuiGrid-root css-f3rq8s"  style="direction: rtl; text-align: right;">:اﻣﻀﺄ<br>
+                <small>(لطفا در داخل کادر امضا کنید)</small></div>
+                            
+                            <div class="MuiGrid-root css-nawzkx">
+              <div style="display: flex; align-items: center; justify-content: center;">
+                <div style="border: 1px solid rgb(0, 0, 0); height: 270px; width: 180px; margin-top: 14px; margin-bottom: 14px; display: flex; align-items: center; justify-content: center; padding: 12px;"><small style="text-align: center; font-size: 10px;">
+                  <p>Please attach passport photo here: size: 4 x 4.5 cm</p>
+                  <p>لطفا عکس پاسپورت را اینجا ضمیمه کنید: اندازه: ۴ در ۴.۵ سانتی‌متر</p>
+                  </small></div>
+                <div style="border: 1px solid rgb(0, 0, 0); height: 270px; width: 180px; margin-top: 14px; margin-bottom: 14px; display: flex; align-items: center; justify-content: center; padding: 12px;"><small style="text-align: center; font-size: 10px;">
+                  <p>Guarantor must endorse the photo</p>
+                  <p>ضامن باید عکس را تایید کند</p>
+                  <p>This is a true photo of:</p>
+                  <p style="border-bottom: 2px solid rgb(0, 0, 0); padding-top: 24px; margin-top: 12px;"></p>
+                  <p>(name of applicant)</p>
+                  <p style="border-bottom: 2px solid rgb(0, 0, 0); padding-top: 24px; margin-top: 16px;"></p>
+                  <p>(Guarantor's signature)</p>
+                  </small></div>
+              </div>
+            </div>   <div class="MuiBox-root css-13aw774">
+            <p>Please abide by the guidelines on passport photo!</p>
+          </div>
+                        </td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>

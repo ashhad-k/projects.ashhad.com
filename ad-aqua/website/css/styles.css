@@ -1,0 +1,1022 @@
+/*--------------------------------------------------
+    ## Custom Fonts
+---------------------------------------------------*/
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Light.woff2') format('woff2'),
+        url('../fonts/Gilroy-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Regular.woff2') format('woff2'),
+        url('../fonts/Gilroy-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Medium.woff2') format('woff2'),
+        url('../fonts/Gilroy-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Semibold.woff2') format('woff2'),
+        url('../fonts/Gilroy-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Bold.woff2') format('woff2'),
+        url('../fonts/Gilroy-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Heavy.woff2') format('woff2'),
+        url('../fonts/Gilroy-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+/*--------------------------------------------------
+    ## Globals
+---------------------------------------------------*/
+:root {
+--bg1:#164683;
+--bg2:#AAE1FA;
+--bg-lite:#ffffff;
+--green:#4FB889;
+    
+    
+  --main-color: #164683;
+  --main-color2: #FBBC05;
+  --heading-color: #162550;
+  --paragraph-color: #44516D;
+  --body-font:  'Axiforma', sans-serif;
+  --heading-font: 'Axiforma', sans-serif;
+  --body-font-size: 18px;
+  --line-height30: 1.7;
+}
+
+.color1{color: var(--bg1)}
+.color2{color: var(--bg2)}
+.bg1{ background: var(--bg1)}
+.bg2{ background: var(--bg2)}
+
+.cc1{/* center center */         display: flex; justify-content: center; align-items: center; position: relative; }
+.lb1{/* center center */         display: flex; justify-content: flex-start; align-items: flex-end; position: relative; }
+.bb1{/* border-bottom */         border-bottom: 1px solid #2A2A2A; padding-bottom: 14px; margin-bottom: 14px; }
+
+.bt1{/* border-bottom */         border-top: 1px solid #2A2A2A; padding-top: 14px; margin-top: 14px; }
+.br-40{/* border-radius*/        border-radius: 40px}
+.br-32{/* border-radius*/        border-radius: 32px}
+.br-20{/* border-radius*/        border-radius: 20px}
+.br-btm1{/*border-bottom*/       border-bottom: 1px solid  rgba(255, 255, 255, 0.20);}
+.br-top1{/*border-bottom*/       border-top: 1px solid  rgba(255, 255, 255, 0.20);}
+.text-right{ text-align: right}
+
+.pd60{padding: 60px;}
+.z10{ z-index: 10; position: relative}
+.d-flex2{display: flex; justify-content: space-between; }
+.d-flex3-bl{display: flex; justify-content: space-between; align-items: flex-end}
+
+.fs16{font-size: 16px;}
+.fs18{font-size: 18px;}
+.fs20{font-size: 20px;}
+.fs22{font-size: 22px;}
+
+.fw-l{ font-weight: 300}
+.fw-r{ font-weight: 400}
+.fw-m{ font-weight: 500}
+.fw-sb{ font-weight: 600}
+.fw-b{ font-weight: 800}
+.fw-h{ font-weight: 900}
+
+h1{ font-size: 72px}
+h2{ font-size: 64px}
+h3{ font-size: 48px; letter-spacing: -1px}
+h4{ font-size: 40px}
+h5{ font-size: 32px}
+h6{ font-size: 24px}
+
+h1, h2, h3, h4, h5, h6{font-family: 'Gilroy', sans-serif;}
+
+@media (max-width: 767.98px) {
+h1{ font-size: 45px}
+h2{ font-size: 35px}
+h3{ font-size: 30px}
+h4{ font-size: 25px}
+h5{ font-size: 22px}
+h6{ font-size: 20px}
+ 
+}
+
+a{ text-decoration: none; transition: 0.5s ease-in-out}
+a.btn{ transition: 0.3s ease-in-out}
+
+.gr-1{
+background: linear-gradient(90deg, #34B3FF 55.06%, #6BFFC1 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+/* gradient border 2*/
+.gr-br-2 {  position: relative;}
+
+
+/* spacing*/
+.pd-top-60 {
+  padding-top: 60px!important;
+}
+
+.pd-top-90 {
+  padding-top: 90px!important;
+}
+
+.pd-top-100 {
+  padding-top: 100px!important;
+}
+
+.pd-top-110 {
+  padding-top: 110px!important;
+}
+
+.pd-top-115 {
+  padding-top: 115px!important;
+}
+
+.pd-top-120 {
+  padding-top: 120px;
+}
+
+.pd-top-200 {
+  padding-top: 200px;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--bg1);
+    --bs-btn-border-color: var(--bg1);
+    --bs-btn-hover-bg: var(--bg1);
+    --bs-btn-hover-border-color: var(--bg1);
+    --bs-btn-active-bg: var(--bg1);
+    --bs-btn-active-border-color: var(--bg1);
+    --bs-btn-disabled-color: var(--bg1);
+    --bs-btn-disabled-border-color: var(--bg1);
+    border-radius: 90px;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 14px 28px;
+    text-align: center;
+}
+
+.title-cn{ margin-bottom: 48px;}
+.cn-btn{ display: flex; column-gap: 12px; padding-top: 12px; padding-bottom: 12px; }
+.small-title{
+    color: var(--green, #4FB889);
+font-family: Gilroy;
+font-size: 12px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 2.4px;
+text-transform: uppercase;}
+
+/*--------------------------------------------------
+    ## Sections 
+---------------------------------------------------*/
+body{ 
+    font-family: 'Gilroy';  
+    font-weight: normal;
+    background:  #fff; 
+    font-size: 18px;
+    color: #7C7C7C;
+}
+
+
+/*--------------------------------------------------
+    ## navbar
+---------------------------------------------------*/
+.navbar{  border-bottom: 1px solid #3263A2;background: #15437E; z-index: 10;}
+
+/* rhs nav of pc*/
+.nav2{}
+.nav2 a.nav-link{  border: 1px solid #106AB2; border-radius: 99px; padding-left: 20px!important; padding-right: 20px!important;}
+.nav2 a.nav-link:hover{  color: var(--bg-lite); border-color: var(--bg-lite)!important}
+
+.navbar .nav-link{ color:var(--bg2); text-transform: uppercase; font-size: 12px; font-weight: 500; letter-spacing: 1.2px; line-height: 22px; transition: 0.3s ease-in-out}
+.navbar-nav .nav-link.active, 
+.navbar-nav .nav-link.show { color: var(--bg-lite)}
+
+.navbar .nav-link:hover{  color: var(--bg-lite)}
+
+@media all and (min-width: 992px) {
+    #navbarMobile{display: none!important; }
+    .navbar-expand-lg .navbar-nav { gap: 18px;
+    }
+}
+
+/* 2nd navbar for mobile only*/
+#navbarMobile{}
+.navbar-toggler{position: absolute; right: 20px;}
+
+
+/*--------------------------------------------------
+    ## hero
+---------------------------------------------------*/
+section.hero{ background: var(--bg1); padding-top: 64px; text-align: center; position: relative; overflow: hidden; }
+
+section.hero .droplet{ position: absolute; width: 100px; height: 100px;  z-index: 2; }
+section.hero .droplet:nth-child(1){ position: absolute; width: 100px; height: 100px; left: 00%; top: 40%; z-index: 2; }
+section.hero .droplet:nth-child(2){ position: absolute; width: 100px; height: 100px; left: 40%; top: 10%; z-index: 2; }
+section.hero .droplet:nth-child(3){ position: absolute; width: 100px; height: 100px; left: 95%; top: 30%; z-index: 2; }
+
+section.hero p{ color: var(--bg2); padding-bottom: 32px; }
+section.hero h1{ font-size: 120px; font-weight: 900; color: #fff; line-height: 100px; margin-bottom: 30px;letter-spacing: -1px; position: relative;}
+
+
+/* css animation text*/
+span.holder{
+  position: relative;
+/*  background: black;*/
+    width: 100%;
+  height: 120px;
+  overflow: hidden;
+    text-align: left;
+    display: block;
+}
+
+
+span.item{
+  position: absolute;
+  transform-origin: 50% 70%;
+  width: 100%;
+    text-align: center;
+}
+
+
+
+span.item:nth-child(1) {
+  animation: flipUp 6s cubic-bezier(0.68, -0.55, 0.26, 1.55) 0s both infinite;
+}
+
+span.item:nth-child(2) {
+  animation: flipUp 6s cubic-bezier(0.68, -0.55, 0.26, 1.55) 1.5s both infinite;
+}
+span.item:nth-child(3) {
+  animation: flipUp 6s cubic-bezier(0.68, -0.55, 0.26, 1.55) 3s both infinite;
+}
+span.item:nth-child(4) {
+  animation: flipUp 6s cubic-bezier(0.68, -0.55, 0.26, 1.55) 4.5s both infinite;
+}
+span.item:nth-child(5) {
+  animation: flipUp 6s cubic-bezier(0.68, -0.55, 0.26, 1.55) 6s both infinite;
+}
+
+/* ANIMATION */
+
+@keyframes flipUp {
+  0% {
+   opacity: 0;
+   margin-top: -100px;
+  }
+  13.2%{
+    opacity: 1;
+    margin-top: 0;
+    transform: rotateX(0deg);
+  }
+  33%,100% {
+    opacity: 0;
+     margin-top: 0;
+    transform: rotateX(90deg);
+    
+  }
+}
+/* Hero image container with position and z-index */
+section.hero .hero-img {
+  position: relative;
+  margin-bottom: -200px;
+  z-index: 1;
+  animation: floatImage 6s infinite ease-in-out; /* Add float animation */
+}
+
+/* Animation for subtle up-and-down float movement */
+@keyframes floatImage {
+  0%, 100% {
+    transform: translateY(0);  /* No movement */
+  }
+  50% {
+    transform: translateY(-20px); /* Slight upward movement */
+  }
+}
+
+/*
+
+section.hero .large-txt{ 
+    font-size: 500px;  
+    position: absolute; 
+    left: auto; right: auto; bottom: 60px; 
+    z-index: 0; 
+    font-weight: 900; white-space: nowrap; 
+background: linear-gradient(180deg, #0051B8 0%, #164683 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+*/
+
+
+/* flow animation*/
+section.hero .large-txt {
+	position: relative;
+    left: 50%;
+    z-index: 0;
+   
+    
+    
+}
+
+section.hero .large-txt h2 {
+	color: #fff;
+	font-size: 500px;
+	position: absolute;
+    font-weight: 900;
+	transform: translate(-50%, -50%);
+     white-space: nowrap; 
+}
+
+section.hero .large-txt h2:nth-child(1) {
+	color: transparent;
+	-webkit-text-stroke:  2px rgba(13, 110, 253, 0.25);
+}
+
+section.hero .large-txt h2:nth-child(2) {
+/*	color: var(--bg2);*/
+background: linear-gradient(180deg, #0051B8 0%, #164683 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+	
+    animation: animate 6s ease-in-out infinite;
+}
+
+@keyframes animate {
+	0%,
+	100% {
+		clip-path: polygon(
+			0% 45%,
+			16% 44%,
+			33% 50%,
+			54% 60%,
+			70% 61%,
+			84% 59%,
+			100% 52%,
+			100% 100%,
+			0% 100%
+		);
+	}
+
+	50% {
+		clip-path: polygon(
+			0% 60%,
+			15% 65%,
+			34% 66%,
+			51% 62%,
+			67% 50%,
+			84% 45%,
+			100% 46%,
+			100% 100%,
+			0% 100%
+		);
+	}
+}
+
+/*section.hero .wave{ background:  url("../img/wave.png") no-repeat; background-size: cover; min-height: 400px; position: relative; z-index: 10;}*/
+/* Static background wave that is always visible */
+section.hero .wave::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/wave.png") no-repeat;
+  background-size: cover;
+  z-index: 8;  /* Positioned behind the animated waves */
+}
+
+/* First animated wave */
+section.hero .wave {
+  background: url("../img/wave.png") no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  position: relative;
+  z-index: 10;
+  animation: waveEffect 6s infinite ease-in-out;
+}
+
+/* Second reflected animated wave */
+section.hero .wave::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/wave.png") no-repeat;
+  background-size: cover;
+  transform: scaleX(-1); /* Horizontal flip */
+  opacity: 0.5;  /* Half visible initially */
+  animation: waveReflectEffect 6s infinite ease-in-out;
+  z-index: 9;
+}
+
+/* Animation for the first wave */
+@keyframes waveEffect {
+  0%, 100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateY(10px); /* Slight movement */
+  }
+}
+
+/* Animation for the reflected wave */
+@keyframes waveReflectEffect {
+  0%, 100% {
+    opacity: 0.5;
+    transform: translateY(0) scaleX(-1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px) scaleX(-1);
+  }
+}
+
+section.hero .overlap{     
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: -10px;
+    height: 200px;
+    background: linear-gradient(180deg, rgba(180, 226, 242, 0.00) 0%, #FFF 100%);
+    z-index: 11;
+    border-bottom: 10px solid #fff;
+}
+
+section.hero .vertical{
+    color: var(--bg-lite);
+font-size: 10px;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 2px;
+text-transform: uppercase;
+    position: absolute;
+    top: 30%;
+    transform: rotate(270deg);
+    display: flex;align-items: center;
+    width: 100%;
+   
+}
+section.hero .vertical span:nth-child(1),
+section.hero .vertical span:nth-child(3){ background:#3263A2; height: 1px; flex-grow: 1; }
+section.hero .vertical span:nth-child(2){    
+    white-space: nowrap;
+    width: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+section.hero .vertical.lhs{ left: calc(-50% + 40px);}
+section.hero .vertical.rhs{right: calc(-50% + 40px);}
+
+@media all and (max-width: 1330px) {
+section.hero .vertical.lhs{display: none}
+section.hero .vertical.rhs{ display: none}
+}
+
+/*--------------------------------------------------
+    ## fold1
+---------------------------------------------------*/
+#fold1{ padding-top:300px; padding-bottom: 40px; position: relative}
+#fold1 .droplet{ position: absolute; width: 100px; height: 100px; left: 80%; top: 10%; z-index: 2; }
+
+#fold1 .main-txt{transform: translate(0%, 00%); color: var(--bg1)}
+#fold1 .large-txt {transform: translate(00%, -80%); position: relative; z-index: -1}
+#fold1 .large-txt h2{
+    text-align: center;
+    color: transparent;
+-webkit-text-stroke:  1px rgba(13, 110, 253, 0.15);
+font-size: 120px;
+font-style: normal;
+font-weight: 900;
+line-height: 110px; /* 91.667% */
+text-transform: uppercase;
+}
+
+/*--------------------------------------------------
+    ## fold2
+---------------------------------------------------*/
+#fold2{ padding-top: 0px; padding-bottom: 100px; position: relative;}
+
+#fold2 .droplet{ position: absolute; width: 100px; height: 100px; left: 40%; z-index: 2; }
+#fold2 h1{ font-weight: bold}
+#fold2 .free-box{position: absolute; right: 20px; bottom: 0px; background: #E0ECFA; width: 300px; height: 40px; z-index: -1 }
+
+#fold2 .circle1{  background:  url("../img/circle-menu.svg") no-repeat left top; min-height: 430px; margin-top: 80px; }
+
+@media all and (min-width: 1330px) {
+#fold2 .circle1 .vstack{}
+#fold2 .circle1 .vstack > div{position: relative;}
+#fold2 .circle1 .vstack .one .dot,
+#fold2 .circle1 .vstack .two .dot,
+#fold2 .circle1 .vstack .three .dot{ position: absolute;  width: 8px; height: 8px; background:var(--green); border-radius: 50%; }
+
+#fold2 .circle1 .vstack .one { margin-left: 236px;}
+#fold2 .circle1 .vstack .two { margin-left: 312px;
+    margin-top: 40px;
+}
+#fold2 .circle1 .vstack .three {     margin-left: 314px;
+    margin-top: 40px;
+}
+
+#fold2 .circle1 .vstack .one .dot{ left: -20px; top: 40px;}
+#fold2 .circle1 .vstack .two .dot{left: -20px; top: 40px;}
+#fold2 .circle1 .vstack .three .dot{left: -20px; top:40px;}
+}
+
+/* rhs*/
+#fold2 .slider-cn{border-radius: 40px; background: var(--bg1); height: 100%;}
+#fold2 .slider-cn .carousel-inner{border-radius: 40px; }
+#fold2 .slider-cn .carousel-indicators { flex-direction: column; margin: 0px; position: absolute; top: 20px; right: 20px; left: auto; bottom: auto; row-gap: 16px;}
+#fold2 .slider-cn .carousel-indicators BUTTON{width: 40px; height: 40px; line-height: 1; border-radius: 50%; background-color: #cccccc10; color: var(--bg-lite); border:1px solid var(--bg-lite);  }
+#fold2 .slider-cn .carousel-indicators .active{ background: var(--bg-lite); color: var(--color1); font-weight: bold; }
+
+#fold2 .slider-cn .carousel-indicators [data-bs-target]{ text-indent: 0px;     background-clip: border-box; box-sizing: border-box;}
+
+
+/*--------------------------------------------------
+    ## fold3
+---------------------------------------------------*/
+#fold3{ padding-top: 100px;  padding-bottom: 200px; position: relative; text-align: center;}
+#fold3 > .droplet:nth-child(1){ position: absolute; width: 100px; height: 100px; left: 80%; top: 10%; z-index: 2; }
+#fold3 > .droplet:nth-child(2){ position: absolute; width: 100px; height: 100px; left: 20%; top: 40%; z-index: 2; }
+
+#fold3 .circles {
+  height: 90vmin;
+  position:absolute;
+  width: 90vmin;
+/*   transform: translate(50%, 10%);*/
+    left: calc(50% - 395px);
+}
+
+#fold3 .circles > div {
+  animation: fold3GrowAndFade 3s infinite ease-out;
+  background-color: dodgerblue;
+  border-radius: 50%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+}
+
+#fold3 .circles .circle1 {
+  animation-delay: 2s;
+}
+
+#fold3 .circles .circle2 {
+  animation-delay: 3s;
+}
+
+#fold3 .circles .circle3 {
+  animation-delay: 4s;
+}
+#fold3 .circles .circle4 {
+  animation-delay: 6s;
+}
+
+@keyframes fold3GrowAndFade {
+  0% {
+    opacity: 0.25;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+/*--------------------------------------------------
+    ## fold4
+---------------------------------------------------*/
+#fold4{ padding-top:40px;  padding-bottom: 40px; position: relative; }
+#fold4 > .droplet:nth-child(1){ position: absolute; width: 100px; height: 100px; left: 90%; top: 100px; z-index: 2; }
+#fold4 > .droplet:nth-child(2){ position: absolute; width: 100px; height: 100px; left: 10%; bottom: 40px; z-index: 2; }
+
+/* LHS */
+#fold4 .lhs{ border-radius: 40px; background: var(--bg1); padding: 40px; position: relative; overflow: hidden;}
+
+#fold4 .lhs > .droplet:nth-child(1){ position: absolute; width: 100px; height: 100px; right: 10px; top: 100px; z-index: 2; }
+#fold3 .lhs > .droplet:nth-child(2){ position: absolute; width: 100px; height: 100px; left: 10%; bottom: 40px; z-index: 2; }
+
+#fold4 li.nav-item{display: flex; border-bottom: 1px solid #2E5D99; position: relative; font-size: 24px; font-weight: 600; padding: 16px 10px; }
+#fold4 li.nav-item i{position: absolute; right: 10px; }
+#fold4 li.nav-item i{position: absolute; right: 10px; }
+#fold4 li.nav-item:last-child{border-bottom:none}
+
+/* Default state for the tab title and SVG arrow */
+#fold4 li.nav-item a.nav-link {
+    color: #4F81C1; /* Default text color */
+    transition: color 0.3s ease; /* Smooth text color transition */
+    padding-left: 0px;
+}
+
+#fold4 li.nav-item i svg path {
+    fill: #4F81C1; /* Default arrow color */
+    transition: fill 0.3s ease; /* Smooth arrow fill transition */
+}
+
+/* Active tab title and SVG arrow */
+#fold4 li.nav-item a.nav-link.active {
+    color: var(--bg2); /* Active text color */
+}
+
+#fold4 li.nav-item .nav-link.active + i svg path {
+    fill: var(--bg2); /* Active arrow color */
+}
+
+/* Optional: Hover state for a more interactive effect */
+#fold4 li.nav-item a.nav-link:hover {
+    color: var(--bg2); /* Hover effect for the text */
+}
+
+
+/* RHS */
+#fold4 .rhs{}
+#fold4 .rhs .tab-pane{ padding-left: 48px;}
+#fold4 .rhs .vstack{}
+#fold4 .rhs .vstack .content{ display: flex; align-items: flex-start; column-gap: 24px; padding-bottom: 10px; padding-top: 30px; border-bottom: 1px solid #e4e4e4}
+#fold4 .rhs .vstack .content > span { 
+    color: #2EACF4;
+    border: 1px solid #2EACF4; 
+    border-radius: 50%;
+display: flex;
+width: 44px;
+padding: 11px 0px 8px 0px;
+justify-content: center;
+align-items: center;
+    height: 44px;
+    min-width: 44px;
+}
+#fold4 .rhs .vstack .content > h6 {
+color: var(--bg1);
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+    min-width: 260px;
+}
+#fold4 .rhs .vstack .content > P { }
+
+#fold4 .rhs .vstack .content:last-child{border-bottom: 0px;}
+
+
+
+/*--------------------------------------------------
+    ## fold5 - GRID
+---------------------------------------------------*/
+#fold5{ padding-top:40px;  padding-bottom: 100px; position: relative; }
+#fold5 > .droplet:nth-child(1){ position: absolute; width: 100px; height: 100px; left: 90%; top: 100px; z-index: 2; }
+#fold5 > .droplet:nth-child(2){ position: absolute; width: 100px; height: 100px; left: 10%; bottom: 40px; z-index: 2; }
+
+#fold5 .title-cn{text-align: center}
+
+#fold5 .cn-grid1{ background: #ECF3F7; border-radius: 12px; padding: 8px;}
+#fold5 .cn-grid1 p.lead{ color: var(--bg1); font-weight: bold; font-size: 18px;margin: 0px;}
+#fold5 .cn-grid1 p{ margin-top: 12px;}
+
+/* GRID*/
+/* GRID */
+#cssportal-grid {
+	display: grid;
+	grid-template-rows: repeat(4, 1fr);
+	grid-template-columns: repeat(4, 1fr);
+	gap: 8px;
+	width: 100%;
+	height: 100%;
+    text-align: center;
+}
+#cssportal-grid > div{ border-radius: 10px; padding: 20px; display: flex; justify-content: center; align-items: center; flex-direction: column;}
+
+/* GRID */
+#cssportal-grid #div2 {
+	grid-area: 1/1/2/2;
+	background-color: #ffffff;
+}
+
+#cssportal-grid #div3 {
+	grid-area: 1/2/2/3;
+	background-color: #ffffff;
+}
+
+#cssportal-grid #div4 {
+	grid-area: 1/3/2/4;
+	background-color: #ffffff;
+}
+
+#cssportal-grid #div5 {
+	grid-area: 1/4/2/5;
+	background-color: #ffffff;
+}
+
+#cssportal-grid #div6 {
+	grid-area: 2/4/3/5;
+	background-color: #ffffff;
+}
+
+#cssportal-grid #div7 {
+	grid-area: 3/4/4/5;
+	background-color: #ffffff;
+}
+
+#cssportal-grid #div8 {
+	grid-area: 4/4/5/5;
+	background-color: #ffffff;
+}
+
+#cssportal-grid #div9 {
+	grid-area: 4/3/5/4;
+	background-color: #ffffff;
+}
+
+#cssportal-grid #div10 {
+	grid-area: 4/2/5/3;
+	background-color: #ffffff;
+}
+
+#cssportal-grid #div11 {
+	grid-area: 4/1/5/2;
+	background-color: #ffffff;
+}
+
+#cssportal-grid #div12 {
+	grid-area: 3/1/4/2;
+	background-color: #ffffff;
+}
+
+#cssportal-grid #div13 {
+	grid-area: 2/1/3/2;
+	background-color: #ffffff;
+}
+
+#cssportal-grid #div14 {
+	grid-area: 2/2/4/4;
+	background-color: #ffffff;
+}
+
+
+
+
+/*--------------------------------------------------
+    ## fold5 - affiliates logos
+---------------------------------------------------*/
+#fold5 .cn-logos{
+    display: flex;
+    column-gap: 64px;
+    overflow: hidden;
+    width: 100%;
+    justify-content: flex-start; /* Ensure the logos start from the left */
+    height: 350px; /* Adjust height as per your design */
+    align-items: center;
+    position: relative;
+    z-index: 3;
+    
+}
+
+
+
+/*--------------------------------------------------
+    ## fold7 
+---------------------------------------------------*/
+#fold7{ padding-top:40px;  padding-bottom: 200px; position: relative; }
+#fold7 > .droplet:nth-child(1){ position: absolute; width: 100px; height: 100px; left: 90%; top: 100px; z-index: 2; }
+#fold7 > .droplet:nth-child(2){ position: absolute; width: 100px; height: 100px; left: 10%; bottom: 40px; z-index: 2; }
+
+/* Update .pic to have a fixed background */
+#fold7 .pic {
+    width: 100%;
+    height: 600px;
+    background: url("../img/earth2.jpeg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+#fold7 .parallax-container img {
+  width: 100%;
+  height: auto;
+     background: url("../img/earth2.jpeg") no-repeat center center;
+}
+
+.image-container {
+  position: relative;
+  height: 100vh;
+       background: url("../img/earth2.jpeg") no-repeat center center;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+/*--------------------------------------------------
+    ## fold8 
+---------------------------------------------------*/
+#fold8{ padding-top:40px;  padding-bottom: 200px; position: relative; }
+#fold8 > .droplet:nth-child(1){ position: absolute; width: 100px; height: 100px; left: 90%; top: 100px; z-index: 2; }
+#fold8 > .droplet:nth-child(2){ position: absolute; width: 100px; height: 100px; left: 10%; bottom: 40px; z-index: 2; }
+
+#fold8 #stories{}
+#fold8 #stories .card{ background: #fff; border: 0px; transition: 0.25s ease-in}
+#fold8 #stories .card .card-body{ display: flex; flex-direction: column; row-gap: 40px; padding: 40px; font-weight: 600; color: #8298B3; transition: 0.25s ease-in }
+#fold8 #stories .card .card-img-top{width: 30px;transition: 0.25s ease-in }
+#fold8 #stories .card .details{display: flex; column-gap: 12px;}
+#fold8 #stories .card .details dt{color: #333; font-size: 18px; transition: 0.25s ease-in}
+#fold8 #stories .card .details dd{color: #8298B3; font-size: 16px;}
+
+#fold8 #stories .carousel-item .row .col-md-4:nth-child(2) .card,
+#fold8 #stories .card:hover{ background: #F1FBFF; border: 0px; color: #8298B3;}
+#fold8 #stories .card:hover .card-body{  color: var(--bg1);}
+#fold8 #stories .card:hover .details dt{  color: var(--bg1);}
+#fold8 #stories .card:hover .card-img-top{ opacity: 0.5}
+
+
+#fold8 #stories .carousel-indicators{ bottom: -64px!important; border: 0px}
+#fold8 #stories .carousel-indicators [data-bs-target]{text-indent: -999px!important; color: #fff;  height: 4px; border-radius: 6px; width: 10px; background: #fff; border: 1px solid #999; transition: 0.25s ease-in}
+#fold8 #stories .carousel-indicators li.active[data-bs-target]{ width: 30px; border: 1px solid #ffffff!important; background: var(--green)!important;}
+
+/*
+#fold8 #stories .carousel-item.active .card{ background: #F1FBFF; border: 0px; color: #8298B3;}
+#fold8 #stories .carousel-item.active .card .card-img-top{ opacity: 0.5}
+*/
+
+
+
+/*--------------------------------------------------
+.cn2 logos horzontal = - 
+---------------------------------------------------*/
+.cn2{ padding-top:92px;  padding-bottom: 48px; position: relative;  }
+.cn2 .cn-logos2{
+    display: flex;
+    column-gap: 30px;
+/*    overflow: hidden;*/
+    width: 100%;
+    justify-content: flex-start; /* Ensure the logos start from the left */
+    align-items: center;
+    position: relative;
+    z-index: 3;
+
+    padding-top: 48px;
+}
+.cn2 .cn-logos2 .item{ 
+    background: var(--bg2); 
+    border-radius: 10px; 
+    padding: 40px;
+    row-gap:24px;
+    flex-direction: column; 
+    color: #5E8398; 
+    min-width: 280px; 
+    min-height: 160px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+.cn2 .cn-logos2 .item IMG{}
+.cn2 .cn-logos2 .item figcaption{font-weight: normal}
+
+
+
+/*--------------------------------------------------
+#fold9 - faq tabs
+---------------------------------------------------*/
+#fold9{ padding-bottom: 200px;}
+#fold9 > .droplet:nth-child(1){ position: absolute; width: 100px; height: 100px; left: 90%; top: 100px; z-index: 2; }
+#fold9 > .droplet:nth-child(2){ position: absolute; width: 100px; height: 100px; left: 10%; bottom: 40px; z-index: 2; }
+
+#fold9 .cn-faqs-tab { 
+  text-align: center; 
+}
+
+#fold9 .cn-faqs-tab #faqs-tab { 
+  display: inline-flex; 
+  justify-content: center; 
+  background: #ECF3F7;  
+  padding: 6px; 
+  border-radius: 12px; 
+  gap: 12px; 
+  position: relative; 
+    margin-bottom: 40px;
+}
+
+#fold9 .cn-faqs-tab .nav-pills .nav-link {
+  color: #809CAC;
+  font-size: 16px;
+  position: relative;
+  z-index: 1; /* Ensure tabs are above the background */
+  transition: color 0.25s ease-in;
+    width: 100%;
+}
+
+/* The moving background effect */
+#fold9 .cn-faqs-tab .nav-pills .nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg1);
+  border-radius: 12px;
+  z-index: -1;
+  transition: transform 0.4s ease-in-out;
+  transform: scaleX(0); /* Start the background scale from 0 */
+  transform-origin: left;
+}
+
+#fold9 .cn-faqs-tab .nav-pills .nav-link.active::before, 
+#fold9 .cn-faqs-tab .nav-pills .show > .nav-link::before {
+  transform: scaleX(1); /* Expand the background to fill the tab */
+  transform-origin: bottom; /* Control the direction of movement */
+}
+
+#fold9 .cn-faqs-tab .nav-pills .nav-link.active, 
+#fold9 .cn-faqs-tab .nav-pills .show > .nav-link {
+  color: #fff; 
+    background: none;
+}
+
+#fold9 .cn-faqs-tab .nav-pills .nav-item{min-width: 200px}
+#fold9 .accordion-body{text-align:left; font-weight: normal; border-bottom: 1px solid #eee}
+
+ #fold9 .accordion-button.opened {
+     font-weight: bold;
+     color: var(--bg1);
+  }
+
+#fold9 .accordion-button:focus{outline:none!important; box-shadow:none}
+#fold9 .accordion-item:first-of-type{ border: 0px;}
+#fold9 .accordion-item:last-of-type{ border: 0px;}
+#fold9 .accordion-item{ border: 0px; border-bottom: 1px solid #ccc;}
+
+
+
+/*--------------------------------------------------
+# FOOTER 
+---------------------------------------------------*/
+#footer-main{ padding-bottom: 150px; text-align: center;}
+#footer-main{background: var(--bg1); color: #fff; border-color:#ffffff!important}
+#footer-main .splash{width: 100%; height: 400px; display: block;}
+
+#footer-main .ftb{border-radius: 99px!important; line-height: 36px!important;}
+#footer-main .disclaimer{ font-size: 14px; line-height: 130%; text-align: left;  border-top:1px solid #ffffff20; border-bottom: 1px solid #ffffff20; margin-top: 60px; padding-top:60px; padding-bottom: 60px; color:#ffffff50; }
+
+#footer-main .disclaimer .list-unstyled a{ padding: 4px 2px; display: block; color: #fff;}
+#footer-main .disclaimer .list-unstyled a:hover{ color: var(--bg2)}
+
+#footer-main .copyright{padding-top: 24px; padding-bottom: 24px; text-align: left; font-size: 12px;}
+
+
+#footer-main .copyright .social{ display: flex!important; justify-content: flex-end; column-gap: 12px; font-size: 20px; }
+#footer-main .copyright .social a{ display: flex; justify-content: center; align-items: center;
+    border-radius: 99px;  height: 40px; width: 40px; text-align: center; border: 1px solid #ffffff40; color: #fff; transition: 0.25s; }
+
+#footer-main .copyright .social a:hover{ background:var(--bg1)}
+
+
+@media (max-width: 767.98px) {
+.fold7  .social{justify-content: flex-start}    
+}
