@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Starkly AI</title>
+<link rel="icon" href="assets/img/favicon.webp" sizes="20x20" type="image/png">
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/owl.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+
+<!-- html include-->
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /* Loop through a collection of all HTML elements: */
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /* Make an HTTP request using the attribute value as the file name: */
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /* Remove the attribute, and call this function once more: */
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /* Exit the function: */
+      return;
+    }
+  }
+}
+</script>
+</head>
+<body>
+<div class="body-overlay" id="body-overlay"></div>
+<div w3-include-html="inc_nav.html"></div>
+
+<!-- navbar end -->
+
+<div id="smooth-wrapper">
+  <div id="smooth-content"> 
+    <!-- banner area start -->
+    <div class="banner-area banner-area-4" id="home">
+      <div class="bg-cover">
+        <div class="container">
+          <div class="row ">
+            <div class="col-lg-6">
+              <div class="banner-inner">
+                <h2 class="title s-animate-2 pd-top-60"> Transform Your Business         </h2>
+                <h4>  with Human-Augmented AI  </h4>
+                <p class="content"> Struggling with AI integration? Quality data is key. Streamline your business with our data-optimized AI solutions and turn challenges into success.                 </p>
+                <div class="btn-wrap s-animate-4"> <a class="btn btn-lg  btn-base" href="#">Learn How We Can Help</a>  </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="banner-inner">
+                <div class="top_image_bounce pd-top-60 d-sm-none"> <img src="assets/img/img14.webp" alt="img"> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- banner area end -->
+    
+    <div class="about-area pd-top-140  pd-bottom-180">
+      <div class="container">
+        <div class="section-title text-center">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <h2 class="title"> Why Starkly AI? </h2>
+              <p class="content mt-2 mb-lg-5">At Starkly AI, we combine human expertise with AI precision, optimizing your data to ensure smarter, more effective solutions. Unlike others who ingest indiscriminately, we refine data to enhance its value, giving you control and competitive edge. </p>
+            </div>
+          </div>
+        </div>
+        <div class="how-it-work-inner"> <img class="hills-line" src="assets/img/shape/1.webp" alt="img">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 pb-4">
+              <div class="single-work-inner style-three text-center">
+                <div class="count-inner"> <img src="assets/img/icon/hands.webp" alt="" /> 
+                  <!--                            <i class="icomoon-project"></i>--> 
+                </div>
+                <div class="details-wrap">
+                  <div class="details-inner">
+                    <h4>Enhanced Decision Accuracy</h4>
+                    <p>  Combining human insights with AI precision leads to higher accuracy in data analysis and decision-making, reducing errors and enhancing trust in AI outputs.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 pb-4">
+              <div class="single-work-inner style-three text-center">
+                <div class="count-inner"> <img src="assets/img/icon/puzzle.webp" alt="" /> 
+                  <!--                            <i class="icomoon-analysis"></i>--> 
+                </div>
+                <div class="details-wrap">
+                  <div class="details-inner">
+                    <h4> Customized AI Solutions</h4>
+                    <p> Our expert team works closely with your data, applying human understanding to refine AI processes and ensure they are perfectly aligned with your business objectives.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 pb-4">
+              <div class="single-work-inner style-three text-center">
+                <div class="count-inner"> <img src="assets/img/icon/boost.webp" alt="" /> 
+                  <!--                            <i class="icomoon-gear"></i>--> 
+                </div>
+                <div class="details-wrap">
+                  <div class="details-inner">
+                    <h4>Increased Operational Efficiency </h4>
+                    <p> By enhancing data quality and integrating tailored AI, we streamline operations, eliminate wasteful processes, and reduce costs, all while maintaining high performance.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 pb-4">
+              <div class="single-work-inner style-three text-center">
+                <div class="count-inner"> <img src="assets/img/icon/gears.webp" alt="" /> 
+                  <!--                            <i class="icomoon-approval"></i>--> 
+                </div>
+                <div class="details-wrap">
+                  <div class="details-inner">
+                    <h4>Adaptive AI Development</h4>
+                    <p>  Our solutions adapt as your business evolves, thanks to continuous human oversight that ensures AI systems stay relevant and effective in changing environments.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="row">
+          <div class="col-lg-4 mx-auto text-center">   <a class="btn btn-base" href="quote-generation.html">Discover More</a> </div>
+          </div>
+      </div>
+    </div>
+    
+    <!-- start -->
+    <div class="about-area bg2   pd-top-140  pd-bottom-180" id="marketplace">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="thumb  pe-lg-5"> <img src="assets/img/img6.webp" alt="img"> </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 align-self-center">
+            <div class="section-title mb-0">
+              <p class="lead"> Proactive Customer Service</p>
+              <h2 class="title mb-4"> Your AI Assistant, Always on Duty</h2>
+              <p class="content mb-lg-5">Struggling with customer service delays and scheduling hassles? StarklyAI simplifies these tasks with powerful AI technology, boosting your business’s efficiency and customer satisfaction. </p>
+              <ul class="single-list-inner style-check my-3 mb-5">
+                <li><i class="tick1">&nbsp;</i> <strong> Automated Callbacks:</strong> Ensure no customer waits too long with fast, automated callbacks.</li>
+                <li><i class="tick1">&nbsp;</i> <strong> Efficient Scheduling:</strong> Keep your operations smooth with quick and easy appointment setups.</li>
+                <li><i class="tick1">&nbsp;</i><strong>Language Versatility: </strong>Reach more customers globally with support in their native language.</li>
+              </ul>
+              <a class="btn btn-base" href="quote-generation.html">Discover More</a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- about area end -->
+    
+    <div class="solutions-area  pd-top-140  pd-bottom-180" id="about">
+      <div class="container">
+        <div class="section-title text-center">
+          <div class="row justify-content-center">
+            <div class="col-lg-10"> 
+              <!--            <p class="lead">Stop Wasting Hours on Quotes:</p>-->
+              <h2 class="title"> Instant Quote Generation</h2>
+              <strong>Automate and Accelerate Your Quoting Process</strong>
+              <p> If you find yourself bogged down by the manual labor of generating quotes, our Smart Quote Agent is ready to streamline your operations. This AI-driven system efficiently manages the entire quoting process in three simple steps:</p>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-6 pb-5">
+            <div class="single-solution-inner style-two">
+              <div class="thumb">
+                <div class="media-left mb-3"> <img src="assets/img/feature-unique-approach.webp" alt="Unique Approach" class="pb-3"/> </div>
+                <div class="media-body align-self-center">
+                  <h4> Generate</h4>
+                </div>
+              </div>
+              <div class="details mb-4">
+                <p> The AI receives a query and immediately generates a detailed quote using your predefined templates and available inventory data.</p>
+              </div>
+            </div>
+          </div>
+          <!--/1-->
+          <div class="col-lg-4 col-md-6 pb-5">
+            <div class="single-solution-inner style-two">
+              <div class="thumb">
+                <div class="media-left mb-3"> <img src="assets/img/feature-expert-driven-customization.webp" alt="Expert-Driven Customization" class="pb-3"/> </div>
+                <div class="media-body align-self-center">
+                  <h4>Review</h4>
+                </div>
+              </div>
+              <div class="details mb-4">
+                <p>The generated quote is sent to an admin for quick email approval, ensuring each quote aligns with your business standards.</p>
+              </div>
+            </div>
+          </div>
+          <!--/2-->
+          <div class="col-lg-4 col-md-6 pb-5">
+            <div class="single-solution-inner style-two">
+              <div class="thumb">
+                <div class="media-left mb-3"> <img src="assets/img/feature-data-excellence.webp" alt="Superior Data Quality" class="pb-3"/> </div>
+                <div class="media-body align-self-center">
+                  <h4>Dispatch</h4>
+                </div>
+              </div>
+              <div class="details mb-4">
+                <p> Once approved, the quote is automatically sent to the client’s email, ensuring timely and accurate communication.</p>
+              </div>
+            </div>
+          </div>
+          <!--/3--> 
+          
+          <!--/4--> 
+          
+          <!--/5--> 
+        </div>
+        <div class="row">
+          <div class="col-md-10">
+            <p class="content mt-2">Leverage our Smart Quote Agent to reduce the time spent on quotes, minimize errors, and allow you to focus on expanding your business. </p>
+            <a class="btn btn-base" href="quote-generation.html">Discover More</a> </div>
+        </div>
+      </div>
+    </div>
+    <!-- solutions area end --> 
+    
+    <!-- about area start -->
+    <div class="about-area bg-white  pd-top-140  pd-bottom-60">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-9 order-lg-last pb-5">
+            <div class="thumb right-collapse-img"> <img src="assets/img/img9.webp" alt="img"> </div>
+          </div>
+          <div class="col-lg-6 align-self-center order-lg-first">
+            <div class="section-title mb-0">
+              <h2 class="title mb-4">Custom AI Solutions </h2>
+              <p class="lead">Tailor-Made AI for Unique Industry Needs</p>
+              <p > Create bespoke AI solutions for specific challenges in industries like healthcare, finance, and retail:</p>
+              <ul>
+                <li>Industry-Specific Design: Develop solutions that are precisely aligned with your industry requirements.</li>
+                <li>Scalable Implementations: Scale solutions as your business grows and evolves.</li>
+                <li>Expert Collaboration: Work directly with our AI experts to ensure your AI solution perfectly fits your operational needs.</li>
+              </ul>
+              <a class="btn   btn-base" href="#">Get Started</a> </div>
+          </div>
+        </div>
+        <!--/row--> 
+        
+      </div>
+    </div>
+    <div class="about-area bg-white  pd-top-140  pd-bottom-60">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-9 order-lg-last pb-5">
+            <div class="thumb right-collapse-img"> <img src="assets/img/img16.webp" alt="img"> </div>
+          </div>
+          <div class="col-lg-6 align-self-center order-lg-first">
+            <div class="section-title mb-0">
+              <h2 class="title mb-4">Knowledgebase Assistant </h2>
+              <p class="lead">Instant Access to Information </p>
+              <p >Provide instant answers to customer queries across multiple platforms:                :</p>
+              <ul>
+                <li>Immediate Support: Deliver real-time answers to enhance customer satisfaction.              .</li>
+                <li>Lower Support Costs: Decrease the workload on your support staff by handling routine inquiries automatically.</li>
+                <li>Continuous Learning: Update knowledge continuously based on new queries and interactions.               .</li>
+              </ul>
+              <a class="btn  btn-base" href="#">Get Started</a> </div>
+          </div>
+        </div>
+        <!--/row--> 
+        
+      </div>
+    </div>
+   
+     <div class="about-area bg-white pd-top-140 pd-bottom-180">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-9 order-lg-last pb-5">
+            <div class="thumb right-collapse-img"> <img src="assets/img/img11.webp" alt="img"> </div>
+          </div>
+          <div class="col-lg-6 align-self-center order-lg-first">
+            <div class="section-title mb-0">
+              <h2 class="title mb-4"> Conversational Contact AI</h2>
+              <p class="lead">Transform Your Contact Form into a Lead Generation Machine </p>
+              <p >Replace traditional, static contact forms with our Conversational Contact AI. This AI engages potential customers in real-time, answering questions and gathering information as part of a dynamic conversation. This proactive approach not only enhances user experience but also increases lead conversion rates. </p>
+              <ul>
+                <li>Engage More Effectively: Interact with visitors in real-time, providing immediate responses and support.
+                  .</li>
+                <li>Capture Leads: Automatically collect and analyze visitor information to tailor follow-up communications effectively.                  .</li>
+                <li>Increase Conversions:Convert casual inquiries into confirmed leads by maintaining an engaging and responsive dialogue.                  .</li>
+              </ul>
+              <a class="btn  btn-base" href="#">Get Started</a> </div>
+          </div>
+        </div>
+        <!--/row--> 
+        
+      </div>
+    </div>
+    <!-- about area end --> 
+    
+    <!-- call to action start -->
+    <div class="call-to-action-area pd-top-120 pd-bottom-120 text-center" id="contact">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 col-md-12">
+            <div class="single-call-to-action-inner style-white">
+              <h3>Ready to Transform Your Business? </h3>
+              <h4 class="text-white">Tap into the power of StarklyAI and start seeing significant improvements in operational efficiency, customer satisfaction, and profitability. Don’t just keep up with the competition—set the pace.</h4>
+              <div class="d-grid gap-4 d-md-flex justify-content-md-center py-5">
+                <button type="button" class="btn btn-outline-info btn-lg px-4"> Contact Us Today</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- call to action end -->
+    
+    <footer class="footer-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <div class="widget widget_about">
+              <div class="details"> <a href="/" class="d-block mb-3"><img src="assets/img/logo.svg" alt="Starkly AI" class="img-fluid mb-2 pe-4" width="200px"/></a>
+                <p class="pe-4">StarklyAI Enhance your business with StarklyAI’s custom agents. Streamline operations, improve customer service, and accelerate quote generation with our efficient and precise AI solutions. </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="row">
+              <div class="col">
+                <div class="widget widget_nav_menu">
+                  <h4 class="widget-title"><span class="icon"><img src="assets/img/icon/mail.webp" alt="Email" width="64px"/></span>Email</h4>
+                  <a href="mailto:sales@starklyai.com">sales@starklyAI.com</a> </div>
+              </div>
+              <div class="col">
+                <div class="widget widget_nav_menu">
+                  <h4 class="widget-title"><span class="icon"><img src="assets/img/icon/phone.webp" alt="Phone" width="64px"/></span>Phone</h4>
+                  <a href="tel:+4733378901">+1 332-230-4793</a> </div>
+              </div>
+            </div>
+            <div class="widget widget_nav_menu">
+              <h4 class="widget-title"><span class="icon"><img src="assets/img/icon/globe.webp" alt="Address" width="64px"/></span>Address</h4>
+              224 W 35th Street, Ste 500 PMB 400, New York, NY 10001, United States </div>
+          </div>
+        </div>
+        <div class="d-flex py-4 my-2 justify-content-center"> <small>© Copyright StarklyAI. All Rights Reserved. <a href="#">Terms of Services</a> | <a href="#">Privacy Policy</a></small> </div>
+      </div>
+    </footer>
+  </div>
+</div>
+<!-- 2 divs closed for smooth scroll  --> 
+
+<!-- all plugins here --> 
+<script src="assets/js/jquery.min.js"></script> 
+<script src="assets/js/bootstrap.min.js"></script> 
+<script src="assets/js/owl.min.js"></script> 
+<script src="assets/js/slick.min.js"></script> 
+
+<!-- main js --> 
+<script src="assets/js/main.js"></script> 
+<script>  
+        window.chatWidgetConfig = {
+            moduleId: 'asst_0oig7B3gaVmGngzzCEaae37C',
+            serverUrl: 'https://wappgpt-chatserver.azurewebsites.net/chatHub'
+
+        };
+
+        !function (e, t, a) {
+            if (!e.__chatWidget) {
+                e.__chatWidget = {};
+
+                var n = t.createElement("script");
+                n.async = 1;
+                n.src = "ai/js/bot.js"
+
+                var s = t.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(n, s);
+            }
+        }(window, document);
+    </script>
+    <script>
+includeHTML();
+</script>
+</body>
+</html>
