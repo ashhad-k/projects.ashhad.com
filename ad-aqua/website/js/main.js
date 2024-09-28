@@ -9,7 +9,12 @@
 scroll.update(); // Reinitialize if you add or change content
 // locomotive end
 
-
+// toggle animation
+$(document).ready(function () {
+			  $(".navbar-toggle").on("click", function () {
+				    $(this).toggleClass("active");
+			  });
+		});
 
 // locomotive scroll link
 document.querySelectorAll('[data-scroll-to]').forEach((link) => {
