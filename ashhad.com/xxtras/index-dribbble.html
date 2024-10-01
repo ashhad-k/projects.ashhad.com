@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <!-- Your existing head content -->
+</head>
+<body id="top">
+    <!-- Your existing body content -->
+    <div class="dribbble-embed">
+    <iframe src="https://dribbble.com/shots/24940833-AI-Chatbot-landing-page-StarklyAI-com" width="400" height="300" allowfullscreen="true"></iframe>
+</div>
+    <!-- Add this section to display Dribbble shots -->
+    <section id="dribbble-shots" class="s-dribbble-shots">
+        <div class="row s-dribbble-shots__content width-sixteen-col">
+            <div class="column xl-12">
+                <h2 class="text-display-title">My Dribbble Shots</h2>
+                <div id="shots-container"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use this script to fetch and display Dribbble shots with a personal access token -->
+    <script>
+        const accessToken = 'YOUR_PERSONAL_ACCESS_TOKEN'; // Replace with your actual access token
+
+        // Fetch shots function
+        const fetchShots = async () => {
+            try {
+                const response = await fetch(`https://api.dribbble.com/v2/user/shots?access_token=${accessToken}`);
+                const shots = await response.json();
+
+                shots.forEach(shot => {
+                    const shotHTML = `
+                        <div class="shot">
+                            <a href="${shot.html_url}" target="_blank">
+                                <img src="${shot.images.normal}" alt="${shot.title}">
+                            </a>
+                            <h4>${shot.title}</h4>
+                        </div>
+                    `;
+                    document.getElementById('shots-container').innerHTML += shotHTML;
+                });
+            } catch (error) {
+                console.error('Error fetching shots:', error);
+            }
+        };
+
+        // Call the function to fetch shots on page load
+        fetchShots();
+    </script>
+
+    <!-- Your existing JavaScript code -->
+    <script src="js/plugins.js"></script> 
+    <script src="js/main.js"></script>
+</body>
+</html>

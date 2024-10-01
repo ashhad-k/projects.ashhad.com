@@ -115,7 +115,7 @@
 
 h1{ font-size: 72px}
 h2{ font-size: 64px}
-h3{ font-size: 48px; letter-spacing: -1px}
+h3{ font-size: 48px; letter-spacing: -1px; font-weight: 700;}
 h4{ font-size: 40px}
 h5{ font-size: 32px}
 h6{ font-size: 24px}
@@ -203,6 +203,15 @@ line-height: normal;
 letter-spacing: 2.4px;
 text-transform: uppercase;}
 
+
+@media (max-width: 767.98px) {
+    .cn-btn{display: flex; flex-direction: column; row-gap: 24px;}
+    .d-sm-none{display: none!important;}
+    .droplet{display: none}
+    
+}
+
+
 /*--------------------------------------------------
     ## Sections 
 ---------------------------------------------------*/
@@ -235,16 +244,24 @@ body{
     #navbarMobile{display: none!important; }
     .navbar-expand-lg .navbar-nav { gap: 18px;
     }
+    .navbar-toggler.collapsed{ border: 1px solid #ffffff50; border-radius: 12px;} 
+     
 }
 
 /* 2nd navbar for mobile only*/
 #navbarMobile{}
-.navbar-toggler{position: absolute; right: 20px;}
+.navbar-toggler{position: absolute; right: 20px; border: 1px solid #ffffff50; border-radius: 6px; background: var(--bg2)}
 .navbar-toggler-icon{ box-shadow: none;}
 .navbar-toggler:focus{ box-shadow: none;}
+.navbar-collapse{ background:  linear-gradient(180deg, #164683 0%, #050F1D 100%); margin-bottom: -10px; margin-top:20px;}
 
-@media (max-width: 767.98px) {}
-.navbar-toggler.collapsed
+
+@media (max-width: 767.98px) {
+    .navbar .nav-link{ padding: 10px 20px; border-bottom: 1px solid #ffffff15}
+    .navbar-nav .nav-item:last-child .nav-link{border-bottom: 0px}
+    
+}
+
 
 /*--------------------------------------------------
     ## hero
@@ -521,6 +538,11 @@ section.hero .vertical.rhs{right: calc(-50% + 40px);}
 section.hero .vertical.lhs{display: none}
 section.hero .vertical.rhs{ display: none}
 }
+@media (max-width: 767.98px) {
+    section.hero h1{ font-size: 60px; line-height: 60px;}
+    section.hero .large-txt h2{ font-size: 150px; transform: translate(-50%, -20%)}
+    
+}
 
 /*--------------------------------------------------
     ## fold1
@@ -541,6 +563,10 @@ line-height: 110px; /* 91.667% */
 text-transform: uppercase;
 }
 
+@media (max-width: 767.98px) {
+    #fold1{padding-top: 150px;} 
+    #fold1 .large-txt h2{font-size: 60px; line-height: 1;}
+}
 /*--------------------------------------------------
     ## fold2
 ---------------------------------------------------*/
@@ -580,6 +606,22 @@ text-transform: uppercase;
 #fold2 .slider-cn .carousel-indicators .active{ background: var(--bg-lite); color: var(--color1); font-weight: bold; }
 
 #fold2 .slider-cn .carousel-indicators [data-bs-target]{ text-indent: 0px;     background-clip: border-box; box-sizing: border-box;}
+
+
+@media (max-width: 767.98px) {
+    #fold2{ padding-left: 20px; padding-right: 20px;}
+    #fold2 h1{ text-align: center;}
+    #fold2 h1 i{ display: none}
+    #fold2 .list-unstyled span{display: block; margin: 10px 0px;}
+    
+    #fold2 .circle1 {
+        background: none;
+    min-height: auto;
+    margin-top: 60px;
+        margin-bottom: 80px;
+   
+    }
+}
 
 
 /*--------------------------------------------------
@@ -733,6 +775,10 @@ text-transform: uppercase;
 }
 
 
+    @media (max-width: 767.98px) {
+        #fold3{ padding-left: 20px; padding-right: 20px; padding-bottom: 100px;}
+        #fold3 .loader{display: none}
+    }
 
 /*--------------------------------------------------
     ## fold4
@@ -807,6 +853,15 @@ line-height: normal;
 #fold4 .rhs .vstack .content > P { }
 
 #fold4 .rhs .vstack .content:last-child{border-bottom: 0px;}
+
+
+    @media (max-width: 767.98px) {
+        #fold4{ padding-left: 20px; padding-right: 20px; padding-bottom: 160px;}
+        #fold4 .rhs{ padding: 0px;}
+        #fold4 .rhs .tab-pane{ padding: 0px}
+        #fold4 .rhs .vstack .content{ flex-direction: column; grid-row-gap: 12px;}
+       
+    }
 
 
 
@@ -903,6 +958,12 @@ line-height: normal;
 }
 
 
+    @media (max-width: 767.98px) {
+        #fold5{ padding-left: 20px; padding-right: 20px; padding-bottom: 160px;}
+        #fold5 #cssportal-grid{ display: flex; flex-direction: column; gap:12px;}
+        #fold5 .cn-logos{ height: 250px;}
+        
+    }
 
 
 /*--------------------------------------------------
@@ -956,6 +1017,13 @@ line-height: normal;
   height: auto;
   object-fit: cover;
 }
+
+@media (max-width: 767.98px) {
+        #fold7{ padding-bottom: 100px;}
+        #fold7 .container{ padding-left: 20px; padding-right: 20px;}
+    #fold7 .col-lg-4{margin-bottom: 40px;}
+        
+    }
 
 
 /*--------------------------------------------------
@@ -1022,6 +1090,34 @@ line-height: normal;
 }
 .cn2 .cn-logos2 .item IMG{}
 .cn2 .cn-logos2 .item figcaption{font-weight: normal}
+
+
+@media (max-width: 767.98px) {
+    
+   .cn2 .cn-logos2 {
+    display: flex;
+    flex-wrap: wrap; /* Enables wrapping of items */
+    column-gap: 30px;
+    row-gap: 30px; /* Add space between rows */
+    width: 100%;
+       padding-left: 20px;
+
+}
+
+.cn2 .cn-logos2 .item {
+   padding: 20px;
+    row-gap: 12px;
+    flex-direction: column;
+    color: #5E8398;
+    min-width: auto;
+    min-height: 160px;
+    align-items: center;
+    justify-content: center;
+    flex-basis: calc(50% - 30px); /* Allows two items per row with space between them */
+} 
+    
+    
+    }
 
 
 
@@ -1123,5 +1219,10 @@ line-height: normal;
 
 
 @media (max-width: 767.98px) {
-.fold7  .social{justify-content: flex-start}    
+    #footer-main .copyright{text-align: center}
+    #footer-main{padding-left: 20px; padding-right: 20px;}
+    #footer-main .disclaimer .col-lg-5{ }
+    #footer-main .color2{margin-top: 32px;}
+   #footer-main .copyright .social{justify-content:center; margin-top: 24px;}  
+    
 }
