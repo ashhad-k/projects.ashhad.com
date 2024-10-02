@@ -1255,6 +1255,7 @@ textarea {
 
 /*====*/
 .u-color-white{ color: var(--color-3)}
+.u-color-1{ color: var(--color-1)}
 .u-pos-relative{position: relative}
 .u-pos-absolute{position: absolute}
 .u-dflex2{ 
@@ -1269,6 +1270,27 @@ textarea {
 .u-mb-0{margin-bottom: 0px}
 .pd-top-20px{padding-top: 20px}
 .pd-top-40px{padding-top: 40px}
+
+.pd-btm-20px{padding-bottom: 20px}
+.pd-btm-40px{padding-bottom: 40px}
+
+.m-btm-10px{margin-bottom: 10px!important;}
+.m-btm-20px{margin-bottom: 20px!important;}
+.m-btm-30px{margin-bottom: 30px!important;}
+
+  .fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
+
+.hidden {
+    display: none;
+}
 
 /* ===================================================================
  * # TYPOGRAPHY 
@@ -3655,7 +3677,7 @@ td:last-child {
 
 .s-pageheader .page-title__small-type {
 	display      : block;
-	margin-bottom: 0;
+	margin-bottom: 20px;
 }
 
 .s-pagecontent {

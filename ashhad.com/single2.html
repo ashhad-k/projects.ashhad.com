@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ashhad | Freelance Website Product Designer &amp; Business Problem Solver</title>
+<meta name="description" content="I'm Ashhad, a strategic product designer with 15+ years of experience in solving complex business problems through innovative design solutions for large-scale products, websites, and digital experiences.">
+<meta name="keywords" content="strategic design, product design, business solutions, large-scale products, user experience, design systems, project management, website design, digital experiences">
+<meta name="author" content="Ashhad">
+<meta name="robots" content="index, follow">
+<meta name="language" content="en-us">
+<meta name="revisit-after" content="7 days">
+<meta name="copyright" content="Copyright 2024 Ashhad">
+<meta name="classification" content="Freelance website Product Designer">
+<script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script> 
+
+<!-- CSS
+    ================================================== -->
+<link rel="stylesheet" href="css/vendor.css">
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- favicons
+    ================================================== -->
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- Google tag (gtag.js) --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GDH2G4VTTC"></script> 
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-GDH2G4VTTC');
+    </script> 
+<!-- include script--> 
+<script>
+function includeHTML(callback) {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain attribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML(callback);
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+  if (callback) callback();
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+  includeHTML(function() {
+    // Initialize smooth scroll after the HTML content is included
+    document.querySelectorAll('a.smoothscroll').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  });
+});
+</script>
+</head>
+
+<body id="top">
+
+<!-- preloader
+    ================================================== -->
+<div id="preloader">
+  <div id="loader" class="dots-fade">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+<!-- page wrap
+    ================================================== -->
+<div id="page" class="s-pagewrap ss-home">
+  <div w3-include-html="includes/header.html"></div>
+  
+  <!-- # site main content
+        ================================================== -->
+  <section id="content" class="s-content"> 
+
+    
+    <!-- clients
+            ----------------------------------------------- -->
+    <section id="clients" class="s-clients">
+      
+     <div class="row  width-sixteen-col">
+        <div class="column xl-12">
+          <ul>
+            <li>20+ years of expertise in designing user-friendly web experiences using industry-leading tools like Figma, Adobe XD, and Photoshop</li>
+            <li>Skilled in creating accessible web designs that comply with Web Content Accessibility Guidelines (WCAG) standards</li>
+            <li>Proficient in design best practices, including developing and maintaining comprehensive design systems</li>
+            <li>Adept at the full web development lifecycle, from translating business requirements into intuitive, pixel-perfect UI designs to implementing clean, optimized HTML code</li>
+            <li>Expert in optimizing HTML/CSS to improve page speed scores (Google PageSpeed Insights)</li>
+            <li>Essential knowledge of SEO practices and familiarity with Google Analytics, Keyword Planner, and Search Console</li>
+            <li>Familiarity with web hosting solutions and services</li>
+            <li>Knowledge of version control systems, including GitHub and GitLab</li>
+            <li>Experienced in using Git for version control, including branching, merging, and managing repositories</li>
+            <li>10+ years of remote work experience, proficient in using leading project management and collaboration tools (Jira, Redmine, Asana, Trello, Slack)</li>
+            <li>Proven track record of managing projects, collaborating effectively with cross-functional teams, and delivering high-quality results on time</li>
+            <li>Provide comprehensive web solutions from start to finish, including sketch to development</li>
+            <li>Expert in WordPress development for custom websites and themes</li>
+            <li>Design appealing social media banners and covers to enhance brand presence</li>
+          </ul>
+        </div>
+      </div>
+      
+   
+    </section>
+    <!-- end s-clients --> 
+    
+  </section>
+  <!-- s-content--> 
+  
+  <!-- # cta
+        ================================================== -->
+  
+
+
+
+  <!-- end s-cta -->
+  <div w3-include-html="includes/footer.html"></div>
+</div>
+<!-- end page-wrap --> 
+
+
+<!-- Java Script
+    ================================================== --> 
+<script>
+includeHTML(function() {
+  // Initialize smooth scroll after the HTML content is included
+  document.querySelectorAll('a.smoothscroll').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  // Initialize your toggle menu here
+  // Example: Assuming you have a function called initializeToggleMenu
+  initializeToggleMenu();
+});
+</script>
+<script src="js/plugins.js"></script> 
+<script src="js/main.js"></script> 
+</body>
+</html>

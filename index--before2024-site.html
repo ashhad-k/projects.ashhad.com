@@ -1,127 +1,121 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
+<!doctype html>
+<html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ashhad | Freelance Website Product Designer &amp; Business Problem Solver</title>
-<meta name="description" content="I'm Ashhad, a strategic product designer with 15+ years of experience in solving complex business problems through innovative design solutions for large-scale products, websites, and digital experiences.">
-<meta name="keywords" content="strategic design, product design, business solutions, large-scale products, user experience, design systems, project management, website design, digital experiences">
-<meta name="author" content="Ashhad">
-<meta name="robots" content="index, follow">
-<meta name="language" content="en-us">
-<meta name="revisit-after" content="7 days">
-<meta name="copyright" content="Copyright 2024 Ashhad">
-<meta name="classification" content="Freelance website Product Designer">
-<script>
-        document.documentElement.classList.remove('no-js');
-        document.documentElement.classList.add('js');
-    </script> 
-
-<!-- CSS
-    ================================================== -->
-<link rel="stylesheet" href="https://ashhad.com/css/vendor.css">
-<link rel="stylesheet" href="https://ashhad.com/css/styles.css">
-    <style>
-    h2, .h2, h3, .h3, h4, .h4{margin-top:0px!important}
-        .card1{ font-size: 18px; padding: 30px; border-radius: 12px; margin-bottom: 48px;}
-        .card1 li{margin-bottom: 4px;}
-    
-    </style>
-
-<!-- favicons
-    ================================================== -->
-<link rel="apple-touch-icon" sizes="180x180" href="https://ashhad.com/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://ashhad.com/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://ashhad.com/favicon-16x16.png">
-<link rel="manifest" href="https://ashhad.com/site.webmanifest">
-
-<!-- Google tag (gtag.js) --> 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GDH2G4VTTC"></script> 
-<script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-GDH2G4VTTC');
-    </script> 
-<!-- include script--> 
-<script>
-function includeHTML(callback) {
-  var z, i, elmnt, file, xhttp;
-  /*loop through a collection of all HTML elements:*/
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain attribute:*/
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      /*make an HTTP request using the attribute value as the file name:*/
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML(callback);
-        }
-      }      
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /*exit the function:*/
-      return;
-    }
-  }
-  if (callback) callback();
-};
-
-document.addEventListener('DOMContentLoaded', function() {
-  includeHTML(function() {
-    // Initialize smooth scroll after the HTML content is included
-    document.querySelectorAll('a.smoothscroll').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  });
-});
-</script>
+<title>Project Listing | Ashhad.com</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<style>
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+}
+a {
+    transition: 0.5s ease-in-out
+}
+a:hover {
+    color: #000;
+}
+OL.s1 {
+    font-size: 16px;
+    line-height: 24px;
+}
+.s1 li {
+    padding: 5px 10px;
+    margin-bottom: 5px;
+}
+.navbar  {
+    background: url("cover.png") center top no-repeat;
+    background-size: cover;
+}
+    .navbar a {
+    color: #fff;}
+.navbar a.dropdown-item {
+    color: #333
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600
+}
+.card1 {
+    background: #e7e7e7;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.card1 li {
+    margin-bottom: 8px;
+}
+.badge-holder {
+}
+.badge-holder span {
+    border: 1px solid #cccccc;
+    background: #ffffff80;
+    color: #333;
+    font-weight: 400;
+}
+</style>
 </head>
 
-<body id="top">
-
-<!-- preloader
-    ================================================== -->
-<div id="preloader">
-  <div id="loader" class="dots-fade">
-    <div></div>
-    <div></div>
-    <div></div>
+<body>
+<nav class="navbar fixed-top  navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+  <div class="container-fluid"> <a class="navbar-brand text-white" href="https://projects.ashhad.com/">Ashhad.com | <small>Project Listing </small></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation" style="background: #3c6389"> <i class="bi bi-list"></i> </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"> <a class="nav-link active" aria-current="page" href="https://www.linkedin.com/in/ashhad-profile/">LinkedIn</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="https://dribbble.com/ashhad1">Dribbble</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="https://www.behance.net/ashhad1">Behance</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="https://www.figma.com/@ashhad">Figma</a> </li>
+        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Contact </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="https://wa.me/923332259620">WhatsApp</a></li>
+            <li><a class="dropdown-item" href="tel:+923332259620">Phone</a></li>
+            <li><a class="dropdown-item" href="mailto:ashhad4u@gmail.com">Email</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
-
-<!-- page wrap
-    ================================================== -->
-<div id="page" class="s-pagewrap ss-home">
-  <div w3-include-html="https://ashhad.com/includes/header.html"></div>
-  
-  <!-- # site main content
-        ================================================== -->
-  <section id="content" class="s-content"> 
-
-    
-    <!-- clients
-            ----------------------------------------------- -->
-    <section id="clients" class="s-clients">
-      
-     <div class="row  width-sixteen-col">
-         <div class="row">
-    
+</nav>
+<div class="container-fluid " style="margin-top: 100px;">
+  <div class="row">
+    <div class="col-lg-3  col-sm-12">
+         <div class="shadow-sm card1" style="background: #caf0f8">
+        <h5>About </h5>
+        <ul class="my-4">
+          <li>15+ years of strong experience in design best practices</li>
+          <li>Experienced in designing web solutions (UX and UI) using Figma, XD, Photoshop, and other tools while ensuring compliance with Web Content Accessibility Guidelines (WCAG)</li>
+          <li>Maintaining design systems</li>
+          <li>Familiar with the design and development process</li>
+          <li>Expert in designing UIs and also transforming them into pixel-perfect clean HTML code.</li>
+          <li>13 years of remote work experience and proficient in using online ticket/task systems and workflow tools such as Jira, Redmine, Asana, Trello, and Slack</li>
+          <li>Skilled in managing projects, collaborating with teams, and delivering high-quality results on time. </li>
+        </ul>
+        <hr>
+        <h5>Skilled in</h5>
+        <div class="badge-holder"> <span class="badge rounded-pill text-bg-light">Figma</span>&nbsp; <span class="badge rounded-pill text-bg-light">XD</span>&nbsp; <span class="badge rounded-pill text-bg-light">Photoshop</span>&nbsp; <span class="badge rounded-pill text-bg-light">Balsamiq</span>&nbsp; <span class="badge rounded-pill text-bg-light">Wordpress</span>&nbsp; <span class="badge rounded-pill text-bg-light">HTML</span>&nbsp; <span class="badge rounded-pill text-bg-light">CSS</span>&nbsp; <span class="badge rounded-pill text-bg-light">JS</span>&nbsp; <span class="badge rounded-pill text-bg-light">Bootstrap</span>&nbsp; <span class="badge rounded-pill text-bg-light">Illustrator</span>&nbsp; <span class="badge rounded-pill text-bg-light">UX</span>&nbsp; <span class="badge rounded-pill text-bg-light">UI</span>&nbsp; <span class="badge rounded-pill text-bg-light">Design Research</span>&nbsp; <span class="badge rounded-pill text-bg-light">Visual Design</span>&nbsp; <span class="badge rounded-pill text-bg-light">Webapp Design</span>&nbsp; <span class="badge rounded-pill text-bg-light">Design Systems</span>&nbsp; <span class="badge rounded-pill text-bg-light">Frontend designer</span>&nbsp; <span class="badge rounded-pill text-bg-light">Frontend dev</span>&nbsp; <span class="badge rounded-pill text-bg-light">Branding</span>&nbsp; <span class="badge rounded-pill text-bg-light">Graphics Design</span>&nbsp; <span class="badge rounded-pill text-bg-light">Social Media Banners</span>&nbsp; </div>
+        <hr>
+        <div class="my-3"> <a class="btn btn-secondary rounded-pill" href="https://www.linkedin.com/in/ashhad-profile/details/recommendations/" target="_blank">View All Recommendations</a> </div>
+        <hr>
+        <h5 class="mt-5">Employment</h5>
+        <ul>
+          <li>2010 - 2023: Design Lead @ <a target="_blank" rel="noopener nofollow" href="https://www.aspose.com"><strong>Aspose Pty Ltd</strong></a></li>
+          <li>2008 - 2010: Creative Designer @ <a target="_blank" rel="noopener nofollow" href="https://www.venturechest.ae"><strong>Venture Chest</strong></a></li>
+          <li>2008 - 2008: Asst Creative Manager @ <a target="_blank" rel="noopener nofollow" href="https://"><strong>Linkage Technologies</strong></a></li>
+          <li>2005 - 2007: Web Designer @ <a target="_blank" rel="noopener nofollow" href="https://www.thobson.com"><strong>Thobson Technologies</strong></a></li>
+          <li>2001 - 2004: Flash Animator @ <a target="_blank" rel="noopener nofollow" href="https://"><strong>Pegasus Web Company</strong></a></li>
+        </ul>
+      </div>
+        </div>
         
-        <div class="xl-4 md-12 column">
+        <div class="col-lg-3  col-sm-12">
       <div class="shadow-sm mb-5 card1"  style="background: #98f5e1">
         <h4>Latest Projects </h4>
         <ol class="my-4 ">
@@ -163,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
             
     </div>
-    <div class="xl-4 md-12 column">
+    <div class="col-lg-3  col-sm-12">
          <div class="shadow-sm mb-5 card1 mb-4"  style="background: #f8dac6">
         <h4>Email Templates </h4>
         <ol class="my-4 ">
@@ -206,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </ol>
       </div>
     </div>
-    <div class="xl-4 md-12 column">
+    <div class="col-lg-3  col-sm-12">
       <div class="shadow-sm card1" style="background: #f4f4f4">
         <h4>All Project </h4>
         <ul id="list" class="s1">
@@ -226,56 +220,8 @@ document.addEventListener('DOMContentLoaded', function() {
       </script> 
       </div>
     </div>
-      
-      
   </div>
-        
-      </div>
-      
-   
-    </section>
-    <!-- end s-clients --> 
-    
-  </section>
-  <!-- s-content--> 
-  
-  <!-- # cta
-        ================================================== -->
-  
-
-
-
-  <!-- end s-cta -->
- <div w3-include-html="https://ashhad.com/includes/footer.html"></div>
-    
-   
-
-
 </div>
-<!-- end page-wrap --> 
-
-
-<!-- Java Script
-    ================================================== --> 
-<script>
-includeHTML(function() {
-  // Initialize smooth scroll after the HTML content is included
-  document.querySelectorAll('a.smoothscroll').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
-
-  // Initialize your toggle menu here
-  // Example: Assuming you have a function called initializeToggleMenu
-  initializeToggleMenu();
-});
-</script>
-<script src="https://ashhad.com/js/plugins.js"></script>
-<script src="https://ashhad.com/js/main.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
