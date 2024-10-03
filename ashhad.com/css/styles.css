@@ -3491,6 +3491,7 @@ td:last-child {
 	padding-left: 0;
 }
 
+
 .s-header__menu-links a {
 	display            : block;
 	font-family        : var(--font-1);
@@ -3516,6 +3517,7 @@ td:last-child {
 .s-header__contact-btn {
 	margin: 0;
 }
+.s-header__menu-links a.active { color:  var(--color-1)!important;}
 
 /* --------------------------------------------------------------------
  * ## mobile menu toggle
