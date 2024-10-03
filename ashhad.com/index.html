@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ashhad | Freelance Website Product Designer &amp; Business Problem Solver</title>
+<title>Ashhad | Freelance Website Product Designer &amp; Frontend Developer</title>
 <meta name="description" content="I'm Ashhad, a strategic product designer with 15+ years of experience in solving complex business problems through innovative design solutions for large-scale products, websites, and digital experiences.">
-<meta name="keywords" content="strategic design, product design, business solutions, large-scale products, user experience, design systems, project management, website design, digital experiences">
+<meta name="keywords" content="strategic design, product design, business solutions, large-scale products, figma desigenr, user experience, design systems, project management, website design, digital experiences">
 <meta name="author" content="Ashhad">
 <meta name="robots" content="index, follow">
 <meta name="language" content="en-us">
@@ -100,7 +100,36 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- page wrap
     ================================================== -->
 <div id="page" class="s-pagewrap ss-home">
-  <div w3-include-html="includes/header.html"></div>
+<!-- # site header 
+        ================================================== -->
+<header class="s-header">
+  <div class="row s-header__inner width-sixteen-col">
+    <div class="s-header__block">
+      <div class="s-header__logo"> <a class="logo" href="/"> <img src="images/logo.svg" alt="Home"> </a> </div>
+      <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a> </div>
+    <!-- end s-header__block -->
+    
+    <nav class="s-header__nav">
+      <ul class="s-header__menu-links">
+        <li><a href="portfolio.html" >Portfolio</a></li>
+       
+        <li><a href="https://ashhad.com/#skills">Skills &amp; Expertise</a></li>
+        <li><a href="https://projects.ashhad.com/">Projects</a></li>
+        <li><a href="contact.html" >Contact</a></li>
+      </ul>
+      <!-- s-header__menu-links -->
+      
+      <div class="s-header__contact"> <a href="https://www.behance.net/ashhad1" title="Design Portfolio - Ashhad Khan "> <img src="images/icons/behance.png" alt="Behance" class="u-vm u-mb-0"/> </a> <a href="https://www.linkedin.com/in/ashhad-profile/" title="LinkedIn Profile - Ashhad Khan"> <img src="images/icons/linkedin.png" alt="LinkedIn Profile - Product Designer"  class="u-vm u-mb-0"/> </a> <a href="https://ashhad.com/resume.pdf" title="Download Resume - Freelance Designer"> <img src="images/icons/download2.png" alt="Download Resume - Freelance Designer"  class="u-vm u-mb-0"/></a> <a href="https://wa.me/923332259620" title="Contact via Whatsapp"> <img src="images/icons/whatsapp.png" alt="WhatsApp"  class="u-vm u-mb-0"/> </a> </div>
+      <!-- s-header__contact --> 
+      
+    </nav>
+    <!-- end s-header__nav --> 
+    
+  </div>
+  <!-- end s-header__inner --> 
+  
+</header>
+<!-- end s-header --> 
   
   <!-- # site main content
         ================================================== -->
@@ -124,13 +153,13 @@ document.addEventListener('DOMContentLoaded', function() {
           </div>
           <!-- s-intro__content-media -->
           
-          <div class="s-intro__scroll-down"> <a href="#about" class="smoothscroll">
+          <div class="s-intro__scroll-down"> <a href="#works" class="smoothscroll">
             <div class="scroll-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M19.92 8.95011L13.4 15.4701C12.63 16.2401 11.37 16.2401 10.6 15.4701L4.07996 8.95011" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            <span>Scroll for more</span> </a> </div>
+            <span>View Design Portfolio</span> </a> </div>
           <!-- s-intro__scroll-down --> 
           
         </div>
@@ -142,9 +171,26 @@ document.addEventListener('DOMContentLoaded', function() {
     </section>
     <!-- end s-intro --> 
     
-    <!-- about
+    <!-- folio
             ----------------------------------------------- -->
-    <section id="about" class="s-about target-section">
+    <section id="works" class="s-works target-section">
+  <div class="row width-sixteen-col">
+    <div class="column xl-12">
+      <div class="section-header" data-num="02">
+        <h2 class="text-display-title">Curated Design Portfolio</h2>
+          <p>- Coming Soon -</p>
+      </div>
+      <!-- end section-header --> 
+    </div>
+  </div>
+
+      
+      </section>
+      
+      
+      <!-- about
+            ----------------------------------------------- -->
+    <section id="skills" class="s-about target-section">
       <div class="row s-about__content width-sixteen-col">
         <div class="column xl-12">
           <div class="text-pretitle">Skills and Expertise</div>
@@ -179,8 +225,8 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="clients-list__item">Balsamiq</div>
             <div class="clients-list__item">WordPress</div>
             <div class="clients-list__item">HTML/CSS/JS</div>
-            <div class="clients-list__item">Email Templates</div>
-            <div class="clients-list__item">Decks</div>
+            <div class="clients-list__item"><a href="email-templates-designer.html">Email Templates</a></div>
+            <div class="clients-list__item"><a href="presentation-designer.html">Decks/Presentations</a></div>
             <div class="clients-list__item">Bootstrap</div>
             <div class="clients-list__item">Adobe Illustrator</div>
             <div class="clients-list__item">UX/UI Design</div>
@@ -192,7 +238,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="clients-list__item">Frontend Development</div>
             <div class="clients-list__item">Branding</div>
             <div class="clients-list__item">Graphics Design</div>
-            <div class="clients-list__item">Social Media Banners</div>
+            <div class="clients-list__item"><a href="social-media-banner-designer.html">Social Media Banners</a></div>
           </div>
           <!-- end clients-list --> 
           
@@ -221,8 +267,8 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
       <div class="row width-sixteen-col">
         <div class="column xl-6 lg-6  md-12"> 
-            <a href="https://dribbble.com/ashhad1"  class="btn btn--primary s-header__contact-btn m-btm-10px">UX/UI Designs</a>
-             <a href="https://projects.ashhad.com/"  class="btn s-header__contact-btn m-btm-10px">Frontend Projects</a>
+            <a href="portfolio.html"  class="btn btn--primary s-header__contact-btn m-btm-10px">Design Portfolio</a>
+             <a href="https://projects.ashhad.com/"  class="btn btn--stroke lite s-header__contact-btn m-btm-10px">Frontend Projects</a>
           <div class="s-header__contact"> </div>
         </div>
       </div>
@@ -540,23 +586,6 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
 <!-- Java Script
     ================================================== --> 
-<script>
-includeHTML(function() {
-  // Initialize smooth scroll after the HTML content is included
-  document.querySelectorAll('a.smoothscroll').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
-
-  // Initialize your toggle menu here
-  // Example: Assuming you have a function called initializeToggleMenu
-  initializeToggleMenu();
-});
-</script>
 <script src="js/plugins.js"></script> 
 <script src="js/main.js"></script> 
 </body>

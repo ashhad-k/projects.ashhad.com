@@ -95,6 +95,7 @@
 .br-btm1{/*border-bottom*/       border-bottom: 1px solid  rgba(255, 255, 255, 0.20);}
 .br-top1{/*border-bottom*/       border-top: 1px solid  rgba(255, 255, 255, 0.20);}
 .text-right{ text-align: right}
+.text-lef{ text-align: right}
 
 .pd60{padding: 60px;}
 .z10{ z-index: 10; position: relative}
@@ -203,6 +204,7 @@ line-height: normal;
 letter-spacing: 2.4px;
 text-transform: uppercase;}
 
+p.lead{ font-weight: 500}
 
 @media (max-width: 767.98px) {
     .cn-btn{display: flex; flex-direction: column; row-gap: 24px;}
@@ -210,7 +212,7 @@ text-transform: uppercase;}
     .droplet{display: none}
     
 }
-
+.d-sm-none{display: block}
 
 /*--------------------------------------------------
     ## Sections 
@@ -544,6 +546,17 @@ section.hero .vertical.rhs{ display: none}
     
 }
 
+
+
+/*--------------------------------------------------
+    ##  HERO - internal pages
+---------------------------------------------------*/
+.hero.internal{ text-align: left;}
+section.hero.internal .large-txt h2{ font-size: 400px;}
+section.hero.internal h1{ margin-top: 90px; margin-bottom: 10px; z-index: 10;}
+section.hero.internal p{ margin-top: 00px;z-index: 10;}
+
+
 /*--------------------------------------------------
     ## fold1
 ---------------------------------------------------*/
@@ -623,6 +636,12 @@ text-transform: uppercase;
     }
 }
 
+
+/*--------------------------------------------------
+    ## fold1. Internal
+---------------------------------------------------*/
+
+#fold1.internal{padding-top: 150px; padding-bottom: 150px;}
 
 /*--------------------------------------------------
     ## fold3
@@ -995,8 +1014,7 @@ line-height: normal;
 #fold7 .pic {
     width: 100%;
     height: 600px;
-    background: url("../img/earth2.jpeg") no-repeat center center;
-    background-size: cover;
+   background-size: cover;
     position: relative;
     z-index: 1;
 }
@@ -1017,6 +1035,12 @@ line-height: normal;
   height: auto;
   object-fit: cover;
 }
+
+.pic{}
+.pic1{ background: url("../img/bg1.jpg") no-repeat center center;}
+.pic2{ background: url("../img/bg2.jpg") no-repeat center center;}
+.pic3{ background: url("../img/earth3.jpg") no-repeat center center;}
+.pic4{ background: url("../img/earth4.jpg") no-repeat center center;}
 
 @media (max-width: 767.98px) {
         #fold7{ padding-bottom: 100px;}
