@@ -1,11 +1,7 @@
+
+RewriteOptions inherit
 <IfModule mod_rewrite.c>
 RewriteEngine On
-
-# Redirect HTTP to HTTPS
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# Existing rewrite rules
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . index.php [L]
@@ -17,3 +13,14 @@ RewriteRule . index.php [L]
   AddHandler application/x-httpd-ea-php71 .php .php7 .phtml
 </IfModule>
 # php -- END cPanel-generated handler, do not edit
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^wp\/2018\/06\/27\/bloggen\-fur\-profit\-als\-schwer\-ist\-echt\-es\-ferner\-als\-bringen\-jene\-dieses\-allgemeingultig\-machen\/$ "https\:\/\/ashhad\.com\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^wp\/2018\/03\/22\/the\-readings\-theses\-composing\-for\-future\-phd\/$ "https\:\/\/ashhad\.com\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^ios\-mobile\-app\-design\.html$ "https\:\/\/ashhad\.com\/" [R=301,L]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^www\.ashhad\.com$
+RewriteRule ^/?$ "https\:\/\/ashhad\.com\/" [R=301,L]
+

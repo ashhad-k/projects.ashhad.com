@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fintech Mobile App: AI-Powered Finance UX Design Case Study | Figma active prototype</title>
+<meta name="description" content="Explore how I designed the FinX mobile app, an AI-powered fintech solution. This UX case study showcases user-centric design, from market research to final implementation.">
+<meta name="keywords" content="FinX mobile app, fintech UX design, AI-powered finance, user experience, Ashhad Khan, UX case study, financial app design, mobile UI/UX, user-centered design">
+<meta name="author" content="Ashhad Khan">
+<meta name="robots" content="index, follow">
+<meta name="language" content="en-us">
+<meta name="revisit-after" content="7 days">
+<meta name="copyright" content="Copyright 2024 Ashhad Khan">
+<meta name="classification" content="UX Designer, Fintech UI/UX, Mobile App Design">
+<script>
+    document.documentElement.classList.remove('no-js');
+    document.documentElement.classList.add('js');
+</script>
+
+<!-- CSS
+    ================================================== -->
+<link rel="stylesheet" href="../css/vendor.css">
+<link rel="stylesheet" href="../css/styles.css">
+
+<!-- favicons
+    ================================================== -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- Google tag (gtag.js) --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GDH2G4VTTC"></script> 
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-GDH2G4VTTC');
+</script> 
+
+<!-- include script--> 
+<script>
+function includeHTML(callback) {
+  var z, i, elmnt, file, xhttp;
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML(callback);
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      return;
+    }
+  }
+  if (callback) callback();
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+  includeHTML(function() {
+    document.querySelectorAll('a.smoothscroll').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  });
+});
+</script>
+</head>
+
+<body id="top">
+
+<!-- preloader
+    ================================================== -->
+<div id="preloader">
+  <div id="loader" class="dots-fade">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+<!-- page wrap
+    ================================================== -->
+<div id="page" class="s-pagewrap"> 
+  <!-- # site header 
+        ================================================== -->
+  <header class="s-header">
+    <div class="row s-header__inner width-sixteen-col">
+      <div class="s-header__block">
+        <div class="s-header__logo"> <a class="logo" href="/"> <img src="../images/logo.svg" alt="Ashhad - Freelance UI UX Designer "> </a> </div>
+        <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a> </div>
+      
+      <nav class="s-header__nav">
+       <ul class="s-header__menu-links">
+          <li><a href="/portfolio/" >Portfolio</a></li>
+          <li><a href="/#skills">Skills &amp; Expertise</a></li>
+          <li><a href="https://projects.ashhad.com/">Projects</a></li>
+          <li><a href="/contact.html" >Contact</a></li>
+        </ul>
+        
+        <div class="s-header__contact"> 
+          <a href="https://www.behance.net/ashhad1" title="Design Portfolio - Ashhad Khan "> <img src="../images/icons/behance.png" alt="Behance" class="u-vm u-mb-0"/> </a> 
+          <a href="https://www.linkedin.com/in/ashhad-profile/" title="LinkedIn Profile - Ashhad Khan"> <img src="../images/icons/linkedin.png" alt="LinkedIn Profile - Product Designer"  class="u-vm u-mb-0"/> </a> 
+          <a href="https://ashhad.com/resume.pdf" title="Download Resume - Freelance Designer"> <img src="../images/icons/download2.png" alt="Download Resume - Freelance Designer"  class="u-vm u-mb-0"/></a> 
+          <a href="https://wa.me/923332259620" title="Contact via Whatsapp"> <img src="../images/icons/whatsapp.png" alt="WhatsApp"  class="u-vm u-mb-0"/> </a> 
+        </div>
+        
+      </nav>
+      
+    </div>
+    
+  </header>
+  
+  <!-- # site main content
+        ================================================== -->
+  <section id="content" class="s-content">
+    <section class="s-pageheader pageheader">
+      <div class="row">
+        <div class="column xl-12">
+          <h1 class="page-title"> <span class="page-title__small-type text-pretitle">Fintech AI Mobile App UX Case Study</span>Revolutionizing Personal Finance with AI</h1>
+        </div>
+      </div>
+    </section>
+    
+<section id="works" class="s-works target-section pd-top-80px">
+ <div class="row  width-sixteen-col folio-entries">
+
+           
+    <div class="column entry"> <a href="../images/folio/ux-case-studies/fintech-ai-mobile-app/fin1.jpg" class="entry__link glightbox" data-glightbox="title: Ideation - Sketch; description: .entry__desc-05">
+  <div class="entry__thumb"> <img src="../images/folio/ux-case-studies/fintech-ai-mobile-app/fin1.jpg" alt="Objective: Generate innovative ideas and concepts for the project."> </div>
+  <div class="entry__info">
+    <h4 class="entry__title">Ideation - Sketch</h4>
+    <div class="entry__cat">Generate innovative ideas</div>
+  </div>
+  </a>
+  <div class="glightbox-desc entry__desc-05">
+    <p>Objective: Generate innovative ideas and concepts for the project. </p>
+  </div>
+</div>
+<!-- entry -->   
+               
+    <div class="column entry"> <a href="../images/folio/ux-case-studies/fintech-ai-mobile-app/fin2.jpg" class="entry__link glightbox" data-glightbox="title: Ideation - Sketch; description: .entry__desc-05">
+  <div class="entry__thumb"> <img src="../images/folio/ux-case-studies/fintech-ai-mobile-app/fin2.jpg" alt="Mood Boards: Create visual representations of the project's aesthetic and emotional goals."> </div>
+  <div class="entry__info">
+    <h4 class="entry__title">Mood Boards: </h4>
+    <div class="entry__cat">Create visual representations </div>
+  </div>
+  </a>
+  <div class="glightbox-desc entry__desc-05">
+    <p>Create visual representations of the project's aesthetic and emotional goals. </p>
+  </div>
+</div>
+<!-- entry -->   
+    
+               
+    <div class="column entry"> <a href="../images/folio/ux-case-studies/fintech-ai-mobile-app/fin4.jpg" class="entry__link glightbox" data-glightbox="title: Ideation - Sketch; description: .entry__desc-05">
+  <div class="entry__thumb"> <img src="../images/folio/ux-case-studies/fintech-ai-mobile-app/fin4.jpg" alt="Establish a design system to ensure consistency in visual elements, typography, and color schemes."> </div>
+  <div class="entry__info">
+    <h4 class="entry__title"> Establish a design system </h4>
+    <div class="entry__cat"> Ensure consistency in visual elements, typography, and color schemes.</div>
+  </div>
+  </a>
+  <div class="glightbox-desc entry__desc-05">
+    <p>Establish a design system to ensure consistency in visual elements, typography, and color schemes. </p>
+  </div>
+</div>
+<!-- entry -->   
+     
+     
+    <div class="column entry"> <a href="../images/folio/ux-case-studies/fintech-ai-mobile-app/fin5.jpg" class="entry__link glightbox" data-glightbox="title: Ideation - Sketch; description: .entry__desc-05">
+  <div class="entry__thumb"> <img src="../images/folio/ux-case-studies/fintech-ai-mobile-app/fin5.jpg" alt="Create maps to outline the user's journey through the product, highlighting touchpoints and potential pain points."> </div>
+  <div class="entry__info">
+    <h4 class="entry__title">User Journey Maps:</h4>
+    <div class="entry__cat"> outline the user's journey through the product</div>
+  </div>
+  </a>
+  <div class="glightbox-desc entry__desc-05">
+    <p>Create maps to outline the user's journey through the product, highlighting touchpoints and potential pain points. </p>
+  </div>
+</div>
+<!-- entry -->   
+    
+   
+    
+
+     
+    <div class="column entry"> <a href="../images/folio/ux-case-studies/fintech-ai-mobile-app/fin6.jpg" class="entry__link glightbox" data-glightbox="title: Ideation - Sketch; description: .entry__desc-05">
+  <div class="entry__thumb"> <img src="../images/folio/ux-case-studies/fintech-ai-mobile-app/fin6.jpg" alt="Create high-fidelity designs that focus on user experience and aesthetics."> </div>
+  <div class="entry__info">
+    <h4 class="entry__title">User Journey Maps:</h4>
+    <div class="entry__cat"> Create high-fidelity designs that focus on user experience and aesthetics.</div>
+  </div>
+  </a>
+  <div class="glightbox-desc entry__desc-05">
+    <p>Create high-fidelity designs that focus on user experience and aesthetics. </p>
+  </div>
+</div>
+<!-- entry -->   
+    
+
+     
+    <div class="column entry"> <a href="../images/folio/ux-case-studies/fintech-ai-mobile-app/fin9.jpg" class="entry__link glightbox" data-glightbox="title: Ideation - Sketch; description: .entry__desc-05">
+  <div class="entry__thumb"> <img src="../images/folio/ux-case-studies/fintech-ai-mobile-app/fin9.jpg" alt=" Develop interactive prototypes using tools like Figma to test design concepts."> </div>
+  <div class="entry__info">
+    <h4 class="entry__title">Onboarding Screen</h4>
+    <div class="entry__cat">  Develop interactive prototypes using tools like Figma to test design concepts.</div>
+  </div>
+  </a>
+  <div class="glightbox-desc entry__desc-05">
+    <p> Develop interactive prototypes using tools like Figma to test design concepts. </p>
+  </div>
+</div>
+<!-- entry -->   
+    
+    
+    <div class="column entry"> <a href="../images/folio/ux-case-studies/fintech-ai-mobile-app/fin10.jpg" class="entry__link glightbox" data-glightbox="title: Ideation - Sketch; description: .entry__desc-05">
+  <div class="entry__thumb"> <img src="../images/folio/ux-case-studies/fintech-ai-mobile-app/fin10.jpg" alt=" Hiliting Active Vs Normal Products"> </div>
+  <div class="entry__info">
+    <h4 class="entry__title">Dashboard and Product Select</h4>
+    <div class="entry__cat"> Hiliting Active Vs Normal Products</div>
+  </div>
+  </a>
+  <div class="glightbox-desc entry__desc-05">
+    <p> Hiliting Active Vs Normal Products</p>
+  </div>
+</div>
+<!-- entry -->   
+    
+
+    
+    <div class="column entry"> <a href="../images/folio/ux-case-studies/fintech-ai-mobile-app/fin11.jpg" class="entry__link glightbox" data-glightbox="title: Ideation - Sketch; description: .entry__desc-05">
+  <div class="entry__thumb"> <img src="../images/folio/ux-case-studies/fintech-ai-mobile-app/fin11.jpg" alt="AI Conversation Screen"> </div>
+  <div class="entry__info">
+    <h4 class="entry__title">AI Conversation Screen</h4>
+    <div class="entry__cat">AI Conversation Screen</div>
+  </div>
+  </a>
+  <div class="glightbox-desc entry__desc-05">
+    <p>AI Conversation Screen </p>
+  </div>
+</div>
+<!-- entry -->   
+    
+
+  
+    <div class="column entry"> <a href="../images/folio/ux-case-studies/fintech-ai-mobile-app/fin8.jpg" class="entry__link glightbox" data-glightbox="title: Ideation - Sketch; description: .entry__desc-05">
+  <div class="entry__thumb"> <img src="../images/folio/ux-case-studies/fintech-ai-mobile-app/fin8.jpg" alt="Present the design concepts to stakeholders for approval and feedback."> </div>
+  <div class="entry__info">
+    <h4 class="entry__title">Mobile App Preview</h4>
+    <div class="entry__cat"> Present the design concepts to stakeholders for approval and feedback.</div>
+  </div>
+  </a>
+  <div class="glightbox-desc entry__desc-05">
+    <p>Present the design concepts to stakeholders for approval and feedback.. </p>
+  </div>
+</div>
+<!-- entry -->   
+    
+    
+
+  
+
+    
+
+              
+
+      </div> <!-- folio entries -->
+
+            <div class="row width-sixteen-col ">
+        <div class="column xl-6 lg-6  md-12"> 
+ <a href="/portfolio/"  class="btn btn--primary s-header__contact-btn m-btm-10px">Portfolio</a>
+            
+            <a href="https://www.figma.com/proto/cFkiGxgaBayoSP5GqNPlPo/finX.ai?page-id=0%3A1&node-id=3-3&node-type=frame&viewport=357%2C227%2C0.14&t=LO8EcNCobk6sWaa0-1&scaling=scale-down&content-scaling=fixed" target="_blank"  class="btn btn--stroke s-header__contact-btn m-btm-10px">Figma Active Prototype</a>🔗
+        </div>
+      </div>        
+    
+    <div class="row width-sixteen-col pd-top-100px">
+        <div class="column xl-12 lg-12  md-12"> 
+ <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="900" src="https://embed.figma.com/design/cFkiGxgaBayoSP5GqNPlPo/finX.ai?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+        </div>
+      </div>
+
+             <!-- end s-testimonials -->
+
+        </section>
+    <section class="s-pagecontent pagecontent">
+      <div class="row pageintro">
+        <div class="column xl-6 lg-12">
+          <h2 class="text-display-title">Crafting an Intuitive AI-Powered Fintech Experience</h2>
+        </div>
+        <div class="column xl-6 lg-12 u-flexitem-x-right">
+          <p class="lead">As a UX/UI designer, I was tasked with creating an innovative mobile app for FinX, a fintech AI company. My goal was to design an intuitive interface that leverages AI to simplify financial management and decision-making for users.</p>
+          <a href="../contact.html" class="btn btn--primary s-header__contact-btn m-btm-10px">Discuss Your Project</a>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="column xl-12 grid-block pd-top-40px">
+          <div class="grid-full grid-list-items list-items show-ctr">
+            
+            <!-- Market Research -->
+            <div class="grid-list-items__item list-items__item">
+              <div class="list-items__item-header">
+                <h3 class="list-items__item-title">Comprehensive Market Research</h3>
+              </div>
+              <div class="list-items__item-text">
+                <p>I began by conducting extensive market research to understand the fintech landscape and user expectations:</p>
+                <ul class="list-services">
+                  <li>Analyzed competitor apps and identified gaps in the market</li>
+                  <li>Studied fintech trends and AI integration in personal finance</li>
+                  <li>Examined user behaviors and preferences in financial management apps</li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- User Needs Analysis -->
+            <div class="grid-list-items__item list-items__item">
+              <div class="list-items__item-header">
+                <h3 class="list-items__item-title">Identifying User Needs</h3>
+              </div>
+              <div class="list-items__item-text">
+                <p>Through user interviews and surveys, I uncovered key user needs and pain points:</p>
+                <ul class="list-services">
+                  <li>Simplification of complex financial data and decisions</li>
+                  <li>Personalized insights and recommendations</li>
+                  <li>Secure and easy-to-use interface for financial management</li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- Design Process -->
+            <div class="grid-list-items__item list-items__item">
+              <div class="list-items__item-header">
+                <h3 class="list-items__item-title">Iterative Design Process</h3>
+              </div>
+              <div class="list-items__item-text">
+                <p>I employed an iterative design process to create a user-centric solution:</p>
+                <ul class="list-services">
+                  <li>Developed low-fidelity wireframes to map out user flows</li>
+                  <li>Created interactive prototypes for user testing</li>
+                  <li>Refined designs based on user feedback and usability testing results</li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- Visual Design and Branding -->
+            <div class="grid-list-items__item list-items__item">
+              <div class="list-items__item-header">
+                <h3 class="list-items__item-title">Visual Design and Branding</h3>
+              </div>
+              <div class="list-items__item-text">
+                <p>I carefully crafted the visual identity of the FinX app:</p>
+                <ul class="list-services">
+                  <li>Selected a modern, clean font palette for readability and professionalism</li>
+                  <li>Developed a color scheme that conveys trust and innovation</li>
+                  <li>Created custom icons and illustrations to enhance the user experience</li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- Key Features and Implementation -->
+            <div class="grid-list-items__item list-items__item">
+              <div class="list-items__item-header">
+                <h3 class="list-items__item-title">Key Features and Implementation</h3>
+              </div>
+              <div class="list-items__item-text">
+                <p>I designed and implemented several key features to meet user needs:</p>
+                <ul class="list-services">
+                  <li>AI-driven personalized dashboard with financial insights</li>
+                  <li>Intuitive budgeting and expense tracking tools</li>
+                  <li>Secure account management and transaction monitoring</li>
+                  <li>Investment planning with AI-powered recommendations</li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- Results and Impact -->
+            <div class="grid-list-items__item list-items__item">
+              <div class="list-items__item-header">
+                <h3 class="list-items__item-title">Results and Impact</h3>
+              </div>
+              <div class="list-items__item-text">
+                <p>The FinX mobile app design achieved significant results:</p>
+                <ul class="list-services">
+                  <li>High user engagement rates and positive feedback</li>
+                  <li>Streamlined financial management for users</li>
+                  <li>Increased user confidence in financial decision-making</li>
+                  <li>Successful integration of AI technology in a user-friendly interface</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="../contact.html" class="btn btn--primary s-header__contact-btn m-btm-10px">Let's Create Your Next Fintech Solution</a>
+      </div>
+    </section>
+</section>
+  
+  <!-- # cta
+        ================================================== -->
+  <section id="cta" class="s-cta">
+    <div class="row row-x-center text-center">
+      <div class="column xl-8 lg-12">
+        <div class="s-cta__content">
+          <h2 class="text-display-title"> Let's Create Something Amazing Together </h2>
+          <p class="lead"> Ready to start your project? Contact me today to discuss your design and development needs. </p>
+          <a href="../contact.html" class="btn btn--primary">Let's Work Together</a> 
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- # footer 
+        ================================================== --> 
+  <div w3-include-html="../includes/footer.html"></div>
+</div>
+
+<!-- Java Script
+    ================================================== --> 
+<script src="../js/plugins.js"></script> 
+<script src="../js/main.js"></script>
+</body>
+</html>

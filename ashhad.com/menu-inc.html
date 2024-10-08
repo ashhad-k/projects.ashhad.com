@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Freelance UI, UX, Website, Visual &amp;  Frontend Developer </title>
+<script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script> 
+
+<!-- CSS
+    ================================================== -->
+<link rel="stylesheet" href="css/vendor.css">
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- favicons
+    ================================================== -->
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- Google tag (gtag.js) --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GDH2G4VTTC"></script> 
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-GDH2G4VTTC');
+    </script> 
+<!-- include script--> 
+<script>
+function includeHTML(callback) {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain attribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML(callback);
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+  if (callback) callback();
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+  includeHTML(function() {
+    // Initialize smooth scroll after the HTML content is included
+    document.querySelectorAll('a.smoothscroll').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  });
+});
+</script>
+</head>
+
+<body id="top">
+
+<!-- preloader
+    ================================================== -->
+<div id="preloader">
+  <div id="loader" class="dots-fade">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+<!-- page wrap
+    ================================================== -->
+<div id="page" class="s-pagewrap ss-home"> 
+  <!-- # site header 
+        ================================================== -->
+  <div w3-include-html="includes/header2.html"></div>
+  
+  <!-- end s-header --> 
+  
+  <!-- # site main content
+        ================================================== -->
+  <section id="content" class="s-content"> 
+    
+    <!-- intro
+            ----------------------------------------------- -->
+    <section id="intro" class="s-intro">
+      <div class="row s-intro__content width-sixteen-col">
+        <div class="column lg-12 s-intro__content-inner grid-block">
+          <div class="s-intro__content-text">
+            <div class="s-intro__content-pretitle text-pretitle">Hello, I'm Ashhad Khan | Full Stack Designer</div>
+            <h1 class="s-intro__content-title"> I Design Aesthetically Pleasing Websites and Web Solutions to Boost Your Business and Articulate Information with Clarity. </h1>
+          </div>
+          <!-- s-intro__content-text -->
+          
+          <div class="s-intro__content-media">
+            <div class="s-intro__content-media-inner"><img src="images/intro-bg.jpg" alt="Ashhad Khan - UI/UX Designer and Frontend Developer" srcset="images/intro-bg.jpg 1x, images/intro-bg@2x.jpg 2x">
+              <div class="lines"> <span></span> </div>
+            </div>
+          </div>
+          <!-- s-intro__content-media -->
+          
+          <div class="s-intro__scroll-down"> <a href="#works" class="smoothscroll">
+            <div class="scroll-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M19.92 8.95011L13.4 15.4701C12.63 16.2401 11.37 16.2401 10.6 15.4701L4.07996 8.95011" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span>View Design Portfolio</span> </a> </div>
+          <!-- s-intro__scroll-down --> 
+          
+        </div>
+        <!-- s-intro__content-inner --> 
+        
+      </div>
+      <!-- s-intro__content --> 
+      
+    </section>
+    <!-- end s-intro --> 
+    
+  </section>
+  <!-- s-content--> 
+  
+  <!-- # cta
+        ================================================== --> 
+  
+  <!-- end s-cta -->
+  <div w3-include-html="includes/footer.html"></div>
+</div>
+<!-- end page-wrap --> 
+
+<!-- Java Script
+    ================================================== --> 
+<script src="js/plugins.js"></script> 
+<script src="js/main2.js"></script>
+</body>
+</html>

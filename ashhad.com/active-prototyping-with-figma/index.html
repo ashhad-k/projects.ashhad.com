@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Figma Active Prototyping: Mastering Interactive UX Design | Ashhad Khan</title>
+<meta name="description" content="Discover Ashhad Khan's expertise in Figma active prototyping. Learn about interactive UX design, variables, micro-interactions, and modular components for creating dynamic user experiences.">
+<meta name="keywords" content="Figma active prototyping, interactive UX design, UI design, Ashhad Khan, Figma variables, micro-interactions, modular components, design systems, user experience, UX case studies">
+<meta name="author" content="Ashhad Khan">
+<meta name="robots" content="index, follow">
+<meta name="language" content="en-us">
+<meta name="revisit-after" content="7 days">
+<meta name="copyright" content="Copyright 2024 Ashhad Khan">
+<meta name="classification" content="UX Designer, Figma Expert, Interactive Prototyping Specialist"><script>
+    document.documentElement.classList.remove('no-js');
+    document.documentElement.classList.add('js');
+</script>
+
+<!-- CSS
+    ================================================== -->
+<link rel="stylesheet" href="../css/vendor.css">
+<link rel="stylesheet" href="../css/styles.css">
+
+<!-- favicons
+    ================================================== -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- Google tag (gtag.js) --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GDH2G4VTTC"></script> 
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-GDH2G4VTTC');
+</script> 
+
+<!-- include script--> 
+<script>
+function includeHTML(callback) {
+  var z, i, elmnt, file, xhttp;
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML(callback);
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      return;
+    }
+  }
+  if (callback) callback();
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+  includeHTML(function() {
+    document.querySelectorAll('a.smoothscroll').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  });
+});
+</script>
+</head>
+
+<body id="top">
+
+<!-- preloader
+    ================================================== -->
+<div id="preloader">
+  <div id="loader" class="dots-fade">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+<!-- page wrap
+    ================================================== -->
+<div id="page" class="s-pagewrap"> 
+  <!-- # site header 
+        ================================================== -->
+  <header class="s-header">
+    <div class="row s-header__inner width-sixteen-col">
+      <div class="s-header__block">
+        <div class="s-header__logo"> <a class="logo" href="/"> <img src="../images/logo.svg" alt="Ashhad - Freelance UI UX Designer "> </a> </div>
+        <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a> </div>
+      
+      <nav class="s-header__nav">
+       <ul class="s-header__menu-links">
+          <li><a href="/portfolio/" >Portfolio</a></li>
+          <li><a href="/#skills">Skills &amp; Expertise</a></li>
+          <li><a href="https://projects.ashhad.com/">Projects</a></li>
+          <li><a href="/contact.html" >Contact</a></li>
+        </ul>
+        
+        <div class="s-header__contact"> 
+          <a href="https://www.behance.net/ashhad1" title="Design Portfolio - Ashhad Khan "> <img src="../images/icons/behance.png" alt="Behance" class="u-vm u-mb-0"/> </a> 
+          <a href="https://www.linkedin.com/in/ashhad-profile/" title="LinkedIn Profile - Ashhad Khan"> <img src="../images/icons/linkedin.png" alt="LinkedIn Profile - Product Designer"  class="u-vm u-mb-0"/> </a> 
+          <a href="https://ashhad.com/resume.pdf" title="Download Resume - Freelance Designer"> <img src="../images/icons/download2.png" alt="Download Resume - Freelance Designer"  class="u-vm u-mb-0"/></a> 
+          <a href="https://wa.me/923332259620" title="Contact via Whatsapp"> <img src="../images/icons/whatsapp.png" alt="WhatsApp"  class="u-vm u-mb-0"/> </a> 
+        </div>
+        
+      </nav>
+      
+    </div>
+    
+  </header>
+  
+  <!-- # site main content
+        ================================================== -->
+  <section id="content" class="s-content">
+    <section class="s-pageheader pageheader">
+     <div class="row">
+  <div class="column xl-12">
+    <h1 class="page-title"> <span class="page-title__small-type text-pretitle">Figma Active Prototyping</span> Creating Dynamic User Experiences</h1>
+  </div>
+</div>
+    </section>
+     <section id="works" class="s-works target-section pd-top-80px">
+ <div class="row  width-sixteen-col folio-entries ">
+
+           
+<div class="column entry">
+  <a href="https://www.figma.com/proto/bhfby0hYV3p3o1S2oBbvKR/AdAqua?page-id=168%3A90&node-id=168-3567&node-type=frame&viewport=456%2C1509%2C0.28&t=SoE1MdM2aDPorksl-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=168%3A3567" class="entry__link" data-glightbox="title: NeuroX; description: .entry__desc-05">
+    <div class="entry__thumb">
+      <img src="../images/folio/figma-active-prototyping/advertising.jpg" alt="++">
+    </div>
+    <div class="entry__info">
+      <h4 class="entry__title">ECO Friendly Advertising </h4>
+      <div class="entry__cat">UI Landing Page</div>
+    </div>
+  </a>
+
+  <div class="glightbox-desc entry__desc-05">
+    <p>
+    --
+    </p>
+  </div>
+</div> <!-- entry -->     
+     
+                 
+<div class="column entry">
+  <a href="https://www.figma.com/proto/cFkiGxgaBayoSP5GqNPlPo/finX.ai?page-id=0%3A1&node-id=3-3&node-type=frame&viewport=357%2C227%2C0.14&t=LO8EcNCobk6sWaa0-1&scaling=scale-down&content-scaling=fixed" class="entry__link" data-glightbox="title: NeuroX; description: .entry__desc-05">
+    <div class="entry__thumb">
+      <img src="../images/folio/figma-active-prototyping/finx.jpg" alt="++">
+    </div>
+    <div class="entry__info">
+      <h4 class="entry__title">Fintech AI</h4>
+      <div class="entry__cat">AI Powered Mobile App</div>
+    </div>
+  </a>
+
+  <div class="glightbox-desc entry__desc-05">
+    <p>
+    --
+    </p>
+  </div>
+</div> <!-- entry -->     
+     
+     
+<div class="column entry">
+  <a href="https://www.figma.com/proto/hziRFp3gd1Nnw7gCq4tzbT/Wish-Prop?page-id=0%3A1&node-id=5-92&node-type=frame&viewport=942%2C28%2C0.12&t=DUNNgDYhClVHNIZy-1&scaling=scale-down-width&content-scaling=fixed" class="entry__link" data-glightbox="title: Fintech App ; description: .entry__desc-05">
+    <div class="entry__thumb">
+      <img src="../images/folio/figma-active-prototyping/quantum.jpeg" alt="Fintech App ">
+    </div>
+    <div class="entry__info">
+      <h4 class="entry__title">Fintech App </h4>
+      <div class="entry__cat">Website and Webapp</div>
+    </div>
+  </a>
+
+  <div class="glightbox-desc entry__desc-05">
+    <p>
+    --
+    </p>
+  </div>
+</div> <!-- entry -->     
+     
+     
+<div class="column entry">
+  <a href="https://www.figma.com/proto/XAFtuiIpXf1W5rhT0NTEnB/SatrklyAI---V2?page-id=1%3A2087&node-id=401-5299&node-type=frame&viewport=1018%2C397%2C0.1&t=Whu0df5umDpHr97R-1&scaling=scale-down-width&content-scaling=fixed" class="entry__link" data-glightbox="title: Starkly AI; description: .entry__desc-05">
+    <div class="entry__thumb">
+      <img src="../images/folio/figma-active-prototyping/starkly-ai.jpeg" alt="Starkly AI">
+    </div>
+    <div class="entry__info">
+      <h4 class="entry__title">Starkly AI </h4>
+      <div class="entry__cat">Website and Webapp</div>
+    </div>
+  </a>
+
+  <div class="glightbox-desc entry__desc-05">
+    <p>
+    --
+    </p>
+  </div>
+</div> <!-- entry -->     
+     
+       
+     
+<div class="column entry">
+  <a href="https://www.figma.com/proto/Ecy9L1ebwAFyezsatHU4jl/Neanderthals?page-id=11%3A2&node-id=11-3&node-type=frame&viewport=903%2C451%2C0.08&t=dTrxXK0z5eOCrbxk-1&scaling=scale-down-width&content-scaling=fixed" class="entry__link" data-glightbox="title: Neanderthals Website; description: .entry__desc-05">
+    <div class="entry__thumb">
+      <img src="../images/folio/figma-active-prototyping/neanderthals1.jpg" alt="Neanderthals Website">
+    </div>
+    <div class="entry__info">
+      <h4 class="entry__title">Neanderthals Website </h4>
+      <div class="entry__cat">Website and Webapp</div>
+    </div>
+  </a>
+
+  <div class="glightbox-desc entry__desc-05">
+    <p>
+    --
+    </p>
+  </div>
+</div> <!-- entry -->     
+     
+                  
+<div class="column entry">
+  <a href="https://www.figma.com/proto/DTfFQCsVxylmKdOZTWhi1r/%F0%9F%A7%A0-Neuro-X?page-id=47%3A2&node-id=47-1803&node-type=canvas&viewport=945%2C390%2C0.12&t=HFyywrS2PwZTPcMa-1&scaling=scale-down-width&content-scaling=fixed" class="entry__link" data-glightbox="title: NeuroX Medical and Health Website; description: .entry__desc-05">
+    <div class="entry__thumb">
+      <img src="../images/folio/figma-active-prototyping/neurox1.jpg" alt="Medical and Health Website">
+    </div>
+    <div class="entry__info">
+      <h4 class="entry__title">NeuroX</h4>
+      <div class="entry__cat">Medical and Health Website</div>
+    </div>
+  </a>
+
+  <div class="glightbox-desc entry__desc-05">
+    <p>
+    --
+    </p>
+  </div>
+</div> <!-- entry -->     
+     
+                             
+<div class="column entry">
+  <a href="https://www.figma.com/proto/Zv1pIQij3yq35OtXURyjWn/%F0%9F%9A%A8-Break-From-AI?page-id=82%3A8732&node-id=82-8798&node-type=frame&viewport=518%2C264%2C0.2&t=ihvYqNTsJVvTvOl9-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=82%3A8798" class="entry__link" data-glightbox="title: Break From AI; description: .entry__desc-05">
+    <div class="entry__thumb">
+      <img src="../images/folio/figma-active-prototyping/break-from-ai.jpeg" alt="Break From AI">
+    </div>
+    <div class="entry__info">
+      <h4 class="entry__title">Break From AI</h4>
+      <div class="entry__cat">Branding and Website</div>
+    </div>
+  </a>
+
+  <div class="glightbox-desc entry__desc-05">
+    <p>
+    --
+    </p>
+  </div>
+</div> <!-- entry -->     
+     
+     <div class="column entry">
+  <a href="https://www.figma.com/proto/RAbYcmzxJQ2yJFeTizZRGr/FREE-Website-Template-Design---editable-content%2C-modular-structure%2C-easy-to-update-(Community)?page-id=0%3A1&node-id=10-3&node-type=frame&viewport=-289%2C479%2C0.28&t=ZAHsrRqofaWpM6LN-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=10%3A3" class="entry__link" data-glightbox="title: AI Artist - Samurai YukaiX; description: .entry__desc-05">
+    <div class="entry__thumb">
+      <img src="../images/folio/figma-active-prototyping/samurai.jpg" alt="AI Artist - Samurai Yukai">
+    </div>
+    <div class="entry__info">
+      <h4 class="entry__title">AI Artist - Samurai Yukai</h4>
+      <div class="entry__cat">Website Figma </div>
+    </div>
+  </a>
+
+  <div class="glightbox-desc entry__desc-05">
+    <p>
+    --
+    </p>
+  </div>
+</div> <!-- entry -->     
+     
+              
+
+       </div> <!-- folio entries -->
+
+            <div class="row width-sixteen-col ">
+        <div class="column xl-6 lg-6  md-12"> 
+ <a href="/portfolio/"  class="btn btn--primary s-header__contact-btn m-btm-10px">Portfolio</a>
+        </div>
+      </div>
+
+             <!-- end s-testimonials -->
+
+        </section>
+    <section class="s-pagecontent pagecontent">
+  <div class="row pageintro">
+    <div class="column xl-6 lg-12">
+      <h2 class="text-display-title">Crafting Immersive User Experiences with Figma</h2>
+    </div>
+    <div class="column xl-6 lg-12 u-flexitem-x-right">
+      <p class="lead">
+        With over two decades of experience in UX design, I specialize in creating dynamic, user-friendly web experiences using cutting-edge tools like Figma. My expertise spans from conceptualization to implementation, ensuring seamless, accessible, and high-performing digital solutions.
+      </p>
+      <a href="../contact.html" class="btn btn--primary s-header__contact-btn m-btm-10px">Discuss Your Project</a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column xl-12 grid-block pd-top-40px">
+      <div class="grid-full grid-list-items list-items show-ctr">
+        
+        <!-- Figma Mastery -->
+        <div class="grid-list-items__item list-items__item">
+          <div class="list-items__item-header">
+            <h3 class="list-items__item-title">Figma Active Prototyping Expertise</h3>
+          </div>
+          <div class="list-items__item-text">
+            <p>Leveraging Figma's powerful features to create interactive and dynamic prototypes:</p>
+            <ul class="list-services">
+              <li>Utilizing Figma variables for responsive and adaptive designs</li>
+              <li>Crafting complex user flows and realistic interactions</li>
+              <li>Implementing micro-interactions for enhanced user engagement</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Comprehensive Design Skills -->
+        <div class="grid-list-items__item list-items__item">
+          <div class="list-items__item-header">
+            <h3 class="list-items__item-title">Full-Spectrum Design Capabilities</h3>
+          </div>
+          <div class="list-items__item-text">
+            <p>Offering end-to-end design solutions with proficiency in:</p>
+            <ul class="list-services">
+              <li>Adobe XD, Photoshop, and other industry-leading design tools</li>
+              <li>Creating and maintaining comprehensive design systems</li>
+              <li>Developing WCAG-compliant, accessible web designs</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Development Expertise -->
+        <div class="grid-list-items__item list-items__item">
+          <div class="list-items__item-header">
+            <h3 class="list-items__item-title">From Design to Development</h3>
+          </div>
+          <div class="list-items__item-text">
+            <p>Bridging the gap between design and implementation:</p>
+            <ul class="list-services">
+              <li>Translating designs into clean, optimized HTML/CSS code</li>
+              <li>WordPress development for custom websites and themes</li>
+              <li>Version control with Git, including GitHub and GitLab</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Performance Optimization -->
+        <div class="grid-list-items__item list-items__item">
+          <div class="list-items__item-header">
+            <h3 class="list-items__item-title">Performance and SEO Optimization</h3>
+          </div>
+          <div class="list-items__item-text">
+            <p>Ensuring your web presence is fast, findable, and effective:</p>
+            <ul class="list-services">
+              <li>Optimizing page speed scores (Google PageSpeed Insights)</li>
+              <li>Implementing SEO best practices</li>
+              <li>Proficient in Google Analytics and Search Console</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Project Management -->
+        <div class="grid-list-items__item list-items__item">
+          <div class="list-items__item-header">
+            <h3 class="list-items__item-title">Efficient Project Management</h3>
+          </div>
+          <div class="list-items__item-text">
+            <p>10+ years of remote work experience, ensuring smooth project execution:</p>
+            <ul class="list-services">
+              <li>Proficient in Jira, Redmine, Asana, Trello, and Slack</li>
+              <li>Effective collaboration with cross-functional teams</li>
+              <li>Consistent delivery of high-quality results on time</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <a href="../contact.html" class="btn btn--primary s-header__contact-btn m-btm-10px">Let's Bring Your Vision to Life</a>
+  </div>
+</section>
+
+    
+  </section>
+  
+  <!-- # cta
+        ================================================== -->
+  <section id="cta" class="s-cta">
+    <div class="row row-x-center text-center">
+      <div class="column xl-8 lg-12">
+        <div class="s-cta__content">
+          <h2 class="text-display-title"> Let's Create Something Amazing Together </h2>
+          <p class="lead"> Ready to start your project? Contact me today to discuss your design and development needs. </p>
+          <a href="../contact.html" class="btn btn--primary">Let's Work Together</a> 
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- # footer 
+        ================================================== --> 
+  <div w3-include-html="../includes/footer.html"></div>
+</div>
+
+<!-- Java Script
+    ================================================== --> 
+<script src="../js/plugins.js"></script> 
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -268,7 +268,7 @@ body{
 /*--------------------------------------------------
     ## hero
 ---------------------------------------------------*/
-section.hero{ background: var(--bg1); padding-top: 64px; text-align: center; position: relative; overflow: hidden; }
+section.hero{ background: var(--bg1); padding-top: 64px; text-align: center; position: relative; overflow: hidden; border-bottom: 2px solid #fff }
 
 section.hero .droplet{ position: absolute; width: 100px; height: 100px;  z-index: 2; }
 section.hero .droplet:nth-child(1){ position: absolute; width: 100px; height: 100px; left: 00%; top: 40%; z-index: 2; }
@@ -339,7 +339,7 @@ span.item:nth-child(5) {
 /* Hero image container with position and z-index */
 section.hero .hero-img {
   position: relative;
-  margin-bottom: -200px;
+  margin-bottom: -140px;
   z-index: 1;
   animation: floatImage 6s infinite ease-in-out; /* Add float animation */
 }
@@ -457,6 +457,7 @@ section.hero .wave {
   position: relative;
   z-index: 10;
   animation: waveEffect 6s infinite ease-in-out;
+    border-bottom: 2px solid #fff
 }
 
 /* Second reflected animated wave */
@@ -612,9 +613,14 @@ text-transform: uppercase;
 }
 
 /* rhs*/
-#fold2 .slider-cn{border-radius: 40px; background: var(--bg1); height: 100%;}
-#fold2 .slider-cn .carousel-inner{border-radius: 40px; }
-#fold2 .slider-cn .carousel-indicators { flex-direction: column; margin: 0px; position: absolute; top: 20px; right: 20px; left: auto; bottom: auto; row-gap: 16px;}
+/*#fold2 .slider-cn{border-radius: 00px; background:red; height: 100%;}*/
+#fold2 .slider-cn .carousel-inner{border-radius: 40px;  background:  url("../img/bg_slider1_blank.png") no-repeat center bottom; position: relative}
+#fold2 .slider-cn .carousel-inner:before{ content: " ";  width: 100%; min-height: 330px; bottom: 0px;  background:  url("../img/bg_slider1_splash.png") no-repeat center bottom; position: absolute; z-index: 2;}
+#fold2 .slider-cn .carousel-inner:after{ content: " "; width: 100%; min-height: 460px; top: 100px;  background:  url("../img/slider-text.svg") no-repeat center bottom; position: absolute; z-index: 1; animation: floatImage 6s infinite ease-in-out}
+
+#fold2 .slider-cn .carousel-inner .carousel-item{ text-align: center; padding-top: 180px; padding-bottom:64px; }
+#fold2 .slider-cn .carousel-inner .carousel-item IMG{ margin: 0 auto; z-index: 0;}
+#fold2 .slider-cn .carousel-indicators { flex-direction: column; margin: 0px; position: absolute; top: 20px; right: 20px; left: auto; bottom: auto; row-gap: 16px; z-index: 20px;}
 #fold2 .slider-cn .carousel-indicators BUTTON{width: 40px; height: 40px; line-height: 1; border-radius: 50%; background-color: #cccccc10; color: var(--bg-lite); border:1px solid var(--bg-lite);  }
 #fold2 .slider-cn .carousel-indicators .active{ background: var(--bg-lite); color: var(--color1); font-weight: bold; }
 
@@ -839,6 +845,7 @@ text-transform: uppercase;
 }
 
 /* Optional: Hover state for a more interactive effect */
+#fold4 li.nav-item a,
 #fold4 li.nav-item a.nav-link:hover {
     color: var(--bg2); /* Hover effect for the text */
 }
@@ -969,11 +976,15 @@ line-height: normal;
 #cssportal-grid #div13 {
 	grid-area: 2/1/3/2;
 	background-color: #ffffff;
+    
+     
+    
 }
 
 #cssportal-grid #div14 {
 	grid-area: 2/2/4/4;
 	background-color: #ffffff;
+  
 }
 
 
@@ -1220,11 +1231,76 @@ line-height: normal;
 
 
 /*--------------------------------------------------
+# apge contact
+---------------------------------------------------*/
+.pg-contact{}
+#fold4.pg-contact .lhs{ border-top-right-radius: 0px; border-bottom-right-radius: 0px;}
+#fold4.pg-contact .rhs{
+    background: #ECF3F7;
+/*    padding: 20px;*/
+    border-bottom-right-radius: 40px; 
+    border-top-right-radius: 40px;
+    
+}
+.pg-contact .rhs FORM{ padding: 40px;}
+.pg-contact .rhs FORM .vstack{}
+
+#fh5co-main {
+    
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+#fh5co-main .fh5co-narrow-content {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    padding: 4em 0;
+}
+.pg-contact .rhs FORM .form-control{
+       -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    background: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.1) !important;
+    height: 54px !important;
+    font-size: 18px;
+    font-weight: 300;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 12px !important;
+}
+.pg-contact .rhs FORM #message {
+    height: 130px !important;
+}
+.pg-contact .rhs FORM P{ margin-bottom: 40px; margin-top: 32px}
+
+
+@media (max-width: 767.98px) {
+
+     #fold4.pg-contact .lhs{ margin-bottom: 20px; border-radius: 40px}
+
+    #fold4.pg-contact .lhs,
+    #fold4.pg-contact .rhs{
+        border-radius: 40px;
+    }}
+
+/*--------------------------------------------------
 # FOOTER 
 ---------------------------------------------------*/
 #footer-main{ padding-bottom: 150px; text-align: center;}
-#footer-main{background: var(--bg1); color: #fff; border-color:#ffffff!important}
-#footer-main .splash{width: 100%; height: 400px; display: block;}
+#footer-main{
+    background: #144380; 
+    color: #fff; 
+    border-color:#ffffff!important;
+    border-top: 2px solid #ffffff;
+}
+#footer-main .splash{width: 100%; height: 400px; display: block; background:  url("../img/wave3.png") no-repeat; background-size: cover; margin-top: -20px;
+    
+
+}
 
 #footer-main .ftb{border-radius: 99px!important; line-height: 36px!important;}
 #footer-main .disclaimer{ font-size: 14px; line-height: 130%; text-align: left;  border-top:1px solid #ffffff20; border-bottom: 1px solid #ffffff20; margin-top: 60px; padding-top:60px; padding-bottom: 60px; color:#ffffff50; }
@@ -1244,7 +1320,7 @@ line-height: normal;
 
 @media (max-width: 767.98px) {
     #footer-main .copyright{text-align: center}
-    #footer-main{padding-left: 20px; padding-right: 20px;}
+/*    #footer-main{padding-left: 20px; padding-right: 20px;}*/
     #footer-main .disclaimer .col-lg-5{ }
     #footer-main .color2{margin-top: 32px;}
    #footer-main .copyright .social{justify-content:center; margin-top: 24px;}  

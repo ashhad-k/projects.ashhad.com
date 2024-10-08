@@ -79,7 +79,7 @@
     });
 
   }; // end ssMobileMenu
-
+    
 
      /* glightbox
     * ------------------------------------------------------ */ 
@@ -260,9 +260,10 @@
     ssPreloader();
     ssMobileMenu();
     ssSwiper();
-       ssGLightbox();
+    ssGLightbox();
     ssAlertBoxes();
     ssMoveTo();
+       includeHTML();
 
   })();
 

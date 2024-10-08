@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dribbble Portfolio</title>
+    <style>
+        #dribbble-portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .dribbble-shot {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .dribbble-shot img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .dribbble-shot h3 {
+            padding: 10px;
+            margin: 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="dribbble-portfolio"></div>
+
+    <script>
+        const clientId = '2679af59f4f92ec97ef3895821ae775dbd15bcd6d28741cf6f0c40cd154c7a28';
+        const username = 'ashhad1';
+        const url = `https://api.dribbble.com/v2/user/shots?access_token=${clientId}`;
+
+        const portfolioContainer = document.getElementById('dribbble-portfolio');
+
+        fetch(url)
+            .then((response) => response.json())
+            .then((data) => {
+                data.forEach((shot) => {
+                    const shotElement = document.createElement('div');
+                    shotElement.className = 'dribbble-shot';
+
+                    const imgElement = document.createElement('img');
+                    imgElement.src = shot.images.normal;
+                    imgElement.alt = shot.title;
+
+                    const titleElement = document.createElement('h3');
+                    titleElement.textContent = shot.title;
+
+                    shotElement.appendChild(imgElement);
+                    shotElement.appendChild(titleElement);
+                    portfolioContainer.appendChild(shotElement);
+                });
+            })
+            .catch((error) => console.error('Error:', error));
+    </script>
+</body>
+</html>
