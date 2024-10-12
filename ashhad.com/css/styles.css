@@ -1685,7 +1685,7 @@ hr.fancy::before {
 	background-repeat: no-repeat;
 	background       : center center;
 	background-size  : contain;
-	background-image : url(../images/icons/icon-quote.svg);
+	background-image : url(/images/icons/icon-quote.svg);
 	transform        : translate(-50%, 0, 0);
 	position         : absolute;
 	top              : var(--vspace-1);
@@ -3801,7 +3801,7 @@ td:last-child {
     position: relative
 }
 .s-pageheader.sml-sticky-hdr .sticky-btn{ display: flex; justify-content: center; align-items: center; column-gap: 6px;}
-.s-pageheader.sml-sticky-hdr .sticky-btn i{ display: flex; justify-content: center; align-items: center;}
+.s-pageheader.sml-sticky-hdr .sticky-btn i{ display: flex; justify-content: center; align-items: center; margin-top: -15px}
 .s-pageheader.sml-sticky-hdr  .page-title{ 
     font-size  : clamp(5.2rem, 1vw, var(--text-huge-1));
 	}
@@ -4709,11 +4709,16 @@ margin-top: -40px;
 }
 
 .s-footer__bottom {
-	font-size : calc(var(--text-size) * 0.85);
+/*	font-size : calc(var(--text-size) * 0.85);*/
+	font-size : calc(var(--text-sm) * 0.85);
 	color     : rgba(255, 255, 255, 0.25);
 	margin-top: var(--vspace-0_5);
 	position  : relative;
+    text-align: center;
 }
+
+.locales{display: flex; column-gap: 16px; justify-content: center; opacity: 0.5; flex-flow: wrap; padding-top: 48px; padding-bottom: 48px}
+.locales a{ font-size: 14px}
 
 .s-footer .link-list {
 	list-style : none;
@@ -4735,6 +4740,12 @@ margin-top: -40px;
 .s-footer .link-list a:hover {
 	color: var(--color-3);
 }
+
+
+@media screen and (max-width: 768px) {
+.locales a{width: 30%;}
+}
+
 
 /* ------------------------------------------------------------------- 
  * ## newsletter
@@ -5206,4 +5217,4 @@ margin-top: -40px;
 
 /* Custom Overwrite*/
 
-/*a i{ position: relative; top: 4px; }*/
+a i{ position: relative; top: 5px; }

@@ -19,7 +19,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="manifest" href="site.webmanifest">
+<link rel="manifest" href="/site.webmanifest">
 
 <!-- Google tag (gtag.js) --> 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GDH2G4VTTC"></script> 
@@ -30,6 +30,8 @@
 
       gtag('config', 'G-GDH2G4VTTC');
     </script> 
+
+</head>
 <!-- include script--> 
 <script>
 function includeHTML(callback) {
@@ -75,8 +77,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-</head>
-
 <body id="top">
 
 <!-- preloader
@@ -96,8 +96,6 @@ document.addEventListener('DOMContentLoaded', function() {
         ================================================== -->
   <div w3-include-html="includes/header2.html"></div>
   
-  <!-- end s-header --> 
-  
   <!-- # site main content
         ================================================== -->
   <section id="content" class="s-content"> 
@@ -114,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <!-- s-intro__content-text -->
           
           <div class="s-intro__content-media">
-            <div class="s-intro__content-media-inner"><img src="images/intro-bg.jpg" alt="Ashhad Khan - UI/UX Designer and Frontend Developer" srcset="images/intro-bg.jpg 1x, images/intro-bg@2x.jpg 2x">
+            <div class="s-intro__content-media-inner"><img src="images/intro-bg.jpg" alt="Ashhad Khan - UI/UX Designer and Frontend Developer" srcset="images/intro-bg.jpg 1x, /images/intro-bg@2x.jpg 2x">
               <div class="lines"> <span></span> </div>
             </div>
           </div>
@@ -145,13 +143,20 @@ document.addEventListener('DOMContentLoaded', function() {
         ================================================== --> 
   
   <!-- end s-cta -->
-  <div w3-include-html="includes/footer.html"></div>
+  <div w3-include-html="/includes/footer.html"></div>
 </div>
 <!-- end page-wrap --> 
 
 <!-- Java Script
     ================================================== --> 
-<script src="js/plugins.js"></script> 
+<script src="js/plugins.js"></script>
 <script src="js/main2.js"></script>
+<script>
+  includeHTML(function() {
+    // Initialize smooth scroll after the HTML content is included
+    // ... (your existing code)
+  });
+</script>
+
 </body>
 </html>

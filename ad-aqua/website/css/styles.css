@@ -191,6 +191,25 @@ background-clip: text;
     padding: 14px 28px;
     text-align: center;
 }
+.btn-primary {
+    --bs-btn-color: var(--bg1);
+    
+    --bs-btn-border-color: var(--bg1);
+    --bs-btn-hover-bg: var(--bg1);
+    --bs-btn-hover-border-color: var(--bg1);
+    --bs-btn-active-bg: var(--bg1);
+    --bs-btn-active-border-color: var(--bg1);
+    --bs-btn-disabled-color: var(--bg1);
+    --bs-btn-disabled-border-color: var(--bg1);
+    background: var(--bg1);
+    color: #fff;
+    border-radius: 90px;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 14px 28px;
+    text-align: center;
+}
+.btn-primary:hover{ background:   var(--bg1);}
 
 .title-cn{ margin-bottom: 48px;}
 .cn-btn{ display: flex; column-gap: 12px; padding-top: 12px; padding-bottom: 12px; }
@@ -374,7 +393,7 @@ background-clip: text;
 section.hero .large-txt {
 	position: relative;
     left: 50%;
-    z-index: 0;
+    z-index: -1;
    
     
     
@@ -615,10 +634,10 @@ text-transform: uppercase;
 /* rhs*/
 /*#fold2 .slider-cn{border-radius: 00px; background:red; height: 100%;}*/
 #fold2 .slider-cn .carousel-inner{border-radius: 40px;  background:  url("../img/bg_slider1_blank.png") no-repeat center bottom; position: relative}
-#fold2 .slider-cn .carousel-inner:before{ content: " ";  width: 100%; min-height: 330px; bottom: 0px;  background:  url("../img/bg_slider1_splash.png") no-repeat center bottom; position: absolute; z-index: 2;}
+#fold2 .slider-cn .carousel-inner:before{ content: " ";  width: 100%; min-height: 330px; bottom: -20px;  background:  url("../img/bg_slider1_splash.png") no-repeat center bottom; position: absolute; z-index: 2; animation: floatImage 9s infinite ease-in-out}
 #fold2 .slider-cn .carousel-inner:after{ content: " "; width: 100%; min-height: 460px; top: 100px;  background:  url("../img/slider-text.svg") no-repeat center bottom; position: absolute; z-index: 1; animation: floatImage 6s infinite ease-in-out}
 
-#fold2 .slider-cn .carousel-inner .carousel-item{ text-align: center; padding-top: 180px; padding-bottom:64px; }
+#fold2 .slider-cn .carousel-inner .carousel-item{ text-align: center; padding-top: 120px; padding-bottom:64px; }
 #fold2 .slider-cn .carousel-inner .carousel-item IMG{ margin: 0 auto; z-index: 0;}
 #fold2 .slider-cn .carousel-indicators { flex-direction: column; margin: 0px; position: absolute; top: 20px; right: 20px; left: auto; bottom: auto; row-gap: 16px; z-index: 20px;}
 #fold2 .slider-cn .carousel-indicators BUTTON{width: 40px; height: 40px; line-height: 1; border-radius: 50%; background-color: #cccccc10; color: var(--bg-lite); border:1px solid var(--bg-lite);  }
@@ -642,6 +661,18 @@ text-transform: uppercase;
     }
 }
 
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+.fade-out, .fade-in {
+  will-change: opacity;
+}
 
 /*--------------------------------------------------
     ## fold1. Internal
@@ -663,6 +694,8 @@ text-transform: uppercase;
 /*   transform: translate(50%, 10%);*/
     left: calc(50% - 395px);
 }
+
+#fold3 .img-vh-420px{max-height: 420px;}
 
 #fold3 .circles > div {
   animation: fold3GrowAndFade 3s infinite ease-out;
@@ -983,7 +1016,9 @@ line-height: normal;
 
 #cssportal-grid #div14 {
 	grid-area: 2/2/4/4;
-	background-color: #ffffff;
+/*	background-color: #ffffff;*/
+    background: url("../img/grid-img.jpg") no-repeat center center;
+    background-size: cover;
   
 }
 
@@ -1017,7 +1052,7 @@ line-height: normal;
 /*--------------------------------------------------
     ## fold7 
 ---------------------------------------------------*/
-#fold7{ padding-top:40px;  padding-bottom: 200px; position: relative; }
+#fold7{ padding-top:40px;  padding-bottom: 200px; position: relative;  }
 #fold7 > .droplet:nth-child(1){ position: absolute; width: 100px; height: 100px; left: 90%; top: 100px; z-index: 2; }
 #fold7 > .droplet:nth-child(2){ position: absolute; width: 100px; height: 100px; left: 10%; bottom: 40px; z-index: 2; }
 
@@ -1052,6 +1087,17 @@ line-height: normal;
 .pic2{ background: url("../img/bg2.jpg") no-repeat center center;}
 .pic3{ background: url("../img/earth3.jpg") no-repeat center center;}
 .pic4{ background: url("../img/earth4.jpg") no-repeat center center;}
+.pic5{ background: url("../img/pic5.jpg") no-repeat center center;}
+
+.fixed-bg{
+  position: relative;
+  height: 500px;
+/*  background-image: url("../img/pic5.jpg");*/
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
 
 @media (max-width: 767.98px) {
         #fold7{ padding-bottom: 100px;}

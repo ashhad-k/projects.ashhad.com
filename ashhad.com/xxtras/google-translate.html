@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Translation</title>
+    <script>
+        async function translateText() {
+            const textToTranslate = document.getElementById('textToTranslate').innerText;
+            const targetLanguage = document.getElementById('languageDropdown').value;
+
+            if (!targetLanguage) return; // Exit if no language is selected
+
+            try {
+                const response = await fetch(`https://translation.googleapis.com/language/translate/v2?key=AIzaSyD7ccrbU_BAgkVVJNbYZTn_lxfS3bGR85Y`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        q: textToTranslate,
+                        target: targetLanguage
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                const data = await response.json();
+                document.getElementById('translatedText').innerText = data.data.translations[0].translatedText;
+            } catch (error) {
+                console.error('Error translating text:', error);
+                document.getElementById('translatedText').innerText = 'Translation error';
+            }
+        }
+    </script>
+</head>
+<body>
+    <p id="textToTranslate">This is a sample text that will be translated.</p>
+    <select id="languageDropdown" onchange="translateText()">
+        <option value="">Select Language</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+        <option value="de">German</option>
+        <option value="zh">Chinese</option>
+        <!-- Add more languages as needed -->
+    </select>
+     <p id="translatedText"></p>
+    
+    
+    
+    
+    
+</body>
+</html>

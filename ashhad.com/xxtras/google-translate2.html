@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design Process | UI/UX, Web Design & Development Methodology by Ashhad Khan</title>
+<meta name="description" content="Explore the comprehensive design process of Ashhad Khan, a seasoned UI/UX designer and frontend developer. From discovery to deployment, learn how I create user-centered, accessible, and effective digital solutions.">
+<meta name="keywords" content="design process, UI/UX methodology, web design workflow, user-centered design, Ashhad Khan, frontend development, responsive design, accessibility, usability testing, design principles, Figma, Adobe XD, HTML, CSS, JavaScript">
+<meta name="author" content="Ashhad Khan">
+<meta name="robots" content="index, follow">
+<meta name="language" content="en-us">
+<meta name="revisit-after" content="7 days">
+<meta name="copyright" content="Copyright 2024 Ashhad Khan">
+<meta name="classification" content="UI/UX Designer, Web Developer, Design Process Specialist">
+<script>
+    document.documentElement.classList.remove('no-js');
+    document.documentElement.classList.add('js');
+</script>
+
+<!-- CSS
+    ================================================== -->
+<link rel="stylesheet" href="css/vendor.css">
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- favicons
+    ================================================== -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- Google tag (gtag.js) --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GDH2G4VTTC"></script> 
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-GDH2G4VTTC');
+</script> 
+
+<!-- include script--> 
+<script>
+function includeHTML(callback) {
+  var z, i, elmnt, file, xhttp;
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML(callback);
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      return;
+    }
+  }
+  if (callback) callback();
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+  includeHTML(function() {
+    document.querySelectorAll('a.smoothscroll').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  });
+});
+
+// Google Translate API integration
+async function translateText() {
+    const textToTranslate = document.getElementById('textToTranslate').value;
+    const targetLanguage = document.getElementById('targetLanguage').value;
+
+    if (!targetLanguage) return; // Exit if no language is selected
+
+    try {
+        const response = await fetch(`https://translation.googleapis.com/language/translate/v2?key=AIzaSyD7ccrbU_BAgkVVJNbYZTn_lxfS3bGR85Y`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                q: textToTranslate,
+                target: targetLanguage
+            })
+        });
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        const data = await response.json();
+        document.getElementById('translatedText').innerText = data.data.translations[0].translatedText;
+    } catch (error) {
+        console.error('Error translating text:', error);
+        document.getElementById('translatedText').innerText = 'Translation error';
+    }
+}
+</script>
+    
+</head>
+
+<body id="top">
+    
+<!-- preloader
+    ================================================== -->
+<div id="preloader">
+  <div id="loader" class="dots-fade">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+<!-- page wrap
+    ================================================== -->
+<div id="page" class="s-pagewrap"> 
+  <!-- # site header 
+        ================================================== -->
+    
+<!-- Translation Section -->
+<section id="translation" class="s-translation">
+  <div class="row">
+    <div class="column xl-12">
+      <h2>Translate Text</h2>
+      <textarea id="textToTranslate" rows="4" cols="50" placeholder="Enter text to translate"></textarea><br>
+      <select id="targetLanguage" onchange="translateText()">
+        <option value="">Select Language</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+        <option value="de">German</option>
+        <option value="zh">Chinese</option>
+        <!-- Add more languages as needed -->
+      </select><br>
+      <h2>Translated Text:</h2>
+      <p id="translatedText"></p>
+    </div>
+  </div>
+</section>
+  <header class="s-header">
+    <div class="row s-header__inner width-sixteen-col">
+      <div class="s-header__block">
+        <div class="s-header__logo"> <a class="logo" href="/"> <img src="images/logo.svg" alt="Ashhad - Freelance UI UX Designer "> </a> </div>
+        <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a> </div>
+      
+      <nav class="s-header__nav"> 
+          <ul class="s-header__menu-links">
+          <li><a href="/portfolio/" >Portfolio</a></li>
+          <li><a href="/#skills">Skills &amp; Expertise</a></li>
+          <li><a href="https://projects.ashhad.com/">Projects</a></li>
+          <li><a href="/contact/" >Contact</a></li>
+        </ul>
+        
+          
+          
+        <div class="s-header__contact"> 
+          <a href="https://www.behance.net/ashhad1" title="Design Portfolio - Ashhad Khan "> <img src="images/icons/behance.png" alt="Behance" class="u-vm u-mb-0"/> </a> 
+          <a href="https://www.linkedin.com/in/ashhad-profile/" title="LinkedIn Profile - Ashhad Khan"> <img src="images/icons/linkedin.png" alt="LinkedIn Profile - Product Designer"  class="u-vm u-mb-0"/> </a> 
+          <a href="https://ashhad.com/resume.pdf" title="Download Resume - Freelance Designer"> <img src="images/icons/download2.png" alt="Download Resume - Freelance Designer"  class="u-vm u-mb-0"/></a> 
+          <a href="https://wa.me/923332259620" title="Contact via Whatsapp"> <img src="images/icons/whatsapp.png" alt="WhatsApp"  class="u-vm u-mb-0"/> </a> 
+        </div>
+        
+      </nav>
+      
+    </div>
+    
+  </header>
+  
+  <!-- # site main content
+        ================================================== -->
+  <section id="content" class="s-content">
+   <section class="s-pageheader pageheader">
+  <div class="row">
+   <div class="column xl-12">
+  <h1 class="page-title">
+    <span class="page-title__small-type text-pretitle">Human-Centered Design Approach</span>
+    Creating Effective Digital Solutions Through a Proven Process
+  </h1>
+</div>
+  </div>
+</section>
+     
+    <section class="s-pagecontent pagecontent">
+<div class="row pageintro">
+  <div class="column xl-6 lg-12">
+    <h2 class="text-display-title">Effective Design Solutions Through a Proven Process</h2>
+  </div>
+  <div class="column xl-6 lg-12 u-flexitem-x-right">
+    <p class="lead">
+      As a seasoned UI/UX designer and frontend developer, I believe that a well-designed product is not just aesthetically pleasing but also functional, user-friendly, and effective in achieving its goals. My design process is tailored to ensure that my clients receive high-quality products that meet their needs and exceed their expectations.
+    </p>
+    <a href="/portfolio/" class="btn btn--stroke s-header__contact-btn m-btm-10px">Portfolio</a>
+  </div>
+</div>
+  
+  <div class="row">
+    <div class="column xl-12 grid-block pd-top-40px">
+      <div class="grid-full grid-list-items list-items show-ctr">
+        <!-- Discovery -->
+        <div class="grid-list-items__item list-items__item">
+          <div class="list-items__item-header">
+            <h3 class="list-items__item-title">Discovery</h3>
+          </div>
+          <div class="list-items__item-text">
+            <p>My design process begins with a thorough discovery phase. I work closely with my clients to:</p>
+            <ul class="list-services">
+              <li>Understand their goals and target audience</li>
+              <li>Identify unique challenges</li>
+              <li>Conduct research and gather feedback</li>
+              <li>Analyze data to gain a deep understanding of project requirements</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Conceptualization -->
+        <div class="grid-list-items__item list-items__item">
+          <div class="list-items__item-header">
+            <h3 class="list-items__item-title">Conceptualization</h3>
+          </div>
+          <div class="list-items__item-text">
+            <p>With a clear understanding of the project requirements, I move on to the conceptualization phase:</p>
+            <ul class="list-services">
+              <li>Brainstorm and explore different ideas and concepts</li>
+              <li>Develop solutions to address the client's needs</li>
+              <li>Create wireframes, prototypes, and mockups</li>
+              <li>Visualize the product and identify potential issues</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Design Development -->
+        <div class="grid-list-items__item list-items__item">
+          <div class="list-items__item-header">
+            <h3 class="list-items__item-title">Design Development</h3>
+          </div>
+          <div class="list-items__item-text">
+            <p>Once I have a solid concept, I move on to the design development phase:</p>
+            <ul class="list-services">
+              <li>Create visually appealing and user-friendly designs</li>
+              <li>Align designs with the client's brand and goals</li>
+              <li>Use the latest design tools and technologies</li>
+              <li>Develop responsive, interactive, and engaging designs</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Testing and Iteration -->
+        <div class="grid-list-items__item list-items__item">
+          <div class="list-items__item-header">
+            <h3 class="list-items__item-title">Testing and Iteration</h3>
+          </div>
+          <div class="list-items__item-text">
+            <p>Testing and iteration are crucial steps in my design process:</p>
+            <ul class="list-services">
+              <li>Conduct usability testing</li>
+              <li>Gather feedback from clients and users</li>
+              <li>Make necessary iterations</li>
+              <li>Ensure the product meets client expectations and is error-free</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Launch and Deployment -->
+        <div class="grid-list-items__item list-items__item">
+          <div class="list-items__item-header">
+            <h3 class="list-items__item-title">Launch and Deployment</h3>
+          </div>
+          <div class="list-items__item-text">
+            <p>Once the design is finalized, I move on to the launch and deployment phase:</p>
+            <ul class="list-services">
+              <li>Work closely with clients for a smooth launch process</li>
+              <li>Provide ongoing support and maintenance</li>
+              <li>Ensure the product continues to meet evolving needs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <a href="/contact/" class="btn btn--primary s-header__contact-btn m-btm-10px">Get in Touch</a>
+  </div>
+</section>
+
+
+  </section>
+  
+  <!-- # cta
+        ================================================== -->
+  <section id="cta" class="s-cta">
+    <div class="row row-x-center text-center">
+      <div class="column xl-8 lg-12">
+        <div class="s-cta__content">
+          <h2 class="text-display-title"> Let's Create Something Amazing Together </h2>
+          <p class="lead"> Ready to start your project? Contact me today to discuss your design and development needs. </p>
+          <a href="/contact/" class="btn btn--primary">Let's Work Together</a> 
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- # footer 
+        ================================================== --> 
+  <div w3-include-html="/includes/footer.html"></div>
+</div>
+
+<!-- Java Script
+    ================================================== --> 
+<script src="js/plugins.js"></script> 
+<script src="js/main.js"></script>
+</body>
+</html>
