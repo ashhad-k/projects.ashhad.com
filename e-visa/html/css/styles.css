@@ -366,15 +366,54 @@ body{
     padding:40px;
     border-radius:20px;
     min-height:700px;
+    align-content: space-between;
 
 }
-#fold1 .data1{ max-width:800px;}
-#fold1 .data1 .action{ display: flex; gap:12px; align-items:center}
+#fold1 .carousel .action{ position: absolute; left: 40px; bottom: 40px;}
+#fold1 .carousel-inner { position: relative}
+#fold1 .carousel-inner .carousel-item{
+    padding:40px;
+    border-radius:20px;
+    min-height:700px;
+     background-size: cover; 
+    background-repeat: no-repeat;
+}
+
+#fold1 .carousel-inner .carousel-item:nth-child(1){  background: url("../img/header/img-ski.jpg") no-repeat; }
+#fold1 .carousel-inner .carousel-item:nth-child(2){ background: url("../img/header/img2.jpg") no-repeat;}
+#fold1 .carousel-inner .carousel-item:nth-child(3){  background: url("../img/header/img-desert.jpg") no-repeat;}
+#fold1 .carousel-inner .carousel-item:nth-child(4){  background: url("../img/header/img-indoor.jpg") no-repeat;}
+#fold1 .carousel-inner .carousel-item:nth-child(5){ background: url("../img/header/img-valleys.jpg") no-repeat;}
+
+#fold1 .carousel-inner .carousel-item .data1{ 
+max-width: 800px;
+    min-height: 580px;
+    display: flex;
+    flex-direction: column;
+    align-content:baseline;
+    gap:20px;
+}
+#fold1 .carousel-inner .carousel-item .data1 p{ 
+    margin-top: auto;
+    background: rgba(255, 255, 255, 0.10);
+    padding: 20px;
+    border-radius: 20px;
+backdrop-filter: blur(10px); 
+}
+/* P color as per BG*/
+#fold1 .carousel-inner .carousel-item:nth-child(1) .data1 p{ color:#00000080 }
+#fold1 .carousel-inner .carousel-item:nth-child(2) .data1 p{ color:#ffffff80 }
+#fold1 .carousel-inner .carousel-item:nth-child(3) .data1 p{ color:#ffffff80 }
+#fold1 .carousel-inner .carousel-item:nth-child(4) .data1 p{ color:#ffffff80 }
+#fold1 .carousel-inner .carousel-item:nth-child(5) .data1 p{ color:#ffffff80 }
+
+#fold1 .data1 .action{ display: flex; gap:12px; align-items:center; position: relative; left: auto; bottom: auto;}
 #fold1 .data1 .action a{ color:#fff; }
 
-#fold1 .data2{ max-width:600px; align-content:end; color: var(--lite)}
+#fold1 .data2{ align-content:end; color: var(--lite)}
+#fold1 .data2 p{ max-width:600px;}
 #fold1 .data2 .action{ display: flex; gap:12px; align-items:center}
-#fold1 .data2 .action a.btn-blur{ min-width:120px;}
+#fold1 .data2 .action a.btn-blur{ min-width:120px; padding-left: 20px; padding-right: 20px;}
 
 @media (max-width: 767.98px) {
     #fold1 .bgs{ align-items: flex-end;}
@@ -390,6 +429,7 @@ backdrop-filter: blur(10px);
     }
     #fold1 .data1 .action a{ width: 100%; text-align: center;}
     #fold1 .data2{ display: none}
+    #fold1 .carousel-inner .carousel-item .data1 p{  display: none}
 }
 
 
@@ -453,13 +493,14 @@ font-weight: 500;
 .sfold2x2 {
   display: flex;
   flex-wrap: wrap;
-    background: url("../img/bg/lines.svg") no-repeat; 
+    background: url("../img/bg/lines.svg") center center; 
     background-size:contain;
+    background-repeat: no-repeat;
 }
 
 .sfold2x2  .flex-item {
   flex: 1 1 50%;
-  padding: 10px;
+  padding: 20px 30px;
     box-sizing: border-box; 
     text-align: left;
 }
@@ -478,6 +519,7 @@ font-weight: 500;
 
 .three-boxs .item .data{}
 .three-boxs .item .data p{ margin: 0px!important; }
+.three-boxs .item i img{ width: 48px; height: 48px;} 
 
 @media (max-width: 767.98px) {
     .three-boxs .item{min-height: auto;}
@@ -553,10 +595,16 @@ position:relative;
 #fold4 .figure .figure-caption{
 position: absolute;
     bottom: 40px;
-    left: 40px;
+    left: 40px; right: 40px;
     color: #fff;
+    
+    background: rgba(0, 0, 0, 0.20);
+    padding: 20px;
+    border-radius: 10px;
+backdrop-filter: blur(10px); 
+    
 }
-#fold4 .btn-cn{ display: flex; gap:12px; padding: 12px 0px;}
+#fold4 .btn-cn{ display: flex; gap:12px; padding: 12px 0px; border: 0px;}
 #fold4 .btn-cn a{background: #E1E7EB; border-radius: 99px; font-size: 14px; padding: 12px 24px; text-decoration: none; transition: 0.3s ease-in-out; color: var(--bs-dark)}
 #fold4 .btn-cn a.active{ background: var(--green); color: var(--bg-lite);}
 #fold4 .btn-cn a:hover{ background: var(--bg1); color: var(--bg-lite);}
