@@ -48,6 +48,83 @@
 
 
 /*--------------------------------------------------
+    ## pre loader
+---------------------------------------------------*/
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+
+.perloader-object {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  height: 96px;
+  width: 96px;
+  animation: rotate_3922 1.2s linear infinite;
+  background-color: #0FA277;
+  background-image: linear-gradient(#0FA277, #84cdfa, #5ad1cd);
+}
+
+.perloader-object span {
+  position: absolute;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  background-color: #0FA277;
+  background-image: linear-gradient(#0FA277, #84cdfa, #5ad1cd);
+}
+
+.perloader-object span:nth-of-type(1) {
+  filter: blur(5px);
+}
+
+.perloader-object span:nth-of-type(2) {
+  filter: blur(10px);
+}
+
+.perloader-object span:nth-of-type(3) {
+  filter: blur(25px);
+}
+
+.perloader-object span:nth-of-type(4) {
+  filter: blur(50px);
+}
+
+.perloader-object::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background-color: #fff;
+  border: solid 5px #ffffff;
+  border-radius: 50%;
+}
+
+@keyframes rotate_3922 {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------
     ## Globals
 ---------------------------------------------------*/
 :root {
@@ -55,10 +132,11 @@
 --bg2:#AAE1FA;
 --bg-lite:#ffffff;
 --lite:#ffffff;
+--lite2:#7C7C7C;
 --dark:#353844;
 --green:#0FA277;
 --lite-gray:#818490;
-    
+   
     
   --main-color: #164683;
   --main-color2: #FBBC05;
@@ -72,6 +150,7 @@
 
 .color1{color: var(--bg1)}
 .color2{color: var(--bg2)}
+.dark{ color: var(--dark)}
 .bg1{ background: var(--bg1)}
 .bg2{ background: var(--bg2)}
 .lite-gray{color: var(--lite-gray)}
@@ -128,8 +207,9 @@ h6{ font-size: 20px}
  
 }
 
-a{ text-decoration: none; transition: 0.5s ease-in-out}
+a{ text-decoration: none; transition: 0.3s ease-in-out}
 a.btn{ transition: 0.3s ease-in-out}
+a.btn-blur{ transition: 0.3s ease-in-out}
 
 
 .bg-blur{
@@ -140,8 +220,9 @@ backdrop-filter: blur(20px);
 
 
 a.btn.btn-blur{
-background: rgba(255, 255, 255, 0.20);
-backdrop-filter: blur(2px);
+/*background: rgba(255, 255, 255, 0.20);*/
+background: rgba(0, 0, 0, 0.30);
+backdrop-filter: blur(5px);
     color: var(--bg-lite);
     border-radius: 99px;
     font-weight: 300;
@@ -294,6 +375,9 @@ section { padding-top:  120px;}
 /*--------------------------------------------------
     ## Sections 
 ---------------------------------------------------*/
+html {
+    scroll-behavior: smooth;
+}
 body{ 
      font-family: "Poppins", serif;
     font-weight: normal;
@@ -306,9 +390,12 @@ body{
 /*--------------------------------------------------
     ## navbar
 ---------------------------------------------------*/
-.navbar{  z-index: 10;}
+.navbar{  z-index: 11; }
 .navbar .row.w-100{ align-items:center}
-
+.scrolled{   
+    background-color: rgba(255, 255, 255, 0.9); /* Light background on scroll */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
 /* rhs nav of pc*/
 .nav2{}
 
@@ -356,7 +443,7 @@ body{
     ## fold1
 ---------------------------------------------------*/
 
-#fold1{}
+#fold1{ padding-top: 80px!important}
 #fold1 .bgs{ 
     background: url("../img/header/img1.jpg") no-repeat; 
     background-size: cover; 
@@ -393,9 +480,11 @@ max-width: 800px;
     align-content:baseline;
     gap:20px;
 }
+#fold1 .carousel-inner .carousel-item .data1 h2{  text-shadow:  1px 1px 2px rgba(51, 51, 51, 1);}
 #fold1 .carousel-inner .carousel-item .data1 p{ 
     margin-top: auto;
-    background: rgba(255, 255, 255, 0.10);
+/*    background: rgba(255, 255, 255, 0.10);*/
+    background:rgba(0, 0, 0, 0.10);
     padding: 20px;
     border-radius: 20px;
 backdrop-filter: blur(10px); 
@@ -407,8 +496,23 @@ backdrop-filter: blur(10px);
 #fold1 .carousel-inner .carousel-item:nth-child(4) .data1 p{ color:#ffffff80 }
 #fold1 .carousel-inner .carousel-item:nth-child(5) .data1 p{ color:#ffffff80 }
 
-#fold1 .data1 .action{ display: flex; gap:12px; align-items:center; position: relative; left: auto; bottom: auto;}
-#fold1 .data1 .action a{ color:#fff; }
+#fold1 .data1 .action{ 
+    display: flex; 
+    gap:12px; 
+    align-items:center; 
+    position: relative; 
+    left: auto; 
+    bottom: auto;
+}
+
+#fold1 .data1 .action a {
+    color: #fff;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 28px;
+    padding-right: 28px;
+}
+#fold1 .data1 .action a:hover{ color:var(--dark); }
 
 #fold1 .data2{ align-content:end; color: var(--lite)}
 #fold1 .data2 p{ max-width:600px;}
@@ -450,6 +554,8 @@ gap: 10px;
     flex-wrap:wrap;
     margin-left: auto;
     margin-top: -150px;
+    position: relative;
+    z-index: 10;
 }
 
 .panel1 .btn{ color:var(--bg1); font-size:16px; }
@@ -643,6 +749,8 @@ position:relative;
     font-weight: 500; /* Optional: Adjust font weight if needed */
     color: #818490; /* Normal question color */
      transition: color 0.3s, transform 0.3s ease, font-size 0.3s; 
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 #bf-travel .accordion-button:not(.collapsed) {
@@ -751,7 +859,7 @@ position:relative;
 
 #footer-main{
     color: #7C7C7C;
-    padding-bottom: 150px; 
+    padding-bottom: 40px; 
     text-align:left;
 }
 
@@ -792,7 +900,8 @@ position:relative;
 
 #footer-main .t2{border-bottom: 1px solid #EDEDED; padding-top: 40px; padding-bottom: 40px}
 
-
+#footer-main  a{ color: var(--lite2); text-decoration: underline;}
+#footer-main  .disclaimer2{ font-size: 12px;}
 
 
 @media (max-width: 767.98px) {
@@ -812,3 +921,12 @@ position:relative;
    #footer-main .social{justify-content:center; margin-top: 24px;}  
     
 }
+
+/*--------------------------------------------------
+    ## Itnernal
+---------------------------------------------------*/
+
+body.internal{}
+body.internal .pvc OL {margin-bottom: 20px;}
+body.internal .pvc OL UL {margin-bottom: 20px;}
+
