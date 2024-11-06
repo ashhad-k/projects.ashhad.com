@@ -54,6 +54,7 @@
 
 .pd60{padding: 60px;}
 .z10{ z-index: 10; position: relative}
+.v-flex{display: flex; flex-direction: column; justify-content: space-between}
 .d-flex2{display: flex; justify-content: space-between; }
 .d-flex3-bl{display: flex; justify-content: space-between; align-items: flex-end}
 
