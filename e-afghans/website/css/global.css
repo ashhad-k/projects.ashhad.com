@@ -264,6 +264,8 @@ section {
     --bs-btn-disabled-bg: transparent; /* Background color when disabled */
     --bs-btn-disabled-border-color:var(--sea-green); /* Border color when disabled */
     --bs-gradient: none; /* Remove gradient */
+
+/*     filter: blur(5px);*/
 }
 
 .btn-outline.active{color:var(--white)}
