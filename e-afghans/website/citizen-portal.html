@@ -56,7 +56,7 @@
             <li class="nav-item"> <a class="nav-link" href="index.html">Home</a> </li>
             <li class="nav-item"> <a class="nav-link" href="about.html">About E-Afghan</a> </li>
             <li class="nav-item"> <a class="nav-link  active " href="citizen-portal.html">Citizen Portal</a> </li>
-                <li class="nav-item"> <a class="nav-link " href="foreigners.html">Foreigners</a> </li>
+                 <li class="nav-item"> <a class="nav-link " href="e-visa/index.html">Foreigners</a> </li>
             <li class="nav-item"> <a class="nav-link" href="solutions.html">Solutions</a> </li>
 
             <li class="nav-item"> <a class="nav-link " href="support.html">Help &amp; Support</a> </li>
@@ -609,30 +609,60 @@
       </div>
     </div>
     <div class="tab-pane fade" id="special-services" role="tabpanel" aria-labelledby="special-services-tab">
-      <div class="submenu2">
-        <div class="container">
-          <ul class="nav nav-pills" id="special-submenu-tab-list" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="transferring-deceased-tab" data-bs-toggle="tab" data-bs-target="#transferring-deceased" type="button" role="tab" aria-controls="transferring-deceased" aria-selected="true">Transferring Deceased to Afghanistan</button>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="tab-content" id="special-services-content">
-              <div class="tab-pane fade show active" id="transferring-deceased" role="tabpanel" aria-labelledby="transferring-deceased-tab">
-                <div class="has-bar">
-                  <h4>Transferring Deceased to Afghanistan</h4>
-                </div>
-                <p>Details about transferring the deceased to Afghanistan go here.</p>
-              </div>
+  <div class="submenu2">
+    <div class="container">
+      <ul class="nav nav-pills" id="special-submenu-tab-list" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="transferring-deceased-tab" data-bs-toggle="tab" data-bs-target="#transferring-deceased" type="button" role="tab" aria-controls="transferring-deceased" aria-selected="true">Transferring Deceased to Afghanistan</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="emergency-assistance-tab" data-bs-toggle="tab" data-bs-target="#emergency-assistance" type="button" role="tab" aria-controls="emergency-assistance" aria-selected="false">Emergency Assistance</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="tab-content" id="special-services-content">
+          <div class="tab-pane fade show active" id="transferring-deceased" role="tabpanel" aria-labelledby="transferring-deceased-tab">
+            <div class="has-bar">
+              <h4>Transferring Deceased to Afghanistan</h4>
             </div>
+            <p>Details about transferring the deceased to Afghanistan go here.</p>
+          </div>
+          <div class="tab-pane fade" id="emergency-assistance" role="tabpanel" aria-labelledby="emergency-assistance-tab">
+            <div class="has-bar">
+              <h4>Emergency help for Aghan nationals abroad</h4>
+            </div>
+           <div id="my-form-container" class="pd-top-60"></div>
+				<!-- Put this code at the end of your page -->
+
+				<link href="https://cdn.saphyte.com/css/select2/4.0.13/select2.min.css" rel="stylesheet" type="text/css">
+				<script>
+				window.sf_api_url = "https://afghanconsulate.saphyteapi.com";
+				</script>
+				<script src="https://js.hosted-form.com/bundle.latest.js"></script>
+				<script src="https://js.hosted-form.com/vendors.latest.js"></script>
+
+				<script>
+				if (window.SaphyteForm) {
+				// Your page must have a container with the id you are providing. 
+				// Eg: <div id="my-form-container"> ... </div>
+				window.SaphyteForm.render("my-form-container", { id: "PuQpApLyz" });
+				}
+				</script>
+              <style>
+                  .saphyte-form.dGhlbWUtOTE .sp-form-label:not(.signature-label){z-index: 09;}
+              </style>
+			
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
+
   </div>
 </section>
    

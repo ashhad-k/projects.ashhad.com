@@ -924,6 +924,28 @@ section.multi-tabs .tab-content .btn.has-arrow i {
     .hdr2 .cn-btn .btn{ width: 100%; justify-content: center; }
 }
 
+
+
+
+/*--------------------------------------------------
+    ## cN onboarding
+---------------------------------------------------*/
+.cn-onboarding{ min-height: 100vh; }
+.cn-onboarding.bg-animated.above-hero{padding-top: 0px; }
+
+.cn-onboarding .container{ position: relative; z-index: 10;}
+.cn-onboarding header.hero{ 
+    padding-top: 100px;  min-height: calc(100vh - 0px); padding-bottom: 0px;}
+/* form area*/
+.cn-onboarding .rhs{ 
+    padding: 60px 40px 0px 60px; 
+    border-radius: 20px; 
+    background: #ffffff; 
+    color: var(--bg1);}
+
+.cn-onboarding .rhs .sp-text-center.sp-form-section{ display: none}
+
+
 /*--------------------------------------------------
     ## footer
 ---------------------------------------------------*/
