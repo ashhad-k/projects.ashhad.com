@@ -15,11 +15,7 @@
 <link rel="stylesheet" href="css/styles.css">
 
 <!-- locomotve--> 
-<!-- Locomotive Scroll CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.3/dist/locomotive-scroll.min.css">
 
-<!-- Locomotive Scroll JS --> 
-<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.3/dist/locomotive-scroll.min.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg">
@@ -95,25 +91,33 @@
   
   <!--/section-hero -->
   
-  <section  data-scroll-section id="fold1" >
+  <section  data-scroll-section id="fold1"  style="padding-top: 100px;">
     <div class="droplet"  data-scroll data-scroll-delay="0.24" data-scroll-speed="1.5" data-scroll-repeat><img src="img/droplet1.png" alt="" style="left: -40%; top: 40%;"/></div>
     <!--/droplet-->
     <div class="container">
-      <div class="row">
-        <div class="col-lg-10 mx-auto position-relative">
-          <div class="droplet"  data-scroll data-scroll-delay="0.04" data-scroll-speed="3" data-scroll-repeat><img src="img/droplet2.png" alt=""/></div>
-          <!--/droplet-->
-           <div class="small-title text-center mb-3 "  data-scroll data-scroll-speed="2" data-scroll-delay="0.15">Get in Touch
-</div>
-          <h3 class="text-center main-txt"  data-scroll data-scroll-speed="2" data-scroll-delay="0.15"> We'd love to hear from you! Whether you have questions about our sustainable advertising solutions, want to learn more about our impact, or are interested in partnering with us, our team is here to help.
-             <span class="gr-1" >Embrace the Shift with Us </span> 
-            </h3>
-          <div class="large-txt" >
-            <h2   data-scroll data-scroll-speed="0.5" > Get in Touch</h2>
-          </div>
-           
+          <div class="row">
+        <div class="col-lg-12">
+            <div id="my-form-container"> ... </div>
+         
+            </div>
+            <!-- Put this code at the end of your page -->
+
+				<link href="https://cdn.saphyte.com/css/select2/4.0.13/select2.min.css" rel="stylesheet" type="text/css">
+				<script>
+				window.sf_api_url = "https://adaqua.saphyteapi.com";
+				</script>
+				<script src="https://js.hosted-form.com/bundle.latest.js"></script>
+				<script src="https://js.hosted-form.com/vendors.latest.js"></script>
+
+				<script>
+				if (window.SaphyteForm) {
+				// Your page must have a container with the id you are providing. 
+				// Eg: <div id="my-form-container"> ... </div>
+				window.SaphyteForm.render("my-form-container", { id: "eghnvqxuu" });
+				}
+				</script>
         </div>
-      </div>
+      
     </div>
   </section>
   <!--/ fold1 -->
@@ -121,32 +125,7 @@
 
   
   
-  <!--    /fold4 tabs-->
-  
-  <section data-scroll-section id="fold5">
-    <div class="droplet" data-scroll data-scroll-delay="0.24" data-scroll-speed="3.5" data-scroll-repeat> <img src="img/droplet1.png" alt=""/> </div>
-    <!--/droplet-->
-    <div class="droplet" data-scroll data-scroll-delay="0.04" data-scroll-speed="1.5" data-scroll-repeat> <img src="img/droplet2.png" alt=""/> </div>
-    <!--/droplet-->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 mx-auto">
-          <div class="title-cn"  data-scroll data-scroll-delay="0.24" data-scroll-speed="2.5" data-scroll-repeat>
-            <div class="small-title mb-3">Visit Us</div>
-            <h3 class="color1"> We’re always excited to meet like-minded individuals and discuss how we can make a positive impact together.</h3>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12">
-       -
-        </div>
-      </div>
-     
-    </div>
-    
-  </section>
-  <!--    /fold5 grids-->
+
   
 
   
@@ -443,7 +422,7 @@ Check out the most asked questions below</h3>
             
              <div class="row">
         <div class="col-lg-12">
-          <div class="cn-btn pd-top-60 pd-bottom-60 justify-content-center"> <a href="#" class="btn btn-lg btn-outline-light ftb">Advertise with Impact</a> <a href="#" class="btn btn-lg btn-outline-light ftb">Host sustainability</a> </div>
+          <div class="cn-btn pd-top-60 pd-bottom-60 justify-content-center"> <a href="advertiser.html" class="btn btn-lg btn-outline-light ftb">Advertise with Impact</a> <a href="#" class="btn btn-lg btn-outline-light ftb">Host sustainability</a> </div>
         </div>
       </div>
             <div class="row">
