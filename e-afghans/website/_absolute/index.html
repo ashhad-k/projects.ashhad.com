@@ -40,7 +40,8 @@
 
 
 <body>
-<div class="loader">
+<div  id="preloader">
+       <div class="loader">
   <div class="box box-1">
     <div class="side-left"></div>
     <div class="side-right"></div>
@@ -62,7 +63,10 @@
     <div class="side-top"></div>
   </div>
 </div>
+
+</div>
 <!--/preloader ends--> 
+    
 <!--    marquee-->
 <div class="bg-animated above-hero">
   <div class="fixed-top">
@@ -108,8 +112,74 @@
       <div class="seal"><img src="/img/seal.svg" alt=""/></div>
     </div>
   </header>
+  
+  
 </div>
+<!-- ... existing code ... -->
 <section>
+  <div class="container">
+  
+    <div class="box1 cn-tracker">
+      
+    <div class="row">
+      <div class="col-md-3">
+        <!-- Nav tabs -->
+        <div class="nav quick-links  flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="padding: 0px;">
+          <button class="nav-link active" id="v-pills-application-tab" data-bs-toggle="pill" data-bs-target="#v-pills-application" type="button" role="tab" aria-controls="v-pills-application" aria-selected="true">
+            Application Status
+          </button>
+          <button class="nav-link" id="v-pills-delivery-tab" data-bs-toggle="pill" data-bs-target="#v-pills-delivery" type="button" role="tab" aria-controls="v-pills-delivery" aria-selected="false">
+            Delivery Status
+          </button>
+          <button class="nav-link" id="v-pills-verification-tab" data-bs-toggle="pill" data-bs-target="#v-pills-verification" type="button" role="tab" aria-controls="v-pills-verification" aria-selected="false">
+            Verifications
+          </button>
+        </div>
+      </div>
+      
+      <div class="col-md-9 rhs">
+        <!-- Tab content -->
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade show active" id="v-pills-application" role="tabpanel" aria-labelledby="v-pills-application-tab">
+            <h6>Track Your Application Status</h6>
+            <div id="application-status">
+       
+            </div><!--/application-status-->
+           
+          </div>
+          
+          <div class="tab-pane fade" id="v-pills-delivery" role="tabpanel" aria-labelledby="v-pills-delivery-tab">
+            <h6>Passport Delivery Status</h6>
+            <p>Enter your DHL tracking number to get the latest status of your Passport Delivery.</p>
+            <form id="track-form" class="d-flex justify-content-end">
+              <div class="input-group input-group-lg">
+                <input type="text" id="tracking-number" class="form-control form-control-lg" placeholder="Enter tracking number" required>
+                <button type="submit" class="btn btn-primary btn-lg">
+      Track Passport Delivery
+    </button>
+              </div>
+            </form>
+          </div>
+          
+        
+          <div class="tab-pane fade" id="v-pills-verification" role="tabpanel" aria-labelledby="v-pills-verification-tab">
+            <h6>Verify Your Documents</h6>
+            <p>Verify the authenticity of your documents by entering the verification code provided on your official documents.</p>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Enter Verification Code" aria-label="Verification Code">
+              <button class="btn btn-primary" type="button">Verify</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  </div>
+</section>
+<!-- ... existing code ... -->
+
+   <section>
   <div class="container">
       
 
@@ -474,35 +544,38 @@
 <div class="container">
   <footer>
     <div class="row">
-      <div class="col"> <a class="navbar-brand" href="#"> <img src="/img/logo/e-afghans.svg" alt="Logo" height="30" class="me-2"> </a> </div>
+      <div class="col"> <a class="navbar-brand" href="#"> <img src="img/logo/e-afghans.svg" alt="Logo" height="30" class="me-2"> </a> </div>
     </div>
     <div class="row">
       <div class="col">
         <ul class="list-unstyled">
-          <li><a href="#">New Passport Application</a></li>
-          <li><a href="#">Passport Renewal</a></li>
-          <li><a href="#">Lost or Stolen Passport Reporting</a></li>
+          <li><a href="/citizen-services/#passport-services/passport-new">Passport Renewal Application</a></li>
+          <li><a href="/citizen-services/#passport-services/passport-extension">Passport Renewal - Via Sticker</a></li>
+          <li><a href="/citizen-services/#special-services/emergency-assistance">Lost or Stolen Passport
+Reporting </a></li>
         </ul>
       </div>
       <div class="col ">
         <ul class="list-unstyled">
-          <li><a href="#">Application for Afghan Visa</a></li>
-          <li><a href="#">Visa Renewal/Extension</a></li>
-          <li><a href="#">National ID (Taskira)</a></li>
+          <li><a href="/citizen-services/#certificate-services/birth-certificate">Birth Certificate</a></li>
+          <li><a href="/citizen-services/#certificate-services/marriage-certificate">Marriage Certificate</a></li>
+          <li><a href="/citizen-services/#legal-services/document-validation">Document Attestation</a></li>
         </ul>
       </div>
       <div class="col ">
         <ul class="list-unstyled">
-          <li><a href="#">Document Requests</a></li>
-          <li><a href="#">Emergency Services</a></li>
-          <li><a href="#">Notary and Legal Services</a></li>
+          <li><a href="/citizen-services/#special-services/emergency-assistance">Emergency Services</a></li>
+          <li><a href="/citizen-services/#aoid-services/aoid">Overseas Identity Card</a></li>
+          <li><a href="https://visaportal.eafghans.com/">Tourist Visa Portal</a></li>
         </ul>
       </div>
       <div class="col ">
         <ul class="list-unstyled">
-          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="/legal/">Terms of Use</a></li>
+<!--
           <li><a href="#">Cookie Settings</a></li>
           <li><a href="#">Refund Policy</a></li>
+-->
         </ul>
       </div>
       <div class="col">
@@ -526,8 +599,21 @@
       </div>
     </div>
     <hr>
+       
+     
     <div class="row">
-      <div class="col-lg-6"> © 2024. All rights reserved. </div>
+      <div class="col-lg-6"> 
+      All services and information provided through EAfghans Portal LLC is reviewed, and authorized by:
+<br>
+        <div class="text-white" style="font-size: 15px; margin-bottom: 12px; font-weight: bold">
+   Consulate General of Afghanistan Dubai, UAE   
+          </div>
+          <a class="navbar-brand" href="#"> <img src="img/logo/afghan-consulate.svg" alt="Logo"  class="me-2"> </a>
+          
+          
+
+        
+        </div>
       <div class="col-lg-6 text-right"> For immediate assistance, contact our helpdesk at <a href="tel:0961234567">+93 123 456 789</a> <br>
         or email <a href="mailto:support@eafghans.com">support@eafghans.com</a>. </div>
     </div>
@@ -536,22 +622,154 @@
       <div class="col-lg-12">
           <div class="disclaimer">
          
-          EAfghans Portal LLC is the officially authorized technology provider for the General Consulate of Afghanistan in Dubai, United Arab Emirates, facilitating access to information and services as per the directives and regulations of the Afghan government. All content and information provided through this platform is developed, reviewed, and authorized by the General Consulate of Afghanistan in Dubai, United Arab Emirates.<br>
+          EAfghans Portal LLC is the officially authorized technology provider for the General Consulate of Afghanistan in Dubai, United Arab Emirates, facilitating access to information and services as per the directives and regulations of the Afghan government. <br>
+<br>
+All content and information provided through this platform is developed, reviewed, and authorized by the General Consulate of Afghanistan in Dubai, United Arab Emirates.<br><br>
 
-EAfghans Portal LLC serves solely as a technology intermediary and assumes no responsibility or liability for the accuracy, completeness, or reliability of the information supplied by the General Consulate of Afghanistan. Any statements, policies, or procedures reflected on this platform are provided directly from official sources and do not represent the views, opinions, or legal stances of EAfghans Portal LLC.<br>
+
+EAfghans Portal LLC serves solely as a technology intermediary and assumes no responsibility or liability for the accuracy, completeness, or reliability of the information supplied by the General Consulate of Afghanistan. Any statements, policies, or procedures reflected on this platform are provided directly from official sources and do not represent the views, opinions, or legal stances of EAfghans Portal LLC.<br><br>
+
 
 Users are encouraged to confirm details with the appropriate offices of the General Consulate of Afghanistan and are solely responsible for any actions taken based on the information provided here. EAfghans Portal LLC expressly disclaims any liability for errors, omissions, or consequences arising from reliance on the provided information.
-
+<br>
+<br>
+            
         </div>
-       
+       <div>  <span class="text-white">
+              © EAfghans Portal 2024. All rights reserved.
+
+              </span></div>
       </div>
     </div>
   </footer>
 </div>
+     <!-- Add this modal structure -->
+     <div class="modal fade" id="trackingModal" tabindex="-1" aria-labelledby="trackingModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h6 class="modal-title" id="trackingModalLabel">Tracking Details</h6>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div id="modalResult">
+              <!-- Loading spinner will appear here -->
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+        
+
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script> 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script> 
      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
    
 <script src="/js/main.js"></script>
+<!-- /Passport Application Status -->
+<script src="/js/application-status.js"></script>
+<!-- https://afghanconsulate.ae/wp-content/themes/afghan-consulate1.0/js/application-status.js -->
+<script>
+  // Initialize the modal
+  let trackingModal;
+  document.addEventListener('DOMContentLoaded', function() {
+    trackingModal = new bootstrap.Modal(document.getElementById('trackingModal'));
+  });
+
+  document.getElementById('track-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    // Get the tracking number
+    const trackingNumber = document.getElementById('tracking-number').value.trim();
+    
+    // Check if tracking number is empty
+    if (!trackingNumber) {
+      alert('Please enter a tracking number');
+      return;
+    }
+    
+    // Show modal
+    trackingModal.show();
+    
+    // Show loading spinner in modal
+    document.getElementById('modalResult').innerHTML = `
+      <div class="text-center">
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    `;
+  
+    // Your DHL API Key
+    const API_KEY = 'fPxxccd0Rwk7ZSWG5AvhS2yBZxBHNyjS';
+  
+    // API Endpoint
+    const apiUrl = `https://api-eu.dhl.com/track/shipments?trackingNumber=${trackingNumber}`;
+  
+    // Fetch shipment data
+    fetch(apiUrl, {
+      method: 'GET',
+      headers: {
+        'DHL-API-Key': API_KEY
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.shipments && data.shipments.length > 0) {
+        const shipment = data.shipments[0];
+        const status = shipment.status.status;
+        const location = shipment.status.location;
+        const timestamp = shipment.status.timestamp;
+        const estimatedDeliveryDate = shipment.estimatedTimeOfDelivery || 'Not available';
+        const weight = shipment.details.weight || 'Unknown';
+        
+        // Get shipment events
+        const events = shipment.events || [];
+        let eventsHtml = '';
+        if (events.length > 0) {
+          events.forEach(event => {
+            eventsHtml += `
+              <div class="event">
+                <p><strong>Date:</strong> ${event.timestamp}</p>
+                <p><strong>Location:</strong> ${event.location ? event.location.address.addressLocality : 'Unknown'}</p>
+                <p><strong>Description:</strong> ${event.description}</p>
+              </div>
+              <hr>
+            `;
+          });
+        } else {
+          eventsHtml = '<p class="text-center">No events found for this shipment.</p>';
+        }
+  
+        // Display the results in modal
+        document.getElementById('modalResult').innerHTML = `
+          <h6>Shipment Status:</h6>
+          <p><strong>Status:</strong> ${status}</p>
+          <p><strong>Location:</strong> ${location ? location.address.addressLocality : 'Unknown'}</p>
+          <p><strong>Last Updated:</strong> ${timestamp}</p>
+          <p><strong>Estimated Delivery:</strong> ${estimatedDeliveryDate}</p>
+          <p><strong>Weight:</strong> ${weight} kg</p>
+  
+          <h6 class="mt-4">Shipment Events</h6>
+          ${eventsHtml}
+        `;
+      } else {
+        document.getElementById('modalResult').innerHTML = `
+          <p class="text-center">No shipment found for the provided tracking number.</p>
+        `;
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching the DHL API:', error);
+      document.getElementById('modalResult').innerHTML = `
+        <p class="text-center">Failed to fetch shipment data. Please try again later.</p>
+      `;
+    });
+  });
+</script>
+
 </body>
 </html>

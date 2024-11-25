@@ -1,3 +1,14 @@
+// Preloader functionality
+window.addEventListener("load", function() {
+    const preloader = document.getElementById("preloader");
+    const content = document.getElementById("content");
+
+    // Hide the preloader and show the content
+    preloader.style.display = "none";
+    content.style.display = "block";
+});
+
+
 // Check if the device width is greater than 768px
 if (window.innerWidth > 768) {
     // Initialize AOS only for larger screens

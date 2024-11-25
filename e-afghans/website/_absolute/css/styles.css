@@ -10,9 +10,9 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;seal
+  width: 100%;
   height: 100%;
-  background-color: var(--white);
+  background-color: var(--bg1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,53 +22,14 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  border-radius: 50%;
-  height: 96px;
-  width: 96px;
-  animation: rotate_3922 1.2s linear infinite;
-  background-color: #0FA277;
-  background-image: linear-gradient(#0FA277, #84cdfa, #5ad1cd);
-}
-.perloader-object span {
-  position: absolute;
-  border-radius: 50%;
-  height: 100%;
-  width: 100%;
-  background-color: #0FA277;
-  background-image: linear-gradient(#0FA277, #84cdfa, #5ad1cd);
-}
-.perloader-object span:nth-of-type(1) {
-  filter: blur(5px);
-}
-.perloader-object span:nth-of-type(2) {
-  filter: blur(10px);
-}
-.perloader-object span:nth-of-type(3) {
-  filter: blur(25px);
-}
-.perloader-object span:nth-of-type(4) {
-  filter: blur(50px);
-}
-.perloader-object::after {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  background-color: #fff;
-  border: solid 5px var(--white);
-  border-radius: 50%;
-}
-@keyframes rotate_3922 {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
+  transform: translate(-50%, -50%);
+ 
 }
 
+ /* Content is initially hidden */
+        #content {
+            display: none;
+        }
 /*--------------------------------------------------
     ## sections
 ---------------------------------------------------*/
@@ -870,10 +831,14 @@ section.multi-tabs .tab-content .btn.has-arrow i {
 
 
 .quick-links{ height: auto; padding: 20px;}
-.quick-links a{ color: #101827; padding: 12px 16px; border-radius: 12px;margin-bottom: 2px;  font-weight: 500; }
-.quick-links a:hover{ background: #ffffff; color: var(--bg1); }
+.quick-links a,
+.quick-links button{ color: #101827; padding: 12px 16px; border-radius: 12px;margin-bottom: 2px;  font-weight: 500; }
+.quick-links a:hover,
+.quick-links button:hover{ background: #D9E8F7;  color: #03336B; }
 
-.quick-links a.active{ background: #D9E8F7;  color: #03336B;padding-left: 20px;}
+.quick-links a.active,
+.quick-links button.active{ background: #ffffff; color: var(--bg1); padding-left: 20px;}
+
 
 
 .has-list{}
@@ -928,6 +893,74 @@ section.multi-tabs .tab-content .btn.has-arrow i {
 
 
 
+/*--------------------------------------------------
+    ## cN onboarding
+---------------------------------------------------*/
+.cn-tracker{ margin-top: -120px; position: relative; z-index: 1; padding: 20px }
+.cn-tracker .quick-links {}
+.cn-tracker .quick-links{}
+.cn-tracker .quick-links button.nav-link:not(.active){border-bottom: 1px solid #cccccc50;}
+.cn-tracker .quick-links button.nav-link{text-align: left; border-radius: 99px;}
+.cn-tracker .quick-links button.nav-link.active{ background: var(--accent); color: var(--white); padding-left: 20px;} 
+.cn-tracker h6{ margin-bottom: 10px;}
+
+
+.cn-tracker .form-label{ font-size: 12px; text-transform: uppercase; margin:0px 0px 0px 12px}
+              
+.cn-tracker .rhs{ position: relative;padding-top: 20px;}
+.cn-tracker .rhs .alert{ 
+position: absolute;
+left:0px;
+top: 0px;
+bottom: 0px;
+display: flex;
+align-items: center;
+justify-content: center;
+    text-align: center;
+right: 10px;
+margin-bottom: 0px;
+flex-direction: column;
+}
+.cn-tracker .rhs #application-status{}
+.cn-tracker .rhs #application-status .data{ padding-top: 12px;}
+.cn-tracker .rhs #application-status .data .btn-secondary{  justify-content: center; border-radius: 6px; height: 100%; width: 100%; align-items: center;}
+.cn-tracker .rhs #application-status .data .form-control::placeholder {color: #19286C; font-size: 14px;}
+.cn-tracker .rhs #application-status .data .bg-white{ background: #fff; border-radius: 6px; padding: 6px;}
+/*    .cn-tracker .rhs #application-status .data  [class^="col-"] { background: #fff; border-radius: 6px; padding: 6px; border-right: 4px solid #19286C}*/
+.cn-tracker .rhs #application-status .data  [class^="col-"] INPUT { border: none}
+.cn-tracker .rhs #application-status .data  .col-md-4{ background: #fff; border-radius: 12px; padding: 6px; }
+.cn-tracker .rhs #application-status .data  .col-md-3{ background: #fff; border-radius: 12px; padding: 6px;  width: 208px; margin-right: 10px;}
+
+.cn-tracker .rhs #application-status .data .btn-secondary{background: var(--bg1); border-radius:12px;}
+.cn-tracker .rhs #application-status .data .btn-secondary:hover{ background: var(--bs-blue); color: var(--white);border-color: transparent;}
+@media (max-width: 575.98px) {
+    .cn-tracker .rhs #application-status .data{padding-top: 10px; padding-bottom: 20px;}
+    .cn-tracker .rhs #application-status .data  .col-md-3{width: 100%}
+    .cn-tracker .rhs .alert{ left: 0px; right: 0px;  }
+}
+
+
+/* dhl tracking */
+#trackingModal{}
+#trackingModal h6{ font-size: 24px; letter-spacing: -1px;margin-bottom: 12px;}
+#trackingModal p{ font-size: 16px;}
+
+.result{ border-radius: 20px; background: #f4f4f4; padding: 32px 32px 32px 32px; }
+  .result P{margin-bottom: 12px; font-size: 14px; }
+  .result:empty{ background:#fff; display: none;}
+  .result:not(:empty){ background: #f4f4f4}
+
+@media (max-width: 767.98px) {
+#track-form{}
+#track-form .input-group > .form-control{ width:auto; border-radius:8px; margin-bottom:12px}
+  #track-form .input-group > .btn-primary{ border-radius:8px; width:100%;}
+}
+/* Ensure modal appears above everything */
+.modal {
+  z-index: 99999 !important;
+}
+.modal-backdrop {
+}
 /*--------------------------------------------------
     ## cN onboarding
 ---------------------------------------------------*/
