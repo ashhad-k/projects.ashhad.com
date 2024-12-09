@@ -36,38 +36,22 @@
     
     <!-- Custom CSS -->
     <link href="/css/styles.css" rel="stylesheet">
+
+    
 </head>
 
 
 <body>
-<div  id="preloader">
-       <div class="loader">
-  <div class="box box-1">
-    <div class="side-left"></div>
-    <div class="side-right"></div>
-    <div class="side-top"></div>
+  <div id="preloader">
+    <div class="perloader-object">
+      <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script><dotlottie-player src="https://lottie.host/938dbe27-79bc-483a-bf64-ec448a7ec649/18owEFKwsm.json" background="transparent" speed="1" style="width: 128px; height: 128px" direction="1" playMode="normal" loop autoplay></dotlottie-player>    </div>
   </div>
-  <div class="box box-2">
-    <div class="side-left"></div>
-    <div class="side-right"></div>
-    <div class="side-top"></div>
-  </div>
-  <div class="box box-3">
-    <div class="side-left"></div>
-    <div class="side-right"></div>
-    <div class="side-top"></div>
-  </div>
-  <div class="box box-4">
-    <div class="side-left"></div>
-    <div class="side-right"></div>
-    <div class="side-top"></div>
-  </div>
-</div>
+  
+    <!--/preloader ends--> 
 
-</div>
-<!--/preloader ends--> 
     
 <!--    marquee-->
+<div id="content" style="display: none;">
 <div class="bg-animated above-hero">
   <div class="fixed-top">
     <div class="marquee-container py-2" id="marquee">
@@ -162,14 +146,39 @@
           </div>
           
         
-          <div class="tab-pane fade" id="v-pills-verification" role="tabpanel" aria-labelledby="v-pills-verification-tab">
-            <h6>Verify Your Documents</h6>
-            <p>Verify the authenticity of your documents by entering the verification code provided on your official documents.</p>
-            <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="Enter Verification Code" aria-label="Verification Code">
-              <button class="btn btn-primary" type="button">Verify</button>
-            </div>
-          </div>
+         
+<div class="tab-pane fade" id="v-pills-verification" role="tabpanel" aria-labelledby="v-pills-verification-tab">
+  <h6>Verify Your Documents</h6>
+  <p>Verify the authenticity of your documents by entering the required information below.</p>
+  
+  <div class="row g-3 mb-3">
+    <div class="col-md-2">
+      <input type="number" class="form-control" placeholder="Year of Birth" aria-label="Year of Birth" min="1900" max="2024">
+    </div>
+    <div class="col-md-2">
+      <input type="text" class="form-control" placeholder="Surname" aria-label="Surname">
+    </div>
+    <div class="col-md-3">
+      <input type="text" class="form-control" placeholder="Document Number" aria-label="Document Number">
+    </div>
+    <div class="col-3">
+      <select class="form-select" aria-label="Document Type">
+        <option selected disabled>Select Document Type</option>
+        <option value="passport">Passport</option>
+        <option value="visa">Visa</option>
+        <option value="aoid">AOID</option>
+        <option value="birthCertificate">Birth Certificate</option>
+        <option value="marriageCertificate">Marriage Certificate</option>
+        <option value="attestation">Attestation</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <button class="btn btn-primary w-100" type="button">Verify</button>
+    </div>
+  </div>
+
+</div>
+
         </div>
       </div>
     </div>
@@ -663,7 +672,7 @@ Users are encouraged to confirm details with the appropriate offices of the Gene
       </div>
     </div>
         
-
+  </div>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script> 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script> 
      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

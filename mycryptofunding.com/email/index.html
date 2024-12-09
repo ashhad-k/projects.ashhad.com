@@ -1,0 +1,579 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!-- utf-8 works for most cases --><meta name="viewport" content="width=device-width"><!-- Forcing initial-scale shouldn't be necessary --><meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- Use the latest (edge) version of IE rendering engine -->
+<title></title>
+<!-- The title tag shows in email notifications, like Android 4.4. --><!-- Web Font / @font-face : BEGIN --><!-- NOTE: If web fonts are not required, lines 9 - 26 can be safely removed. --><!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. --><!--[if !mso]>
+		<style type="text/css">@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900');
+		</style>
+		<link target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800" rel="stylesheet" target="_blank" type="text/css" /><!--<![endif]--><!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: https:stylecampaign.com/blog/2015/02/webfont-support-in-email/ --><!-- Web Font / @font-face : END --><!-- CSS Reset -->
+<style type="text/css">/* What it does: Remove spaces around the email design added by some email clients. */
+		/* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
+html, body {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+}
+/* What it does: Stops email clients resizing small text. */
+* {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+/* What is does: Centers email on Android 4.4 */
+div[style*="margin: 14px 0"] {
+    margin: 0 !important;
+}
+/* What it does: Stops Outlook from adding extra spacing to tables. */
+table, td {
+    mso-table-lspace: 0pt !important;
+    mso-table-rspace: 0pt !important;
+}
+/* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+table {
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    table-layout: fixed !important;
+    Margin: 0 auto !important;
+}
+table table table {
+    table-layout: auto;
+}
+/* What it does: Uses a better rendering method when resizing images in IE. */
+img {
+    -ms-interpolation-mode: bicubic;
+}
+/* What it does: A work-around for iOS meddling in triggered links. */
+.mobile-link--footer a, a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: underline !important;
+}
+</style>
+<!-- Progressive Enhancements -->
+<style type="text/css">/* What it does: Hover styles for buttons */
+
+
+
+
+
+.button-td, .button-a {
+    transition: all 100ms ease-in;
+}
+.button-td:hover, .button-a:hover {
+    background: #454e5f !important;
+    border-color: #454e5f !important;
+}
+.specialtd {
+    padding: 0 10px 0 30px;
+    width: 10%;
+    text-align: center;
+}
+.desktopoff {
+    display: none!important;
+}
+.desktopon {
+    display: table-row!important;
+}
+.imgbx img {
+    display: inline-block!important;
+}
+.imgbx span {
+    display: inline-block!important;
+    margin: 0 20px!important;
+    width: 70%!important;
+}
+.full-width {
+    margin-left: 30px;
+}
+.border-r {
+    border-right: 1px solid #dddddd;
+    padding-right: 15px;
+}
+.w60 {
+    width: 65%;
+    display: inline-block;
+}
+.w40 {
+    width: 45%;
+    display: inline-block;
+}
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.textblock, .imgblock {
+    box-sizing: border-box;
+}
+.smallcircle:last-child {
+    margin-bottom: 40px!important;
+}
+.smallcircle {
+    position: relative;
+    padding: 0!important;
+    padding-left: 80px!important;
+    padding-right: 20px!important;
+    min-height: 50px;
+    margin: 0!important;
+    font-size: 13px!important;
+}
+.smallcircle:before {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #DDDDDD;
+    border-radius: 100%;
+    content: '';
+    left: 40px;
+    top: 8px
+}
+.smallcircle:after {
+    position: absolute;
+    width: 1px;
+    height: 50px;
+    background: #DDDDDD;
+    border-radius: 100%;
+    content: '';
+    left: 43px;
+    top: 8px
+}
+p.smallcircle:nth-child(5):after {
+    display: none!important;
+}
+.smallcircle:nth-child(3):before, .smallcircle:nth-child(5):before {
+    background: #7cb445!important;
+    z-index: 99999999
+}
+.linespace br {
+    display: none!important;
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+.w60 {
+    width: 100%;
+    display: inline-block;
+}
+.w40 {
+    width: 100%;
+    display: inline-block;
+}
+.border-r {
+    border-right: 0px solid #dddddd;
+    padding-right: 0px;
+}
+.mobileoff {
+    display: none!important;
+}
+.img-container {
+    width: 100%;
+    height: auto!important;
+}
+.full-width.ml-0 {
+    margin-left: 0!important;
+}
+.imgbx img {
+    display: block!important;
+}
+.imgbx span {
+    display: block!important;
+    margin: 10px 0px!important;
+    width: 100%!important;
+}
+.full-width {
+    width: 100%;
+    height: auto!important;
+}
+.desktopoff {
+    display: grid!important;
+}
+.desktopon {
+    display: none!important;
+}
+.gridbox {
+    display: grid;
+}
+.gridimg {
+    width: 100%;
+    height: auto!important;
+}
+.imgbanner {
+    max-height: inherit;
+    height: auto;
+}
+.imgbanner2 {
+    width: 100% !important;
+    margin: auto !important;
+    max-width: 100%!important;
+    max-height: inherit;
+    height: auto;
+}
+.padd30 {
+    padding: 0 30px 20px!important;
+}
+.email-container {
+    width: 100% !important;
+    margin: auto !important;
+    max-width: 100%!important;
+}
+/* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+.fluid, .fluid-centered {
+    max-width: 100% !important;
+    height: auto !important;
+    Margin-left: auto !important;
+    Margin-right: auto !important;
+}
+/* And center justify these ones. */
+.fluid-centered {
+    Margin-left: auto !important;
+    Margin-right: auto !important;
+}
+/* What it does: Forces table cells into full-width rows. */
+.stack-column, .stack-column-center {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    direction: ltr !important;
+}
+/* And center justify these ones. */
+.stack-column-center {
+    text-align: center !important;
+}
+/* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+.center-on-narrow {
+    text-align: center !important;
+    display: block !important;
+    Margin-left: auto !important;
+    Margin-right: auto !important;
+    float: none !important;
+}
+table.center-on-narrow {
+    display: inline-block !important;
+}
+.right2 {
+    text-align: right!important;
+    display: block !important;
+    Margin-left: 0px !important;
+    Margin-right: auto !important;
+    float: right!important;
+}
+.text-center {
+    text-align: center!important;
+}
+.specialtd {
+    padding: 0 10px!important;
+    width: 20%;
+}
+.specialtd+td {
+    padding: 0 20px 0 10px!important;
+    width: 80%!important;
+}
+.webopti {
+    image-rendering: -webkit-optimize-contrast;
+}
+.padding1015 {
+    padding: 10px 15px 0;
+}
+.f13 {
+    font-size: 13px!important;
+}
+.margin-l0 {
+    margin-left: 0!important;
+}
+.sm-padding {
+    padding: 10px 0!important;
+}
+.pdbtm {
+    padding-bottom: 15px;
+}
+.d-flex {
+    display: block;
+}
+.textblock.fl-left {
+    margin-bottom: 25px;
+}
+.imgblock.fl-right {
+    margin-bottom: 0px;
+}
+.textblock.fl-right {
+    margin-bottom: 25px;
+    padding: 0 30px;
+}
+.imgblock.fl-right {
+    margin-bottom: 0px;
+}
+.d-flex {
+    padding: 0!important;
+}
+.imgblock.fl-right, .textblock.fl-left, .textblock.fl-right {
+    text-align: center!important;
+}
+.textblock.fl-left h3 {
+    font-size: 18px!important;
+    line-height: 20px!important;
+    margin: 0!important;
+}
+.textblock.fl-right h3 {
+    font-size: 24px!important;
+    line-height: 30px;
+    margin: 0!important;
+}
+.textmob {
+    font-size: 18px!important;
+    padding: 50px 30px 5px!important;
+}
+.mt150 {
+    margin-top: 175px;
+}
+.featable p {
+    display: block!important;
+    text-align: center!important;
+}
+.featable img {
+    display: table!important;
+    margin: 0 auto 15px!important
+}
+.featable p .smimg {
+    margin: 0!important;
+}
+.featable p {
+    padding-top: 0!important;
+    font-size: 16px!important;
+    margin-top: 10px
+}
+.featable .gridbox td {
+    padding-top: 5px!important;
+    padding-bottom: 10px!important;
+}
+p.heading2 {
+    padding: 30px 0px 10px 20px!important;
+    text-align: center!important;
+}
+p.heading2 br {
+    display: none!important;
+}
+.textblock {
+    text-align: center!important;
+}
+.textblock h3 {
+    text-align: center!important;
+}
+.textblock h3+a {
+    margin-left: auto!important;
+    margin-right: auto!important
+}
+.padding-0 {
+    padding-top: 0!important
+}
+div.imgblock.fl-right {
+    margin-top: 30px!important;
+}
+a.smimg {
+    margin-right: 0!important
+}
+.mt-0 {
+    margin-top: 0!important;
+}
+.pd20 {
+    padding: 20px!important
+}
+.bgnone {
+    background: none!important;
+}
+.smallcircle {
+    min-height: inherit!important;
+    padding-left: 60px!important;
+    padding-bottom: 30px!important;
+    padding-right: 15px!important
+}
+.smallcircle:after {
+    display: none!important;
+}
+.linespace br {
+    display: block!important;
+}
+.pd20.bgnone {
+    margin-top: 25px!important
+}
+.pad-left0 {
+    padding: 0 20px 30px!important;
+}
+.imgh {
+    width: 60%!important;
+    margin-top: 30px!important
+}
+}
+    
+    ul {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+}
+
+
+    ul li {
+    position: relative; /* Allows for absolute positioning of the pseudo-element */
+    padding-left: 20px; /* Adds space for the custom bullet */
+    color: white; /* Change the text color to white */
+    margin-left: 10px;
+    
+}
+
+ul li::before{
+    content: '•'; /* Unicode character for the bullet */
+    position: absolute; /* Absolute positioning relative to the li */
+    left: 0; /* Position it at the left edge of the li */
+    color: white; /* Change the bullet color to white */
+    font-size: 30px;
+    line-height: 18px;
+}
+  
+
+
+    
+    
+</style>
+<style type="text/css">:root {
+    color-scheme: light only;
+}
+table, a, p, div {
+    font-family: 'Montserrat', sans-serif
+}
+a.smimg {
+    margin-right: 0!important
+}
+</style>
+<center style="width: 100%; background: #0D1116;"><!-- Visually Hidden Preheader Text : BEGIN -->
+<div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: 'Montserrat', sans-serif;">Empowering Traders Worldwide.</div>
+<!-- Visually Hidden Preheader Text : END --><!-- Email Body : BEGIN -->
+
+<table align="center" bgcolor="#0D1116" border="0" cellpadding="0" cellspacing="0" class="email-container" style="margin: auto; border-radius: 0px; max-width: 680px;" width="100%"><!-- Hero Image, Flush : BEGIN -->
+	<tbody><!-- Thumbnail Left, Text Right : BEGIN -->
+		<tr>
+			<td align="center" dir="ltr" style="padding: 10px 10px 10px 10px; background-color: #0D1116;" valign="top" width="100%">
+			<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody>
+					<tr><!-- Column : BEGIN -->
+						<td width="60%">
+						<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tbody>
+								<tr>
+									<td dir="ltr" style="padding: 10px 15px; text-align: left; font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 600; mso-height-rule: exactly; line-height: 20px; color: #2a2a2a;" valign="top"><a href="https://www.mycryptofunding.com/" target="_blank"><img alt="MyCryptoFunding" src="https://saphyte.io/portfolio/mycryptofunding/email/logo.png" style="image-rendering: -webkit-optimize-contrast; width:100%" /></a></td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+						<!-- Column : END --><!-- Column : BEGIN -->
+						<td width="40%">
+						<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tbody>
+								<tr>
+									<td dir="ltr" style="font-family: 'Montserrat', sans-serif;font-size: 15px;mso-height-rule: exactly;padding: 10px 05px 10px 10px;text-align: right;" valign="top"><a class="smimg" href="https://MyCryptoFunding.clientsportal.cloud" style=" text-decoration: none;mso-hide:all;color:#ffffff;border-radius:99px;background-color: #00AAFD;padding: 10px 25px;text-align: center;font-size: 15px;display: inline-block;font-weight:500;" target="_blank">Get Funded</a></td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+						<!-- Column : END -->
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td align="center" dir="ltr" style="padding:0px; background-color: #0D1116;" valign="top"><span style="padding:0"><img alt="ThinkCapital" src="https://saphyte.io/portfolio/mycryptofunding/email/banner-main.png" width="100%" /></span></td>
+		</tr>
+	</tbody>
+</table>
+
+<table align="center" bgcolor="#0D1116" border="0" cellpadding="0" cellspacing="0" class="email-container" style="margin: auto; border-radius: 0px; max-width: 100%;" width="680px"><!-- Hero Image, Flush : BEGIN -->
+	<tbody><!-- Thumbnail Left, Text Right : BEGIN --><!--Column Text : BEGIN --><!--Column Text : BEGIN -->
+		<tr class="gridbox">
+			<td align="left" style="padding: 50px 20px">
+			<p style="text-align: left; color: #EAEAEA"><span style="font-size:14px;">Hello&nbsp;{{first_name}}!</span><br />
+			&nbsp;</p>
+
+			<p><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#EAEAEA;letter-spacing:0;word-break:normal;">Congratulations on passing the Evaluation Challenge!</span></p>
+
+			<p><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#EAEAEA;letter-spacing:0;word-break:normal;">Your dedication and skill have impressed us, bringing you one step closer to accessing funding for your trading journey</span></p>
+
+			<p><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#EAEAEA;letter-spacing:0;word-break:normal;">Next steps:</span></p>
+
+			<ol>
+				<li  style="color: white;"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#EAEAEA;letter-spacing:0;word-break:normal;">We&rsquo;ll review your evaluation for compliance.</span></li>
+				<li  style="color: white;"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#EAEAEA;letter-spacing:0;word-break:normal;">Once approved, we&rsquo;ll issue your Funded Account credentials.</span></li>
+				<li  style="color: white;"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#EAEAEA;letter-spacing:0;word-break:normal;">Sign the Funded Trader Agreement to activate your account.</span></li>
+			</ol>
+                <ul>
+				<li  style="color: white;"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#EAEAEA;letter-spacing:0;word-break:normal;">We&rsquo;ll review your evaluation for compliance.</span></li>
+				<li  style="color: white;"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#EAEAEA;letter-spacing:0;word-break:normal;">Once approved, we&rsquo;ll issue your Funded Account credentials.</span></li>
+				<li  style="color: white;"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#EAEAEA;letter-spacing:0;word-break:normal;">Sign the Funded Trader Agreement to activate your account.</span></li>
+			</ul>
+
+			<p><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#EAEAEA;letter-spacing:0;word-break:normal;">Questions? Contact us at support@MyCryptoFunding.com.</span></p>
+
+			<p><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#EAEAEA;letter-spacing:0;word-break:normal;">Here&rsquo;s to your success as a funded trader with My Cryto Funding!</span></p>
+
+			<p style="text-align: left;"><br />
+			<span style="font-size:14px; color: #EAEAEA">Best regards,<br />
+			My Cryto Funding Team</span></p><br />
+            <p><a class="smimg" href="https://MyCryptoFunding.clientsportal.cloud" style=" text-decoration: none;mso-hide:all;color:#ffffff;border-radius:99px;background-color: #00AAFD;padding: 10px 25px;text-align: center;font-size: 15px;display: inline-block;font-weight:500;" target="_blank">Get Funded</a></p>
+			<!-- Add more content as needed --></td>
+		</tr>
+     
+		<!-- Hero Image, Flush : END -->
+	</tbody>
+</table>
+
+<table align="center" bgcolor="#0D1116" border="0" cellpadding="0" cellspacing="0" class="email-container" style="margin: auto; max-width: 680px;" width="100%">
+	<tbody>
+		<tr>
+			<td height="20">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="left" dir="ltr" style="padding: 20px 10px 10px 10px;border-top:1px solid #00AAFD" valign="top" width="100%">
+			<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody>
+					<tr class="gridbox-ftr"><!-- Column : BEGIN -->
+						<td class="email-container">
+						<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tbody>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td style="padding: 10px 20px;width: 100%;font-size: 12px; font-family: 'Montserrat', sans-serif; font-weight: 400; mso-height-rule: exactly; line-height:22px; text-align: left; color: #8D8F9D;text-align:left">
+			<p> Disclaimer: </p>
+			<p> At My Crypto Funding, we provide virtual demo accounts that mirror real-time market conditions for educational purposes. The term "funded," as used on our platform and in related materials, pertains solely to virtual capital within the simulated trading environment. Our services are not intended to offer financial or investment advice, nor do they represent investment services.</p>
+			<p> Please note that none of our team members—whether employees, affiliates, or representatives—are authorized to give investment advice or recommendations. All content provided on our platform is designed to support learning and skill-building in trading practices. It should not be considered financial advice, investment strategies, or endorsements of specific financial instruments or markets.</p>
+			<p> To manage your subscription preferences or unsubscribe, please <a href="#" style="color: #00AAFD;">click here</a>.</p>
+               
+               
+                
+               
+                
+               
+
+			</td>
+		</tr>
+		<tr>
+			<td style="padding: 10px 20px;width: 100%;font-size: 14px; font-family: 'Montserrat', sans-serif; font-weight: 400; mso-height-rule: exactly; line-height:22px; text-align: left; color: #8D8F9D;text-align:left">
+			<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody>
+					
+					<tr>
+						<td style="padding: 0px 0px 10px 0px;width: 100%;font-size: 13px; font-family: 'Montserrat', sans-serif; font-weight: 400; mso-height-rule: exactly; line-height:22px; text-align: left; color: #8D8F9D;text-align:left">
+						<p>© My Crypto Funding Ltd 2024. All Rights Reserved.</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!-- Email Footer : END --></center>
+
+<div id="__genieContainer" style="all: initial; display: none;">&nbsp;</div>

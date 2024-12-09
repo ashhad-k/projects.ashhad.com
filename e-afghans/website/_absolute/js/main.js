@@ -1,11 +1,43 @@
 // Preloader functionality
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
     const preloader = document.getElementById("preloader");
     const content = document.getElementById("content");
+    const lottiePlayer = document.querySelector("dotlottie-player");
+    const minimumLoadingTime = 1000; // 1 second minimum
+    const startTime = Date.now();
+    
+    console.log("Page loaded, preloader status:", preloader.style.display);
+    console.log("Found lottie player:", !!lottiePlayer);
+  
+    // Ensure the preloader hides after the Lottie animation loads
+    if (lottiePlayer) {
+        lottiePlayer.addEventListener("ready", function () {
+            console.log("Lottie animation is ready");
+            const elapsedTime = Date.now() - startTime;
+            const remainingTime = Math.max(0, minimumLoadingTime - elapsedTime);
+            
+            setTimeout(() => {
+                preloader.style.display = "none";
+                content.style.display = "block";
+            }, remainingTime);
+        });
 
-    // Hide the preloader and show the content
-    preloader.style.display = "none";
-    content.style.display = "block";
+        lottiePlayer.addEventListener("error", function (error) {
+            console.error("Lottie animation error:", error);
+        });
+    } else {
+        console.warn("Lottie player not found!");
+    }
+  
+    // Fallback timeout to prevent infinite loading
+    setTimeout(() => {
+        console.log("Timeout check - preloader status:", preloader.style.display);
+        if (preloader.style.display !== "none") {
+            console.warn("Fallback triggered: Hiding preloader");
+            preloader.style.display = "none";
+            content.style.display = "block";
+        }
+    }, 5000); // 5 second maximum loading time
 });
 
 

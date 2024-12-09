@@ -27,9 +27,13 @@
 }
 
  /* Content is initially hidden */
-        #content {
-            display: none;
-        }
+ #content {
+  display: none; /* Initially hide the content */
+}
+
+#preloader {
+  display: block; /* Make sure preloader is visible initially */
+}
 /*--------------------------------------------------
     ## sections
 ---------------------------------------------------*/
