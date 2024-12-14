@@ -101,7 +101,7 @@
           <option value="#aoid-services">AOID Services</option>
           <option value="#certificate-services">Certificate Services</option>
           <option value="#legal-services">Legal Services</option>
-        
+          <option value="#police-services">Police Services</option>
           <option value="#special-services">Special Services</option>
         </select>
       </div>
@@ -118,7 +118,9 @@
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="legal-services-tab" data-bs-toggle="tab" data-bs-target="#legal-services" type="button" role="tab" aria-controls="legal-services" aria-selected="false">Legal Services</button>
         </li>
-       
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="police-services-tab" data-bs-toggle="tab" data-bs-target="#police-services" type="button" role="tab" aria-controls="police-services" aria-selected="false">Police Services</button>
+        </li>
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="special-services-tab" data-bs-toggle="tab" data-bs-target="#special-services" type="button" role="tab" aria-controls="special-services" aria-selected="false">Special Services</button>
         </li>
@@ -1307,12 +1309,18 @@
       <div class="submenu2">
         <div class="container">
           <ul class="nav nav-pills" id="legal-submenu-tab-list" role="tablist">
-           
-          
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="power-of-attorney-tab" data-bs-toggle="tab" data-bs-target="#power-of-attorney" type="button" role="tab" aria-controls="power-of-attorney" aria-selected="true">Power Of Attorney</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="inheritance-tab" data-bs-toggle="tab" data-bs-target="#inheritance" type="button" role="tab" aria-controls="inheritance" aria-selected="false">Inheritance</button>
+            </li>
             <li class="nav-item" role="presentation">
               <button class="nav-link" id="document-validation-tab" data-bs-toggle="tab" data-bs-target="#document-validation" type="button" role="tab" aria-controls="document-validation" aria-selected="false">Document Validation/Attestation</button>
             </li>
-           
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="verification-of-identity-tab" data-bs-toggle="tab" data-bs-target="#verification-of-identity" type="button" role="tab" aria-controls="verification-of-identity" aria-selected="false">Verification of Identity</button>
+            </li>
           </ul>
         </div>
       </div>
@@ -1320,120 +1328,67 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="tab-content" id="legal-services-content">
-             
-              <div class="tab-pane fade  show active" id="document-validation" role="tabpanel" aria-labelledby="document-validation-tab">
+              <div class="tab-pane fade show active" id="power-of-attorney" role="tabpanel" aria-labelledby="power-of-attorney-tab">
+                <div class="has-bar">
+                  <h4>Power Of Attorney</h4>
+                </div>
+                <p>Details about setting up a power of attorney go here.</p>
+              </div>
+              <div class="tab-pane fade" id="inheritance" role="tabpanel" aria-labelledby="inheritance-tab">
+                <div class="has-bar">
+                  <h4>Inheritance</h4>
+                </div>
+                <p>Details about handling inheritance matters go here.</p>
+              </div>
+              <div class="tab-pane fade" id="document-validation" role="tabpanel" aria-labelledby="document-validation-tab">
                 <div class="has-bar">
                   <h4>Document Validation/Attestation</h4>
                 </div>
-                <p>The Document Attestation/Validation service allows Afghan citizens abroad to authenticate their official documents for use in Afghanistan or for international purposes. This service is crucial for ensuring that documents such as birth certificates, marriage certificates, academic transcripts, and other official paperwork are recognized by Afghan authorities or foreign governments.
-                </p>
-                <section>
-                  <div class="bg-white-10 br-20 cn-2">
-                    <div class="container">
-                      
-                      <div class="row">
-                        <div class="col-lg-12 pd-top-60">
-                          <h6>Eligibility</h6>
-                          <ul class="list-unstyled list2">
-                            <li><i><img src="/img/icons/check.svg" alt=""/></i> Afghan citizens living abroad who need their documents attested for use in Afghanistan or in other countries.</li>
-                            <li><i><img src="/img/icons/check.svg" alt=""/></i> The attestation can apply to a wide range of documents, including but not limited to:</li>
-                            <ul>
-                              <li><i><img src="/img/icons/check.svg" alt=""/></i> Birth certificates</li>
-                              <li><i><img src="/img/icons/check.svg" alt=""/></i> Marriage certificates</li>
-                              <li><i><img src="/img/icons/check.svg" alt=""/></i> Academic degrees and transcripts</li>
-                              <li><i><img src="/img/icons/check.svg" alt=""/></i> Commercial documents (e.g., contracts, powers of attorney)</li>
-                              <li><i><img src="/img/icons/check.svg" alt=""/></i> Personal identification documents (e.g., passports, Tazkira)</li>
-                              <li><i><img src="/img/icons/check.svg" alt=""/></i> Legal documents (e.g., affidavits, court judgments)</li>
-                            </ul>
-                          </ul>
-                        </div>
-                      </div>
-                      
-                      <div class="row">
-                        <div class="col-lg-12 pd-top-60">
-                          <h6>Required Documents</h6>
-                          <ul class="list-unstyled list2">
-                            <li><i><img src="/img/icons/check.svg" alt=""/></i><strong>For Document Attestation:</strong></li>
-                            <ul>
-                              <li><i><img src="/img/icons/check.svg" alt=""/></i> The original document requires attestation.</li>
-                              <li><i><img src="/img/icons/check.svg" alt=""/></i> A copy of the applicant’s Tazkira (Afghan National ID) or passport.</li>
-                              <li><i><img src="/img/icons/check.svg" alt=""/></i> Any supporting documents related to the document being attested (e.g., if attesting a degree, the transcript might also be required).</li>
-                            </ul>
-                            <li><i><img src="/img/icons/check.svg" alt=""/></i><strong>For Certain Documents (e.g., marriage certificates or legal documents):</strong></li>
-                            <ul>
-                              <li><i><img src="/img/icons/check.svg" alt=""/></i> Additional supporting documents might be required depending on the type of document being attested.</li>
-                            </ul>
-                          </ul>
-                        </div>
-                      </div>
-                      
-                      <div class="row pd-top-60">
-                        <div class="col-lg-12">
-                          <h6>Application Process</h6>
-                          <ul class="list-unstyled list2">
-                            <li><i><img src="/img/icons/check.svg" alt=""/></i> Step 1: Log in or register on the E-Afghans Portal.</li>
-                            <li><i><img src="/img/icons/check.svg" alt=""/></i> Step 2: Select the "Document Attestation" service.</li>
-                            <li><i><img src="/img/icons/check.svg" alt=""/></i> Step 3: Choose the type of document to be attested (e.g., academic certificates, legal documents).</li>
-                            <li><i><img src="/img/icons/check.svg" alt=""/></i> Step 4: Upload the required documents (original and copies) in the specified format.</li>
-                            <li><i><img src="/img/icons/check.svg" alt=""/></i> Step 5: Complete any additional forms (e.g., declaration forms) if required by the consulate.</li>
-                            <li><i><img src="/img/icons/check.svg" alt=""/></i> Step 6: Pay the attestation fee (if applicable) and submit the application.</li>
-                            <li><i><img src="/img/icons/check.svg" alt=""/></i> Step 7: Wait for the consulate to process and validate your document. You may receive updates on the status of your application through the portal.</li>
-                          </ul>
-                        </div>
-                      </div>
-                      
-                      <div class="row pd-top-60">
-                        <div class="col-lg-12">
-                          <h6>Processing Time</h6>
-                          <ul class="list-unstyled list2">
-                            <li><i><img src="/img/icons/check.svg" alt=""/></i> The processing time for document attestation varies depending on the type of document and consulate workload. Usually, it takes 4-6 weeks to complete the attestation.</li>
-                            <li><i><img src="/img/icons/check.svg" alt=""/></i> Applicants will receive notifications regarding the status of their attestation request via email and they may also check the status in the portal.</li>
-                          </ul>
-                        </div>
-                      </div>
-                      
-                      <div class="row pd-top-60">
-                        <div class="col-lg-12">
-                          <h6>Delivery and Collection</h6>
-                          <ul class="list-unstyled list2">
-                            <li><i><img src="/img/icons/check.svg" alt=""/></i> Once attested, the document can be collected in person at the consulate or embassy.</li>
-                            <li><i><img src="/img/icons/check.svg" alt=""/></i> Some consulates may offer a document delivery service via courier for an additional fee.</li>
-                            <li><i><img src="/img/icons/check.svg" alt=""/></i> Applicants will be notified once the document is ready for collection or has been sent for delivery.</li>
-                          </ul>
-                        </div>
-                      </div>
-                      
-                      <div class="row pd-top-60">
-                        <div class="col-lg-12">
-                          <h6>Support and Assistance</h6>
-                          <ul class="list-unstyled list2">
-                            <li><i><img src="/img/icons/check.svg" alt=""/></i> The portal provides step-by-step instructions for applicants on how to complete the attestation process.</li>
-                            <li><i><img src="/img/icons/check.svg" alt=""/></i> Customer support is available to answer questions or guide users through any issues with the document attestation process.</li>
-                          </ul>
-                        </div>
-                      </div>
-                      
-                    </div>
-                  </div>
-                </section>
-                
-                <p>
-                  This service ensures that documents are legally validated for use in Afghanistan and internationally, making them acceptable for official and legal matters. The E-Afghans Portal streamlines the entire attestation process, allowing Afghan citizens to handle it remotely, saving time, and ensuring all documentation is properly authenticated.
-                </p>
+                <p>Details about validating and attesting documents for authenticity go here.</p>
               </div>
-              <!-- /document attest end  -->
-          
+              <div class="tab-pane fade" id="verification-of-identity" role="tabpanel" aria-labelledby="verification-of-identity-tab">
+                <div class="has-bar">
+                  <h4>Verification of Identity</h4>
+                </div>
+                <p>Details about verifying identity go here.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-   
+    <div class="tab-pane fade" id="police-services" role="tabpanel" aria-labelledby="police-services-tab">
+      <div class="submenu2">
+        <div class="container">
+          <ul class="nav nav-pills" id="police-submenu-tab-list" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="police-clearance-tab" data-bs-toggle="tab" data-bs-target="#police-clearance" type="button" role="tab" aria-controls="police-clearance" aria-selected="true">Police Clearance</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="tab-content" id="police-services-content">
+              <div class="tab-pane fade show active" id="police-clearance" role="tabpanel" aria-labelledby="police-clearance-tab">
+                <div class="has-bar">
+                  <h4>Police Clearance</h4>
+                </div>
+                <p>Details about obtaining a police clearance go here.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="tab-pane fade" id="special-services" role="tabpanel" aria-labelledby="special-services-tab">
       <div class="submenu2">
         <div class="container">
           <ul class="nav nav-pills" id="special-submenu-tab-list" role="tablist">
-          
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="transferring-deceased-tab" data-bs-toggle="tab" data-bs-target="#transferring-deceased" type="button" role="tab" aria-controls="transferring-deceased" aria-selected="true">Transferring Deceased to Afghanistan</button>
+            </li>
             <li class="nav-item" role="presentation">
               <button class="nav-link" id="emergency-assistance-tab" data-bs-toggle="tab" data-bs-target="#emergency-assistance" type="button" role="tab" aria-controls="emergency-assistance" aria-selected="false">Emergency Assistance</button>
             </li>
@@ -1444,124 +1399,16 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="tab-content" id="special-services-content">
-             
-              <div class="tab-pane fade show active" id="emergency-assistance" role="tabpanel" aria-labelledby="emergency-assistance-tab">
+              <div class="tab-pane fade show active" id="transferring-deceased" role="tabpanel" aria-labelledby="transferring-deceased-tab">
+                <div class="has-bar">
+                  <h4>Transferring Deceased to Afghanistan</h4>
+                </div>
+                <p>Details about transferring the deceased to Afghanistan go here.</p>
+              </div>
+              <div class="tab-pane fade" id="emergency-assistance" role="tabpanel" aria-labelledby="emergency-assistance-tab">
                 <div class="has-bar">
                   <h4>Emergency help for Aghan nationals abroad</h4>
                 </div>
-                <p>The <b>Emergency Assistance</b> service is designed to support Afghan citizens living abroad in urgent or crisis situations. This service is provided through the consulates and is available to Afghan nationals who face emergencies, such as medical issues, natural disasters, accidents, legal problems, or other unforeseen circumstances. The E-Afghans Portal acts as a platform to facilitate communication with consular authorities, ensuring timely and effective help.
-                </p>
-
-                <section>
-                  <div class="bg-white-10 br-20 cn-2">
-                    <div class="container">
-                      
-                      <div class="row">
-                        <div class="col-lg-12">
-                          <h6>Eligibility</h6>
-                          <ul class="list-unstyled list2">
-                            <li> Afghan citizens currently living abroad who are facing an emergency situation that requires immediate consular assistance. </li>
-                            <li> This service is available for both individuals and families in distress, and it can include various types of emergency support. </li>
-                          </ul>
-                        </div>
-                      </div>
-                      
-                      <div class="row">
-                        <div class="col-lg-12">
-                          <h6>Types of Emergency Assistance</h6>
-                          <ul class="list-unstyled list2">
-                            <li> <strong>Medical Emergencies:</strong>
-                              <ul>
-                                <li> Assistance with medical referrals or coordination with local healthcare providers. </li>
-                                <li> Help with emergency medical evacuation or repatriation of deceased citizens. </li>
-                              </ul>
-                            </li>
-                            <li> <strong>Legal Issues:</strong>
-                              <ul>
-                                <li> Support for Afghan citizens who are detained, arrested, or facing legal challenges abroad. </li>
-                                <li> Assistance with locating legal representation and communication with local authorities. </li>
-                              </ul>
-                            </li>
-                            <li> <strong>Natural Disasters or Accidents:</strong>
-                              <ul>
-                                <li> Help during natural disasters (e.g., earthquakes, floods) or accidents involving Afghan citizens. </li>
-                                <li> Coordination for evacuation, shelter, and relief efforts. </li>
-                              </ul>
-                            </li>
-                            <li> <strong>Lost or Stolen Documents:</strong>
-                              <ul>
-                                <li> Immediate assistance for those who lose their passport, Tazkira, or other essential documents. </li>
-                                <li> Help in arranging for emergency travel documents, such as an emergency passport or travel permit. </li>
-                              </ul>
-                            </li>
-                            <li> <strong>Repatriation Assistance:</strong>
-                              <ul>
-                                <li> Help with arranging the return of Afghan citizens to Afghanistan or their home country in the event of a severe crisis. </li>
-                              </ul>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      
-                      <div class="row ">
-                        <div class="col-lg-12">
-                          <h6>Application Process</h6>
-                          <ul class="list-unstyled list2">
-                            <li> Fill out this form: <a href="https://eafghans.com/citizen-services/#special-services/emergency-assistance">https://eafghans.com/citizen-services/#special-services/emergency-assistance</a> </li>
-                          </ul>
-                        </div>
-                      </div>
-                      
-                      <div class="row ">
-                        <div class="col-lg-12">
-                          <h6>Processing Time</h6>
-                          <ul class="list-unstyled list2">
-                            <li> Emergency assistance requests are typically handled on an immediate basis. The consulate aims to respond as quickly as possible depending on the nature of the emergency. </li>
-                            <li> For medical or life-threatening emergencies, the response is prioritized. </li>
-                          </ul>
-                        </div>
-                      </div>
-                      
-                      <div class="row ">
-                        <div class="col-lg-12">
-                          <h6>Fees</h6>
-                          <ul class="list-unstyled list2">
-                            <li> Depending on the type of emergency assistance, there may be fees associated with certain services (e.g., for repatriation or travel documents). </li>
-                            <li> However, many types of emergency assistance (such as urgent communication or medical referrals) may not require additional charges. </li>
-                          </ul>
-                        </div>
-                      </div>
-                      
-                      <div class="row">
-                        <div class="col-lg-12">
-                          <h6>Support and Communication</h6>
-                          <ul class="list-unstyled list2">
-                            <li> For critical emergencies, direct communication with consular staff is available through the portal or by phone. </li>
-                            <li> The portal may also provide emergency contact numbers for the nearest Afghan consulate or embassy to further expedite assistance. </li>
-                          </ul>
-                        </div>
-                      </div>
-                      
-                      <div class="row">
-                        <div class="col-lg-12">
-                          <h6>Delivery of Assistance</h6>
-                          <ul class="list-unstyled list2">
-                            <li> <strong>Medical:</strong> Coordination for medical evacuation or local treatment. </li>
-                            <li> <strong>Legal:</strong> Facilitation in legal cases, including lawyers and consulate representation. </li>
-                            <li> <strong>Documents:</strong> Issuance of temporary travel documents. </li>
-                            <li> <strong>Repatriation:</strong> Arrangements for safe travel back to Afghanistan or the home country. </li>
-                          </ul>
-                        </div>
-                      </div>
-                      
-                    </div>
-                  </div>
-                </section>
-                
-
-                <p>The <b>E-Afghans Portal</b>  provides Afghan citizens abroad with a quick, reliable means of requesting and receiving emergency support from consulates. It simplifies the process of reaching out for help in critical situations, ensuring that Afghan nationals receive the necessary assistance without delays.
-                </p>
-                <!-- /emergency content end -->
                 <div id="my-form-container" class="pd-top-60"></div>
                 <!-- Put this code at the end of your page -->
                 
