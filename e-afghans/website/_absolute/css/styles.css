@@ -41,6 +41,7 @@ body {
   font-family: 'Switzer', sans-serif;
   font-size: 18px;
     color: var(--text);
+    font-weight: 300;
 }
 
 /*--------------------------------------------------
@@ -245,6 +246,10 @@ p.lead{ font-size: 20px; font-weight: 500;}
     animation: gradient 15s ease infinite;
     /* Other styles for the div as needed */
 }
+
+.bg-afghan1{
+  background: url('../img/bg/afghanistan-sea.jpg') no-repeat center;
+  background-attachment: fixed; /* This fixes the background */} 
 
 @keyframes gradient {
     0% {
@@ -524,9 +529,9 @@ ul.list2 { margin-top: 40px; }
 ---------------------------------------------------*/
 .bg-animated.above-hero{ 
     position: relative; 
-    padding-top: 110px;
-    
+    padding-top: 110px; 
 }
+
 .bg-animated.above-hero:before{
     position: absolute; content:"";
     width: 100%; 
@@ -540,6 +545,8 @@ ul.list2 { margin-top: 40px; }
 /*    overflow: hidden;*/
     z-index: 0;
 }
+
+
 
 
 header.hero{ 
@@ -620,6 +627,8 @@ header.hero .pill1 .cn-img IMG{margin-left: -8px;}
 
 }
 
+
+
 @media (max-width: 767.98px) { 
     header.hero{padding-bottom: 200px;}
     header.hero .pill1{ margin-bottom: 32px;}
@@ -676,6 +685,25 @@ header.hero .pill1 .cn-img IMG{margin-left: -8px;}
 
 @media (max-width: 767.98px) { 
 #how-it-works .col-lg-4{margin-bottom: 30px;}
+}
+
+/*--------------------------------------------------
+    ## feedback
+---------------------------------------------------*/
+.cn-feedback{
+  background-color: var(--lite);
+  border-radius: 20px;
+  padding: 40px 30px 0px 30px;
+}
+
+.cn-feedback-hdr3{ 
+  background: #cccccc;
+  border-radius: 20px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  padding: 40px;
+  margin-bottom: -20px;
+  text-align: center;
 }
 /*--------------------------------------------------
     ##internal hero

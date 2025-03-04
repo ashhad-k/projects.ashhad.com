@@ -135,3 +135,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+// jump to script from other pages.

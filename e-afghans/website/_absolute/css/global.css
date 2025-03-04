@@ -56,6 +56,7 @@
 .z10{ z-index: 10; position: relative}
 .v-flex{display: flex; flex-direction: column; justify-content: space-between}
 .d-flex2{display: flex; justify-content: space-between; }
+.d-flex3{display: flex; justify-content: space-between;  align-items: center;}
 .d-flex3-bl{display: flex; justify-content: space-between; align-items: flex-end}
 
 .fs16{font-size: 16px;}
@@ -269,3 +270,9 @@ section {
 }
 
 .btn-outline.active{color:var(--white)}
+
+ol{ margin-top:20px; margin-bottom: 20px;}
+ol li{ margin-bottom: 20px;}
+ol li:last-child{ margin-bottom: 10px;}
+
+ol  ol{margin-bottom: 40px; margin-top:10px;}
