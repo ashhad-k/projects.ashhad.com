@@ -125,6 +125,8 @@ body {
 .navbar-collapse.collapse:not(.show) a.btn {
   padding-left: 20px;
   padding-right: 20px;
+    opacity: 0.5;
+    pointer-events: none; /* temp disabled top right buttons*/
 
 }
 .navbar-expand-lg .navbar-nav .nav-link {
@@ -163,6 +165,7 @@ body {
   margin-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
+      pointer-events: none; /* temp disabled top right buttons*/
 }
 
 

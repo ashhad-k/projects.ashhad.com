@@ -1,0 +1,509 @@
+<meta charset="utf-8">
+<title></title>
+<style type="text/css">body {
+    background: #ffffff;
+    padding: 0px;
+    margin: 0px;
+}
+.tb1 {
+    border-collapse: collapse;
+    width: 100%;
+}
+.data {
+    border-collapse: collapse;
+    overflow:wrap;
+}
+.data tr {
+    border-bottom: 1px solid #000;
+}
+.data tr>td:nth-child(2) {
+    border-right: 2px solid #000;
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow: wrap;
+}
+.data tr>td:nth-child(3) {
+    border-left: 2px solid #000
+}
+.data td {
+    border-bottom: 1px solid #000;
+    font-size: 10px;
+    word-break: break-word;
+}
+.data th {
+    background: #DCDCDC;
+    border: 2px solid #000000;
+    border-left: 0px;
+    border-right: 0px;
+}
+td.logo, tr.logo {
+    text-align: center;
+    background-color: #1a2869;
+}
+/* Force a page break before this section */
+.page-break {
+    page-break-before: always;
+}
+/* Optional: Remove elements that you don't want in the print version */
+.no-print {
+    display: none;
+}
+/* To avoid breaking content inside */
+.no-break {
+    page-break-inside: avoid;
+}
+</style>
+<div class="no-break">
+<table border="0" cellpadding="0" cellspacing="0" class="tb1" style="width: 100%;margin-left:auto;margin-right:auto;">
+	<tbody>
+		<tr class="logo">
+			<td class="logo"><img src="https://afghanconsulate.saphyteapi.com/docs/media/images/top.png" style="width: 100%;" /></td>
+		</tr>
+		<tr>
+			<td style="background: #DCDCDC; border: 2px solid #000000;">
+			<table border="0" cellpadding="10" cellspacing="0" width="100%">
+				<tbody>
+					<tr>
+						<td width="30%">&nbsp;</td>
+						<td align="center" width="40%"><strong>NEW PASSPORT APPLICATION FORM</strong><br />
+						<b>Application Reference Number: {{request.deal_number}}</b></td>
+						<td align="right" width="30%">&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" class="tb1" style="width: 100%;margin-left:auto;margin-right:auto;">
+	<tbody>
+		<tr>
+			<td>
+			<table border="1" cellpadding="10" cellspacing="0" class="data" style="width:100%;overflow:wrap;">
+				<tbody>
+					<tr>
+						<th align="left" colspan="2">Personal Information</th>
+						<th align="right" colspan="2">شخصي معلومات</th>
+					</tr>
+					<tr>
+						<td width="25%">Taskira Number :</td>
+						<td width="25%">{{form.id_card_no__2}}</td>
+						<td style="text-align: right;" width="25%">{{form.id_card_no__2}}</td>
+						<td align="right" dir="rtl" width="25%">د تذکرې ګڼه / شماره تذکره</td>
+					</tr>
+					<tr>
+						<td>Family Name&nbsp;</td>
+						<td>{{form.family_name}}</td>
+						<td dir="rtl" style="text-align: right;">{{form.__2}}</td>
+						<td align="right" dir="rtl">کورنی نوم / نام خانوادگی</td>
+					</tr>
+					<tr>
+						<td>Given Name</td>
+						<td>{{form.given_names}}</td>
+						<td dir="rtl" style="text-align: right;">{{form.__5}}</td>
+						<td align="right" dir="rtl">نوم / نام</td>
+					</tr>
+					<tr>
+						<td>Father&#39;s Full Name</td>
+						<td>{{form.fathers_name__2}}</td>
+						<td dir="rtl" style="text-align: right;">{{form.fathers_name__2__extra_field}}</td>
+						<td align="right" dir="rtl">د پلار نوم / نام پدر</td>
+					</tr>
+					<tr>
+						<td>Grand Father&#39;s Full Name</td>
+						<td>{{form.grandfathers_name__2}}</td>
+						<td dir="rtl" style="text-align: right;">{{form.grandfathers_name__2__extra_field}}</td>
+						<td align="right" dir="rtl">د نیکه نوم / نام پدر کلان</td>
+					</tr>
+					<tr>
+						<td>Date of Birth (Gregorian)</td>
+						<td>{{form.date_of_birth_gregorian_}}</td>
+						<td dir="rtl" style="text-align: right;">{{form.__3}}</td>
+						<td align="right" dir="rtl">د زېږېدني نېټه ( هجري شمسي) / تاریخ تولد&nbsp;(هجری&nbsp;شمسی)</td>
+					</tr>
+					<tr>
+						<td>Birthplace Country</td>
+						<td>{{form.birthplace_country_د_زېږېدنې_ځای_محل_تولد}}</td>
+						<td style="text-align: right;">&nbsp;</td>
+						<td align="right" dir="rtl">د زېږېدنې ځای / محل تولد</td>
+					</tr>
+					<tr>
+						<td>Birthplace City (if not Afghanistan)</td>
+						<td>{{form.birthplace_city_}}</td>
+						<td dir="rtl" style="text-align: right;">{{form.birthplace_city___extra_field}}</td>
+						<td align="right" dir="rtl">د زېږېدنې ښار (که افغانستان نه وي) / شهر تولد (اګر افغانستان نباشد)</td>
+					</tr>
+					<tr>
+						<td>State/Province *</td>
+						<td>{{form.province_}}</td>
+						<td dir="rtl" style="text-align: right;">{{form.province___extra_field}}</td>
+						<td align="right" dir="rtl">ولایت / ولایت</td>
+					</tr>
+					<tr>
+						<td>District</td>
+						<td>{{form.district_}}</td>
+						<td dir="rtl" style="text-align: right;">{{form.district__2__extra_field}}</td>
+						<td align="right" dir="rtl">ولسوالي / ولسوالی</td>
+					</tr>
+					<tr>
+						<td>Village/City</td>
+						<td>{{form.village_}}</td>
+						<td dir="rtl" style="text-align: right;">{{form.village___extra_field}}</td>
+						<td align="right" dir="rtl">کلی / قریه</td>
+					</tr>
+					<tr>
+						<td>Ancestor Province</td>
+						<td>{{form.ancestor_province}}</td>
+						<td dir="rtl" style="text-align: right;">{{form.ancestor_province__extra_field}}</td>
+						<td align="right" dir="rtl">ولایت / ولایت</td>
+					</tr>
+					<tr>
+						<td>Ancestor District</td>
+						<td>{{form.ancestor_district_}}</td>
+						<td dir="rtl" style="text-align: right;">{{form.ancestor_district__2__extra_field}}</td>
+						<td align="right" dir="rtl">ولسوالي / ولسوالی</td>
+					</tr>
+					<tr>
+						<td>Ancestor Village</td>
+						<td>{{form.ancestor_village_}}</td>
+						<td dir="rtl" style="text-align: right;">{{form.ancestor_village___extra_field}}</td>
+						<td align="right" dir="rtl">کلی / قریه</td>
+					</tr>
+					<tr>
+						<td>Country of Residence</td>
+						<td>{{form.country_of_residence__2}}</td>
+						<td style="text-align: right;">{{form.country_of_residence__2}}</td>
+						<td align="right" dir="rtl">د استوګنې ځای / محل اقامت</td>
+					</tr>
+					<tr>
+						<td width="25%">Other Nationality</td>
+						<td width="25%">{{form.other_nationality__2}}</td>
+						<td style="text-align: right;" width="25%">{{form.other_nationality__2}}</td>
+						<td align="right" dir="rtl" width="25%">بل تابعیت / تابعیت دیګر</td>
+					</tr>
+					<tr>
+						<td>Gender</td>
+						<td>{{form.gender__2}}</td>
+						<td dir="rtl" style="text-align: right;">{{form.gender__2__extra_field}}</td>
+						<td align="right" dir="rtl">جنس&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Marital Status</td>
+						<td>{{form.marital_status__2}}</td>
+						<td dir="rtl" style="text-align: right;">{{form.marital_status__2__extra_field}}</td>
+						<td align="right" dir="rtl">مدني حالت / حالت مدنی</td>
+					</tr>
+					<tr>
+						<td>Height</td>
+						<td>{{form.height_cm__2}}</td>
+						<td dir="rtl" style="text-align: right;">{{form.height_cm__2__extra_field}}</td>
+						<td align="right" dir="rtl">ونه / قد</td>
+					</tr>
+					<tr>
+						<td>Eye Color</td>
+						<td>{{form.eye_color__2}}</td>
+						<td dir="rtl" style="text-align: right;">{{form.eye_color__2__extra_field}}</td>
+						<td align="right" dir="rtl">د سترګو رنګ / رنګ چشم</td>
+					</tr>
+					<tr>
+						<td>Hair Color</td>
+						<td>{{form.hair_color__2}}</td>
+						<td dir="rtl" style="text-align: right;">{{form.hair_color__2__extra_field}}</td>
+						<td align="right" dir="rtl">د وېښتانو رنګ / رنګ مو</td>
+					</tr>
+					<tr>
+						<td>Other Marks</td>
+						<td>{{form.other_marks__2}}</td>
+						<td dir="rtl" style="text-align: right;">{{form.other_marks__2__extra_field}}</td>
+						<td align="right" dir="rtl">د پېژندنې نورې نښې / دیګر علائم شناسایی</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<div class="no-break">
+<table border="0" cellpadding="0" cellspacing="0" class="tb1">
+	<tbody>
+		<tr>
+			<td>
+			<table border="1" cellpadding="10" cellspacing="0" class="data" style="width: 100%;overflow:wrap;">
+				<tbody>
+					<tr>
+						<th align="left" colspan="2">Contact Details</th>
+						<th align="right" colspan="2">د اړیکې معلومات / اطلاعات تماس</th>
+					</tr>
+					<tr>
+						<td width="25%">Mailing Address</td>
+						<td width="25%">{{form.address_line_1}} {{form.address_line_2}} {{form.citytown}} {{form.stateprovinceregion}} {{form.postal_codezip_code}} {{form.countryterritory}}</td>
+						<td style="text-align: right;" width="25%">{{form.address_line_1}} {{form.address_line_2}} {{form.citytown}} {{form.stateprovinceregion}} {{form.postal_codezip_code}} {{form.countryterritory}}</td>
+						<td align="right" dir="rtl" width="25%">د پوستې پته / آدرس پستی</td>
+					</tr>
+					<tr>
+						<td>Previous Address</td>
+						<td>{{form.previous_address_}}</td>
+						<td style="text-align: right;">{{form.previous_address_}}</td>
+						<td align="right" dir="rtl">مخکینۍ پته / آدرس قبلی</td>
+					</tr>
+					<tr>
+						<td>Email Address</td>
+						<td>{{form.email_address__2}}</td>
+						<td style="text-align: right;">{{form.email_address__2}}</td>
+						<td align="right" dir="rtl">د ایمېل پته / آدرس ایمیل&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Home Telephone Number</td>
+						<td>{{form.home_tel_}}</td>
+						<td style="text-align: right;">{{form.home_tel_}}</td>
+						<td align="right" dir="rtl">د کور د ټیلیفون شمېره / شماره تلیفون خانه</td>
+					</tr>
+					<tr>
+						<td>Mobile Number *</td>
+						<td>{{form.mobile_no_}}</td>
+						<td style="text-align: right;">{{form.mobile_no_}}</td>
+						<td align="right" dir="rtl">د موبایل شمېره / شماره موبایل</td>
+					</tr>
+					<tr>
+						<th align="left" colspan="2">Employment Details</th>
+						<th align="right" colspan="2">د دندې جزئیات / جزئیات وظیفه</th>
+					</tr>
+					<tr>
+						<td>Occupation</td>
+						<td>{{form.occupation__2}}</td>
+						<td dir="rtl" style="text-align: right;">{{form.occupation__2__extra_field}}</td>
+						<td align="right" dir="rtl">دنده / شغل</td>
+					</tr>
+					<tr>
+						<td>Employer</td>
+						<td>{{form.employer__2}}</td>
+						<td style="text-align: right;">{{form.employer__2}}</td>
+						<td align="right" dir="rtl">کار ګمارونکی / کارفرما</td>
+					</tr>
+					<tr>
+						<td>Employer&#39;s Address</td>
+						<td>{{form.employers_address__2}}</td>
+						<td style="text-align: right;">{{form.employers_address__2}}</td>
+						<td align="right" dir="rtl">د کار ګمارونکي پته / آدرس کارفرما</td>
+					</tr>
+					<tr>
+						<td>Previous Employer</td>
+						<td>{{form.previous_employer__2}}</td>
+						<td style="text-align: right;">{{form.previous_employer__2}}</td>
+						<td align="right" dir="rtl">مخکینی کار ګمارونکی / کارفرما قبلی</td>
+					</tr>
+					<tr>
+						<th align="left" colspan="2">Previous Afghan Passport Details</th>
+						<th align="right" colspan="2">د پخواني افغان پاسپورټ جزئیات / جزئیات پاسپورت&nbsp;افغان&nbsp;قبلی</th>
+					</tr>
+					<tr>
+						<td>Have you ever had an Afghan Passport?</td>
+						<td>{{form.have_you_ever_had_an_afghan_passport__2}}</td>
+						<td dir="rtl" style="text-align: right;">{{form.have_you_ever_had_an_afghan_passport__2__extra_field}}</td>
+						<td align="right" dir="rtl">آیا تاسو کله هم افغان پاسپورټ لرلی دی؟ / آیا شما هرګز پاسپورت افغانی داشته&not;اید؟</td>
+					</tr>
+					<tr>
+						<td>Previous Passport Number</td>
+						<td>{{form.previous_passport_number_مخکنی_پاسپورټ_نمبر_شماره_پاسپورت_قبلي}}</td>
+						<td style="text-align: right;">{{form.previous_passport_number_مخکنی_پاسپورټ_نمبر_شماره_پاسپورت_قبلي}}</td>
+						<td align="right" dir="rtl">د مخکیني پاسپورټ ګڼه / شماره پاسپورت قبلی</td>
+					</tr>
+					<tr>
+						<td>Previous Passport Validity</td>
+						<td>{{form.previous_passport_validity}}</td>
+						<td dir="rtl" style="text-align: right;">{{form.previous_passport_validity__extra_field}}</td>
+						<td align="right" dir="rtl">د پخواني پاسپورټ د اعتبار موده / مدت اعتبار پاسپورت قبلی</td>
+					</tr>
+					<tr>
+						<td>Previous Passport Issue Date</td>
+						<td>{{form.issue_date__2}}</td>
+						<td dir="rtl" style="text-align: right;">{{form.issue_date__2__extra_field}}</td>
+						<td align="right" dir="rtl">د صدور نېټه / تاریخ صدور</td>
+					</tr>
+					<tr>
+						<td>Previous Passport Expiry Date</td>
+						<td>{{form.expiry_date__2}}</td>
+						<td dir="rtl" style="text-align: right;">{{form.expiry_date__2__extra_field}}</td>
+						<td align="right" dir="rtl">د پای نېټه / تاریخ ختم</td>
+					</tr>
+					<tr>
+						<td>Previous Passport Place of Issue</td>
+						<td>{{form.place_of_issue_د_صدور_ځای_محل_صدور}}</td>
+						<td dir="rtl" style="text-align: right;">{{form.place_of_issue__2__extra_field}}</td>
+						<td align="right" dir="rtl">د صدور ځای/ محل صدور</td>
+					</tr>
+					<tr>
+						<td>Where Did You Apply From</td>
+						<td>{{form.where_did_you_apply_from_د_کوم_ځای_نه_مو_درخواست_ورکړی؟_از_کجا_درخواستدادهاید؟}}</td>
+						<td>&nbsp;</td>
+						<td align="right" dir="rtl">&nbsp;د کوم ځای نه مو درخواست ورکړی؟ / از کجا درخواست&nbsp;داده&zwnj;اید؟</td>
+					</tr>
+					<tr>
+						<td width="25%">Do you have a criminal record?</td>
+						<td width="25%">{{form.do_you_have_a_criminal_record__2}}</td>
+						<td dir="rtl" style="text-align: right;" width="25%">{{form.do_you_have_a_criminal_record__2__extra_field}}</td>
+						<td align="right" dir="rtl" width="25%">آیا جرمي مخینه لرئ؟ / آیا سابقه جرمی دارید؟</td>
+					</tr>
+					<tr>
+						<td>If yes, please provide details below.</td>
+						<td>{{form.if_yes_please_provide_details_below__2}}</td>
+						<td dir="rtl" style="text-align: right;">{{form.if_yes_please_provide_details_below__2__extra_field}}</td>
+						<td align="right" dir="rtl">که ځواب مو هو وي، مهرباني وکړئ جزئیات وړاندې کړئ. / اګر جواب شما بلی است، لطفا جزئیات را ارائه دهید.</td>
+					</tr>
+					<tr>
+						<th align="left" colspan="2">New Passport Details</th>
+						<th align="right" colspan="2">د نوي پاسپورټ جزئیات / جزئیات پاسپورت جدید</th>
+					</tr>
+					<tr>
+						<td>New Passport Duration</td>
+						<td>{{form.new_passport_duration__2}}</td>
+						<td dir="rtl" style="text-align: right;">{{form.new_passport_duration__2__extra_field}}</td>
+						<td align="right" dir="rtl">د نوي پاسپورټ موده / مدت پاسپورت جدید</td>
+					</tr>
+					<tr>
+						<td>Remarks</td>
+						<td>{{form.remarks_2}}</td>
+						<td dir="rtl" style="text-align: right;">{{form.remarks_2__extra_field}}</td>
+						<td align="right" dir="rtl">څرګندونې / ملاحظات</td>
+					</tr>
+					<tr>
+						<th align="left" colspan="2">Declaration</th>
+						<th align="right" colspan="2">مشخصات پاسپورت</th>
+					</tr>
+					<tr>
+						<td colspan="2">
+						<p>I declare to the best of my knowledge and belief that:</p>
+
+						<p>- I am an Afghan citizen;</p>
+
+						<p>- The statements made in this application are true and correct.</p>
+
+						<p>- I accept all the terms and conditions of this application process.</p>
+						</td>
+						<td align="right" colspan="2" dir="rtl">
+						<p>زه د خپلې پوهې او باور له مخې اعلان کوم چې:&nbsp;</p>
+
+						<p>زه د افغانستان تبعه یم؛</p>
+
+						<p>په دې غوښتنلیک کې ورکړل شوي ټولې څرګندونې سمې او رښتیني دي؛</p>
+
+						<p>زه د دې غوښتنلیک د پروسې ټول شرایط او ضوابط منم</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<div class="page-break">&nbsp;</div>
+
+<div class="no-break">
+<table border="0" cellpadding="0" cellspacing="0" class="tb1">
+	<tbody>
+		<tr>
+			<td>
+			<table border="1" cellpadding="10" cellspacing="0" class="data" style="width: 100%;overflow:wrap;">
+				<tbody>
+					<tr>
+						<th align="left" colspan="2" style="font-size: 20pt" width="50%">Signature <small>(please sign within the box)</small></th>
+						<th align="left" colspan="2" style="font-size: 20pt" width="50%">Passport Photograph: <small>(please sign within the box)</small></th>
+					</tr>
+					<tr>
+						<td colspan="2" valign="top">
+						<table border="0" cellpadding="5" cellspacing="0" width="100%">
+							<tbody>
+								<tr>
+									<td style="direction: rtl; text-align: right; border: 0px; font-size: 20pt;">:اﻣﻀﺄ<br />
+									(لطفا در داخل کادر امضا کنید)</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<div class="MuiGrid-root css-887gtd">
+						<table align="center" border="0" cellpadding="5" cellspacing="5" style=" margin: 20px auto " width="70%">
+							<tbody>
+								<tr>
+									<td align="center" style="border: 1px solid rgb(0, 0, 0); height:320px; vertical-align: middle" valign="middle"><img alt="signature" src="{{form.signature__2}}" /></td>
+								</tr>
+							</tbody>
+						</table>
+						</div>
+						</td>
+						<td colspan="2" style="border-right: 1px solid 000" valign="top">
+						<table border="0" cellpadding="5" cellspacing="0" width="100%">
+							<tbody>
+								<tr>
+									<td style="direction: rtl; text-align: right; border: 0px; font-size: 20pt;">:اﻣﻀﺄ<br />
+									(لطفا در داخل کادر امضا کنید)</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<div class="MuiGrid-root css-nawzkx">
+						<table align="center" border="0" cellpadding="5" cellspacing="5" style=" margin: 20px auto " width="96%">
+							<tbody>
+								<tr>
+									<td align="center" style="border: 1px solid rgb(0, 0, 0); height: 260px; font-size: 20pt" valign="middle" width="50%">
+									<div style="max-height: 260px;"><img src="{{form.photo_}}" style="max-width: 100%;" /></div>
+									<!--
+                                        Please attach passport photo here: size: 4 x 4.5 cm<br />
+									&nbsp;
+									<p>لطفا عکس پاسپورت را اینجا ضمیمه کنید: اندازه: ۴ در ۴.۵ سانتی&zwnj;متر</p>
+--></td>
+									<td style="border: 1px solid rgb(0, 0, 0); height: 260px; font-size: 16px">
+									<table border="0" cellpadding="5" cellspacing="0" style="font-size: 16px" width="100%">
+										<tbody>
+											<tr>
+												<td style="border: 0px; font-size: 20pt" width="50%">Guarantor must endorse the photo</td>
+											</tr>
+											<tr>
+												<td style="border: 0px; font-size: 20pt">ضامن باید عکس را تایید کند</td>
+											</tr>
+											<tr>
+												<td style="border: 0px; font-size: 20pt">This is a true photo of:</td>
+											</tr>
+											<tr>
+												<td style="border-bottom: 2px solid rgb(0, 0, 0); padding-top: 24px; margin-top: 12px;font-size: 20pt;">{{form.given_names}} {{form.family_name}}</td>
+											</tr>
+											<tr>
+												<td style="border: 0px; font-size: 20pt">(name of applicant)</td>
+											</tr>
+											<tr>
+												<td style="border: 0px; font-size: 20pt">&nbsp;</td>
+											</tr>
+											<tr>
+												<td style="border-bottom: 2px solid rgb(0, 0, 0); padding-top: 24px; margin-top: 16px;; font-size: 16px">&nbsp;</td>
+											</tr>
+											<tr>
+												<td style="border: 0px; font-size: 20pt">(Guarantor&#39;s signature)</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</div>
+
+						<table border="0" cellpadding="5" cellspacing="0" width="100%">
+							<tbody>
+								<tr>
+									<td style=" border: 0px; font-size: 20pt">Please abide by the guidelines on passport photo!</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>

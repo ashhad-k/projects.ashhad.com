@@ -1,0 +1,195 @@
+<meta charset="utf-8">
+<title></title>
+<style type="text/css">
+body {
+    background: #ffffff;
+    padding: 0px;
+    margin: 0px;
+}
+.tb1 {
+    border-collapse: collapse;
+    width: 100%;
+}
+.data {
+    border-collapse: collapse;
+    overflow: wrap;
+}
+.data tr {
+    border-bottom: 1px solid #000;
+}
+.data tr>td:nth-child(2) {
+    border-right: 2px solid #000;
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow: wrap;
+}
+.data tr>td:nth-child(3) {
+    border-left: 2px solid #000
+}
+.data td {
+    border-bottom: 1px solid #000;
+    font-size: 10px;
+    word-break: break-word;
+}
+.data th {
+    background: #DCDCDC;
+    border: 2px solid #000000;
+    border-left: 0px;
+    border-right: 0px;
+}
+td.logo, tr.logo {
+    text-align: center;
+    background-color: #1a2869;
+}
+/* Force a page break before this section */
+.page-break {
+    page-break-before: always;
+}
+/* Optional: Remove elements that you don't want in the print version */
+.no-print {
+    display: none;
+}
+/* To avoid breaking content inside */
+.no-break {
+    page-break-inside: avoid;
+}
+</style>
+<div class="no-break">
+  <table border="0" cellpadding="0" cellspacing="0" class="tb1" style="width: 100%;margin-left:auto;margin-right:auto;">
+    <tbody>
+      <tr class="logo">
+        <td class="logo"><img src="https://afghanconsulate.saphyteapi.com/docs/media/images/top-munich.png" style="width: 100%;" /></td>
+      </tr>
+      <tr>
+        <td style="background: #DCDCDC; border: 2px solid #000000;"><table border="0" cellpadding="10" cellspacing="0" width="100%">
+            <tbody>
+              <tr>
+                <td width="30%">&nbsp;</td>
+                <td align="center" width="40%"><strong>NEW PASSPORT APPLICATION FORM</strong><br />
+                  <b>Application Reference Number: {{request.deal_number}}</b></td>
+                <td align="right" width="30%">&nbsp;</td>
+              </tr>
+            </tbody>
+          </table></td>
+      </tr>
+    </tbody>
+  </table>
+  <table border="0" cellpadding="0" cellspacing="0" class="tb1" style="width: 100%;margin-left:auto;margin-right:auto;">
+    <tbody>
+      <tr>
+        <td><table border="0" cellpadding="0" cellspacing="0" class="tb1" style="width: 100%;margin-left:auto;margin-right:auto;">
+            <tbody>
+              <tr>
+                <td valign="top"><table border="1" cellpadding="10" cellspacing="0" class="data" style="width:100%;overflow:wrap;">
+                    <tbody>
+                      <tr>
+                        <th align="left" colspan="2">Terms and Conditions of this Application</th>
+                      </tr>
+                      <tr>
+                        <td colspan="2" valign="top"><ol>
+                            <li>This application process is intended for walk-in clients only.</li>
+                            <br>
+                            <li>Please ensure all information provided is complete and accurate. <b>Submission of incorrect or fraudulent information will result in automatic rejection.&nbsp;</b></li>
+                            <br>
+                            <li>Upon submitting your application, you will receive an email containing a payment link for the application fee.&nbsp;</li>
+                            <br>
+                            <li>The application fee <u><b>must be paid within 30 minutes</b></u> of receiving the payment link. Failure to do so will result in automatic rejection of your application.&nbsp;</li>
+                            <br>
+                            <li>If you encounter any issues with the payment link, report the problem immediately to a Support Agent at the consulate.&nbsp;</li>
+                            <br>
+                            <li>After successful payment, you will receive a confirmation email containing your completed application form and payment receipt. You must present both documents at the consulate to proceed. Applications without these documents will not be processed.&nbsp;</li>
+                            <br>
+                            <li>Payments are accepted <b>only</b> through the official payment link (card payment).</li>
+                            <br>
+                            <li>Please ensure you provide a <b>valid and working email address</b> to receive the payment link and further&nbsp;instructions.&nbsp;If the email does not appear in your inbox, please be sure to check your spam or junk folder.</li>
+                          </ol></td>
+                      </tr>
+                      <tr>
+                        <td> Select the Country you are applying from</td>
+                        <td>-</td>
+                      </tr>
+                      <tr>
+                        <td>Select the Consulate Service you are applying for /</td>
+                        <td>-</td>
+                      </tr>
+                      <tr>
+                        <th align="left" colspan="2">Personal Information</th>
+                      </tr>
+                      <tr>
+                        <td>Taskira Number </td>
+                        <td> {{form.taskira_number_تذکره}}</td>
+                      </tr>
+                      <tr>
+                        <td>Passport Number</td>
+                        <td> {{form.passport_number_د_پاسپورټ_شمېره_شماره_پاسپورت}}</td>
+                      </tr>
+                      <tr>
+                        <td>Given Name</td>
+                        <td>{{form.given_names}}</td>
+                      </tr>
+                      <tr>
+                        <td>Family Name&nbsp;</td>
+                        <td>{{form.family_name}}</td>
+                      </tr>
+                      <tr>
+                        <td>Date of Birth (Gregorian)</td>
+                        <td>{{form.date_of_birth_gregorian_}}</td>
+                      </tr>
+                      <tr>
+                        <td>Email Address</td>
+                        <td>{{form.email_address__2}}</td>
+                      </tr>
+                      <tr>
+                        <td>Required Document</td>
+                        <td>--</td>
+                      </tr>
+                      <tr>
+                        <th align="left" colspan="2">Address Details</th>
+                      </tr>
+                      <tr>
+                        <td>Current Address</td>
+                        <td>--</td>
+                      </tr>
+                      <tr>
+                        <th align="left" colspan="2">Birthplace Details</th>
+                      </tr>
+                      <tr>
+                        <td>Birthplace Country</td>
+                        <td>{{form.birthplace_country_د_زېږېدنې_ځای_محل_تولد}}</td>
+                      </tr>
+                      <tr>
+                        <td>Birthplace City</td>
+                        <td>{{form.birthplace_city_}}</td>
+                      </tr>
+                      <tr>
+                        <td>Birthplace Province (Afghanistan)</td>
+                        <td>{{form.province_ولایت}}</td>
+                      </tr>
+                      <tr>
+                        <td>Birthplace District (Afghanistan) </td>
+                        <td>{{form.district_ولسوالي}}</td>
+                      </tr>
+                      <tr>
+                        <td>Birthplace Village (Afghanistan)</td>
+                        <td>{{form.village_کلی_قریه}}</td>
+                      </tr>
+                      <tr>
+                        <td>Mobile Number </td>
+                        <td> {{form.mobile_no_ګرځنده_تلیفون_موبایل}}</td>
+                      </tr>
+                      <tr>
+                        <th align="left" colspan="2">Declaration</th>
+                      </tr>
+                      <tr>
+                        <td colspan="2"><p>I accept all the terms and conditions of this application process. / من تمامی شرایط و احکام این روند درخواست را می‌پذیرم / زه د دې غوښتنلیک د بهیر ټول شرایط او احکام منم</p></td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+            </tbody>
+          </table></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="page-break">&nbsp;</div>
