@@ -1,0 +1,240 @@
+:root {
+  --brown1: #C3996B;
+  --light: #ffffff;
+  --gray-dark: #333333;
+  --gray: #CFCFCF;
+    --blue1:#11172E; 
+}
+body {
+  padding: 0px;
+  margin: 0px;
+  color: var(--gray-dark);
+  font-size: 0.775rem;
+  font-weight: 400;
+  line-height: 1.334em;
+  font-family: 'Inter', sans-serif;
+  /* background-color: rgb(16, 18, 27); */
+}
+
+
+
+/*--------------------------------------------------
+    ## Globals
+---------------------------------------------------*/
+.text-right {
+  text-align: right
+}
+.text-center {
+  text-align: center
+}
+.fs-6px {
+  font-size: 6px;
+}
+.fs-7px {
+  font-size: 7px;
+}
+.fs-8px {
+  font-size: 8px;
+}
+.fs-9px {
+  font-size: 9px;
+}
+.fs-10px {
+  font-size: 10px;
+}
+.lh-120 {
+  line-height: 120%
+}
+.lh-130 {
+  line-height: 130%
+}
+.lh-140 {
+  line-height: 140%
+}
+.lh-150 {
+  line-height: 150%
+}
+
+/*--------------------------------------------------
+    ## structure
+---------------------------------------------------*/
+.cn1 {
+  /* width: 595px; */
+  padding: 12px;
+  background: var(--light);
+  margin: 0 auto;
+}
+.cn2 {
+  border: 2px solid var(--brown1);
+  background: url("../img/bg-pattern1.png") top left no-repeat #ffffff;
+  padding: 20px 30px;
+}
+.top1-mobile{display: none}
+
+
+
+/*--------------------------------------------------
+    ## Top
+---------------------------------------------------*/
+.top1 {
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.top1 .col:nth-child(2) {
+  text-align: right
+}
+
+
+
+
+.top2 {
+  padding: 20px 0px
+}
+.top2 .cn-user-pic{flex-grow: 0}
+
+
+
+
+.top2 .user-pic {
+  padding: 5px;
+  border-radius: 12px;
+  border: 1px solid var(--gray);
+  background: var(--light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top2 .user-pic IMG {
+  border-radius: 10px;
+  width: 120px;
+  height: 100%;
+}
+.top2 .data {
+  border: 1px solid var(--gray);
+  border-radius: 12px;
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.top2 .data .verification {}
+.top2 .data .qr-code {
+  padding: 4px 10px;
+  border-left: 1px solid var(--gray);
+  border-radius: 1px;
+  display: flex;
+  align-items: center;
+}
+.top2 .data .qr-code IMG {
+  border: 1px solid var(--gray);
+  padding: 2px;
+  max-width: 86px;
+  border-radius: 6px;
+}
+
+
+
+/* top 3*/
+.top3 {
+  padding: 0px 0px 20px 0px;
+  font-size: 9px;
+  text-align: center;
+}
+
+
+/*--------------------------------------------------
+    ## main data
+---------------------------------------------------*/
+.main-data {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: url("../img/map.png") center center no-repeat;
+}
+.main-data .v-stack {
+  gap: 10px;
+}
+.main-data .v-stack .th:nth-child(1) {
+  padding-top: 0px;
+}
+.main-data .v-stack .th {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 1px solid #000;
+  padding-top: 40px;
+    padding-bottom: 4px;
+}
+.main-data .v-stack .tr {
+  display: flex;
+  justify-content: space-between;
+     padding: 4px 0px;
+     border-bottom:1px solid #EAE4D8;
+}
+.main-data .v-stack .tr > div {
+  flex: 1
+}
+.main-data .v-stack .tr .one {
+  text-align: left;
+  font-size: 12px;
+}
+.main-data .v-stack .tr .two {
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center
+}
+.main-data .v-stack .tr .three {
+  text-align: right;
+  font-size: 13px
+}
+/* box1*/
+.main-data .v-stack .box1 {
+  background: var(--light);
+  margin-top: 24px
+}
+.main-data .v-stack .box1 header {
+  background: #000000;
+  border-radius: 99px;
+  text-align: center;
+  color: var(--light);
+  width: 100px;
+  margin: 0px auto -10px auto ;
+  padding: 2px 10px;
+}
+.main-data .v-stack .box1 .data{  
+    border-radius: 15px;
+  border: 1px solid #333333;
+  padding: 20px 10px;
+  padding-bottom: 10px;
+}
+.main-data .v-stack .box1 .data .tr:last-child{border: none;}
+.btm-data1-mobile{ display: none}
+
+
+
+/*--------------------------------------------------
+    ## btm data
+---------------------------------------------------*/
+.btm-data1 {}
+.btm-data1 .col:nth-child(1) {
+  font-size: 7px;
+  line-height: 1.5;
+}
+.btm-data1 .col:nth-child(2) {
+  flex-grow: 0;
+  width: fit-content;
+}
+.btm-data1 .col:nth-child(3) {}
+/*--------------------------------------------------
+    ## footer
+---------------------------------------------------*/
+footer {
+  background: var(--brown1);
+  padding: 4px 10px;
+  text-align: center;
+  color: var(--light);
+  font-size: 10px;
+  font-weight: 500;
+}
+

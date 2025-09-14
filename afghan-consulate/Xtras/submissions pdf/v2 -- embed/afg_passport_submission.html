@@ -1,0 +1,702 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<meta name="viewport" content="width=420, initial-scale=1.0">
+<title>afg_passport_submission</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+    /* Tiny reset */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+img,svg,video,canvas{display:block;max-width:100%;height:auto}
+button,input,select,textarea{font:inherit;color:inherit}
+a{text-decoration:none;color:inherit}
+ul,ol{list-style:none}
+table{border-collapse:collapse;border-spacing:0}
+
+
+:root {
+  --light-gray: #EBEDF5;
+     --blue1:#11172E; 
+  --blue2:#1E307F;
+  --gray-dark: #333333;
+  --gray: #CFD1D5;
+  --gray-border: #EEEEEE;
+  --white: #FFFFFF;
+ 
+}
+body {
+  padding: 0px;
+  margin: 0px;
+  color: var(--gray-dark);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.334em;
+  font-family: 'Inter', sans-serif;
+  background-color:var(--light-gray);
+}
+
+@media (max-width: 767.98px) {
+
+}
+
+
+
+/*--------------------------------------------------
+    ## Globals
+---------------------------------------------------*/
+.text-right {
+  text-align: right
+}
+.text-center {
+  text-align: center
+}
+
+.fw-bold{
+  font-weight: 700;
+}
+.fw-normal{
+  font-weight: 400;
+}
+.fs-6px {
+  font-size: 6px;
+}
+.fs-7px {
+  font-size: 7px;
+}
+.fs-8px {
+  font-size: 8px;
+}
+.fs-9px {
+  font-size: 9px;
+}
+.fs-10px {
+  font-size: 10px;
+}
+.fs-12px {
+  font-size: 12px;
+}
+.fs-14px {
+  font-size: 14px;
+}
+.lh-120 {
+  line-height: 120%
+}
+.lh-130 {
+  line-height: 130%
+}
+.lh-140 {
+  line-height: 140%
+}
+.lh-150 {
+  line-height: 150%
+}
+.h-100px {
+  height: 100px;
+}
+.w-25{
+  width: 25%;
+  flex-basis: 25% !important;
+    flex-grow: 0 !important;
+    flex-shrink: 1 !important;
+}
+.w-50{width: 50%;}
+.w-75{width: 75%;}
+.w-100{width: 100%;}
+
+.d-block {
+  display: block;
+}
+.d-flex {
+  display: flex;
+}
+.flex-grow-1 {
+  flex-grow: 1;
+}
+.pb-10px {
+  padding-bottom: 10px;
+}
+.pb-20px {
+  padding-bottom: 20px;
+}
+.p-10px {
+  padding: 10px;
+}
+.p-5px {
+  padding: 5px;
+}
+
+
+
+/*--------------------------------------------------
+    ## structure
+---------------------------------------------------*/
+.cn1 {
+  width: 595px;
+  padding: 12px;
+  background: var(--light);
+  margin: 0 auto;
+}
+
+.cn2 {
+
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+/*--------------------------------------------------
+    ## Top
+---------------------------------------------------*/
+.top1 {
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  background: var(--blue1);
+  border-radius: 4px 4px 0px 0px;
+}
+
+
+.top2 {
+  padding: 4px 10px;
+  display: flex;
+  justify-content: space-between;
+  background: var(--blue2);
+  border-radius: 0px 0px 4px 4px;
+  color: var(--white);
+}
+
+
+/*--------------------------------------------------
+    ## data
+---------------------------------------------------*/
+.data{ 
+  display: flex; 
+  flex-direction:   column; 
+  grid-area: 10px;
+}
+
+.cn-block {
+  background: var(--white);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.cn-title{
+  background: var(--gray);
+  display: flex;
+  padding: 6px 10px;
+}
+.cn-title .col{
+  flex: 1;
+  padding: 4px;
+  font-weight: bold;
+}
+
+.tbody {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+}
+.tbody .tr{
+  display: flex;
+}
+.tbody .tr .td{
+  flex: 1;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--gray-border);
+}
+.tbody .tr:last-child .td{
+  border-bottom: none;
+}
+.tbody .tr .td:nth-child(2){ 
+border-right: 1px solid #eee;
+}
+
+/* has child */
+.has-child{display: flex; 
+  background: #ffffff;
+  padding: 10px;
+flex-direction: row;
+gap: 10px;
+}
+.has-child > .col{
+  flex: 1; 
+height: 100%;
+
+display: flex;
+flex-direction: column;
+gap: 10px;
+
+}
+.has-child > .col > .col-border{
+  flex: 1; 
+  border-radius: 4px 4px 0px 0px;
+  border: 1px solid var(--gray-border);
+overflow: hidden;
+height: 100%;
+}
+.has-child .data-2 {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}
+.has-child .data-2 .user-pic{
+  max-height: 75px;
+  border-radius: 8px;
+}
+/*--------------------------------------------------
+    ## footer
+---------------------------------------------------*/
+.footer {
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--blue1);
+  border-radius: 4px 4px 4px 4px;
+  text-align: center;
+  color: var(--white);
+ 
+}</style>
+</head>
+
+<body>
+<div class="cn1">
+  <div class="cn2">
+    <div class="header">
+    <div class="top1">
+ <img src="https://saphyte.io/portfolio/afgcons/pdfs/submission/logo--s-1.svg" alt=""/>
+ <img src="https://saphyte.io/portfolio/afgcons/pdfs/submission/logo--s-2.svg" alt="">
+ <img src="https://saphyte.io/portfolio/afgcons/pdfs/submission/logo--s-3.svg" alt="">
+      
+     
+    </div>
+    <!--    /top1-->
+    
+    <div class="top2">
+<div class="col">New Passport Application Form (VIP)</div>
+<div class="col">Application Reference Number: {{request.deal_number}}</div>
+    </div>
+
+    </div>
+    <!-- /header -->
+<div class="data">
+ 
+ <div class="cn-block">
+  <div class="cn-title">
+    <div class="col">
+      Personal Information
+    </div>
+    <div class="col text-right fs-14px">
+      شخصي معلومات
+    </div>
+  </div>
+  <div class="tbody">
+    <div class="tr">
+      <div class="td">Taskira Number</div>
+      <div class="td fw-bold">9876543210</div>
+      <div class="td text-right fw-bold">9876543210</div>
+      <div class="td text-right">د صادریدلو نیټه</div>
+    </div>
+    <div class="tr">
+      <div class="td">Family Name</div>
+      <div class="td fw-bold">Ahmadi</div>
+      <div class="td text-right fw-bold">احمدي</div>
+      <div class="td text-right">کورنی نوم</div>
+    </div>
+    <div class="tr">
+      <div class="td">Given Name</div>
+      <div class="td fw-bold">Farid</div>
+      <div class="td text-right fw-bold">فرید</div>
+      <div class="td text-right">نوم</div>
+    </div>
+    <div class="tr">
+      <div class="td">Father's Full Name</div>
+      <div class="td fw-bold">Karimullah Ahmadi</div>
+      <div class="td text-right fw-bold">کریم الله احمدي</div>
+      <div class="td text-right">د پلار بشپړ نوم</div>
+    </div>
+    <div class="tr">
+      <div class="td">Grand Father's Full Name</div>
+      <div class="td fw-bold">Abdul Rahman</div>
+      <div class="td text-right fw-bold">عبدالرحمن</div>
+      <div class="td text-right">د نیکه بشپړ نوم</div>
+    </div>
+    <div class="tr">
+      <div class="td">Date of Birth (Georgian)</div>
+      <div class="td fw-bold">03/12/1995</div>
+      <div class="td text-right fw-bold">03/12/1995</div>
+      <div class="td text-right">د زیږیدلو نیټه (میلادي)</div>
+    </div>
+    <div class="tr">
+      <div class="td">Birthplace Country</div>
+      <div class="td fw-bold">Afghanistan</div>
+      <div class="td text-right fw-bold">افغانستان</div>
+      <div class="td text-right">د زیږیدلو هیواد</div>
+    </div>
+    <div class="tr">
+      <div class="td">Birthplace City</div>
+      <div class="td fw-bold">-</div>
+      <div class="td text-right fw-bold">-</div>
+      <div class="td text-right">د زیږیدلو ښار</div>
+    </div>
+    <div class="tr">
+      <div class="td">State/Province</div>
+      <div class="td fw-bold">Nangarhar</div>
+      <div class="td text-right fw-bold">ننګرهار</div>
+      <div class="td text-right">ولايت</div>
+    </div>
+    <div class="tr">
+      <div class="td">District</div>
+      <div class="td fw-bold">Surkhrod</div>
+      <div class="td text-right fw-bold">سرخرود</div>
+      <div class="td text-right">ولسوالۍ</div>
+    </div>
+    <div class="tr">
+      <div class="td">Village/City</div>
+      <div class="td fw-bold">Qala-e-Naw</div>
+      <div class="td text-right fw-bold">قلعه نو</div>
+      <div class="td text-right">کلی / ښار</div>
+    </div>
+    <div class="tr">
+      <div class="td">Ancestor Province</div>
+      <div class="td fw-bold">Kabul</div>
+      <div class="td text-right fw-bold">کابل</div>
+      <div class="td text-right">د نیکه ولایت</div>
+    </div>
+    <div class="tr">
+      <div class="td">Ancestor District</div>
+      <div class="td fw-bold">Deh Sabz</div>
+      <div class="td text-right fw-bold">ده سبز</div>
+      <div class="td text-right">د نیکه ولسوالۍ</div>
+    </div>
+    <div class="tr">
+      <div class="td">Ancestor Village</div>
+      <div class="td fw-bold">Bagrami</div>
+      <div class="td text-right fw-bold">بګرامي</div>
+      <div class="td text-right">د نیکه کلی</div>
+    </div>
+    <div class="tr">
+      <div class="td">Country of Residence</div>
+      <div class="td fw-bold">United Arab Emirates</div>
+      <div class="td text-right fw-bold">متحده عربي امارات</div>
+      <div class="td text-right">د اوسیدو هیواد</div>
+    </div>
+    <div class="tr">
+      <div class="td">Other Nationality</div>
+      <div class="td fw-bold">None</div>
+      <div class="td text-right fw-bold">هیڅ نه</div>
+      <div class="td text-right">بله تابعیت</div>
+    </div>
+    <div class="tr">
+      <div class="td">Gender</div>
+      <div class="td fw-bold">Male</div>
+      <div class="td text-right fw-bold">نارینه</div>
+      <div class="td text-right">جنس</div>
+    </div>
+    <div class="tr">
+      <div class="td">Marital Status</div>
+      <div class="td fw-bold">Married</div>
+      <div class="td text-right fw-bold">واده شوی</div>
+      <div class="td text-right">مدنی حالت</div>
+    </div>
+    <div class="tr">
+      <div class="td">Height</div>
+      <div class="td fw-bold">178 cm</div>
+      <div class="td text-right fw-bold">۱۷۸ سانتي متره</div>
+      <div class="td text-right">قد</div>
+    </div>
+    <div class="tr">
+      <div class="td">Eye Color</div>
+      <div class="td fw-bold">Brown</div>
+      <div class="td text-right fw-bold">نسواري</div>
+      <div class="td text-right">د سترګو رنګ</div>
+    </div>
+    <div class="tr">
+      <div class="td">Hair Color</div>
+      <div class="td fw-bold">Black</div>
+      <div class="td text-right fw-bold">تور</div>
+      <div class="td text-right">د ویښتا نو رنګ</div>
+    </div>
+    <div class="tr">
+      <div class="td">Other Marks</div>
+      <div class="td fw-bold">Small scar on left cheek</div>
+      <div class="td text-right fw-bold">په کیڼ ګال کې وړوکی داغ</div>
+      <div class="td text-right">نوری نښې</div>
+    </div>
+    </div>
+</div>
+
+<!-- /block -->
+<div class="cn-block">
+  <div class="cn-title">
+    <div class="col">
+      Contact Details
+    </div>
+    <div class="col text-right fs-14px">
+      د اړيکې معلومات
+    </div>
+  </div>
+  <div class="tbody">
+    <div class="tr">
+      <div class="td">Mailing Address</div>
+      <div class="td fw-bold">House No. 23, Street 5, Kabul, Afghanistan</div>
+      <div class="td text-right fw-bold">د کور ۲۳، کوڅه ۵، کابل، افغانستان</div>
+      <div class="td text-right">د پوسیتی پته</div>
+    </div>
+    <div class="tr">
+      <div class="td">Previous Address</div>
+      <div class="td fw-bold">Block 12, Al Nahda, Dubai, UAE</div>
+      <div class="td text-right fw-bold">بلاک ۱۲، النهضه، دوبۍ، متحده عربي امارات</div>
+      <div class="td text-right">مخکینی پته</div>
+    </div>
+    <div class="tr">
+      <div class="td">Email Address</div>
+      <div class="td fw-bold">farid.ahmadi@example.com</div>
+      <div class="td text-right fw-bold">farid.ahmadi@example.com</div>
+      <div class="td text-right">د ایمیل پته</div>
+    </div>
+    <div class="tr">
+      <div class="td">Home Telephone Number</div>
+      <div class="td fw-bold">+93 20 220 1234</div>
+      <div class="td text-right fw-bold">+93 20 220 1234</div>
+      <div class="td text-right">د کور تيليفون شمیره</div>
+    </div>
+    <div class="tr">
+      <div class="td">Mobile Number</div>
+      <div class="td fw-bold">+93 79 123 4567</div>
+      <div class="td text-right fw-bold">+93 79 123 4567</div>
+      <div class="td text-right">د موبایل شمیره</div>
+    </div>
+    </div>
+</div>
+<!-- /block -->
+<div class="cn-block">
+  <div class="cn-title">
+    <div class="col">
+      Employment Details
+    </div>
+    <div class="col text-right fs-14px">
+      د دندې جزیات
+    </div>
+  </div>
+  <div class="tbody">
+    <div class="tr">
+      <div class="td">Occupation</div>
+      <div class="td fw-bold">Teacher</div>
+      <div class="td text-right fw-bold">ښوونکی</div>
+      <div class="td text-right">دنده</div>
+    </div>
+    <div class="tr">
+      <div class="td">Employer</div>
+      <div class="td fw-bold">Afghan International School</div>
+      <div class="td text-right fw-bold">افغان نړيوال ښوونځي</div>
+      <div class="td text-right">کارکوونکی</div>
+    </div>
+    <div class="tr">
+      <div class="td">Employer's Address</div>
+      <div class="td fw-bold">Darul Aman Road, Kabul</div>
+      <div class="td text-right fw-bold">دارالامان سړک، کابل</div>
+      <div class="td text-right">د کارکوونکي پته</div>
+    </div>
+    <div class="tr">
+      <div class="td">Previous Employer</div>
+      <div class="td fw-bold">Ministry of Education</div>
+      <div class="td text-right fw-bold">د معارف وزارت</div>
+      <div class="td text-right">مخکینی کارکوونکی</div>
+    </div>
+    </div>
+</div>
+<!-- /block -->
+<div class="cn-block">
+  <div class="cn-title">
+    <div class="col">
+      Previous Afghan Passport Details
+    </div>
+    <div class="col text-right fs-14px">
+      د پخواني افغان پاسپورت جزیات
+    </div>
+  </div>
+  <div class="tbody">
+    <div class="tr">
+      <div class="td">Have you ever had an Afghan Passport?</div>
+      <div class="td fw-bold">Yes</div>
+      <div class="td text-right fw-bold">هو</div>
+      <div class="td text-right">آیا تاسو کله افغان پاسپورټ اخیستی؟</div>
+    </div>
+    <div class="tr">
+      <div class="td">Passport Number</div>
+      <div class="td fw-bold">P12345678</div>
+      <div class="td text-right fw-bold">P12345678</div>
+      <div class="td text-right">د مخکینی پاسپورت ګڼه</div>
+    </div>
+    <div class="tr">
+      <div class="td">Passport Validity</div>
+      <div class="td fw-bold">5 Years</div>
+      <div class="td text-right fw-bold">5 کاله</div>
+      <div class="td text-right">د مخکینی پاسپورت د اعتبار موده</div>
+    </div>
+    <div class="tr">
+      <div class="td">Passport Issue Date</div>
+      <div class="td fw-bold">15-Jan-2016</div>
+      <div class="td text-right fw-bold">15-Jan-2016</div>
+      <div class="td text-right">د پاسپورټ د اجرا نیټه</div>
+    </div>
+    <div class="tr">
+      <div class="td">Passport Expiry Date</div>
+      <div class="td fw-bold">14-Jan-2021</div>
+      <div class="td text-right fw-bold">14-Jan-2021</div>
+      <div class="td text-right">د پاسپورټ د ختمېدو نیټه</div>
+    </div>
+    <div class="tr">
+      <div class="td">Passport Place of Issue</div>
+      <div class="td fw-bold">Kabul</div>
+      <div class="td text-right fw-bold">کابل</div>
+      <div class="td text-right">د پاسپورټ د اجرا ځای</div>
+    </div>
+    <div class="tr">
+      <div class="td">Where Did You Apply From</div>
+      <div class="td fw-bold">Dubai</div>
+      <div class="td text-right fw-bold">دوبۍ</div>
+      <div class="td text-right">له کوم ځاې نه تاسو غوښتنلیک کړی؟</div>
+    </div>
+    <div class="tr">
+      <div class="td">Do you have a criminal record?</div>
+      <div class="td fw-bold">No</div>
+      <div class="td text-right fw-bold">نه</div>
+      <div class="td text-right">آیا تاسو مجرمانه سابقه لرئ؟</div>
+    </div>
+    <div class="tr">
+      <div class="td">If yes, please provide details below.</div>
+      <div class="td fw-bold">-</div>
+      <div class="td text-right fw-bold">-</div>
+      <div class="td text-right">که هو، مهرباني وکړی جزیات ولیکئ</div>
+    </div>
+    </div>
+</div>
+<!-- /block -->
+
+ <div class="cn-block">
+    <div class="cn-title">
+      <div class="col">
+      New Passport Details
+      </div>
+       <div class="col text-right  fs-14px">
+      د نوي پاسپورت جزیات
+      </div>
+      </div>
+      <!-- /title -->
+    <div class="tbody">
+<div class="tr">
+  <div class="td">New Passport Duration</div>
+  <div class="td fw-bold">10 Years</div>
+    <div class="td text-right fw-bold">10 کاله</div>
+
+  <div class="td text-right">د نوي پاسپورټ موده</div>
+</div>
+<div class="tr">
+  <div class="td">Remarks</div>
+  <div class="td fw-bold">Black hair, Brown Eyes</div>
+  
+  <div class="td text-right fw-bold">تور ویښتان، نسواري سترګې</div>
+  <div class="td text-right">ملاحظات</div>
+</div>
+<!-- /row with pashto -->
+</div>
+  </div>
+<!-- /block -->
+ 
+  <div class="cn-block">
+    <div class="cn-title">
+      <div class="col">
+       Declaration
+      </div>
+      <div class="col text-right  fs-14px">
+       اعلامیه
+      </div>
+     
+      </div>
+      <!-- /title -->
+    <div class="tbody has-child">
+<div class="col">
+  <div class="h-100px">
+    <p class="pb-10px">
+      I declare to the best of my knowledge and belief that: 
+         </p>
+         <ul>
+          <li>- I am an Afghan citizen; 
+</li>
+          <li>- The statements made in this application are true and correct. 
+      </li>
+          <li>-       I accept all the terms and conditions of this application process.
+</li>
+         </ul>
+   </div>
+ <div class="col-border">
+      <div class="cn-title">
+      <div class="col">
+       Signature
+      </div>
+      </div>
+      <!-- /title -->
+       <div class="data-2"><img src="https://saphyte.io/portfolio/afgcons/pdfs/submission/signature.svg" alt=""></div>
+
+  </div>
+  
+</div>
+<div class="col">
+    <div class="h-100px">
+      <p class="pb-10px text-right">زه په خپله پوهه او باور سره اعلان کوم چې:</p>
+<ul class="text-right">
+    <li>زه د افغانستان تبعه یم؛</li>
+    <li>په دې غوښتنلیک کې ورکړل شوي بیانونه رښتیا او سم دي؛</li>
+    <li>زه د دې غوښتنلیک د بهیر ټول شرایط او مقررات منم.</li>
+</ul>
+  
+   </div>
+ <div class="col-border">
+    <div class="cn-title">
+      <div class="col">
+       Passport Photograph
+      </div>
+      </div>
+      <!-- /title -->
+       <div class="data-2"><img src="https://saphyte.io/portfolio/afgcons/pdfs/submission/user-pic.png" class="user-pic" alt=""></div>
+
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+  </div>
+<!-- /block -->
+
+</div>
+<!-- /data -->
+ <div class="footer">
+  <div><img src="https://saphyte.io/portfolio/afgcons/pdfs/submission/logo--s-footer.svg" alt=""></div>
+ <footer> Website: www.afghanconsulate.ae | E-mail: dubai@afghanconsulate.ae | Tel: 00971 4 3988229 </footer>
+ </div>
+<!-- /footer -->
+   </div>
+   <!-- /cn2 -->
+      </div>
+      <!-- /cn1 -->
+    
+
+</body>
+</html>

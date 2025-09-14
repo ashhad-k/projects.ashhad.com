@@ -1,0 +1,842 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<meta name="viewport" content="width=420, initial-scale=1.0">
+<title>afg_returnee_submission</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+<style>
+    /* Tiny reset */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+img,svg,video,canvas{display:block;max-width:100%;height:auto}
+button,input,select,textarea{font:inherit;color:inherit}
+a{text-decoration:none;color:inherit}
+ul,ol{list-style:none}
+table{border-collapse:collapse;border-spacing:0}
+
+
+:root {
+  --light-gray: #EBEDF5;
+     --blue1:#11172E; 
+  --blue2:#1E307F;
+  --gray-dark: #333333;
+  --gray: #CFD1D5;
+  --gray-border: #EEEEEE;
+  --white: #FFFFFF;
+ 
+}
+body {
+  padding: 0px;
+  margin: 0px;
+  color: var(--gray-dark);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.334em;
+  font-family: 'Inter', sans-serif;
+  background-color:var(--light-gray);
+
+}
+
+@media (max-width: 767.98px) {
+
+}
+
+
+
+/*--------------------------------------------------
+    ## Globals
+---------------------------------------------------*/
+.text-right {
+  text-align: right
+}
+.text-center {
+  text-align: center
+}
+
+.fw-bold{
+  font-weight: 700;
+}
+.fw-normal{
+  font-weight: 400;
+}
+.fs-6px {
+  font-size: 6px;
+}
+.fs-7px {
+  font-size: 7px;
+}
+.fs-8px {
+  font-size: 8px;
+}
+.fs-9px {
+  font-size: 9px;
+}
+.fs-10px {
+  font-size: 10px;
+}
+.fs-12px {
+  font-size: 12px;
+}
+.fs-14px {
+  font-size: 14px;
+}
+.lh-120 {
+  line-height: 120%
+}
+.lh-130 {
+  line-height: 130%
+}
+.lh-140 {
+  line-height: 140%
+}
+.lh-150 {
+  line-height: 150%
+}
+.h-100px {
+  height: 100px;
+}
+.w-25{
+  width: 25%;
+  flex-basis: 25% !important;
+    flex-grow: 0 !important;
+    flex-shrink: 1 !important;
+}
+.w-50{
+  width: 50%;
+  flex-basis: 50% !important;
+    flex-grow: 0 !important;
+    flex-shrink: 1 !important;
+}
+.w-75{width: 75%;}
+.w-100{width: 100%;}
+
+.d-block {
+  display: block;
+}
+.d-flex {
+  display: flex;
+}
+.flex-grow-1 {
+  flex-grow: 1;
+}
+.pb-10px {
+  padding-bottom: 10px;
+}
+.pb-20px {
+  padding-bottom: 20px;
+}
+.p-10px {
+  padding: 10px;
+}
+.p-5px {
+  padding: 5px;
+}
+
+
+
+/*--------------------------------------------------
+    ## structure
+---------------------------------------------------*/
+.cn1 {
+  width: 595px;
+  padding: 12px;
+  background: var(--light);
+  margin: 0 auto;
+}
+
+.cn2 {
+
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+/*--------------------------------------------------
+    ## Top
+---------------------------------------------------*/
+.top1 {
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  background: var(--blue1);
+  border-radius: 4px 4px 0px 0px;
+}
+
+
+.top2 {
+  padding: 4px 10px;
+  display: flex;
+  justify-content: space-between;
+  background: var(--blue2);
+  border-radius: 0px 0px 4px 4px;
+  color: var(--white);
+}
+
+
+/*--------------------------------------------------
+    ## data
+---------------------------------------------------*/
+.data{ 
+  display: flex; 
+  flex-direction:   column; 
+  grid-area: 10px;
+}
+
+.cn-block {
+  background: var(--white);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.cn-title{
+  background: var(--gray);
+  display: flex;
+  padding: 6px 10px;
+}
+.cn-title .col{
+  flex: 1;
+  padding: 4px;
+  font-weight: bold;
+}
+
+.tbody {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+}
+.tbody .tr{
+  display: flex;
+}
+.tbody .tr .td{
+  flex: 1;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--gray-border);
+}
+.tbody .tr:last-child .td{
+  border-bottom: none;
+}
+.tbody .tr .td:nth-child(2){ 
+border-right: 1px solid #eee;
+}
+
+/* has child */
+.has-child{display: flex; 
+  background: #ffffff;
+  padding: 10px;
+flex-direction: row;
+gap: 10px;
+}
+.has-child > .col{
+  flex: 1; 
+height: 100%;
+
+display: flex;
+flex-direction: column;
+gap: 10px;
+
+}
+.has-child > .col > .col-border{
+  flex: 1; 
+  border-radius: 4px 4px 0px 0px;
+  border: 1px solid var(--gray-border);
+overflow: hidden;
+height: 100%;
+}
+.has-child .data-2 {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}
+.has-child .data-2 .user-pic{
+  max-height: 75px;
+  border-radius: 8px;
+}
+/*--------------------------------------------------
+    ## footer
+---------------------------------------------------*/
+.footer {
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--blue1);
+  border-radius: 4px 4px 4px 4px;
+  text-align: center;
+  color: var(--white);
+ 
+}
+    
+    </style>
+</head>
+
+<body>
+<div class="cn1">
+  <div class="cn2">
+    <div class="header">
+    <div class="top1">
+ <img src="https://saphyte.io/portfolio/afgcons/pdfs/submission/logo--s-1.svg" alt=""/>
+ <img src="https://saphyte.io/portfolio/afgcons/pdfs/submission/logo--s-2.svg" alt="">
+ <img src="https://saphyte.io/portfolio/afgcons/pdfs/submission/logo--s-3.svg" alt="">
+      
+     
+    </div>
+    <!--    /top1-->
+    
+    <div class="top2">
+<div class="col">Returnee Application Form</div>
+<div class="col">Application Reference Number: {{request.deal_number}}</div>
+    </div>
+
+    </div>
+    <!-- /header -->
+<div class="data">
+ 
+ <div class="cn-block">
+  <div class="cn-title">
+    <div class="col">
+      Personal Information
+    </div>
+    <div class="col text-right fs-14px">
+      شخصي معلومات
+    </div>
+  </div>
+  <!-- /title -->
+  <div class="tbody">
+    <div class="tr">
+      <div class="td">Given Name</div>
+      <div class="td fw-bold">Haroon</div>
+      <div class="td text-right fw-bold">هارون</div>
+      <div class="td text-right">نوم</div>
+    </div>
+    <!-- /row with pashto -->
+    <div class="tr">
+      <div class="td">Surname</div>
+      <div class="td fw-bold">Qaderi</div>
+      <div class="td text-right fw-bold">قادري</div>
+      <div class="td text-right">تخلص</div>
+    </div>
+    <!-- /row with pashto -->
+    <div class="tr">
+      <div class="td">Father's Full Name</div>
+      <div class="td fw-bold">Abdul Qadir</div>
+      <div class="td text-right fw-bold">عبدالقادیر</div>
+      <div class="td text-right">د پلار بشپړ نوم</div>
+    </div>
+    <!-- /row with pashto -->
+    <div class="tr">
+      <div class="td">Mother's Full Name</div>
+      <div class="td fw-bold">Fatima Qaderi</div>
+      <div class="td text-right fw-bold">فاطمه قادري</div>
+      <div class="td text-right">د مور بشپړ نوم</div>
+    </div>
+    <!-- /row with pashto -->
+    <div class="tr">
+      <div class="td">Date of Birth (Georgian)</div>
+      <div class="td fw-bold">1985-03-21</div>
+      <div class="td text-right fw-bold">1985-03-21</div>
+      <div class="td text-right">د زیږیدو نیټه (میلادی)</div>
+    </div>
+    <!-- /row with pashto -->
+    <div class="tr">
+      <div class="td">Gender</div>
+      <div class="td fw-bold">Male</div>
+      <div class="td text-right fw-bold">نارینه</div>
+      <div class="td text-right">جنس</div>
+    </div>
+    <!-- /row with pashto -->
+    <div class="tr">
+      <div class="td">Martial Status</div>
+      <div class="td fw-bold">Married</div>
+      <div class="td text-right fw-bold">واده شوی</div>
+      <div class="td text-right">مدنی حالت</div>
+    </div>
+    <!-- /row with pashto -->
+    <div class="tr">
+      <div class="td">Age</div>
+      <div class="td fw-bold">40</div>
+      <div class="td text-right fw-bold">40</div>
+      <div class="td text-right">عمر</div>
+    </div>
+    <!-- /row with pashto -->
+    <div class="tr">
+      <div class="td">Has Children?</div>
+      <div class="td fw-bold">Yes</div>
+      <div class="td text-right fw-bold">هو</div>
+      <div class="td text-right">آیا ماشومان لرئ؟</div>
+    </div>
+    <!-- /row with pashto -->
+    <div class="tr">
+      <div class="td">Email Address</div>
+      <div class="td fw-bold">haroon.qaderi@example.com</div>
+      <div class="td text-right fw-bold">haroon.qaderi@example.com</div>
+      <div class="td text-right">ایمیل</div>
+    </div>
+    <!-- /row with pashto -->
+    <div class="tr">
+      <div class="td">Phone Number</div>
+      <div class="td fw-bold">+93 78 654 3210</div>
+      <div class="td text-right fw-bold">+93 78 654 3210</div>
+      <div class="td text-right">د تیلیفون</div>
+    </div>
+    <!-- /row with pashto -->
+    <div class="tr">
+      <div class="td">Did you have an IOM or UNHCR refugee card?</div>
+      <div class="td fw-bold">No</div>
+      <div class="td text-right fw-bold">نه</div>
+      <div class="td text-right">آیا تاسو د کډوالو کارت لرئ؟ (IOM) یا (UNHCR)؟</div>
+    </div>
+    <!-- /row with pashto -->
+  </div>
+</div>
+<!-- /block -->
+<div class="cn-block">
+  <div class="cn-title">
+    <div class="col">
+      Education,Skills and Work Information
+    </div>
+    <div class="col text-right fs-14px">
+      د زده کړو، مهارتونو او کاري معلومات
+    </div>
+  </div>
+  <div class="tbody">
+    <div class="tr">
+      <div class="td">Highest level of education</div>
+      <div class="td fw-bold">Bachelor's Degree</div>
+      <div class="td text-right fw-bold">د لیسانس سند</div>
+      <div class="td text-right">لوړ تحصيلي سند</div>
+    </div>
+    <div class="tr">
+      <div class="td">Field of Study</div>
+      <div class="td fw-bold">Civil Engineering</div>
+      <div class="td text-right fw-bold">ملکي انجینرۍ</div>
+      <div class="td text-right">د زده کړې رشته</div>
+    </div>
+    <div class="tr">
+      <div class="td">Country where you studied</div>
+      <div class="td fw-bold">Afghanistan</div>
+      <div class="td text-right fw-bold">افغانستان</div>
+      <div class="td text-right">هیواد چېرې مو زده کړې کړي</div>
+    </div>
+    <div class="tr">
+      <div class="td">University Name</div>
+      <div class="td fw-bold">Kabul University</div>
+      <div class="td text-right fw-bold">د کابل پوهنتون</div>
+      <div class="td text-right">د پوهنتون نوم</div>
+    </div>
+    <div class="tr">
+      <div class="td">Graduation Year</div>
+      <div class="td fw-bold">2007</div>
+      <div class="td text-right fw-bold">2007</div>
+      <div class="td text-right">د فارغیدو کال</div>
+    </div>
+    <div class="tr">
+      <div class="td">Professional Skills</div>
+      <div class="td fw-bold">Project Management, AutoCAD</div>
+      <div class="td text-right fw-bold">د پروژې مدیریت، آټوکي</div>
+      <div class="td text-right">مسلکي مهارتونه</div>
+    </div>
+    <div class="tr">
+      <div class="td">Language Skills</div>
+      <div class="td fw-bold">English, Pashto, Dari</div>
+      <div class="td text-right fw-bold">انګلیسي، پښتو، دري</div>
+      <div class="td text-right">ژبې</div>
+    </div>
+    <div class="tr">
+      <div class="td">Other Languages</div>
+      <div class="td fw-bold">Turkish</div>
+      <div class="td text-right fw-bold">ترکي</div>
+      <div class="td text-right">نورې ژبې</div>
+    </div>
+    </div>
+</div>
+<!-- /block -->
+<div class="cn-block">
+  <div class="cn-title">
+    <div class="col">
+      Deportation Details
+    </div>
+    <div class="col text-right fs-14px">
+      د اخراج جزیات
+    </div>
+  </div>
+  <div class="tbody">
+    <div class="tr">
+      <div class="td">Country</div>
+      <div class="td fw-bold">Turkey</div>
+      <div class="td text-right fw-bold">ترکیه</div>
+      <div class="td text-right">د اخراج هیواد</div>
+    </div>
+    <div class="tr">
+      <div class="td">City</div>
+      <div class="td fw-bold">Istanbul</div>
+      <div class="td text-right fw-bold">استنبول</div>
+      <div class="td text-right">د اخراج ښار/سیمه</div>
+    </div>
+    <div class="tr">
+      <div class="td">Date</div>
+      <div class="td fw-bold">2024-11-05</div>
+      <div class="td text-right fw-bold">2024-11-05</div>
+      <div class="td text-right">د اخراج نیټه</div>
+    </div>
+    <div class="tr">
+      <div class="td">Reason</div>
+      <div class="td fw-bold">Overstayed Visa</div>
+      <div class="td text-right fw-bold">د ویزې د مودې تیریدل</div>
+      <div class="td text-right">د اخراج دلیل</div>
+    </div>
+    <div class="tr">
+      <div class="td">If another reason for deportation, please specify</div>
+      <div class="td fw-bold">n/a</div>
+      <div class="td text-right fw-bold">نشته</div>
+      <div class="td text-right">که بل دلیل وي، مهرباني وکړئ مشخص يې کړئ</div>
+    </div>
+    <div class="tr">
+      <div class="td">Authority handling the deportation</div>
+      <div class="td fw-bold">Immigration Police</div>
+      <div class="td text-right fw-bold">د کډوالو پولیس</div>
+      <div class="td text-right">د اخراج مسؤله اداره</div>
+    </div>
+    <div class="tr">
+      <div class="td">If other authority, please specify</div>
+      <div class="td fw-bold">n/a</div>
+      <div class="td text-right fw-bold">نشته</div>
+      <div class="td text-right">که بله اداره وي، مهرباني وکړئ مشخص يې کړی</div>
+    </div>
+    </div>
+</div>
+<!-- /block -->
+
+<div class="cn-block">
+  <div class="cn-title">
+    <div class="col">
+      Criminal, Political and Health Status
+    </div>
+    <div class="col text-right fs-14px">
+      جنايي، سياسي او روغتيايي حالت
+    </div>
+  </div>
+  <div class="tbody">
+    <div class="tr">
+      <div class="td">Do you have any affiliation/connection with any international organization, gangs, or groups?</div>
+      <div class="td fw-bold">No</div>
+      <div class="td text-right fw-bold">نه</div>
+      <div class="td text-right">آیا تاسو له کوم نړیوال سازمان، ډلې یا بلوالي سره تړاو لرئ؟</div>
+    </div>
+    <div class="tr">
+      <div class="td">If so, of what kind?</div>
+      <div class="td fw-bold">n/a</div>
+      <div class="td text-right fw-bold">نشته</div>
+      <div class="td text-right">که هو، د کوم ډول؟</div>
+    </div>
+    <div class="tr">
+      <div class="td">If others, please specify</div>
+      <div class="td fw-bold">n/a</div>
+      <div class="td text-right fw-bold">نشته</div>
+      <div class="td text-right">که نور وي، مشخص يې کړئ</div>
+    </div>
+    <div class="tr">
+      <div class="td">What kind of activities did you do for them?</div>
+      <div class="td fw-bold">n/a</div>
+      <div class="td text-right fw-bold">نشته</div>
+      <div class="td text-right">تاسو د دوی لپاره کوم فعالیتونه کړي؟</div>
+    </div>
+    <div class="tr">
+      <div class="td">What did they give you in return for your activities?</div>
+      <div class="td fw-bold">n/a</div>
+      <div class="td text-right fw-bold">نشته</div>
+      <div class="td text-right">دوی به بدل کې تاسو ته څه درکړي؟</div>
+    </div>
+    <div class="tr">
+      <div class="td">Do you have any criminal record in Afghanistan?</div>
+      <div class="td fw-bold">No</div>
+      <div class="td text-right fw-bold">نه</div>
+      <div class="td text-right">آیا تاسو په افغانستان کې جنایي سابقه لرئ؟</div>
+    </div>
+    <div class="tr">
+      <div class="td">Are you affiliated with any political party?</div>
+      <div class="td fw-bold">No</div>
+      <div class="td text-right fw-bold">نه</div>
+      <div class="td text-right">آیا تاسو له کوم سياسي ګوند سره تړاو لرئ؟</div>
+    </div>
+    <div class="tr">
+      <div class="td">If so, please explain</div>
+      <div class="td fw-bold">n/a</div>
+      <div class="td text-right fw-bold">نشته</div>
+      <div class="td text-right">که هو، وضاحت ورکړی</div>
+    </div>
+    <div class="tr">
+      <div class="td">Have you ever participated in political activities?</div>
+      <div class="td fw-bold">No</div>
+      <div class="td text-right fw-bold">نه</div>
+      <div class="td text-right">آیا تاسو کله په سياسي فعاليتونو کې برخه اخیستی ده؟</div>
+    </div>
+    <div class="tr">
+      <div class="td">Do you have any business, ethnic, or political problems in Afghanistan?</div>
+      <div class="td fw-bold">No</div>
+      <div class="td text-right fw-bold">نه</div>
+      <div class="td text-right">آیا تاسو په افغانستان کې سوداګریز، قومي یا سياسي ستونزې لرئ؟</div>
+    </div>
+    <div class="tr">
+      <div class="td">Have you experienced any mental health challenges?</div>
+      <div class="td fw-bold">No</div>
+      <div class="td text-right fw-bold">نه</div>
+      <div class="td text-right">آیا تاسو کوم رواني ستونزې تجربه کړي ده؟</div>
+    </div>
+    <div class="tr">
+      <div class="td">Do you have any health disabilities?</div>
+      <div class="td fw-bold">No</div>
+      <div class="td text-right fw-bold">نه</div>
+      <div class="td text-right">آیا تاسو کوم فزیکي معيوبيت لرئ؟</div>
+    </div>
+    <div class="tr">
+      <div class="td">If yes, please specify</div>
+      <div class="td fw-bold">No</div>
+      <div class="td text-right fw-bold">نه</div>
+      <div class="td text-right">که هو، مهرباني وکړی مشخص يې کړئ</div>
+    </div>
+    <div class="tr">
+      <div class="td">Specify other health disabilities</div>
+      <div class="td fw-bold">No</div>
+      <div class="td text-right fw-bold">نه</div>
+      <div class="td text-right">مهرباني وکړی نور فزيکي معيوبيتونه مشخص کړی</div>
+    </div>
+    </div>
+</div>
+<!-- /block -->
+
+<div class="cn-block">
+  <div class="cn-title">
+    <div class="col">
+      Travel and Escort Details
+    </div>
+    <div class="col text-right fs-14px">
+      د سفر او بدرګي کولو جزیات
+    </div>
+  </div>
+  <div class="tbody">
+    <div class="tr">
+      <div class="td">Mode of Return</div>
+      <div class="td fw-bold">Flight</div>
+      <div class="td text-right fw-bold">د الوتکې له لارې</div>
+      <div class="td text-right">د راستنیدو طریقه</div>
+    </div>
+    <div class="tr">
+      <div class="td">Flight/Bus/Travel Number</div>
+      <div class="td fw-bold">TK714</div>
+      <div class="td text-right fw-bold">TK714</div>
+      <div class="td text-right">د پرواز/بس/سفر شمیره</div>
+    </div>
+    <div class="tr">
+      <div class="td">Date of Arrival</div>
+      <div class="td fw-bold">2025-08-22</div>
+      <div class="td text-right fw-bold">2025-08-22</div>
+      <div class="td text-right">د رسیدو نیټه</div>
+    </div>
+    <div class="tr">
+      <div class="td">Escorted by</div>
+      <div class="td fw-bold">Turkish Immigration Officer</div>
+      <div class="td text-right fw-bold">د ترکي د کډوالو افسر لخوا</div>
+      <div class="td text-right">د چا لخوا بدرګه شوی</div>
+    </div>
+    <div class="tr">
+      <div class="td">Name of the airport to be departed from</div>
+      <div class="td fw-bold">Istanbul Airport (IST)</div>
+      <div class="td text-right fw-bold">د استانبول هوايي ډګر (IST)</div>
+      <div class="td text-right">د هوايي ډګر نوم چې الوتنه ترې کيږي</div>
+    </div>
+    <div class="tr">
+      <div class="td">Name of the airport to be departed to</div>
+      <div class="td fw-bold">Kabul International Airport (KBL)</div>
+      <div class="td text-right fw-bold">د کابل نړیوال هوايي ډګر (KBL)</div>
+      <div class="td text-right">د هوايي ډګر نوم چې الوتنه ورته کيږي</div>
+    </div>
+    </div>
+</div>
+<!-- /block -->
+
+ <div class="cn-block">
+  <div class="cn-title">
+    <div class="col">
+      Emergency Contact in Home Country
+    </div>
+    <div class="col text-right fs-14px">
+      په خپل هیواد کې د بیړني تماس معلومات
+    </div>
+  </div>
+  <div class="tbody">
+    
+    <div class="tr">
+      <div class="td">Emergency Contact - Full Name</div>
+      <div class="td fw-bold">Rahmatullah Safi</div>
+      <div class="td text-right fw-bold">رحمت الله صافي</div>
+      <div class="td text-right">د راستنیدو طریقه</div>
+    </div>
+    <div class="tr">
+      <div class="td">Relationship to the Emergency Contact</div>
+      <div class="td fw-bold">Brother</div>
+      <div class="td text-right fw-bold">ورور</div>
+      <div class="td text-right">د پرواز/بس/سفر شمیره</div>
+    </div>
+    <div class="tr">
+      <div class="td">Emergency Contact - Email Address</div>
+      <div class="td fw-bold">rahmat.safi@example.com</div>
+      <div class="td text-right fw-bold">rahmat.safi@example.com</div>
+      <div class="td text-right">د رسیدو نیټه</div>
+    </div>
+    <div class="tr">
+      <div class="td">Emergency Contact - Phone Number</div>
+      <div class="td fw-bold">+93 70 456 7890</div>
+      <div class="td text-right fw-bold">+93 70 456 7890</div>
+      <div class="td text-right">د چا لخوا بدرګه شوی</div>
+    </div>
+    <div class="tr">
+      <div class="td">Emergency Contact - Address</div>
+      <div class="td fw-bold">House #12, Karte Parwan, Kabul, Afghanistan</div>
+      <div class="td text-right fw-bold">د کور ۱۲، کارته پروان، کابل، افغانستان</div>
+      <div class="td text-right">د هوايي ډګر نوم چې الوتنه ترې کيږي</div>
+    </div>
+    <div class="tr">
+      <div class="td">Exclusion/Deportation details</div>
+      <div class="td fw-bold">None</div>
+      <div class="td text-right fw-bold">نشته</div>
+      <div class="td text-right">د هوايي ډګر نوم چې الوتنه ورته کيږي</div>
+    </div>
+    </div>
+</div>
+<!-- /block -->
+
+ <div class="cn-block">
+  <div class="cn-title">
+      <div class="col">
+       Declaration
+      </div>
+      <div class="col text-right  fs-14px">
+       اعلامیه
+      </div>
+     
+      </div>
+      <!-- /title -->
+  <div class="tbody">
+    <div class="tr">
+      <div class="td">By completing and signing this form, the returnee acknowledges and agrees to the following terms and conditions:</div>
+      <div class="td text-right">با تکمیل و امضای این فورم، بازگشتی تصدیق و موافقت مینماید
+که شرایط و ضوابط ذیل را می‌پذیرد:</div>
+     </div>
+   
+   
+    
+    <div class="tr">
+      <div class="td">Highest level of education</div>
+      <div class="td fw-bold">Bachelor's Degree</div>
+      <div class="td text-right fw-bold">د لیسانس سند</div>
+      <div class="td text-right">لوړ تحصیلي سند</div>
+    </div>
+    <div class="tr">
+      <div class="td">Field of Study</div>
+      <div class="td fw-bold">Civil Engineering</div>
+      <div class="td text-right fw-bold">ملکي انجینیري</div>
+      <div class="td text-right">د زده کړې رښته</div>
+    </div>
+    <div class="tr">
+      <div class="td">Country where you studied</div>
+      <div class="td fw-bold">Afghanistan</div>
+      <div class="td text-right fw-bold">افغانستان</div>
+      <div class="td text-right">هیواد چیرې مو زده کړې کړې</div>
+    </div>
+    <div class="tr">
+      <div class="td">University Name</div>
+      <div class="td fw-bold">Kabul University</div>
+      <div class="td text-right fw-bold">د کابل پوهنتون</div>
+      <div class="td text-right">د پوهنتون نوم</div>
+    </div>
+    <div class="tr">
+      <div class="td">Graduation Year</div>
+      <div class="td fw-bold">2007</div>
+      <div class="td text-right fw-bold">2007</div>
+      <div class="td text-right">د فارغیدو کال</div>
+    </div>
+    <div class="tr">
+      <div class="td">Professional Skills</div>
+      <div class="td fw-bold">Project Management, AutoCAD</div>
+      <div class="td text-right fw-bold">د پروژې مدیریت، آټوکی</div>
+      <div class="td text-right">مسلکي مهارتونه</div>
+    </div>
+    <div class="tr">
+      <div class="td">Language Skills</div>
+      <div class="td fw-bold">English, Pashto, Dari</div>
+      <div class="td text-right fw-bold">انګلیسي، پښتو، دري</div>
+      <div class="td text-right">ژبې</div>
+    </div>
+    <div class="tr">
+      <div class="td">Other Languages</div>
+      <div class="td fw-bold">Turkish</div>
+      <div class="td text-right fw-bold">ترکي</div>
+      <div class="td text-right">نورې ژبې</div>
+    </div>
+    <div class="tr"></div>
+   
+    
+    </div>
+<!-- /normal tobdy end here -->
+    <!-- Child Started -->
+       <div class="tbody has-child">
+<div class="col">
+
+ <div class="col-border">
+      <div class="cn-title">
+      <div class="col">
+       Signature
+      </div>
+      </div>
+      <!-- /title -->
+       <div class="data-2"><img src="https://saphyte.io/portfolio/afgcons/pdfs/submission/signature.svg" alt=""></div>
+
+  </div>
+  
+</div>
+<div class="col">
+   
+ <div class="col-border">
+    <div class="cn-title">
+      <div class="col">
+       Passport Photograph
+      </div>
+      </div>
+      <!-- /title -->
+       <div class="data-2"><img src="https://saphyte.io/portfolio/afgcons/pdfs/submission/user-pic.png" class="user-pic" alt=""></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<!-- /block -->
+ 
+  </div>
+<!-- /block -->
+
+</div>
+<!-- /data -->
+ <div class="footer">
+  <div><img src="https://saphyte.io/portfolio/afgcons/pdfs/submission/logo--s-footer.svg" alt=""></div>
+ <footer> Website: www.afghanconsulate.ae | E-mail: dubai@afghanconsulate.ae | Tel: 00971 4 3988229 </footer>
+ </div>
+<!-- /footer -->
+   </div>
+   <!-- /cn2 -->
+      </div>
+      <!-- /cn1 -->
+    
+
+</body>
+</html>

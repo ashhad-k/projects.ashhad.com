@@ -1,0 +1,371 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mobile view</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+<!--  custom CSS-->
+<link rel="stylesheet" href="css/styles.css">
+<style>
+
+.cn1{
+        padding: 0px;
+        width: auto;
+        max-width: 430px;
+    }
+    .cn2{
+        padding: 0px;
+        border: none;
+        background-position:  0px 100px;
+    }
+   
+.top1{display: none;}
+
+    .top1-mobile{ 
+        display: block;    
+        background:var(--blue1); 
+    border-radius: 0px 0px 20px 20px;
+    padding: 20px 20px;
+    }
+    
+    .top1-mobile .logo{
+        padding-bottom: 16px; 
+        margin-bottom: 16px; 
+        border-bottom: 1px solid #454B61;
+    text-align: center;}
+
+    .top2 .cn-user-pic .status{ display: none!important}   
+
+     .top2 {padding: 00px 0px 20px 0px}
+    
+    .top2 .data{ display: none}
+    .top2 .cn-user-pic{
+        flex-grow: 1; 
+        text-align: center; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .top2 .two-pics{
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    .top2 .cn-user-pic .status .name{ 
+color: #11172E;
+  font-family: 'Inter', sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 0.8px;
+text-transform: uppercase;
+    margin: 16px 0px 10px 0px;
+}
+    .top2 .cn-user-pic .status{ 
+    display: flex;
+   flex-direction: column;
+    text-align: center; 
+    text-transform: uppercase;
+        align-items: center;
+        
+}
+@media (min-width: 768px) {
+.top2 .cn-user-pic .status{ display: block!important}    
+}
+.top2 .cn-user-pic .status .s-valid{
+display: inline-flex;
+padding: 10px 20px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+    border-radius: 20px;
+border: 1px solid #1F9917;
+background: rgba(31, 153, 23, 0.10);
+    
+    color: #1F9917;
+text-align: center;
+font-family: Inter;
+font-size: 12px;
+font-style: normal;
+font-weight: 700;
+line-height: 15px; /* 125% */
+    width: fit-content;
+}
+
+  .top3{display: none}   
+    .top3-mobile{
+        display: block;
+        margin: 20px 20px;
+        border-radius: 6px;
+border: 1px solid #C59714;
+background: rgba(197, 151, 20, 0.20);
+        text-align: center;
+        padding: 12px;
+    }
+
+
+    .main-data .btm-data1{ display: none}
+    
+    .btm-data1-mobile{ 
+        display:flex;
+    flex-direction: column;
+    gap:10px;
+        padding: 20px;
+        text-align: center;
+        font-size: 10px;
+    }
+    
+    .main-data {
+        background: var(--light);
+        border:1px solid var(--gray);
+        border-radius: 10px;
+        padding: 20px 20px;
+    }
+    
+      .main-data .v-stack .th {
+        border:none;
+        
+      }
+.main-data .v-stack .tr{padding: 12px 0px;}
+
+.main-data .v-stack .tr .one {
+  font-size: 12px;
+}
+.main-data .v-stack .tr .two {
+  font-size: 12px;
+}
+.main-data .v-stack .tr .three {
+  font-size: 14px
+}
+    
+    .main-data .v-stack .box1{
+    }
+    .main-data .v-stack .box1 header {
+  background: var(--brown1);  
+        position: relative;
+        width: 120px;
+        padding: 6px 0px;
+        font-size: 14px;
+    }
+    
+    .main-data .v-stack .box1 .data{  
+
+border-radius: 15px;
+border: 1px solid #F4ECDD;
+background: #FFFAF1;
+}
+    
+    .main-data .v-stack .box1 .data .tr{
+        border-bottom: 1px solid #EAE4D8;
+        padding: 6px 0px;   
+    }
+    
+
+</style>
+</head>
+
+<body>
+<div class="cn1">
+  <div class="cn2">
+    <div class="top1">
+      <div class="col"> 
+          <img src="img/logo-counsil.png" width="241" alt=""/>
+        <div class="d-lg-none">  <img src="img/logo-counsil-light.png" width="241" alt=""/></div>
+        </div>
+      <div class="col"> <img src="img/logo-tourist.png" width="140" alt=""/> </div>
+    </div>
+    <!--    /top1-->
+    
+      <div class="top1-mobile">
+          <div class="v-stack">
+              <div class="logo">   
+                  <img src="img/logo-counsil-light.svg"  alt=""/>
+              </div>
+        
+              <div class="row">
+                  <div class="col">
+                  <img src="img/returnee-letter.svg" width="140" height="13" alt=""/> </div>
+                   <div class="col text-right">
+                  <img src="img/returnee-letter-pashto.svg" width="140" height="13" alt=""/> </div>
+              </div>
+          </div>
+         </div>
+<!--      /top1-mobile-->
+    <div class="row top3-mobile">
+      <div class="col lh-140">This document is issued based on decree No. 396 of the government of Afghanistan, for the purpose of the holder's return to the country. This document is solely for the return to the homeland and is based on the information provided by the mentioned individual.</div>
+    </div>
+<!--      top3-mobile-->
+      
+      
+      
+      
+    <div class="row  top2">
+      <div class="col cn-user-pic">
+        <div class="two-pics">
+<div class="user-pic"> <img src="img/user-pic.png" width="102" height="103" alt=""/>
+         
+          </div>
+        <div class="user-pic"> <img src="img/qrcode.png" width="102" height="103" alt=""/>
+         
+          </div>
+        
+        </div>
+           <div class="status">
+               <div class="name">SAMI DURRANI</div>
+           
+             <div class="s-valid">Letter Valid</div>
+            </div>
+      </div>
+      <div class="col data flex-grow-1">
+        <div class="veritification vstack">
+          <div class="p-2 d-flex justify-content-between"> <strong> Verification</strong> <strong>تصدیق</strong> </div>
+          <div class="text-center"><img src="img/barcode.png" width="210" height="45" alt=""/></div>
+          <div class="text-center fs-7px">Barcode is intended solely for immigration use</div>
+          <div class="text-center">دا بارکوډ یوازې د مهاجرت لپاره ځانګړی شوی دی</div>
+        </div>
+        <!--                /verifications-->
+        <div class="qr-code"> <img src="img/qrcode.png" width="84" height="83" alt=""/> </div>
+      </div>
+      <!--                /data--> 
+    </div>
+    <div class="row top3">
+      <div class="col lh-140"> This E-Visa can only be used to enter Afghanistan through Kabul International Airport (KBL). We are working closely with our
+        visitors to expand entry through other airports in the future, but for now, entry is strictly limited to KBL.</div>
+    </div>
+    <div class="main-data">
+      <div class="v-stack">
+        <div class="th"> <strong> Letter Details</strong>
+           <!-- <strong>د بریښنایي ویزې تفصیلات</strong>  -->
+          </div>
+        <!--  /th-->
+        <div class="tr row">
+          <div class="one col">Date of Issue</div>
+          <div class="two col">26/6/2025</div>
+          <div class="three col">د صادرېدو نېټه</div>
+        </div>
+        <!--/tr-->
+        
+        <div class="tr">
+          <div class="one">Expiring Date</div>
+          <div class="two">26/6/2030</div>
+          <div class="three">د صادرېدو ځای</div>
+        </div>
+        <!--/tr-->
+        
+        <div class="tr">
+          <div class="one">Status</div>
+          <div class="two text-success" style="color: #1F9917;">VALID</div>
+          <div class="three">حالت</div>
+        </div>
+        <!--/tr-->
+  
+      
+       
+        
+        <div class="th"> <strong>Personal Information</strong> <strong>شخصي معلومات</strong> </div>
+        <!--  /th-->
+
+       <div class="tr">
+  <div class="one">Surname</div>
+  <div class="two">Rahmani رحماني</div>
+  <div class="three">نام خانوادگی</div>
+</div>
+<div class="tr">
+  <div class="one">Name</div>
+  <div class="two">Ahmad احمد</div>
+  <div class="three">نام</div>
+</div>
+<div class="tr">
+  <div class="one">Father's Name</div>
+  <div class="two">Noorullah نورالله</div>
+  <div class="three">نام پدر</div>
+</div>
+<div class="tr">
+  <div class="one">Family Contact #</div>
+  <div class="two">+93 79 456 7890</div>
+  <div class="three">شماره تماس اقارب</div>
+</div>
+<div class="tr">
+  <div class="one">Date of Birth</div>
+  <div class="two">1993-11-05</div>
+  <div class="three">تاریخ تولد</div>
+</div>
+<div class="tr">
+  <div class="one">Place of Birth</div>
+  <div class="two">Kabul کابل</div>
+  <div class="three">محل تولد</div>
+</div>
+<div class="tr">
+  <div class="one">Current Residence</div>
+  <div class="two">Dubai, UAE دوبی، متحده عربی امارات</div>
+  <div class="three">محل سکونت فعلی</div>
+</div>
+<div class="tr">
+  <div class="one">Tazkira No.</div>
+  <div class="two">458796321</div>
+  <div class="three">شماره تذکره</div>
+</div>
+<div class="tr">
+  <div class="one">Passport No.</div>
+  <div class="two">P98765432</div>
+  <div class="three">شماره پاسپورت</div>
+</div>
+        
+        <div class="th"> <strong> Other Information</strong> <strong>د ویزې معلومات</strong> </div>
+        <!--  /th-->
+       
+       <div class="tr">
+  <div class="one">Residence in Afg</div>
+  <div class="two">Herat</div>
+  <div class="three">محل سکونت افغانستان</div>
+</div>
+<div class="tr">
+  <div class="one">Reason of Return</div>
+  <div class="two">Business</div>
+  <div class="three">علت عودت</div>
+</div>
+<div class="tr">
+  <div class="one">Stay Duration</div>
+  <div class="two">2010-04-12</div>
+  <div class="three">مدت اقامت در کشور میزبان</div>
+</div>
+       
+      
+        
+          
+      </div>
+      <div class="row btm-data1">
+        <div class="col"><strong>Note:</strong> Afghanistan welcomes you and wishes you an enjoyable stay. Please ensure you either change your visa status or depart before your visa expires, so we may warmly welcome you again in the future.</div>
+        <div class="col"><img src="img/logo1.svg" width="54" height="54" alt=""/></div>
+        <div class="col"><img src="img/logo2.svg" width="213" height="50" alt=""/></div>
+      </div>
+    </div>
+    <!--      /main-data--> 
+      
+      <div class="row btm-data1-mobile">
+        <div class="col"><strong>Note:</strong> Afghanistan welcomes you and wishes you an enjoyable stay. Please ensure you either change your visa status or depart before your visa expires, so we may warmly welcome you again in the future.</div>
+        <div class="col">
+            
+            <img src="img/logo3.svg" alt="" /></div>
+       
+      </div>
+  </div>
+  <!--    /cn2-->
+  <footer> Website: www.afghanconsulate.ae | E-mail: dubai@afghanconsulate.ae | Tel: 00971 4 3988229 </footer>
+</div>
+<!--    cn1--> 
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>

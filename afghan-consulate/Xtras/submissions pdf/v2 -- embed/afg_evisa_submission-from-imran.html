@@ -1,0 +1,903 @@
+<meta charset="utf-8"><!-- <meta name="viewport" content="width=device-width, initial-scale=1"> --><meta name="viewport" content="width=420, initial-scale=1.0">
+<title></title>
+<link href="https://fonts.googleapis.com" rel="preconnect" />
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" /><!--  custom CSS-->
+<style type="text/css">/* Tiny reset */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+  }
+
+  html,
+  body {
+    height: 100%
+  }
+
+  img,
+  svg,
+  video,
+  canvas {
+    display: block;
+    max-width: 100%;
+    height: auto
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+    color: inherit
+  }
+
+  a {
+    text-decoration: none;
+    color:#5064BA;
+
+  }
+
+  ul,
+  ol {
+    list-style: none
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0
+  }
+
+  :root {
+    --light-gray: #EBEDF5;
+    --blue1: #11172E;
+    --blue2: #1E307F;
+    --gray-dark: #333333;
+    --gray: #CFD1D5;
+    --gray-border: #EEEEEE;
+    --white: #FFFFFF;
+  }
+
+  body {
+    padding: 0px;
+    margin: 0px;
+    color: var(--gray-dark);
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.334em;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--light-gray);
+  }
+
+  @media (max-width: 767.98px) {}
+
+  /*--------------------------------------------------
+    ## Globals
+---------------------------------------------------*/
+  .text-right {
+    text-align: right
+  }
+
+  .text-center {
+    text-align: center
+  }
+
+  .fw-bold {
+    font-weight: 700;
+  }
+
+  .fw-normal {
+    font-weight: 400;
+  }
+
+  .fs-6px {
+    font-size: 6px;
+  }
+
+  .fs-7px {
+    font-size: 7px;
+  }
+
+  .fs-8px {
+    font-size: 8px;
+  }
+
+  .fs-9px {
+    font-size: 9px;
+  }
+
+  .fs-10px {
+    font-size: 10px;
+  }
+
+  .lh-120 {
+    line-height: 120%
+  }
+
+  .lh-130 {
+    line-height: 130%
+  }
+
+  .lh-140 {
+    line-height: 140%
+  }
+
+  .lh-150 {
+    line-height: 150%
+  }
+
+  .w-25 {
+    width: 25%;
+    flex-basis: 25% !important;
+    flex-grow: 0 !important;
+    flex-shrink: 1 !important;
+  }
+
+  .w-50 {
+    width: 50%;
+  }
+
+  .w-75 {
+    width: 75%;
+  }
+
+  .w-100 {
+    width: 100%;
+  }
+
+  .d-flex {
+    display: flex;
+  }
+
+  .flex-grow-1 {
+    flex-grow: 1;
+  }
+
+  .p-10px {
+    padding: 10px;
+  }
+
+  .p-5px {
+    padding: 5px;
+  }
+
+  /*--------------------------------------------------
+    ## structure
+---------------------------------------------------*/
+  .cn1 {
+    padding: 12px;
+    background: var(--light);
+    margin: 0 auto;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .cn2 {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  /*--------------------------------------------------
+    ## Top
+---------------------------------------------------*/
+  .top1 {
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    background: var(--blue1);
+    border-radius: 4px 4px 0px 0px;
+  }
+
+  .top2 {
+    padding: 4px 10px;
+    display: flex;
+    justify-content: space-between;
+    background: var(--blue2);
+    border-radius: 0px 0px 4px 4px;
+    color: var(--white);
+    font-size: 14px;
+  }
+
+  /*--------------------------------------------------
+    ## data
+---------------------------------------------------*/
+  .data {
+    display: flex;
+    flex-direction: column;
+    grid-area: 10px;
+  }
+
+  .cn-block {
+    background: var(--white);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+
+  .cn-title {
+    background: var(--gray);
+    display: flex;
+    padding: 6px 10px;
+  }
+
+  .cn-title .col {
+    flex: 1;
+    padding: 4px;
+    font-weight: bold;
+  }
+
+  .tbody {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+  }
+
+  .tbody .tr {
+    display: flex;
+  }
+
+  .tbody .tr .td {
+    flex: 1;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--gray-border);
+  }
+
+  .tbody .tr:last-child .td {
+    border-bottom: none;
+  }
+
+  .tbody .tr .td:nth-child(2) {
+    border-right: 1px solid #eee;
+  }
+
+  /* has child */
+  .has-child {
+    display: flex;
+    background: #ffffff;
+    padding: 10px;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .has-child>.col {
+    flex: 1;
+    height: 100%;
+    background: #eeeeee;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .has-child>.col>.col-border {
+    flex: 1;
+    border-radius: 4px 4px 0px 0px;
+    border: 1px solid var(--gray-border);
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .has-child .data-2 {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+  }
+
+  .has-child .data-2 .user-pic {
+    max-height: 75px;
+    border-radius: 8px;
+  }
+
+
+.passport-imgs{
+  text-align: center;
+  padding: 10px 0px 20px 0px!important;
+  display: block;
+}
+
+.passport-imgs IMG{
+  width: 250;
+height: 374;
+border-radius: 8px;
+margin: 10px auto;
+background: #ccc;
+}
+
+  /*--------------------------------------------------
+    ## Page Header & Footer (PDF Generation)
+---------------------------------------------------*/
+  .page-header, .page-header-space {
+    height: 100px;
+  }
+
+  .page-footer, .page-footer-space {
+    height: 80px;
+  }
+
+  .page-header {
+    position: fixed;
+    top: 0mm;
+    left: 0mm;
+    right: 0mm;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .page-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .page {
+    /* Only break pages when needed, not after every page div */
+    page-break-inside: avoid;
+  }
+
+  @page {
+    margin: 15mm 20mm 15mm 20mm;
+  }
+
+  @media print {
+    thead {display: table-header-group;} 
+    tfoot {display: table-footer-group;}
+    
+    button {display: none;}
+    
+    body {margin: 0; padding: 0;}
+    
+    .pagebreak { page-break-before: always; }
+    
+    .page-header {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      padding-top: 0 !important;
+    }
+    
+    .page-footer {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+
+  @media screen {
+    thead {display: table-header-group;} 
+    tfoot {display: table-footer-group;}
+    
+    button {display: none;}
+    
+    body {margin: 15mm 20mm 15mm 20mm;}
+
+    .page-header {
+      padding-top: 15mm;
+      padding-left: 20mm;
+      padding-right: 20mm;
+    }
+
+    .page-footer {
+      padding-left: 20mm;
+      padding-right: 20mm;
+    }
+  }
+
+  .page-header .row,
+  .page-footer .row {
+    margin-left: 0mm;
+    margin-right: 0mm;
+  }
+
+  /*--------------------------------------------------
+    ## footer
+---------------------------------------------------*/
+  .footer {
+    padding: 8px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--blue1);
+    border-radius: 4px 4px 4px 4px;
+    text-align: center;
+    color: var(--white);
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .footer img {
+    max-height: 35px;
+    width: auto;
+    margin-bottom: 5px;
+  }
+
+  .footer footer {
+    font-size: 12px;
+    line-height: 1.2;
+    margin: 0;
+  }
+</style>
+<div class="page-header">
+<div class="header">
+<div class="top1" style="background-color: #11172E !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important;"><img alt="" src="https://visaportal.eafghans.com/assets/vp-logo-1.png" style="margin-right: 10px;" width="220px" /> <img alt="" src="https://visaportal.eafghans.com/assets/vp-logo-2.png" style="margin-right: 10px;" width="180px" /> <img alt="" src="https://visaportal.eafghans.com/assets/vp-logo-3.png" style="margin-right: 10px;" width="220px" /></div>
+<!--    /top1-->
+
+<div class="top2">
+<div class="col">Visa Application Form - Standard</div>
+
+<div class="col">Application Reference Number:&nbsp; {{request.deal_number}}</div>
+</div>
+</div>
+<!-- /header --></div>
+
+<div class="page-footer">
+<div class="footer">
+<div><img alt="" src="https://visaportal.eafghans.com/assets/vp-logo-footer.png" /></div>
+
+<footer>Website: <a href="www.afghanconsulate.ae" target="_blank">www.afghanconsulate.ae</a> | E-mail: dubai@afghanconsulate.ae | Tel: 00971 4 3988229</footer>
+</div>
+<!-- /footer --></div>
+
+<table style="margin: 0; padding: 0; width: 100%;">
+	<thead>
+		<tr>
+			<td><!--place holder for the fixed-position header-->
+			<div class="page-header-space">&nbsp;</div>
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><!--*** CONTENT GOES HERE ***-->
+			<div class="page">
+			<div class="cn1">
+			<div class="cn2">
+			<div class="data">
+			<div class="cn-block">
+			<div class="cn-title">
+			<div class="col">Personal Information</div>
+			</div>
+			<!-- /title -->
+
+			<div class="tbody">
+			<div class="tr">
+			<div class="td">This application is for</div>
+
+			<div class="td fw-bold">{{form.this_application_is_for}}</div>
+
+			<div class="td">Title</div>
+
+			<div class="td fw-bold">{{form.title}}</div>
+			</div>
+			<!-- /row -->
+
+			<div class="tr">
+			<div class="td">Family Name</div>
+
+			<div class="td fw-bold">{{form.family_name}}</div>
+
+			<div class="td">Given Name</div>
+
+			<div class="td fw-bold">{{form.given_name}}</div>
+			</div>
+			<!-- /row -->
+
+			<div class="tr">
+			<div class="td">Birthdate</div>
+
+			<div class="td fw-bold">{{form.date_of_birth}}</div>
+
+			<div class="td">Father&rsquo;s Full Name</div>
+
+			<div class="td fw-bold">{{form.fathers_full_name_2}}</div>
+			</div>
+			<!-- /row -->
+
+			<div class="tr">
+			<div class="td">Gender</div>
+
+			<div class="td fw-bold">{{form.gender}}</div>
+
+			<div class="td">Child (Under 18 yrs)</div>
+
+			<div class="td fw-bold">{{form.child_under_18_years_old}}</div>
+			</div>
+			<!-- /row -->
+
+			<div class="tr">
+			<div class="td">Birthplace Country</div>
+
+			<div class="td fw-bold">{{form.country_of_birth}}</div>
+
+			<div class="td">Marital Status</div>
+
+			<div class="td fw-bold">{{form.marital_status}}</div>
+			</div>
+			<!-- /row -->
+
+			<div class="tr">
+			<div class="td">Nationality</div>
+
+			<div class="td fw-bold">{{form.nationality}}</div>
+
+			<div class="td">Other Nationality</div>
+
+			<div class="td fw-bold">{{form.other_nationalities}}</div>
+			</div>
+			<!-- /row -->
+
+			<div class="tr">
+			<div class="td">Do you have a criminal record?</div>
+
+			<div class="td fw-bold">{{form.do_you_have_a_criminal_record_2}}</div>
+
+			<div class="td">Criminal Record Details</div>
+
+			<div class="td fw-bold">{{form.details_of_criminal_record_2}}</div>
+			</div>
+			<!-- /row --><!-- /block -->
+
+			<div class="cn-block">
+			<div class="cn-title">
+			<div class="col">Contact Details</div>
+			</div>
+			<!-- /title -->
+
+			<div class="tbody"><!-- 2 columns -->
+			<div class="tr">
+			<div class="td w-25">Country Residence</div>
+
+			<div class="td flex-grow-1">
+			<div class="fw-bold">{{form.country_of_residence}}</div>
+			</div>
+			</div>
+			<!-- /row -->
+
+			<div class="tr">
+			<div class="td w-25">Current Address</div>
+
+			<div class="td flex-grow-1">
+			<div class="fw-bold">{{form.current_address_2}}</div>
+			</div>
+			</div>
+			<!-- /row -->
+
+			<div class="tr">
+			<div class="td w-25">Email Address</div>
+
+			<div class="td flex-grow-1">
+			<div class="fw-bold">{{form.email_address_2}}</div>
+			</div>
+			</div>
+			<!-- /row -->
+
+			<div class="tr">
+			<div class="td w-25">Mobile Number</div>
+
+			<div class="td flex-grow-1">
+			<div class="fw-bold">{{form.mobile_2}}</div>
+			</div>
+			</div>
+			<!-- /row --></div>
+			</div>
+			<!-- /block -->
+
+			<div class="cn-block">
+			<div class="cn-title">
+			<div class="col">Employment Details</div>
+			</div>
+			<!-- /title -->
+
+			<div class="tbody">
+			<div class="tr">
+			<div class="td w-25">Occupation</div>
+
+			<div class="td flex-grow-1">
+			<div class="fw-bold">{{form.current_occupation_2}}</div>
+			</div>
+			</div>
+			<!-- /row -->
+
+			<div class="tr">
+			<div class="td w-25">Current Employer</div>
+
+			<div class="td flex-grow-1">
+			<div class="fw-bold">{{form.employers_name_2}}</div>
+			</div>
+			</div>
+			<!-- /row -->
+
+			<div class="tr">
+			<div class="td w-25">Employer&rsquo;s Address</div>
+
+			<div class="td flex-grow-1">
+			<div class="fw-bold">{{form.employers_address_2}}</div>
+			</div>
+			</div>
+			<!-- /row -->
+
+			<div class="tr">
+			<div class="td w-25">Previous Employer</div>
+
+			<div class="td flex-grow-1">
+			<div class="fw-bold">{{form.previous_employers_name_2}}</div>
+			</div>
+			</div>
+			<!-- /row -->
+
+			<div class="tr">
+			<div class="td w-25">Previous Employer&rsquo;s Address</div>
+
+			<div class="td flex-grow-1">
+			<div class="fw-bold">{{form.previous_employers_address_2}}</div>
+			</div>
+			</div>
+			<!-- /row --></div>
+			</div>
+			<!-- /block -->
+
+			<div class="cn-block">
+			<div class="cn-title">
+			<div class="col">Visa Details</div>
+			</div>
+			<!-- /title -->
+
+			<div class="tbody">
+			<div class="tr">
+			<div class="td">Visa Type</div>
+
+			<div class="td fw-bold">{{form.visa_type_2}}</div>
+
+			<div class="td">Visa Duration</div>
+
+			<div class="td fw-bold">{{form.visa_duration_2}}</div>
+			</div>
+
+			<div class="tr">
+			<div class="td">Entry Date</div>
+
+			<div class="td fw-bold">{{form.entry_date}}</div>
+
+			<div class="td">Intended Number of Stays</div>
+
+			<div class="td fw-bold">{{form.intended_number_of_stays_days_2}}</div>
+			</div>
+
+			<div class="tr">
+			<div class="td">Purpose of Journey</div>
+
+			<div class="td fw-bold">{{form.purpose_of_journey_2}}</div>
+
+			<div class="td">Children Accompanied</div>
+
+			<div class="td fw-bold">{{form.number_of_children_accompanied_2}}</div>
+			</div>
+
+			<div class="tr">
+			<div class="td">Point of Entry</div>
+
+			<div class="td fw-bold">{{form.point_of_entry_2}}</div>
+
+			<div class="td">Places to Visit</div>
+
+			<div class="td fw-bold">{{form.places_in_afghanistan_intended_to_visit_2}}</div>
+			</div>
+
+			<div class="tr">
+			<div class="td w-25">Address in Afghanistan</div>
+
+			<div class="td flex-grow-1">
+			<div class="fw-bold">{{form.complete_address_in_afghanistan}}</div>
+			</div>
+			</div>
+
+			<div class="tr">
+			<div class="td w-25">Previous Visit</div>
+
+			<div class="td flex-grow-1">
+			<div class="fw-bold">{{form.details_of_previous_visit_3}}</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			<!-- /block -->
+
+			<div class="cn-block">
+			<div class="cn-title">
+			<div class="col">Passport Details</div>
+			</div>
+			<!-- /title -->
+
+			<div class="tbody">
+			<div class="tr">
+			<div class="td">Passport Type</div>
+
+			<div class="td fw-bold">{{form.passport_type_2}}</div>
+
+			<div class="td">Passport Number</div>
+
+			<div class="td fw-bold">{{form.passport_number_2}}</div>
+			</div>
+
+			<div class="tr">
+			<div class="td">Expiry Date</div>
+
+			<div class="td fw-bold">{{form.passport_expiry_date}}</div>
+
+			<div class="td">Issue Date</div>
+
+			<div class="td fw-bold">{{form.passport_issue_date}}</div>
+			</div>
+
+			<div class="tr">
+			<div class="td w-25">Place of Issue</div>
+
+			<div class="td flex-grow-1">
+			<div class="fw-bold">{{form.place_of_issue_2}}</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			<!-- /block -->
+       		<div class="cn-block">
+			<div class="cn-title">
+			<div class="col">Sponsor Details</div>
+			</div>
+			<!-- /title -->
+
+			<div class="tbody"><!-- 2 columns -->
+			<div class="tr">
+			<div class="td w-25">Sponsor Name</div>
+
+			<div class="td flex-grow-1">
+			<div class="fw-bold">{{form.sponsor_name}}</div>
+			</div>
+			</div>
+			<!-- /row -->
+
+			<div class="tr">
+			<div class="td w-25">Sponsor ID Number</div>
+
+			<div class="td flex-grow-1">
+			<div class="fw-bold">{{form.sponsor_taskira_number}}</div>
+			</div>
+			</div>
+			<!-- /row -->
+
+			<div class="tr">
+			<div class="td w-25">Sponsor Address</div>
+
+			<div class="td flex-grow-1">
+			<div class="fw-bold">{{form.sponsor_address}}</div>
+			</div>
+			</div>
+      </div>
+
+			<!-- /row -->
+      </div> 
+      <!-- /block -->
+<div class="cn-block">
+    <div class="cn-title">
+        <div class="col">Documents</div>
+    </div>
+    <div class="tbody">
+        <div class="tr">
+            <div class="td">Letter of Invitation</div>
+            <div class="td fw-bold"><a href="#">letter_of_invitation.pdf</a></div>
+            <div class="td">Travel Itinerary</div>
+            <div class="td fw-bold"><a href="#">filename_101.pdf</a></div>
+        </div>
+
+        <div class="tr">
+            <div class="td">Proof of Sufficient Funds</div>
+            <div class="td fw-bold"><a href="#">bank_statement.pdf</a></div>
+            <div class="td">Other Documents</div>
+            <div class="td fw-bold">N/A</div>
+        </div>
+    </div>
+</div>
+<!-- /block -->
+
+		
+<div class="cn-block">
+    <div class="cn-title">
+        <div class="col">Passports</div>
+    </div>
+    <div class="tbody">
+        <div class="tr text-center">
+            <div class="td passport-imgs">
+                <img alt="" src="{{form.passport_image_2}}" />
+                <div class="fw-bold">
+                  Old Passport زړې پاسپورټ
+                </div>
+          
+          
+        </div>
+</div>
+        <div class="tr text-center">
+           
+            <div class="td passport-imgs">
+                <img alt="" src="{{form.passport_image_2}}" />
+                <div class="fw-bold">
+                 Father’s Passport /د پلار پاسپورټ
+                </div>
+          
+          
+        </div>
+
+            <div class="td passport-imgs">
+                <img alt="" src="{{form.passport_image_2}}" />
+                <div class="fw-bold">
+                 Mother’s Passport /د مور پاسپورټ
+                </div>
+          
+          
+        </div>  
+        </div>
+    </div>
+</div>
+<!-- /block -->
+
+	
+
+			<div class="cn-block">
+			<div class="cn-title">
+			<div class="col">Declaration</div>
+			</div>
+			<!-- /title -->
+
+			<div class="tbody has-child">
+			<div class="col">
+			<div class="col-border">
+			<div class="cn-title">
+			<div class="col">Signature</div>
+			</div>
+			<!-- /title -->
+
+			<div class="data-2"><img alt="" src="{{form.signature_2}}" /></div>
+			</div>
+			</div>
+
+			<div class="col">
+			<div class="col-border">
+			<div class="cn-title">
+			<div class="col">Passport Photograph</div>
+			</div>
+			<!-- /title -->
+
+			<div class="data-2"><img alt="" src="{{form.upload_photo_2}}" /></div>
+			</div>
+			</div>
+			</div>
+
+			<div class="tbody has-child">
+			<div class="col">I declare that all information provided here is true and correct, and that I agree to the terms and conditions of the application.</div>
+			</div>
+			</div>
+			</div>
+			<!-- /block --></div>
+			<!-- /data --></div>
+			<!-- /cn2 --></div>
+			<!-- /cn1 --><!-- /page --></div>
+			</div>
+			</div>
+			</div>
+			</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td><!--place holder for the fixed-position footer-->
+			<div class="page-footer-space">&nbsp;</div>
+			</td>
+		</tr>
+	</tfoot>
+</table>

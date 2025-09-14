@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🔴 Citizen Portal -  E-Afghans - </title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/tutorials/timelines/timeline-1/assets/css/timeline-1.css">
+<!--    aos-->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!--    fonts-->
+<link href="https://api.fontshare.com/v2/css?f[]=switzer@100,200,300,400,500,600,700&display=swap" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="loader">
+  <div class="box box-1">
+    <div class="side-left"></div>
+    <div class="side-right"></div>
+    <div class="side-top"></div>
+  </div>
+  <div class="box box-2">
+    <div class="side-left"></div>
+    <div class="side-right"></div>
+    <div class="side-top"></div>
+  </div>
+  <div class="box box-3">
+    <div class="side-left"></div>
+    <div class="side-right"></div>
+    <div class="side-top"></div>
+  </div>
+  <div class="box box-4">
+    <div class="side-left"></div>
+    <div class="side-right"></div>
+    <div class="side-top"></div>
+  </div>
+</div>
+<!--/preloader ends--> 
+<!--    marquee-->
+<div class="bg-animated above-hero">
+  <div class="fixed-top">
+    <div class="marquee-container py-2" id="marquee">
+      <div class="m-title"> <strong>News & Headlines:</strong> </div>
+      <div class="marquee"> Afghan Citizens Abroad: Simplified Visa Process Now Available through E-Afghan Platform <span class="separator">|</span> New Digital Consulate Service Launched to Help Afghan Citizens Request Vital Documents Online </div>
+    </div>
+    <!-- nav starts--> 
+    <!-- Main Navigation -->
+    
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container"> <a class="navbar-brand" href="/"> <img src="/img/logo/e-afghans.svg" alt="Logo" height="30" class="me-2"> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"> <a class="nav-link" href="/">Home</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="/about/">About E-Afghan</a> </li>
+            <li class="nav-item"> <a class="nav-link  active " href="/citizen-services/">Citizen Portal</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="/solutions/">Solutions</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="press-release.html">Press Release</a> </li>
+            <li class="nav-item"> <a class="nav-link " href="/support/">Help &amp; Support</a> </li>
+          </ul>
+          <div class="navbar-nav item-2"> <a class="btn rounded-pill btn-outline mx-lg-2" href="#">Login</a> <a class="btn btn-primary rounded-pill " href="#">Register</a> </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <header class="hero2">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="data">
+            <h2>Citizen Portal</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+<section class="pd-top-0 multi-tabs">
+  <div class="submenu tabs-on">
+    <div class="container">
+        <div class="d-md-none">
+  <select class="form-select custom1" id="tab-dropdown" aria-label="Service Tabs" onchange="switchTab(this)">
+    <option value="#passport-services">Passport Services</option>
+    <option value="#aoid-services">AOID Services</option>
+    <option value="#certificate-services">Certificate Services</option>
+    <option value="#legal-services">Legal Services</option>
+    <option value="#police-services">Police Services</option>
+    <option value="#special-services">Special Services</option>
+  </select>
+</div>
+      
+          <ul class="nav nav-tabs d-none d-md-flex" id="services-tab-list" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="passport-services-tab" data-bs-toggle="tab" data-bs-target="#passport-services" type="button" role="tab" aria-controls="passport-services" aria-selected="true">Passport Services</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="aoid-services-tab" data-bs-toggle="tab" data-bs-target="#aoid-services" type="button" role="tab" aria-controls="aoid-services" aria-selected="false">AOID Services</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="certificate-services-tab" data-bs-toggle="tab" data-bs-target="#certificate-services" type="button" role="tab" aria-controls="certificate-services" aria-selected="false">Certificate Services</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="legal-services-tab" data-bs-toggle="tab" data-bs-target="#legal-services" type="button" role="tab" aria-controls="legal-services" aria-selected="false">Legal Services</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="police-services-tab" data-bs-toggle="tab" data-bs-target="#police-services" type="button" role="tab" aria-controls="police-services" aria-selected="false">Police Services</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="special-services-tab" data-bs-toggle="tab" data-bs-target="#special-services" type="button" role="tab" aria-controls="special-services" aria-selected="false">Special Services</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Submenu -->
+  
+  <div class="tab-content" id="services-tab-content">
+    <div class="tab-pane fade show active" id="passport-services" role="tabpanel" aria-labelledby="passport-services-tab"> 
+      
+      <!-- Submenu Tabs -->
+      <div class="submenu2">
+        <div class="container">
+          <ul class="nav nav-pills" id="passport-submenu-tab-list" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="passport-new-renewal-tab" data-bs-toggle="tab" data-bs-target="#passport-new-renewal" type="button" role="tab" aria-controls="passport-new-renewal" aria-selected="true">New/Renewal Passport</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="passport-extension-tab" data-bs-toggle="tab" data-bs-target="#passport-extension" type="button" role="tab" aria-controls="passport-extension" aria-selected="false">Passport Extension</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- /sub menu tabs -->
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="tab-content" id="passport-services-content">
+              <div class="tab-pane fade show active" id="passport-new-renewal" role="tabpanel" aria-labelledby="passport-new-renewal-tab">
+                <div class="hdr2">
+                  <div class="has-bar"> <small>Discover Consular Services at Your Fingertips</small>
+                    <h4>New/Renewal Passport</h4>
+                  </div>
+                  <div class="cn-btn"> <a class="btn has-arrow btn-lg rounded-pill btn-outline" href="#">Download Guide <i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                      <path d="M16.0477 11.273L8.87526 18.4454L7.69674 17.2669L14.8692 10.0945L8.54763 10.0945L8.54763 8.42808H17.7141V17.5945L16.0477 17.5945L16.0477 11.273Z" fill="#E5F1FF"/>
+                    </svg>
+                    </i> </a> <a class="btn has-arrow btn-lg rounded-pill btn-outline" href="#">Get Started Today <i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                      <path d="M16.0477 11.273L8.87526 18.4454L7.69674 17.2669L14.8692 10.0945L8.54763 10.0945L8.54763 8.42808H17.7141V17.5945L16.0477 17.5945L16.0477 11.273Z" fill="#E5F1FF"/>
+                    </svg>
+                    </i> </a> </div>
+                </div>
+                <!--                  /hdr2-->
+                <p>Details about applying for a new or renewing an existing passport go here.</p>
+                  
+                   
+<section>
+  
+  <div class=" bg-white-10 br-20 cn-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h6>Why Renew Your Passport with E-Afghan?</h6>
+          <p>Before proceeding, ensure that you meet the following conditions for passport renewal:</p>
+        </div>
+      </div>
+      <div class="row pd-btm-60">
+        <div class="col-lg-3">
+          <div class="box3-sml"> <i class="has-bg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wallpaper"><circle cx="8" cy="9" r="2"/><path d="m9 17 6.1-6.1a2 2 0 0 1 2.81.01L22 15V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+              </i> <strong>Convenience</strong>
+            <p>Complete the entire renewal process from anywhere in the world.</p>
+          </div>
+          <!--/box3-sml--> 
+        </div>
+        <!--/col2-->
+        
+        <div class="col-lg-3">
+          <div class="box3-sml"> <i class="has-bg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-truck"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
+              </i> <strong>Real-Time Tracking</strong>
+            <p>Monitor your application status from submission to approval.</p>
+          </div>
+          <!--/box3-sml--> 
+        </div>
+        <!--/col2-->
+        
+        <div class="col-lg-3">
+          <div class="box3-sml"> <i class="has-bg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+              </i> <strong>Secure Document Upload</strong>
+            <p>Safely upload and store all necessary documents through our encrypted system.</p>
+          </div>
+          <!--/box3-sml--> 
+        </div>
+        <!--/col2-->
+        
+        <div class="col-lg-3">
+          <div class="box3-sml"> <i class="has-bg">
+                        
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+            
+              </i> <strong>Fast Processing</strong>
+            <p>Enjoy faster processing times by handling everything online.</p>
+          </div>
+          <!--/box3-sml--> 
+        </div>
+        <!--/col2--> 
+      </div>
+      
+      <!--/row-->
+      
+      <div class="row">
+        <div class="col-lg-6 pd-top-60">
+          <h6>Eligibility for Passport Renewal</h6>
+          <p>Before proceeding, ensure that you meet the following conditions for passport renewal:</p>
+          <ul class="list-unstyled list2">
+            <li> <i> <img src="/img/icons/check.svg" alt=""/> </i> You are a current Afghan citizen with a valid or recently expired passport. </li>
+            <li> <i> <img src="/img/icons/check.svg" alt=""/> </i> Your passport has expired or will expire within the next 12 months. </li>
+            <li> <i> <img src="/img/icons/check.svg" alt=""/> </i> There are no changes required to your personal information (for example, a name change would require a separate process). </li>
+            <li> <i> <img src="/img/icons/check.svg" alt=""/> </i> Your passport is not damaged or lost (in these cases, refer to our Lost Passport Services). </li>
+          </ul>
+        </div>
+        <div class="col-lg-6 pd-top-60">
+          <h6>Documents Required for Renewal</h6>
+          <p>To renew your passport, you will need the following
+            documents:</p>
+          <ul class="list-unstyled list2">
+            <li> <i> <img src="/img/icons/check.svg" alt=""/> </i> <strong>Current Passport</strong> (scanned copy of the information page). </li>
+            <li> <i> <img src="/img/icons/check.svg" alt=""/> </i> <strong>Recent Passport Photo</strong> (according to consulate photo guidelines). </li>
+            <li> <i> <img src="/img/icons/check.svg" alt=""/> </i> <strong>Proof of Identity</strong> (Taskira/National ID). </li>
+            <li> <i> <img src="/img/icons/check.svg" alt=""/> </i> <strong>Proof of Residency</strong> (utility bills or bank statements). </li>
+            <li> <i> <img src="/img/icons/check.svg" alt=""/> </i> <strong>Payment for Renewal Fees</strong> (via secure online payment gateway). </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!--/row--> 
+    
+  </div>
+  <!--        /bglite--> 
+  
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <h6>Passport Renewal Process</h6>
+        <p>Follow these steps to renew your passport through E-Afghan:</p>
+      </div>
+      <div class="col-lg-6">
+        <div class="cn-btn3"> <a class="btn has-arrow btn-lg rounded-pill btn-outline" href="#">Download Guide <i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <path d="M16.0477 11.273L8.87526 18.4454L7.69674 17.2669L14.8692 10.0945L8.54763 10.0945L8.54763 8.42808H17.7141V17.5945L16.0477 17.5945L16.0477 11.273Z" fill="#E5F1FF"/>
+          </svg>
+          </i> </a> <a class="btn has-arrow btn-lg rounded-pill btn-outline" href="#">Get Started Today <i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <path d="M16.0477 11.273L8.87526 18.4454L7.69674 17.2669L14.8692 10.0945L8.54763 10.0945L8.54763 8.42808H17.7141V17.5945L16.0477 17.5945L16.0477 11.273Z" fill="#E5F1FF"/>
+          </svg>
+          </i> </a> </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-9"> 
+        <!-- Timeline 1 - Bootstrap Brain Component -->
+        <section class="bsb-timeline-1">
+          <ul class="timeline">
+            <li class="timeline-item">
+              <div class="timeline-body">
+                <div class="timeline-content">
+                  <div class="card border-0">
+                    <div class="card-body p-0">
+                      <div class="number">1</div>
+                      <div class="fw-m fs22">Sign In or Create an Account</div>
+                      <p>Log in to your E-Afghan account or create a new account if you are a first-time user.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-body">
+                <div class="timeline-content">
+                  <div class="card border-0">
+                    <div class="card-body p-0">
+                      <div class="number">2</div>
+                      <div class="fw-m">Access the Passport Renewal Service</div>
+                      <p>Once logged in, navigate to the "Passport Renewal" section under consular services.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-body">
+                <div class="timeline-content">
+                  <div class="card border-0">
+                    <div class="card-body p-0">
+                      <div class="number">3</div>
+                      <div class="fw-m">Fill Out the Renewal Form</div>
+                      <p>Complete the passport renewal form with your current details. Ensure that the information matches your existing passport.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-body">
+                <div class="timeline-content">
+                  <div class="card border-0">
+                    <div class="card-body p-0">
+                      <div class="number">4</div>
+                      <div class="fw-m">Upload Required Documents</div>
+                      <p>Upload clear, scanned copies of all required documents, including your current passport, passport photo, and proof of identity.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-body">
+                <div class="timeline-content">
+                  <div class="card border-0">
+                    <div class="card-body p-0">
+                      <div class="number">5</div>
+                      <div class="fw-m">Make Payment</div>
+                      <p>Pay the renewal fee through our secure online payment system. You will receive a receipt for your payment, which you can track in your account.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-body">
+                <div class="timeline-content">
+                  <div class="card border-0">
+                    <div class="card-body p-0">
+                      <div class="number">6</div>
+                      <div class="fw-m">Submit Application</div>
+                      <p>Review your application for accuracy and submit it for processing. Once submitted, you can monitor the status of your application through your dashboard.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-body">
+                <div class="timeline-content">
+                  <div class="card border-0">
+                    <div class="card-body p-0">
+                      <div class="number">7</div>
+                      <div class="fw-m">Track Your Application</div>
+                      <p>Receive real-time updates on the status of your passport renewal. Notifications will be sent to you at key stages of the process, including when the application is approved.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-body">
+                <div class="timeline-content">
+                  <div class="card border-0">
+                    <div class="card-body p-0">
+                      <div class="number">8</div>
+                      <div class="fw-m">Receive Your Passport</div>
+                      <p>Once approved, your renewed passport will be sent to the consulate or embassy closest to your location for pick-up, or delivered to your address, depending on the options available.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="col-lg-3">
+        <div class="box1 quick-links">
+          <div class="fs26">Quick Links</div>
+          <nav class="nav flex-column"> <a class="nav-link active" aria-current="page" href="#">Active</a> <a class="nav-link" href="#">Link</a> <a class="nav-link" href="#">Link</a> <a class="nav-link disabled" aria-disabled="true">Disabled</a> </nav>
+        </div>
+      </div>
+    </div>
+    <div class="row pd-top-20">
+      <div class="col-lg-12">
+        <div class="alert alert-warning" role="alert"> <strong>Processing Time</strong> <br>
+          The typical processing time for passport renewals is <strong>2-4 weeks</strong>, depending on your location and the consulate handling your request. You will be
+          notified of any delays or additional requirements. </div>
+      </div>
+    </div>
+    <div class="row pd-top-60">
+      <div class="col-lg-5">
+        <h4>Frequently Asked
+          Questions</h4>
+        <p> If you need assistance during the passport
+          renewal process, please visit our Helpdesk
+          or contact us at <a href="mailto:support@eafghans.com">support@eafghans.com</a> for more information.</p>
+      </div>
+      <div class="col-lg-7">
+        <div class="accordion mt-3 border-0" id="generalAccordion"> 
+          <!-- Accordion Item 1 (Open by default) -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="generalQ1">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#generalA1" aria-expanded="true" aria-controls="generalA1"> How early should I renew my passport? </button>
+            </h2>
+            <div id="generalA1" class="accordion-collapse collapse show" aria-labelledby="generalQ1" data-bs-parent="#generalAccordion">
+              <div class="accordion-body"> It’s recommended to renew your passport at least 6 months before its expiration date to avoid travel complications. </div>
+            </div>
+          </div>
+          
+          <!-- Accordion Item 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="generalQ2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#generalA2" aria-expanded="false" aria-controls="generalA2"> Can I still renew my passport if it’s expired? </button>
+            </h2>
+            <div id="generalA2" class="accordion-collapse collapse" aria-labelledby="generalQ2" data-bs-parent="#generalAccordion">
+              <div class="accordion-body"> Answer here.. </div>
+            </div>
+          </div>
+          
+          <!-- Accordion Item 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="generalQ3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#generalA3" aria-expanded="false" aria-controls="generalA3"> What should I do if my passport is lost or damaged? </button>
+            </h2>
+            <div id="generalA3" class="accordion-collapse collapse" aria-labelledby="generalQ3" data-bs-parent="#generalAccordion">
+              <div class="accordion-body"> Answer here.. </div>
+            </div>
+          </div>
+          
+          <!-- Accordion Item 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="generalQ4">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#generalA4" aria-expanded="false" aria-controls="generalA4"> Can I update my personal details during the renewal process? </button>
+            </h2>
+            <div id="generalA4" class="accordion-collapse collapse" aria-labelledby="generalQ4" data-bs-parent="#generalAccordion">
+              <div class="accordion-body"> Answer here.. </div>
+            </div>
+          </div>
+          
+          <!-- Accordion Item 5 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="generalQ5">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#generalA5" aria-expanded="false" aria-controls="generalA5"> How early should I renew my passport? </button>
+            </h2>
+            <div id="generalA5" class="accordion-collapse collapse" aria-labelledby="generalQ5" data-bs-parent="#generalAccordion">
+              <div class="accordion-body"> It’s recommended to renew your passport at least 6 months before its expiration date to avoid travel complications. </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--           /col7--> 
+    </div>
+  </div>
+</section>
+
+<!--/section-->
+                  
+              </div>
+<!--                /tab ends here..-->
+                
+              <div class="tab-pane fade" id="passport-extension" role="tabpanel" aria-labelledby="passport-extension-tab">
+                <div class="has-bar"> <small>Discover Consular Services at Your Fingertips</small>
+                  <h4>Passport Extension</h4>
+                </div>
+                <p>Details about extending an existing passport go here.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="aoid-services" role="tabpanel" aria-labelledby="aoid-services-tab">
+      <div class="submenu2">
+        <div class="container">
+          <ul class="nav nav-pills" id="aoid-submenu-tab-list" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="aoid-tab" data-bs-toggle="tab" data-bs-target="#aoid" type="button" role="tab" aria-controls="aoid" aria-selected="true">Afghan Overseas ID (AOID)</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="tab-content" id="aoid-services-content">
+              <div class="tab-pane fade show active" id="aoid" role="tabpanel" aria-labelledby="aoid-tab">
+                <div class="has-bar">
+                  <h4>Afghan Overseas ID (AOID)</h4>
+                </div>
+                <p>Details about obtaining an Afghan Overseas ID (AOID) go here.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="certificate-services" role="tabpanel" aria-labelledby="certificate-services-tab">
+      <div class="submenu2">
+        <div class="container">
+          <ul class="nav nav-pills" id="certificate-submenu-tab-list" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="birth-certificate-tab" data-bs-toggle="tab" data-bs-target="#birth-certificate" type="button" role="tab" aria-controls="birth-certificate" aria-selected="true">Birth Certificate</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="marriage-certificate-tab" data-bs-toggle="tab" data-bs-target="#marriage-certificate" type="button" role="tab" aria-controls="marriage-certificate" aria-selected="false">Marriage Certificate</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="tab-content" id="certificate-services-content">
+              <div class="tab-pane fade show active" id="birth-certificate" role="tabpanel" aria-labelledby="birth-certificate-tab">
+                <div class="has-bar">
+                  <h4>Birth Certificate</h4>
+                </div>
+                <p>Details about obtaining a birth certificate go here.</p>
+              </div>
+              <div class="tab-pane fade" id="marriage-certificate" role="tabpanel" aria-labelledby="marriage-certificate-tab">
+                <div class="has-bar">
+                  <h4>Marriage Certificate</h4>
+                </div>
+                <p>Details about obtaining a marriage certificate go here.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="legal-services" role="tabpanel" aria-labelledby="legal-services-tab">
+      <div class="submenu2">
+        <div class="container">
+          <ul class="nav nav-pills" id="legal-submenu-tab-list" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="power-of-attorney-tab" data-bs-toggle="tab" data-bs-target="#power-of-attorney" type="button" role="tab" aria-controls="power-of-attorney" aria-selected="true">Power Of Attorney</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="inheritance-tab" data-bs-toggle="tab" data-bs-target="#inheritance" type="button" role="tab" aria-controls="inheritance" aria-selected="false">Inheritance</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="document-validation-tab" data-bs-toggle="tab" data-bs-target="#document-validation" type="button" role="tab" aria-controls="document-validation" aria-selected="false">Document Validation/Attestation</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="verification-of-identity-tab" data-bs-toggle="tab" data-bs-target="#verification-of-identity" type="button" role="tab" aria-controls="verification-of-identity" aria-selected="false">Verification of Identity</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="tab-content" id="legal-services-content">
+              <div class="tab-pane fade show active" id="power-of-attorney" role="tabpanel" aria-labelledby="power-of-attorney-tab">
+                <div class="has-bar">
+                  <h4>Power Of Attorney</h4>
+                </div>
+                <p>Details about setting up a power of attorney go here.</p>
+              </div>
+              <div class="tab-pane fade" id="inheritance" role="tabpanel" aria-labelledby="inheritance-tab">
+                <div class="has-bar">
+                  <h4>Inheritance</h4>
+                </div>
+                <p>Details about handling inheritance matters go here.</p>
+              </div>
+              <div class="tab-pane fade" id="document-validation" role="tabpanel" aria-labelledby="document-validation-tab">
+                <div class="has-bar">
+                  <h4>Document Validation/Attestation</h4>
+                </div>
+                <p>Details about validating and attesting documents for authenticity go here.</p>
+              </div>
+              <div class="tab-pane fade" id="verification-of-identity" role="tabpanel" aria-labelledby="verification-of-identity-tab">
+                <div class="has-bar">
+                  <h4>Verification of Identity</h4>
+                </div>
+                <p>Details about verifying identity go here.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="police-services" role="tabpanel" aria-labelledby="police-services-tab">
+      <div class="submenu2">
+        <div class="container">
+          <ul class="nav nav-pills" id="police-submenu-tab-list" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="police-clearance-tab" data-bs-toggle="tab" data-bs-target="#police-clearance" type="button" role="tab" aria-controls="police-clearance" aria-selected="true">Police Clearance</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="tab-content" id="police-services-content">
+              <div class="tab-pane fade show active" id="police-clearance" role="tabpanel" aria-labelledby="police-clearance-tab">
+                <div class="has-bar">
+                  <h4>Police Clearance</h4>
+                </div>
+                <p>Details about obtaining a police clearance go here.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="special-services" role="tabpanel" aria-labelledby="special-services-tab">
+      <div class="submenu2">
+        <div class="container">
+          <ul class="nav nav-pills" id="special-submenu-tab-list" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="transferring-deceased-tab" data-bs-toggle="tab" data-bs-target="#transferring-deceased" type="button" role="tab" aria-controls="transferring-deceased" aria-selected="true">Transferring Deceased to Afghanistan</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="tab-content" id="special-services-content">
+              <div class="tab-pane fade show active" id="transferring-deceased" role="tabpanel" aria-labelledby="transferring-deceased-tab">
+                <div class="has-bar">
+                  <h4>Transferring Deceased to Afghanistan</h4>
+                </div>
+                <p>Details about transferring the deceased to Afghanistan go here.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+   
+
+<div class="container">
+  <footer>
+    <div class="row">
+      <div class="col"> <a class="navbar-brand" href="#"> <img src="/img/logo/e-afghans.svg" alt="Logo" height="30" class="me-2"> </a> </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <ul class="list-unstyled">
+          <li><a href="#">New Passport Application</a></li>
+          <li><a href="#">Passport Renewal</a></li>
+          <li><a href="#">Lost or Stolen Passport Reporting</a></li>
+        </ul>
+      </div>
+      <div class="col ">
+        <ul class="list-unstyled">
+          <li><a href="#">Application for Afghan Visa</a></li>
+          <li><a href="#">Visa Renewal/Extension</a></li>
+          <li><a href="#">National ID (Taskira)</a></li>
+        </ul>
+      </div>
+      <div class="col ">
+        <ul class="list-unstyled">
+          <li><a href="#">Document Requests</a></li>
+          <li><a href="#">Emergency Services</a></li>
+          <li><a href="#">Notary and Legal Services</a></li>
+        </ul>
+      </div>
+      <div class="col "><ul class="list-unstyled">
+          <li><a href="/legal/index.html#cookies-policy">Cookies Policy</a></li>
+          <li><a href="/legal/index.html#privacy-policy">Privacy Policy</a></li>
+          <li><a href="/legal/index.html#refunds-policy">Refunds Policy</a></li>
+          <li><a href="/legal/index.html#terms-and-conditions">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="social"> <a href="#"> <i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+          </svg>
+          </i></a> <a href="#"> <i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+          </svg>
+          </i></a> <a href="#"> <i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+          </svg>
+          </i></a> <a href="#"> <i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+            <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+          </svg>
+          </i></a> </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-lg-6"> © 2024. All rights reserved. </div>
+      <div class="col-lg-6 text-right"> For immediate assistance, contact our helpdesk at <a href="tel:0961234567">+93 123 456 789</a> <br>
+        or email <a href="mailto:support@eafghans.com">support@eafghans.com</a>. </div>
+    </div>
+       <hr>
+    <div class="row">
+      <div class="col-lg-12">
+          <div class="disclaimer">
+         
+          EAfghans Portal LLC is the officially authorized technology provider for the General Consulate of Afghanistan in Dubai, United Arab Emirates, facilitating access to information and services as per the directives and regulations of the Afghan government. All content and information provided through this platform is developed, reviewed, and authorized by the General Consulate of Afghanistan in Dubai, United Arab Emirates.<br>
+
+EAfghans Portal LLC serves solely as a technology intermediary and assumes no responsibility or liability for the accuracy, completeness, or reliability of the information supplied by the General Consulate of Afghanistan. Any statements, policies, or procedures reflected on this platform are provided directly from official sources and do not represent the views, opinions, or legal stances of EAfghans Portal LLC.<br>
+
+Users are encouraged to confirm details with the appropriate offices of the General Consulate of Afghanistan and are solely responsible for any actions taken based on the information provided here. EAfghans Portal LLC expressly disclaims any liability for errors, omissions, or consequences arising from reliance on the provided information.
+
+        </div>
+       
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script> 
+       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+<script src="/js/main.js"></script>
+</body>
+</html>

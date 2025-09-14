@@ -1,0 +1,558 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<meta name="viewport" content="width=420, initial-scale=1.0">
+<title>afg_evisa_submission</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+
+<style>
+    /* Tiny reset */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+img,svg,video,canvas{display:block;max-width:100%;height:auto}
+button,input,select,textarea{font:inherit;color:inherit}
+a{text-decoration:none;color:inherit}
+ul,ol{list-style:none}
+table{border-collapse:collapse;border-spacing:0}
+
+
+:root {
+  --light-gray: #EBEDF5;
+     --blue1:#11172E; 
+  --blue2:#1E307F;
+  --gray-dark: #333333;
+  --gray: #CFD1D5;
+  --gray-border: #EEEEEE;
+  --white: #FFFFFF;
+ 
+}
+body {
+  padding: 0px;
+  margin: 0px;
+  color: var(--gray-dark);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.334em;
+  font-family: 'Inter', sans-serif;
+  background-color:var(--light-gray);
+}
+
+@media (max-width: 767.98px) {
+
+}
+
+
+/*--------------------------------------------------
+    ## Globals
+---------------------------------------------------*/
+.text-right {
+  text-align: right
+}
+.text-center {
+  text-align: center
+}
+
+.fw-bold{
+  font-weight: 700;
+}
+.fw-normal{
+  font-weight: 400;
+}
+.fs-6px {
+  font-size: 6px;
+}
+.fs-7px {
+  font-size: 7px;
+}
+.fs-8px {
+  font-size: 8px;
+}
+.fs-9px {
+  font-size: 9px;
+}
+.fs-10px {
+  font-size: 10px;
+}
+.lh-120 {
+  line-height: 120%
+}
+.lh-130 {
+  line-height: 130%
+}
+.lh-140 {
+  line-height: 140%
+}
+.lh-150 {
+  line-height: 150%
+}
+.w-25{
+  width: 25%;
+  flex-basis: 25% !important;
+    flex-grow: 0 !important;
+    flex-shrink: 1 !important;
+}
+.w-50{width: 50%;}
+.w-75{width: 75%;}
+.w-100{width: 100%;}
+
+.d-flex {
+  display: flex;
+}
+.flex-grow-1 {
+  flex-grow: 1;
+}
+.p-10px {
+  padding: 10px;
+}
+.p-5px {
+  padding: 5px;
+}
+
+
+
+/*--------------------------------------------------
+    ## structure
+---------------------------------------------------*/
+.cn1 {
+  width: 595px;
+  padding: 12px;
+  background: var(--light);
+  margin: 0 auto;
+}
+
+.cn2 {
+
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+/*--------------------------------------------------
+    ## Top
+---------------------------------------------------*/
+.top1 {
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  background: var(--blue1);
+  border-radius: 4px 4px 0px 0px;
+}
+
+
+.top2 {
+  padding: 4px 10px;
+  display: flex;
+  justify-content: space-between;
+  background: var(--blue2);
+  border-radius: 0px 0px 4px 4px;
+  color: var(--white);
+}
+
+
+/*--------------------------------------------------
+    ## data
+---------------------------------------------------*/
+.data{ 
+  display: flex; 
+  flex-direction:   column; 
+  grid-area: 10px;
+}
+
+.cn-block {
+  background: var(--white);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.cn-title{
+  background: var(--gray);
+  display: flex;
+  padding: 6px 10px;
+}
+.cn-title .col{
+  flex: 1;
+  padding: 4px;
+  font-weight: bold;
+}
+
+.tbody {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+}
+.tbody .tr{
+  display: flex;
+}
+.tbody .tr .td{
+  flex: 1;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--gray-border);
+}
+.tbody .tr:last-child .td{
+  border-bottom: none;
+}
+.tbody .tr .td:nth-child(2){ 
+border-right: 1px solid #eee;
+}
+/* has child */
+.has-child{display: flex; 
+  background: #ffffff;
+  padding: 10px;
+flex-direction: row;
+gap: 10px;
+}
+.has-child > .col{
+  flex: 1; 
+height: 100%;
+background: #eeeeee;
+display: flex;
+flex-direction: column;
+gap: 10px;
+
+}
+.has-child > .col > .col-border{
+  flex: 1; 
+  border-radius: 4px 4px 0px 0px;
+  border: 1px solid var(--gray-border);
+overflow: hidden;
+height: 100%;
+}
+.has-child .data-2 {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}
+.has-child .data-2 .user-pic{
+  max-height: 75px;
+  border-radius: 8px;
+}
+/*--------------------------------------------------
+    ## footer
+---------------------------------------------------*/
+.footer {
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--blue1);
+  border-radius: 4px 4px 4px 4px;
+  text-align: center;
+  color: var(--white);
+ 
+}</style>
+</head>
+
+<body>
+<div class="cn1">
+  <div class="cn2">
+    <div class="header">
+    <div class="top1">
+ <img src="https://saphyte.io/portfolio/afgcons/pdfs/submission/logo--s-1.svg" alt=""/>
+ <img src="https://saphyte.io/portfolio/afgcons/pdfs/submission/logo--s-2.svg" alt="">
+ <img src="https://saphyte.io/portfolio/afgcons/pdfs/submission/logo--s-3.svg" alt="">
+      
+     
+    </div>
+    <!--    /top1-->
+    
+    <div class="top2">
+<div class="col">Visa Application Form</div>
+<div class="col">Application Reference Number: {{request.deal_number}}</div>
+    </div>
+
+    </div>
+    <!-- /header -->
+<div class="data">
+ 
+  <div class="cn-block">
+
+    <div class="cn-title">
+      <div class="col">
+        Personal Information
+      </div>
+      </div>
+      <!-- /title -->
+    <div class="tbody">
+   <div class="tr">
+  <div class="td">Title</div>
+  <div class="td fw-bold">Mr.</div>
+  <div class="td">Given Name</div>
+  <div class="td fw-bold">Daniel</div>
+</div>
+<!-- /row -->
+
+<div class="tr">
+  <div class="td">Family Name</div>
+  <div class="td fw-bold">Thompson</div>
+  <div class="td">Father’s Full Name</div>
+  <div class="td fw-bold">Richard Thompson</div>
+</div>
+<!-- /row -->
+
+<div class="tr">
+  <div class="td">Birthdate</div>
+  <div class="td fw-bold">10 November 1985</div>
+  <div class="td">Child (Under 18 yrs)</div>
+  <div class="td fw-bold">No</div>
+</div>
+<!-- /row -->
+
+<div class="tr">
+  <div class="td">Gender</div>
+  <div class="td fw-bold">Male</div>
+  <div class="td">Marital Status</div>
+  <div class="td fw-bold">Single</div>
+</div>
+<!-- /row -->
+
+<div class="tr">
+  <div class="td">Birthplace Country</div>
+  <div class="td fw-bold">United Kingdom</div>
+  <div class="td">Nationality</div>
+  <div class="td fw-bold">British</div>
+</div>
+<!-- /row -->
+
+<div class="tr">
+  <div class="td">Other Nationality</div>
+  <div class="td fw-bold">None</div>
+  <div class="td">Criminal Record</div>
+  <div class="td fw-bold">None</div>
+</div>
+<!-- /row -->
+
+
+      <div class="tr">
+<div class="td w-25">Criminal Record Details</div>
+<div class="td flex-grow-1"><div class="fw-bold">N/A</div></div>
+
+
+      </div>
+      <!-- /row -->
+    </div>
+  </div>
+<!-- /block -->
+
+  <div class="cn-block">
+
+    <div class="cn-title">
+      <div class="col">
+        Contact Details
+      </div>
+      </div>
+      <!-- /title -->
+    <div class="tbody">
+ 
+
+<!-- 2 columns -->
+<div class="tr">
+  <div class="td w-25">Country Residence</div>
+  <div class="td flex-grow-1"><div class="fw-bold">United Kingdom</div></div>
+</div>
+<!-- /row -->
+
+<div class="tr">
+  <div class="td w-25">Current Address</div>
+  <div class="td flex-grow-1"><div class="fw-bold">27 Baker Street, London, W1U 8EQ, United Kingdom</div></div>
+</div>
+<!-- /row -->
+<div class="tr">
+  <div class="td w-25">Email Address</div>
+  <div class="td flex-grow-1"><div class="fw-bold">daniel.thompson@example.com</div></div>
+</div>
+<!-- /row -->
+<div class="tr">
+  <div class="td w-25">Mobile Number</div>
+  <div class="td flex-grow-1"><div class="fw-bold">+44 7700 900123</div></div>
+</div>
+<!-- /row -->
+
+
+
+    </div>
+  </div>
+<!-- /block -->
+
+  <div class="cn-block">
+
+    <div class="cn-title">
+      <div class="col">
+       Employment Details
+      </div>
+      </div>
+      <!-- /title -->
+    <div class="tbody">
+ 
+<div class="tr">
+  <div class="td w-25">Occupation</div>
+  <div class="td flex-grow-1"><div class="fw-bold">Civil Engineer</div></div>
+</div>
+<!-- /row -->
+
+<div class="tr">
+  <div class="td w-25">Current Employer</div>
+  <div class="td flex-grow-1"><div class="fw-bold">Thompson &amp; Partners Ltd.</div></div>
+</div>
+<!-- /row -->
+
+<div class="tr">
+  <div class="td w-25">Employer’s Address</div>
+  <div class="td flex-grow-1"><div class="fw-bold">221B High Street, London, W1A 4ZZ, United Kingdom</div></div>
+</div>
+<!-- /row -->
+
+<div class="tr">
+  <div class="td w-25">Previous Employer</div>
+  <div class="td flex-grow-1"><div class="fw-bold">Global Build Solutions Ltd.</div></div>
+</div>
+<!-- /row -->
+
+<div class="tr">
+  <div class="td w-25">Previous Employer’s Address</div>
+  <div class="td flex-grow-1"><div class="fw-bold">45 Kensington Road, London, W8 5NP, United Kingdom</div></div>
+</div>
+<!-- /row -->
+
+</div>
+  </div>
+<!-- /block -->
+  <div class="cn-block">
+
+    <div class="cn-title">
+      <div class="col">
+      Visa Details
+      </div>
+      </div>
+      <!-- /title -->
+    <div class="tbody">
+ <div class="tr">
+  <div class="td">Visa Type</div>
+  <div class="td fw-bold">Tourist Visa</div>
+  <div class="td">Visa Duration</div>
+  <div class="td fw-bold">30 Days</div>
+</div>
+<div class="tr">
+  <div class="td">Entry Date</div>
+  <div class="td fw-bold">15 September 2025</div>
+  <div class="td">Number of Stay</div>
+  <div class="td fw-bold">1</div>
+</div>
+<div class="tr">
+  <div class="td">Purpose of Journey</div>
+  <div class="td fw-bold">Tourism and cultural exploration</div>
+  <div class="td">Children Accompanied</div>
+  <div class="td fw-bold">0</div>
+</div>
+<div class="tr">
+  <div class="td">Point of Entry</div>
+  <div class="td fw-bold">Kabul</div>
+  <div class="td">Places to Visit</div>
+  <div class="td fw-bold">Kabul, Bamiyan, Herat</div>
+</div>
+<div class="tr">
+  <div class="td w-25">Address in Afghanistan</div>
+  <div class="td flex-grow-1"><div class="fw-bold">United Kingdom</div></div>
+</div>
+<div class="tr">
+  <div class="td w-25">Previous Visit</div>
+  <div class="td flex-grow-1"><div class="fw-bold">N/A</div></div>
+</div>
+</div>
+  </div>
+<!-- /block -->
+
+  <div class="cn-block">
+    <div class="cn-title">
+      <div class="col">
+      Passport Details
+      </div>
+      </div>
+      <!-- /title -->
+    <div class="tbody">
+ <div class="tr">
+  <div class="td">Passport Type</div>
+  <div class="td fw-bold">Ordinary Passport</div>
+  <div class="td">Passport Number</div>
+  <div class="td fw-bold">509874215</div>
+</div>
+<div class="tr">
+  <div class="td">Expiry Date</div>
+  <div class="td fw-bold">20 March 2030</div>
+  <div class="td">Issue Date</div>
+  <div class="td fw-bold">20 March 2020</div>
+</div>
+<div class="tr">
+  <div class="td w-25">Place of Issue</div>
+  <div class="td flex-grow-1"><div class="fw-bold">London, United Kingdom</div></div>
+</div>
+
+</div>
+  </div>
+<!-- /block -->
+  <div class="cn-block">
+    <div class="cn-title">
+      <div class="col">
+       Declaration
+      </div>
+      </div>
+      <!-- /title -->
+    <div class="tbody has-child">
+<div class="col">
+ <div class="col-border">
+      <div class="cn-title">
+      <div class="col">
+       Signature
+      </div>
+      </div>
+      <!-- /title -->
+       <div class="data-2"><img src="https://saphyte.io/portfolio/afgcons/pdfs/submission/signature.svg" alt=""></div>
+
+  </div>
+  
+</div>
+<div class="col">
+ <div class="col-border">
+    <div class="cn-title">
+      <div class="col">
+       Passport Photograph
+      </div>
+      </div>
+      <!-- /title -->
+       <div class="data-2"><img src="https://saphyte.io/portfolio/afgcons/pdfs/submission/user-pic.png" class="user-pic" alt=""></div>
+
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+  </div>
+<!-- /block -->
+
+</div>
+<!-- /data -->
+ <div class="footer">
+  <div><img src="https://saphyte.io/portfolio/afgcons/pdfs/submission/logo--s-footer.svg" alt=""></div>
+ <footer> Website: www.afghanconsulate.ae | E-mail: dubai@afghanconsulate.ae | Tel: 00971 4 3988229 </footer>
+ </div>
+<!-- /footer -->
+   </div>
+   <!-- /cn2 -->
+      </div>
+      <!-- /cn1 -->
+    
+
+</body>
+</html>

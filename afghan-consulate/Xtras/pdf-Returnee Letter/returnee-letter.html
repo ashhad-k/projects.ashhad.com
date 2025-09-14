@@ -1,0 +1,608 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>New Passport</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<style>
+body {
+    padding: 0px;
+    margin: 0px;
+    color: #56565E;
+    font-size: 0.775rem;
+    font-weight: 300;
+    line-height: 1.334em;
+    font-family: 'Inter', sans-serif;
+    background-color: rgb(16, 18, 27);
+}
+.cn1 {
+    width: 780px;
+    padding: 10px;
+    margin: 0 auto;
+    background: #ffffff;
+}
+.cn2 {
+    border: 2px solid #C3996B;
+    padding: 0px;
+}
+.cn2-table {
+    border: 2px solid #C3996B;
+    padding: 0px;
+}
+.cn2-table .main-row {
+    background: url("bg-main-row.png") top left;
+    background-repeat: no-repeat;
+    min-height: 800px;
+}
+.cn2-table .main-row .main-table {
+/*    background: #ffffff;*/
+}
+.cn2-table .footer1 {
+    background: #C3996B;
+    color: #fff;
+    padding: 4px;
+    text-align: center;
+}
+.text-center {
+    text-align: center
+}
+.text-right {
+    text-align: right
+}
+    
+.cn4{ 
+    display: flex; 
+    column-gap: 10px; 
+    padding-bottom:0px; 
+    border-top:2px solid #11172F;
+    padding-top: 10px;
+
+    }
+.cn4 .bx1{width: 120px;}   
+  
+    
+.bx1 {
+    border-radius: 12px;
+    border: 1px solid #CFCFCF;
+    background: #ffffff;
+    padding: 4px;
+}
+.bx1-child {
+    border-radius: 8px;
+    background: #F7F7F7;
+    min-height: 94px;
+    justify-content: center
+}
+.bx1-child.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+/*     grid*/
+    
+                              
+.gparent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0px;
+    min-height: 120px
+}
+.gdiv1 {
+    grid-row: span 2 / span 2;
+    border-right: 1px solid #e7e7e7;
+    padding: 12px;
+}
+.gdiv2 {
+    border-bottom: 1px solid #e7e7e7;
+    padding: 12px;
+}
+.gdiv3 {
+    grid-column-start: 2;
+    padding: 12px;
+    text-align: right;
+}
+/*     grid ends*/
+    
+    
+.cn-yellow {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgba(255, 242, 228, 0.8);
+    border-radius: 12px;
+}
+.cn-child {
+    flex: 1;
+    padding: 2px;
+    margin: 5px;
+    text-align: left;
+    font-size: 10px;
+    line-height: 14px;
+    color: #11172F;
+}
+/*     stats*/
+    
+.cn-stats1 {
+    background-color: rgba(252, 251, 255, 0.8);
+    border: 1px solid #DCDCDC;
+    overflow: hidden;
+    border-radius: 12px;
+}
+.cn-stats1 .th2 {
+    background: #3D3D3D;
+    color: #EAEAEA;
+    text-align: center;
+    font-weight: 600;
+    font-size: 10px;
+    padding: 6px;
+    border: 0px
+}
+.cn-stats1 TD {
+    border: 1px solid #E7E7E7;
+    padding: 10px
+}
+.cn3 {
+    padding: 0px;
+    border: 1px solid #838EC3;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.cn3-table1 {
+    font-weight: 600;
+    color: #fff
+}
+.cn3-table2 {
+    font-weight: 600;
+    color: #474747
+}
+.cn3-table3 {
+    font-weight: 600;
+    color: #474747
+}
+.f2col, .f4col{
+    display: flex;
+    border: 1px solid #838EC3;
+    border-radius: 6px;
+    padding: 6px;
+}
+.f2col .ftitle,
+.f4col .ftitle{
+/*    flex: 0 0 auto;*/
+    padding-right: 10px;
+}
+ .f2col.ff1 .ftitle{ flex: 0 0 auto;}  
+.f2col .fdata,
+.f4col .fdata {
+    flex: 1;
+    font-weight: 400;
+    color: #8C8C8C;
+}
+.f2col.frtl,
+.f4col.frtl{
+    text-align: right;
+}
+.f2col.frtl .ftitle,
+.f4col.frtl .ftitle{padding-left: 10px; padding-right: 0px}
+    
+.f2col > div,
+.f4col > div,
+.f2col.frtl > div,
+.f4col.frtl > div,
+    {flex: 1}
+    
+.cn3-table1 .fdata{ color: #fff; font-weight: 300; text-decoration: underline} 
+.cn3-table3 .fdata{ color: #8C8C8C; font-weight: 300;} 
+
+  
+</style>
+</head>
+
+<body>
+<div class="cn1">
+  <table width="100%" border="0" cellspacing="0" cellpadding="10" class="cn2-table">
+    <tbody>
+      <tr>
+        <td class="main-row"><table width="100%" border="0" cellspacing="8" cellpadding="0" class="main-table" style="padding-bottom: 20px">
+            <tbody>
+              <tr>
+                <td>
+                   
+                    
+                  
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td><img src="Group 5927.png" width="169" height="32" alt=""/></td>
+                        <td align="center">&nbsp;</td>
+                        <td align="right"><img src="Group 5930.png" width="118" height="30" alt="" align="center"/></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                      
+                        </td>
+              </tr>
+
+              <tr>
+                <td>
+                    <div class="cn4">
+                    <div class="bx1">
+                            <div class="bx1-child text-center flex-container" style="padding: 10px"> <img src="camera2.png" width="12" height="12" alt=""/>
+                              <div style="font-size: 8px">Place your photo here </div>
+                              <div>دلته خپل عکس کېږدئ </div>
+                            </div>
+                          </div>
+<!--                        bx1-->
+                        <div class="bx1">
+                            <div class="bx1-child text-center flex-container" style="padding: 10px"> <img src="camera2.png" width="12" height="12" alt=""/>
+                              <div style="font-size: 8px">Place your fingerprint here </div>
+                              <div>دلته خپله ګوته کېږدئ </div>
+                            </div>
+                          </div>
+                          
+                          <!--bx1-->
+                              <div style="border-radius: 12px; background: #ffffff;  border:1px solid #E7E7E7; flex-grow: 1">
+                            <div class="gparent">
+                              <div class="gdiv1">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td><span style="font-weight: 500; color: #11172F">Verification</span></td>
+                                      <td align="right"><span style="font-weight: 500; color: #11172F; text-align: right" >تصدیق</span></td>
+                                    </tr>
+                                    <tr>
+                                      <td colspan="2" class="text-center"><div style="padding: 10px 0px 0px 0px"> <img src="barcode.png" width="165" height="35" alt=""/> </div></td>
+                                    </tr>
+                                    <tr>
+                                      <td colspan="2" class="text-center" style="font-size: 8px;">Barcode is intended solely for verification use<br>
+                                        <div>بارکوډ يوازې د تصديق لپاره کارول کېږي</div></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <div class="gdiv2"> <span style="font-weight: 500; color: #11172F">Serial Number</span>
+                                <div  style="font-size: 8px">70514eebf23f68ae</div>
+                              </div>
+                              <div class="gdiv3"> <span style="font-weight: 500; color: #11172F; text-align: right">شماره مسلسل</span>
+                                <div  style="font-size: 8px">3</div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+<!--                    cn4-->
+                 </td>
+              </tr>
+              <tr>
+                <td><div class="cn3">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="cn3-table1">
+                      <tbody>
+                        <tr>
+                          <td width="25%" bgcolor="#838EC3" style="padding: 5px">
+                                <div class="f2col ff1">
+                <div class="ftitle"> Issue Date</div>
+                <div class="fdata">4 March 2012</div>
+            </div>
+                             </td>
+                          <td width="25%" bgcolor="#838EC3" style="border-right: 1px solid #B2BBE5; padding: 5px">
+                                 <div class="f2col ff1">
+                <div class="ftitle"> Expiry Date</div>
+                <div class="fdata">4 March 2016</div>
+            </div>
+                              
+                              </td>
+                          <td width="25%" bgcolor="#838EC3" style="border-left: 1px solid #B2BBE5; padding: 5px; text-align: right">
+                                 <div class="f2col frtl">
+                <div class="fdata">خان</div>
+                <div class="ftitle">تاریخ انقضاء</div>
+            </div>
+                              
+                              </td>
+                          <td width="25%" bgcolor="#838EC3" style="padding: 5px; text-align: right">
+                                 <div class="f2col frtl">
+                <div class="fdata">خان</div>
+                <div class="ftitle">تاریخ صدور</div>
+            </div>
+                              </td>
+                        </tr>
+                        <tr>
+                          <td colspan="4" valign="top" style="padding: 6px; background: url(bg2.png) no-repeat; background-size: cover ">
+                              
+                 
+                              
+                               <table width="100%" border="0" cellspacing="6" cellpadding="0" class="cn3-table3">
+    <tr>
+        <td width="50%">
+            <div class="f2col">
+                <div class="ftitle">Surname</div>
+                <div class="fdata">Khan</div>
+            </div>
+        </td>
+        <td width="50%">
+            <div class="f2col frtl">
+                <div class="fdata">خان</div>
+                <div class="ftitle">نام خانوادگی</div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td width="50%">
+            <div class="f2col">
+                <div class="ftitle">Name</div>
+                <div class="fdata">Aslam</div>
+            </div>
+        </td>
+        <td width="50%">
+            <div class="f2col frtl">
+                <div class="fdata">اسلم</div>
+                <div class="ftitle">نام</div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td width="50%">
+            <div class="f2col">
+                <div class="ftitle">Father's Name</div>
+                <div class="fdata">Gul Khan</div>
+            </div>
+        </td>
+        <td width="50%">
+            <div class="f2col frtl">
+                <div class="fdata">ګل خان</div>
+                <div class="ftitle">نام پدر</div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td width="50%">
+            <div class="f2col">
+                <div class="ftitle">Mother's Name</div>
+                <div class="fdata">Zarina Bibi</div>
+            </div>
+        </td>
+        <td width="50%">
+            <div class="f2col frtl">
+                <div class="fdata">زرینه بی بی</div>
+                <div class="ftitle">نام مادر</div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td width="50%">
+            <div class="f2col">
+                <div class="ftitle">Family Member Contact No:</div>
+                <div class="fdata">+92 3XX XXXXXXX</div>
+            </div>
+        </td>
+        <td width="50%">
+            <div class="f2col frtl">
+                <div class="fdata">۹۲۳xxxxxxxx+</div>
+                <div class="ftitle">شماره تماس اقارب</div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td width="50%">
+            <div class="f2col">
+                <div class="ftitle">Date of Birth</div>
+                <div class="fdata">15 Jan 1990</div>
+            </div>
+        </td>
+        <td width="50%">
+            <div class="f2col frtl">
+                <div class="fdata">۱۵ جنوري ۱۹۹۰</div>
+                <div class="ftitle">تاریخ تولد</div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td width="50%">
+            <div class="f2col">
+                <div class="ftitle">Place of Birth</div>
+                <div class="fdata">Peshawar</div>
+            </div>
+        </td>
+        <td width="50%">
+            <div class="f2col frtl">
+                <div class="fdata">پېښور</div>
+                <div class="ftitle">محل تولد</div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td width="50%">
+            <div class="f2col">
+                <div class="ftitle">Current Residence</div>
+                <div class="fdata">Karachi, Pakistan</div>
+            </div>
+        </td>
+        <td width="50%">
+            <div class="f2col frtl">
+                <div class="fdata">کراچۍ، پاکستان</div>
+                <div class="ftitle">محل سکونت فعلی</div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td width="50%">
+            <div class="f2col">
+                <div class="ftitle">Residence in Afghanistan</div>
+                <div class="fdata">Kabul</div>
+            </div>
+        </td>
+        <td width="50%">
+            <div class="f2col frtl">
+                <div class="fdata">کابل</div>
+                <div class="ftitle">محل سکونت افغانستان</div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td width="50%">
+            <div class="f2col">
+                <div class="ftitle">Reason of Return</div>
+                <div class="fdata">Economic Opportunity</div>
+            </div>
+        </td>
+        <td width="50%">
+            <div class="f2col frtl">
+                <div class="fdata">اقتصادي فرصت</div>
+                <div class="ftitle">علت عودت</div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td width="50%">
+            <div class="f2col">
+                <div class="ftitle">Host Country Stay</div>
+                <div class="fdata">10 Years</div>
+            </div>
+        </td>
+        <td width="50%">
+            <div class="f2col frtl">
+                <div class="fdata">لس کاله</div>
+                <div class="ftitle">په کوربه هېواد کې استوګن</div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td width="50%">
+            <div class="f4col">
+                <div class="ftitle">Tazkira No:</div>
+                <div class="fdata">1234567890</div>
+                 <div class="ftitle">Passport No:</div>
+                <div class="fdata">P1234567</div>
+                
+            </div>
+        </td>
+        <td width="50%">
+            <div class="f4col frtl">
+                <div class="fdata">۱۲۳۴۵۶۷۸۹۰</div>
+                <div class="ftitle">شماره تذکره</div>
+                <div class="fdata">۱۲۳۴۵۶۷۸۹۰</div>
+                <div class="ftitle">شماره پاسپورت</div>
+            </div>
+        </td>
+    </tr>
+<!--
+    <tr>
+        <td width="50%">
+            <div class="f2col">
+                <div class="ftitle">Passport No:</div>
+                <div class="fdata">P1234567</div>
+            </div>
+        </td>
+        <td width="50%">
+            <div class="f2col frtl">
+                <div class="fdata">پ۱۲۳۴۵۶۷</div>
+                <div class="ftitle"></div>
+            </div>
+        </td>
+    </tr>
+-->
+</table>
+                            
+                            </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div></td>
+              </tr>
+              <tr>
+                <td><div class="cn-yellow">
+                    <div class="cn-child"> This document is issued based on decree No. 396 of the government of Afghanistan, for the purpose of the holder's return to the country. This document is solely for the return to the homeland and is based on the information provided by the mentioned individual. </div>
+                    <div class="cn-child" style="text-align: right; padding-left:20px;"> این سند به اساس فرمان شماره ۳۹۶ دولت افغانستان، به منظور بازگشت حامل آن به کشور، صادر گردید، این سند تنها برای عودت به وطن و بر مبنای اطلاعات ارائه شده توسط شخص مذکور تنظیم شده است. </div>
+                  </div>
+                  
+                  <!--                /cn yellow--></td>
+              </tr>
+              <tr>
+                <td><div class="cn-stats1">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse">
+                      <tbody>
+                        <tr>
+                          <td class="th2" style="border-radius: 12px 0px 0px 0px"><div>عکس</div>
+                            <div>Photo</div></td>
+                          <td class="th2"><div>قرابت با رئیس فامیل</div>
+                            <div>Relationship to Head oh Household</div></td>
+                          <td class="th2"><div>جنس</div>
+                            <div>Sex</div></td>
+                          <td class="th2"><div>تاریخ تولد</div>
+                            <div>Date of birth</div></td>
+                          <td class="th2"><div>نام پدر</div>
+                            <div>Father Name</div></td>
+                          <td class="th2"><div>نام</div>
+                            <div>Name</div></td>
+                          <td class="th2" style="border-radius: 0px 12px 0px 0px"><div>شماره</div>
+                            <div>No.</div></td>
+                        </tr>
+                        <tr>
+                          <td><div style="
+                      display: flex; 
+                      align-items: center; 
+                      justify-content: center; 
+                      min-height: 64px;
+                      min-width: 94px;
+                      align-content: center;
+                      "> <img src="camera2.png" width="12" height="12" alt=""/> </div></td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td><div style="display: flex; align-items: center; justify-content: center; min-height: 64px;  min-width: 94px;"> <img src="camera2.png" width="12" height="12" alt=""/> </div></td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td width="40%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                              <tr>
+                                <td colspan="2" style="padding-bottom: 10px; border-bottom: 2px solid  #C3996B">&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td style="padding-top: 10px"><div style="font-weight: 600; color: #474747">Consular Affairs Officer</div></td>
+                                <td style="padding-top: 10px"><div style="font-weight: 600; color: #474747; text-align: right"> مسئول امور قونسلې </div></td>
+                              </tr>
+                            </tbody>
+                          </table></td>
+                        <td width="20%">&nbsp;</td>
+                        <td width="40%" style="text-align: right"><img src="Group 5936.png" width="210" height="40" alt=""/></td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+            </tbody>
+        </table></td>
+      </tr>
+      <tr>
+        <td class="footer1">Address: Malik Asghar Square, Kabul, Afghanistan | E-mail: consular@mfa.gov.af | Tel: +93 20 210 7406</td>
+      </tr>
+    </tbody>
+  </table>
+  <!--/table1--> 
+  
+</div>
+<!--/cn1-->
+
+</body>
+</html>
