@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Embassy of Afghanistan  </title>
+  <link rel="stylesheet" href="./styles/dark.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+  <!-- top bar -->
+
+  <div class="bottom-bar py-2 d-none d-md-block">
+    <div class="container-fluid">
+      <div class="d-flex flex-wrap justify-content-center align-items-center gap-4">
+        <div class="left-element">
+          <span><i class="bi bi-calendar-event me-1"></i><strong style="color:#D0D0D0;">Today:</strong> Wednesday, 16
+            July 2025,
+            10:45 AM</span>
+          <span class="mx-2"><i class="bi bi-brightness-high me-1"></i><strong style="color: #D0D0D0;">Weather:</strong>
+            39 °C - 103
+            °F</span>
+        </div>
+
+        <div class="d-flex align-items-center ">
+          <select id="region" class="form-select form-select-sm">
+            <option selected> Region: 🇵🇰 Islamabad (Pakistan)</option>
+            <option>🇮🇳 New Delhi (India)</option>
+            <option>🇺🇸 New York (USA)</option>
+          </select>
+        </div>
+
+        <div class="d-flex align-items-center">
+          <select id="language" class="form-select form-select-sm">
+            <option selected>Language: 🇬🇧 English (UK)</option>
+            <option>🇺🇸 English (US)</option>
+            <option>🇫🇷 Français</option>
+          </select>
+        </div>
+
+        <a href="#"><i class="bi bi-search me-1"></i> Search</a>
+        <a href="#"><i class="bi bi-exclamation-triangle me-1"></i> Emergency Help</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Background wrapper -->
+  <div class="container-fluid bg-header">
+    <!-- Navbar -->
+    <nav class="container navbar navbar-expand-lg top-navbar" data-aos="fade-down" data-aos-duration="1000">
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="./assets/embassy_lightbg.svg" alt="Logo" style="height:40px;" class="mx-3">
+      </a>
+
+      <!-- Toggler -->
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        ☰
+      </button>
+
+      <!-- Navbar Items + Login -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">SERVICES</a></li>
+          <li class="nav-item"><a class="nav-link" href="embassy.html">EMBASSY</a></li>
+          <li class="nav-item"><a class="nav-link active" href="embassy-dark.html">DISCOVER AFGHANISTAN</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">MEDIA</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+        </ul>
+
+        <button class="login-btn ms-lg-3 mt-3 mt-lg-0">
+          <img src="./assets/user3.svg" alt="user" /> Login
+        </button>
+      </div>
+    </nav>
+
+
+    <!-- !-- Center Heading + Buttons -->
+    <div class="hero-content text-center text-white flex-grow-1 d-flex flex-column justify-content-center flex-wrap"
+      data-aos="fade-right" data-aos-duration="1000">
+      <h1 class="hero-heading" id="hero-heading">DICOVER <br> AFGHANISTAN</h1>
+      <p id="hero-text">Discover vibrant experiences and unforgettable moments across Afghanistan.</p>
+      <div class="d-flex justify-content-center gap-3 mt-3 mb-5">
+        <button class="btn px-4 btn-yellow">Tourism in Aghanistan</button>
+        <button class="btn btn-light px-4 btn-normal">Investment in Afghanistan</button>
+      </div>
+    </div>
+
+
+    <!-- Image Boxes -->
+    <div id="customCarousel" class="carousel slide container-fluid my-5 d-none d-lg-block" data-bs-ride="carousel">
+
+      <!-- Indicators (dots at bottom) -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="1"></button>
+      </div>
+
+      <!-- Carousel inner -->
+      <div class="carousel-inner">
+
+        <!-- First Slide (6 boxes) -->
+        <div class="carousel-item active">
+          <div class="row flex-nowrap boxes-gap">
+
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="img-box">
+                <img src="./assets/image1.png" alt="Box 6" class="img-fluid">
+                <div class="box-content">
+                  <h5>Discover Afghanistan</h5>
+                  <p>Lorem ipsum dolor sit amet <br> consectetur adipliscing.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="img-box">
+                <img src="./assets/imagebox1.svg" alt="Box 1" class="img-fluid">
+                <div class="box-content">
+                  <h5>Visa Services</h5>
+                  <p>Lorem ipsum dolor sit amet <br> consectetur adipliscing.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="img-box">
+                <img src="./assets/imagebox 2.svg" alt="Box 2" class="img-fluid">
+                <div class="box-content">
+                  <h5>Passport Services</h5>
+                  <p>Lorem ipsum dolor sit amet <br> consectetur adipliscing.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="img-box">
+                <img src="./assets/imagebox3.svg" alt="Box 3" class="img-fluid">
+                <div class="box-content">
+                  <h5>AOID</h5>
+                  <p>Lorem ipsum dolor sit amet <br> consectetur adipliscing.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="img-box">
+                <img src="./assets/imagebox3.svg" alt="Box 4" class="img-fluid">
+                <div class="box-content">
+                  <h5>Documents</h5>
+                  <p>Lorem ipsum dolor sit amet <br> consectetur adipliscing.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="img-box">
+                <img src="./assets/image 2.svg" alt="Box 5" class="img-fluid">
+                <div class="box-content">
+                  <h5>Passport Services</h5>
+                  <p>Lorem ipsum dolor sit amet <br> consectetur adipliscing.</p>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+
+        <!-- Second Slide (next 6 boxes) -->
+        <div class="carousel-item">
+          <div class="row flex-nowrap boxes-gap">
+
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="img-box">
+                <img src="./assets/image1.png" alt="Box 6" class="img-fluid">
+                <div class="box-content">
+                  <h5>Discover Afghanistan</h5>
+                  <p>Lorem ipsum dolor sit amet <br> consectetur adipliscing.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="img-box">
+                <img src="./assets/imagebox1.svg" alt="Box 7" class="img-fluid">
+                <div class="box-content">
+                  <h5>Visa Services</h5>
+                  <p>Lorem ipsum dolor sit amet <br> consectetur adipliscing.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="img-box">
+                <img src="./assets/imagebox 2.svg" alt="Box 8" class="img-fluid">
+                <div class="box-content">
+                  <h5>Passport Services</h5>
+                  <p>Lorem ipsum dolor sit amet <br> consectetur adipliscing.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="img-box">
+                <img src="./assets/imagebox3.svg" alt="Box 9" class="img-fluid">
+                <div class="box-content">
+                  <h5>AOID</h5>
+                  <p>Lorem ipsum dolor sit amet <br> consectetur adipliscing.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="img-box">
+                <img src="./assets/imagebox3.svg" alt="Box 10" class="img-fluid">
+                <div class="box-content">
+                  <h5>Documents</h5>
+                  <p>Lorem ipsum dolor sit amet <br> consectetur adipliscing.</p>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="img-box">
+                <img src="./assets/image 2.svg" alt="Box 12" class="img-fluid">
+                <div class="box-content">
+                  <h5>Passport Services</h5>
+                  <p>Lorem ipsum dolor sit amet <br> consectetur adipliscing.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#customCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#customCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+
+
+
+  </div>
+
+
+
+  <div class="afghan-embassy text-white">
+
+    <!-- Header -->
+
+
+    <img class="img-fluid overflow-hidden blue-img" src="./assets/shade.svg" alt="">
+    <section class="container text-start py-5 afghan-header">
+      <h2 class="hero-title" data-aos="fade-right" data-aos-duration="1000">AFGHAN EMBASSY - <br> ISLAMABAD, PAKISTAN
+      </h2>
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-2"
+        data-aos="fade-right" data-aos-duration="1000">
+
+        <p class="my-2 text-white hero-title-para">Serving the Afghan community in the Pakistan.</p>
+        <button class="btn text-center d-flex align-items-center button-explore gap-1">Explore more <img
+            src="./assets/angle-right.svg" width="18px" alt="arrow" /></button>
+      </div>
+    </section>
+
+    <section class="container pb-5">
+      <div class="row gx-2 g-0">
+
+        <!-- Box 1 -->
+        <div class="col-lg-3 col-md-6 col-sm-12" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000">
+          <div class="box first-box">
+            <img src="./assets/—ÎÓÈ_9.svg" alt="Dummy 1">
+            <div class="box-text first-text">
+              <p>Contact Us</p>
+              <div class="d-flex flex-column gap-2">
+
+                <span>House No.56, Nazimudin Road, <br>
+                  F7/4, Islamabad, Pakistan</span>
+                <span>(+92) (51) 282 4505 / 6</span>
+                <span>ghanembassyisb@gmail.com</span>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+        <!-- Box 2 -->
+        <div class="col-lg-3 col-md-6 col-sm-12" data-aos="flip-right" data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000">
+          <div class="box second-box">
+            <img src="./assets/image 4.svg" alt="Dummy 2">
+            <div class="box-text second-text">
+              <h1>H.E. Mawlawi Sardar
+                Ahmad Shakeeb</h1>
+              <p>Acting Ambassador</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Box 3 -->
+        <div class="col-lg-3 col-md-6 col-sm-12" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000">
+          <div class="box third-box">
+            <img src="./assets/2Frame 48.svg" alt="Dummy 3">
+          </div>
+        </div>
+
+        <!-- Box 4 -->
+        <div class="col-lg-3 col-md-6 col-sm-12" data-aos="flip-right" data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000">
+          <div class="box fourth-box">
+            <img src="./assets/Isolation_Mode.svg" alt="Dummy 4">
+            <div class="box-text fourth-text">
+              <p>Our Mission</p>
+              <div class="fourth-content">
+
+                <h2>To serve Afghans <br>
+                  abroad with <br>
+                  <span style="color: #EBB313;">dignity, <br>
+                    professionalism, <br>
+                    and cultural pride
+                  </span>
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Box 5 -->
+        <div class="col-lg-3 col-md-6 col-sm-12" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000">
+          <div class="box fifth-box">
+            <img src="./assets/pakflag.png" alt="Dummy 5">
+            <div class="box-text fifth-text">
+              <h2>Rooted in
+                Islamabad, Pakistan</h2>
+              <p>Over 150,000 Afghans call Pakistan <br> their second home</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Box 6 -->
+        <div class="col-lg-3 col-md-6 col-sm-12" data-aos="flip-right" data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000">
+          <div class="box sixth-box">
+            <img src="./assets/Frame 51.svg" alt="Dummy 6">
+            <div class="box-text sixth-text"></div>
+          </div>
+        </div>
+
+        <!-- Box 7 -->
+        <div class="col-lg-3 col-md-6 col-sm-12" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000">
+          <div class="box seventh-box">
+            <img src="./assets/_ÎÓÈ_1.svg" alt="Dummy 7">
+            <div class="box-text seventh-text">
+              <h2>Emergency Help</h2>
+              <p>If you are detained, at risk, or in <br> trouble — we’re here 24/7.</p>
+
+
+            </div>
+            <img src="./assets/_ÎÓÈ_3.svg" alt="Dummy 7" class="bottom-img">
+          </div>
+        </div>
+
+        <!-- Box 8 -->
+        <div class="col-lg-3 col-md-6 col-sm-12" data-aos="flip-right" data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000">
+          <div class="box last-box">
+            <img src="./assets/Group.svg" alt="Dummy 8">
+            <div class="box-text last-text">
+              <p>application tracking</p>
+              <h3>Use your reference <br> number to follow up on <br> service requests.</h3>
+              <div class="track-form mx-auto">
+                <form>
+                  <div class="row g-2 mb-2 my-3">
+                    <div class="col-12 col-md-6">
+                      <input type="text" class="form-control" placeholder="First Name">
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <input type="text" class="form-control" placeholder="Last Name">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-12">
+                      <input type="text" class="form-control" placeholder="Application Number">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-track w-100">Track Application</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+
+
+
+  <div class="py-5 service-embassy">
+    <!-- Heading -->
+    <div>
+      <div class="container">
+
+
+        <div class="text-start mb-4">
+          <h2 class="hero-title" data-aos="fade-right" data-aos-duration="1000">CONSULAR SERVICES <br> WE OFFER</h2>
+          <div
+            class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-2"
+            data-aos="fade-right" data-aos-duration="1000">
+            <p class="text-muted hero-title-para">Every service is tailored to support Afghan citizens living in the
+              UAE.</p>
+            <div class="mb-4">
+              <button class="btn button-explore text-center d-flex align-items-center">Looking for Help? <img
+                  src="./assets/angle-right.svg" width="15px" alt="arrow" /></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Top Button -->
+
+        <!-- Services Grid -->
+        <div class="row g-4">
+
+          <!-- Passport Services -->
+          <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
+            <div class="service-card position-relative">
+
+              <h5>Passport Services</h5>
+              <p>Apply for new passports, renew <br> expired ones, or request replacements <br> for lost documents.</p>
+              <button class="btn btn-custom1">Apply for Passport</button>
+
+              <img src="./assets/_x2014_ÎÓÈ_x5F_2.svg" class="position-absolute end-0 bottom-0 opacity-100 images"
+                alt="icon">
+            </div>
+          </div>
+
+          <!-- Visa Applications -->
+          <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000">
+            <div class="service-card position-relative">
+              <h5>Visa Applications</h5>
+              <p>Apply for Afghan visas from anywhere, <br> check your application status, and <br> receive updates.</p>
+              <button class="btn btn-custom1">Apply for Visa</button>
+              <img src="./assets/_x2014_ÎÓÈ_x5F_2 (1).svg" class="position-absolute end-0 bottom-0 opacity-100 images"
+                alt="icon">
+            </div>
+          </div>
+
+          <!-- Afghan Overseas ID Card -->
+          <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
+            <div class="service-card position-relative exclusive-bg">
+              <span class="exclusive-badge">EXCLUSIVE</span>
+              <h5 class="exclusive-desc">Afghan Overseas ID Card</h5>
+              <p class="exclusive-desc">Apply for your official identity <br> document as an Afghan citizen living <br>
+                abroad.</p>
+              <button class="d-flex align-items-center btn text-white btn-custom1 btn-exclusive">Apply for AOID <img
+                  src="./assets/angle-right.svg" alt="" width="10px"></button>
+              <img src="./assets/_x2014_ÎÓÈ_x5F_3.svg"
+                class="position-absolute end-0 bottom-0 opacity-100 images exclusive-image" alt="icon">
+            </div>
+          </div>
+
+
+          <!-- document -->
+
+          <div class="col-md-3 col-12" data-aos="fade-left" data-aos-duration="1000">
+            <div class="service-card position-relative document-box p-4">
+              <div class="d-flex align-items-center justify-content-between">
+                <h5>Document <br> Requests</h5>
+                <div class="arrow-img">
+                  <img src="./assets/arrow-top.svg" alt="icon">
+                </div>
+              </div>
+
+              <p class="document-para position-relative" style="z-index: 2; font-size: 16px; color: black;">
+                Request vital documents <br> like birth, marriage, and <br> death certificates with <br> ease.
+              </p>
+
+              <img src="./assets/_x2014_ÎÓÈ_x5F_4.svg" class="position-absolute end-0 opacity-100 small-img" alt="icon"
+                style="z-index: 1;">
+            </div>
+          </div>
+
+          <!-- Emergency Assistance -->
+          <div class="col-md-3 col-12" data-aos="fade-left" data-aos-duration="1000">
+            <div class="service-card position-relative p-4 emergency-box">
+              <div class="d-flex align-items-center justify-content-between">
+                <h5 class="text-white">Emergency <br> Assistance</h5>
+                <div class="arrow-img">
+                  <img src="./assets/arrow-top2.svg" alt="icon">
+                </div>
+              </div>
+
+              <p class="emergency-para position-relative" style="z-index: 2; font-size: 16px; color: white;">
+                Request vital documents <br> like birth, marriage, and <br> death certificates with <br> ease.
+              </p>
+
+              <img src="./assets/_x2014_ÎÓÈ_x5F_5.svg" class="position-absolute end-0 opacity-100 small-img" alt="icon"
+                style="z-index: 1;">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- slider -->
+
+    <section class="pt-5 d-none d-lg-block">
+      <!-- Section Header -->
+      <h2 class="container hero-title">LATEST ANNOUNCEMENTS <br> AND UPDATES</h2>
+      <div class="container d-flex justify-content-between align-items-center mb-4 flex-wrap">
+        <div>
+          <p class="hero-title-para">Subtle updates that matter to every Afghan in Pakistan.</p>
+        </div>
+        <div class="slider-controls mt-3 mt-md-0 mb-4">
+          <div class="arrow-btn" data-bs-target="#announcementCarousel" data-bs-slide="prev">&#8592;</div>
+          <span>Showing 5 of 10</span>
+          <div class="arrow-btn" data-bs-target="#announcementCarousel" data-bs-slide="next">&#8594;</div>
+        </div>
+      </div>
+
+      <!-- Carousel -->
+      <div id="announcementCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row flex-nowrap g-5">
+              <!-- Card 1 -->
+              <div class="col-md-2 col-12">
+                <div class="announcement-box">
+                  <div class="announcement-img">
+                    <img src="./assets/image 148.svg" alt="">
+                  </div>
+                  <div class="announcement-body">
+                    <h5>Embassy to Host Monthly Community Help Desk</h5>
+                    <p>Starting August 2025, a monthly <br> Community Help Desk will be <br> available every last
+                      Thursday for <br> general inquiries and support.</p>
+                    <div class="meta-info"><img src="./assets/calendar.svg" alt=""> 5th May 2025 &nbsp; | &nbsp; <img
+                        src="./assets/share1.svg" alt=""> Share via</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="col-md-2 col-12">
+                <div class="announcement-box">
+                  <div class="announcement-img">
+                    <img src="./assets/image 148.svg" alt="">
+                  </div>
+                  <div class="announcement-body">
+                    <h5>Embassy to Host Monthly Community Help Desk</h5>
+                    <p>Starting August 2025, a monthly <br> Community Help Desk will be <br> available every last
+                      Thursday for <br> general inquiries and support.</p>
+                    <div class="meta-info"><img src="./assets/calendar.svg" alt=""> 5th May 2025 &nbsp; | &nbsp; <img
+                        src="./assets/share1.svg" alt=""> Share via</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="col-md-2 col-12">
+                <div class="announcement-box">
+                  <div class="announcement-img">
+                    <img src="./assets/image 148.svg" alt="">
+                  </div>
+                  <div class="announcement-body">
+                    <h5>Embassy to Host Monthly Community Help Desk</h5>
+                    <p>Starting August 2025, a monthly <br> Community Help Desk will be <br> available every last
+                      Thursday for <br> general inquiries and support.</p>
+                    <div class="meta-info"><img src="./assets/calendar.svg" alt=""> 5th May 2025 &nbsp; | &nbsp; <img
+                        src="./assets/share1.svg" alt=""> Share via</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="col-md-2 col-12">
+                <div class="announcement-box">
+                  <div class="announcement-img position-relative">
+                    <span class="notice-badge">Notice</span>
+                    <img src="./assets/image 148.svg" alt="">
+                  </div>
+                  <div class="announcement-body">
+                    <h5>Embassy to Host Monthly Community Help Desk</h5>
+                    <p>Starting August 2025, a monthly <br> Community Help Desk will be <br> available every last
+                      Thursday for <br> general inquiries and support.</p>
+                    <div class="meta-info"><img src="./assets/calendar.svg" alt=""> 5th May 2025 &nbsp; | &nbsp; <img
+                        src="./assets/share1.svg" alt=""> Share via</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 5 -->
+
+              <div class="col-md-2 col-12">
+                <div class="announcement-box">
+                  <div class="announcement-img position-relative">
+                    <span class="notice-badge">Notice</span>
+                    <img src="./assets/image 148.svg" alt="">
+                  </div>
+                  <div class="announcement-body">
+                    <h5>Embassy to Host Monthly Community Help Desk</h5>
+                    <p>Starting August 2025, a monthly <br> Community Help Desk will be <br> available every last
+                      Thursday for <br> general inquiries and support.</p>
+                    <div class="meta-info"><img src="./assets/calendar.svg" alt=""> 5th May 2025 &nbsp; | &nbsp; <img
+                        src="./assets/share1.svg" alt=""> Share via</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 6 -->
+              <div class="col-md-2 col-12">
+                <div class="announcement-box">
+                  <div class="announcement-img">
+                    <img src="./assets/image 148.svg" alt="">
+                  </div>
+                  <div class="announcement-body">
+                    <h5>Embassy to Host Monthly Community Help Desk</h5>
+                    <p>Starting August 2025, a monthly <br> Community Help Desk will be <br> available every last
+                      Thursday for <br> general inquiries and support.</p>
+                    <div class="meta-info"><img src="./assets/calendar.svg" alt=""> 5th May 2025 &nbsp; | &nbsp; <img
+                        src="./assets/share1.svg" alt=""> Share via</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row flex-nowrap g-5">
+              <!-- Card 6 -->
+              <div class="col-md-2 col-12">
+                <div class="announcement-box">
+                  <div class="announcement-img position-relative">
+                    <span class="notice-badge">Notice</span>
+                    <img src="./assets/image 148.svg" alt="">
+                  </div>
+                  <div class="announcement-body">
+                    <h5>Embassy to Host Monthly Community Help Desk</h5>
+                    <p>Starting August 2025, a monthly <br> Community Help Desk will be <br> available every last
+                      Thursday for <br> general inquiries and support.</p>
+                    <div class="meta-info"><img src="./assets/calendar.svg" alt=""> 5th May 2025 &nbsp; | &nbsp; <img
+                        src="./assets/share1.svg" alt=""> Share via</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 7 -->
+              <div class="col-md-2 col-12">
+                <div class="announcement-box">
+                  <div class="announcement-img">
+                    <img src="./assets/image 148.svg" alt="">
+                  </div>
+                  <div class="announcement-body">
+                    <h5>Embassy to Host Monthly Community Help Desk</h5>
+                    <p>Starting August 2025, a monthly <br> Community Help Desk will be <br> available every last
+                      Thursday for <br> general inquiries and support.</p>
+                    <div class="meta-info"><img src="./assets/calendar.svg" alt=""> 5th May 2025 &nbsp; | &nbsp; <img
+                        src="./assets/share1.svg" alt=""> Share via</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 8 -->
+              <div class="col-md-2 col-12">
+                <div class="announcement-box">
+                  <div class="announcement-img">
+                    <img src="./assets/image 148.svg" alt="">
+                  </div>
+                  <div class="announcement-body">
+                    <h5>Embassy to Host Monthly Community Help Desk</h5>
+                    <p>Starting August 2025, a monthly <br> Community Help Desk will be <br> available every last
+                      Thursday for <br> general inquiries and support.</p>
+                    <div class="meta-info"><img src="./assets/calendar.svg" alt=""> 5th May 2025 &nbsp; | &nbsp; <img
+                        src="./assets/share1.svg" alt=""> Share via</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 9 -->
+              <div class="col-md-2 col-12">
+                <div class="announcement-box">
+                  <div class="announcement-img">
+                    <img src="./assets/image 148.svg" alt="">
+                  </div>
+                  <div class="announcement-body">
+                    <h5>Embassy to Host Monthly Community Help Desk</h5>
+                    <p>Starting August 2025, a monthly <br> Community Help Desk will be <br> available every last
+                      Thursday for <br> general inquiries and support.</p>
+                    <div class="meta-info"><img src="./assets/calendar.svg" alt=""> 5th May 2025 &nbsp; | &nbsp; <img
+                        src="./assets/share1.svg" alt=""> Share via</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 10 -->
+              <div class="col-md-2 col-12">
+                <div class="announcement-box">
+                  <div class="announcement-img">
+                    <img src="./assets/image 148.svg" alt="">
+                  </div>
+                  <div class="announcement-body">
+                    <h5>Embassy to Host Monthly Community Help Desk</h5>
+                    <p>Starting August 2025, a monthly <br> Community Help Desk will be <br> available every last
+                      Thursday for <br> general inquiries and support.</p>
+                    <div class="meta-info"><img src="./assets/calendar.svg" alt=""> 5th May 2025 &nbsp; | &nbsp; <img
+                        src="./assets/share1.svg" alt=""> Share via</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 11 -->
+              <div class="col-md-2 col-12">
+                <div class="announcement-box">
+                  <div class="announcement-img">
+                    <img src="./assets/image 148.svg" alt="">
+                  </div>
+                  <div class="announcement-body">
+                    <h5>Embassy to Host Monthly Community Help Desk</h5>
+                    <p>Starting August 2025, a monthly <br> Community Help Desk will be <br> available every last
+                      Thursday for <br> general inquiries and support.</p>
+                    <div class="meta-info"><img src="./assets/calendar.svg" alt=""> 5th May 2025 &nbsp; | &nbsp; <img
+                        src="./assets/share1.svg" alt=""> Share via</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- View All Button -->
+      <div class="container text-start my-5">
+        <button class="btn button-explore">View all Announcements <img src="./assets/angle-right.svg" alt=""
+            width="18px"></button>
+      </div>
+    </section>
+
+
+  </div>
+
+
+
+  <!-- FAQ AND DOWNLOAD -->
+
+  <div class="container">
+    <div class="row align-items-start">
+
+      <!-- Left FAQ Section -->
+      <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000">
+        <div class="faq-section">
+          <h2 class="mb-5 hero-title">A FEW COMMON <br> QUESTIONS</h2>
+
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  How do I renew my passport?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Book an appointment online, bring the old passport, CNIC or Tazkira, and two photos.
+                  Passport is usually ready in 7–10 working days.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq2">
+                  What is the AOID and how do I apply?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Information about AOID application goes here.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq3">
+                  Can I legalize marriage/birth certificates issued in Afghanistan?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes, legalization process details here.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq4">
+                  What if I lose my passport in the Pakistan?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  You need to report to local authorities and apply for a replacement.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq5">
+                  Do I need an appointment for all services?
+                </button>
+              </h2>
+              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes, most services require prior appointment booking.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn button-explore mt-5 ">Explore all Questions →</button>
+        </div>
+      </div>
+
+      <!-- Right Downloads Section -->
+      <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000">
+        <div class="downloads-box">
+          <h2 class="mb-4 hero-title">DOWNLOADS <br> AND FORMS</h2>
+
+          <div class="download-item">
+            <h6>Passport Application Form</h6>
+            <p>For renewals and replacements</p>
+          </div>
+
+          <div class="download-item">
+            <h6>AOID Checklist</h6>
+            <p>Required documents for identity card</p>
+          </div>
+
+          <div class="download-item">
+            <h6>Power of Attorney Format</h6>
+            <p>For legal representation inside Afghanistan</p>
+          </div>
+
+          <div class="download-item">
+            <h6>Attestation Request Form</h6>
+            <p>For education, marriage, birth, and business ...</p>
+          </div>
+
+          <div class="download-item">
+            <h6>Emergency Assistance Request</h6>
+            <p>Use only in urgent situations</p>
+          </div>
+
+          <div class="download-item">
+            <h6>Change of Address Form</h6>
+            <p>For mailing to a new location</p>
+          </div>
+
+          <button class="btn btn-custom mt-2">View all →</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- news and carousal section -->
+
+  <section class="news-section my-5 text-white">
+    <img class="img-fluid overflow-hidden blue-img" src="./assets/shade.svg" alt="">
+    <div class="container news-header">
+
+
+      <h2 class="hero-title" data-aos="fade-right" data-aos-duration="1000">LATEST NEWS <br> AND EVENTS</h2>
+      <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap section-header" data-aos="fade-right"
+        data-aos-duration="1000">
+        <div>
+          <p class="text-white hero-title-para">Announcements, cultural moments, and community highlights.</p>
+        </div>
+        <div>
+          <button class="mb-4 button-explore">Explore News & Events</button>
+        </div>
+      </div>
+
+      <div class="row g-0 overflow-hidden" data-aos="zoom-in" data-aos-duration="1000">
+        <!-- News Item 1 -->
+        <div class="col-md-4">
+          <div class="news-card">
+            <img src="./assets/image 11.svg" alt="News">
+            <div class="news-overlay">
+              <h5 class="mb-4">Newly Appointed Afghan
+                Students’ Union Members at <br>
+                IIUI Meet Afghan Ambassador</h5>
+              <div class="d-flex align-items-center justify-content-between mb-0 mb-md-3">
+
+                <button class="btn news-read-more">Read More <img src="./assets/angle-right.svg" alt="news" /></button>
+                <div class="news-meta"><img src="./assets/calendar.svg" alt="">
+                  5th May 2025 &nbsp; | <img src="./assets/share1.svg" alt=""> Share via</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- News Item 2 -->
+        <div class="col-md-4 overflow-hidden">
+          <div class="news-card1">
+            <img src="./assets/image 11 (1).svg" alt="News">
+            <div class="news-overlay">
+              <h5 class="mb-4">Newly Appointed Afghan <br>
+                Students’ Union Members at <br>
+                IIUI Meet Afghan Ambassador</h5>
+              <div class="d-flex align-items-center justify-content-between mb-0 mb-md-3">
+                <button class="btn news-read-more">Read More <img src="./assets/angle-right.svg" alt="" /></button>
+                <div class="news-meta"><img src="./assets/calendar.svg" alt="">
+                  5th May 2025 &nbsp; | <img src="./assets/share1.svg" alt=""> Share via</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- News Item 3 -->
+        <div class="col-md-4">
+          <div class="news-card2">
+            <img src="./assets/image 146.svg" alt="News">
+            <div class="news-overlay">
+              <h5 class="mb-4">Newly Appointed Afghan <br>
+                Students’ Union Members at <br>
+                IIUI Meet Afghan Ambassador</h5>
+              <div class="d-flex align-items-center justify-content-between mb-0 mb-md-3">
+
+                <button class="btn news-read-more">Read More <img src="./assets/angle-right.svg" alt="" />
+                </button>
+                <div class="news-meta"><img src="./assets/calendar.svg" alt="">
+                  5th May 2025 &nbsp; | <img src="./assets/share1.svg" alt=""> Share via</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- tourisim crousel -->
+    <section class="d-none d-lg-block">
+      <div class="my-5 overflow-hidden">
+        <h2 class="container hero-title">EXPERIENCE THE SOUL <br> OF AFGHANISTAN</h2>
+        <div class="container d-flex justify-content-between align-items-center flex-wrap section-header">
+          <div>
+            <p class="text-white hero-title-para">Explore the beauty, history, and soul of our homeland.</p>
+          </div>
+          <div>
+            <button class="button-explore">Explore News & Events</button>
+          </div>
+        </div>
+        <!-- Top Heading + Button -->
+      </div>
+
+      <!-- Carousel -->
+      <div class="overflow-hidden crousel-section">
+        <div id="customCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="row g-3 custom-carousel-item">
+                <div class="col-2">
+                  <div class="carousel-panel-3 left-panel"></div>
+                </div>
+                <div class="col-8">
+                  <div class="carousel-panel center-panel">
+                    <div class="carousel-text">
+                      <h5>Bamyan – Land of the Buddhas</h5>
+                      <p>Once home to ancient giants, now a symbol of cultural rebirth.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="carousel-panel-2 right-panel"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="row g-3 custom-carousel-item">
+                <div class="col-2">
+                  <div class="carousel-panel-3 left-panel"></div>
+                </div>
+                <div class="col-8">
+                  <div class="carousel-panel-2 center-panel">
+                    <div class="carousel-text">
+                      <h5>Mazar-i-Sharif – The Blue Mosque</h5>
+                      <p>One of Afghanistan’s most iconic cultural landmarks.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="carousel-panel right-panel"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <div class="row g-3 custom-carousel-item">
+                <div class="col-2">
+                  <div class="carousel-panel-2 left-panel"></div>
+                </div>
+                <div class="col-8">
+                  <div class="carousel-panel-3 center-panel">
+                    <div class="carousel-text">
+                      <h5>Kabul – The Heart of Afghanistan</h5>
+                      <p>A blend of tradition and modernity, rooted in rich history.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="carousel-panel right-panel"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      </div>
+    </section>
+  </section>
+
+
+  <!-- footer -->
+
+
+  <footer class="footer container-fluid">
+    <div class="container">
+      <div class="d-flex justify-content-between flex-wrap">
+
+        <div>
+
+          <!-- Top Heading -->
+          <div class="mb-4">
+            <h2 class="text-white mb-2 hero-title">STAY CONNECTED<br>WITH THE CONSULATE</h2>
+            <p class=" hero-title-para" style="color: #FFFFFFCC;">Get the latest news, announcements, and community
+              updates</p>
+          </div>
+
+          <!-- Subscribe Box -->
+          <div class="row">
+            <div class="col-md-8">
+              <div class="subscribe-box">
+                <img class="mail-img" src="./assets/Groupmail.svg" alt="">
+                <input type="email" class="form-control" placeholder="Enter email address ...">
+                <button>Subscribe <i class="fa fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-md-3 container-fluid">
+          <div class="contact-box text-white d-flex flex-column ">
+            <p style="border-top: 0px!important;"><img src="./assets/mobile.svg" alt="" style="padding-right: 10px;"> (+92) (51) 282 4505 / 6 <br>
+              <span>(8:30 - 14:00 , Monday to Friday until 12:00)</span>
+            </p>
+            <p style="color: #EBB313;"><img src="./assets/emailicon.svg" alt="" style="padding-right: 10px;">
+              islamabad.sr@mfa.gov.af</p>
+            <p style="color: #EBB313;"><img src="./assets/direction.svg" alt="" style="padding-right: 10px;">Get
+              Directions</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logos -->
+      <div class="footer-logos my-5 mb-5">
+        <div class="footer-line"></div>
+
+        <div class="footer-images">
+          <img src="./assets/embassy_lightbg.svg" alt="logo1" width="361px">
+          <img src="./assets/directorate_lightbg1.svg" alt="logo2" width="305px">
+          <img src="./assets/Isolation_Mode1.svg" alt="logo3" width="244px">
+          <img src="./assets/Layer_1.svg" alt="logo4" width="65px">
+        </div>
+
+        <div class="footer-line"></div>
+      </div>
+
+
+
+      <!-- Links -->
+      <div class="row gap-5 py-5">
+        <!-- Services -->
+        <div class="col-md">
+          <h5 class="footer-links-head">Services</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Passport</a></li>
+            <li><a href="#">Visa Information</a></li>
+            <li><a href="#">Birth Certificate</a></li>
+            <li><a href="#">Marriage Certificate</a></li>
+            <li><a href="#">Power of Attorney</a></li>
+            <li><a href="#">Inheritance (Hasr-e-Warasat)</a></li>
+            <li><a href="#">Entry Permit</a></li>
+            <li><a href="#">Document Validation/Attestation</a></li>
+            <li><a href="#">Police Certificate</a></li>
+          </ul>
+        </div>
+
+        <!-- Forms -->
+        <div class="col-md">
+          <h5 class="footer-links-head">Forms</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Singleness Application Forms</a></li>
+            <li><a href="#">Power of Attorney Application Form</a></li>
+            <li><a href="#">Passport Application Form Pashto</a></li>
+            <li><a href="#">Marriage Certificate Form English–Dari</a></li>
+            <li><a href="#">Marriage Certificate Form English–Pashto</a></li>
+            <li><a href="#">Divorcee Certificate Dari</a></li>
+            <li><a href="#">Birth Certificate Application Form Pashto</a></li>
+            <li><a href="#">Birth Certificate Application Form</a></li>
+            <li><a href="#">Investment Opportunities in Afghanistan</a></li>
+            <li><a href="#">Public–Private Partnership in Afghanistan – 2020</a></li>
+            <li><a href="#">Passport Application Form</a></li>
+          </ul>
+        </div>
+
+        <!-- Afghanistan & About Consulate -->
+        <div class="col-md">
+          <h5 class="footer-links-head">Afghanistan</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Tourism in Afghanistan</a></li>
+            <li><a href="#">Investment in Afghanistan</a></li>
+            <li><a href="#">About Afghanistan</a></li>
+          </ul>
+          <h5 class="footer-links-head mt-5">About Consulate</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Consulate Officer</a></li>
+            <li><a href="#">List of Previous Consulate Officers</a></li>
+            <li><a href="#">Public Holidays</a></li>
+            <li><a href="#">Timings & Holidays</a></li>
+            <li><a href="#">Right to Information</a></li>
+          </ul>
+        </div>
+
+        <!-- Useful Links -->
+        <div class="col-md">
+          <h5 class="footer-links-head">Useful Links</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Afghanistan & Pakistan</a></li>
+            <li><a href="#">HE Consul General Bio</a></li>
+            <li><a href="#">News & Events</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+
+      <!-- Bottom -->
+      <div class="footer-bottom mt-4 d-flex flex-column flex-md-row justify-content-between align-items-center pt-3">
+        <p class="mb-2 mb-md-0">© 2026, All rights reserved. Ministry of Foreign Affairs of Islamic Emirate of
+          Afghanistan.</p>
+        <div class="social-icons">
+          <a href="#"><img src="./assets/facebook3.svg" alt=""></a>
+          <a href="#"><img src="./assets/insta.svg" alt=""></a>
+          <a href="#"><img src="./assets/youtube.svg" alt=""></a>
+          <a href="#"><img src="./assets/linkedin.svg" alt=""></a>
+          <a href="#"><img src="./assets/twitter-x.svg" alt=""></a>
+        </div>
+      </div>
+  </footer>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init();
+  AOS.init({
+    disable: function () {
+      var maxWidth = 768;
+      return window.innerWidth < maxWidth;
+    }
+  });
+</script>
+<script src="./app.js"></script>
+
+</html>

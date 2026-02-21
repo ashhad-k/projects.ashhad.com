@@ -1,0 +1,28 @@
+
+<!-- Modal -->
+<div class="modal fade" id="noticeModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="background:transparent; border:none; box-shadow:none;">
+      
+      <div class="banner-npa3 p-4 rounded">
+        <div class="banner-content text-white">
+          <h2 class="fw-bold" style="font-size:36px;">Important Notice – National Holiday</h2>
+
+          <p class="mb-4" style="font-size:16px; color:#0D0F1680;">
+            Due to the national holiday, all online applications will be processed after official work resumes. Passport applications submitted from Dubai, UAE will be attended to on a first-come, first-served basis.
+          </p>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary rounded-pill px-4 py-2 text-white" style="background:#1356A5;" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var myModal = new bootstrap.Modal(document.getElementById('noticeModal'));
+  myModal.show();
+});
+</script>
+<!-- modal end --> 

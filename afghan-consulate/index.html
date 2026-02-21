@@ -1,270 +1,504 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Project - Afghan Consulate</title>
-<meta name="description" content="I'm Ashhad, a strategic product designer with 15+ years of experience in solving complex business problems through innovative design solutions for large-scale products, websites, and digital experiences.">
-<meta name="keywords" content="strategic design, product design, business solutions, large-scale products, user experience, design systems, project management, website design, digital experiences">
-<meta name="author" content="Ashhad">
-<meta name="robots" content="index, follow">
-<meta name="language" content="en-us">
-<meta name="revisit-after" content="7 days">
-<meta name="copyright" content="Copyright 2024 Ashhad">
-<meta name="classification" content="Freelance website Product Designer">
-<script>
-        document.documentElement.classList.remove('no-js');
-        document.documentElement.classList.add('js');
-    </script> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Embassy of Afghanistan</title>
+  <link rel="stylesheet" href="./styles/index.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&family=Roboto:wght@100&display=swap"
+    rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-<!-- CSS
-    ================================================== -->
-<link rel="stylesheet" href="https://ashhad.com/css/vendor.css">
-<link rel="stylesheet" href="https://ashhad.com/css/styles.css">
-<style>
-h2, .h2, h3, .h3, h4, .h4 {
-    margin-top: 0px!important
-}
-.card1 {
-    font-size: 18px;
-    padding: 30px;
-    border-radius: 12px;
-    margin-bottom: 48px;
-}
-.card1 li {
-    margin-bottom: 4px;
-}
-</style>
 
-<!-- favicons
-    ================================================== -->
-<link rel="apple-touch-icon" sizes="180x180" href="https://ashhad.com/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://ashhad.com/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://ashhad.com/favicon-16x16.png">
-<link rel="manifest" href="https://ashhad.com/site.webmanifest">
-
-<!-- Google tag (gtag.js) --> 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GDH2G4VTTC"></script> 
-<script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-GDH2G4VTTC');
-    </script> 
-<!-- include script--> 
-<script>
-function includeHTML(callback) {
-  var z, i, elmnt, file, xhttp;
-  /*loop through a collection of all HTML elements:*/
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain attribute:*/
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      /*make an HTTP request using the attribute value as the file name:*/
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML(callback);
-        }
-      }      
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /*exit the function:*/
-      return;
-    }
-  }
-  if (callback) callback();
-};
-
-document.addEventListener('DOMContentLoaded', function() {
-  includeHTML(function() {
-    // Initialize smooth scroll after the HTML content is included
-    document.querySelectorAll('a.smoothscroll').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  });
-});
-</script>
 </head>
 
-<body id="top">
+<body>
+  <!-- Hero Section -->
+  <section class="hero pt-4">
+    <div class="hero-bg"></div>
 
-<!-- preloader
-    ================================================== -->
-<div id="preloader">
-  <div id="loader" class="dots-fade">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-</div>
-
-<!-- page wrap
-    ================================================== -->
-<div id="page" class="s-pagewrap ss-home">
-    <!-- # site header 
-        ================================================== -->
-  <header class="s-header">
-    <div class="row s-header__inner width-sixteen-col">
-      <div class="s-header__block">
-        <div class="s-header__logo"> <a class="logo" href="https://ashhad.com/"> <img src="https://ashhad.com/images/logo.svg" alt="Ashhad - Freelance UI UX Designer "> </a> </div>
-        <a class="s-header__menu-toggle" href="https://ashhad.com/"><span>Menu</span></a> </div>
-      <!-- end s-header__block -->
-      
-      <nav class="s-header__nav">
-        <ul class="s-header__menu-links">
-        <li><a href="https://ashhad.com/portfolio" >Portfolio</a></li>
-       
-        <li><a href="https://ashhad.com/#skills">Skills &amp; Expertise</a></li>
-        <li><a href="https://projects.ashhad.com/" class="u-color-1">Projects</a></li>
-        <li><a href="https://ashhad.com/contact/" >Contact</a></li>
-      </ul>
-        <!-- s-header__menu-links -->
-        
-        <div class="s-header__contact"> <a href="https://www.behance.net/ashhad1" title="Design Portfolio - Ashhad Khan "> <img src="https://ashhad.com/images/icons/behance.png" alt="Behance" class="u-vm u-mb-0"/> </a> <a href="https://www.linkedin.com/in/ashhad-profile/" title="LinkedIn Profile - Ashhad Khan"> <img src="https://ashhad.com/images/icons/linkedin.png" alt="LinkedIn Profile - Product Designer"  class="u-vm u-mb-0"/> </a> <a href="https://ashhad.com/resume.pdf" title="Download Resume - Freelance Designer"> <img src="https://ashhad.com/images/icons/download2.png" alt="Download Resume - Freelance Designer"  class="u-vm u-mb-0"/></a> <a href="https://wa.me/923332259620" title="Contact via Whatsapp"> <img src="https://ashhad.com/images/icons/whatsapp.png" alt="WhatsApp"  class="u-vm u-mb-0"/> </a> </div>
-        <!-- s-header__contact --> 
-        
-      </nav>
-      <!-- end s-header__nav --> 
-      
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-center flex-wrap">
+        <!-- Logo -->
+        <a href="./embassy.html"><img src="./assets/directorate_lightbg.svg" alt="Logo" class="img-fluid hero-logo"></a>
+      </div>
     </div>
-    <!-- end s-header__inner --> 
-    
-  </header>
-  <!-- end s-header --> 
-  
-  <!-- # site main content
-        ================================================== -->
-  <section id="content" class="s-content"> 
-    
-    <!-- clients
-            ----------------------------------------------- -->
-    <section id="clients" class="s-clients">
-      <div class="container">
-        <div class="row">
-          <div class="xl-4 md-12 column">
-            <div class="shadow-sm mb-5 card1"  style="background: #98f5e1">
-              <h4>Afghan Consulate</h4>
-              <ol class="my-4 ">
-                <li><a href="website-static/index.html">Website - Static </a> </li>
-                <li><a href="https://afghanconsulate.ae/" target="_blank">Website - Wordpress </a> </li>
-                <li><a href="consular-services/index.html" target="_blank">Consular services </a> </li>
-                <li><a href="email/1.html">Email Template 1</a> </li>
-                <li><a href="email/2.html">Email Template 2</a> </li>
-                <li><a href="email/3.html">Email Template 3</a> </li>
-                <li><a href="email/4.html">Email Template 4</a> </li>
-                <li><a href="email/Passport Extension - Approved.html">Email Template - Passport approved</a> </li>
-               
-              </ol>
+  </section>
+
+  <!-- Map Section -->
+  <section class="map-section pt-5">
+    <div class="container-fluid text-center">
+
+      <div class="map-wrapper mb-4" data-aos="zoom-in" data-aos-duration="2000">
+        <div class="container">
+
+          <h2 class="map-heading mt-1">
+            CONNECTING AFGHANS AROUND THE WORLD <br>THROUGH ONE CONSULAR PLATFORM
+          </h2>
+          <img src="./assets/Group 59.svg" alt="World Map" class="img-fluid map-img">
+        </div>
+        <!-- Heading -->
+
+        <!-- Map Image -->
+
+        <!-- Grid -->
+        <div class="all-number pb-5 pt-1" data-aos="zoom-in" data-aos="fade-up" data-aos-duration="1000">
+
+          <div class="p-3 text-start d-flex align-items-center justify-content-center gap-1 flex-wrap">
+            <div>
+              <h1 class="fw-bold map-number">27</h1>
             </div>
-            <div class="vstack gap-3">
-              <div class="p-2"></div>
+
+            <div>
+              <p class="mb-0 map-para">Countries </p>
+              <p class="mb-0 map-para">Served </p>
             </div>
-           
           </div>
-          
-          
+
+          <div class="p-3 text-start d-flex align-items-center justify-content-center gap-1 flex-wrap">
+            <div>
+
+              <h1 class="fw-bold map-number">42</h1>
+            </div>
+            <div>
+
+              <p class="mb-0 map-para">Offices </p>
+              <p class="mb-0 map-para">Worldwide </p>
+            </div>
+          </div>
+
+          <div class="p-3 text-start d-flex align-items-center justify-content-center gap-1 flex-wrap ">
+            <div>
+
+              <h1 class="fw-bold map-number">27</h1>
+            </div>
+            <div>
+
+              <p class="mb-0 map-para">Number of</p>
+              <p class="mb-0 map-para">Embassies</p>
+
+            </div>
+          </div>
+
+
+          <div class="p-3 text-start d-flex align-items-center justify-content-center gap-1 flex-wrap ">
+            <div>
+
+              <h1 class="fw-bold map-number">15</h1>
+            </div>
+            <div>
+
+              <p class="mb-0 map-para">Number of </p>
+              <p class="mb-0 map-para">Consulates </p>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-    <!-- end s-clients --> 
-    
+
+    </div>
   </section>
-  <!-- s-content--> 
-  
-  <!-- # cta
-        ================================================== --> 
-  
-  <!-- end s-cta -->
-  <!-- # footer 
-        ================================================== -->
-  <footer class="s-footer">
-    <div class="row s-footer__content">
-      <div class="column xl-4 lg-4 md-12 s-footer__block s-footer__about">
-        <h3>Let's Connect</h3>
-        <ul class="link-list">
-          <li> <a href="https://www.linkedin.com/in/ashhad-profile/"> <img src="https://ashhad.com/images/icons/linkedin.png" alt="LinkedIn" width="24px" height="24px" class="u-vm u-mb-0"/> LinkedIn</a></li>
-          <li> <a href="https://wa.me/923332259620"> <img src="https://ashhad.com/images/icons/whatsapp.png" alt="WhatsApp" width="24px" height="24px" class="u-vm u-mb-0"/> Whatsapp</a></li>
-          <li> <a href="https://join.skype.com/invite/gJgxdNh2Iebu"> <img src="https://ashhad.com/images/icons/skype.png" alt="Skype" width="24px" height="24px" class="u-vm u-mb-0"/> Skype</a></li>
-          <li> 
-            <!-- Calendly link widget begin -->
-            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script> 
-            <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ashhad1'});return false;"> <img src="https://ashhad.com/images/icons/calendly.png" alt="Calendly" width="24px" height="24px" class="u-vm u-mb-0"/> Schedule a call</a> </li>
-          <li  style="padding-left: 20px;" >
-            <div class="u-pos-relative"> <span class="connection-status">&nbsp;</span> <span> Available for a full-time position</span> </div>
-          </li>
-        </ul>
+
+
+
+  <section class="container-fluid third-section">
+
+    <div class="container py-5">
+      <!-- Title + Search -->
+      <div class="row align-items-center mb-5">
+        <div class="col-md-8">
+          <h2 class="section-title" data-aos="fade-right" data-aos="fade-up" data-aos-duration="1000">FIND YOUR
+            CONSULATE<br>OR EMBASSY</h2>
+        </div>
+        <div class="col-md-4 text-md-end" data-aos="fade-right" data-aos="fade-up" data-aos-duration="1000">
+          <div class="search-box">
+            <i class="bi bi-search"></i>
+            <input type="text" placeholder="Search by country or city name">
+          </div>
+        </div>
       </div>
-      <div class="column xl-4 lg-4 md-12 s-footer__block s-footer__site-links">
-        <h3>Work</h3>
-        <ul class="link-list">
-          <li> <a href="https://www.behance.net/ashhad1"> <img src="https://ashhad.com/images/icons/behance.png" alt="Behance" width="24px" height="24px" class="u-vm u-mb-0"/> Behance </a></li>
-          <li><a href="https://dribbble.com/ashhad1"> <img src="https://ashhad.com/images/icons/dribbble.png" alt="Dribbble" width="24px" height="24px" class="u-vm u-mb-0"/> Dribbble</a></li>
-          <!--          <li><a href="https://www.figma.com/@ashhad"> <img src="https://ashhad.com/images/icons/figma.png" alt="Figma" width="24px" height="24px" class="u-vm u-mb-0"/> Figma Freebies</a></li>-->
-          <li><a href="https://projects.ashhad.com/"> <img src="https://ashhad.com/images/icons/github.png" alt="Frontend Projects" width="24px" height="24px" class="u-vm u-mb-0"/> Front-End Projects</a></li>
-          <li>
-            <div class="pd-top-20px"> <a href="https://ashhad.com/resume.pdf" target="_blank" class="btn btn--primary btn--small "> Download Resume</a></div>
-          </li>
-        </ul>
-      </div>
-      <div class="column xl-4 lg-4 md-12 tab-12 s-footer__block s-footer__newsletter">
-        <p><a href="https://www.figma.com/@ashhad"> My Top-Rated Figma Freebies</a></p>
-        <ul class="link-list">
-          <li> <a href="https://www.figma.com/community/file/1348071404653891411">Live Chat / AI Chatbot Component </a> </li>
-          <li> <a href="https://www.figma.com/community/file/1341385514810436192">Steps / Progress indicator template </a> </li>
-          <li> <a href="https://www.figma.com/community/file/1333396808424034503"> Website Template Design - Samurai </a> </li>
-          <li> <a href="https://www.figma.com/community/file/1331976070758128653">Email Newsletter Template</a> </li>
-          <li> <a href="https://www.figma.com/community/file/1336354029076682399"> Accordion component</a> </li>
-        </ul>
+
+      <h5 class="fw-bold mb-3 head-line" data-aos="fade-right" data-aos-duration="1000">MIDDLE EAST AND GULF</h5>
+
+      <!-- Countries Grid -->
+      <div class="row g-0" data-aos="fade-right" data-aos-duration="1000">
+        <!-- Saudi Arabia -->
+        <div class="col-md-4 col-sm-6">
+          <div class="country-card">
+
+            <h6><img src="./assets/sa Saudi Arabia.svg" alt="Saudi"> Saudi Arabia</h6>
+            <div class="country-links">
+              <a href="#"><span>Riyadh</span> (Embassy)</a>
+              <a href="#"><span>Jeddah</span> (Consulate)</a>
+            </div>
+          </div>
+        </div>
+        <!-- UAE -->
+        <div class="col-md-4 col-sm-6">
+          <div class="country-card">
+            <h6><img src="./assets/ae United Arab Emirates.svg" alt="UAE"> United Arab Emirates</h6>
+            <div class="country-links">
+              <a href="#"><span>Abu Dhabi</span> (Embassy)</a>
+              <a href="#"><span>Dubai</span> (Consulate)</a>
+            </div>
+          </div>
+        </div>
+        <!-- Qatar -->
+        <div class="col-md-4 col-sm-6">
+          <div class="country-card">
+            <h6><img src="./assets/qa Qatar.svg" alt="Qatar"> Qatar</h6>
+            <div class="country-links">
+              <a href="#"><span>Doha</span> (Embassy)</a>
+            </div>
+          </div>
+        </div>
+        <!-- Oman -->
+        <div class="col-md-4 col-sm-6">
+          <div class="country-card">
+            <h6><img src="./assets/om Oman.svg" alt="Oman"> Oman</h6>
+            <div class="country-links">
+              <a href="#"><span>Muscat</span> (Embassy)</a>
+            </div>
+          </div>
+        </div>
+        <!-- Iraq -->
+        <div class="col-md-4 col-sm-6">
+          <div class="country-card">
+            <h6><img src="./assets/iq Iraq.svg" alt="Iraq"> Iraq</h6>
+            <div class="country-links">
+              <a href="#"><span>Baghdad</span> (Embassy)</a>
+            </div>
+          </div>
+        </div>
+        <!-- Jordan -->
+        <div class="col-md-4 col-sm-6">
+          <div class="country-card">
+            <h6><img src="./assets/jo Jordan.svg" alt="Jordan"> Jordan</h6>
+            <div class="country-links">
+              <a href="#"><span>Amman</span> (Embassy)</a>
+            </div>
+          </div>
+        </div>
+        <!-- Iran -->
+        <div class="col-md-4 col-sm-6">
+          <div class="country-card">
+            <h6><img src="./assets/ir Iran.svg" alt="Iran"> Iran</h6>
+            <div class="country-links">
+              <a href="#"><span>Tehran</span> (Embassy)</a>
+              <a href="#"><span>Mashhad</span> (Consulate)</a>
+              <a href="#"><span>Zahedan</span> (Consulate)</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="row s-footer__bottom">
-      <div class="column xl-4 lg-12"> <span>© Copyright 2024</span> </div>
-      <div class="ss-go-top"> <a class="smoothscroll" title="Back to Top" href="#top">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M19.92 15.0499L13.4 8.52989C12.63 7.75989 11.37 7.75989 10.6 8.52989L4.07996 15.0499" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        </a> </div>
-      <!-- end ss-go-top --> 
+
+
+
+
+
+    <div class="container py-5" data-aos="fade-left" data-aos-duration="1000">
+      <!-- Title + Search -->
+
+      <h5 class="fw-bold mb-3 head-line">SOUTH AND CENTERAL ASIA</h5>
+
+      <!-- Countries Grid -->
+      <div class="row g-0">
+        <!-- Saudi Arabia -->
+        <div class="col-md-4 col-sm-6">
+          <div class="country-card">
+
+            <h6><img src="./assets/sa Saudi Arabia.svg" alt="Saudi"> Saudi Arabia</h6>
+            <div class="country-links">
+              <a href="#"><span>Riyadh</span> (Embassy)</a>
+              <a href="#"><span>Jeddah</span> (Consulate)</a>
+            </div>
+          </div>
+        </div>
+        <!-- UAE -->
+        <div class="col-md-4 col-sm-6">
+          <div class="country-card">
+            <h6><img src="./assets/ae United Arab Emirates.svg" alt="UAE"> United Arab Emirates</h6>
+            <div class="country-links">
+              <a href="#"><span>Abu Dhabi</span> (Embassy)</a>
+              <a href="#"><span>Dubai</span> (Consulate)</a>
+            </div>
+          </div>
+        </div>
+        <!-- Qatar -->
+        <div class="col-md-4 col-sm-6">
+          <div class="country-card">
+            <h6><img src="./assets/qa Qatar.svg" alt="Qatar"> Qatar</h6>
+            <div class="country-links">
+              <a href="#"><span>Doha</span> (Embassy)</a>
+            </div>
+          </div>
+        </div>
+        <!-- Oman -->
+        <div class="col-md-4 col-sm-6">
+          <div class="country-card">
+            <h6><img src="./assets/om Oman.svg" alt="Oman"> Oman</h6>
+            <div class="country-links">
+              <a href="#"><span>Muscat</span> (Embassy)</a>
+            </div>
+          </div>
+        </div>
+        <!-- Iraq -->
+        <div class="col-md-4 col-sm-6">
+          <div class="country-card">
+            <h6><img src="./assets/iq Iraq.svg" alt="Iraq"> Iraq</h6>
+            <div class="country-links">
+              <a href="#"><span>Baghdad</span> (Embassy)</a>
+            </div>
+          </div>
+        </div>
+        <!-- Jordan -->
+        <div class="col-md-4 col-sm-6">
+          <div class="country-card">
+            <h6><img src="./assets/jo Jordan.svg" alt="Jordan"> Jordan</h6>
+            <div class="country-links">
+              <a href="#"><span>Amman</span> (Embassy)</a>
+            </div>
+          </div>
+        </div>
+        <!-- Iran -->
+        <div class="col-md-4 col-sm-6">
+          <div class="country-card">
+            <h6><img src="./assets/ir Iran.svg" alt="Iran"> Iran</h6>
+            <div class="country-links">
+              <a href="#"><span>Tehran</span> (Embassy)</a>
+              <a href="#"><span>Mashhad</span> (Consulate)</a>
+              <a href="#"><span>Zahedan</span> (Consulate)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="container py-5">
+      <!-- Title + Search -->
+
+      <h5 class="fw-bold mb-3 head-line" data-aos="fade-right" data-aos-duration="1000">SOUTH AND EAST ASIA</h5>
+
+      <!-- Countries Grid -->
+      <div class="row g-0" data-aos="fade-right" data-aos-duration="1000">
+        <!-- Saudi Arabia -->
+        <div class="col-md-4 col-sm-6">
+          <div class="country-card">
+
+            <h6><img src="./assets/sa Saudi Arabia.svg" alt="Saudi"> Saudi Arabia</h6>
+            <div class="country-links">
+              <a href="#"><span>Riyadh</span> (Embassy)</a>
+              <a href="#"><span>Jeddah</span> (Consulate)</a>
+            </div>
+          </div>
+        </div>
+        <!-- UAE -->
+        <div class="col-md-4 col-sm-6">
+          <div class="country-card">
+            <h6><img src="./assets/ae United Arab Emirates.svg" alt="UAE"> United Arab Emirates</h6>
+            <div class="country-links">
+              <a href="#"><span>Abu Dhabi</span> (Embassy)</a>
+              <a href="#"><span>Dubai</span> (Consulate)</a>
+            </div>
+          </div>
+        </div>
+        <!-- Qatar -->
+        <div class="col-md-4 col-sm-6">
+          <div class="country-card">
+            <h6><img src="./assets/qa Qatar.svg" alt="Qatar"> Qatar</h6>
+            <div class="country-links">
+              <a href="#"><span>Doha</span> (Embassy)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="container py-5">
+      <!-- Title + Search -->
+
+      <h5 class="fw-bold mb-3 head-line" data-aos="fade-left" data-aos-duration="1000">EUROPE</h5>
+
+      <!-- Countries Grid -->
+      <div class="row g-0" data-aos="fade-left" data-aos-duration="1000">
+        <!-- Saudi Arabia -->
+        <div class="col-md-4 col-sm-6">
+          <div class="country-card">
+            <h6><img src="./assets/sa Saudi Arabia.svg" alt="Saudi"> Saudi Arabia</h6>
+            <div class="country-links">
+              <a href="#"><span>Riyadh</span> (Embassy)</a>
+              <a href="#"><span>Jeddah</span> (Consulate)</a>
+            </div>
+          </div>
+        </div>
+        <!-- UAE -->
+        <div class="col-md-4 col-sm-6">
+          <div class="country-card">
+            <h6><img src="./assets/ae United Arab Emirates.svg" alt="UAE"> United Arab Emirates</h6>
+            <div class="country-links">
+              <a href="#"><span>Abu Dhabi</span> (Embassy)</a>
+              <a href="#"><span>Dubai</span> (Consulate)</a>
+            </div>
+          </div>
+        </div>
+        <!-- Qatar -->
+        <div class="col-md-4 col-sm-6">
+          <div class="country-card">
+            <h6><img src="./assets/qa Qatar.svg" alt="Qatar"> Qatar</h6>
+            <div class="country-links">
+              <a href="#"><span>Doha</span> (Embassy)</a>
+            </div>
+          </div>
+        </div>
+        <!-- Oman -->
+        <div class="col-md-4 col-sm-6">
+          <div class="country-card">
+            <h6><img src="./assets/om Oman.svg" alt="Oman"> Oman</h6>
+            <div class="country-links">
+              <a href="#"><span>Muscat</span> (Embassy)</a>
+            </div>
+          </div>
+        </div>
+        <!-- Iraq -->
+        <div class="col-md-4 col-sm-6">
+          <div class="country-card">
+            <h6><img src="./assets/iq Iraq.svg" alt="Iraq"> Iraq</h6>
+            <div class="country-links">
+              <a href="#"><span>Baghdad</span> (Embassy)</a>
+            </div>
+          </div>
+        </div>
+        <!-- Jordan -->
+        <div class="col-md-4 col-sm-6">
+          <div class="country-card">
+            <h6><img src="./assets/jo Jordan.svg" alt="Jordan"> Jordan</h6>
+            <div class="country-links">
+              <a href="#"><span>Amman</span> (Embassy)</a>
+            </div>
+          </div>
+        </div>
+        <!-- Iran -->
+        <div class="col-md-4 col-sm-6">
+          <div class="country-card">
+            <h6><img src="./assets/ir Iran.svg" alt="Iran"> Iran</h6>
+            <div class="country-links">
+              <a href="#"><span>Tehran</span> (Embassy)</a>
+              <a href="#"><span>Mashhad</span> (Consulate)</a>
+              <a href="#"><span>Zahedan</span> (Consulate)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="container pt-5">
+      <!-- Title + Search -->
+
+      <h5 class="fw-bold head-line" data-aos="fade-right" data-aos-duration="1000">AFRICA</h5>
+
+      <!-- Countries Grid -->
+      <div class="row g-0" data-aos="fade-right" data-aos-duration="1000">
+        <!-- Saudi Arabia -->
+        <div class="col-md-4 col-sm-6">
+          <div class="country-card">
+
+            <h6><img src="./assets/sa Saudi Arabia.svg" alt="Saudi"> Saudi Arabia</h6>
+            <div class="country-links">
+              <a href="#"><span>Riyadh</span> (Embassy)</a>
+              <a href="#"><span>Jeddah</span> (Consulate)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="container pt-2 pb-5">
+      <div class="support-section mt-4" data-aos="zoom-in" data-aos-duration="1000">
+        <img src="./assets/afghanflag.png" alt="Afghan Flag" class="support-bg">
+
+        <div class="support-box">
+          <h3 class="support-title">DIDN'T FIND YOUR COUNTRY?</h3>
+          <p class="mb-4 mt-3">Can't locate your consulate or need direct help? Contact our <br> global support team
+            for
+            assistance.</p>
+
+          <div class="d-flex gap-3 flex-wrap mt-5">
+            <button class="btn btn-support">
+              <img src="./assets/email.svg" alt="email" /> Contact Support
+            </button>
+            <button class="btn btn-emergency">
+              <img src="./assets/warning.svg" alt="warning" /> Emergency Help
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+
+
+
+  <!-- footer -->
+
+  <footer class="footer">
+    <div>
+      <div class="container d-flex flex-wrap justify-content-center align-items-center mt-3 mb-3 foot-center">
+        <img src="./assets/directorate_lightbg.svg" alt="Logo1" width="310px">
+        <img src="./assets/Group 52.svg" alt="Logo2" width="273px">
+        <img src="./assets/Layer_1.svg" alt="Logo3" width="75">
+        <img src="./assets/Group 45.svg" alt="Logo4" width="273px">
+      </div>
+
+      <div class="mb-2 text-center">
+        <a href="#">Terms and conditions</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Important Info</a>
+      </div>
+
+      <p class="text-center">© 2025 Afghan Consulate Network.<br>
+        An official platform under the Ministry of Foreign Affairs, Afghanistan.</p>
     </div>
   </footer>
-  <!-- end s-footer --> 
-</div>
-<!-- end page-wrap --> 
 
-<!-- Java Script
-    ================================================== --> 
-<script>
-includeHTML(function() {
-  // Initialize smooth scroll after the HTML content is included
-  document.querySelectorAll('a.smoothscroll').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
 
-  // Initialize your toggle menu here
-  // Example: Assuming you have a function called initializeToggleMenu
-  initializeToggleMenu();
-});
-</script> 
-<script src="https://ashhad.com/js/plugins.js"></script> 
-<script src="https://ashhad.com/js/main.js"></script>
+
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init();
+  AOS.init({
+    disable: function () {
+      var maxWidth = 768;
+      return window.innerWidth < maxWidth;
+    }
+  });
+</script>
+
+
 </html>

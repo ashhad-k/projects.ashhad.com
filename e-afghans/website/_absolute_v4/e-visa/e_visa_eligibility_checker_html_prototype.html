@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eligibility Checker – Afghanistan e‑Visa</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUa6Y5Y2vH2O6q6bY1jvQ1p1K8Q4sX1Zl1mZ6e1QmV7rT1K7q1Q0b6w3Q9c" crossorigin="anonymous">
+  <style>
+    /* Minimal tweaks to preserve a similar feel */
+    body{background:#f6f7f9}
+    .card.rounded-4{border-radius:24px}
+    .badge-status{font-weight:700}
+  </style>
+</head>
+<body>
+  <div class="container my-4">
+    <div class="card rounded-4 shadow-sm p-4">
+      <h1 class="display-6 fw-bold mb-1">Eligibility Checker</h1>
+      <p class="text-muted fs-5 mb-3">Check whether you qualify for the Afghanistan e‑Visa before starting your application.</p>
+      <hr />
+
+      <div class="row g-3">
+        <div class="col-12 col-md-6">
+          <label for="nationality" class="form-label fw-bold">Select your nationality</label>
+          <select id="nationality" class="form-select">
+            <option value="">Select your nationality</option>
+          </select>
+          <p class="form-text text-muted small">Tip: Start typing to search. Eligibility result will appear instantly.</p>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <label for="residence" class="form-label fw-bold">Select your country of residence</label>
+          <select id="residence" class="form-select" disabled>
+            <option value="">Select your country of residence</option>
+          </select>
+          <p class="form-text text-muted small">Tip: Select where you currently reside to verify your eligibility.</p>
+        </div>
+      </div>
+
+      <div id="result" class="alert d-none mt-3" role="status" aria-live="polite"></div>
+
+      <div class="d-flex justify-content-end gap-2 mt-3">
+        <button id="resetBtn" class="btn btn-outline-secondary" type="button">Reset</button>
+        <button id="ctaBtn" class="btn btn-primary" type="button" disabled>Continue</button>
+      </div>
+
+      <div class="mt-2 small text-muted">
+        Rule: ✅ Eligible <b>only if</b> nationality is <b>not</b> restricted <b>and</b> residence is <b>not</b> restricted. ❌ Not eligible if either matches a restricted list.
+      </div>
+
+      <div class="mt-2" aria-hidden="true">
+        <span class="badge bg-light text-dark border">Instant result</span>
+        <span class="badge bg-light text-dark border">Nationality check → Residence check</span>
+        <span class="badge bg-light text-dark border">Clear “Eligible / Not eligible” states</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // =============================
+    // 1) Restriction Lists (as per client requirement)
+    // =============================
+    const nationalityRestricted = new Set([
+      "Pakistan",
+      "Iran",
+      "Tajikistan",
+      "Uzbekistan",
+      "Turkmenistan",
+      "Israel",
+    ]);
+
+    const residenceRestricted = new Set([
+      "India",
+      "China",
+      "Russia",
+      "Kyrgyzstan",
+      "Kazakhstan",
+      "Azerbaijan",
+      "Turkey",
+      "Saudi Arabia",
+      "Qatar",
+      "United Arab Emirates",
+      "Oman",
+      "Malaysia",
+      "Indonesia",
+    ]);
+
+    // =============================
+    // 2) Country List (example set + includes all restricted)
+    //    You can replace this with your full country dataset.
+    // =============================
+    const countries = [
+      // --- Common / sample ---
+      "Afghanistan","Albania","Algeria","Andorra","Angola","Argentina","Armenia","Australia","Austria","Azerbaijan",
+      "Bahrain","Bangladesh","Belarus","Belgium","Bolivia","Bosnia and Herzegovina","Brazil","Bulgaria","Cambodia","Canada",
+      "Chile","China","Colombia","Costa Rica","Croatia","Cyprus","Czech Republic","Denmark","Dominican Republic","Ecuador",
+      "Egypt","Estonia","Ethiopia","Finland","France","Georgia","Germany","Ghana","Greece","Hong Kong",
+      "Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Japan",
+      "Jordan","Kazakhstan","Kenya","Kuwait","Kyrgyzstan","Latvia","Lebanon","Lithuania","Luxembourg","Malaysia",
+      "Maldives","Malta","Mexico","Mongolia","Morocco","Netherlands","New Zealand","Nigeria","North Macedonia","Norway",
+      "Oman","Pakistan","Peru","Philippines","Poland","Portugal","Qatar","Romania","Russia","Saudi Arabia",
+      "Serbia","Singapore","Slovakia","Slovenia","South Africa","South Korea","Spain","Sri Lanka","Sweden","Switzerland",
+      "Tajikistan","Thailand","Turkey","Turkmenistan","Ukraine","United Arab Emirates","United Kingdom","United States","Uzbekistan","Vietnam",
+    ].sort((a,b)=>a.localeCompare(b));
+
+    // =============================
+    // 3) DOM Helpers
+    // =============================
+    const nationalityEl = document.getElementById('nationality');
+    const residenceEl   = document.getElementById('residence');
+    const resultEl      = document.getElementById('result');
+    const ctaBtn        = document.getElementById('ctaBtn');
+    const resetBtn      = document.getElementById('resetBtn');
+
+    function fillSelect(selectEl){
+      const existing = selectEl.querySelectorAll('option');
+      // Keep the first placeholder option
+      for (let i = existing.length - 1; i >= 1; i--) existing[i].remove();
+
+      countries.forEach(c=>{
+        const opt = document.createElement('option');
+        opt.value = c;
+        opt.textContent = c;
+        selectEl.appendChild(opt);
+      });
+    }
+
+    function showResult({status, title, message, badgeText}){
+      // status: 'ok' | 'bad' | 'warn'
+      resultEl.classList.remove('d-none');
+      resultEl.classList.remove('alert-success','alert-danger','alert-warning');
+      const alertClass = status === 'ok' ? 'alert-success' : status === 'bad' ? 'alert-danger' : 'alert-warning';
+      resultEl.classList.add(alertClass);
+      resultEl.innerHTML = `
+        <span class="badge bg-transparent text-dark badge-status me-2">${badgeText}</span>
+        <strong>${title}</strong>
+        <div class="mt-2">${message}</div>
+      `;
+    }
+
+    function hideResult(){
+      resultEl.classList.add('d-none');
+      resultEl.classList.remove('alert-success','alert-danger','alert-warning');
+      resultEl.innerHTML = '';
+    }
+
+    function setCTA({mode}){
+      // mode: 'disabled' | 'continue' | 'contact'
+      if (mode === 'disabled'){
+        ctaBtn.disabled = true;
+        ctaBtn.textContent = 'Continue';
+        ctaBtn.dataset.mode = 'disabled';
+        return;
+      }
+      if (mode === 'continue'){
+        ctaBtn.disabled = false;
+        ctaBtn.textContent = 'Continue';
+        ctaBtn.dataset.mode = 'continue';
+        return;
+      }
+      if (mode === 'contact'){
+        ctaBtn.disabled = false;
+        ctaBtn.textContent = 'Contact Us';
+        ctaBtn.dataset.mode = 'contact';
+        return;
+      }
+    }
+
+    function resetAll(){
+      nationalityEl.value = '';
+      residenceEl.value = '';
+      residenceEl.disabled = true;
+      hideResult();
+      setCTA({mode:'disabled'});
+    }
+
+    // =============================
+    // 4) Eligibility Logic (exactly as you described)
+    // =============================
+    function evaluate(){
+      const nat = nationalityEl.value;
+      const res = residenceEl.value;
+
+      // No nationality selected yet
+      if (!nat){
+        residenceEl.disabled = true;
+        residenceEl.value = '';
+        hideResult();
+        setCTA({mode:'disabled'});
+        return;
+      }
+
+      // Step 1: Nationality restriction check
+      if (nationalityRestricted.has(nat)){
+        residenceEl.disabled = true;
+        residenceEl.value = '';
+        showResult({
+          status: 'bad',
+          badgeText: 'Not eligible',
+          title: 'You are not eligible for the Afghanistan e‑Visa',
+          message: `Based on your nationality (${nat}), online e‑Visa applications are not currently available. Please contact support for guidance on alternative application options.`
+        });
+        setCTA({mode:'contact'});
+        return;
+      }
+
+      // If nationality is OK, enable residence selection (Step 2)
+      residenceEl.disabled = false;
+
+      // If residence not selected yet, show a neutral prompt
+      if (!res){
+        showResult({
+          status: 'warn',
+          badgeText: 'Next step',
+          title: 'Nationality looks eligible',
+          message: 'Now select your country of residence to complete the eligibility check.'
+        });
+        setCTA({mode:'disabled'});
+        return;
+      }
+
+      // Step 2: Residence restriction check
+      if (residenceRestricted.has(res)){
+        showResult({
+          status: 'bad',
+          badgeText: 'Not eligible',
+          title: 'You are not eligible for the Afghanistan e‑Visa',
+          message: `Based on your current country of residence (${res}), online e‑Visa applications are not currently available. Please contact support for guidance.`
+        });
+        setCTA({mode:'contact'});
+        return;
+      }
+
+      // ✅ Eligible only if BOTH are not restricted
+      showResult({
+        status: 'ok',
+        badgeText: 'Eligible',
+        title: 'You are eligible for the Afghanistan e‑Visa',
+        message: `Great — based on your nationality (${nat}) and your country of residence (${res}), you can proceed with your online e‑Visa application.`
+      });
+      setCTA({mode:'continue'});
+    }
+
+    // =============================
+    // 5) Events
+    // =============================
+    fillSelect(nationalityEl);
+    fillSelect(residenceEl);
+
+    nationalityEl.addEventListener('change', evaluate);
+    residenceEl.addEventListener('change', evaluate);
+
+    resetBtn.addEventListener('click', resetAll);
+
+    ctaBtn.addEventListener('click', () => {
+      const mode = ctaBtn.dataset.mode;
+      if (mode === 'contact'){
+        // Replace with your real contact page / modal
+        alert('Contact support:\n\n• e-visa: evisa@mfa.gov.af\n• general support: support@eafghans.com\n• passport: online@afghanconsulate.ae');
+        return;
+      }
+      if (mode === 'continue'){
+        // Replace with your real next step URL
+        alert('Proceeding to e‑Visa application…');
+      }
+    });
+
+    // Initial state
+    resetAll();
+  </script>
+</body>
+</html>

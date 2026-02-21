@@ -1,0 +1,1058 @@
+/* =====================================================
+   ROOT VARIABLES & GENERAL STYLES
+===================================================== */
+
+:root {
+    --primary-blue: #4A7BA7;
+    --primary-dark-blue: #3B6285;
+    --success-green: #10B981;
+    --warning-orange: #F59E0B;
+    --error-red: #EF4444;
+    --light-gray: #F3F4F6;
+    --border-gray: #E5E7EB;
+    --text-dark: #1F2937;
+    --text-muted: #6B7280;
+    --white: #FFFFFF;
+    --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--light-gray);
+    color: var(--text-dark);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* =====================================================
+   APPOINTMENT CONTAINER
+===================================================== */
+
+.appointment-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .appointment-container {
+        padding: 15px;
+    }
+}
+
+/* =====================================================
+   HEADER & LANGUAGE SELECTOR
+===================================================== */
+
+.header-top {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-muted);
+    font-size: 14px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.language-selector:hover {
+    color: var(--primary-blue);
+}
+
+/* =====================================================
+   PROGRESS BAR SECTION
+===================================================== */
+
+.progress-section {
+    margin-bottom: 40px;
+}
+
+.progress-bar-container {
+    background-color: var(--border-gray);
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.progress {
+    height: 100%;
+    background-color: transparent;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-blue), var(--primary-dark-blue));
+    border-radius: 4px;
+    width: 20%;
+    transition: width 0.4s ease;
+}
+
+.progress-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+
+.step-indicator {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.progress-percentage {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+/* =====================================================
+   CONTENT WRAPPER
+===================================================== */
+
+.content-wrapper {
+    flex: 1;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+    min-height: 400px;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 25px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-wrapper {
+        padding: 20px;
+    }
+}
+
+.step-content {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =====================================================
+   STEP TITLES & SUBTITLES
+===================================================== */
+
+.step-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.step-subtitle {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .step-title {
+        font-size: 24px;
+    }
+    
+    .step-subtitle {
+        font-size: 14px;
+    }
+}
+
+/* =====================================================
+   STEP 1: SERVICE CARDS
+===================================================== */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+.service-card {
+    background-color: var(--white);
+    border: 2px solid var(--border-gray);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    border-color: var(--primary-blue);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+.service-card.selected {
+    border-color: var(--primary-blue);
+    background-color: #f0f8ff;
+    box-shadow: 0 0 0 3px rgba(74, 123, 167, 0.1);
+}
+
+.service-icon {
+    font-size: 40px;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(74, 123, 167, 0.1);
+    border-radius: 8px;
+}
+
+.service-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 15px 0 10px 0;
+}
+
+.service-description {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.service-availability {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-gray);
+}
+
+.availability-count {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.badge-available {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--success-green);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-available i {
+    font-size: 12px;
+}
+
+.checkmark-icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 28px;
+    height: 28px;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.service-card.selected .checkmark-icon {
+    opacity: 1;
+}
+
+/* =====================================================
+   STEP 2: CALENDAR
+===================================================== */
+
+.calendar-container {
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    margin-top: 30px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.calendar-header h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0;
+    min-width: 150px;
+    text-align: center;
+}
+
+.calendar-nav {
+    background-color: var(--white);
+    border: 1px solid var(--border-gray);
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dark);
+    font-size: 16px;
+    transition: var(--transition);
+}
+
+.calendar-nav:hover {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border-color: var(--primary-blue);
+}
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.weekday {
+    text-align: center;
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 12px;
+    padding: 10px 0;
+}
+
+.calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.calendar-date {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    background-color: var(--white);
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--text-dark);
+    transition: var(--transition);
+    position: relative;
+    font-size: 14px;
+}
+
+.calendar-date:hover:not(.disabled) {
+    border-color: var(--primary-blue);
+    background-color: #f0f8ff;
+}
+
+.calendar-date.disabled {
+    color: var(--border-gray);
+    cursor: not-allowed;
+    background-color: #f9f9f9;
+}
+
+.calendar-date.selected {
+    border-color: var(--primary-blue);
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+.calendar-date.available::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--success-green);
+}
+
+.calendar-date.selected.available::after {
+    background-color: var(--white);
+}
+
+.calendar-date.limited::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--warning-orange);
+}
+
+.calendar-date.selected.limited::after {
+    background-color: var(--white);
+}
+
+.calendar-date.booked {
+    color: var(--text-muted);
+    cursor: not-allowed;
+}
+
+.calendar-date.booked::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--error-red);
+}
+
+.calendar-legend {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.legend-dot {
+    display: inline-flex;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.legend-dot.available {
+    background-color: var(--success-green);
+}
+
+.legend-dot.limited {
+    background-color: var(--warning-orange);
+}
+
+.legend-dot.booked {
+    background-color: var(--error-red);
+}
+
+@media (max-width: 768px) {
+    .calendar-legend {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* =====================================================
+   STEP 3: TIME SLOTS
+===================================================== */
+
+.working-hours-banner {
+    background-color: #fef3c7;
+    border-left: 4px solid var(--warning-orange);
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.slots-available {
+    margin-bottom: 25px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.time-slots-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .time-slots-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .time-slots-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+.time-slot {
+    padding: 12px 16px;
+    border: 2px solid var(--border-gray);
+    border-radius: 6px;
+    background-color: var(--white);
+    color: var(--text-dark);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 14px;
+}
+
+.time-slot:hover {
+    border-color: var(--primary-blue);
+    background-color: #f0f8ff;
+}
+
+.time-slot.selected {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border-color: var(--primary-blue);
+}
+
+.time-slot:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* =====================================================
+   STEP 4: APPLICANT FORM
+===================================================== */
+
+.applicant-form {
+    margin-top: 30px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+    display: block;
+    font-size: 14px;
+}
+
+.required {
+    color: var(--error-red);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    font-family: inherit;
+    font-size: 14px;
+    border: 1px solid var(--border-gray);
+    border-radius: 6px;
+    padding: 10px 12px;
+    width: 100%;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(74, 123, 167, 0.1);
+}
+
+.form-group input.is-invalid,
+.form-group select.is-invalid,
+.form-group textarea.is-invalid {
+    border-color: var(--error-red);
+}
+
+.form-group input.is-invalid:focus,
+.form-group select.is-invalid:focus,
+.form-group textarea.is-invalid:focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.error-message {
+    display: block;
+    color: var(--error-red);
+    font-size: 12px;
+    margin-top: 4px;
+    min-height: 16px;
+}
+
+.form-helper {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-gray);
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+/* =====================================================
+   STEP 5: REVIEW SECTION
+===================================================== */
+
+.review-container {
+    margin-top: 30px;
+}
+
+.review-section {
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.review-section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.review-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-gray);
+    margin-bottom: 15px;
+}
+
+.review-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.review-icon {
+    font-size: 20px;
+    color: var(--primary-blue);
+    width: 30px;
+    text-align: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.review-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.review-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.review-value {
+    font-size: 15px;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.important-notice {
+    background-color: #fef3c7;
+    border-left: 4px solid var(--warning-orange);
+    padding: 15px;
+    border-radius: 4px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: var(--text-dark);
+    margin-top: 30px;
+}
+
+.important-notice i {
+    color: var(--warning-orange);
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.important-notice span {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* =====================================================
+   NAVIGATION SECTION
+===================================================== */
+
+.navigation-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-gray);
+}
+
+@media (max-width: 480px) {
+    .navigation-section {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+.btn {
+    padding: 11px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+.btn-primary:hover:not(:disabled) {
+    background-color: var(--primary-dark-blue);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-primary:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.btn-success {
+    background-color: var(--success-green);
+    color: var(--white);
+    width: auto;
+}
+
+.btn-success:hover:not(:disabled) {
+    background-color: #059669;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-link {
+    background-color: transparent;
+    color: var(--primary-blue);
+    padding: 11px 0;
+}
+
+.btn-link:hover {
+    color: var(--primary-dark-blue);
+    background-color: transparent;
+}
+
+@media (max-width: 480px) {
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* =====================================================
+   SUCCESS MODAL
+===================================================== */
+
+.success-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.success-modal.show {
+    display: flex;
+}
+
+.success-content {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.success-icon {
+    font-size: 64px;
+    color: var(--success-green);
+    margin-bottom: 20px;
+}
+
+.success-content h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.success-content p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.confirmation-number {
+    font-size: 13px;
+    color: var(--text-dark);
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-gray);
+}
+
+.confirmation-number strong {
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+.success-content .btn {
+    margin-top: 25px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+@media (max-width: 768px) {
+    .appointment-container {
+        padding: 15px;
+    }
+
+    .content-wrapper {
+        padding: 25px;
+    }
+
+    .step-title {
+        font-size: 22px;
+    }
+
+    .calendar-legend {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .appointment-container {
+        padding: 12px;
+    }
+
+    .content-wrapper {
+        padding: 18px;
+        border-radius: 6px;
+    }
+
+    .step-title {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .step-subtitle {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
+    .services-grid {
+        gap: 12px;
+    }
+
+    .service-card {
+        padding: 18px;
+    }
+
+    .calendar-container {
+        padding: 18px;
+    }
+
+    .time-slots-grid {
+        gap: 8px;
+    }
+
+    .time-slot {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .calendar-date {
+        font-size: 12px;
+    }
+
+    .weekday {
+        font-size: 11px;
+    }
+
+    .review-section {
+        padding: 18px;
+    }
+
+    .review-item {
+        gap: 12px;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+    }
+
+    .review-icon {
+        font-size: 18px;
+    }
+
+    .review-value {
+        font-size: 14px;
+    }
+
+    .important-notice {
+        padding: 12px;
+        font-size: 12px;
+    }
+
+    .important-notice i {
+        font-size: 16px;
+    }
+
+    .success-content {
+        padding: 30px 20px;
+        margin: 20px;
+    }
+
+    .success-icon {
+        font-size: 48px;
+    }
+
+    .success-content h2 {
+        font-size: 20px;
+    }
+}
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--primary-blue);
+    outline-offset: 2px;
+}
+
+.btn:focus {
+    outline: 2px solid var(--primary-blue);
+    outline-offset: 2px;
+}
+
+/* =====================================================
+   UTILITY CLASSES
+===================================================== */
+
+.d-none {
+    display: none;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}

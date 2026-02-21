@@ -1,0 +1,519 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!-- utf-8 works for most cases --><meta name="viewport" content="width=device-width"><!-- Forcing initial-scale shouldn't be necessary --><meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- Use the latest (edge) version of IE rendering engine -->
+<title></title>
+<!-- The title tag shows in email notifications, like Android 4.4. --><!-- Web Font / @font-face : BEGIN --><!-- NOTE: If web fonts are not required, lines 9 - 26 can be safely removed. --><!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. --><!--[if !mso]>
+<style type="text/css">@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900');
+</style>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800"   target="_blank" rel="stylesheet" target="_blank" type="text/css" /><!--<![endif]--><!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ --><!-- Web Font / @font-face : END --><!-- CSS Reset -->
+<style type="text/css">/* What it does: Remove spaces around the email design added by some email clients. */
+/* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
+
+html, body {
+	margin: 0 auto !important;
+	padding: 0 !important;
+	height: 100% !important;
+	width: 100% !important;
+}
+/* What it does: Stops email clients resizing small text. */
+* {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+/* What is does: Centers email on Android 4.4 */
+div[style*="margin: 14px 0"] {
+	margin: 0 !important;
+}
+/* What it does: Stops Outlook from adding extra spacing to tables. */
+table, td {
+	mso-table-lspace: 0pt !important;
+	mso-table-rspace: 0pt !important;
+}
+/* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+table {
+	border-spacing: 0 !important;
+	border-collapse: collapse !important;
+	table-layout: fixed !important;
+	Margin: 0 auto !important;
+}
+table table table {
+	table-layout: auto;
+/* What it does: Uses a better rendering method when resizing images in IE. */
+img {
+	-ms-interpolation-mode: bicubic;
+}
+/* What it does: A work-around for iOS meddling in triggered links. */
+.mobile-link--footer a, a[x-apple-data-detectors] {
+	color: inherit !important;
+	text-decoration: underline !important;
+}
+</style>
+<!-- Progressive Enhancements -->
+<style type="text/css">/* What it does: Hover styles for buttons */
+
+
+
+
+
+.button-td, .button-a {
+	transition: all 100ms ease-in;
+}
+.button-td:hover, .button-a:hover {
+	background: #454e5f !important;
+	border-color: #454e5f !important;
+}
+.specialtd {
+	padding: 0 10px 0 30px;
+	width: 10%;
+	text-align: center;
+}
+.desktopoff {
+	display: none!important;
+}
+.desktopon {
+	display: table-row!important;
+}
+.imgbx img {
+	display: inline-block!important;
+}
+.imgbx span {
+	display: inline-block!important;
+	margin: 0 20px!important;
+	width: 70%!important;
+}
+.full-width {
+	margin-left: 30px;
+}
+.border-r {
+	border-right: 1px solid #dddddd;
+	padding-right: 15px;
+}
+.w60{
+	width: 65%;
+	display: inline-block;
+}
+.w40{
+	width: 45%;
+	display: inline-block;
+}
+
+.d-flex{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.textblock, .imgblock {
+	box-sizing: border-box;
+}
+.smallcircle:last-child{
+	margin-bottom: 40px!important;
+
+}
+.smallcircle{
+	position: relative;
+	padding:0!important;
+	padding-left:80px!important;
+	padding-right:20px!important;
+	min-height: 50px;
+	margin:0!important;
+	font-size: 13px!important;
+}
+.smallcircle:before{
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	background: #DDDDDD;
+	border-radius: 100%;
+	content:'';
+	left: 40px;
+	top:8px
+}
+.smallcircle:after{
+	position: absolute;
+	width: 1px;
+	height: 50px;
+	background: #DDDDDD;
+	border-radius: 100%;
+	content:'';
+	left: 43px;
+	top:8px
+}
+p.smallcircle:nth-child(5):after{
+	display: none!important;
+}
+
+.smallcircle:nth-child(3):before, .smallcircle:nth-child(5):before{
+	background:#7cb445!important;
+	z-index: 99999999
+}
+
+.linespace br{display: none!important;}
+	/* Media Queries */
+	@media screen and (max-width: 600px) {
+.w60{
+	width: 100%;
+	display: inline-block;
+}
+.w40{
+	width: 100%;
+	display: inline-block;
+}
+.border-r {
+	border-right: 0px solid #dddddd;
+	padding-right: 0px;
+}
+.mobileoff {
+	display: none!important;
+}
+.img-container {
+	width: 100%;
+	height: auto!important;
+}
+.full-width.ml-0 {
+	margin-left: 0!important;
+}
+.imgbx img {
+	display: block!important;
+}
+.imgbx span {
+	display: block!important;
+	margin: 10px 0px!important;
+	width: 100%!important;
+}
+.full-width {
+	width: 100%;
+	height: auto!important;
+}
+.desktopoff {
+	display: grid!important;
+}
+.desktopon {
+	display: none!important;
+}
+.gridbox {
+	display: grid;
+}
+.gridimg {
+	width: 100%;
+	height: auto!important;
+}
+.imgbanner {
+	max-height: inherit;
+	height: auto;
+}
+.imgbanner2{
+	
+	width: 100% !important;
+	margin: auto !important;
+	max-width: 100%!important;
+	max-height: inherit;
+	height: auto;
+	
+}
+.padd30 {
+	padding: 0 30px 20px!important;
+}
+.email-container {
+	width: 100% !important;
+	margin: auto !important;
+	max-width: 100%!important;
+}
+/* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+.fluid, .fluid-centered {
+	max-width: 100% !important;
+	height: auto !important;
+	Margin-left: auto !important;
+	Margin-right: auto !important;
+}
+/* And center justify these ones. */
+.fluid-centered {
+	Margin-left: auto !important;
+	Margin-right: auto !important;
+}
+/* What it does: Forces table cells into full-width rows. */
+.stack-column, .stack-column-center {
+	display: block !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	direction: ltr !important;
+}
+/* And center justify these ones. */
+.stack-column-center {
+	text-align: center !important;
+}
+/* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+.center-on-narrow {
+	text-align: center !important;
+	display: block !important;
+	Margin-left: auto !important;
+	Margin-right: auto !important;
+	float: none !important;
+}
+table.center-on-narrow {
+	display: inline-block !important;
+}
+.right2 {
+	text-align: right!important;
+	display: block !important;
+	Margin-left: 0px !important;
+	Margin-right: auto !important;
+	float: right!important;
+}
+.text-center , .text-center p{
+		text-align: center!important;
+	}
+.specialtd {
+	padding: 0 10px!important;
+	width: 20%;
+}
+.specialtd+td {
+	padding: 0 20px 0 10px!important;
+	width: 80%!important;
+}
+.webopti {
+	image-rendering: -webkit-optimize-contrast;
+}
+.padding1015 {
+	padding: 10px 15px 0;
+}
+.f13 {
+	font-size: 13px!important;
+}
+.margin-l0 {
+	margin-left: 0!important;
+}
+.sm-padding {
+	padding: 10px 0!important;
+}
+.pdbtm{
+  padding-bottom: 15px;
+} 
+.d-flex{
+	display: block;
+}
+.textblock.fl-left{
+	margin-bottom: 25px;
+}
+.imgblock.fl-right{
+	margin-bottom: 0px;
+}
+.textblock.fl-right{
+	margin-bottom: 25px;
+	padding: 0 30px;
+}
+.imgblock.fl-right{
+	margin-bottom: 0px;
+}
+.d-flex{
+	padding: 0!important;
+}
+.imgblock.fl-right,.textblock.fl-left,.textblock.fl-right{
+	text-align: center!important;
+}
+.textblock.fl-left h3{
+	font-size: 18px!important;line-height: 20px!important;margin: 0!important;
+}
+.textblock.fl-right h3{
+	font-size: 24px!important;line-height: 30px;margin: 0!important;
+}	
+.textmob{
+	font-size: 18px!important;padding: 50px 30px 5px!important;
+}
+.mt150{margin-top: 175px;}
+.featable p{display: block!important; text-align: center!important;}
+.featable img{display: table!important; margin:0 auto 15px!important}
+.featable p .smimg{margin: 0!important;}
+.featable p {padding-top:0!important; font-size: 14px!important; margin-top:10px}
+.featable .gridbox td{padding-top:5px!important; padding-bottom: 10px!important;}
+p.heading2{padding:30px 0px 10px 20px!important;text-align: center!important;}
+p.heading2 br{display: none!important;}
+.textblock {text-align: center!important;}.textblock h3{text-align: center!important;}
+.textblock h3+a{margin-left:auto!important; margin-right:auto!important}
+.padding-0{padding-top:0!important}
+ a.smimg{margin-right:0!important}
+.mt-0{margin-top: 0!important;}
+.pd20{padding:20px!important}
+.bgnone{background: none!important;}
+.smallcircle{min-height: inherit!important;padding-left: 60px!important;padding-bottom:30px!important;padding-right:15px!important}
+.smallcircle:after{display: none!important;}
+.linespace br{display: block!important;}
+.pd20.bgnone{margin-top:25px!important}
+.pad-left0{padding:0 20px 30px!important;}
+.imgh{width: 60%!important; margin-top:30px!important}
+}
+</style>
+<style type="text/css">:root {
+	color-scheme: light only;
+}
+table, a, p, div {
+	font-family: 'Montserrat', sans-serif
+}
+</style>
+<center style="width: 100%; background: #f2f2fa;"><!-- Visually Hidden Preheader Text : BEGIN -->
+<div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: 'Montserrat', sans-serif;">STP Trading wants to get in touch with you.</div>
+<!-- Visually Hidden Preheader Text : END --><!-- Email Header : BEGIN -->
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="email-container mobileoff" style="margin: auto;">
+	<tbody>
+		<tr>
+			<td style="padding: 10px 0; text-align: center">&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="email-container" style="margin: auto; border-radius: 0px; max-width: 680px;" width="100%"><!-- Hero Image, Flush : BEGIN -->
+	<tbody><!-- Thumbnail Left, Text Right : BEGIN -->
+		<tr>
+			<td align="center" dir="ltr" style="padding: 10px 10px 10px 10px; background-color: #ffffff;" valign="top" width="100%">
+			<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody>
+					<tr><!-- Column : BEGIN -->
+						<td width="40%">
+						<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tbody>
+								<tr>
+									<td class="sm-padding" dir="ltr" style="padding: 10px 15px; text-align: left; font-family: 'Khula', sans-serif; font-size: 18px; font-weight: 600; mso-height-rule: exactly; line-height: 20px; color: #2a2a2a;" valign="top"><a href="https://stptrading.io/" target="_blank"><img alt="STP Trading" height="60" src="https://stptrading.io/emails/img/stptrading.png" style=" image-rendering: -webkit-optimize-contrast" /></a></td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+						<!-- Column : END --><!-- Column : BEGIN -->
+						<td width="50%">
+						<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tbody>
+								<tr>
+									<td class="sm-padding" dir="ltr" style="font-family: 'Khula', sans-serif;font-size: 15px;mso-height-rule: exactly;padding: 10px 15px!important;text-align: right;" valign="top"><img height="10px" src="https://stptrading.io/emails/img/stpslogan.png" width="250" /></td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+						<!-- Column : END -->
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!-- Email Header : END --><!-- Email Body : BEGIN -->
+
+<table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="email-container" style="margin: auto; border-radius: 0px; max-width: 100%; background:#ffffff" width="680px"><!-- Hero Image, Flush : BEGIN -->
+	<tbody><!-- Thumbnail Left, Text Right : BEGIN --><!--Column Text : BEGIN --><!--Column Text : BEGIN -->
+		<tr class="gridbox">
+			<td align="left" style="padding:20px 30px 50px">
+			<div style="color: #5C5C5C; line-height: 28px;">
+			<h3 style="color:#000000;font-weight: 600;">Dear&nbsp; {{first_name}},</h3>
+
+			<p>&nbsp;</p>
+
+			<p><span style="font-size:16px;">We are pleased to inform you that your recent deposit has been successfully processed and credited to your trading account.</span></p>
+
+			<p><span style="font-size:16px;">You may now start trading immediately. If you have any questions or need assistance, our support team is available 24/7.</span></p>
+
+			<p><span style="font-size:16px;">Thank you for choosing STP Trading.</span></p>
+
+			<p><span style="font-size:16px;">Best regards,<br />
+			STP Trading Team</span></p>
+
+			<p>&nbsp;</p>
+
+			<p>&nbsp;</p>
+			</div>
+			</td>
+		</tr>
+		<!-- Hero Image, Flush : END -->
+	</tbody>
+</table>
+
+<table align="center" bgcolor="#f2f2fa" border="0" cellpadding="0" cellspacing="0" class="email-container" style="margin: auto; max-width: 680px;" width="100%">
+	<tbody>
+		<tr>
+			<td height="20">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="center" dir="ltr" style="padding: 0px 10px 10px 10px;" valign="top" width="100%">
+			<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody>
+					<tr class="gridbox-ftr"><!-- Column : BEGIN -->
+						<td class="stack-column-center  email-container">
+						<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tbody>
+								<tr>
+									<td class="text-center" dir="ltr" valign="top">
+									<p style=" text-align: left; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 400; mso-height-rule: exactly; line-height: 24px; color: #454e5f; padding:10px 0; margin:0;"><a href="https://stptrading.io/" target="_blank"><img alt="STP Trading" src="https://stptrading.io/emails/img/stptrading-dark.png" width="135" /></a></p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+						<!-- Column : END --><!-- Column : BEGIN -->
+						<td class="stack-column-center email-container">
+						<table align="right" border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tbody>
+								<tr>
+									<td class="text-center" dir="ltr" valign="top">
+									<p style=" text-align: right; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 400; mso-height-rule: exactly; line-height: 24px; color: #454e5f; padding:10px 0; margin:0;"><a href="https://stptrading.io/" target="_blank"><img alt="STP Trading" src="https://stptrading.io/emails/img/visit-btn.png" width="135" /></a></p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+						<!-- Column : END -->
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td style="padding: 10px 10px;width: 100%;font-size: 10px; font-family: 'Montserrat', sans-serif; font-weight: 300; mso-height-rule: exactly; line-height:16px; text-align: left; color: #666666; text-align: justify;">
+			<p>STP Trading is the trading name of STP Trading Ltd and STP Global Ltd. This website is owned and operated by STP Securities Ltd.</p>
+
+			<p>STP Global LTD with Firm Registered Number: HY00523403, is Authorized and Regulated by Comoros Mwali International Service Authority (M.I.S.A.), Autonomous Island of Mwali (Moh&eacute;li), Comoros Union,&nbsp;East&nbsp;Africa. with License Number: T2023280</p>
+
+			<p>STP Trading Ltd is registered in Saint Lucia (Registration Number. 2023-00081), by the Registrar of International Business Companies with its company registered address at Ground Floor, The Sotheby Building, Rodney Village, Rodney Bay. Gros-Islet,&nbsp;Saint&nbsp;Lucia.</p>
+
+			<p class="center-on-narrow">The services of STP Trading and information on this website are not aimed at residents of certain jurisdictions and are not intended for distribution to, or use by, any person or entity in any jurisdiction or country where such distribution or use may be contrary to any of the laws or regulations of that jurisdiction. The products and services described herein may not be available in all countries and jurisdictions. Those who access this site do so on their own initiative and are therefore responsible for compliance with applicable local laws and regulations. The release does not constitute any invitation or recruitment of business. If you are not sure about your local currency and spot metals trading regulations, then you should leave this site immediately. STP Trading does not offer its services to residents of certain jurisdictions including the USA, North Korea, Sudan, the United Arab Emirates, Canada, the United Kingdom, and Japan.<br />
+			<br />
+			All Clients must be at least 18 years old to use the services of STP Trading.<br />
+			<br />
+			You are strongly advised to obtain independent financial, legal sl and tax advice before proceeding with any currency or spot metals trade. Nothing in this site should be read or construed as constituting advice on the part of STP Trading or any of its affiliates, directors, officers, or employees.<br />
+			<br />
+			Risk Warning: Trading financial products on margin carries a high degree of risk and is not suitable for all investors. Losses can exceed the initial investment. Please ensure you fully understand the risks and take appropriate care to manage your risk. All financial products are very complex instruments and come with a high risk of losing money rapidly due to leverage therefore Losses can exceed the initial investment. Please ensure you fully understand the risks and take appropriate care to manage your risk. Please read our full &lsquo;Risk Disclosure Notice&#39; <a href="https://stptrading.io/risk-disclosure.html" style="color:#333333;text-decoration: underline;" target="_blank">Click here</a><br />
+			<br />
+			STP Trading uses cookies to enhance your experience on our website. By staying on our website you agree to our use of cookies. You can access our Cookie Policy <a href="https://stptrading.io/cookies.html" style="color:#333333;text-decoration: underline;" target="_blank">Click here</a>.</p>
+			</td>
+		</tr>
+		<tr class="gridbox-ftr"><!-- Column : BEGIN -->
+			<td class="stack-column-center  email-container">
+			<table border="0" cellpadding="0" cellspacing="0" style="width:100%" width="100%">
+				<tbody>
+					<tr class="gridbox-ftr"><!-- Column : BEGIN --><!-- Column : END --><!-- Column : BEGIN -->
+						<td class="stack-column-center">
+						<table align="right" border="0" cellpadding="5" cellspacing="0" class="center-on-narrow">
+							<tbody>
+								<tr>
+									<td align="center"><a href="#" target="_blank"><img alt="Instagram" height="20" src="https://stptrading.io/emails/img/instagram-fill.png" style="width: 20px; height: 20px;image-rendering: -webkit-optimize-contrast;" width="20" /></a></td>
+									<td align="center"><a href="#" target="_blank"><img alt="Facebook" height="20" src="https://stptrading.io/emails/img/facebook-fill.png" style="width: 20px; height: 20px;image-rendering: -webkit-optimize-contrast;" width="20" /></a></td>
+									<td align="center"><a href="#" target="_blank"><img alt="Twitter" height="20" src="https://stptrading.io/emails/img/twitter-fill.png" style="width: 20px; height: 20px;image-rendering: -webkit-optimize-contrast;" width="20" /></a></td>
+									<td align="center"><a href="#" target="_blank"><img alt="Twitter" height="20" src="https://stptrading.io/emails/img/youtube-fill.png" style="width: 20px; height: 20px;image-rendering: -webkit-optimize-contrast;" width="20" /></a></td>
+									<td align="center"><a href="#" target="_blank"><img alt="Linkedin" height="20" src="https://stptrading.io/emails/img/linkedin-box-fill.png" style="width: 20px; height: 20px;image-rendering: -webkit-optimize-contrast;" width="20" /></a></td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+						<!-- Column : END -->
+					</tr>
+					<!-- Column : END -->
+					<tr>
+						<td height="40">&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- Email Footer : END -->
+
+			<div id="__genieContainer" style="all: initial; display: none;">&nbsp;</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</center>

@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Volt Funded</title>
+<meta charset="utf-8">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<style type="text/css">
+/* CLIENT-SPECIFIC STYLES */
+#outlook a {
+	padding: 0;
+} /* Force Outlook to provide a "view in browser" message */
+.ReadMsgBody {
+	width: 100%;
+}
+.ExternalClass {
+	width: 100%;
+} /* Force Hotmail to display emails at full width */
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+	line-height: 100%;
+} /* Force Hotmail to display normal line spacing */
+body, table, td, a {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+} /* Prevent WebKit and Windows mobile changing default text sizes */
+table, td {
+	mso-table-lspace: 0pt;
+	mso-table-rspace: 0pt;
+} /* Remove spacing between tables in Outlook 2007 and up */
+img {
+	-ms-interpolation-mode: bicubic;
+} /* Allow smoother rendering of resized image in Internet Explorer */
+/* RESET STYLES */
+body {
+	height: 100% !important;
+	margin: 0;
+	padding: 0;
+	width: 100% !important;
+}
+img {
+	border: 0;
+	height: auto;
+	line-height: 100%;
+	outline: none;
+	text-decoration: none;
+}
+table {
+	border-collapse: collapse !important;
+}
+/* iOS BLUE LINKS */
+.appleText a {
+	color: #ffffff;
+	text-decoration: none;
+}
+.appleFooter a {
+	color: #9FA0A1;
+	text-decoration: none;
+}
+
+/* MOBILE STYLES */
+@media screen and (max-width: 640px) {
+/* SWAP IMAGES */
+
+.swap-content {
+	width: auto !important;
+	display: block !important;
+	margin: 0;
+	padding: 0;
+	overflow: hidden !important;
+	max-height: inherit !important;
+}
+/* TABLES */
+
+.fullWidth {
+	width: 100% !important;
+}
+.border {
+	width: 90% !important;
+}
+.border-sm {
+	width: 93% !important;
+}
+.stack-column {
+	display: block !important;
+	width: 100% !important;
+	max-width: 100% !important;
+}
+/* CARDS */
+.card {
+	min-height: auto !important;
+}
+	
+/* HIDE CONTENT ON MOBILE */
+.hide {
+	display: none !important;
+}
+	
+/* FOOTER */
+.footer-logo {
+	margin: 0 auto 26px !important;
+}
+	
+/* ADJUST */
+.center {
+	text-align: center !important;
+	margin: 0 auto !important;
+}
+.heading {
+	font-size: 23px !important;
+	line-height:27px !important;
+}
+.title {
+	font-size: 17px !important;
+	line-height: 23px !important;
+}
+}
+
+@media screen and (max-width: 375px) {
+.heading {
+	font-size: 22px !important;
+	line-height: 26px !important;
+}
+.title {
+	font-size: 16px !important;
+	line-height: 22px !important;
+	}
+.banner {
+	padding: 50px 25px 50px !important;
+}
+}
+@media (prefers-color-scheme: dark) {
+
+body {
+    background-color:#0F1114 !important;
+  }
+  
+ /* body, table, td, div {
+    background-color:#0F1114 !important;
+  }  */
+
+  p, span, a, td {
+    color:#ffffff !important;
+  }
+
+  .card-bg, .card {
+    background-color:#2F353F !important;
+  }
+
+  .cta-bg {
+    background-color:#00E5FF !important;
+    color:#0F1114 !important;
+  }
+
+  img {
+    mix-blend-mode: normal !important;
+    color:#ffffff !important;
+  }
+  .text-dark{color: :#0F1114 }
+  .revert	{color: #0F1114 !important; }
+  .revert a	{color: #0F1114 !important; }
+
+}
+
+[data-ogsc] .card,
+[data-ogsc] .card-bg {
+  background-color:#2F353F !important;
+}
+
+</style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #0F1114;">
+<div style="text-align:center; background-color: #0F1114;"> 
+  
+  <!-- HACK TO HIDE UNWANTED PREVIEW TEXT -->
+  <div style="display: none; max-height: 0px; overflow: hidden;"> &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj; </div>
+  <!-- / HACK TO HIDE UNWANTED PREVIEW TEXT --> 
+  
+  <!-- HEADER -->
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+      <td align="center">
+		  <div align="center">
+          <table width="580" border="0" cellpadding="0" cellspacing="0" class="border">
+            <tr>
+              <td height="12"></td>
+            </tr>
+            <tr>
+              <td align="center" valign="top">
+				<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tr align="center">
+                    <td width="50%" align="left"><a href="https://www.voltfunded.com" target="_blank" style="text-decoration:none; color:#ffffff;"> <img src="https://cdn.prod.website-files.com/6925c42f4743e50cbbbb7d18/6926cf5552d729a2437d788e_volt-funded.png" width="170" height="22" style="display:block;" border="0" alt="Volt Funded" /> </a></td>
+                    <td width="50%" align="right">
+						
+					<!--BUTTON-->
+                      
+                      <table cellpadding="0" cellspacing="0" border="0" width="88" height="34" style="background-color:transparent;" class="btn">
+                        <tr>
+                          <td align="center" valign="middle" class="revert">
+							  
+							<!--[if mso]>
+							<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml"
+             				xmlns:w="urn:schemas-microsoft-com:office:word"
+								href="https://trade.voltfunded.com"
+								style="height:34px;v-text-anchor:middle;width:88px;"
+								arcsize="50%"  
+								strokecolor="#FFD500"
+								fillcolor="#FFD500">
+							  <w:anchorlock/>
+							  <center style="color:#0F1114;font-family:Helvetica, Arial, sans-serif;font-size:12px;font-weight:bold;">
+								LOGIN
+							  </center>
+							</v:roundrect>
+							<![endif]-->
+
+							<![if !mso]><!-- -->
+							<a href="https://trade.voltfunded.com" target="_blank" 
+							   style="
+								 background:#FFD500;
+								 border-radius:17px;
+								 color:#0F1114;
+								 display:inline-block;
+								 font-family:Helvetica, Arial, sans-serif;
+								 font-size:12px;
+								 font-weight:bold;
+								 line-height:34px;
+								 text-align:center;
+								 text-decoration:none;
+								 width:88px;">
+							  <strong>LOGIN</strong>
+							</a>
+							<!--<![endif]-->
+						  </td>
+                        </tr>
+                      </table>
+                      
+                      <!--/ BUTTON-->
+						
+					  </td>
+                  </tr>
+                </table>
+				</td>
+            </tr>
+            <tr>
+              <td height="12"></td>
+            </tr>
+          </table>
+        </div></td>
+    </tr>
+  </table>
+  <!-- / HEADER --> 
+  
+  <!-- BODY -->
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+      <td align="center" valign="top">
+		  
+		<!-- BANNER -->
+        
+        <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" class="border-sm">
+          <tr>
+            <td align="center">
+				<!--[if mso]>
+				<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml"
+             	xmlns:w="urn:schemas-microsoft-com:office:word"
+				arcsize="6%"               
+				fill="true"
+				stroke="false"
+				style="width:600px;height:190px;"> 
+				<v:fill type="frame"
+				src="https://cdn.prod.website-files.com/6925c42f4743e50cbbbb7d18/6926cf5615dd7a3d72d87f68_hero.jpg"
+				color="#2F353F" />
+				<v:textbox inset="0,0,0,0">
+				<![endif]-->
+				
+              <div style="
+				background-color:#2F353F; 
+				background-image:url('https://cdn.prod.website-files.com/6925c42f4743e50cbbbb7d18/6926cf5615dd7a3d72d87f68_hero.jpg');
+				background-size:cover !important;
+				background-position:center top;
+				border-radius:20px;
+				max-width:600px;
+				height:auto !important;
+				min-height:190px;
+				margin:0 auto;
+				padding:0;
+				">
+				 <!-- ****** PLEASE ADJUST HEIGHT/MIN-HEIGHT WITHIN THE VML AND CSS ABOVE, TO FIT TEXT LENGTH ******* -->
+				<table cellspacing="0" cellpadding="0" border="0" width="100%">
+				  <tr>
+					<td align="center" valign="middle" style="padding:60px 30px 70px;" class="banner">
+						<h2 style="color:#ffffff;font-family: Helvetica, Arial, sans-serif;font-size:24px;line-height:28px;mso-line-height-rule:exactly;margin:0 0 10px;" class="heading"> CONGRATULATIONS!</h2>
+                		<p style="color:#ffffff;font-family: Helvetica, Arial, sans-serif;font-size:15px;line-height:21px;mso-line-height-rule:exactly;margin:0;"> You are one step closer to a funded account </p>
+					</td>
+				  </tr>
+				 </table>  
+              </div>
+              
+              <!--[if mso]>
+				  </v:textbox>
+				  </v:roundrect>
+				  <![endif]-->
+			</td>
+          </tr>
+        </table>
+        
+        <!-- /BANNER --> 
+        
+        <!-- INTRO -->
+        
+        <table role="presentation" width="570" border="0" cellspacing="0" cellpadding="0" class="border">
+          <tr>
+            <td height="30"></td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif; color: #ffffff; font-size:18px; line-height:24px; mso-line-height-rule:exactly;" class="title"><strong>Hi {{first_name}},</strong></td>
+          </tr>
+          <tr>
+            <td height="15"></td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif; font-size:15px; color: #ffffff; line-height:21px; mso-line-height-rule:exactly;"> Congratulations on passing an <span style="color:#00E5FF;" class="highlight">Evaluation Challenge</span>. Your performance stands out and we are excited to see if we can offer you a Funded Account. </td>
+          </tr>
+		  <tr>
+			<td height="20"></td>
+		  </tr>
+		  <tr>
+			<td height="5" class="hide"></td>
+		  </tr>
+		  <tr>
+			  <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif; font-size:15px; color: #ffffff; line-height:21px; mso-line-height-rule:exactly;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </td>
+		  </tr>
+		  <tr>
+            <td height="30"></td>
+          </tr>
+		  <tr>
+            <td height="10" class="hide"></td>
+          </tr>
+        </table>
+        
+        <!-- / INTRO --> 
+        
+         <!-- 3 CARD BLOCK -->
+        
+        <table role="presentation" width="570" border="0" cellspacing="0" cellpadding="0" class="border">
+          <tr>
+            <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif; color: #ffffff; font-size:18px; line-height:24px; mso-line-height-rule:exactly;" class="title"><strong>Next steps</strong></td>
+          </tr>
+          <tr>
+            <td height="20"></td>
+          </tr>
+		  <tr>
+            <td height="10" class="hide"></td>
+          </tr>
+        </table>
+        
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="width:600px;" class="border-sm">
+          <tr> 
+            
+            <!-- CARD 1 -->
+            <td class="stack-column" width="33.33%" style="padding:5px;" valign="top">
+				<!--[if mso]>
+				<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml"
+             	xmlns:w="urn:schemas-microsoft-com:office:word"
+				arcsize="16%"
+				fill="true"
+				stroke="false"
+				style="width:200px;height:160px;">
+				<v:fill color="#2F353F"/>
+				<v:textbox inset="0,0,0,0">
+				<![endif]-->
+              
+              <div style="
+				min-height:160px;
+				height:auto !important;
+				box-sizing:border-box;
+				background:#2F353F;
+				border-radius:16px;
+				padding:0;
+				font-family:Helvetica, Arial, sans-serif;
+				text-align:center;
+				" class="card">
+				<table cellspacing="0" cellpadding="0" border="0" width="100%">
+				  <tr>
+					<td style="padding:20px 15px;
+					
+					
+					">
+						<p style="font-family: Helvetica, Arial, sans-serif; font-size:22px; line-height:28px; color: #00e5ff !important;;margin:0 0 8px;" class="highlight"><strong>01</strong></p>
+                		<p style="margin:0; font-family: Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; mso-line-height-rule:exactly; color:#FFFFFF"> We will review your account. </p>
+					</td>
+				  </tr>
+				 </table>       
+              </div>
+              
+              <!--[if mso]>
+				</v:textbox>
+				</v:roundrect>
+				<![endif]-->
+			</td>
+            
+            <!-- CARD 2 -->
+            <td class="stack-column" width="33.33%" style="padding:5px;" valign="top">
+				<!--[if mso]>
+				<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml"
+             	xmlns:w="urn:schemas-microsoft-com:office:word"
+				arcsize="16%"
+				fill="true"
+				stroke="false"
+				style="width:200px;height:160px;">
+				<v:fill color="#2F353F"/>
+				<v:textbox inset="0,0,0,0">
+				<![endif]-->
+              
+              <div style="
+				min-height:160px; 
+				height:auto !important;
+				box-sizing:border-box;
+				background:#2F353F;
+				border-radius:16px;
+				padding:0;
+				font-family:Helvetica, Arial, sans-serif;
+				text-align:center;
+				" class="card">
+				  <table cellspacing="0" cellpadding="0" border="0" width="100%">
+				    <tr>
+					  <td style="padding:20px 15px;">
+						<p style="font-family: Helvetica, Arial, sans-serif; font-size:22px; line-height:28px; color: #00e5ff!important;;margin:0 0 8px;" class="highlight"><strong>02</strong></p>
+                		<p style="margin:0; font-family: Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; mso-line-height-rule:exactly; color:#FFFFFF"> If you qualify, we will share instructions to unlock your Funded Account. </p>
+					  </td>
+				    </tr>
+				 </table>
+                
+              </div>
+              
+              <!--[if mso]>
+				</v:textbox>
+				</v:roundrect>
+				<![endif]--></td>
+            
+            <!-- CARD 3 -->
+            <td class="stack-column" width="33.33%" style="padding:5px;" valign="top">
+				<!--[if mso]>
+				<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml"
+             	xmlns:w="urn:schemas-microsoft-com:office:word"
+				arcsize="16%"
+				fill="true"
+				stroke="false"
+				style="width:200px;height:160px;">
+				<v:fill color="#2F353F"/>
+				<v:textbox inset="0,0,0,0">
+				<![endif]-->
+              
+              <div style="
+				min-height:160px; 
+				height:auto !important;
+				box-sizing:border-box;
+				background:#2F353F;
+				border-radius:16px;
+				padding:0;
+				font-family:Helvetica, Arial, sans-serif;
+				text-align:center;
+				" class="card">
+				<table cellspacing="0" cellpadding="0" border="0" width="100%">
+				  <tr>
+					<td style="padding:20px 15px;">
+						<p style="font-family: Helvetica, Arial, sans-serif; font-size:22px; line-height:28px; color: #00e5ff !important;;margin:0 0 8px;" class="highlight"><strong>03</strong></p>
+                        <p style="margin:0; font-family: Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; mso-line-height-rule:exactly; color:#FFFFFF"> Look for an update email in your inbox. </p>
+					</td>
+				  </tr>
+			    </table>
+                
+              </div>
+              
+              <!--[if mso]>
+			  </v:textbox>
+			  </v:roundrect>
+			  <![endif]-->
+			</td>
+          </tr>
+          <tr>
+            <td height="30"></td>
+          </tr>
+		  <tr>
+            <td height="5" class="hide"></td>
+          </tr>
+        </table>
+  
+  		<!-- / 3 CARD BLOCK -->
+	
+
+  		<!-- 2 CARD BLOCK -->
+		  
+		<table role="presentation" width="570" border="0" cellspacing="0" cellpadding="0" class="border">
+          <tr>
+            <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif; color: #ffffff; font-size:18px; line-height:24px; mso-line-height-rule:exactly;" class="title"><strong>What should you do now</strong></td>
+          </tr>
+          <tr>
+            <td height="20"></td>
+          </tr>
+		  <tr>
+            <td height="10" class="hide"></td>
+          </tr>
+        </table>
+        
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="width:600px;" class="border-sm">
+          <tr> 
+            
+            <!-- CARD 1 -->
+            <td class="stack-column" width="50%" style="width:50%; padding:5px;" valign="top">
+				<!--[if mso]>
+				<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml"
+             	xmlns:w="urn:schemas-microsoft-com:office:word"
+				arcsize="16%"
+				fill="true"
+				stroke="false"
+				style="width:200px;height:120px;">
+				<v:fill color="#2F353F"/>
+				<v:textbox inset="0,0,0,0">
+				<![endif]-->
+              
+              <div style="
+				min-height:120px;
+				height:auto !important;
+				box-sizing:border-box;
+				background:#2F353F;
+				border-radius:16px;
+				padding:0;
+				font-family:Helvetica, Arial, sans-serif;
+				text-align:center;
+				" class="card">
+				<table cellspacing="0" cellpadding="0" border="0" width="100%">
+				  <tr>
+					<td style="padding:20px 15px;">
+						<p style="font-family: Helvetica, Arial, sans-serif; font-size:22px; line-height:28px; color: #00e5ff !important;;margin:0 0 8px;" class="highlight"><strong>01</strong></p>
+                		<p style="margin:0; font-family: Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; mso-line-height-rule:exactly; color:#FFFFFF"> Review the evaluation and programme  <a href="#" target="_blank" style="text-decoration:underline; color:#FFFFFF;">rules</a>. </p>
+					</td>
+				  </tr>
+				</table>
+                
+              </div>
+              
+              <!--[if mso]>
+				</v:textbox>
+				</v:roundrect>
+				<![endif]-->
+			  </td>
+            
+            <!-- CARD 2 -->
+            <td class="stack-column" width="50%" style="width:50%; padding:5px;" valign="top">
+				<!--[if mso]>
+				<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml"
+             	xmlns:w="urn:schemas-microsoft-com:office:word"
+				arcsize="16%"
+				fill="true"
+				stroke="false"
+				style="width:200px;height:120px;">
+				<v:fill color="#2F353F"/>
+				<v:textbox inset="0,0,0,0">
+				<![endif]-->
+              
+              <div style="
+				min-height:120px; 
+				height:auto !important;
+				box-sizing:border-box;
+				background:#2F353F;
+				border-radius:16px;
+				padding:0;
+				font-family:Helvetica, Arial, sans-serif;
+				text-align:center;
+				" class="card">
+				  <table cellspacing="0" cellpadding="0" border="0" width="100%">
+				  <tr>
+					<td style="padding:20px 15px;">
+					   <p style="font-family: Helvetica, Arial, sans-serif; font-size:22px; line-height:28px; color: #00e5ff !important;;margin:0 0 8px;" class="highlight"><strong>02</strong></p>
+                	   <p style="margin:0; font-family: Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; mso-line-height-rule:exactly; color:#FFFFFF"> Amend any positions that are affected by the violation. </p>
+					</td>
+				  </tr>
+				 </table>
+                
+              </div>
+              
+              <!--[if mso]>
+				</v:textbox>
+				</v:roundrect>
+				<![endif]--></td>
+          </tr>
+          <tr>
+            <td height="30"></td>
+          </tr>
+		  <tr>
+            <td height="5" class="hide"></td>
+          </tr>
+        </table>
+  
+  <!-- / 2 CARD BLOCK -->
+		  
+  <!-- CONTENT -->
+		  
+  <table role="presentation" width="570" cellspacing="0" cellpadding="0" border="0" class="border">
+	<tr>
+      <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif; font-size:15px; color: #ffffff; line-height:21px; mso-line-height-rule:exactly;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </td>
+    </tr>
+	<tr>
+       <td height="25"></td>
+    </tr>
+    <tr>
+       <td height="5" class="hide"></td>
+    </tr>
+	<tr>
+      <td>
+
+		<!-- Bullet 1 -->
+		<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+		  <tr>
+			<td valign="top" width="16" style="font-family: Helvetica, Arial, sans-serif; font-size:15px; color: #ffffff; line-height:21px; mso-line-height-rule:exactly;">•</td>
+			<td valign="top" style="font-family: Helvetica, Arial, sans-serif; font-size:15px; color: #ffffff; line-height:21px; mso-line-height-rule:exactly;">
+			  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+			</td>
+		  </tr>
+		</table>
+
+		<!-- Bullet 2 -->
+		<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+		  <tr>
+			<td valign="top" width="16" style="font-family: Helvetica, Arial, sans-serif; font-size:15px; color: #ffffff; line-height:21px; mso-line-height-rule:exactly;">•</td>
+			<td valign="top" style="font-family: Helvetica, Arial, sans-serif; font-size:15px; color: #ffffff; line-height:21px; mso-line-height-rule:exactly;">
+			  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+			</td>
+		  </tr>
+		</table>
+
+		<!-- Bullet 3 -->
+		<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+		  <tr>
+			<td valign="top" width="16" style="font-family: Helvetica, Arial, sans-serif; font-size:15px; color: #ffffff; line-height:21px; mso-line-height-rule:exactly;">•</td>
+			<td valign="top" style="font-family: Helvetica, Arial, sans-serif; font-size:15px; color: #ffffff; line-height:21px; mso-line-height-rule:exactly;">
+			 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+			</td>
+		  </tr>
+		</table>
+		  
+		</td>
+	  </tr>
+	  <tr>
+        <td height="25"></td>
+      </tr>
+      <tr>
+        <td height="5" class="hide"></td>
+      </tr>
+	  <tr>
+      	<td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif; font-size:15px; color: #ffffff; line-height:21px; mso-line-height-rule:exactly;"> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </td>
+      </tr>
+  </table>
+  
+  <!-- / CONTENT -->
+
+  
+  <!-- NEED HELP? -->
+	
+  <table role="presentation" width="600" border="0" cellspacing="0" cellpadding="0" class="border-sm">
+	<tr>
+      <td height="15"></td>
+    </tr>
+	<tr>
+      <td height="11" class="hide"></td>
+    </tr>
+	<tr>
+	  <td>
+		 <img src="https://cdn.prod.website-files.com/6925c42f4743e50cbbbb7d18/6926cf55354f63894dc0727b_contact-1.png" width="76" height="38" style="display:block;margin:0 auto;" border="0" alt="" class="contact" />
+	  </td>
+	</tr>
+    <tr>
+      <td>
+		  <!--[if mso]>
+		  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml"
+          xmlns:w="urn:schemas-microsoft-com:office:word"
+			arcsize="6%" 
+			fillcolor="#00E5FF"
+			style="width:600px;height:185px">
+			<v:textbox inset="0,0,0,0">
+			<![endif]-->
+        
+        <div style="
+			max-width:600px;
+			width:100%;
+			min-height:185px;
+			height:auto !important;
+			background:#00E5FF;
+			border-radius:24px;
+			padding:0;
+			margin:0 auto;
+			text-align:center;
+		">
+			
+		<table role="presentation" width="50%" border="0" cellspacing="0" cellpadding="0" class="border" style="margin:0 auto;">
+		  <tr>
+			<td>
+			  <img src="https://cdn.prod.website-files.com/6925c42f4743e50cbbbb7d18/6926cf556a51f1fea9f7b617_contact-2.png" width="76" height="38" style="display:block;margin:0 auto;" border="0" alt="" class="contact" />
+			</td>
+		  </tr>
+		  <tr>
+            <td height="20"></td>
+          </tr>
+          <tr>
+            <td align="center" valign="top" class="revert" style="font-family: Helvetica, Arial, sans-serif; color: #0F1114; font-size:18px; line-height:24px; mso-line-height-rule:exactly;" class="title"><strong>Need Help?</strong></td>
+          </tr>
+		  <tr>
+            <td height="10"></td>
+          </tr>
+		  <tr>
+            <td align="center" valign="top" class="revert" style="font-family: Helvetica, Arial, sans-serif; color: #0F1114; font-size:15px; line-height:21px; mso-line-height-rule:exactly;">Visit the <a href="https://www.voltfunded.com/help-centre" target="_blank" style="text-decoration:underline; color:#0F1114;!important">Help Centre</a> for quick answers or contact us through your Client Portal.</td>
+          </tr>
+          <tr>
+            <td height="40"></td>
+          </tr>
+		   <tr>
+            <td height="10" class="hide"></td>
+          </tr>
+        </table>
+        </div>
+        
+        <!--[if mso]>
+		</v:textbox>
+		</v:roundrect>
+		<![endif]--></td>
+    </tr>
+  </table>
+	
+  <table width="600" border="0" cellspacing="0" cellpadding="0" class="fullWidth">
+    <tr>
+      <td height="32"></td>
+    </tr>
+    <tr>
+      <td height="13" class="hide"></td>
+    </tr>
+  </table>
+  <!-- / NEED HELP? --> 
+		  
+   </td>
+  </tr>
+</table>
+<!-- / BODY --> 
+  
+  <!-- FOOTER -->
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+      <td align="center" valign="top">
+				
+			  <!-- SOCIAL-->
+              
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" width="570" class="border">
+				  <tr>
+				    <td width="50%" align="left" class="stack-column center">
+					   <a href="https://www.voltfunded.com" target="_blank" style="text-decoration:none; color:#ffffff;"> <img src="https://cdn.prod.website-files.com/6925c42f4743e50cbbbb7d18/6926cf5552d729a2437d788e_volt-funded.png" width="170" height="22" style="display:block;" border="0" alt="Volt Funded" class="footer-logo"/> </a>
+				    </td>
+                    <td width="50%" align="right" class="stack-column center">
+						
+					  <table cellpadding="0" cellspacing="0" border="0" class="center">
+                        <tr>
+                          <td valign="top" align="center"><a href="#" target="_blank"> <img src="https://cdn.prod.website-files.com/6925c42f4743e50cbbbb7d18/6926cf55366b970a6274f31b_facebook.png" width="18" height="18" style="display: block; border: 0; margin:0 5px" alt="Facebook" class="social-img"> </a></td>
+                          <td valign="top" align="center"><a href="#" target="_blank"> <img src="https://cdn.prod.website-files.com/6925c42f4743e50cbbbb7d18/6926cf55f6f54811d87067b4_youtube.png" width="18" height="18" style="display: block; border: 0; margin:0 5px;" alt="Youtube" class="social-img"> </a></td>
+                          <td valign="top" align="center"><a href="#" target="_blank"> <img src="https://cdn.prod.website-files.com/6925c42f4743e50cbbbb7d18/6926cf55294a7739d45dff0d_x.png" width="18" height="18" style="display: block; border: 0; margin:0 5px;" alt="X" class="social-img"> </a></td>
+                          <td valign="top" align="center"><a href="#" target="_blank"> <img src="https://cdn.prod.website-files.com/6925c42f4743e50cbbbb7d18/6926cf55ddb134a4059baa90_instagram.png" width="18" height="18" alt="Instagram" style="display: block; border: 0; margin:0 5px" class="social-img"> </a></td>
+					  	  <td valign="top" align="center"><a href="#" target="_blank"> <img src="https://cdn.prod.website-files.com/6925c42f4743e50cbbbb7d18/6926cf552364555f3305cee5_telegram.png" width="18" height="18" alt="Telegram" style="display: block; border: 0; margin:0 5px" class="social-img"> </a></td>
+						  <td valign="top" align="center"><a href="#" target="_blank"> <img src="https://cdn.prod.website-files.com/6925c42f4743e50cbbbb7d18/6926cf55e74b0e136446b93d_vk.png" width="18" height="18" alt="VK" style="display: none; border: 0; margin:0 5px" class="social-img"> </a></td>
+						  <td valign="top" align="center"><a href="#" target="_blank"> <img src="https://cdn.prod.website-files.com/6925c42f4743e50cbbbb7d18/6926cf5504f782521cc356aa_linkedin.png" width="18" height="18" alt="LinkedIn" style="display: none; border: 0; margin:0 5px" class="social-img"> </a></td>
+						  <td valign="top" align="center"><a href="#" target="_blank"> <img src="https://cdn.prod.website-files.com/6925c42f4743e50cbbbb7d18/6926cf556c90ba09039d8161_ok-ru.png" width="18" height="18" alt="OK" style="display: none; border: 0; margin:0 5px" class="social-img"> </a></td>
+						  <td valign="top" align="center"><a href="#" target="_blank"> <img src="https://cdn.prod.website-files.com/6925c42f4743e50cbbbb7d18/6926cf5559288dde5d3d897a_tiktok.png" width="18" height="18" alt="Tiktok" style="display: none; border: 0; margin:0 5px" class="social-img"> </a></td>
+                        </tr>
+                      </table>
+                
+					</td>
+                </tr>
+                <tr>
+                  <td height="30"></td>
+                </tr>
+                <tr>
+                  <td height="10" class="hide"></td>
+                </tr>
+              </table>
+        
+        <!-- T&Cs -->
+        
+        <table role="presentation" width="570" border="0" cellpadding="0" cellspacing="0" class="border">
+          <tr>
+            <td align="left" style="font-family: Helvetica, Arial, sans-serif; font-size:12px; color: #9FA0A1; line-height: 18px;mso-line-height-rule:exactly;"> This email and any attachments are confidential and intended solely for the recipient(s). Unauthorized use, disclosure, copying, or distribution of this email is strictly prohibited and may be unlawful. This email does not constitute financial advice or an offer of financial services. Volt Funded operates exclusively in a simulated environment for educational purposes. Please review our Terms before engaging with our services. </td>
+          </tr>
+          <tr>
+            <td height="15"></td>
+          </tr>
+          <tr>
+            <td align="left" style="font-family: Helvetica, Arial, sans-serif; font-size:12px; color: #9FA0A1; line-height: 18px; mso-line-height-rule:exactly;"> Volt Funded is a service operated by Parlance Trading Ltd, Bonovo Road – Fomboni, Island of Mohéli – Comoros Union, incorporated under registered number HY00423015 and licensed by the Mwali International Services Authority as an International Brokerage and Clearing Company under licence number T2023236. </td>
+          </tr>
+          <tr>
+            <td height="40"></td>
+          </tr>
+        </table>
+        
+        <!-- / T&Cs --> 
+        
+        <!-- FIX FOR GMAIL -->
+		  
+		  <div style="display:none; mso-hide:all;">&nbsp;</div>
+		  
+        <!-- / FIX FOR GMAIL -->
+		  
+		</td>
+    </tr>
+  </table>
+  <!-- / FOOTER --> 
+		
+</div>
+</body>
+</html>

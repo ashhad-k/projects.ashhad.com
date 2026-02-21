@@ -250,6 +250,7 @@ backdrop-filter: blur(2px);
 }
 
 /* btn arrow */
+
 .btn.has-arrow{ 
     padding: 16px 20px;
     width: fit-content;
@@ -264,15 +265,14 @@ backdrop-filter: blur(2px);
 }
 
 .btn.has-arrow:hover i {
-    
      background: var(--accent);
     transform:  translateX(10px)  rotate(45deg); /* Rotate the icon by 30 degrees */
    
 }
 
-.btn:hover{
-    color: #ffffff!important;
-    background: #007F8F;
+.btn.btn.has-arrow:hover{
+    /* color: #ffffff!important; */
+    background: #007F8F!important;
 }
 
 .btn2{
