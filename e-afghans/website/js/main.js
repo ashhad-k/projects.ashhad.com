@@ -14,11 +14,9 @@ if (window.innerWidth > 768) {
 // Preloader functionality
 window.addEventListener("load", function() {
     const preloader = document.getElementById("preloader");
-    const content = document.getElementById("content");
-
-    // Hide the preloader and show the content
-    // preloader.style.display = "none";
-    // content.style.display = "block";
+    if (preloader) {
+        preloader.style.display = "none";
+    }
 });
 
 // Tab switching function
