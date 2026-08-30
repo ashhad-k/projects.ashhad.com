@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+  <defs>
+    <radialGradient id="foldFigmaGrad" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(18 0) rotate(90) scale(20 22)">
+      <stop stop-color="#FFD596"/>
+      <stop offset="1" stop-color="#EC9A1E"/>
+    </radialGradient>
+  </defs>
+  <rect width="36" height="36" rx="6" fill="url(#foldFigmaGrad)"/>
+  <rect x="7" y="19" width="5" height="8" rx="0.5" fill="#0D0D0D"/>
+  <rect x="15.5" y="11" width="5" height="16" rx="0.5" fill="#0D0D0D"/>
+  <rect x="24" y="15" width="5" height="12" rx="0.5" fill="#0D0D0D"/>
+</svg>

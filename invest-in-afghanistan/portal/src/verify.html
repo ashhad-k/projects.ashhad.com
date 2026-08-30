@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="../media/favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verify your phone — Investor & Business Portal</title>
+<meta name="description" content="Enter the one-time code sent to your phone to verify your account.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/portal.css">
+</head>
+<body>
+<main class="auth">
+ <div class="gmesh"></div>
+
+ <div class="card">
+  <a class="lg" href="../index.html"><img class="logoimg" src="../media/logo_grey.png" alt="Invest in Afghanistan" width="691" height="289"></a>
+
+  <div class="astep"><i class="done"></i><i class="on"></i><i></i></div>
+
+  <form class="af" data-af data-verify data-next="onboarding.html">
+   <div class="h">Enter your code</div>
+   <div class="sub">We sent a 6-digit code by SMS to <b>+93 7XX XXX X34</b>. Enter it below to verify your phone.</div>
+
+   <div class="otp-in" data-otp="#verifyBtn">
+    <input type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 1">
+    <input type="text" inputmode="numeric" maxlength="1" aria-label="Digit 2">
+    <input type="text" inputmode="numeric" maxlength="1" aria-label="Digit 3">
+    <input type="text" inputmode="numeric" maxlength="1" aria-label="Digit 4">
+    <input type="text" inputmode="numeric" maxlength="1" aria-label="Digit 5">
+    <input type="text" inputmode="numeric" maxlength="1" aria-label="Digit 6">
+   </div>
+
+   <div class="resend"><span data-resend-lab></span>
+    <div style="margin-top:6px">Didn&rsquo;t get it? <button type="button" data-resend="30" data-resend-label="[data-resend-lab]">Resend code</button></div></div>
+
+   <button type="submit" id="verifyBtn" class="pillbtn ink btn" style="margin-top:22px" disabled>Verify &amp; continue &rarr;</button>
+
+   <div class="alt"><a class="a-back" href="login.html" style="margin:0"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>Wrong number? Go back</a></div>
+  </form>
+ </div>
+
+ <p class="foot-note">Ministry of Industry &amp; Commerce &middot; Investor &amp; Business Portal</p>
+</main>
+<script src="assets/portal.js"></script>
+</body>
+</html>

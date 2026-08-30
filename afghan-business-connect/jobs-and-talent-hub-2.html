@@ -1,0 +1,2089 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job And Talent</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <!-- Google Fonts - Instrument Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style/job&talent2.css">
+</head>
+
+<body>
+
+    <div class="back-Color">
+
+
+
+        <section class="hero-section">
+            <header class="header-transparent container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid">
+                        <!-- Logo -->
+                        <a href="/">
+
+                         <img class="nav-logo" src="./assets/navLogo.png" alt="">
+                        </a>
+
+                        <!-- Mobile Toggle Button -->
+                        <button class="navbar-toggler border-0" type="button">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <!-- Navigation Menu -->
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav mx-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link nav-custom" href="/business-directory.html">Business Directory</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link nav-custom" href="/jobs-and-talent-hub.html">Jobs & Talent Hub</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link nav-custom" href="/funding-and-investment.html">Funding & Investment</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link nav-custom" href="/events-and-networking.html">Events & Networking</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link nav-custom" href="/about.html">About</a>
+                                </li>
+                            </ul>
+
+                            <!-- Right Side Buttons -->
+                            <div class="d-flex align-items-center">
+                                <a href="/login.html"><button class="btn btn-link nav-custom nav-active me-2">Login</button></a>
+                            <a href="/register.html"><button class="btn btn-link nav-custom nav-active me-3">Register</button></a>
+                                <button class="btn btn-pro">Be Pro</button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <div class="container">
+
+
+                <div class="hero-content">
+
+                    <div class="first">
+
+                        <!-- Main Heading -->
+                        <div style="">
+
+                            <h1 class="hero-title">
+                                Find the Perfect Job or the Ideal
+                            </h1>
+
+                        </div>
+                        <div style="">
+                            <h1 class="hero-title">
+                                Candidate—All in One Place!
+                            </h1>
+                        </div>
+                        <!-- Subtitle -->
+                        <p class="hero-subtitle mx-auto" style="max-width: 600px;">
+                            Explore career opportunities or discover skilled professionals within the Afghan community.
+                        </p>
+                        <!-- CTA Button -->
+                        <a href="#" class="cta-button">
+                            Post a Job
+                            <span class="arrow-icon">→</span>
+                        </a>
+
+                    </div>
+
+                    <div class="hero-circle-img">
+                        <!-- <img class="" src="./assets/jobHeroCircle.png" alt=""> -->
+
+                        <button>Open to Work</button>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+        <div class="container">
+
+            <div class="toggle-btn-group mx-auto">
+                <a class="toggle-btn " id="jobBtn" href="/jobs-and-talent-hub.html">I am looking for a job</a>
+                <a class="toggle-btn active" id="talentBtn">I am looking for a talent</a>
+            </div>
+            <div class="search-card">
+                <form>
+                    <div class="input-section">
+                        <!-- Search Input -->
+                        <div class="input-box">
+                            <img src="./assets/icons/search.png" alt="Search Icon">
+                            <div class="input-content">
+                                <span class="input-label">Search</span>
+                                <input type="text" class="form-control-custom"
+                                    placeholder="Keyword, Job title, Company name" />
+                            </div>
+                        </div>
+                        <!-- Category Dropdown -->
+                        <div class="input-box">
+                            <img src="./assets/icons/categorySearch.png" alt="Category Icon">
+                            <div class="input-content">
+                                <span class="input-label">Industry</span>
+                                <select class="select-custom">
+                                    <option value="" style="font-weight: 400; color: #7C7C7C;" selected>Select Industry
+                                        ...
+                                    </option>
+                                    <option value="restaurants">Restaurants</option>
+                                    <option value="retail">Retail & Shopping</option>
+                                    <option value="services">Professional Services</option>
+                                    <option value="healthcare">Healthcare</option>
+                                    <option value="automotive">Automotive</option>
+                                    <option value="beauty">Beauty & Wellness</option>
+                                    <option value="education">Education</option>
+                                    <option value="real-estate">Real Estate</option>
+                                    <option value="technology">Technology</option>
+                                    <option value="construction">Construction</option>
+                                </select>
+                            </div>
+                            <i class="bi bi-chevron-down dropdown-arrow"></i>
+                        </div>
+                    </div>
+                    <!-- Search Button -->
+                    <button type="submit" class="search-btn">Search Directory</button>
+                </form>
+            </div>
+        </div>
+
+
+        <section class="container-fluid job-roles-section">
+
+            <div class="scroll-container" id="scrollContainer">
+                <!-- Scrollable roles container -->
+                <div class="roles-scroll-wrapper" id="rolesContainer">
+                    <a href="#" class="job-role-badge">
+                        Manager <span class="count">(200)</span>
+                    </a>
+                    <a href="#" class="job-role-badge">
+                        Marketing Manager <span class="count">(200)</span>
+                    </a>
+                    <a href="#" class="job-role-badge">
+                        Sales Executive <span class="count">(200)</span>
+                    </a>
+                    <a href="#" class="job-role-badge">
+                        Business Analyst <span class="count">(200)</span>
+                    </a>
+                    <a href="#" class="job-role-badge">
+                        Customer Support <span class="count">(200)</span>
+                    </a>
+                    <a href="#" class="job-role-badge">
+                        Software Developer <span class="count">(150)</span>
+                    </a>
+                    <a href="#" class="job-role-badge">
+                        UI/UX Designer <span class="count">(75)</span>
+                    </a>
+                    <a href="#" class="job-role-badge">
+                        Data Scientist <span class="count">(120)</span>
+                    </a>
+                    <a href="#" class="job-role-badge">
+                        Project Manager <span class="count">(90)</span>
+                    </a>
+                    <a href="#" class="job-role-badge">
+                        HR Specialist <span class="count">(60)</span>
+                    </a>
+                    <a href="#" class="job-role-badge">
+                        DevOps Engineer <span class="count">(85)</span>
+                    </a>
+                    <a href="#" class="job-role-badge">
+                        Quality Assurance <span class="count">(110)</span>
+                    </a>
+                    <a href="#" class="job-role-badge">
+                        Content Writer <span class="count">(45)</span>
+                    </a>
+                    <a href="#" class="job-role-badge">
+                        Financial Analyst <span class="count">(70)</span>
+                    </a>
+                    <a href="#" class="job-role-badge">
+                        Network Engineer <span class="count">(95)</span>
+                    </a>
+                    <a href="#" class="job-role-badge">
+                        Product Manager <span class="count">(80)</span>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+        <div class="container">
+            <div class="row py-4">
+                <!-- Left Column (smaller) -->
+                <!-- Left Sidebar -->
+                <div class="col-5 col-lg-3 d-none d-md-block  p-0">
+                    <div class="sidebar">
+                        <!-- Promotional Banner -->
+                        <div class="promo-banner">
+                            <div class="promo-content">
+                                <h3>Ensuring credibility & authenticity within the community.</h3>
+                                <button class="verify-btn">
+                                    <span>Verify Your Business</span>
+                                    <i class="bi bi-arrow-right"
+                                        style="background-color: black; color: #F8CD0A; padding: 2px 4px; border-radius: 100%;"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Filters Section -->
+                        <div class="filters-container">
+                            <div class="filter-header">
+                                <span class="filter-title">Filter:</span>
+                                <span class="filter-count">8</span>
+                                <button class="clear-btn">Clear</button>
+                            </div>
+
+                            <hr style="background-color: #E8E8E8; border: 1px solid #cdcdcd;">
+
+                            <div class="filter-note">
+                                <i class="fas fa-check-circle"></i>
+                                <input type="checkbox" style="background-color: black;">
+                                <span>Show only <span style="font-weight: bold;">verified</span> businesses</span>
+                            </div>
+
+                            <!-- Categories Filter -->
+                            <div class="filter-section">
+                                <div class="filter-header-section" data-bs-toggle="collapse"
+                                    data-bs-target="#categoriesCollapse">
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <img style="width: 18px;" src="./assets/icons/locationFilter.png" alt="">
+                                        <span class="filter-label">Industries</span>
+                                    </div>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="collapse show" id="categoriesCollapse">
+                                    <div class="filter-options">
+
+                                        <div class="filter-option">
+                                            <div class="d-flex gap-2 align-items-center">
+
+                                                <input type="checkbox"
+                                                    style="background-color: black; border: 1px solid #cbcbcbb6; border-radius: 6px; outline: none;">
+                                                <span>Real Estate</span>
+                                            </div>
+                                            <span class="count">200</span>
+                                        </div>
+                                        <div class="filter-option">
+                                            <div class="d-flex gap-2 align-items-center">
+
+                                                <input type="checkbox" style="background-color: black;">
+                                                <span>Construction</span>
+                                            </div>
+                                            <span class="count">150</span>
+                                        </div>
+                                        <div class="filter-option">
+                                            <div class="d-flex gap-2 align-items-center">
+
+                                                <input type="checkbox" style="background-color: black;">
+                                                <span>Information Technology</span>
+                                            </div>
+                                            <span class="count">300</span>
+                                        </div>
+                                        <div class="filter-option">
+                                            <div class="d-flex gap-2 align-items-center">
+
+                                                <input type="checkbox" style="background-color: black;">
+                                                <span>Finance</span>
+                                            </div>
+                                            <span class="count">120</span>
+                                        </div>
+                                        <div class="filter-option">
+                                            <div class="d-flex gap-2 align-items-center">
+
+                                                <input type="checkbox" style="background-color: black;">
+                                                <span>Hospitality</span>
+                                            </div>
+                                            <span class="count">80</span>
+                                        </div>
+                                        <div class="filter-option">
+                                            <div class="d-flex gap-2 align-items-center">
+
+                                                <input type="checkbox" style="background-color: black;">
+                                                <span>Logistics</span>
+                                            </div>
+                                            <span class="count">90</span>
+                                        </div>
+                                        <div class="filter-option">
+                                            <div class="d-flex gap-2 align-items-center">
+
+                                                <input type="checkbox" style="background-color: black;">
+                                                <span>Automobile</span>
+                                            </div>
+                                            <span class="count">110</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Job Type Filter -->
+                            <div class="filter-section">
+                                <div class="filter-header-section" data-bs-toggle="collapse"
+                                    data-bs-target="#locationCollapse">
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <img style="width: 18px;" src="./assets/icons/locationFilter.png" alt="">
+                                        <span class="filter-label">Job Type</span>
+                                    </div>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="collapse show" id="locationCollapse">
+                                    <div class="filter-selected">
+                                        <span class="selected-count">2 Selected</span>
+                                        <button class="change-btn">Change</button>
+                                    </div>
+                                    <div class="selected-items">
+                                        <span class="selected-item">(Fulltime, Contract)</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Experience Level Filter -->
+                            <div class="filter-section">
+                                <div class="filter-header-section" data-bs-toggle="collapse"
+                                    data-bs-target="#businessTypeCollapse">
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <img style="width: 18px;" src="./assets/icons/locationFilter.png" alt="">
+                                        <span class="filter-label">Experience Level</span>
+                                    </div>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="collapse show" id="businessTypeCollapse">
+                                    <div class="filter-selected">
+                                        <span class="selected-count">1 Selected</span>
+                                        <button class="change-btn">Change</button>
+                                    </div>
+                                    <div class="selected-items">
+                                        <span class="selected-item">(Executive)</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Location Filter -->
+                            <div class="filter-section">
+                                <div class="filter-header-section" data-bs-toggle="collapse"
+                                    data-bs-target="#servicesCollapse">
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <img style="width: 18px;" src="./assets/icons/locationFilter.png" alt="">
+                                        <span class="filter-label">Location</span>
+                                    </div>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="collapse show" id="servicesCollapse">
+                                    <div class="filter-selected">
+                                        <span class="selected-count">2 Selected</span>
+                                        <button class="change-btn">Change</button>
+                                    </div>
+
+                                    <div class="selected-items">
+                                        <span class="selected-item">(Dubai, Abu Dhabi)</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Salary Range Filter -->
+                            <div class="filter-section">
+                                <div class="filter-header-section" data-bs-toggle="collapse"
+                                    data-bs-target="#ratingsCollapse">
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <img style="width: 18px;" src="./assets/icons/locationFilter.png" alt="">
+                                        <span class="filter-label">Salary Range</span>
+                                    </div>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="collapse show" id="ratingsCollapse">
+                                    <div class="filter-selected">
+                                        <span class="selected-count">AED 5,000 - AED 10,000</span>
+
+
+                                    </div>
+                                    <div class="range-slider">
+                                        <!-- <input type="range" id="minSlider" min="0" max="20000" value="5000" step="500"> -->
+                                        <input type="range" id="maxSlider" min="0" max="20000" value="10000" step="500">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Apply Filter Button -->
+                            <div class="apply-filter-section">
+                                <button class="apply-filter-btn">
+                                    <span>Apply Filter</span>
+                                    <i class="bi bi-arrow-right"
+                                        style="background-color: black; color: white; padding: 1px 4px; border-radius: 100%; font-size: 10px;"></i>
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div class="promo-banner">
+                            <div class="promo-content">
+                                <h3>Ensuring credibility & authenticity within the community.</h3>
+                                <button class="verify-btn">
+                                    <span>Verify Your Business</span>
+                                    <i class="bi bi-arrow-right"
+                                        style="background-color: black; color: #F8CD0A; padding: 2px 4px; border-radius: 100%;"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column (Business Card - bigger) -->
+                <div class="col-12 col-md-7 col-lg-9 px-4">
+                    <div class="row g-2">
+                        <div class="col-12">
+
+                            <div class="search-header ">
+                                <!-- Results Title -->
+                                <div class="results-section">
+                                    <h1 class="results-title">
+                                        Showing Results <span class="results-count">(2,450)</span>
+                                    </h1>
+                                </div>
+
+                                <!-- Controls Section -->
+                                <div class="controls-section">
+                                    <!-- Sort Dropdown -->
+                                    <div class="sort-section">
+                                        <span class="sort-label">Sort by:</span>
+                                        <button class="sort-dropdown">
+                                            Recently Added
+                                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                                        </button>
+                                    </div>
+
+                                    <!-- View Toggle Buttons -->
+                                    <div class="view-toggles">
+                                        <button class="view-btn">
+                                            <span class="list-icon"></span>
+                                        </button>
+                                        <button class="view-btn active">
+                                            <span class="grid-icon"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-12 col-lg-6 ">
+
+
+                            <div class="business-card  ">
+                                <!-- Your existing business card content goes here -->
+                                <!-- Header -->
+                                <div
+                                    style="background-color: #FAFAFA; padding: 20px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+
+
+                                    <div>
+
+                                        <div class="card-header ">
+                                            <button class="featured-badge">Featured</button>
+                                            
+                                        </div>
+
+                                        <!-- Company Info -->
+                                        <div class="company-info mt-2">
+                                            <div class="d-flex justify-content-between align-items-start">
+
+                                                <div>
+                                                    
+                                                    <h2 class="company-name" style="font-size: 14px;">
+                                                        UX Designer
+                                                        
+                                                    </h2>
+                                                    <a href="/jobs-and-talent-hub-4.html" style="text-decoration: none;">
+
+                                                        <h2 class="company-name">
+                                                            Ahmad Rahimi
+                                                            <img style="width: 16px;" src="./assets/icons/verified.png" alt="">
+                                                        </h2>
+                                                    </a>
+                                                </div>
+                                                
+                                                <button class="bookmark-btn">
+                                                    <img style="width: 14px;" src="./assets/icons/bookmark.png" alt="">
+                                                    Bookmark
+                                                </button>
+                                            </div>
+                                            <div class="company-details">
+                                                <div class="location">
+                                                    <img style="width: 14px;" src="./assets/icons/location.png" alt="">
+                                                    <span>Dubai, UAE</span>
+                                                </div>
+                                                <div class="category">
+                                                    <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                                    <span>5 Years Experience</span>
+                                                </div>
+                                                <div class="category">
+                                                    <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                                    <span>Full-Time</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr>
+
+                                        <!-- Description -->
+                                        <p class="description">
+                                            Creative designer focused on crafting engaging
+                                            user experiences for web and mobile applications.
+                                        </p>
+
+                                        <div class="services">
+                                            <span class="service-tag">Figma</span>
+                                            <span class="service-tag">Prototyping</span>
+                                            <span class="service-tag">Wireframing</span>
+                                            <span class="service-tag">Sitemaps</span>
+                                            <span class="service-tag">Interaction Design</span>
+                                            <span class="service-tag">Branding</span>
+                                            <span class="service-tag">+5 more</span>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <!-- Action Buttons -->
+                                    <div class="action-buttons d-flex ">
+                                        <div class="btn-profile">
+
+                                            <span style="color: #161616; font-size: 18px; font-weight: 600;">
+
+                                                AED 12,500
+                                            </span>
+                                            <span style="font-size: 12px; font-weight: 600; color: #A9A9A9;">
+
+                                                Expected Salary
+                                            </span>
+                                        </div>
+
+
+                                        <a href="/jobs-and-talent-hub-4.html" class="btn-contact" style="text-decoration: none;">
+                                            View Details
+                                            <i class="bi bi-arrow-right"
+                                                style="background-color: white; color: black; padding: 1px 4px; border-radius: 100%;"></i>
+                                        </a>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 ">
+
+
+                            <div class="business-card  ">
+                                <!-- Your existing business card content goes here -->
+                                <!-- Header -->
+                                <div
+                                    style="background-color: #FAFAFA; padding: 20px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+
+
+                                    <div>
+
+                                        <div class="card-header ">
+                                            <button class="featured-badge">Featured</button>
+                                            
+                                        </div>
+
+                                        <!-- Company Info -->
+                                        <div class="company-info mt-2">
+                                            <div class="d-flex justify-content-between align-items-start">
+
+                                                <div>
+                                                    
+                                                    <h2 class="company-name" style="font-size: 14px;">
+                                                        UX Designer
+                                                        
+                                                    </h2>
+                                                    <a href="/jobs-and-talent-hub-4.html" style="text-decoration: none;">
+
+                                                        <h2 class="company-name">
+                                                            Ahmad Rahimi
+                                                            <img style="width: 16px;" src="./assets/icons/verified.png" alt="">
+                                                        </h2>
+                                                    </a>
+                                                </div>
+                                                
+                                                <button class="bookmark-btn">
+                                                    <img style="width: 14px;" src="./assets/icons/bookmark.png" alt="">
+                                                    Bookmark
+                                                </button>
+                                            </div>
+                                            <div class="company-details">
+                                                <div class="location">
+                                                    <img style="width: 14px;" src="./assets/icons/location.png" alt="">
+                                                    <span>Dubai, UAE</span>
+                                                </div>
+                                                <div class="category">
+                                                    <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                                    <span>5 Years Experience</span>
+                                                </div>
+                                                <div class="category">
+                                                    <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                                    <span>Full-Time</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr>
+
+                                        <!-- Description -->
+                                        <p class="description">
+                                            Creative designer focused on crafting engaging
+                                            user experiences for web and mobile applications.
+                                        </p>
+
+                                        <div class="services">
+                                            <span class="service-tag">Figma</span>
+                                            <span class="service-tag">Prototyping</span>
+                                            <span class="service-tag">Wireframing</span>
+                                            <span class="service-tag">Sitemaps</span>
+                                            <span class="service-tag">Interaction Design</span>
+                                            <span class="service-tag">Branding</span>
+                                            <span class="service-tag">+5 more</span>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <!-- Action Buttons -->
+                                    <div class="action-buttons d-flex ">
+                                        <div class="btn-profile">
+
+                                            <span style="color: #161616; font-size: 18px; font-weight: 600;">
+
+                                                AED 12,500
+                                            </span>
+                                            <span style="font-size: 12px; font-weight: 600; color: #A9A9A9;">
+
+                                                Expected Salary
+                                            </span>
+                                        </div>
+
+
+                                        <a href="/jobs-and-talent-hub-4.html" class="btn-contact" style="text-decoration: none;">
+                                            View Details
+                                            <i class="bi bi-arrow-right"
+                                                style="background-color: white; color: black; padding: 1px 4px; border-radius: 100%;"></i>
+                                        </a>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 ">
+
+
+                            <div class="business-card  ">
+                                <!-- Your existing business card content goes here -->
+                                <!-- Header -->
+                                <div
+                                    style="background-color: #FAFAFA; padding: 20px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+
+
+                                    <div>
+
+                                        <div class="card-header ">
+                                            <button class="featured-badge">Featured</button>
+                                            
+                                        </div>
+
+                                        <!-- Company Info -->
+                                        <div class="company-info mt-2">
+                                            <div class="d-flex justify-content-between align-items-start">
+
+                                                <div>
+                                                    
+                                                    <h2 class="company-name" style="font-size: 14px;">
+                                                        UX Designer
+                                                        
+                                                    </h2>
+                                                    <h2 class="company-name">
+                                                        Ahmad Rahimi
+                                                        <img style="width: 16px;" src="./assets/icons/verified.png" alt="">
+                                                    </h2>
+                                                </div>
+                                                
+                                                <button class="bookmark-btn">
+                                                    <img style="width: 14px;" src="./assets/icons/bookmark.png" alt="">
+                                                    Bookmark
+                                                </button>
+                                            </div>
+                                            <div class="company-details">
+                                                <div class="location">
+                                                    <img style="width: 14px;" src="./assets/icons/location.png" alt="">
+                                                    <span>Dubai, UAE</span>
+                                                </div>
+                                                <div class="category">
+                                                    <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                                    <span>5 Years Experience</span>
+                                                </div>
+                                                <div class="category">
+                                                    <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                                    <span>Full-Time</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr>
+
+                                        <!-- Description -->
+                                        <p class="description">
+                                            Creative designer focused on crafting engaging
+                                            user experiences for web and mobile applications.
+                                        </p>
+
+                                        <div class="services">
+                                            <span class="service-tag">Figma</span>
+                                            <span class="service-tag">Prototyping</span>
+                                            <span class="service-tag">Wireframing</span>
+                                            <span class="service-tag">Sitemaps</span>
+                                            <span class="service-tag">Interaction Design</span>
+                                            <span class="service-tag">Branding</span>
+                                            <span class="service-tag">+5 more</span>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <!-- Action Buttons -->
+                                    <div class="action-buttons d-flex ">
+                                        <div class="btn-profile">
+
+                                            <span style="color: #161616; font-size: 18px; font-weight: 600;">
+
+                                                AED 12,500
+                                            </span>
+                                            <span style="font-size: 12px; font-weight: 600; color: #A9A9A9;">
+
+                                                Expected Salary
+                                            </span>
+                                        </div>
+
+
+                                        <button class="btn-contact">
+                                            View Details
+                                            <i class="bi bi-arrow-right"
+                                                style="background-color: white; color: black; padding: 1px 4px; border-radius: 100%;"></i>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 ">
+
+
+                            <div class="business-card  ">
+                                <!-- Your existing business card content goes here -->
+                                <!-- Header -->
+                                <div
+                                    style="background-color: #FAFAFA; padding: 20px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+
+
+                                    <div>
+
+                                        <div class="card-header ">
+                                            <button class="featured-badge">Featured</button>
+                                            
+                                        </div>
+
+                                        <!-- Company Info -->
+                                        <div class="company-info mt-2">
+                                            <div class="d-flex justify-content-between align-items-start">
+
+                                                <div>
+                                                    
+                                                    <h2 class="company-name" style="font-size: 14px;">
+                                                        UX Designer
+                                                        
+                                                    </h2>
+                                                    <h2 class="company-name">
+                                                        Ahmad Rahimi
+                                                        <img style="width: 16px;" src="./assets/icons/verified.png" alt="">
+                                                    </h2>
+                                                </div>
+                                                
+                                                <button class="bookmark-btn">
+                                                    <img style="width: 14px;" src="./assets/icons/bookmark.png" alt="">
+                                                    Bookmark
+                                                </button>
+                                            </div>
+                                            <div class="company-details">
+                                                <div class="location">
+                                                    <img style="width: 14px;" src="./assets/icons/location.png" alt="">
+                                                    <span>Dubai, UAE</span>
+                                                </div>
+                                                <div class="category">
+                                                    <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                                    <span>5 Years Experience</span>
+                                                </div>
+                                                <div class="category">
+                                                    <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                                    <span>Full-Time</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr>
+
+                                        <!-- Description -->
+                                        <p class="description">
+                                            Creative designer focused on crafting engaging
+                                            user experiences for web and mobile applications.
+                                        </p>
+
+                                        <div class="services">
+                                            <span class="service-tag">Figma</span>
+                                            <span class="service-tag">Prototyping</span>
+                                            <span class="service-tag">Wireframing</span>
+                                            <span class="service-tag">Sitemaps</span>
+                                            <span class="service-tag">Interaction Design</span>
+                                            <span class="service-tag">Branding</span>
+                                            <span class="service-tag">+5 more</span>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <!-- Action Buttons -->
+                                    <div class="action-buttons d-flex ">
+                                        <div class="btn-profile">
+
+                                            <span style="color: #161616; font-size: 18px; font-weight: 600;">
+
+                                                AED 12,500
+                                            </span>
+                                            <span style="font-size: 12px; font-weight: 600; color: #A9A9A9;">
+
+                                                Expected Salary
+                                            </span>
+                                        </div>
+
+
+                                        <button class="btn-contact">
+                                            View Details
+                                            <i class="bi bi-arrow-right"
+                                                style="background-color: white; color: black; padding: 1px 4px; border-radius: 100%;"></i>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 ">
+
+
+                            <div class="business-card  ">
+                                <!-- Your existing business card content goes here -->
+                                <!-- Header -->
+                                <div
+                                    style="background-color: #FAFAFA; padding: 20px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+
+
+                                    <div>
+
+                                        <div class="card-header ">
+                                            <button class="featured-badge">Featured</button>
+                                            
+                                        </div>
+
+                                        <!-- Company Info -->
+                                        <div class="company-info mt-2">
+                                            <div class="d-flex justify-content-between align-items-start">
+
+                                                <div>
+                                                    
+                                                    <h2 class="company-name" style="font-size: 14px;">
+                                                        UX Designer
+                                                        
+                                                    </h2>
+                                                    <h2 class="company-name">
+                                                        Ahmad Rahimi
+                                                        <img style="width: 16px;" src="./assets/icons/verified.png" alt="">
+                                                    </h2>
+                                                </div>
+                                                
+                                                <button class="bookmark-btn">
+                                                    <img style="width: 14px;" src="./assets/icons/bookmark.png" alt="">
+                                                    Bookmark
+                                                </button>
+                                            </div>
+                                            <div class="company-details">
+                                                <div class="location">
+                                                    <img style="width: 14px;" src="./assets/icons/location.png" alt="">
+                                                    <span>Dubai, UAE</span>
+                                                </div>
+                                                <div class="category">
+                                                    <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                                    <span>5 Years Experience</span>
+                                                </div>
+                                                <div class="category">
+                                                    <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                                    <span>Full-Time</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr>
+
+                                        <!-- Description -->
+                                        <p class="description">
+                                            Creative designer focused on crafting engaging
+                                            user experiences for web and mobile applications.
+                                        </p>
+
+                                        <div class="services">
+                                            <span class="service-tag">Figma</span>
+                                            <span class="service-tag">Prototyping</span>
+                                            <span class="service-tag">Wireframing</span>
+                                            <span class="service-tag">Sitemaps</span>
+                                            <span class="service-tag">Interaction Design</span>
+                                            <span class="service-tag">Branding</span>
+                                            <span class="service-tag">+5 more</span>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <!-- Action Buttons -->
+                                    <div class="action-buttons d-flex ">
+                                        <div class="btn-profile">
+
+                                            <span style="color: #161616; font-size: 18px; font-weight: 600;">
+
+                                                AED 12,500
+                                            </span>
+                                            <span style="font-size: 12px; font-weight: 600; color: #A9A9A9;">
+
+                                                Expected Salary
+                                            </span>
+                                        </div>
+
+
+                                        <button class="btn-contact">
+                                            View Details
+                                            <i class="bi bi-arrow-right"
+                                                style="background-color: white; color: black; padding: 1px 4px; border-radius: 100%;"></i>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 ">
+
+
+                            <div class="business-card  ">
+                                <!-- Your existing business card content goes here -->
+                                <!-- Header -->
+                                <div
+                                    style="background-color: #FAFAFA; padding: 20px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+
+
+                                    <div>
+
+                                        <div class="card-header ">
+                                            <button class="featured-badge">Featured</button>
+                                            
+                                        </div>
+
+                                        <!-- Company Info -->
+                                        <div class="company-info mt-2">
+                                            <div class="d-flex justify-content-between align-items-start">
+
+                                                <div>
+                                                    
+                                                    <h2 class="company-name" style="font-size: 14px;">
+                                                        UX Designer
+                                                        
+                                                    </h2>
+                                                    <h2 class="company-name">
+                                                        Ahmad Rahimi
+                                                        <img style="width: 16px;" src="./assets/icons/verified.png" alt="">
+                                                    </h2>
+                                                </div>
+                                                
+                                                <button class="bookmark-btn">
+                                                    <img style="width: 14px;" src="./assets/icons/bookmark.png" alt="">
+                                                    Bookmark
+                                                </button>
+                                            </div>
+                                            <div class="company-details">
+                                                <div class="location">
+                                                    <img style="width: 14px;" src="./assets/icons/location.png" alt="">
+                                                    <span>Dubai, UAE</span>
+                                                </div>
+                                                <div class="category">
+                                                    <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                                    <span>5 Years Experience</span>
+                                                </div>
+                                                <div class="category">
+                                                    <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                                    <span>Full-Time</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr>
+
+                                        <!-- Description -->
+                                        <p class="description">
+                                            Creative designer focused on crafting engaging
+                                            user experiences for web and mobile applications.
+                                        </p>
+
+                                        <div class="services">
+                                            <span class="service-tag">Figma</span>
+                                            <span class="service-tag">Prototyping</span>
+                                            <span class="service-tag">Wireframing</span>
+                                            <span class="service-tag">Sitemaps</span>
+                                            <span class="service-tag">Interaction Design</span>
+                                            <span class="service-tag">Branding</span>
+                                            <span class="service-tag">+5 more</span>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <!-- Action Buttons -->
+                                    <div class="action-buttons d-flex ">
+                                        <div class="btn-profile">
+
+                                            <span style="color: #161616; font-size: 18px; font-weight: 600;">
+
+                                                AED 12,500
+                                            </span>
+                                            <span style="font-size: 12px; font-weight: 600; color: #A9A9A9;">
+
+                                                Expected Salary
+                                            </span>
+                                        </div>
+
+
+                                        <button class="btn-contact">
+                                            View Details
+                                            <i class="bi bi-arrow-right"
+                                                style="background-color: white; color: black; padding: 1px 4px; border-radius: 100%;"></i>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 ">
+
+
+                            <div class="business-card  ">
+                                <!-- Your existing business card content goes here -->
+                                <!-- Header -->
+                                <div
+                                    style="background-color: #FAFAFA; padding: 20px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+
+
+                                    <div>
+
+                                        <div class="card-header ">
+                                            <button class="featured-badge">Featured</button>
+                                            
+                                        </div>
+
+                                        <!-- Company Info -->
+                                        <div class="company-info mt-2">
+                                            <div class="d-flex justify-content-between align-items-start">
+
+                                                <div>
+                                                    
+                                                    <h2 class="company-name" style="font-size: 14px;">
+                                                        UX Designer
+                                                        
+                                                    </h2>
+                                                    <h2 class="company-name">
+                                                        Ahmad Rahimi
+                                                        <img style="width: 16px;" src="./assets/icons/verified.png" alt="">
+                                                    </h2>
+                                                </div>
+                                                
+                                                <button class="bookmark-btn">
+                                                    <img style="width: 14px;" src="./assets/icons/bookmark.png" alt="">
+                                                    Bookmark
+                                                </button>
+                                            </div>
+                                            <div class="company-details">
+                                                <div class="location">
+                                                    <img style="width: 14px;" src="./assets/icons/location.png" alt="">
+                                                    <span>Dubai, UAE</span>
+                                                </div>
+                                                <div class="category">
+                                                    <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                                    <span>5 Years Experience</span>
+                                                </div>
+                                                <div class="category">
+                                                    <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                                    <span>Full-Time</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr>
+
+                                        <!-- Description -->
+                                        <p class="description">
+                                            Creative designer focused on crafting engaging
+                                            user experiences for web and mobile applications.
+                                        </p>
+
+                                        <div class="services">
+                                            <span class="service-tag">Figma</span>
+                                            <span class="service-tag">Prototyping</span>
+                                            <span class="service-tag">Wireframing</span>
+                                            <span class="service-tag">Sitemaps</span>
+                                            <span class="service-tag">Interaction Design</span>
+                                            <span class="service-tag">Branding</span>
+                                            <span class="service-tag">+5 more</span>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <!-- Action Buttons -->
+                                    <div class="action-buttons d-flex ">
+                                        <div class="btn-profile">
+
+                                            <span style="color: #161616; font-size: 18px; font-weight: 600;">
+
+                                                AED 12,500
+                                            </span>
+                                            <span style="font-size: 12px; font-weight: 600; color: #A9A9A9;">
+
+                                                Expected Salary
+                                            </span>
+                                        </div>
+
+
+                                        <button class="btn-contact">
+                                            View Details
+                                            <i class="bi bi-arrow-right"
+                                                style="background-color: white; color: black; padding: 1px 4px; border-radius: 100%;"></i>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 ">
+
+
+                            <div class="business-card  ">
+                                <!-- Your existing business card content goes here -->
+                                <!-- Header -->
+                                <div
+                                    style="background-color: #FAFAFA; padding: 20px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+
+
+                                    <div>
+
+                                        <div class="card-header ">
+                                            <button class="featured-badge">Featured</button>
+                                            
+                                        </div>
+
+                                        <!-- Company Info -->
+                                        <div class="company-info mt-2">
+                                            <div class="d-flex justify-content-between align-items-start">
+
+                                                <div>
+                                                    
+                                                    <h2 class="company-name" style="font-size: 14px;">
+                                                        UX Designer
+                                                        
+                                                    </h2>
+                                                    <h2 class="company-name">
+                                                        Ahmad Rahimi
+                                                        <img style="width: 16px;" src="./assets/icons/verified.png" alt="">
+                                                    </h2>
+                                                </div>
+                                                
+                                                <button class="bookmark-btn">
+                                                    <img style="width: 14px;" src="./assets/icons/bookmark.png" alt="">
+                                                    Bookmark
+                                                </button>
+                                            </div>
+                                            <div class="company-details">
+                                                <div class="location">
+                                                    <img style="width: 14px;" src="./assets/icons/location.png" alt="">
+                                                    <span>Dubai, UAE</span>
+                                                </div>
+                                                <div class="category">
+                                                    <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                                    <span>5 Years Experience</span>
+                                                </div>
+                                                <div class="category">
+                                                    <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                                    <span>Full-Time</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr>
+
+                                        <!-- Description -->
+                                        <p class="description">
+                                            Creative designer focused on crafting engaging
+                                            user experiences for web and mobile applications.
+                                        </p>
+
+                                        <div class="services">
+                                            <span class="service-tag">Figma</span>
+                                            <span class="service-tag">Prototyping</span>
+                                            <span class="service-tag">Wireframing</span>
+                                            <span class="service-tag">Sitemaps</span>
+                                            <span class="service-tag">Interaction Design</span>
+                                            <span class="service-tag">Branding</span>
+                                            <span class="service-tag">+5 more</span>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <!-- Action Buttons -->
+                                    <div class="action-buttons d-flex ">
+                                        <div class="btn-profile">
+
+                                            <span style="color: #161616; font-size: 18px; font-weight: 600;">
+
+                                                AED 12,500
+                                            </span>
+                                            <span style="font-size: 12px; font-weight: 600; color: #A9A9A9;">
+
+                                                Expected Salary
+                                            </span>
+                                        </div>
+
+
+                                        <button class="btn-contact">
+                                            View Details
+                                            <i class="bi bi-arrow-right"
+                                                style="background-color: white; color: black; padding: 1px 4px; border-radius: 100%;"></i>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 ">
+
+
+                            <div class="business-card  ">
+                                <!-- Your existing business card content goes here -->
+                                <!-- Header -->
+                                <div
+                                    style="background-color: #FAFAFA; padding: 20px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+
+
+                                    <div>
+
+                                        <div class="card-header ">
+                                            <button class="featured-badge">Featured</button>
+                                            
+                                        </div>
+
+                                        <!-- Company Info -->
+                                        <div class="company-info mt-2">
+                                            <div class="d-flex justify-content-between align-items-start">
+
+                                                <div>
+                                                    
+                                                    <h2 class="company-name" style="font-size: 14px;">
+                                                        UX Designer
+                                                        
+                                                    </h2>
+                                                    <h2 class="company-name">
+                                                        Ahmad Rahimi
+                                                        <img style="width: 16px;" src="./assets/icons/verified.png" alt="">
+                                                    </h2>
+                                                </div>
+                                                
+                                                <button class="bookmark-btn">
+                                                    <img style="width: 14px;" src="./assets/icons/bookmark.png" alt="">
+                                                    Bookmark
+                                                </button>
+                                            </div>
+                                            <div class="company-details">
+                                                <div class="location">
+                                                    <img style="width: 14px;" src="./assets/icons/location.png" alt="">
+                                                    <span>Dubai, UAE</span>
+                                                </div>
+                                                <div class="category">
+                                                    <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                                    <span>5 Years Experience</span>
+                                                </div>
+                                                <div class="category">
+                                                    <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                                    <span>Full-Time</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr>
+
+                                        <!-- Description -->
+                                        <p class="description">
+                                            Creative designer focused on crafting engaging
+                                            user experiences for web and mobile applications.
+                                        </p>
+
+                                        <div class="services">
+                                            <span class="service-tag">Figma</span>
+                                            <span class="service-tag">Prototyping</span>
+                                            <span class="service-tag">Wireframing</span>
+                                            <span class="service-tag">Sitemaps</span>
+                                            <span class="service-tag">Interaction Design</span>
+                                            <span class="service-tag">Branding</span>
+                                            <span class="service-tag">+5 more</span>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <!-- Action Buttons -->
+                                    <div class="action-buttons d-flex ">
+                                        <div class="btn-profile">
+
+                                            <span style="color: #161616; font-size: 18px; font-weight: 600;">
+
+                                                AED 12,500
+                                            </span>
+                                            <span style="font-size: 12px; font-weight: 600; color: #A9A9A9;">
+
+                                                Expected Salary
+                                            </span>
+                                        </div>
+
+
+                                        <button class="btn-contact">
+                                            View Details
+                                            <i class="bi bi-arrow-right"
+                                                style="background-color: white; color: black; padding: 1px 4px; border-radius: 100%;"></i>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 ">
+
+
+                            <div class="business-card  ">
+                                <!-- Your existing business card content goes here -->
+                                <!-- Header -->
+                                <div
+                                    style="background-color: #FAFAFA; padding: 20px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+
+
+                                    <div>
+
+                                        <div class="card-header ">
+                                            <button class="featured-badge">Featured</button>
+                                            
+                                        </div>
+
+                                        <!-- Company Info -->
+                                        <div class="company-info mt-2">
+                                            <div class="d-flex justify-content-between align-items-start">
+
+                                                <div>
+                                                    
+                                                    <h2 class="company-name" style="font-size: 14px;">
+                                                        UX Designer
+                                                        
+                                                    </h2>
+                                                    <h2 class="company-name">
+                                                        Ahmad Rahimi
+                                                        <img style="width: 16px;" src="./assets/icons/verified.png" alt="">
+                                                    </h2>
+                                                </div>
+                                                
+                                                <button class="bookmark-btn">
+                                                    <img style="width: 14px;" src="./assets/icons/bookmark.png" alt="">
+                                                    Bookmark
+                                                </button>
+                                            </div>
+                                            <div class="company-details">
+                                                <div class="location">
+                                                    <img style="width: 14px;" src="./assets/icons/location.png" alt="">
+                                                    <span>Dubai, UAE</span>
+                                                </div>
+                                                <div class="category">
+                                                    <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                                    <span>5 Years Experience</span>
+                                                </div>
+                                                <div class="category">
+                                                    <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                                    <span>Full-Time</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr>
+
+                                        <!-- Description -->
+                                        <p class="description">
+                                            Creative designer focused on crafting engaging
+                                            user experiences for web and mobile applications.
+                                        </p>
+
+                                        <div class="services">
+                                            <span class="service-tag">Figma</span>
+                                            <span class="service-tag">Prototyping</span>
+                                            <span class="service-tag">Wireframing</span>
+                                            <span class="service-tag">Sitemaps</span>
+                                            <span class="service-tag">Interaction Design</span>
+                                            <span class="service-tag">Branding</span>
+                                            <span class="service-tag">+5 more</span>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <!-- Action Buttons -->
+                                    <div class="action-buttons d-flex ">
+                                        <div class="btn-profile">
+
+                                            <span style="color: #161616; font-size: 18px; font-weight: 600;">
+
+                                                AED 12,500
+                                            </span>
+                                            <span style="font-size: 12px; font-weight: 600; color: #A9A9A9;">
+
+                                                Expected Salary
+                                            </span>
+                                        </div>
+
+
+                                        <button class="btn-contact">
+                                            View Details
+                                            <i class="bi bi-arrow-right"
+                                                style="background-color: white; color: black; padding: 1px 4px; border-radius: 100%;"></i>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 ">
+
+
+                            <div class="business-card  ">
+                                <!-- Your existing business card content goes here -->
+                                <!-- Header -->
+                                <div
+                                    style="background-color: #FAFAFA; padding: 20px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+
+
+                                    <div>
+
+                                        <div class="card-header ">
+                                            <button class="featured-badge">Featured</button>
+                                            
+                                        </div>
+
+                                        <!-- Company Info -->
+                                        <div class="company-info mt-2">
+                                            <div class="d-flex justify-content-between align-items-start">
+
+                                                <div>
+                                                    
+                                                    <h2 class="company-name" style="font-size: 14px;">
+                                                        UX Designer
+                                                        
+                                                    </h2>
+                                                    <h2 class="company-name">
+                                                        Ahmad Rahimi
+                                                        <img style="width: 16px;" src="./assets/icons/verified.png" alt="">
+                                                    </h2>
+                                                </div>
+                                                
+                                                <button class="bookmark-btn">
+                                                    <img style="width: 14px;" src="./assets/icons/bookmark.png" alt="">
+                                                    Bookmark
+                                                </button>
+                                            </div>
+                                            <div class="company-details">
+                                                <div class="location">
+                                                    <img style="width: 14px;" src="./assets/icons/location.png" alt="">
+                                                    <span>Dubai, UAE</span>
+                                                </div>
+                                                <div class="category">
+                                                    <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                                    <span>5 Years Experience</span>
+                                                </div>
+                                                <div class="category">
+                                                    <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                                    <span>Full-Time</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr>
+
+                                        <!-- Description -->
+                                        <p class="description">
+                                            Creative designer focused on crafting engaging
+                                            user experiences for web and mobile applications.
+                                        </p>
+
+                                        <div class="services">
+                                            <span class="service-tag">Figma</span>
+                                            <span class="service-tag">Prototyping</span>
+                                            <span class="service-tag">Wireframing</span>
+                                            <span class="service-tag">Sitemaps</span>
+                                            <span class="service-tag">Interaction Design</span>
+                                            <span class="service-tag">Branding</span>
+                                            <span class="service-tag">+5 more</span>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <!-- Action Buttons -->
+                                    <div class="action-buttons d-flex ">
+                                        <div class="btn-profile">
+
+                                            <span style="color: #161616; font-size: 18px; font-weight: 600;">
+
+                                                AED 12,500
+                                            </span>
+                                            <span style="font-size: 12px; font-weight: 600; color: #A9A9A9;">
+
+                                                Expected Salary
+                                            </span>
+                                        </div>
+
+
+                                        <button class="btn-contact">
+                                            View Details
+                                            <i class="bi bi-arrow-right"
+                                                style="background-color: white; color: black; padding: 1px 4px; border-radius: 100%;"></i>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 ">
+
+
+                            <div class="business-card  ">
+                                <!-- Your existing business card content goes here -->
+                                <!-- Header -->
+                                <div
+                                    style="background-color: #FAFAFA; padding: 20px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+
+
+                                    <div>
+
+                                        <div class="card-header ">
+                                            <button class="featured-badge">Featured</button>
+                                            
+                                        </div>
+
+                                        <!-- Company Info -->
+                                        <div class="company-info mt-2">
+                                            <div class="d-flex justify-content-between align-items-start">
+
+                                                <div>
+                                                    
+                                                    <h2 class="company-name" style="font-size: 14px;">
+                                                        UX Designer
+                                                        
+                                                    </h2>
+                                                    <h2 class="company-name">
+                                                        Ahmad Rahimi
+                                                        <img style="width: 16px;" src="./assets/icons/verified.png" alt="">
+                                                    </h2>
+                                                </div>
+                                                
+                                                <button class="bookmark-btn">
+                                                    <img style="width: 14px;" src="./assets/icons/bookmark.png" alt="">
+                                                    Bookmark
+                                                </button>
+                                            </div>
+                                            <div class="company-details">
+                                                <div class="location">
+                                                    <img style="width: 14px;" src="./assets/icons/location.png" alt="">
+                                                    <span>Dubai, UAE</span>
+                                                </div>
+                                                <div class="category">
+                                                    <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                                    <span>5 Years Experience</span>
+                                                </div>
+                                                <div class="category">
+                                                    <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                                    <span>Full-Time</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr>
+
+                                        <!-- Description -->
+                                        <p class="description">
+                                            Creative designer focused on crafting engaging
+                                            user experiences for web and mobile applications.
+                                        </p>
+
+                                        <div class="services">
+                                            <span class="service-tag">Figma</span>
+                                            <span class="service-tag">Prototyping</span>
+                                            <span class="service-tag">Wireframing</span>
+                                            <span class="service-tag">Sitemaps</span>
+                                            <span class="service-tag">Interaction Design</span>
+                                            <span class="service-tag">Branding</span>
+                                            <span class="service-tag">+5 more</span>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <!-- Action Buttons -->
+                                    <div class="action-buttons d-flex ">
+                                        <div class="btn-profile">
+
+                                            <span style="color: #161616; font-size: 18px; font-weight: 600;">
+
+                                                AED 12,500
+                                            </span>
+                                            <span style="font-size: 12px; font-weight: 600; color: #A9A9A9;">
+
+                                                Expected Salary
+                                            </span>
+                                        </div>
+
+
+                                        <button class="btn-contact">
+                                            View Details
+                                            <i class="bi bi-arrow-right"
+                                                style="background-color: white; color: black; padding: 1px 4px; border-radius: 100%;"></i>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div
+                style="padding: 30px 0px; background: linear-gradient(to bottom, #FFFFFF 50%, #030616 50%); display: flex; flex-wrap: wrap; justify-content: space-between;">
+                <div class="d-none d-md-flex footer-card"
+                    style="width: 200px ; height: 300px; background-color: #7A86F9; padding: 20px 0px; display: flex; justify-content: start; align-items: flex-end; border-radius: 20px; border-top-left-radius:0 ;border-bottom-left-radius:0">
+
+                    <div class="" style="padding: 0px 10px; ">
+
+
+
+                        <div style=" font-size: 14px; font-weight: 600;">
+                            Jobs & Talent
+                        </div>
+                        <div style="font-size: 20px; font-weight: 600;">
+                            Find Job
+                            Opportunities
+                        </div>
+                    </div>
+
+                </div>
+                <div class="d-none d-md-flex footer-card"
+                    style="width: 200px ; margin-top: 20px; height: 300px; background: url(./assets/icons/footerMen.png); background-size: cover; background-repeat: no-repeat; padding: 20px 0px; display: flex; justify-content: start; align-items: flex-end; border-radius: 20px;">
+
+
+
+                </div>
+                <div class="d-none d-md-flex footer-card"
+                    style="width: 200px ; margin-top: -20px; height: 300px; background-color: #DCE0F9; padding: 20px 0px; display: flex; justify-content: center; align-items: flex-end; border-radius: 20px;">
+
+                    <div class="" style=" padding: 0px 10px;">
+
+
+
+                        <div style="color: #8689A2; font-size: 14px; font-weight: 600;">
+                            Investment
+                        </div>
+                        <div style="font-size: 20px; font-weight: 600; color: #222A64;">
+                            Apply for or
+                            provide funding
+                        </div>
+                    </div>
+
+                </div>
+                <div class="d-none d-lg-flex footer-card"
+                    style="width: 200px ; margin-top: 0px; height: 300px; background: url(./assets/icons/footerMen2.png); background-size: cover; background-repeat: no-repeat;  padding: 20px 0px; display: flex; justify-content: start; align-items: flex-end; border-radius: 20px;">
+
+                    <div class="" style=" ">
+
+
+
+
+                    </div>
+
+                </div>
+                <div class="d-none d-xl-flex footer-card"
+                    style="width: 200px ; margin-top: -20px; height: 300px; background-color: #B098FB; padding: 20px 0px; display: flex; justify-content: start; align-items: flex-end; border-radius: 20px;">
+
+                    <div class="" style="padding: 0px 10px; ">
+
+
+
+                        <div style="font-size: 14px; font-weight: 600;">
+                            Business Directory
+                        </div>
+                        <div style="font-size: 20px; font-weight: 600;">
+                            Find Afghan
+                            Businesses
+                        </div>
+                    </div>
+
+                </div>
+                <div class="d-none d-xxl-flex footer-card"
+                    style="width: 200px ; margin-top: 20px; height: 300px; background: url(./assets/icons/footerMen3.png); background-size: cover; background-repeat: no-repeat;  padding: 20px 0px; display: flex; justify-content: start; align-items: flex-end; border-radius: 20px;">
+
+                </div>
+                <div class="d-none d-xl-flex footer-card"
+                    style="width: 200px ; margin-top: -20px; height: 300px; background-color: #EFE9FE; padding: 20px 0px; display: flex; justify-content: start; align-items: flex-start; border-radius: 20px; border-top-right-radius:0; border-bottom-right-radius:0">
+
+                    <div class="" style=" padding: 0px 10px;">
+
+
+
+                        <div style="font-size: 14px; font-weight: 600; color: #B3A6D3;">
+                            Networking
+                        </div>
+                        <div style="font-size: 20px; font-weight: 600; color: #42406B;">
+                            Join Business
+                            Meetups
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="container">
+                <!-- Logo and Main Content -->
+                <div class="text-center">
+                    <img src="/assets/footerLogo.png" alt="Afghan Business Connect" class="footer-logo">
+                    <h2 class="footer-heading">
+                        Join a thriving ecosystem where Afghan businesses, professionals, entrepreneurs, and investors
+                        come
+                        together to create opportunities, build partnerships, and drive success.
+                    </h2>
+                    <div class="footer-buttons">
+                        <a href="#" class="footer-btn-primary">
+                            Register Now
+
+                            <i class="bi bi-arrow-right"
+                                style="background-color: black; color: white; padding: 0px 3px; border-radius: 100%;"></i>
+                        </a>
+                        <a href="#" class="footer-btn-secondary">
+                            Explore Now
+                            <i class="bi bi-arrow-right"
+                                style="background-color: white; color: black; padding: 0px 3px; border-radius: 100%;"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Footer Links -->
+                <div class="footer-links">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <h5 class="footer-section-title">About</h5>
+                            <a href="#" class="footer-link">About Us</a>
+                            <a href="#" class="footer-link">Our Mission & Vision</a>
+                            <a href="#" class="footer-link">Why Join Us?</a>
+                            <a href="#" class="footer-link">Afghan Consulate Partnership</a>
+                            <a href="#" class="footer-link">Success Stories</a>
+                            <a href="#" class="footer-link">Testimonials</a>
+                            <a href="#" class="footer-link">Press & Media</a>
+
+
+                            <h5 class="footer-section-title" style="margin-top: 100px;">Social & News</h5>
+                            <a href="#" class="footer-link">Latest News & Insights</a>
+                            <a href="#" class="footer-link">Business Blog</a>
+                            <a href="#" class="footer-link">Community Stories</a>
+                            <a href="#" class="footer-link">Afghan Business Success Highlights</a>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <h5 class="footer-section-title">Business</h5>
+                            <a href="#" class="footer-link">Business Directory</a>
+                            <a href="#" class="footer-link">List Your Business</a>
+                            <a href="#" class="footer-link">Verified Business Certification</a>
+                            <a href="#" class="footer-link">Top Rated Afghan Businesses</a>
+
+                            <h5 class="footer-section-title" style="margin-top: 100px;">Professionals</h5>
+                            <a href="#" class="footer-link">Job Listings</a>
+                            <a href="#" class="footer-link">Post a Job Vacancy</a>
+                            <a href="#" class="footer-link">Find Afghan Talent</a>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <h5 class="footer-section-title">Investment</h5>
+                            <a href="#" class="footer-link">Apply for Business Funding</a>
+                            <a href="#" class="footer-link">Investor Opportunities</a>
+                            <a href="#" class="footer-link">Shariah Compliance</a>
+                            <a href="#" class="footer-link">Investment Calculator</a>
+
+                            <h5 class="footer-section-title" style="margin-top: 100px;">Networking & Events</h5>
+                            <a href="#" class="footer-link">Upcoming Business Events</a>
+                            <a href="#" class="footer-link">Networking Meetups</a>
+                            <a href="#" class="footer-link">Excellence Awards</a>
+                            <a href="#" class="footer-link">Latest News</a>
+                        </div>
+                        <div class="col-lg-3 col-md-6 ">
+                            <h5 class="footer-section-title">Support & Community</h5>
+                            <a href="#" class="footer-link">Help Center</a>
+                            <a href="#" class="footer-link">FAQs</a>
+                            <a href="#" class="footer-link">Contact Us</a>
+                            <a href="#" class="footer-link">Submit a Support Ticket</a>
+                            <a href="#" class="footer-link">Request a Feature</a>
+                            <a href="#" class="footer-link">Community Guidelines</a>
+
+                            <h5 class="footer-section-title " style="margin-top: 100px;">Legal & Security</h5>
+                            <a href="#" class="footer-link">Privacy Policy</a>
+                            <a href="#" class="footer-link">Terms & Conditions</a>
+                            <a href="#" class="footer-link">Data Protection Policy</a>
+                            <a href="#" class="footer-link">User Verification & Security</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <div class="footer-copyright">
+                        © 2025 Afghan Business Connect. All rights reserved.
+                    </div>
+                    <div class="footer-social">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+
+
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/nouislider@15.6.1/dist/nouislider.min.js"></script>
+
+<script>
+    const container = document.getElementById('rolesContainer');
+    const scrollContainer = document.getElementById('scrollContainer');
+    let scrollInterval;
+    let isUserInteracting = false;
+
+    // Hover-based scrolling
+    scrollContainer.addEventListener('mouseenter', () => {
+        if (!isUserInteracting) {
+            startAutoScroll();
+        }
+    });
+
+    scrollContainer.addEventListener('mouseleave', () => {
+        stopAutoScroll();
+    });
+
+    // Mouse position-based scroll direction and speed
+    scrollContainer.addEventListener('mousemove', (e) => {
+        if (isUserInteracting) return;
+
+        const rect = scrollContainer.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const containerWidth = rect.width;
+        const centerX = containerWidth / 2;
+
+        // Calculate scroll direction and speed based on mouse position
+        const distanceFromCenter = x - centerX;
+        const maxDistance = containerWidth / 2;
+        const scrollSpeed = (distanceFromCenter / maxDistance) * 3; // Max speed of 3
+
+        clearInterval(scrollInterval);
+
+        if (Math.abs(scrollSpeed) > 0.1) {
+            scrollInterval = setInterval(() => {
+                container.scrollLeft += scrollSpeed;
+            }, 16); // ~60fps
+        }
+    });
+
+    function startAutoScroll() {
+        scrollInterval = setInterval(() => {
+            container.scrollLeft += 1;
+
+            // Reset to beginning when reaching end
+            if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
+                container.scrollLeft = 0;
+            }
+        }, 30);
+    }
+
+    function stopAutoScroll() {
+        clearInterval(scrollInterval);
+    }
+
+    // Drag scrolling functionality
+    let isDown = false;
+    let startX;
+    let scrollLeftPos;
+
+    container.addEventListener('mousedown', (e) => {
+        isDown = true;
+        isUserInteracting = true;
+        stopAutoScroll();
+        container.style.cursor = 'grabbing';
+        startX = e.pageX - container.offsetLeft;
+        scrollLeftPos = container.scrollLeft;
+    });
+
+    container.addEventListener('mouseleave', () => {
+        isDown = false;
+        isUserInteracting = false;
+        container.style.cursor = 'grab';
+    });
+
+    container.addEventListener('mouseup', () => {
+        isDown = false;
+        isUserInteracting = false;
+        container.style.cursor = 'grab';
+
+        // Resume auto-scroll after a short delay
+        setTimeout(() => {
+            if (!isUserInteracting) {
+                startAutoScroll();
+            }
+        }, 1000);
+    });
+
+    container.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - container.offsetLeft;
+        const walk = (x - startX) * 2;
+        container.scrollLeft = scrollLeftPos - walk;
+    });
+
+    // Touch support for mobile
+    let touchStartX = 0;
+    let touchScrollLeft = 0;
+
+    container.addEventListener('touchstart', (e) => {
+        isUserInteracting = true;
+        stopAutoScroll();
+        touchStartX = e.touches[0].clientX;
+        touchScrollLeft = container.scrollLeft;
+    });
+
+    container.addEventListener('touchmove', (e) => {
+        if (!touchStartX) return;
+        const touchX = e.touches[0].clientX;
+        const diff = touchStartX - touchX;
+        container.scrollLeft = touchScrollLeft + diff;
+    });
+
+    container.addEventListener('touchend', () => {
+        isUserInteracting = false;
+        touchStartX = 0;
+
+        // Resume auto-scroll after touch ends
+        setTimeout(() => {
+            if (!isUserInteracting) {
+                startAutoScroll();
+            }
+        }, 1000);
+    });
+
+    // Prevent default link behavior during drag
+    container.addEventListener('click', (e) => {
+        if (isUserInteracting) {
+            e.preventDefault();
+        }
+    });
+
+    // Start auto-scroll on page load
+    window.addEventListener('load', () => {
+        setTimeout(startAutoScroll, 1000);
+    });
+</script>
+
+</html>

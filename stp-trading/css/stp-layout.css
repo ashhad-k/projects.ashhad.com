@@ -1,0 +1,472 @@
+/**
+ * Layout shell — load after stp-tokens.css.
+ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body.stp-site {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--stp-page-bg);
+}
+
+.stp-page-bg {
+  background-color: var(--stp-page-bg);
+}
+
+.stp-shell {
+  margin-left: var(--stp-shell-gap);
+  margin-right: var(--stp-shell-gap);
+  margin-top: var(--stp-shell-gap);
+  margin-bottom: var(--stp-shell-gap);
+  width: auto;
+  max-width: calc(100% - (2 * var(--stp-shell-gap)));
+  margin-inline: auto;
+  border-radius: var(--stp-radius-shell);
+  overflow: hidden;
+}
+
+/**
+ * Flat band on page background — same horizontal shell width as .stp-shell,
+ * but no white fill and no outer radius (content sits on --stp-page-bg).
+ * Pair with inner `.container` / `.row` like framed sections.
+ */
+.stp-shell.stp-band-flat {
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
+}
+
+/* Overlap bands need visible overflow for shadows */
+.stp-shell:is(
+    .stp-band-flat,
+    .stp-overlap-hero,
+    .stp-overlap-pull,
+    .stp-about-stats-overlap,
+    .stp-edu-stats-overlap,
+    .stp-ib-stats-overlap,
+    .stp-vps-overlap,
+    .stp-neg-overlap,
+    [class*="-overlap"]
+  ) {
+  overflow: visible;
+}
+
+/**
+ * Rounded shell band (20px) for page headers and white content blocks.
+ * Use with .stp-shell — overrides default --stp-radius-shell.
+ */
+.stp-shell.stp-shell--radius {
+  border-radius: 20px;
+}
+
+/**
+ * Utility strip above main header (language, quick links). Flush to shell gutters.
+ * Typography matches Figma 18:21616 / .stp-chrome `.stp-lang-*`, `.stp-util-*` (12px #333 Instrument Sans).
+ */
+.stp-shell.stp-utility-shell {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  /* breathing room between the utility row and the pinned nav below it */
+  padding-bottom: 10px;
+  border-radius: 0;
+  font-family: var(--stp-font-sans);
+  font-size: 12px;
+  color: var(--stp-body);
+}
+
+.stp-shell.stp-utility-shell > .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Utility strip hidden on small screens (Bootstrap d-md-block on markup is primary) */
+.stp-shell.stp-utility-shell {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  .stp-shell.stp-utility-shell {
+    display: block !important;
+  }
+}
+
+/**
+ * Internal page header band: nav + optional intro hero in a white rounded shell.
+ * Pair with .stp-shell.stp-shell--radius.bg-white. Overflow visible for nav dropdowns.
+ */
+.stp-shell.stp-page-header-shell {
+  overflow: visible;
+}
+
+body.stp-mobile-nav-open {
+  overflow: hidden;
+}
+
+.stp-page-header-shell > .stp-container.stp-container--fluid {
+  border-bottom: 1px solid #f3f3f3;
+  border-top-left-radius: var(--stp-radius-shell);
+  border-top-right-radius: var(--stp-radius-shell);
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+/** Marketing nav band — pinned for full-page scroll; height/top set in js/site.js.
+ *  Extra gap below the bar so page content isn't tight against the nav. */
+.stp-page-header-shell:has(.stp-main-nav) {
+  padding-top: calc(var(--stp-nav-pinned-height, 0px) + 14px);
+}
+
+.stp-page-header-shell:has(.stp-main-nav) > .stp-container.stp-container--fluid {
+  position: fixed;
+  left: var(--stp-shell-gap);
+  right: var(--stp-shell-gap);
+  width: calc(100% - (2 * var(--stp-shell-gap)));
+  margin-inline: auto;
+  z-index: 1045;
+}
+
+/** Minimal internal header: decorative corner art (shared asset; not page-named). */
+.stp-page-header-shell.stp-page-header-shell--minimal {
+  background-color: #fff;
+  /* background-image: url("../assets/bg/hero-home.svg"); — replaced by .stp-page-header-hero--lines */
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
+}
+
+.stp-page-header-hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: 35px;
+}
+
+.stp-page-header-hero:has(.stp-page-header-hero__below),
+.stp-page-header-hero:has(.stp-page-header-hero__rail) {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+}
+
+.stp-page-header-hero__below {
+  width: 100%;
+}
+
+.stp-page-header-hero__awards {
+  margin-block: 60px;
+}
+
+.stp-page-header-hero__rail {
+  width: 100%;
+  overflow: hidden;
+  border-bottom-left-radius: var(--stp-radius-shell);
+  border-bottom-right-radius: var(--stp-radius-shell);
+}
+
+.stp-page-header-hero h1 {
+  margin: 0 0 12px;
+  color: #0b0f20;
+  font-family: var(--stp-font-sans);
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.12;
+}
+
+.stp-page-header-hero .lead {
+  margin: 0;
+  max-width: 44rem;
+  color: #333;
+  font-family: var(--stp-font-sans);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.stp-container {
+  width: 100%;
+  max-width: var(--stp-content-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(12px, 3vw, 24px);
+  padding-right: clamp(12px, 3vw, 24px);
+  box-sizing: border-box;
+}
+
+.stp-container.stp-container--flush {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.stp-container.stp-container--fluid {
+  max-width: none;
+}
+
+/* Bootstrap .container — same content width as .stp-container (1140px) site-wide */
+body.stp-site .container {
+  width: 100%;
+  max-width: var(--stp-content-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(12px, 3vw, 24px);
+  padding-right: clamp(12px, 3vw, 24px);
+  box-sizing: border-box;
+}
+
+/**
+ * Standard page sections — match Figma band spacing (tokens: --stp-section-py*).
+ * New HTML sections: use `section.stp-shell.pt-40` outside (shell margin + 40px top), `.stp-page-section` ± `--framed` on inner `.container` / `.container-fluid`.
+ */
+.pt-80 {
+  padding-top: var(--stp-pt-80, 80px);
+}
+
+/** Standard section band — 80px top and bottom (Figma section rhythm). */
+.py-80 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/**
+ * White shell band with decorative edge patterns (Figma pattern-top / pattern-bottom).
+ * Pair with .stp-shell.stp-shell--radius.bg-white.py-80 and fluid inner .container-fluid.
+ */
+.stp-band-patterned {
+  position: relative;
+  background: #fff;
+}
+
+.stp-band-patterned::before,
+.stp-band-patterned::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  aspect-ratio: 1549 / 359;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.stp-band-patterned::before {
+  top: 0;
+  background-image: url("../assets/bg/pattern-top.svg");
+  background-position: center top;
+}
+
+.stp-band-patterned::after {
+  bottom: 0;
+  background-image: url("../assets/bg/pattern-bottom.svg");
+  background-position: center bottom;
+}
+
+.stp-band-patterned__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.pt-40 {
+  padding-top: var(--stp-pt-40, 40px);
+}
+
+.pt-50 {
+  padding-top: var(--stp-pt-50, 50px);
+}
+
+/**
+ * Overlap pull — negative top margin = half of overlapped element height.
+ * Set --stp-overlap-height on the shell (total height of the card/stats/pill strip).
+ * Pair with .pb-80 on the shell so box-shadow bleed is not clipped.
+ */
+.stp-overlap-pull,
+.stp-overlap-hero,
+.stp-about-stats-overlap,
+.stp-edu-stats-overlap,
+.stp-ib-stats-overlap,
+.stp-vps-overlap,
+.stp-neg-overlap,
+.stp-page-champions .stp-champ-tabs-overlap {
+  position: relative;
+  z-index: 4;
+  margin-top: calc(var(--stp-overlap-height) / -2);
+}
+
+.stp-page-champions .stp-champ-tabs-overlap {
+  z-index: 6;
+}
+
+/* Dark stats band — mobile base (2-col / stacked content) */
+.stp-about-stats-overlap,
+.stp-edu-stats-overlap,
+.stp-ib-stats-overlap,
+.stp-vps-overlap {
+  --stp-overlap-height: 280px;
+}
+
+.stp-overlap-hero {
+  --stp-overlap-height: 300px;
+}
+
+.stp-neg-overlap {
+  --stp-overlap-height: 320px;
+}
+
+.stp-page-champions .stp-champ-tabs-overlap {
+  --stp-overlap-height: 52px;
+}
+
+@media (min-width: 576px) {
+  .stp-about-stats-overlap,
+  .stp-edu-stats-overlap,
+  .stp-ib-stats-overlap,
+  .stp-vps-overlap {
+    --stp-overlap-height: 260px;
+  }
+
+  .stp-overlap-hero {
+    --stp-overlap-height: 280px;
+  }
+
+  .stp-neg-overlap {
+    --stp-overlap-height: 280px;
+  }
+
+  .stp-page-champions .stp-champ-tabs-overlap {
+    --stp-overlap-height: 56px;
+  }
+}
+
+@media (min-width: 992px) {
+  .stp-about-stats-overlap,
+  .stp-edu-stats-overlap,
+  .stp-ib-stats-overlap,
+  .stp-vps-overlap {
+    --stp-overlap-height: 198px;
+  }
+
+  .stp-overlap-hero {
+    --stp-overlap-height: 134px;
+  }
+
+  .stp-neg-overlap {
+    --stp-overlap-height: 176px;
+  }
+
+  .stp-page-champions .stp-champ-tabs-overlap {
+    --stp-overlap-height: 58px;
+  }
+}
+
+/* Responsive: stack overlap bands below header — no negative pull */
+@media (max-width: 991.98px) {
+  .stp-overlap-pull,
+  .stp-overlap-hero,
+  .stp-about-stats-overlap,
+  .stp-edu-stats-overlap,
+  .stp-ib-stats-overlap,
+  .stp-vps-overlap,
+  .stp-neg-overlap,
+  .stp-page-champions .stp-champ-tabs-overlap {
+    --stp-overlap-height: 0;
+    margin-top: 0;
+  }
+}
+
+/* Generic padding-bottom utilities — mobile-first */
+.pb-40 {
+  padding-bottom: 24px !important;
+}
+
+.pb-60 {
+  padding-bottom: 40px !important;
+}
+
+.pb-80 {
+  padding-bottom: 48px !important;
+}
+
+@media (min-width: 992px) {
+  .pb-40 {
+    padding-bottom: 40px !important;
+  }
+
+  .pb-60 {
+    padding-bottom: 60px !important;
+  }
+
+  .pb-80 {
+    padding-bottom: 80px !important;
+  }
+}
+
+/* Generic fixed-height spacers */
+.h-48 {
+  height: 48px !important;
+}
+
+.h-60 {
+  height: 60px !important;
+}
+
+/* Generic margin-top utilities (override .stp-shell default margin-top). */
+.mt-60 {
+  margin-top: 40px !important;
+}
+
+.mt-80 {
+  margin-top: 80px !important;
+}
+
+/** Explicit px alias (same as `.mt-80`) — use with section bands e.g. STP Portal app band */
+.mt-80px {
+  margin-top: 80px !important;
+}
+
+.mt-100 {
+  margin-top: 100px !important;
+}
+
+@media (min-width: 992px) {
+  .mt-60 {
+    margin-top: 60px !important;
+  }
+}
+
+/* Generic margin-bottom utilities (override .stp-shell default margin-bottom). */
+.mb-80 {
+  margin-bottom: 80px !important;
+}
+
+.mb-100 {
+  margin-bottom: 100px !important;
+}
+
+section.stp-shell.pt-40 > .container.stp-page-section,
+section.stp-shell.pt-40 > .container-fluid.stp-page-section,
+section.stp-shell.pt-80 > .container.stp-page-section,
+section.stp-shell.pt-80 > .container-fluid.stp-page-section {
+  padding-top: 0;
+}
+
+.stp-page-section {
+  padding-block: var(--stp-section-py);
+}
+
+.stp-page-section--framed {
+  padding-block: var(--stp-section-py-framed);
+}
+
+.stp-page-section:not(.stp-page-section--framed):has(+ .stp-page-section--framed),
+.stp-acct-section:not(.stp-acct-section--steps):has(+ .stp-acct-section--steps),
+section.stp-shell.pt-40:has(+ section.stp-shell .stp-page-section--framed),
+section.stp-shell.pt-80:has(+ section.stp-shell .stp-page-section--framed)
+  > .container.stp-page-section:not(.stp-page-section--framed) {
+  padding-bottom: 0;
+}

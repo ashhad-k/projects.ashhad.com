@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Konsulado &middot; the pages in this folder</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<style>
+:root{--paper:#FAF8F3;--ink:#12141E;--ink2:#495166;--ink3:#7A8394;--line:#E9E2D5}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+     font:15px/1.55 "Inter",system-ui,sans-serif;padding:52px 28px 90px}
+.w{max-width:940px;margin:0 auto}
+h1{font-family:"Funnel Display",sans-serif;font-size:34px;letter-spacing:-.03em;margin:0}
+.sub{color:var(--ink2);margin:10px 0 0;max-width:62ch}
+h2{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+   color:var(--ink3);margin:44px 0 14px;display:flex;align-items:center;gap:12px}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
+.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+a.c{display:block;background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px 18px;
+    text-decoration:none;color:inherit;transition:border-color .16s,box-shadow .2s,transform .2s}
+a.c:hover{border-color:#D4C9B4;box-shadow:0 14px 30px -18px rgba(13,33,72,.4);transform:translateY(-1px)}
+a.c b{font-size:16px;display:block}
+a.c p{margin:6px 0 0;font-size:13.5px;color:var(--ink2);line-height:1.45}
+</style></head><body><div class="w">
+<h1>Konsulado</h1>
+<p class="sub">Every page in this folder, and the deep links worth knowing. The site
+   itself starts at <a href="index.html">index.html</a>. See <code>README.md</code>
+   for how the files are put together.</p>
+<h2>The journey</h2><div class="g">
+<a class="c" href="index.html"><b>1 &middot; Homepage</b><p>The public site, and the front door: <code>index.html</code>.</p></a>
+<a class="c" href="onboarding.html"><b>2 · Setting up</b><p>The sign-up journey, new and returning. Ends by handing over to the application.</p></a>
+<a class="c" href="konsulado.html"><b>3 &middot; the application</b><p>The whole application — 83 views, one page, no framework.</p></a>
+</div>
+<h2>Single-file prototypes</h2><div class="g">
+<a class="c" href="prototypes/Konsulado.html"><b>The application, in one file</b><p>Everything inlined. Nothing to install &mdash; open it and it works, even from a USB stick.</p></a>
+</div>
+<h2>Deep links worth knowing</h2><div class="g">
+<a class="c" href="konsulado.html#renew"><b>Renew a passport</b><p>Any view can be linked directly: <code>konsulado.html#&lt;view&gt;</code>.</p></a>
+<a class="c" href="konsulado.html#sos"><b>Emergency</b><p>The homepage links straight here from its emergency section.</p></a>
+<a class="c" href="konsulado.html#docs"><b>The vault</b><p>Every entry says what it rests on &mdash; proved, given by you, or issued by this post.</p></a>
+</div></div></body></html>

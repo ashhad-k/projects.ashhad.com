@@ -1,0 +1,95 @@
+/**
+ * Design tokens — STP Trading (aligned with Figma exports).
+ *
+ * ── Section spacing (4px grid) — apply to every new page section from Figma ──
+ * • Outer band:   padding-block: var(--stp-section-py) [36px] or --stp-section-py-framed [50px]
+ * • Kicker → H2:  margin-bottom on kicker: var(--stp-stack-kicker-mb) [16px]
+ * • H2 → content: margin-bottom on title: var(--stp-stack-title-mb) [56px]
+ * • Block → block: gap / margin-bottom: var(--stp-stack-block-gap) [56px]
+ * Outer band: `section.stp-shell.pt-40` (shell gutters + .pt-40 top; shell already has margin-top); inner: `.container` or `.container-fluid` with `.stp-page-section` (± --framed).
+ */
+
+:root {
+  /* 4px grid — multiples only for layout spacing */
+  --stp-grid: 4px;
+
+  /* Default section vertical padding (e.g. account cards rail) */
+  --stp-section-py: 36px;
+
+  /* Framed section / focal band — large top & bottom gutter (steps + CTA style) */
+  --stp-section-py-framed: 50px;
+
+  /* Section shell top padding (pairs with .stp-shell margin-top) */
+  --stp-pt-80: 80px;
+  --stp-pt-50: 50px;
+
+  /* Stacked typography inside a section */
+  --stp-stack-kicker-mb: 16px;
+  --stp-stack-title-mb: 56px;
+  --stp-stack-block-gap: 56px;
+
+  /* Nested marketing card padding (e.g. step tiles) */
+  --stp-card-pad-sm: 24px;
+
+  /* Footer band (multiples of 4) */
+  --stp-footer-py: 80px;
+  /* PNG homepage reference uses vibrant brand red */
+  --stp-primary: #e03528;
+  --stp-primary-hover: #c42b1f;
+  --stp-accent-10: rgba(224, 53, 40, 0.1);
+  --stp-accent-40: rgba(224, 53, 40, 0.4);
+  --stp-primary-shadow: 0 10px 12.5px rgba(224, 53, 40, 0.25);
+  /* Standard hover surface for rows / list items */
+  --stp-hover-surface: rgba(224, 53, 40, 0.12);
+  /* Comparison table row hover (very light rose — social vs manual) */
+  --stp-compare-row-hover-bg: #fef2f2;
+  --stp-body: #333333;
+  --stp-heading-deep: #0b0f20;
+  --stp-muted: #666666;
+  --stp-white: #ffffff;
+  --stp-page-bg: #f8f9fc;
+  --stp-card-border: #ececec;
+  --stp-award-strip-bg: #f8f9fc;
+  --stp-stats-bg: #262626;
+  --stp-ticker-bar-bg: #1a1a2e;
+  /* Soft row fill inside cards (label/value rails, dense stats, etc.) */
+  --stp-surface-row: #f8f9fc;
+  --stp-footer-bg: #151515;
+  --stp-footer-muted: rgba(255, 255, 255, 0.6);
+  --stp-nav-link: #333333;
+  --stp-shell-gap: 16px;
+  --stp-content-max: 1140px;
+  --stp-radius-shell: 20px;
+  --stp-radius-btn: 100px;
+  --stp-radius-card: 20px;
+  --stp-radius-input: 6px;
+  --stp-font-sans: "Instrument Sans", system-ui, sans-serif;
+  --stp-font-ui: "Bai Jamjuree", Georgia, serif;
+  --stp-font-logo: "Blinker", sans-serif;
+
+  /**
+   * Hero animated flank lines (.stp-page-header-hero--lines + partials/hero-lines.html)
+   * Vertical 48px @ 0.50; diagonal 80px @ 0.30
+   */
+  --stp-hero-line-gap: 48px;
+  --stp-hero-line-opacity: 0.5;
+  --stp-hero-slant-gap: 80px;
+  --stp-hero-slant-opacity: 0.3;
+  --stp-hero-line-color: #d9d9d9;
+  --stp-hero-line-glow: rgba(224, 53, 40, 0.42);
+  --stp-hero-line-track: rgba(217, 217, 217, var(--stp-hero-line-opacity));
+  --stp-hero-slant-track: rgba(217, 217, 217, var(--stp-hero-slant-opacity));
+  --stp-hero-slant-offset: calc(var(--stp-hero-slant-gap) / 2);
+
+  /* Breakpoints (Bootstrap 5 aligned) — use in min-width media queries */
+  --stp-bp-sm: 576px;
+  --stp-bp-md: 768px;
+  --stp-bp-lg: 992px;
+  --stp-bp-xl: 1200px;
+}
+
+@media (min-width: 576px) {
+  :root {
+    --stp-shell-gap: 24px;
+  }
+}

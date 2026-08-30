@@ -1,0 +1,118 @@
+/* ============ W1 · applications ============ */
+.apc{background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--sh-1);
+  display:grid;grid-template-columns:minmax(0,1fr) 288px;overflow:hidden;
+  transition:box-shadow .24s var(--ease),border-color .2s,transform .24s var(--ease)}
+.apc:hover{box-shadow:var(--sh-2);border-color:var(--line-2);transform:translateY(-1px)}
+.apc+.apc{margin-top:14px}
+@media(max-width:900px){.apc{grid-template-columns:1fr}}
+
+.apc-m{padding:19px 21px;min-width:0;display:flex;flex-direction:column;text-align:start;width:100%}
+.apc-t{display:flex;align-items:flex-start;gap:13px;margin-bottom:3px}
+.apc-t .ai2{width:42px;height:42px;border-radius:12px;background:var(--sunken);border:1px solid var(--line);
+  display:grid;place-items:center;flex:none;transition:background .2s,border-color .2s}
+.apc:hover .apc-t .ai2{background:var(--pri-soft);border-color:#CFDDF2}
+.apc-t .ai2 svg{width:20px;height:20px;color:var(--ink-2);transition:color .2s}
+.apc:hover .apc-t .ai2 svg{color:var(--pri)}
+.apc-t .tt{flex:1;min-width:0}
+.apc-t h3{font-size:18px;letter-spacing:-.03em;line-height:1.2}
+.apc-t .rf{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink-3);
+  display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-top:5px}
+.apc-t .rf i{width:3px;height:3px;border-radius:50%;background:var(--line-3);display:block}
+
+/* the rail, with its stage names under it */
+.aprail{margin-top:17px}
+/* the rail names the stage it is on, and nothing else */
+.apnow{display:flex;align-items:baseline;gap:11px;flex-wrap:wrap;margin-top:11px}
+.apnow .stp{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--ink-4)}
+.apnow .nm{font-size:14px;font-weight:600;color:var(--pri)}
+.apnow .nm.ok{color:var(--ok)}
+.apnow .tm{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--ink-4);margin-left:auto}
+
+/* where it physically is */
+/* the two most recent things that actually happened — it fills the card
+   with the one thing a user opens it for, instead of white space */
+.aplog{display:grid;gap:0;margin-top:16px;padding-top:14px;border-top:1px dashed var(--line-2)}
+.lgr{display:grid;grid-template-columns:9px minmax(0,1fr) auto;gap:11px;align-items:start;padding:7px 0}
+.lgr i{width:7px;height:7px;border-radius:50%;background:var(--ok);margin-top:6px;display:block}
+.lgr i.now{background:var(--pri);box-shadow:0 0 0 3px var(--pri-soft)}
+.lgr .lgt{min-width:0}
+.lgr b{display:block;font-size:13px;font-weight:600;line-height:1.35}
+.lgr small{font-size:12px;color:var(--ink-3);line-height:1.45;margin-top:2px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.lgr time{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--ink-4);white-space:nowrap;padding-top:3px}
+@media(max-width:560px){.lgr time{display:none}}
+
+.apwhere{display:flex;align-items:center;gap:10px;margin-top:auto;padding-top:15px;
+  border-top:1px solid var(--line);font-size:13.5px;color:var(--ink-2)}
+.apc-m>.aprail{margin-bottom:17px}
+.apwhere .wt{min-width:0}
+.apwhere .opn{display:none;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:var(--pri);
+  white-space:nowrap}
+.apwhere .opn svg{width:13px;height:13px;transition:transform .2s var(--ease)}
+.apc:hover .apwhere .opn{display:inline-flex}
+.apc:hover .apwhere .el{display:none}
+.apc:hover .apwhere .opn svg{transform:translateX(3px)}
+.apwhere .wi{width:28px;height:28px;border-radius:9px;background:var(--pri-soft);display:grid;place-items:center;flex:none}
+.apwhere .wi svg{width:15px;height:15px;color:var(--pri)}
+.apwhere b{font-weight:600;color:var(--ink)}
+.apwhere .el{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-3);white-space:nowrap}
+
+/* the next-thing panel */
+.apc-n{background:var(--paper);border-left:1px solid var(--line);padding:19px 20px;
+  display:flex;flex-direction:column;gap:0}
+@media(max-width:900px){.apc-n{border-left:0;border-top:1px solid var(--line)}}
+.apc-n em{font-style:normal;font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink-4);display:block;margin-bottom:9px}
+.apc-n b{font-size:14.5px;font-weight:600;line-height:1.35;display:block}
+.apc-n p{margin:6px 0 0;font-size:12.5px;color:var(--ink-3);line-height:1.5}
+.apc-n .when{display:inline-flex;align-items:center;gap:7px;margin-top:12px;font-family:"IBM Plex Mono",monospace;
+  font-size:11px;letter-spacing:.05em;color:var(--ink-2);background:var(--white);border:1px solid var(--line);
+  border-radius:var(--r-pill);padding:5px 11px}
+.apc-n .when svg{width:12px;height:12px;color:var(--ink-3)}
+.apc-n .k-btn{margin-top:auto;width:100%}
+.apc-n .k-btn.sm{margin-top:15px}
+.apc-n.act{background:var(--gold-soft);border-left-color:var(--gold-line)}
+.apc-n.act em{color:var(--gold)}
+@media(max-width:900px){.apc-n.act{border-top-color:var(--gold-line)}}
+
+/* ---- the detail view -------------------------------------------- */
+.apd-h{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:start;
+  padding-bottom:18px;margin-bottom:20px;border-bottom:1px solid var(--line)}
+@media(max-width:760px){.apd-h{grid-template-columns:1fr}}
+.apd-h h1{font-size:clamp(24px,2.8vw,33px);line-height:1.06;letter-spacing:-.04em;color:var(--navy)}
+.apd-h .rf2{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--ink-3);margin-top:9px;
+  display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.apd-h .rf2 button{font:inherit;color:var(--pri);display:inline-flex;align-items:center;gap:5px}
+.apd-h .rf2 button svg{width:13px;height:13px}
+
+/* a document attached to an application */
+.apdoc{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:12px;align-items:center;
+  padding:11px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+.apdoc:last-child{border-bottom:0;padding-bottom:0}
+.apdoc:first-child{padding-top:0}
+.apdoc .di{width:34px;height:34px;border-radius:10px;background:var(--sunken);display:grid;place-items:center}
+.apdoc .di svg{width:16px;height:16px;color:var(--ink-3)}
+.apdoc b{display:block;font-weight:600}
+.apdoc small{display:block;font-size:11.5px;color:var(--ink-3);margin-top:2px}
+
+/* the fee ledger on a detail page */
+.apfee{display:grid;gap:0;font-size:13.5px}
+.apfee div{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px solid var(--line)}
+.apfee div:first-child{padding-top:0}
+.apfee div.tot{border-bottom:0;padding-bottom:0;padding-top:12px;font-weight:600;font-size:15px;color:var(--navy)}
+.apfee span{color:var(--ink-2)}
+.apfee b{font-family:"IBM Plex Mono",monospace;font-weight:600}
+
+/* detail-view pieces — kept as classes so the markup a backend dev
+   receives has no inline style to unpick */
+.apd-a{display:flex;gap:9px;align-items:center;flex-wrap:wrap}
+.nxt2{font-size:15px;display:block;line-height:1.35;font-weight:600}
+.nxp{margin:7px 0 0;font-size:13px;color:var(--ink-2);line-height:1.55}
+.wchip{display:inline-flex;align-items:center;gap:7px;margin-top:13px;font-family:"IBM Plex Mono",monospace;
+  font-size:11px;color:var(--ink-2);background:var(--paper);border:1px solid var(--line);
+  border-radius:var(--r-pill);padding:5px 11px}
+.wchip svg{width:12px;height:12px;flex:none;color:var(--ink-3)}
+.k-btn.wide{width:100%;margin-top:14px}
+.paidon{margin:12px 0 0;font-size:12px;color:var(--ink-3);line-height:1.5}
+.mb20{margin-bottom:20px}.mt20{margin-top:20px}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="../media/favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create an account — Investor & Business Portal</title>
+<meta name="description" content="Create an investor or business account on the Invest in Afghanistan portal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/portal.css">
+</head>
+<body>
+<main class="auth">
+ <div class="gmesh"></div>
+
+ <div class="card wide">
+  <a class="lg" href="../index.html"><img class="logoimg" src="../media/logo_grey.png" alt="Invest in Afghanistan" width="691" height="289"></a>
+
+  <div class="astep"><i class="on"></i><i></i><i></i></div>
+
+  <form class="af" data-af data-next="verify.html">
+   <div class="h">Create your account</div>
+   <div class="sub">One account covers registration, licensing and investment. Start by telling us who you are.</div>
+
+   <div class="acct">
+    <label>
+     <input type="radio" name="atype" value="business" checked>
+     <span class="ic-w"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 9h1M9 13h1M14 9h1M14 13h1"/></svg></span>
+     <b>Business owner</b><span>Register a company, apply for a trade licence or trademark.</span>
+     <span class="tk"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-11"/></svg></span>
+    </label>
+    <label>
+     <input type="radio" name="atype" value="investor">
+     <span class="ic-w"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 7-7"/><path d="M14 8h6v6"/></svg></span>
+     <b>Investor</b><span>Register an investment, request land or track incentives.</span>
+     <span class="tk"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-11"/></svg></span>
+    </label>
+   </div>
+
+   <div class="fld row2">
+    <div><label>First name</label><div class="ip"><input type="text" placeholder="First name" required></div></div>
+    <div><label>Last name</label><div class="ip"><input type="text" placeholder="Last name" required></div></div>
+   </div>
+
+   <div class="fld"><label>Email address</label>
+    <div class="ip ic"><input type="email" placeholder="you@company.com" required>
+     <svg class="lic" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div></div>
+
+   <div class="fld"><label>Mobile number</label>
+    <div class="ip tel"><select class="ccode" aria-label="Country dialling code"><option value="+93" selected>🇦🇫 +93</option><option value="+92">🇵🇰 +92</option><option value="+98">🇮🇷 +98</option><option value="+992">🇹🇯 +992</option><option value="+998">🇺🇿 +998</option><option value="+993">🇹🇲 +993</option><option value="+86">🇨🇳 +86</option><option value="+91">🇮🇳 +91</option><option value="+971">🇦🇪 +971</option><option value="+966">🇸🇦 +966</option><option value="+90">🇹🇷 +90</option><option value="+974">🇶🇦 +974</option><option value="+44">🇬🇧 +44</option><option value="+1">🇺🇸 +1</option><option value="+49">🇩🇪 +49</option></select><input type="tel" inputmode="numeric" placeholder="7XX XXX XXX" required></div>
+    <div class="hint">We&rsquo;ll send a one-time verification code to this number.</div></div>
+
+   <div class="fld">
+    <div class="row2">
+     <div><label>Password</label>
+      <div class="ip ic"><input type="password" placeholder="Create a password" data-pw data-strength="#pwm" required style="padding-right:62px">
+       <svg class="lic" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>
+       <button type="button" class="toggle" data-toggle>Show</button></div></div>
+     <div><label>Confirm password</label>
+      <div class="ip ic"><input type="password" placeholder="Re-enter password" data-pwc required style="padding-right:62px">
+       <svg class="lic" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>
+       <button type="button" class="toggle" data-toggle>Show</button></div></div>
+    </div>
+    <div class="pw-meter" id="pwm"><i></i><i></i><i></i><i></i></div>
+    <div class="pw-lab">At least 8 characters, with a capital and a number.</div>
+    <div class="pw-mismatch" data-pwmsg>Passwords don&rsquo;t match.</div></div>
+
+   <label class="consent"><input type="checkbox" required><span>I agree to the <a href="#">Terms of Use</a> and <a href="#">Privacy Notice</a>, and consent to the Ministry processing my details for registration and licensing.</span></label>
+
+   <button type="submit" class="pillbtn ink btn">Create account &rarr;</button>
+
+   <div class="alt">Already registered? <a href="login.html">Sign in</a></div>
+  </form>
+ </div>
+
+ <p class="foot-note">Ministry of Industry &amp; Commerce &middot; Investor &amp; Business Portal</p>
+</main>
+<script src="assets/portal.js"></script>
+</body>
+</html>

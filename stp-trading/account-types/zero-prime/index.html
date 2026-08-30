@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="stp-active" content="/account-types/zero-prime" />
+  <title>Zero Prime Account - STP Trading</title>
+  <meta name="description" content="Zero Prime — raw spreads from 0.0 pips, $3.50 commission, $3,000 minimum at STP Trading." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600&family=Blinker:wght@300;400;600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../../css/stp-tokens.css" rel="stylesheet" />
+  <link href="../../css/stp-layout.css" rel="stylesheet" />
+  <link href="../../css/stp-components.css" rel="stylesheet" />
+  <link href="../../css/stp-account-types.css" rel="stylesheet" />
+  <!-- Clone of account-types/zero/index.html; tailored for Zero Prime (overview hub specs). -->
+</head>
+<body class="stp-site stp-page-account-types">
+<a class="visually-hidden-focusable position-absolute top-0 start-0 p-2 bg-white" href="#main">Skip to content</a>
+
+  <!-- BEGIN inlined stp-shell-utility (utility) sync: node scripts/sync-account-partials.mjs -->
+<div class="stp-shell stp-utility-shell d-none d-md-block">
+  <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap gap-2 gap-md-3">
+    <div class="stp-util-links">
+      <a class="stp-util-fund" href="#">
+        <svg class="stp-util-icon stp-util-icon--badge" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" fill="currentColor" />
+          <text x="12" y="16" text-anchor="middle" fill="#fff" font-size="12" font-weight="700" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">$</text>
+        </svg>
+        Fund your Account
+      </a>
+    </div>
+    <div class="stp-util-links">
+      <a href="../../contact/index.html">
+        <svg class="stp-util-icon stp-util-icon--badge" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" fill="#333" />
+          <text x="12" y="15.5" text-anchor="middle" fill="#fff" font-size="10" font-weight="700" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">@</text>
+        </svg>
+        Contact Us
+      </a>
+      <a href="../../faq/index.html">
+        <svg class="stp-util-icon stp-util-icon--badge" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" fill="#333" />
+          <text x="12" y="16.25" text-anchor="middle" fill="#fff" font-size="12" font-weight="700" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">?</text>
+        </svg>
+        Help
+      </a>
+    </div>
+  </div>
+</div>
+<!-- END inlined stp-shell-utility -->
+
+  <main id="main">
+    <!-- ── NAV + intro (minimal internal page header; reusable) ── -->
+    <div class="stp-shell mb-3 stp-page-header-shell stp-page-header-shell--minimal">
+      <div class="stp-container stp-container--fluid">
+        <!-- BEGIN inlined account-marketing-navbar (navbar) sync: node scripts/sync-account-partials.mjs -->
+<nav class="navbar navbar-expand-lg stp-main-nav py-3 align-items-center position-relative" aria-label="Primary">
+  <a class="navbar-brand py-0 me-4 d-flex align-items-center gap-2" href="../../index.html" data-nav-path="/">
+    <img class="stp-logo-full" src="../../assets/logos/stp-trading.svg" alt="STP Trading" />
+  </a>
+  <button
+    class="navbar-toggler stp-nav-toggler border-0 shadow-none ms-auto"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#stpNavMarketing"
+    aria-controls="stpNavMarketing"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="stp-nav-hamburger" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+  </button>
+  <div class="collapse navbar-collapse stp-nav-collapse" id="stpNavMarketing">
+    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-1 align-items-lg-center">
+      <!-- ── Account Types ── -->
+      <li class="nav-item dropdown stp-has-mega">
+        <a class="nav-link dropdown-toggle" href="../../account-types/index.html" role="button" aria-expanded="false" data-nav-path="/account-types">Account Types</a>
+        <div class="dropdown-menu stp-mega">
+          <div class="stp-mega__inner">
+            <div class="stp-mega__cols stp-mega__cols--2">
+              <a class="dropdown-item stp-mega__item" href="../../account-types/standard/index.html">
+                <span class="stp-mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 13h4l3 7 4-16 3 9h4"/></svg></span>
+                <span class="stp-mega__text"><span class="stp-mega__title">Standard</span><span class="stp-mega__desc">Balanced spreads for everyday trading</span></span>
+              </a>
+              <a class="dropdown-item stp-mega__item" href="../../account-types/zero/index.html">
+                <span class="stp-mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>
+                <span class="stp-mega__text"><span class="stp-mega__title">STP Zero</span><span class="stp-mega__desc">Raw spreads from 0 pips</span></span>
+              </a>
+              <a class="dropdown-item stp-mega__item" href="../../account-types/islamic/index.html">
+                <span class="stp-mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8z"/></svg></span>
+                <span class="stp-mega__text"><span class="stp-mega__title">Islamic</span><span class="stp-mega__desc">Swap-free, Shariah-compliant</span></span>
+              </a>
+              <a class="dropdown-item stp-mega__item" href="../../account-types/zero-prime/index.html">
+                <span class="stp-mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 7 4 4 5-6 5 6 4-4v11H3z"/></svg></span>
+                <span class="stp-mega__text"><span class="stp-mega__title">Zero Prime</span><span class="stp-mega__desc">Institutional-grade pricing</span></span>
+              </a>
+            </div>
+            <a class="stp-mega__feature" href="../../account-types/index.html">
+              <span class="stp-mega__feature-media"><img src="../../assets/hero/account-types-more.png" alt="" loading="lazy" /></span>
+              <span class="stp-mega__feature-body">
+                <span class="stp-mega__feature-title">Compare all accounts</span>
+                <span class="stp-mega__feature-text">Find the account that fits your strategy in under a minute.</span>
+                <span class="stp-mega__feature-cta">Explore accounts <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <!-- ── Special Services ── -->
+      <li class="nav-item dropdown stp-has-mega">
+        <a class="nav-link dropdown-toggle" href="../../special-services/index.html" role="button" aria-expanded="false" data-nav-paths="/special-services,/champions">Special Services</a>
+        <div class="dropdown-menu stp-mega">
+          <div class="stp-mega__inner">
+            <div class="stp-mega__groups">
+              <div class="stp-mega__group">
+                <h6 class="dropdown-header stp-mega__header">Services</h6>
+                <a class="dropdown-item stp-mega__item" href="../../special-services/anti-margin-call/index.html">
+                  <span class="stp-mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 7.5 8 9 4.5-1.5 8-4 8-9V6z"/></svg></span>
+                  <span class="stp-mega__text"><span class="stp-mega__title">Anti Margin Call</span><span class="stp-mega__desc">Protect positions from liquidation</span></span>
+                </a>
+                <a class="dropdown-item stp-mega__item" href="../../special-services/negative-margin-hedge/index.html">
+                  <span class="stp-mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5M21 3l-7 7M8 21H3v-5M3 21l7-7"/></svg></span>
+                  <span class="stp-mega__text"><span class="stp-mega__title">Hedge — Negative Margin</span><span class="stp-mega__desc">Offset exposure safely</span></span>
+                </a>
+                <a class="dropdown-item stp-mega__item" href="../../special-services/vps/index.html">
+                  <span class="stp-mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12a7 7 0 0 1 7-7M19 12a7 7 0 0 1-7 7M8.5 12a3.5 3.5 0 0 1 3.5-3.5M12 12h.01"/></svg></span>
+                  <span class="stp-mega__text"><span class="stp-mega__title">Free Forex Signals</span><span class="stp-mega__desc">Actionable trade ideas, free</span></span>
+                </a>
+                <a class="dropdown-item stp-mega__item" href="../../special-services/priority/index.html">
+                  <span class="stp-mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 6-6 4 4 8-8M21 7v5M21 7h-5"/></svg></span>
+                  <span class="stp-mega__text"><span class="stp-mega__title">Forex Market Predictions</span><span class="stp-mega__desc">Data-driven market outlooks</span></span>
+                </a>
+              </div>
+              <div class="stp-mega__group">
+                <h6 class="dropdown-header stp-mega__header">Champions</h6>
+                <a class="dropdown-item stp-mega__item" href="../../champions/index.html">
+                  <span class="stp-mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4h12v3a6 6 0 0 1-12 0zM4 5h2v2a3 3 0 0 1-2-2zm16 0h-2v2a3 3 0 0 0 2-2zM9 16h6M10 20h4M12 13v3"/></svg></span>
+                  <span class="stp-mega__text"><span class="stp-mega__title">The Program</span><span class="stp-mega__desc">Compete and win real prizes</span></span>
+                </a>
+                <a class="dropdown-item stp-mega__item" href="../../champions/rules/index.html">
+                  <span class="stp-mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2M9 3h6v3H9zM8 12l2 2 4-4"/></svg></span>
+                  <span class="stp-mega__text"><span class="stp-mega__title">Rules</span><span class="stp-mega__desc">How the contest works</span></span>
+                </a>
+                <a class="dropdown-item stp-mega__item" href="../../champions/past-winners/index.html">
+                  <span class="stp-mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5.5"/><path d="M9 13.5 7.5 21l4.5-2.5L16.5 21 15 13.5"/></svg></span>
+                  <span class="stp-mega__text"><span class="stp-mega__title">Past Winners</span><span class="stp-mega__desc">Champions hall of fame</span></span>
+                </a>
+                <a class="dropdown-item stp-mega__item" href="../../champions/faq/index.html">
+                  <span class="stp-mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 0 1 4.5 1.5c0 1.5-2 2-2 3M12 17h.01"/></svg></span>
+                  <span class="stp-mega__text"><span class="stp-mega__title">FAQ</span><span class="stp-mega__desc">Common questions answered</span></span>
+                </a>
+              </div>
+            </div>
+            <a class="stp-mega__feature" href="../../special-services/index.html">
+              <span class="stp-mega__feature-media"><img src="../../assets/hero/special-service-4.png" alt="" loading="lazy" /></span>
+              <span class="stp-mega__feature-body">
+                <span class="stp-mega__feature-title">Trade with an edge</span>
+                <span class="stp-mega__feature-text">Exclusive tools and protection built for serious traders.</span>
+                <span class="stp-mega__feature-cta">View all services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <!-- ── Platforms & Tools ── -->
+      <li class="nav-item dropdown stp-has-mega">
+        <a class="nav-link dropdown-toggle" href="../../platforms/index.html" role="button" aria-expanded="false" data-nav-path="/platforms">Platforms &amp; Tools</a>
+        <div class="dropdown-menu stp-mega">
+          <div class="stp-mega__inner">
+            <div class="stp-mega__groups">
+              <div class="stp-mega__group">
+                <h6 class="dropdown-header stp-mega__header">Platforms</h6>
+                <a class="dropdown-item stp-mega__item" href="../../platforms/mt5/index.html">
+                  <span class="stp-mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span>
+                  <span class="stp-mega__text"><span class="stp-mega__title">MetaTrader 5</span><span class="stp-mega__desc">The industry-standard terminal</span></span>
+                </a>
+                <a class="dropdown-item stp-mega__item" href="../../platforms/stp-portal/index.html">
+                  <span class="stp-mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+                  <span class="stp-mega__text"><span class="stp-mega__title">STP Portal</span><span class="stp-mega__desc">Manage your account online</span></span>
+                </a>
+                <a class="dropdown-item stp-mega__item" href="../../platforms/social-trading/index.html">
+                  <span class="stp-mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20a5.5 5.5 0 0 1 11 0M16 6a3 3 0 0 1 0 5.6M17.5 20a5.5 5.5 0 0 0-2.5-4.6"/></svg></span>
+                  <span class="stp-mega__text"><span class="stp-mega__title">Social Trading</span><span class="stp-mega__desc">Copy the top-performing traders</span></span>
+                </a>
+              </div>
+              <div class="stp-mega__group">
+                <h6 class="dropdown-header stp-mega__header">Tools</h6>
+                <a class="dropdown-item stp-mega__item" href="../../platforms/trading-indicators/index.html">
+                  <span class="stp-mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h3l2-7 4 14 2-7h7"/></svg></span>
+                  <span class="stp-mega__text"><span class="stp-mega__title">STP Trading Indicators</span><span class="stp-mega__desc">Pro charting indicators</span></span>
+                </a>
+              </div>
+            </div>
+            <a class="stp-mega__feature" href="../../platforms/mt5/index.html">
+              <span class="stp-mega__feature-media"><img src="../../assets/hero/mt5.png" alt="" loading="lazy" /></span>
+              <span class="stp-mega__feature-body">
+                <span class="stp-mega__feature-title">Trade on MetaTrader 5</span>
+                <span class="stp-mega__feature-text">Available on desktop, web and mobile — download in seconds.</span>
+                <span class="stp-mega__feature-cta">Get MT5 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <!-- ── Free Education ── -->
+      <li class="nav-item dropdown stp-has-mega">
+        <a class="nav-link dropdown-toggle" href="../../education/forex-tutorials/index.html" role="button" aria-expanded="false" data-nav-path="/education">Free Education</a>
+        <div class="dropdown-menu stp-mega stp-mega--compact">
+          <div class="stp-mega__inner">
+            <div class="stp-mega__cols stp-mega__cols--1">
+              <a class="dropdown-item stp-mega__item" href="../../education/forex-tutorials/index.html">
+                <span class="stp-mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 8 10-4 10 4-10 4z"/><path d="M6 10v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5M22 8v5"/></svg></span>
+                <span class="stp-mega__text"><span class="stp-mega__title">Forex Tutorials</span><span class="stp-mega__desc">Learn to trade from the ground up</span></span>
+              </a>
+              <a class="dropdown-item stp-mega__item" href="../../education/account-management/index.html">
+                <span class="stp-mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></span>
+                <span class="stp-mega__text"><span class="stp-mega__title">Account Management</span><span class="stp-mega__desc">Professionally managed strategies</span></span>
+              </a>
+            </div>
+            <a class="stp-mega__feature" href="../../education/forex-tutorials/index.html">
+              <span class="stp-mega__feature-media"><img src="../../assets/hero/forex-tutorials.png" alt="" loading="lazy" /></span>
+              <span class="stp-mega__feature-body">
+                <span class="stp-mega__feature-title">Start learning, free</span>
+                <span class="stp-mega__feature-text">Step-by-step lessons from beginner basics to advanced strategy.</span>
+                <span class="stp-mega__feature-cta">Browse lessons <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <!-- ── Partnership ── -->
+      <li class="nav-item dropdown stp-has-mega">
+        <a class="nav-link dropdown-toggle" href="../../partnership/ib/index.html" role="button" aria-expanded="false" data-nav-path="/partnership">Partnership</a>
+        <div class="dropdown-menu stp-mega stp-mega--compact stp-mega--end">
+          <div class="stp-mega__inner">
+            <div class="stp-mega__cols stp-mega__cols--1">
+              <a class="dropdown-item stp-mega__item" href="../../partnership/ib/index.html">
+                <span class="stp-mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m11 13-2.5 2.5a2 2 0 0 1-3-3L9 9a3 3 0 0 1 4 0l6 6M14 11l3-3a3 3 0 0 1 4 0"/></svg></span>
+                <span class="stp-mega__text"><span class="stp-mega__title">IB Partner</span><span class="stp-mega__desc">Earn commission from referrals</span></span>
+              </a>
+              <a class="dropdown-item stp-mega__item" href="../../partnership/partner-hiring/index.html">
+                <span class="stp-mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20a5.5 5.5 0 0 1 11 0M18 7v6M21 10h-6"/></svg></span>
+                <span class="stp-mega__text"><span class="stp-mega__title">Partner Hiring</span><span class="stp-mega__desc">Join the STP partner network</span></span>
+              </a>
+            </div>
+            <a class="stp-mega__feature" href="../../partnership/ib/index.html">
+              <span class="stp-mega__feature-media"><img src="../../assets/hero/ib-partner.png" alt="" loading="lazy" /></span>
+              <span class="stp-mega__feature-body">
+                <span class="stp-mega__feature-title">Partner with STP</span>
+                <span class="stp-mega__feature-text">Grow a revenue stream with industry-leading payouts and support.</span>
+                <span class="stp-mega__feature-cta">Become a partner <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <!-- ── Company ── -->
+      <li class="nav-item dropdown stp-has-mega">
+        <a class="nav-link dropdown-toggle" href="../../about/index.html" role="button" aria-expanded="false" data-nav-paths="/about,/contact,/license,/awards,/announcements,/blog">Company</a>
+        <div class="dropdown-menu stp-mega stp-mega--end">
+          <div class="stp-mega__inner">
+            <div class="stp-mega__cols stp-mega__cols--2">
+              <a class="dropdown-item stp-mega__item" href="../../about/index.html">
+                <span class="stp-mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg></span>
+                <span class="stp-mega__text"><span class="stp-mega__title">About</span><span class="stp-mega__desc">Our story &amp; mission</span></span>
+              </a>
+              <a class="dropdown-item stp-mega__item" href="../../license/index.html">
+                <span class="stp-mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 7.5 8 9 4.5-1.5 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+                <span class="stp-mega__text"><span class="stp-mega__title">License</span><span class="stp-mega__desc">Regulation &amp; client safety</span></span>
+              </a>
+              <a class="dropdown-item stp-mega__item" href="../../awards/index.html">
+                <span class="stp-mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5.5"/><path d="M9 13.5 7.5 21l4.5-2.5L16.5 21 15 13.5"/></svg></span>
+                <span class="stp-mega__text"><span class="stp-mega__title">Awards</span><span class="stp-mega__desc">Recognition &amp; accolades</span></span>
+              </a>
+              <a class="dropdown-item stp-mega__item" href="../../announcements/index.html">
+                <span class="stp-mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h3l5 4V6L7 10H4a1 1 0 0 0-1 1zM16 9a3 3 0 0 1 0 6"/></svg></span>
+                <span class="stp-mega__text"><span class="stp-mega__title">Announcements</span><span class="stp-mega__desc">Latest company news</span></span>
+              </a>
+              <a class="dropdown-item stp-mega__item" href="../../contact/index.html">
+                <span class="stp-mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></span>
+                <span class="stp-mega__text"><span class="stp-mega__title">Contact</span><span class="stp-mega__desc">Get in touch with our team</span></span>
+              </a>
+              <a class="dropdown-item stp-mega__item" href="../../blog/index.html">
+                <span class="stp-mega__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h13a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM8 9h7M8 13h7M8 17h4"/></svg></span>
+                <span class="stp-mega__text"><span class="stp-mega__title">Blog</span><span class="stp-mega__desc">Insights &amp; market news</span></span>
+              </a>
+            </div>
+            <a class="stp-mega__feature" href="../../about/index.html">
+              <span class="stp-mega__feature-media"><img src="../../assets/hero/about.png" alt="" loading="lazy" /></span>
+              <span class="stp-mega__feature-body">
+                <span class="stp-mega__feature-title">About STP Trading</span>
+                <span class="stp-mega__feature-text">A regulated broker built on transparency and trader-first pricing.</span>
+                <span class="stp-mega__feature-cta">Our story <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="stp-nav-actions-bar">
+      <div class="nav-item dropdown stp-lang-nav">
+        <a class="nav-link dropdown-toggle stp-lang-pill" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Select language">
+          <img class="stp-lang-pill__flag" src="../../assets/icons/flag-gb.svg" alt="" width="20" height="14" />
+          <span class="stp-lang-pill__code">EN</span>
+          <span class="stp-lang-pill__name">English <span class="stp-lang-pill__region">(UK)</span></span>
+          <svg class="stp-lang-pill__caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end stp-lang-menu">
+          <li><button type="button" class="dropdown-item stp-lang-opt is-selected" data-code="EN" data-label="English" data-region="(UK)" data-flag="/assets/icons/flag-gb.svg" aria-current="true"><span class="stp-lang-opt__name">English <span class="stp-lang-opt__region">(UK)</span></span><svg class="stp-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5" /></svg></button></li>
+          <!-- Additional languages hidden for now (no i18n wiring yet); restore when ready.
+          <li><button type="button" class="dropdown-item stp-lang-opt" data-code="AR" data-label="العربية" data-region="" data-flag="/assets/icons/globe.svg"><span class="stp-lang-opt__name">العربية</span><svg class="stp-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5" /></svg></button></li>
+          <li><button type="button" class="dropdown-item stp-lang-opt" data-code="ES" data-label="Español" data-region="" data-flag="/assets/icons/globe.svg"><span class="stp-lang-opt__name">Español</span><svg class="stp-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5" /></svg></button></li>
+          <li><button type="button" class="dropdown-item stp-lang-opt" data-code="FR" data-label="Français" data-region="" data-flag="/assets/icons/globe.svg"><span class="stp-lang-opt__name">Français</span><svg class="stp-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5" /></svg></button></li>
+          <li><button type="button" class="dropdown-item stp-lang-opt" data-code="ZH" data-label="中文" data-region="" data-flag="/assets/icons/globe.svg"><span class="stp-lang-opt__name">中文</span><svg class="stp-lang-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5" /></svg></button></li>
+          -->
+        </ul>
+      </div>
+      <div class="nav-item dropdown stp-login-nav">
+        <a class="nav-link dropdown-toggle btn-login text-decoration-none" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Login</a>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="#">Login as Client</a></li>
+          <li><a class="dropdown-item" href="#">Login as Partner</a></li>
+        </ul>
+      </div>
+      <a class="btn btn-register px-4" href="#">Register</a>
+    </div>
+  </div>
+</nav>
+<!-- END inlined account-marketing-navbar -->
+      </div>
+      <div class="stp-page-header-hero stp-page-header-hero--overlap stp-page-header-hero--lines">
+<!-- BEGIN inlined hero-lines (hero-lines) sync: node scripts/sync-account-partials.mjs -->
+        <div class="stp-hero-lines" aria-hidden="true">
+          <div class="stp-hero-lines__slant stp-hero-lines__slant--left">
+            <div class="stp-hero-line stp-hero-line--slant stp-hero-line--slant-45"></div>
+            <div class="stp-hero-line stp-hero-line--slant stp-hero-line--slant-45"></div>
+            <div class="stp-hero-line stp-hero-line--slant stp-hero-line--slant-45"></div>
+            <div class="stp-hero-line stp-hero-line--slant stp-hero-line--slant-45"></div>
+            <div class="stp-hero-line stp-hero-line--slant stp-hero-line--slant-45"></div>
+            <div class="stp-hero-line stp-hero-line--slant stp-hero-line--slant-neg"></div>
+            <div class="stp-hero-line stp-hero-line--slant stp-hero-line--slant-neg"></div>
+            <div class="stp-hero-line stp-hero-line--slant stp-hero-line--slant-neg"></div>
+            <div class="stp-hero-line stp-hero-line--slant stp-hero-line--slant-neg"></div>
+            <div class="stp-hero-line stp-hero-line--slant stp-hero-line--slant-neg"></div>
+          </div>
+          <div class="stp-hero-lines__slant stp-hero-lines__slant--right">
+            <div class="stp-hero-line stp-hero-line--slant stp-hero-line--slant-45"></div>
+            <div class="stp-hero-line stp-hero-line--slant stp-hero-line--slant-45"></div>
+            <div class="stp-hero-line stp-hero-line--slant stp-hero-line--slant-45"></div>
+            <div class="stp-hero-line stp-hero-line--slant stp-hero-line--slant-45"></div>
+            <div class="stp-hero-line stp-hero-line--slant stp-hero-line--slant-45"></div>
+            <div class="stp-hero-line stp-hero-line--slant stp-hero-line--slant-neg"></div>
+            <div class="stp-hero-line stp-hero-line--slant stp-hero-line--slant-neg"></div>
+            <div class="stp-hero-line stp-hero-line--slant stp-hero-line--slant-neg"></div>
+            <div class="stp-hero-line stp-hero-line--slant stp-hero-line--slant-neg"></div>
+            <div class="stp-hero-line stp-hero-line--slant stp-hero-line--slant-neg"></div>
+          </div>
+          <div class="stp-hero-line"></div>
+          <div class="stp-hero-line"></div>
+          <div class="stp-hero-line"></div>
+          <div class="stp-hero-line"></div>
+          <div class="stp-hero-line"></div>
+          <div class="stp-hero-line"></div>
+          <div class="stp-hero-line"></div>
+          <div class="stp-hero-line"></div>
+          <div class="stp-hero-line"></div>
+          <div class="stp-hero-line"></div>
+        </div>
+<!-- END inlined hero-lines -->
+
+        <div class="stp-container position-relative">
+          <div class="row align-items-center gx-lg-4 gy-5 stp-split-hero">
+            <div class="col-lg-6 stp-split-hero__copy">
+              <h1 class="stp-split-hero__title">Zero Prime Account</h1>
+              <p class="stp-split-hero__lead">
+                Our premium raw-spread tier: from 0.0 pips with a lower $3.50 commission and a $3,000 minimum — built for active traders who want institutional-style pricing and deep liquidity.
+              </p>
+              <div class="stp-split-hero__actions">
+                <a href="#" class="stp-btn-primary stp-btn-primary--trail">
+                  <span class="stp-btn-primary__label">Open Zero Prime Account</span>
+                  <span class="stp-btn-primary__icon-ring" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M10 17l6-7-6-7" />
+                    </svg>
+                  </span>
+                </a>
+              </div>
+              <p class="stp-trust-line">
+                <svg class="stp-trust-line__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path
+                    d="M12 3 20 7v6c0 4.92-6 13-8 13S4 17.92 4 13V7l8-4z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span>Trusted by 1M+ traders worldwide</span>
+              </p>
+            </div>
+            <div class="col-lg-6 stp-split-hero__visual">
+              <figure class="stp-split-hero__figure stp-max-w-330-lg">
+                <img
+                  src="../../assets/hero/account-types-more.png"
+                  alt=""
+                  width="520"
+                  loading="eager"
+                  decoding="async"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PAGE BODY: each band = section.stp-shell.pt-40 → inner .container (1140) or .container-fluid for full-width rails ── -->
+    <section class="stp-shell stp-overlap-hero pb-80" aria-label="Zero Prime account highlights">
+      <div class="container">
+        <div class="stp-feature-strip">
+          <div class="stp-feature-card">
+            <div class="stp-feature-card__inner">
+              <div class="stp-feature-card__icon" aria-hidden="true">
+                <!-- lucide: trending-down -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 17l-7.5-7.5-4.5 4.5L2 6" />
+                  <path d="M16 17h6v-6" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="stp-feature-card__title">Raw spreads</h3>
+                <p class="stp-feature-card__text">Access our tightest published spreads from 0.0 pips on key instruments</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="stp-feature-card">
+            <div class="stp-feature-card__inner">
+              <div class="stp-feature-card__icon" aria-hidden="true">
+                <!-- lucide: scale -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 3v18" />
+                  <path d="M6 7h12" />
+                  <path d="M6 7l-3 5a3 3 0 0 0 6 0L6 7Z" />
+                  <path d="M18 7l-3 5a3 3 0 0 0 6 0l-3-5Z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="stp-feature-card__title" style="color: #151515">1:300 Leverage</h3>
+                <p class="stp-feature-card__text">Trade with Leverage up to 1:300</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="stp-feature-card">
+            <div class="stp-feature-card__inner">
+              <div class="stp-feature-card__icon" aria-hidden="true">
+                <!-- lucide: zap -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="stp-feature-card__title">Fast Execution</h3>
+                <p class="stp-feature-card__text">Lightning-fast executions with no delay</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stp-shell pt-40" aria-label="Account types">
+      <div class="container stp-page-section stp-acct-section">
+        <p class="stp-acct-kicker mb-0">Zero Prime, premium execution</p>
+        <h2 class="stp-acct-section-title">
+          Lower commission than STP Zero with the same ultra-fast execution and no hidden costs — ideal for high-turnover strategies that benefit from every pip and every fill.
+        </h2>
+
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-6">
+            <article class="stp-dark-info-card h-100">
+              <div class="stp-dark-info-card__inner">
+                <div class="stp-dark-info-card__row">
+                  <div class="stp-dark-info-card__icon" aria-hidden="true">
+                    <!-- lucide: radio -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="2" />
+                      <path d="M16.24 7.76a6 6 0 0 1 0 8.48" />
+                      <path d="M7.76 7.76a6 6 0 0 0 0 8.48" />
+                      <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                      <path d="M4.93 4.93a10 10 0 0 0 0 14.14" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="stp-dark-info-card__title">Trusted and regulated broker</h3>
+                    <p class="stp-dark-info-card__text">
+                      Worry-free trading with STP Trading&rsquo;s licenses and compliance with regulations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-6">
+            <article class="stp-dark-info-card h-100">
+              <div class="stp-dark-info-card__inner">
+                <div class="stp-dark-info-card__row">
+                  <div class="stp-dark-info-card__icon" aria-hidden="true">
+                    <!-- lucide: monitor -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect x="3" y="4" width="18" height="12" rx="2" />
+                      <path d="M8 20h8" />
+                      <path d="M12 16v4" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="stp-dark-info-card__title">Advanced platforms &amp; tools</h3>
+                    <p class="stp-dark-info-card__text">
+                      Enjoy cutting-edge technology, including the next-generation MT5 platform.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stp-shell pt-40 mt-80 mb-80 stp-shell--radius bg-white stp-details-shell" aria-label="Account details">
+      <div class="container-fluid stp-page-section stp-page-section--framed">
+        <div class="container">
+          <div class="stp-acct-details">
+            <div class="stp-acct-details__inner">
+              <div class="stp-acct-details__grid">
+                <div>
+                  <p class="stp-acct-details__kicker">Account Details</p>
+                  <h2 class="stp-acct-details__title">Designed for High-Volume Traders</h2>
+                  <p class="stp-acct-details__desc">
+                    Zero Prime Account pairs raw pricing with a reduced per-lot commission — the environment serious scalpers and day traders expect, with MT5, WebTrader, and STP Portal support.
+                  </p>
+
+                  <div class="stp-acct-details__art" aria-hidden="true">
+                    <img src="../../assets/images/account-types/platform-pc.png" alt="" loading="lazy" decoding="async" />
+                  </div>
+                </div>
+
+                <div class="stp-acct-details__list">
+                  <div>
+                    <div class="stp-acct-details__item">
+                      <div class="stp-acct-details__label">
+                        <!-- lucide: panel-top -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18">
+                          <rect x="3" y="3" width="18" height="18" rx="2" />
+                          <path d="M3 9h18" />
+                        </svg>
+                        <span>Trading Platform</span>
+                      </div>
+                      <div class="stp-acct-details__value">Metatrader 5, WebTrader, STP Portal</div>
+                    </div>
+                    <div class="stp-acct-details__rule" aria-hidden="true"></div>
+                  </div>
+
+                  <div>
+                    <div class="stp-acct-details__item">
+                      <div class="stp-acct-details__label">
+                        <!-- lucide: line-chart -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18">
+                          <path d="M3 3v18h18" />
+                          <path d="m19 9-5 5-4-4-3 3" />
+                        </svg>
+                        <span>Spreads</span>
+                      </div>
+                      <div class="stp-acct-details__value">From 0.0</div>
+                    </div>
+                    <div class="stp-acct-details__rule" aria-hidden="true"></div>
+                  </div>
+
+                  <div>
+                    <div class="stp-acct-details__item">
+                      <div class="stp-acct-details__label">
+                        <!-- lucide: boxes -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18">
+                          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.73Z" />
+                          <path d="M3.3 7 12 12l8.7-5" />
+                          <path d="M12 22V12" />
+                        </svg>
+                        <span>Contract Size</span>
+                      </div>
+                      <div class="stp-acct-details__value">1 lot = 100,000 units</div>
+                    </div>
+                    <div class="stp-acct-details__rule" aria-hidden="true"></div>
+                  </div>
+
+                  <div>
+                    <div class="stp-acct-details__item">
+                      <div class="stp-acct-details__label">
+                        <!-- lucide: list -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18">
+                          <path d="M8 6h13" />
+                          <path d="M8 12h13" />
+                          <path d="M8 18h13" />
+                          <path d="M3 6h.01" />
+                          <path d="M3 12h.01" />
+                          <path d="M3 18h.01" />
+                        </svg>
+                        <span>Trading Instruments</span>
+                      </div>
+                      <div class="stp-acct-details__value">All Available (Click here to view full list)</div>
+                    </div>
+                    <div class="stp-acct-details__rule" aria-hidden="true"></div>
+                  </div>
+
+                  <div>
+                    <div class="stp-acct-details__item">
+                      <div class="stp-acct-details__label">
+                        <!-- lucide: scale -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18">
+                          <path d="M12 3v18" />
+                          <path d="M6 7h12" />
+                          <path d="M6 7l-3 5a3 3 0 0 0 6 0L6 7Z" />
+                          <path d="M18 7l-3 5a3 3 0 0 0 6 0l-3-5Z" />
+                        </svg>
+                        <span>Maximum Leverage</span>
+                      </div>
+                      <div class="stp-acct-details__value">1:300</div>
+                    </div>
+                    <div class="stp-acct-details__rule" aria-hidden="true"></div>
+                  </div>
+
+                  <div>
+                    <div class="stp-acct-details__item">
+                      <div class="stp-acct-details__label">
+                        <!-- lucide: bolt -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18">
+                          <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z" />
+                        </svg>
+                        <span>Execution</span>
+                      </div>
+                      <div class="stp-acct-details__value">Market Execution</div>
+                    </div>
+                    <div class="stp-acct-details__rule" aria-hidden="true"></div>
+                  </div>
+
+                  <div>
+                    <div class="stp-acct-details__item">
+                      <div class="stp-acct-details__label">
+                        <!-- lucide: wallet -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18">
+                          <path d="M19 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
+                          <path d="M3 7h16" />
+                          <path d="M19 12h2v4h-2a2 2 0 0 1 0-4Z" />
+                        </svg>
+                        <span>Minimum Opening Discount</span>
+                      </div>
+                      <div class="stp-acct-details__value">3,000 USD</div>
+                    </div>
+                    <div class="stp-acct-details__rule" aria-hidden="true"></div>
+                  </div>
+
+                  <div>
+                    <div class="stp-acct-details__item">
+                      <div class="stp-acct-details__label">
+                        <!-- lucide: hash -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18">
+                          <path d="M4 9h16" />
+                          <path d="M4 15h16" />
+                          <path d="M10 3 8 21" />
+                          <path d="M16 3l-2 18" />
+                        </svg>
+                        <span>Minimum Trade Size</span>
+                      </div>
+                      <div class="stp-acct-details__value">0.01 Lot</div>
+                    </div>
+                    <div class="stp-acct-details__rule" aria-hidden="true"></div>
+                  </div>
+
+                  <div>
+                    <div class="stp-acct-details__item">
+                      <div class="stp-acct-details__label">
+                        <!-- lucide: step-forward -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18">
+                          <path d="M6 6v12" />
+                          <path d="M10 6l8 6-8 6V6Z" />
+                        </svg>
+                        <span>Trade Size Increment</span>
+                      </div>
+                      <div class="stp-acct-details__value">0.01</div>
+                    </div>
+                    <div class="stp-acct-details__rule" aria-hidden="true"></div>
+                  </div>
+
+                  <div>
+                    <div class="stp-acct-details__item">
+                      <div class="stp-acct-details__label">
+                        <!-- lucide: alert-triangle -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18">
+                          <path d="M10.3 3.2a2 2 0 0 1 3.4 0l8.3 14.7A2 2 0 0 1 20.3 21H3.7A2 2 0 0 1 2 17.9l8.3-14.7Z" />
+                          <path d="M12 9v4" />
+                          <path d="M12 17h.01" />
+                        </svg>
+                        <span>Margin Call</span>
+                      </div>
+                      <div class="stp-acct-details__value">Up to 50%</div>
+                    </div>
+                    <div class="stp-acct-details__rule" aria-hidden="true"></div>
+                  </div>
+
+                  <div>
+                    <div class="stp-acct-details__item">
+                      <div class="stp-acct-details__label">
+                        <!-- lucide: ban -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18">
+                          <circle cx="12" cy="12" r="10" />
+                          <path d="m4.9 4.9 14.2 14.2" />
+                        </svg>
+                        <span>Stop Out Level</span>
+                      </div>
+                      <div class="stp-acct-details__value">30%</div>
+                    </div>
+                    <div class="stp-acct-details__rule" aria-hidden="true"></div>
+                  </div>
+
+                  <div>
+                    <div class="stp-acct-details__item">
+                      <div class="stp-acct-details__label">
+                        <!-- lucide: dollar-sign -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18">
+                          <path d="M12 2v20" />
+                          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
+                        <span>Account Currency</span>
+                      </div>
+                      <div class="stp-acct-details__value">USD</div>
+                    </div>
+                    <div class="stp-acct-details__rule" aria-hidden="true"></div>
+                  </div>
+
+                  <div>
+                    <div class="stp-acct-details__item">
+                      <div class="stp-acct-details__label">
+                        <!-- lucide: badge-dollar-sign -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18">
+                          <path d="M16.5 9.4 19 8l-2.5-1.4L15 4l-1.5 2.6L11 8l2.5 1.4L15 12l1.5-2.6Z" />
+                          <path d="M12 12a4 4 0 1 0 4 4" />
+                          <path d="M12 16v.01" />
+                        </svg>
+                        <span>Commission</span>
+                      </div>
+                      <div class="stp-acct-details__value">3.5 USD</div>
+                    </div>
+                    <div class="stp-acct-details__rule" aria-hidden="true"></div>
+                  </div>
+
+                  <div>
+                    <div class="stp-acct-details__item">
+                      <div class="stp-acct-details__label">
+                        <!-- lucide: refresh-cw -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18">
+                          <path d="M21 12a9 9 0 0 1-15.5 6.36" />
+                          <path d="M3 12a9 9 0 0 1 15.5-6.36" />
+                          <path d="M17 3v4h4" />
+                          <path d="M7 21v-4H3" />
+                        </svg>
+                        <span>Swap</span>
+                      </div>
+                      <div class="stp-acct-details__value">
+                        <span class="stp-acct-details__ok">
+                          <!-- lucide: check-circle-2 -->
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="m9 12 2 2 4-4" />
+                          </svg>
+                          <span>Yes</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="stp-acct-details__rule" aria-hidden="true"></div>
+                  </div>
+
+                  <div>
+                    <div class="stp-acct-details__item">
+                      <div class="stp-acct-details__label">
+                        <!-- lucide: gift -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18">
+                          <path d="M20 12v10H4V12" />
+                          <path d="M2 7h20v5H2z" />
+                          <path d="M12 22V7" />
+                          <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C9 2 12 7 12 7Z" />
+                          <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C15 2 12 7 12 7Z" />
+                        </svg>
+                        <span>Bonus Offerings</span>
+                      </div>
+                      <div class="stp-acct-details__value">
+                        <span class="stp-acct-details__ok">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="m9 12 2 2 4-4" />
+                          </svg>
+                          <span>Yes</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- BEGIN inlined footer (footer) sync: node scripts/sync-account-partials.mjs -->
+<footer class="stp-footer" style="background:#151515;color:#fff;margin-top:0;">
+
+  <!-- TOP SECTION: Get in Touch + Social App Icons -->
+  <div class="container">
+    <div class="stp-footer__band-support">
+      <div class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-start justify-content-between gap-4">
+        <div class="flex-grow-1 stp-footer__intro" style="min-width:0;">
+          <h3 class="stp-footer__intro-title">Get in Touch with Our Support Team</h3>
+          <p class="stp-footer__intro-sub">Please use one of the following options to contact us.</p>
+        </div>
+        <div class="stp-footer-support-cards flex-shrink-0">
+          <a class="stp-footer-support-card" href="#" aria-label="Telegram">
+            <div class="stp-footer-support-card__icon stp-footer-support-card__icon--telegram">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path fill="#fff" d="M1.946 9.315c-.522-.174-.527-.455.005-.634l21.255-8.386c.526-.196.92.13.79.67l-3.622 16.302c-.139.635-.505.79-.978.456l-5.256-3.882-2.54 2.54c-.124.124-.23.18-.42.18-.135 0-.274-.05-.38-.155L7.5 13.5 1.946 9.315z"/>
+              </svg>
+            </div>
+            <span class="stp-footer-support-card__label">Telegram</span>
+          </a>
+          <a class="stp-footer-support-card" href="#" aria-label="WhatsApp">
+            <div class="stp-footer-support-card__icon stp-footer-support-card__icon--whatsapp">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path fill="#fff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+            </div>
+            <span class="stp-footer-support-card__label">WhatsApp</span>
+          </a>
+          <a class="stp-footer-support-card" href="#" aria-label="LiveChat">
+            <div class="stp-footer-support-card__icon stp-footer-support-card__icon--livechat">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="1.5" y="2.5" width="14" height="11" rx="3" fill="#fff" fill-opacity="0.9"/>
+                <rect x="8.5" y="8.5" width="14" height="11" rx="3" fill="#fff"/>
+              </svg>
+            </div>
+            <span class="stp-footer-support-card__label">LiveChat</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN FOOTER: link columns + brand row (divider above legal only) -->
+  <div class="container stp-footer__middle">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-5 g-4 stp-footer__nav-row">
+
+        <!-- Column 1: Account Types + Free Education -->
+        <div class="col">
+          <div class="stp-footer__nav-title">Account Types</div>
+          <ul class="stp-footer__nav-list">
+            <li><a href="../../account-types/index.html">Overview</a></li>
+            <li><a href="../../account-types/standard/index.html">Standard</a></li>
+            <li><a href="../../account-types/zero/index.html">STP Zero</a></li>
+            <li><a href="../../account-types/islamic/index.html">Islamic</a></li>
+            <li><a href="../../account-types/zero-prime/index.html">Zero Prime</a></li>
+          </ul>
+          <div class="stp-footer__nav-title stp-footer__nav-title--sub">Free Education</div>
+          <ul class="stp-footer__nav-list">
+            <li><a href="../../education/forex-tutorials/index.html">Forex Tutorials</a></li>
+            <li><a href="../../education/account-management/index.html">Account Management</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Special Services + Partnership -->
+        <div class="col">
+          <div class="stp-footer__nav-title">Special Services</div>
+          <ul class="stp-footer__nav-list">
+            <li><a href="../../special-services/anti-margin-call/index.html">Anti Margin Call</a></li>
+            <li><a href="../../special-services/negative-margin-hedge/index.html">Hedge in Negative Margin</a></li>
+            <li><a href="../../special-services/vps/index.html">Free Forex Signals</a></li>
+            <li><a href="../../special-services/priority/index.html">Forex Market Predictions</a></li>
+          </ul>
+          <div class="stp-footer__nav-title stp-footer__nav-title--sub">Partnership</div>
+          <ul class="stp-footer__nav-list">
+            <li><a href="../../partnership/ib/index.html">IB Partner</a></li>
+            <li><a href="../../partnership/partner-hiring/index.html">Partner Hiring</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Platforms & Tools + Company -->
+        <div class="col">
+          <div class="stp-footer__nav-title">Platforms &amp; Tools</div>
+          <ul class="stp-footer__nav-list">
+            <li><a href="../../platforms/mt5/index.html">MetaTrader 5</a></li>
+            <li><a href="../../platforms/stp-portal/index.html">STP Portal</a></li>
+            <li><a href="../../platforms/social-trading/index.html">Social Trading</a></li>
+            <li><a href="../../platforms/trading-indicators/index.html">STP Trading Indicators</a></li>
+          </ul>
+          <div class="stp-footer__nav-title stp-footer__nav-title--sub">Company</div>
+          <ul class="stp-footer__nav-list">
+            <li><a href="../../about/index.html">About</a></li>
+            <li><a href="../../contact/index.html">Contact</a></li>
+            <li><a href="../../license/index.html">License</a></li>
+            <li><a href="../../awards/index.html">Awards</a></li>
+            <li><a href="../../blog/index.html">Blog</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Champions -->
+        <div class="col">
+          <div class="stp-footer__nav-title">Champions</div>
+          <ul class="stp-footer__nav-list">
+            <li><a href="../../champions/index.html">Champions</a></li>
+            <li><a href="../../champions/faq/index.html">FAQ</a></li>
+            <li><a href="../../champions/rules/index.html">Rules</a></li>
+            <li><a href="../../champions/past-winners/index.html">Past Winners</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 5: Payment methods (original position) -->
+        <div class="col">
+          <h2 class="visually-hidden">Payment methods</h2>
+          <div class="stp-footer__pay-grid">
+            <span class="stp-footer__pay-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f7931a" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#f7931a"/><text x="12" y="16" text-anchor="middle" fill="#fff" font-size="10" font-weight="900" font-family="Arial">₿</text></svg>
+              BitCoin
+            </span>
+            <span class="stp-footer__pay-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#26a17b"/><text x="12" y="16" text-anchor="middle" fill="#fff" font-size="9" font-weight="900" font-family="Arial">₮</text></svg>
+              Teether
+            </span>
+            <span class="stp-footer__pay-badge">
+              <svg width="18" height="12" viewBox="0 0 38 24" aria-hidden="true"><rect width="38" height="24" rx="4" fill="#252525"/><circle cx="15" cy="12" r="8" fill="#eb001b"/><circle cx="23" cy="12" r="8" fill="#f79e1b"/><path d="M19 7.2a8 8 0 0 1 0 9.6A8 8 0 0 1 19 7.2z" fill="#ff5f00"/></svg>
+              MasterCard
+            </span>
+            <span class="stp-footer__pay-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#627eea"/><text x="12" y="16" text-anchor="middle" fill="#fff" font-size="9" font-weight="900" font-family="Arial">Ξ</text></svg>
+              Ethereum
+            </span>
+            <span class="stp-footer__pay-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#627eea"/><text x="12" y="16" text-anchor="middle" fill="#fff" font-size="9" font-weight="900" font-family="Arial">Ξ</text></svg>
+              Ethereum
+            </span>
+            <span class="stp-footer__pay-badge stp-footer__pay-badge--bank-transfer">
+              <svg class="stp-footer__pay-bank-strip" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true">
+                <rect width="18" height="3.2" rx="0.5" fill="#c41010" />
+                <rect y="4.4" width="18" height="3.2" rx="0.5" fill="#9c0d0d" />
+                <rect y="8.8" width="18" height="3.2" rx="0.5" fill="#6e0b0b" />
+              </svg>
+              BANK TRANSFER
+            </span>
+          </div>
+        </div>
+
+    </div>
+
+    <!-- BOTTOM BAR: logo | copyright | social — 3 columns (lg) -->
+    <div class="stp-footer__brand">
+      <div class="row row-cols-1 row-cols-lg-3 align-items-center g-4 gx-lg-3 stp-footer__brand-row">
+        <div class="col text-center text-lg-start">
+          <a href="../../index.html" class="stp-footer__brand-logo d-inline-flex align-items-center">
+            <img src="../../assets/logos/stp-trading-dark.svg" alt="STP Trading" width="139" height="55" decoding="async" loading="lazy" onerror="this.style.display='none'" />
+          </a>
+        </div>
+        <div class="col">
+          <p class="stp-footer__brand-copy mb-0 text-center">© 2019 – 2025 STP Trading</p>
+        </div>
+        <div class="col">
+          <div class="stp-footer__social-row d-flex align-items-center justify-content-center justify-content-lg-end gap-2 flex-wrap">
+            <a class="stp-footer__social-btn" href="#" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+            <a class="stp-footer__social-btn" href="#" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+            <a class="stp-footer__social-btn" href="#" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+            <a class="stp-footer__social-btn" href="#" aria-label="X"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="stp-footer__divider" />
+  </div>
+
+  <!-- Disclaimer — last row -->
+  <div class="stp-footer__legal-strip">
+    <div class="container stp-footer__disclaimer">
+      <p>The previous official website of the broker operated under the domain STP.Forex since 2019. This new official website has been active since 2022.</p>
+      <p>STP Trading is a trading name of STP Trading Ltd and STP Global Ltd.</p>
+      <p>STP Global LTD with Firm Registered Number: HY00523403 , is Authorized and Regulated by Comoros Mwali International Service Authority (M.I.S.A.), Autonomous Island of Mwali (Mohéli), Comoros Union, East Africa. with License Number: T2023280</p>
+      <p class="stp-footer__disclaimer-spacer" aria-hidden="true"></p>
+      <p class="stp-footer__disclaimer-risk">Risk Warning: Trading financial products on margin carries a high degree of risk and is not suitable for all investors. Losses can exceed the initial investment. Please ensure you fully understand the risks and take appropriate care to manage your risk. All the financial products are very complex instruments and come with a high risk of losing money rapidly due to leverage therefore Losses can exceed the initial investment. Please ensure you fully understand the risks and take appropriate care to manage your risk. Please read our full ‘Risk Disclosure Notice’ <a href="../../legal/risk-disclosure/index.html">Click here</a>.</p>
+      <p class="stp-footer__disclaimer-spacer" aria-hidden="true"></p>
+      <p>STP Trading Ltd is registered in Saint Lucia (Registration Number. 2023-00081), by the Registrar of International Business Companies with its company registered address at Ground Floor, The Sotheby Building, Rodney Bay, Saint Lucia. <a href="../../legal/index.html">Read More …</a></p>
+    </div>
+  </div>
+
+</footer>
+<!-- END inlined footer -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../js/site.js"></script>
+</body>
+</html>

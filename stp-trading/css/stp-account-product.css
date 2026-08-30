@@ -1,0 +1,7 @@
+/**
+ * Routes: /account-types/{standard|zero|islamic|zero-prime}/
+ * Use body: stp-site stp-page-account-types stp-page-account-product (inherits hub chrome/footer gutters from stp-account-types.css).
+ */
+body.stp-page-account-product.stp-page-account-types > .stp-footer {
+  margin-bottom: var(--stp-shell-gap);
+}

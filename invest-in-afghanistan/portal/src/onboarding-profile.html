@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="../media/favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your details — Set up your account</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/portal.css">
+</head>
+<body>
+<div class="ob">
+ <div class="gmesh"></div>
+ <div class="ob-top">
+  <a class="lg lt" href="../index.html"><img class="logoimg" src="../media/logo_white.png" alt="Invest in Afghanistan" width="691" height="289"></a>
+  <span class="save"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-11"/></svg>Progress saved automatically</span>
+ </div>
+
+  <div class="ob-hstep"><div class="s done"><span class="n"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-11"/></svg></span><span class="lb">Welcome</span></div><span class="cn ok"></span><div class="s on"><span class="n">2</span><span class="lb" data-biz="Business details" data-inv="Investor profile">Business details</span></div><span class="cn"></span><div class="s todo"><span class="n">3</span><span class="lb">Documents</span></div><span class="cn"></span><div class="s todo"><span class="n">4</span><span class="lb">Preferences</span></div></div>
+
+ <div class="ob-cardwrap">
+  <div class="ob-card">
+   <span class="k">Step 2 of 4</span>
+   <h1 data-biz="Your business" data-inv="Your investor profile">Your business</h1>
+   <p class="intro" data-biz="Tell us about the company. This pre-fills your applications so you don't re-enter it each time." data-inv="Tell us about your investment intent so we can match you to the right land, sectors and incentives.">Tell us about the company. This pre-fills your applications so you don&rsquo;t re-enter it each time.</p>
+
+   <form class="af" data-af data-carry data-next="onboarding-documents.html">
+
+    <!-- BUSINESS fields -->
+    <div class="only-biz">
+     <div class="fld"><label>Registered business name</label><div class="ip"><input type="text" placeholder="e.g. Herat Cold Chain Ltd" required></div></div>
+     <div class="fld row2">
+      <div><label>Business structure</label><div class="ip"><select><option>Sole proprietorship</option><option>Limited liability company (LLC)</option><option>Corporation</option><option>Partnership</option><option>Not yet registered</option></select></div></div>
+      <div><label>Primary sector</label><div class="ip"><select><option>Agriculture &amp; agri-processing</option><option>Manufacturing</option><option>Mining &amp; extractives</option><option>Energy</option><option>Construction &amp; materials</option><option>Trade &amp; logistics</option><option>Services</option><option>Textiles</option></select></div></div>
+     </div>
+     <div class="fld row2">
+      <div><label>Province of operation</label><div class="ip"><select><option>Kabul</option><option>Herat</option><option>Balkh</option><option>Kandahar</option><option>Nangarhar</option><option>Bamyan</option><option>Helmand</option><option>Kunduz</option><option>Other</option></select></div></div>
+      <div><label>Employees</label><div class="ip"><select><option>Just me</option><option>2–10</option><option>11–50</option><option>51–200</option><option>200+</option></select></div></div>
+     </div>
+    </div>
+
+    <!-- INVESTOR fields -->
+    <div class="only-inv" style="display:none">
+     <div class="fld"><label>Investing as</label>
+      <div class="acct" style="margin-bottom:0">
+       <label><input type="radio" name="ientity" checked><span class="ic-w"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg></span><b>An individual</b><span>Personal investment.</span><span class="tk"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-11"/></svg></span></label>
+       <label><input type="radio" name="ientity"><span class="ic-w"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/></svg></span><b>A company / fund</b><span>On behalf of an entity.</span><span class="tk"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-11"/></svg></span></label>
+      </div>
+     </div>
+     <div class="fld row2">
+      <div><label>Home country</label><div class="ip"><input type="text" placeholder="e.g. United Arab Emirates" required></div></div>
+      <div><label>Planned investment size</label><div class="ip"><select><option>Under $100k</option><option>$100k – $500k</option><option>$500k – $2M</option><option>$2M – $10M</option><option>Over $10M</option></select></div></div>
+     </div>
+     <div class="fld"><label>Expected timeline</label><div class="ip"><select><option>Exploring — next 12 months</option><option>Ready — next 3–6 months</option><option>Immediate — within 90 days</option></select></div></div>
+    </div>
+
+    <div class="ob-actions">
+     <a class="skip" href="onboarding.html" data-carry>&larr; Back</a>
+     <div class="grow"></div>
+     <button type="submit" class="pillbtn ink">Continue &rarr;</button>
+    </div>
+   </form>
+  </div>
+ </div>
+</div>
+<script src="assets/portal.js"></script>
+</body>
+</html>

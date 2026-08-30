@@ -1,0 +1,71 @@
+/* ============ FX · the cross-cutting behaviour ============
+   Page transitions, counters, bar fills, copy feedback, and the two
+   states every prototype forgets: offline, and something broke. */
+
+/* ---- page transition ------------------------------------------- */
+#page{animation:pgin .34s var(--ease) both}
+@keyframes pgin{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+
+/* things that arrive in sequence rather than all at once */
+.stagger>*{animation:stg .42s var(--ease) both}
+.stagger>*:nth-child(1){animation-delay:.02s}
+.stagger>*:nth-child(2){animation-delay:.06s}
+.stagger>*:nth-child(3){animation-delay:.10s}
+.stagger>*:nth-child(4){animation-delay:.14s}
+.stagger>*:nth-child(5){animation-delay:.18s}
+.stagger>*:nth-child(6){animation-delay:.22s}
+.stagger>*:nth-child(n+7){animation-delay:.26s}
+@keyframes stg{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+
+/* ---- bars fill on arrival, rather than being drawn full --------- */
+.fill-anim{width:0!important}
+
+/* ---- the toast -------------------------------------------------- */
+#ktoast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,14px);z-index:320;
+  background:var(--navy);color:#F2EFE8;font-size:13.5px;font-weight:500;padding:12px 18px;
+  border-radius:var(--r-pill);box-shadow:var(--sh-3);display:flex;align-items:center;gap:10px;
+  opacity:0;pointer-events:none;transition:opacity .22s var(--ease),transform .28s var(--ease);
+  max-width:calc(100vw - 32px)}
+#ktoast.on{opacity:1;transform:translate(-50%,0)}
+#ktoast svg{width:16px;height:16px;color:var(--gold-fill);flex:none}
+@media(max-width:560px){#ktoast{bottom:80px}}
+
+/* ---- offline ---------------------------------------------------- */
+#koff{position:fixed;left:0;right:0;top:0;z-index:330;background:var(--navy);color:#F2EFE8;
+  font-size:13px;padding:9px 18px;display:none;align-items:center;justify-content:center;gap:10px;
+  text-align:center;line-height:1.4}
+#koff.on{display:flex}
+#koff svg{width:15px;height:15px;color:var(--gold-fill);flex:none}
+body.offline{padding-top:36px}
+
+/* ---- something broke -------------------------------------------- */
+.kfail{max-width:520px;margin:60px auto;text-align:center;background:var(--white);
+  border:1px solid var(--line);border-radius:var(--r-lg);padding:40px 30px;box-shadow:var(--sh-1)}
+.kfail .fi{width:54px;height:54px;border-radius:16px;background:var(--bad-soft);display:grid;
+  place-items:center;margin:0 auto 16px}
+.kfail .fi svg{width:25px;height:25px;color:var(--bad)}
+.kfail h2{font-size:21px;letter-spacing:-.03em}
+.kfail p{margin:10px 0 0;font-size:14px;color:var(--ink-2);line-height:1.6}
+.kfail code{display:block;margin:16px 0 0;font-family:"IBM Plex Mono",monospace;font-size:11.5px;
+  color:var(--ink-3);background:var(--sunken);border-radius:var(--r-sm);padding:10px 13px;
+  word-break:break-word;text-align:start}
+.kfail .vacts{margin-top:20px;justify-content:center}
+
+/* ---- keyboard focus is visible everywhere, including on paper --- */
+button:focus-visible,a:focus-visible,input:focus-visible{outline:2.5px solid var(--pri);outline-offset:2px}
+.sos-n .k-btn:focus-visible,.akesc .k-btn:focus-visible,.bk-j .k-btn:focus-visible{outline-color:var(--gold-fill)}
+
+/* ---- pressed feedback on every card-sized target ---------------- */
+button.uli:active,.apc-m:active,.vc:active,.pcard:active,.scase:active,.akchips button:active,
+.uf:active,.bm:active,.slots button:active,.slotd button:active{transform:scale(.995)}
+
+/* ---- every standalone action reaches the 34px target ------------
+   Found by _build/verify.js at 390 and 320: the row actions (Open,
+   Edit, Remove, Copy reference) were 21–25px tall. */
+.lk{min-height:34px;padding:6px 0}
+.ukv .lk,.upan-f .lk{padding:6px 0}
+.rf2 button{min-height:34px;padding:6px 2px}
+.aklang button{min-height:34px}
+.akin input{min-height:26px}
+.lv .k-chip{min-height:34px;padding:7px 12px}
+.pmeth .lk,.dev .lk{padding:7px 4px}

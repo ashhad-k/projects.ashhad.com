@@ -1,0 +1,1326 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Instrument Sans', sans-serif;
+
+}
+
+.back-Color {
+    background-color: #F8F9FC;
+}
+
+
+
+/* Header Styles */
+.header-transparent {
+    background-color: white;
+    /* border-bottom-left-radius: 40px;
+border-bottom-right-radius: 40px; */
+}
+
+.navbar {
+
+
+    padding: 0.5rem 0;
+}
+
+.nav-logo {
+    width: 130px;
+}
+
+/* Logo Styles */
+.logo-container {
+    position: relative;
+    width: 32px;
+    height: 32px;
+}
+
+.logo-shape {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+    border-radius: 4px;
+    transform: rotate(45deg);
+}
+
+.logo-accent {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 16px;
+    height: 16px;
+    background: linear-gradient(135deg, #f97316 0%, #ef4444 100%);
+    border-radius: 4px;
+    transform: rotate(12deg);
+}
+
+/* Brand Text */
+.brand-text {
+    line-height: 1.2;
+}
+
+.brand-main {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #2563eb;
+    margin-bottom: -2px;
+}
+
+.brand-sub {
+    font-weight: 600;
+    font-size: 0.75rem;
+    color: #374151;
+    margin-bottom: -2px;
+}
+
+/* Navigation Links */
+.nav-custom {
+    color: #374151 !important;
+    font-weight: 500 !important;
+    font-size: 14px;
+    text-decoration: none !important;
+    padding: 0.5rem 1rem !important;
+    transition: color 0.3s ease;
+}
+
+.nav-custom:hover {
+    color: #2563eb !important;
+}
+
+/* Buttons */
+.btn-link.nav-custom {
+    border: none;
+    background: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+}
+
+.btn-pro {
+    background-color: #111827;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-pro:hover {
+    background-color: #1f2937;
+    color: white;
+}
+
+/* Mobile Responsive */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .nav-custom {
+        padding: 0.75rem 1rem !important;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .nav-custom:last-child {
+        border-bottom: none;
+    }
+
+    .d-flex.align-items-center {
+        flex-direction: column;
+        align-items: stretch !important;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #e5e7eb;
+    }
+
+    .btn-link.nav-custom {
+        text-align: center;
+        width: 100%;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        margin: 0 !important;
+    }
+
+    .btn-pro {
+        width: 100%;
+        margin: 0;
+    }
+
+    .logo-container {
+        width: 28px;
+        height: 28px;
+    }
+
+    .logo-shape {
+        width: 28px;
+        height: 28px;
+    }
+
+    .brand-main {
+        font-size: 1rem;
+    }
+
+    .brand-sub {
+        font-size: 0.7rem;
+    }
+}
+
+.hero-section {
+    width: 100%;
+    min-height: 343px;
+    background: url("../assets/job-talent-3.png") center center no-repeat;
+    background-size: cover;
+}
+
+.hero-card {
+    /* max-width: 1100px; */
+    margin: -130px auto 0 auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 20px;
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); */
+    position: relative;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.company-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.company-logo {
+    width: 79px;
+    height: 79px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.job-subheading {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.job-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    /* margin-bottom: 25px; */
+}
+
+.job-list li {
+    font-size: 16px;
+    color: black;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.company-name {
+    font-size: 27px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.verified {
+    color: #0d6efd;
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.company-tagline {
+    margin: 2px 0 0 0;
+    font-size: 18px;
+    color: #000000;
+}
+
+.company-tagline-location {
+    margin: 2px 0 0 0;
+    font-size: 14px;
+    color: #848484;
+}
+
+.action-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rating {
+    background-color: #FFF4E2;
+    border: 1px solid #FEB339;
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-weight: 500;
+}
+
+.contact-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.save-btn {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 8px 16px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.card-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.info-item {
+    flex: 1 1 200px;
+}
+
+.info-item label {
+    font-size: 16px;
+    font-weight: 600;
+
+    color: #7C7C7C;
+    display: block;
+}
+
+.info-item a,
+.info-item span {
+    /* font-weight: 600; */
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+
+
+
+
+
+.company-section {
+    /* background-color: #ffffff; */
+    /* padding: 30px; */
+    /* border-radius: 10px; Slightly more rounded corners */
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); Softer, more pronounced shadow */
+    /* margin-top: 20px; */
+    /* margin-bottom: 20px; */
+}
+
+.section-title {
+    font-size: 18px;
+    /* Larger title for emphasis */
+    color: #161616;
+    /* Darker heading color */
+    margin-bottom: 25px;
+    font-weight: 600;
+    /* Slightly bolder */
+}
+
+.section-subtitle {
+    font-size: 1.4rem;
+    /* Slightly larger subtitle */
+    color: #343a40;
+    margin-top: 35px;
+    /* More space above subtitle */
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.company-description {
+    line-height: 1.7;
+    /* Increased line height for readability */
+    margin-bottom: 20px;
+    font-size: 16px;
+    /* Slightly larger base font size */
+    font-weight: 400;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-item {
+    margin-bottom: 12px;
+    /* More space between list items */
+    display: flex;
+    align-items: flex-start;
+    /* Align icon and text at the top */
+}
+
+.feature-icon {
+    color: #28a745;
+    /* Bootstrap success green */
+    margin-right: 12px;
+    /* More space between icon and text */
+    font-size: 1.3rem;
+    /* Larger icon size */
+    margin-top: 2px;
+    /* Fine-tune vertical alignment */
+}
+
+.feature-text strong {
+    color: #000000;
+    /* Make the strong text truly black for contrast */
+    font-weight: 600;
+}
+
+.feature-text {
+    font-size: 16px;
+    /* Consistent font size for feature text */
+    line-height: 1.5;
+}
+
+
+
+
+
+
+.services-container {
+    /* The image shows the grid contained within a rounded, soft-shadowed area. */
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 10px;
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);  */
+    max-width: 1000px;
+    margin: auto;
+}
+
+.service-card {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: left;
+    /* No individual box shadow for cards within the main container in the image, just a clean look. */
+    /* Add some spacing for mobile/smaller screens using Bootstrap gaps (g-4) */
+}
+
+.icon-box {
+    background-color: #e3f2fd;
+    /* Very light blue background color for the icon */
+    /* width: 60px; */
+    /* height: 60px; */
+    padding: 13px;
+    border-radius: 10px;
+    /* Rounded corners for the box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Simulating the shield icon */
+
+
+.service-content {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.service-title {
+    font-size: 15px;
+    font-weight: 600;
+    padding-right: 34px;
+    /* min-width: 72px; */
+    color: #000000
+        /* margin-bottom: 10px; */
+}
+
+.share-job-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    /* Consistent with previous sections */
+    padding: 30px;
+
+    max-width: 450px;
+    /* Adjusted to match the narrower width in the image */
+    margin: auto;
+}
+
+.section-heading {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.social-icons-wrapper {
+    display: flex;
+    justify-content: space-around;
+    /* Distributes items evenly with space around them */
+    align-items: center;
+    flex-wrap: wrap;
+    /* Allows icons to wrap on smaller screens */
+    gap: 15px;
+    /* Minimum space between icons */
+}
+
+.social-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    /* Makes the background circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    /* White icon color */
+    font-size: 1rem;
+    /* Size of the icon inside the circle */
+    text-decoration: none;
+    /* Remove underline for links */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    /* Smooth hover effect */
+}
+
+/* Specific background colors for each social media icon */
+.social-icon.facebook {
+    background-color: #1877f2;
+}
+
+.social-icon.x-twitter {
+    background-color: #000000;
+}
+
+/* Black for X (formerly Twitter) */
+.social-icon.linkedin {
+    background-color: #0a66c2;
+}
+
+.social-icon.email {
+    background-color: #f75c03;
+}
+
+/* Orange for generic email */
+.social-icon.whatsapp {
+    background-color: #25d366;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    /* Subtle lift effect on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* Add a slight shadow on hover */
+}
+
+.service-description {
+    font-size: 0.9rem;
+    color: #6c757d;
+    line-height: 1.5;
+}
+
+
+
+
+.jobs-posted-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    /* Matches the previous sections' containers */
+    padding: 20px;
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);  */
+    /* max-width: 800px; Adjust as needed, based on image width */
+    /* margin: auto; */
+}
+
+.jobs-section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.job-card {
+    background-color: #ffffff;
+    /* Should blend with the container */
+    padding: 20px 0;
+    /* Padding top/bottom for separation */
+    border-bottom: 1px solid #eee;
+    /* Light separator line */
+
+}
+
+/* Remove border from the last job card */
+.job-card:last-child {
+    border-bottom: none;
+
+}
+
+.job-avatar {
+    width: 50px;
+    height: 50px;
+    background-color: #DADADA;
+    /* Light gray color from image */
+    border-radius: 8px;
+    /* Slightly rounded corners */
+    flex-shrink: 0;
+    /* Prevent it from shrinking */
+}
+
+.job-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #161616;
+    margin-bottom: 5px;
+    /* Small space between title and description */
+}
+
+.company-description-sm {
+    font-size: 15px;
+    color: black;
+    /* Lighter text color */
+    line-height: 1.4;
+    margin-bottom: 0;
+    /* Remove default paragraph margin */
+}
+
+.job-post-time {
+    font-size: 0.85rem;
+    color: #6c757d;
+    white-space: nowrap;
+    /* Keep "1 day ago" on one line */
+    display: flex;
+    align-items: center;
+}
+
+.job-post-time .fa-calendar-alt {
+    margin-right: 5px;
+    font-size: 0.9em;
+    /* Adjust icon size relative to text */
+}
+
+.job-tags {
+    margin-top: 15px;
+    /* Space between main content and tags */
+    display: flex;
+    /* For wrapping behavior */
+    flex-wrap: wrap;
+    /* Allow tags to wrap to next line */
+    gap: 8px;
+    /* Space between tags */
+}
+
+.job-tag {
+    display: inline-block;
+    background-color: #F3F3F3;
+    /* Same light gray as avatar */
+    color: black;
+    /* Slightly darker text for tags */
+    padding: 5px 12px;
+    border-radius: 5px;
+    /* Rounded corners for tags */
+    font-size: 14px;
+    /* font-weight: 500; */
+}
+
+
+
+.review-testimonials-container {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);  */
+    /* max-width: 450px; Adjusted to match the narrower width in the image */
+    /* margin: auto; */
+}
+
+.section-heading {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 25px;
+    /* In the image, this heading is outside the main white box. */
+    /* We'll place it directly inside the container as the first element for simplicity. */
+    /* If it MUST be separate, wrap the white box in another div and put this heading before it. */
+}
+
+/* Testimonial Card Content Styling */
+.rating-section {
+    text-align: left;
+    /* Align content to the left as per image */
+    margin-bottom: 20px;
+}
+
+.rating-number {
+    font-size: 48px;
+    /* Large number */
+    font-weight: 600;
+    color: #161616;
+    line-height: 1;
+    /* Tighten line height */
+    margin-bottom: 5px;
+}
+
+.stars .fa-star {
+    color: #FEB339;
+    /* Golden yellow for stars */
+    font-size: 1.3rem;
+    margin-right: 3px;
+    /* Small space between stars */
+}
+
+/* Style for empty star (if one was truly empty) */
+.stars .far.fa-star {
+    /* Using far for regular (outline) star for the last one */
+    color: #FEB339;
+    /* Keep the same color, but it's an outline */
+}
+
+
+.vote-count {
+    font-size: 16px;
+    color: black;
+    /* Lighter text color */
+    margin-top: 10px;
+}
+
+.separator-line {
+    border: 0;
+    height: 1px;
+    background-color: #eee;
+    margin: 25px 0;
+    /* Space above and below the line */
+}
+
+.testimonial-content .testimonial-subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #161616;
+    margin-bottom: 15px;
+}
+
+.testimonial-content .testimonial-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.testimonial-content .testimonial-author {
+    font-size: 14px;
+    font-weight: 600;
+    /* Slightly bolder for name */
+    color: black;
+    margin-bottom: 0;
+}
+
+.testimonial-nav-dots {
+    display: flex;
+    justify-content: start;
+    /* Center the dots */
+    margin-top: 30px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    /* Light gray for inactive dots */
+    margin: 0 4px;
+    /* Space between dots */
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #0d6efd;
+    /* Bootstrap primary blue for active dot */
+}
+
+
+.contact-details-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    /* Consistent with previous sections */
+    padding: 30px;
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);  */
+    max-width: 450px;
+    /* Adjusted to match the narrower width in the image */
+    margin: auto;
+}
+
+.section-heading {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.contact-detail-group {
+    margin-bottom: 25px;
+    /* Space between each contact detail section */
+}
+
+.contact-icon-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    /* Space between icon-label and the content */
+}
+
+.contact-icon {
+    font-size: 1.1rem;
+    color: black;
+    /* Lighter icon color */
+    margin-right: 10px;
+    width: 20px;
+    /* Fixed width for consistent alignment */
+    text-align: center;
+}
+
+.contact-label {
+    font-weight: 600;
+    font-size: 12px;
+    color: #333;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 180px;
+    /* Fixed height for the map image as seen in the image */
+    background-color: #e9ecef;
+    /* Placeholder color for map */
+    border-radius: 8px;
+    overflow: hidden;
+    /* Ensure content inside respects border-radius */
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.map-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Cover the area without distorting aspect ratio */
+    display: block;
+}
+
+.contact-text-value {
+    font-size: 16px;
+    color: #000000;
+    line-height: 1.5;
+    margin-bottom: 0;
+    /* Remove default paragraph margin */
+}
+
+.get-directions-link {
+    font-size: 14px;
+    color: #2575E8;
+    /* Bootstrap primary blue */
+    /* text-decoration: none; */
+    margin-top: 5px;
+    /* Space above the link */
+    display: inline-block;
+    /* Allows top margin */
+}
+
+.get-directions-link:hover {
+    text-decoration: underline;
+}
+
+/* Adjust margin for non-address contact values */
+.contact-value-single {
+    /* margin-left: calc(20px + 10px); Width of icon + margin-right of icon */
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.contact-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    /* More rounded than default Bootstrap button */
+    padding: 12px 20px;
+    width: 100%;
+    /* Full width button */
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 30px;
+    /* Space above the button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    /* Smooth hover effect */
+}
+
+.contact-button:hover {
+    background-color: #333;
+    /* Slightly lighter black on hover */
+    color: #fff;
+    /* Ensure text color remains white on hover */
+}
+
+.contact-button .fa-arrow-right {
+    margin-left: 10px;
+    /* Space between text and arrow */
+    font-size: 0.9rem;
+}
+
+
+
+
+
+.similar-businesses-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    /* Consistent with previous sections */
+    padding: 30px;
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); Soft, subtle shadow */
+    max-width: 450px;
+    /* Adjusted to match the narrower width in the image */
+    margin: auto;
+}
+
+.section-heading {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.business-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    /* Space between each business item */
+}
+
+.business-item:last-child {
+    margin-bottom: 0;
+    /* No margin after the last item */
+}
+
+.business-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    /* Rounded corners for the logo box */
+    margin-right: 15px;
+    /* Space between logo and text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    /* Prevent the logo from shrinking */
+    color: #fff;
+    /* White text/icon inside the logo */
+    font-size: 1.5rem;
+    /* Size of the letter/symbol */
+    font-weight: bold;
+}
+
+/* Specific background colors for each logo based on the image */
+.business-logo.logo-dark-grey {
+    background-color: #2d2d2d;
+}
+
+/* Approx black/dark grey */
+.business-logo.logo-light-blue {
+    background-color: #20b2aa;
+}
+
+/* Approx light sea green */
+.business-logo.logo-purple {
+    background-color: #6a5acd;
+}
+
+/* Approx slate blue / medium purple */
+.business-logo.logo-lime-green {
+    background-color: #8bc34a;
+}
+
+/* Approx lime green */
+.business-logo.logo-teal-green {
+    background-color: #20c997;
+}
+
+/* Approx teal green */
+
+.business-info {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    /* Allow info to take remaining space */
+    flex-wrap: wrap;
+    /* Allow text to wrap if long */
+}
+
+.business-name {
+    font-size: 16px;
+    font-weight: 600;
+    /* Medium bold */
+    color: #161616;
+    line-height: 1.3;
+    /* Adjust line height for better appearance if text wraps */
+    margin-right: 5px;
+    /* Space between name and icon */
+}
+
+.verified-icon {
+    color: #0d6efd;
+    /* Bootstrap primary blue for verification icon */
+    font-size: 0.9rem;
+    /* Slightly smaller than text */
+    flex-shrink: 0;
+    /* Prevent icon from wrapping */
+}
+
+
+
+
+.gallery-container {
+    /* background-color: #ffffff; */
+    border-radius: 15px;
+    /* Consistent with previous sections */
+    /* padding: 30px; */
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); Soft, subtle shadow */
+    /* max-width: 900px; Wider to accommodate the gallery layout */
+    margin: auto;
+}
+
+.section-heading {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.gallery-grid {
+    /* Bootstrap g-3 provides a 16px (1rem) gutter, adjust if image implies different */
+    --bs-gutter-x: 1.5rem;
+    /* Default Bootstrap gutter */
+    --bs-gutter-y: 1.5rem;
+    /* Default Bootstrap gutter */
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    /* Ensures image and overlay respect border-radius */
+    border-radius: 10px;
+    /* Rounded corners for each image card */
+    background-color: #f0f2f5;
+    /* Fallback/placeholder background */
+    /* Minimum height for the smaller images to control aspect ratio */
+    min-height: 180px;
+    /* Approx height for the smaller images */
+    display: flex;
+    /* For overlay centering */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Specific height for the large left image to span two rows */
+/* It needs to be twice the height of a single item PLUS the vertical gutter */
+/* Assuming Bootstrap g-3 (1.5rem = 24px default on some setups, or 16px in others) */
+/* Let's use 16px (1rem) for calculation as it's a common default for g-3/g-4 */
+.gallery-item.large-item {
+    height: 100%;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures image covers the container */
+    display: block;
+    transition: transform 0.5s ease;
+    /* Smooth zoom on hover */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent black overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    opacity: 0;
+    /* Hidden by default */
+    transition: opacity 0.3s ease;
+    /* Smooth fade-in/out */
+    cursor: pointer;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+    /* Show overlay on hover */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+    /* Slight zoom effect on image on hover */
+}
+
+
+
+
+
+
+
+.footer-card {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.footer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Footer Styles */
+.footer {
+    background-color: #030616;
+    color: white;
+    padding: 0 0 30px;
+}
+
+.footer-logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.footer-heading {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.footer-btn-primary {
+    background-color: white;
+    color: #1a1d29;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.footer-btn-secondary {
+    background-color: transparent;
+    color: white;
+    padding: 12px 30px;
+    border: 2px solid white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.footer-btn-primary:hover {
+    background-color: #f1f1f1;
+    color: #1a1d29;
+    transform: translateY(-2px);
+}
+
+.footer-btn-secondary:hover {
+    background-color: white;
+    color: #1a1d29;
+    transform: translateY(-2px);
+}
+
+.footer-links {
+    margin-bottom: 40px;
+}
+
+.footer-section-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #646986;
+}
+
+.footer-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    display: block;
+    font-weight: 200;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: white;
+}
+
+.footer-bottom {
+    /* border-top: 1px solid #2d3748; */
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-copyright {
+    color: #FFFFFF;
+    font-size: 0.9rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: white;
+}
+
+
+
+
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 1025px) {
+    .content-wrapper {
+        padding: 0px 40px;
+    }
+
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 992px) {}
+
+@media (max-width: 768px) {
+
+
+
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+    }
+
+
+    .footer-heading {
+        font-size: 1.8rem;
+    }
+
+    .footer-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 28px;
+    }
+
+
+
+    .description {
+        font-size: 14px;
+    }
+
+
+
+
+
+
+    .footer-heading {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero-title {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+
+
+}

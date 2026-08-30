@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>risksystem.io — Internal</title>
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- AOS – Animate On Scroll (uncomment when ready to activate) -->
+  <!-- <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" /> -->
+
+  <!-- Design System — loads AFTER Bootstrap so it wins specificity -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+
+<!-- ══════════════════════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════════════════════ -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+
+    <!-- 1. Logo — left (256px width) -->
+    <a class="navbar-brand" href="index.html">
+      <img src="assets/logo.svg" alt="risksystem.io" width="256" />
+    </a>
+
+    <!-- Mobile toggle -->
+    <button class="navbar-toggler border-0" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navMenu"
+            aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- 2. Navigation — center (pill container, 4px wrapper gap, 2px between items) -->
+    <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+      <div class="nav-pill-wrap">
+        <a href="index.html" class="nav-pill-link">Home</a>
+        <a href="#features" class="nav-pill-link active">Features</a>
+        <a href="#pricing" class="nav-pill-link">Pricing</a>
+        <a href="#" class="nav-pill-link">About</a>
+        <a href="#" class="nav-pill-link">Contact</a>
+      </div>
+    </div>
+
+    <!-- 3. CTA — right (56px height variant of primary button) -->
+    <div class="d-none d-lg-block">
+      <a href="#" class="btn btn-gradient btn-nav">Start your free trial</a>
+    </div>
+
+  </div>
+</nav>
+
+
+<!-- ══════════════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════════ -->
+<section id="hero">
+  <!-- Glow BG: half in hero, half in next section (internal = glow-hero.svg) -->
+  <div class="hero-glow" aria-hidden="true"></div>
+
+  <div class="container text-center">
+
+    <!-- Small text (pill) -->
+    <div class="mb-4" data-aos="fade-down" data-aos-delay="0">
+      <span class="hero-pill">
+        Trusted by 2,800+ brokers managing $1B+ daily exposure <a href="#">Read more →</a>
+      </span>
+    </div>
+
+    <!-- Main text -->
+    <h1 class="hero-title mx-auto"
+        data-aos="fade-up" data-aos-delay="100">
+      Real-Time Risk Intelligence<br />for <span>Modern Brokerage</span>
+    </h1>
+
+    <!-- Descriptive paragraph -->
+    <p class="hero-desc mx-auto"
+       data-aos="fade-up" data-aos-delay="200">
+      Detect toxic flow, prevent fraud, and optimize A/B-Book routing in real time — before losses hit your P&amp;L.
+      Built for serious brokers who need total visibility across platforms, accounts, and global exposure.
+    </p>
+
+    <!-- Buttons: dark (left) + orange (right) -->
+    <div class="hero-actions mb-5"
+         data-aos="fade-up" data-aos-delay="300">
+      <a href="#" class="btn btn-ghost">Schedule Demo</a>
+      <a href="#" class="btn btn-gradient">Sign up Now</a>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="hero-stats row g-0 mx-auto" style="max-width:860px;"
+         data-aos="fade-up" data-aos-delay="400">
+      <div class="col-6 col-md-3 hero-stat">
+        <div class="num"><span>1,000</span>+</div>
+        <div class="label">Brokers upgraded to automated risk protection this year</div>
+      </div>
+      <div class="col-6 col-md-3 hero-stat">
+        <div class="num">$<span>847</span>M</div>
+        <div class="label">Protected daily across global broker infrastructure</div>
+      </div>
+      <div class="col-6 col-md-3 hero-stat">
+        <div class="num">&lt;<span>1s</span></div>
+        <div class="label">Threats detected before they impact your book</div>
+      </div>
+      <div class="col-6 col-md-3 hero-stat">
+        <div class="num"><span>99.2</span>%</div>
+        <div class="label">Precision fraud detection across toxic flow and fraud patterns</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     PAIN POINTS
+══════════════════════════════════════════════════════ -->
+<section class="section-py bg-dark-alt" id="pain">
+  <div class="container">
+
+    <div class="text-center mb-3" data-aos="fade-up">
+      <span class="section-eyebrow">The Brutal Reality</span>
+    </div>
+    <h2 class="section-title text-center mb-3" data-aos="fade-up" data-aos-delay="50">
+      Every Day Without RiskShield Pro,<br />You're Losing Money
+    </h2>
+    <p class="section-sub text-center mx-auto mb-5" data-aos="fade-up" data-aos-delay="100">
+      Real quantified losses brokers face without automated risk intelligence — every single day.
+    </p>
+
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="pain-card h-100">
+          <h3>⚡ Scalpers &amp; HFT Bots Exploit Latency</h3>
+          <p>High-frequency traders and scalpers exploit microsecond advantages, turning your spreads into their profits.</p>
+          <div class="pain-cost">$450K / month</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+        <div class="pain-card h-100">
+          <h3>🕐 Manual Monitoring Catches Fraud Too Late</h3>
+          <p>By the time your risk team notices suspicious activity, the damage is already done. You're 3 days behind the fraudsters.</p>
+          <div class="pain-cost">72 hrs average delay</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+        <div class="pain-card h-100">
+          <h3>🌐 Zero Visibility Into Global Exposure</h3>
+          <p>Multiple servers, platforms, and accounts create a fragmented view. You have no idea what your real exposure is until it's too late.</p>
+          <div class="pain-cost">Unknown risk exposure</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="pain-card h-100">
+          <h3>🩸 Toxic Traders Drain Your B-Book</h3>
+          <p>Exploiting your B-Book with strategies designed to extract maximum profit while you're blind to their patterns.</p>
+          <div class="pain-cost">$2.3M / year</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+        <div class="pain-card h-100">
+          <h3>🔀 No Real-Time Symbol Normalization</h3>
+          <p>Different symbol names across platforms create blind spots in your exposure. You think you're hedged, but you're not.</p>
+          <div class="pain-cost">$2.3M in errors</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+        <div class="pain-card h-100">
+          <h3>📡 Copy Trading Networks Attack Simultaneously</h3>
+          <p>Coordinated groups of copy traders create massive one-sided exposure that can wipe out your monthly profits in minutes.</p>
+          <div class="pain-cost">$847K per incident</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     COMPARISON
+══════════════════════════════════════════════════════ -->
+<section class="section-py" id="compare">
+  <div class="container">
+
+    <div class="text-center mb-3" data-aos="fade-up">
+      <span class="section-eyebrow">Side-by-Side Comparison</span>
+    </div>
+    <h2 class="section-title text-center mb-3" data-aos="fade-up" data-aos-delay="50">
+      The Difference Is Crystal Clear
+    </h2>
+    <p class="section-sub text-center mx-auto mb-5" data-aos="fade-up" data-aos-delay="100">
+      Every broker using RiskShield Pro sees this level of protection. Why aren't you?
+    </p>
+
+    <div class="compare-wrap mx-auto" style="max-width:900px;" data-aos="fade-up" data-aos-delay="150">
+      <div class="row g-0">
+        <!-- Without -->
+        <div class="col-12 col-md-6 compare-col bad">
+          <h3 class="text-red fw-bold mb-4">✕ Without RiskShield</h3>
+          <div class="compare-row"><span class="lbl">All Servers</span><span class="val text-red">No visibility</span></div>
+          <div class="compare-row"><span class="lbl">Total Exposure</span><span class="val text-red">$2.4M unknown</span></div>
+          <div class="compare-row"><span class="lbl">Toxic Traders</span><span class="val text-red">Undetected</span></div>
+          <div class="compare-row"><span class="lbl">Copy Networks</span><span class="val text-red">Not flagged</span></div>
+          <div class="compare-row"><span class="lbl">HFT Scalper Bots</span><span class="val text-red">Unrestricted</span></div>
+          <div class="compare-row"><span class="lbl">Symbol Normalization</span><span class="val text-red">Blind spots</span></div>
+          <div class="compare-total">
+            <span class="text-white-50">Total Losses Today</span>
+            <span class="big text-red">$199,720+</span>
+          </div>
+        </div>
+        <!-- With -->
+        <div class="col-12 col-md-6 compare-col good">
+          <h3 class="text-green fw-bold mb-4">✓ With RiskShield Pro</h3>
+          <div class="compare-row"><span class="lbl">All Servers</span><span class="val text-green">Full real-time visibility</span></div>
+          <div class="compare-row">
+            <span class="lbl">Total Exposure</span>
+            <span class="val text-green">Protected <span class="saved">Save $2.4M</span></span>
+          </div>
+          <div class="compare-row">
+            <span class="lbl">Toxic Traders (HP-4738)</span>
+            <span class="val text-green">Auto-routed to A-Book <span class="saved">Save $128,490</span></span>
+          </div>
+          <div class="compare-row">
+            <span class="lbl">23 Copy Accounts</span>
+            <span class="val text-green">Flagged &amp; isolated <span class="saved">Save $128,490</span></span>
+          </div>
+          <div class="compare-row">
+            <span class="lbl">HFT Scalper Bot</span>
+            <span class="val text-green">Detected &amp; restricted <span class="saved">Save $23,840</span></span>
+          </div>
+          <div class="compare-row">
+            <span class="lbl">XAUUSD/GOLD</span>
+            <span class="val text-green">Unified exposure <span class="saved">Save $2.4M</span></span>
+          </div>
+          <div class="compare-total">
+            <span class="text-white-50">Total Losses Prevented</span>
+            <span class="big text-green">+$199,720</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     HOW IT WORKS
+══════════════════════════════════════════════════════ -->
+<section class="section-py bg-dark-alt" id="how">
+  <div class="container">
+
+    <div class="text-center mb-3" data-aos="fade-up">
+      <span class="section-eyebrow">Go Live in Minutes</span>
+    </div>
+    <h2 class="section-title text-center mb-3" data-aos="fade-up" data-aos-delay="50">
+      Connect &amp; Start Saving —<br />Not Months. Minutes.
+    </h2>
+    <p class="section-sub text-center mx-auto mb-5" data-aos="fade-up" data-aos-delay="100">
+      Connect directly to MT4, MT5, or cTrader via Manager API. Import accounts instantly.
+      Monitor exposure in real time. No infrastructure changes required.
+    </p>
+
+    <div class="row g-4 mb-5">
+      <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+        <div class="step h-100">
+          <div class="step-num">1</div>
+          <h3>Register Your Broker</h3>
+          <p>Create your risksystem.io account and configure your broker profile. No infrastructure changes required. Secure, enterprise-grade onboarding in minutes.</p>
+          <span class="step-badge">✓ Secure enterprise onboarding</span>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="80">
+        <div class="step h-100">
+          <div class="step-num">2</div>
+          <h3>Connect MT4, MT5, or cTrader Manager</h3>
+          <p>Connect your trading platforms using Manager API credentials. risksystem.io automatically imports all accounts, positions, and exposure in real-time.</p>
+          <span class="step-badge">✓ Supports multiple servers &amp; unlimited accounts</span>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="160">
+        <div class="step h-100">
+          <div class="step-num">3</div>
+          <h3>Sync Symbols &amp; Connect Coverage Accounts</h3>
+          <p>Automatically normalize symbols across platforms and connect your hedge or coverage accounts. risksystem.io instantly calculates real exposure and hedge coverage.</p>
+          <span class="step-badge">✓ Automatic symbol mapping</span>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
+        <div class="step h-100">
+          <div class="step-num">4</div>
+          <h3>Go Live &amp; Start Managing Risk Profitably</h3>
+          <p>Monitor exposure, detect toxic flow, optimize A-Book and B-Book routing, and increase broker profitability with real-time intelligence.</p>
+          <span class="step-badge">✓ Full visibility. Full control. Maximum efficiency.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center" data-aos="fade-up">
+      <a href="#" class="btn btn-gradient">Be Fully Operational in Under 15 Minutes →</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     FEATURES
+══════════════════════════════════════════════════════ -->
+<section class="section-py" id="features">
+  <div class="container">
+
+    <div class="text-center mb-3" data-aos="fade-up">
+      <span class="section-eyebrow">17 Essential Features</span>
+    </div>
+    <h2 class="section-title text-center mb-3" data-aos="fade-up" data-aos-delay="50">
+      Everything You Need to Control Risk<br />— in One System
+    </h2>
+    <p class="section-sub text-center mx-auto mb-5" data-aos="fade-up" data-aos-delay="100">
+      Every tool you need to monitor, analyze, and protect your brokerage — organized by function.
+    </p>
+
+    <div class="row g-4">
+      <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="feature-card h-100">
+          <div class="feature-icon">🛡️</div>
+          <h3>Toxic Client Identification</h3>
+          <p>Protect your book from harmful trading patterns with automated detection and routing.</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="60">
+        <div class="feature-card h-100">
+          <div class="feature-icon">📱</div>
+          <h3>IP &amp; Device Risk Scoring</h3>
+          <p>Multi-account detection and fraud prevention through device fingerprinting and IP analysis.</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="120">
+        <div class="feature-card h-100">
+          <div class="feature-icon">🔍</div>
+          <h3>Pattern Detection Suite</h3>
+          <p>HFT, scalping, martingale, grid trading, and news trading detection in under 1 second.</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="feature-card h-100">
+          <div class="feature-icon">👤</div>
+          <h3>Client Risk Profiling</h3>
+          <p>Individual account monitoring with equity and margin tracking for full client intelligence.</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="60">
+        <div class="feature-card h-100">
+          <div class="feature-icon">🔄</div>
+          <h3>Automatic A/B-Book Routing</h3>
+          <p>Smart automated routing decisions based on real-time client risk scores and exposure levels.</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="120">
+        <div class="feature-card h-100">
+          <div class="feature-icon">⏱️</div>
+          <h3>Real-Time Fraud Detection</h3>
+          <p>Threats detected and blocked in under 1 second — before they can impact your book.</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="feature-card h-100">
+          <div class="feature-icon">🤖</div>
+          <h3>24/7 Fully Automated Monitoring</h3>
+          <p>Round-the-clock surveillance with zero manual intervention required.</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="60">
+        <div class="feature-card h-100">
+          <div class="feature-icon">🧠</div>
+          <h3>AI-Powered Pattern Recognition</h3>
+          <p>98% accuracy AI engine identifies complex multi-account fraud schemes instantly.</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="120">
+        <div class="feature-card h-100">
+          <div class="feature-icon">🌐</div>
+          <h3>Global Trading Intelligence Network</h3>
+          <p>Industry-first real-time risk system aggregating data from 2,000+ brokers worldwide.</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="feature-card h-100">
+          <div class="feature-icon">🔗</div>
+          <h3>Multi-Platform Symbol Normalization</h3>
+          <p>Unify XAUUSD/GOLD and all symbol variants across MT4, MT5, and cTrader seamlessly.</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="60">
+        <div class="feature-card h-100">
+          <div class="feature-icon">⚡</div>
+          <h3>Setup in 5 Minutes, Not 12 Months</h3>
+          <p>Industry-leading onboarding speed — connect your first server and go live immediately.</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="120">
+        <div class="feature-card h-100">
+          <div class="feature-icon">📊</div>
+          <h3>Proven ROI: 847% Average Return</h3>
+          <p>Real-world broker data shows consistent, measurable return on investment from day one.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     ADVANTAGE / KEY METRICS
+══════════════════════════════════════════════════════ -->
+<section class="section-py bg-dark-alt" id="advantage">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+
+      <!-- Left: copy -->
+      <div class="col-12 col-lg-6" data-aos="fade-right">
+        <span class="section-eyebrow mb-4 d-inline-flex">The RiskShield Pro Advantage</span>
+        <h2 class="section-title mt-3 mb-3">
+          How RiskShield Protects Your Trading Infrastructure
+        </h2>
+        <p class="mb-4">
+          Built by hedge fund managers, traders, and risk analysts with $10B+ assets managed.
+        </p>
+        <ul class="adv-list">
+          <li>Real-time fraud detection in under 1 second</li>
+          <li>Automatic A/B-Book routing based on live risk signals</li>
+          <li>24/7 fully automated monitoring — zero manual workload</li>
+          <li>AI-powered pattern recognition with 98% accuracy</li>
+          <li>Industry-first global trading intelligence network</li>
+          <li>Multi-platform symbol normalization across all servers</li>
+          <li>Setup in 5 minutes, operational in 15 minutes</li>
+          <li>Proven 847% average ROI across active brokers</li>
+        </ul>
+      </div>
+
+      <!-- Right: KPI grid -->
+      <div class="col-12 col-lg-6" data-aos="fade-left" data-aos-delay="100">
+        <div class="row g-3">
+          <div class="col-6">
+            <div class="kpi">
+              <div class="big">5<span style="font-size:1rem;color:var(--color-text)">min</span></div>
+              <div class="lbl">Setup Time</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="kpi">
+              <div class="big">98%</div>
+              <div class="lbl">Fraud Detection Accuracy</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="kpi">
+              <div class="big">847%</div>
+              <div class="lbl">Average ROI</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="kpi">
+              <div class="big">&lt;1s</div>
+              <div class="lbl">Detection Speed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SAVINGS / ROI
+══════════════════════════════════════════════════════ -->
+<section class="section-py" id="savings">
+  <div class="container">
+
+    <div class="text-center mb-3" data-aos="fade-up">
+      <span class="section-eyebrow">Measurable Results</span>
+    </div>
+    <h2 class="section-title text-center mb-3" data-aos="fade-up" data-aos-delay="50">
+      Average Broker Saves Big
+    </h2>
+    <p class="section-sub text-center mx-auto mb-5" data-aos="fade-up" data-aos-delay="100">
+      Real savings from brokers using risksystem.io — verified across 500+ active clients.
+    </p>
+
+    <!-- Savings cards -->
+    <div class="row g-4 mb-5">
+      <div class="col-6 col-md-4 col-lg" data-aos="fade-up" data-aos-delay="0">
+        <div class="saving-card h-100">
+          <div class="num">$50K–$200K</div>
+          <div class="lbl">Annual Savings</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg" data-aos="fade-up" data-aos-delay="60">
+        <div class="saving-card h-100">
+          <div class="num">30%</div>
+          <div class="lbl">Hedging Cost Reduction</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg" data-aos="fade-up" data-aos-delay="120">
+        <div class="saving-card h-100">
+          <div class="num">2–3 mo</div>
+          <div class="lbl">Typical Payback Period</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg" data-aos="fade-up" data-aos-delay="180">
+        <div class="saving-card h-100">
+          <div class="num">15–20 hrs</div>
+          <div class="lbl">Time Saved Weekly</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg" data-aos="fade-up" data-aos-delay="240">
+        <div class="saving-card h-100">
+          <div class="num">25%</div>
+          <div class="lbl">Profitability Improvement</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROI calculator + Ideal For -->
+    <div class="row g-5 align-items-start">
+      <div class="col-12 col-lg-6" data-aos="fade-right">
+        <h3 class="text-white fw-bold mb-3" style="font-size:1.4rem;">
+          ROI Calculator Built For Modern Brokers
+        </h3>
+        <p class="mb-4">
+          Perfect for brokers who demand excellence. See your projected savings in under 2 minutes.
+        </p>
+        <a href="#" class="btn btn-gradient">Calculate My ROI →</a>
+      </div>
+      <div class="col-12 col-lg-6" data-aos="fade-left" data-aos-delay="100">
+        <p class="text-muted-rs fw-bold mb-3" style="font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;">
+          Ideal For
+        </p>
+        <div class="d-flex flex-column gap-2">
+          <div class="ideal-item">Forex &amp; CFD Brokers (all sizes)</div>
+          <div class="ideal-item">Multi-platform operations</div>
+          <div class="ideal-item">A-Book / B-Book hybrid model</div>
+          <div class="ideal-item">Brokers with 500+ accounts</div>
+          <div class="ideal-item">Risk management teams</div>
+          <div class="ideal-item">Trading desk operators</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     GLOBAL INTELLIGENCE
+══════════════════════════════════════════════════════ -->
+<section class="section-py bg-dark-alt" id="intel">
+  <div class="container">
+
+    <div class="text-center mb-3" data-aos="fade-up">
+      <span class="section-eyebrow" style="background:rgba(245,158,11,.12);border-color:rgba(245,158,11,.3);color:var(--color-gold);">
+        Latest Feature
+      </span>
+    </div>
+    <h2 class="section-title text-center mb-3" data-aos="fade-up" data-aos-delay="50">
+      Global Trading Intelligence
+    </h2>
+    <p class="section-sub text-center mx-auto mb-5" data-aos="fade-up" data-aos-delay="100">
+      Access anonymized positioning data from thousands of brokers worldwide. Understand retail sentiment,
+      detect market shifts, and validate exposure with confidence.
+    </p>
+
+    <div class="row g-5 align-items-start">
+
+      <!-- Left: stats + info card + CTA -->
+      <div class="col-12 col-lg-6" data-aos="fade-right">
+        <div class="row g-3 mb-4">
+          <div class="col-6">
+            <div class="intel-stat">
+              <div class="big">1M+</div>
+              <div class="lbl">Lots Analyzed Daily</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="intel-stat">
+              <div class="big">2K+</div>
+              <div class="lbl">Participating Brokers</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="intel-stat">
+              <div class="big">68%</div>
+              <div class="lbl">Prediction Accuracy</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="intel-stat">
+              <div class="big">100%</div>
+              <div class="lbl">Anonymized &amp; Secure</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-rs mb-4">
+          <h4 class="fw-bold mb-2 text-white">Market Sentiment Intelligence</h4>
+          <p style="font-size:.85rem;" class="mb-3">
+            See real-time retail positioning across all major symbols. Know when retail is 78% LONG on XAUUSD — a powerful signal.
+          </p>
+          <div class="d-flex gap-2 flex-wrap">
+            <span class="tag-pill" style="background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.25);color:var(--color-green);">Volume Spike Detection</span>
+            <span class="tag-pill" style="background:rgba(236,54,30,.1);border:1px solid rgba(236,54,30,.25);color:var(--color-orange);">Exposure Validation</span>
+            <span class="tag-pill" style="background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.25);color:var(--color-gold);">AI Pattern Recognition</span>
+          </div>
+        </div>
+
+        <a href="#" class="btn btn-gradient mb-2">Explore Global Trading Intelligence →</a>
+        <p style="font-size:.8rem;" class="mt-2">Join 1,800+ brokers · Access 1M+ lots of data · Free tier available</p>
+      </div>
+
+      <!-- Right: flow steps -->
+      <div class="col-12 col-lg-6 d-flex flex-column gap-3" data-aos="fade-left" data-aos-delay="100">
+        <div class="intel-step">
+          <div class="intel-step-num">1</div>
+          <div>
+            <h4>Share Anonymized Data</h4>
+            <p>Your net exposure data is anonymized and encrypted before transmission.</p>
+          </div>
+        </div>
+        <div class="intel-step">
+          <div class="intel-step-num">2</div>
+          <div>
+            <h4>Network Aggregated</h4>
+            <p>1,800+ brokers' data combined into a massive global intelligence database.</p>
+          </div>
+        </div>
+        <div class="intel-step">
+          <div class="intel-step-num">3</div>
+          <div>
+            <h4>Access Real-Time Insights</h4>
+            <p>Get real-time sentiment, volume trends, and predictive signals to validate and optimize your exposure.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     TESTIMONIALS
+══════════════════════════════════════════════════════ -->
+<section class="section-py" id="testimonials">
+  <div class="container">
+
+    <div class="text-center mb-3" data-aos="fade-up">
+      <span class="section-eyebrow">Testimonials</span>
+    </div>
+    <h2 class="section-title text-center mb-3" data-aos="fade-up" data-aos-delay="50">
+      Trusted by Leading Brokers Worldwide
+    </h2>
+    <p class="section-sub text-center mx-auto mb-5" data-aos="fade-up" data-aos-delay="100">
+      See what our customers say about transforming their risk management with risksystem.io.
+    </p>
+
+    <div class="row g-4 mb-5">
+      <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="testi-card">
+          <div class="stars mb-3">★★★★★</div>
+          <blockquote class="mb-4">
+            "risksystem.io transformed our operations. We reduced risk exposure by 65% and increased profitability by 40% in just 3 months. The ROI was immediate."
+          </blockquote>
+          <div class="testi-author">
+            Michael Chen
+            <span>CEO, GlobalFX Trading</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="80">
+        <div class="testi-card">
+          <div class="stars mb-3">★★★★★</div>
+          <blockquote class="mb-4">
+            "The toxic flow detection alone saved us over $200K in the first quarter. Setup was surprisingly painless — we were live in under 15 minutes."
+          </blockquote>
+          <div class="testi-author">
+            Sarah Novak
+            <span>Head of Risk, Apex Brokerage</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="160">
+        <div class="testi-card">
+          <div class="stars mb-3">★★★★★</div>
+          <blockquote class="mb-4">
+            "We finally have full visibility across all our MT5 servers. The symbol normalization feature alone eliminated blind spots we didn't even know existed."
+          </blockquote>
+          <div class="testi-author">
+            James Okafor
+            <span>CTO, Meridian Capital Markets</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Aggregate metrics -->
+    <div class="d-flex justify-content-center flex-wrap gap-5" data-aos="fade-up">
+      <div class="t-metric text-center">
+        <div class="num">4.9/5</div>
+        <div class="lbl">Average Rating</div>
+      </div>
+      <div class="t-metric text-center">
+        <div class="num">98%</div>
+        <div class="lbl">Would Recommend</div>
+      </div>
+      <div class="t-metric text-center">
+        <div class="num">500+</div>
+        <div class="lbl">Happy Brokers</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     PRICING
+══════════════════════════════════════════════════════ -->
+<section class="section-py bg-dark-alt" id="pricing">
+  <div class="container">
+
+    <div class="text-center mb-3" data-aos="fade-up">
+      <span class="section-eyebrow">Pricing</span>
+    </div>
+    <h2 class="section-title text-center mb-3" data-aos="fade-up" data-aos-delay="50">
+      Simple, Transparent Pricing<br />That Scales With You
+    </h2>
+    <p class="section-sub text-center mx-auto mb-4" data-aos="fade-up" data-aos-delay="100">
+      Start with a 14-day free trial. No credit card required. Cancel anytime.
+    </p>
+
+    <!-- Billing toggle -->
+    <div class="pricing-toggle d-flex justify-content-center align-items-center gap-3 mb-5" data-aos="fade-up" data-aos-delay="150">
+      <span class="toggle-label active">Charged Monthly</span>
+      <span class="text-muted-rs">/</span>
+      <span class="toggle-label">Charged Annually <span class="discount-pill ms-1">15% Off</span></span>
+    </div>
+
+    <!-- Plan cards -->
+    <div class="row g-4 mb-5 align-items-stretch">
+
+      <!-- Starter -->
+      <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="plan">
+          <h3 class="text-white">Starter</h3>
+          <div class="price">$999<span>/mo</span></div>
+          <div class="tagline">For small-to-mid brokerages building risk infrastructure</div>
+          <ul class="mb-4">
+            <li>Up to 1,000 active accounts</li>
+            <li>Real-time risk monitoring</li>
+            <li>Basic A-Book/B-Book routing</li>
+            <li>Email support</li>
+            <li>MT4/MT5 integration</li>
+            <li>Standard analytics dashboard</li>
+            <li>Daily reports</li>
+          </ul>
+          <a href="#" class="btn btn-ghost w-100">Start Free Trial</a>
+        </div>
+      </div>
+
+      <!-- Professional (featured) -->
+      <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="80">
+        <div class="plan featured">
+          <div class="plan-badge-wrap"><span class="plan-badge">Most Popular</span></div>
+          <h3 class="text-white">Professional</h3>
+          <div class="price">$2,499<span>/mo</span></div>
+          <div class="tagline">For growing brokers managing multi-platform exposure</div>
+          <ul class="mb-4">
+            <li>Up to 10,000 active accounts</li>
+            <li>Advanced toxic flow detection</li>
+            <li>Smart automated hedging</li>
+            <li>Priority support (24/7)</li>
+            <li>Multi-platform integration</li>
+            <li>Advanced analytics &amp; AI insights</li>
+            <li>Real-time alerts &amp; notifications</li>
+            <li>Custom symbol mapping</li>
+            <li>API access</li>
+          </ul>
+          <a href="#" class="btn btn-gradient w-100">Start Free Trial</a>
+        </div>
+      </div>
+
+      <!-- Enterprise -->
+      <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="160">
+        <div class="plan">
+          <h3 class="text-white">Enterprise</h3>
+          <div class="price" style="font-size:2rem;">Custom</div>
+          <div class="tagline">For institutions requiring full customization</div>
+          <ul class="mb-4">
+            <li>Unlimited accounts</li>
+            <li>White-label solution</li>
+            <li>Dedicated account manager</li>
+            <li>Custom integrations</li>
+            <li>On-premise deployment option</li>
+            <li>Advanced compliance tools</li>
+            <li>Custom reporting &amp; analytics</li>
+            <li>SLA guarantees</li>
+            <li>Training &amp; onboarding</li>
+          </ul>
+          <a href="#" class="btn btn-ghost w-100">Contact Sales</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Add-ons -->
+    <h3 class="text-center mb-4" style="font-size:1.05rem;color:var(--color-text);"
+        data-aos="fade-up">
+      Enhance your plan with additional capabilities
+    </h3>
+    <div class="row g-4 mb-4" data-aos="fade-up" data-aos-delay="50">
+      <div class="col-12 col-md-6">
+        <div class="addon">
+          <div class="addon-info">
+            <h4>Additional Server</h4>
+            <p>Connect additional trading servers to expand your infrastructure and scale your operations.</p>
+          </div>
+          <div class="addon-price">$5,000<span style="font-size:.8rem;color:var(--color-text);font-weight:400;">/mo per server</span></div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="addon">
+          <div class="addon-info">
+            <h4>Global Trading Intelligence</h4>
+            <p>Access cross-broker insights and advanced retail trader behavior analysis.</p>
+          </div>
+          <div class="addon-price">$7,500<span style="font-size:.8rem;color:var(--color-text);font-weight:400;">/mo</span></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-center mx-auto" style="font-size:.78rem;color:var(--color-muted);max-width:740px;"
+       data-aos="fade-up">
+      Pricing is subject to change based on market conditions and service requirements. Add-on modules require an active base plan subscription. Additional Server pricing applies per server per month. Global Trading Intelligence requires Professional or Enterprise plan. All prices are in USD and exclude applicable taxes.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     FINAL CTA
+══════════════════════════════════════════════════════ -->
+<section id="cta">
+  <div class="container">
+    <h2 data-aos="fade-up">
+      Stop Guessing.<br /><span>Start Controlling Risk.</span>
+    </h2>
+    <p data-aos="fade-up" data-aos-delay="80">
+      Join 2,800+ brokers who protect their book, prevent fraud, and grow profitability with real-time intelligence.
+    </p>
+    <div class="d-flex gap-3 justify-content-center flex-wrap" data-aos="fade-up" data-aos-delay="160">
+      <a href="#" class="btn btn-gradient" style="padding:16px 36px;font-size:18px;">Schedule Demo</a>
+      <a href="#" class="btn btn-ghost"    style="padding:16px 36px;font-size:18px;">Sign Up Now →</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+
+    <div class="row g-5 pb-5" style="border-bottom:1px solid var(--border-color);">
+
+      <!-- Brand -->
+      <div class="col-12 col-lg-5">
+        <a href="#" class="logo d-inline-flex mb-3">
+          <div class="logo-icon">RS</div>
+          <div>
+            risksystem.io
+            <span class="sub">Risk Management System</span>
+          </div>
+        </a>
+        <p class="footer-brand" style="font-size:.85rem;max-width:280px;">
+          Real-Time Risk Management for Modern Brokerage. Protecting broker profitability across MT4, MT5, and cTrader platforms worldwide.
+        </p>
+      </div>
+
+      <!-- Product -->
+      <div class="col-6 col-sm-4 col-lg">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Request Demo</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Resources -->
+      <div class="col-6 col-sm-4 col-lg">
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Calculators</a></li>
+            <li><a href="#">Risk Assessment</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Company -->
+      <div class="col-6 col-sm-4 col-lg">
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap gap-3 pt-4">
+      <span>© 2026 Risksystems.io — All Rights Reserved</span>
+      <div class="d-flex gap-4">
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- Bootstrap 5.3 JS Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+(function () {
+  var nav = document.querySelector('.navbar');
+  if (!nav) return;
+  var threshold = 24;
+  function update() {
+    if (window.scrollY > threshold) {
+      nav.classList.add('navbar-scrolled');
+    } else {
+      nav.classList.remove('navbar-scrolled');
+    }
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+</script>
+
+<!-- AOS – Animate On Scroll (uncomment both lines when ready to activate) -->
+<!-- <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script> -->
+<!-- <script>AOS.init({ duration: 600, once: true, easing: 'ease-out-cubic' });</script> -->
+
+</body>
+</html>

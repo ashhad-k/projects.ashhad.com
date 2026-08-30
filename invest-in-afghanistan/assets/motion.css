@@ -1,0 +1,73 @@
+/* ══════════════════════════════════════════════════════════════════
+   MOTION LAYER
+   Smooth scrolling (Lenis), the blended cursor, magnetic controls and
+   the footer bounce. Everything here is progressive enhancement: with
+   JavaScript off, reduced motion on, or on a touch device, the site
+   looks and behaves exactly as it did before.
+   ══════════════════════════════════════════════════════════════════ */
+
+/* ── Lenis (required by the library) ── */
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-smooth [data-lenis-prevent]{overscroll-behavior:contain}
+.lenis.lenis-stopped{overflow:clip}
+.lenis.lenis-smooth iframe{pointer-events:none}
+
+/* ══════════ CURSOR ══════════
+   Two elements: a dot pinned to the pointer, and a ring that chases it.
+   mix-blend-mode:difference inverts whatever is underneath, so one
+   cursor reads correctly on cream, on ink and on photography. */
+.cur-on,.cur-on *{cursor:none!important}
+.cur,.curdot{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;
+ border-radius:50%;mix-blend-mode:difference;will-change:transform;opacity:0;
+ transition:opacity .35s var(--ease)}
+.cur-on .cur,.cur-on .curdot{opacity:1}
+.cur{width:34px;height:34px;border:1.4px solid #fff;margin:-17px 0 0 -17px;
+ transition:width .38s var(--easeO),height .38s var(--easeO),
+  margin .38s var(--easeO),background-color .38s var(--easeO),
+  border-color .38s var(--ease),opacity .35s var(--ease)}
+.curdot{width:5px;height:5px;background:#fff;margin:-2.5px 0 0 -2.5px}
+
+/* over anything clickable the ring swells and fills */
+.cur.on{width:64px;height:64px;margin:-32px 0 0 -32px;background:#fff;border-color:#fff}
+.cur-on.act .curdot{opacity:0}
+/* over text inputs it becomes a caret bar */
+.cur.txt{width:3px;height:30px;border-radius:2px;background:#fff;margin:-15px 0 0 -1.5px}
+/* while dragging the carousel */
+.cur.grab{width:74px;height:74px;margin:-37px 0 0 -37px;background:#fff}
+
+@media(hover:none),(pointer:coarse){.cur,.curdot{display:none}
+ .cur-on,.cur-on *{cursor:auto!important}}
+@media(prefers-reduced-motion:reduce){.cur,.curdot{display:none}
+ .cur-on,.cur-on *{cursor:auto!important}}
+
+/* ── magnetic controls ──
+   Uses the `translate` property, NOT `transform`, so it composes with the
+   existing hover transforms instead of overwriting them. */
+.mag{transition:translate .45s var(--easeO)}
+.mag:hover{transition:translate .12s linear}
+
+/* ══════════ FOOTER BOUNCE ══════════
+   Each block reveals when IT reaches the viewport, not when the footer as a
+   whole first touches it. The footer is ~1450px tall against a ~950px screen,
+   so a single trigger fired while the top edge was still creeping in and the
+   whole animation finished before any of it was on screen. */
+.readysec.bnc>.wrap,.readysec.bnc>.fmarq,.readysec.bnc>.endmark{
+ transform:translateY(64px);opacity:0;
+ transition:transform 1.05s var(--bounce),opacity .6s var(--ease)}
+/* the oversized wordmark travels furthest and settles slowest */
+.readysec.bnc>.endmark{transform:translateY(110px);
+ transition:transform 1.25s var(--bounce),opacity .75s var(--ease)}
+.readysec.bnc>.wrap.seen,.readysec.bnc>.fmarq.seen,.readysec.bnc>.endmark.seen{
+ transform:none;opacity:1}
+@media(prefers-reduced-motion:reduce){
+ .readysec.bnc>.wrap,.readysec.bnc>.fmarq,.readysec.bnc>.endmark{
+  transform:none!important;opacity:1!important;transition:none!important}}
+
+/* ══════════ HERO WORDMARK — proximity lift ══════════
+   Letters rise toward the pointer on a soft spring, brightest at the
+   nearest letter. Purely additive: with JS off the word never splits. */
+.wmark .wch{display:inline-block;will-change:transform;
+ transition:transform .75s var(--spring),color .5s var(--ease),text-shadow .5s var(--ease)}
+@media(prefers-reduced-motion:reduce){
+ .wmark .wch{transition:none!important;transform:none!important}}

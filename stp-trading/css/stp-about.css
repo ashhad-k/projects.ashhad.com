@@ -1,0 +1,300 @@
+/**
+ * About page — Figma 20_about (node 2:17355)
+ */
+
+body.stp-page-about {
+  background: var(--stp-page-bg);
+}
+
+body.stp-page-about > .stp-footer {
+  margin-left: var(--stp-shell-gap);
+  margin-right: var(--stp-shell-gap);
+  width: auto;
+  max-width: calc(100% - (2 * var(--stp-shell-gap)));
+  margin-inline: auto;
+}
+
+.stp-page-about .stp-portal-hero__title {
+  font-size: clamp(2rem, 4.2vw, 3rem);
+  line-height: 1.12;
+  max-width: min(100%, 32rem);
+}
+
+.stp-page-about .stp-portal-hero__figure img {
+  border-radius: 0;
+}
+
+.stp-about-stats-overlap .stp-signal-stats {
+  background: #262626 url("../assets/bg/two-balls.svg") center / auto no-repeat;
+  border-radius: 20px;
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 576px) {
+  .stp-about-stats-overlap .stp-signal-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .stp-about-stats-overlap .stp-signal-stats {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    padding: 24px 0;
+  }
+}
+
+.stp-about-stats-overlap .stp-signal-stat {
+  padding: 0 24px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stp-about-stats-overlap .stp-signal-stat:last-child {
+  border-right: none;
+}
+
+.stp-about-stats-overlap .stp-signal-stat__icon {
+  width: 42px;
+  height: 42px;
+  background: rgba(224, 53, 40, 0.15);
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  color: #e03528;
+}
+
+.stp-about-stats-overlap .stp-signal-stat__num {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.stp-about-stats-overlap .stp-signal-stat__label {
+  font-size: 14px;
+  color: #9e9e9e;
+  margin-top: 4px;
+}
+
+/* Our Story */
+.stp-about-story-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.stp-about-story-visual {
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.stp-about-story-visual__img {
+  padding: 16px 22px 0;
+}
+
+.stp-about-story-visual__img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.stp-about-story-visual__caption {
+  padding: 24px 28px 32px;
+  text-align: center;
+}
+
+.stp-about-story-visual__kicker {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--stp-primary);
+}
+
+.stp-about-story-visual__title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--stp-heading-deep, #0b0f20);
+}
+
+.stp-about-story-panel {
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+}
+
+.stp-about-story-panel__kicker {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--stp-primary);
+}
+
+.stp-about-story-panel__title {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--stp-heading-deep, #0b0f20);
+}
+
+.stp-about-story-panel__body {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--stp-body, #333);
+}
+
+.stp-about-story-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.stp-about-story-highlight {
+  background: #f8f9fc;
+  border-radius: 20px;
+  padding: 15px 20px;
+}
+
+.stp-about-story-highlight__title {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #009688;
+}
+
+.stp-about-story-highlight__text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--stp-body, #333);
+}
+
+/* Strategy pillars */
+.stp-about-pillar {
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 20px;
+  padding: 26px;
+  height: 100%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.stp-about-pillar__icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: #ffefef;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--stp-primary);
+  margin-bottom: 28px;
+}
+
+.stp-about-pillar__icon svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.stp-about-pillar__title {
+  margin: 0 0 12px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--stp-heading-deep, #0a0e1e);
+}
+
+.stp-about-pillar__text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--stp-body, #333);
+}
+
+/* Bottom CTA — Figma white card */
+.stp-about-cta {
+  background: #fff;
+  border: 1px solid rgba(224, 53, 40, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.stp-about-cta__title {
+  margin: 0 0 10px;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--stp-heading-deep, #0b0f20);
+}
+
+.stp-about-cta__text {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--stp-heading-deep, #0b0f20);
+  max-width: 45rem;
+}
+
+@media (max-width: 991.98px) {
+  .stp-about-story-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stp-about-stats-overlap .stp-signal-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 0;
+    padding: 20px 0;
+  }
+
+  .stp-about-stats-overlap .stp-signal-stat {
+    border-right: none;
+    padding: 0 20px;
+  }
+
+  .stp-about-stats-overlap .stp-signal-stat:nth-child(odd) {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .stp-about-stats-overlap .stp-signal-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stp-about-stats-overlap .stp-signal-stat:nth-child(odd) {
+    border-right: none;
+  }
+
+  .stp-about-story-panel__title {
+    font-size: 28px;
+  }
+}

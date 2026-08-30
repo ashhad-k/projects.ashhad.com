@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afghan Business Connect</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <!-- Google Fonts - Instrument Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style/businessDirectory.css">
+</head>
+
+<body>
+
+    <section class="hero-section">
+        <header class="header-transparent container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <!-- Logo -->
+                    <a href="/">
+
+                        <img class="nav-logo" src="./assets/navLogo.png" alt="">
+                    </a>
+
+                    <!-- Mobile Toggle Button -->
+                    <button class="navbar-toggler border-0" type="button">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Navigation Menu -->
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link nav-custom nav-active" href="/business-directory.html">Business
+                                    Directory</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-custom" href="/jobs-and-talent-hub.html">Jobs & Talent Hub</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-custom" href="/funding-and-investment.html">Funding &
+                                    Investment</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-custom" href="/events-and-networking.html">Events &
+                                    Networking</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-custom" href="/about.html">About</a>
+                            </li>
+                        </ul>
+
+                        <!-- Right Side Buttons -->
+                        <div class="d-flex align-items-center">
+                            <a href="/login.html"><button
+                                    class="btn btn-link nav-custom nav-active me-2">Login</button></a>
+                            <a href="/register.html"><button
+                                    class="btn btn-link nav-custom nav-active me-3">Register</button></a>
+                            <button class="btn btn-pro">Be Pro</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-xl-8">
+                    <div class="hero-content">
+                        <!-- Main Heading -->
+                        <div style="position: relative; width: fit-content; margin: 0 auto;">
+                            <span class="badge-custom-p badge-pink"
+                                style="position: absolute; top: -15%; left: -5%"><img width="24px" height="24px"
+                                    src="./assets/icons/headerIcon.png" alt=""></span>
+                            <h1 class="hero-title">
+                                Find & Connect with Trusted
+                            </h1>
+                            <span class="badge-custom badge-blue"
+                                style="position: absolute; bottom: -15%; right: -8%; rotate: -10deg;">Direct
+                                Contact</span>
+                        </div>
+                        <div style="position: relative; width: fit-content; margin: 0 auto;">
+                            <h1 class="hero-title">
+                                Afghan Businesses
+                            </h1>
+                            <span class="badge-custom badge-orange"
+                                style="position: absolute; bottom: -20%; right: -10%; rotate: 3deg;">Top-Rated</span>
+                            <span class="badge-custom badge-aqua"
+                                style="position: absolute; bottom: -20%; left: -10%; rotate: 5deg;">Verified</span>
+                        </div>
+                        <!-- Subtitle -->
+                        <p class="hero-subtitle mx-auto" style="max-width: 600px;">
+                            Discover top-rated Afghan businesses, connect with service providers, and grow your
+                            professional network.
+                        </p>
+                        <!-- CTA Button -->
+                        <a href="#" class="cta-button">
+                            List your Business
+                            <span class="arrow-icon">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="search-card">
+            <form>
+                <div class="input-section">
+                    <!-- Search Input -->
+                    <div class="input-box">
+                        <img src="./assets/icons/search.png" alt="Search Icon">
+                        <div class="input-content">
+                            <span class="input-label">Search</span>
+                            <input type="text" class="form-control-custom"
+                                placeholder="Enter business name, services, etc to search ..." />
+                        </div>
+                    </div>
+                    <!-- Category Dropdown -->
+                    <div class="input-box">
+                        <img src="./assets/icons/categorySearch.png" alt="Category Icon">
+                        <div class="input-content">
+                            <span class="input-label">Category</span>
+                            <select class="select-custom">
+                                <option value="" style="font-weight: 400; color: #7C7C7C;" selected>Select Category ...
+                                </option>
+                                <option value="restaurants">Restaurants</option>
+                                <option value="retail">Retail & Shopping</option>
+                                <option value="services">Professional Services</option>
+                                <option value="healthcare">Healthcare</option>
+                                <option value="automotive">Automotive</option>
+                                <option value="beauty">Beauty & Wellness</option>
+                                <option value="education">Education</option>
+                                <option value="real-estate">Real Estate</option>
+                                <option value="technology">Technology</option>
+                                <option value="construction">Construction</option>
+                            </select>
+                        </div>
+                        <i class="bi bi-chevron-down dropdown-arrow"></i>
+                    </div>
+                </div>
+                <!-- Search Button -->
+                <button type="submit" class="search-btn">Search Directory</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="category-container">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-lg col-md-6 col-sm-6 col-6">
+                    <div class="category-item healthcare">
+                        <div class="category-icon">
+                            <img src="/assets/icons/healthcare.png" alt="Healthcare">
+                        </div>
+                        <p class="category-label">Healthcare</p>
+                    </div>
+                </div>
+                <div class="col-lg col-md-6 col-sm-6 col-6">
+                    <div class="category-item automotive">
+                        <div class="category-icon">
+                            <img src="/assets/icons/AutoMobile.png" alt="Automotive">
+                        </div>
+                        <p class="category-label">Automotive</p>
+                    </div>
+                </div>
+                <div class="col-lg col-md-6 col-sm-6 col-6">
+                    <div class="category-item construction">
+                        <div class="category-icon">
+                            <img src="/assets/icons/construction.png" alt="Construction">
+                        </div>
+                        <p class="category-label">Construction</p>
+                    </div>
+                </div>
+                <div class="col-lg col-md-6 col-sm-6 col-6">
+                    <div class="category-item consultancy">
+                        <div class="category-icon">
+                            <img src="/assets/icons/chat.png" alt="Consultancy">
+                        </div>
+                        <p class="category-label">Consultancy</p>
+                    </div>
+                </div>
+                <div class="col-lg col-md-6 col-sm-6 col-6">
+                    <div class="category-item realestate">
+                        <div class="category-icon">
+                            <img src="/assets/icons/realstate.png" alt="Real Estate">
+                        </div>
+                        <p class="category-label">Real Estate</p>
+                    </div>
+                </div>
+                <div class="col-lg col-md-6 col-sm-6 col-6">
+                    <div class="category-item retail">
+                        <div class="category-icon">
+                            <img src="/assets/icons/retail.png" alt="Retail">
+                        </div>
+                        <p class="category-label">Retail</p>
+                    </div>
+                </div>
+                <div class="col-lg col-md-6 col-sm-6 col-6">
+                    <div class="category-item it">
+                        <div class="category-icon">
+                            <img src="/assets/icons/IT.png" alt="IT">
+                        </div>
+                        <p class="category-label">IT</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row py-4">
+            <!-- Left Column (smaller) -->
+            <!-- Left Sidebar -->
+            <div class="col-5 col-lg-3 d-none d-md-block  p-0">
+                <div class="sidebar">
+                    <!-- Promotional Banner -->
+                    <div class="promo-banner">
+                        <div class="promo-content">
+                            <h3>Ensuring credibility & authenticity within the community.</h3>
+                            <button class="verify-btn">
+                                <span>Verify Your Business</span>
+                                <i class="bi bi-arrow-right"
+                                    style="background-color: black; color: #F8CD0A; padding: 2px 4px; border-radius: 100%;"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Filters Section -->
+                    <div class="filters-container">
+                        <div class="filter-header">
+                            <span class="filter-title">Filter:</span>
+                            <span class="filter-count">8</span>
+                            <button class="clear-btn">Clear</button>
+                        </div>
+
+                        <hr style="background-color: #E8E8E8; border: 1px solid #cdcdcd;">
+
+                        <div class="filter-note">
+                            <i class="fas fa-check-circle"></i>
+                            <input type="checkbox" style="background-color: black;">
+                            <span>Show only verified businesses</span>
+                        </div>
+
+                        <!-- Categories Filter -->
+                        <div class="filter-section">
+                            <div class="filter-header-section" data-bs-toggle="collapse"
+                                data-bs-target="#categoriesCollapse">
+                                <div class="d-flex gap-2 align-items-center">
+                                    <img style="width: 18px;" src="./assets/icons/locationFilter.png" alt="">
+                                    <span class="filter-label">Categories</span>
+                                </div>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="collapse show" id="categoriesCollapse">
+                                <div class="filter-options">
+
+                                    <div class="filter-option">
+                                        <div class="d-flex gap-2 align-items-center">
+
+                                            <input type="checkbox"
+                                                style="background-color: black; border: 1px solid #cbcbcbb6; border-radius: 6px; outline: none;">
+                                            <span>Real Estate</span>
+                                        </div>
+                                        <span class="count">200</span>
+                                    </div>
+                                    <div class="filter-option">
+                                        <div class="d-flex gap-2 align-items-center">
+
+                                            <input type="checkbox" style="background-color: black;">
+                                            <span>Construction</span>
+                                        </div>
+                                        <span class="count">150</span>
+                                    </div>
+                                    <div class="filter-option">
+                                        <div class="d-flex gap-2 align-items-center">
+
+                                            <input type="checkbox" style="background-color: black;">
+                                            <span>Information Technology</span>
+                                        </div>
+                                        <span class="count">300</span>
+                                    </div>
+                                    <div class="filter-option">
+                                        <div class="d-flex gap-2 align-items-center">
+
+                                            <input type="checkbox" style="background-color: black;">
+                                            <span>Finance</span>
+                                        </div>
+                                        <span class="count">120</span>
+                                    </div>
+                                    <div class="filter-option">
+                                        <div class="d-flex gap-2 align-items-center">
+
+                                            <input type="checkbox" style="background-color: black;">
+                                            <span>Hospitality</span>
+                                        </div>
+                                        <span class="count">80</span>
+                                    </div>
+                                    <div class="filter-option">
+                                        <div class="d-flex gap-2 align-items-center">
+
+                                            <input type="checkbox" style="background-color: black;">
+                                            <span>Logistics</span>
+                                        </div>
+                                        <span class="count">90</span>
+                                    </div>
+                                    <div class="filter-option">
+                                        <div class="d-flex gap-2 align-items-center">
+
+                                            <input type="checkbox" style="background-color: black;">
+                                            <span>Automobile</span>
+                                        </div>
+                                        <span class="count">110</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Location Filter -->
+                        <div class="filter-section">
+                            <div class="filter-header-section" data-bs-toggle="collapse"
+                                data-bs-target="#locationCollapse">
+                                <div class="d-flex gap-2 align-items-center">
+                                    <img style="width: 18px;" src="./assets/icons/locationFilter.png" alt="">
+                                    <span class="filter-label">Location</span>
+                                </div>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="collapse show" id="locationCollapse">
+                                <div class="filter-selected">
+                                    <span class="selected-count">2 Selected</span>
+                                    <button class="change-btn">Change</button>
+                                </div>
+                                <div class="selected-items">
+                                    <span class="selected-item">Abu Dhabi, Dubai</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Business Type Filter -->
+                        <div class="filter-section">
+                            <div class="filter-header-section" data-bs-toggle="collapse"
+                                data-bs-target="#businessTypeCollapse">
+                                <div class="d-flex gap-2 align-items-center">
+                                    <img style="width: 18px;" src="./assets/icons/locationFilter.png" alt="">
+                                    <span class="filter-label">Business Type</span>
+                                </div>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="collapse show" id="businessTypeCollapse">
+                                <div class="filter-selected">
+                                    <span class="selected-count">1 Selected</span>
+                                    <button class="change-btn">Change</button>
+                                </div>
+                                <div class="selected-items">
+                                    <span class="selected-item">Service Provider</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Services Offered Filter -->
+                        <div class="filter-section">
+                            <div class="filter-header-section" data-bs-toggle="collapse"
+                                data-bs-target="#servicesCollapse">
+                                <div class="d-flex gap-2 align-items-center">
+                                    <img style="width: 18px;" src="./assets/icons/locationFilter.png" alt="">
+                                    <span class="filter-label">Services Offered</span>
+                                </div>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="collapse show" id="servicesCollapse">
+                                <div class="filter-selected">
+                                    <span class="selected-count">2 Selected</span>
+                                    <button class="change-btn">Change</button>
+                                </div>
+                                <div class="selected-items">
+                                    <span class="selected-item">Web Development, EAC, Retail...</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ratings & Reviews Filter -->
+                        <div class="filter-section">
+                            <div class="filter-header-section" data-bs-toggle="collapse"
+                                data-bs-target="#ratingsCollapse">
+                                <div class="d-flex gap-2 align-items-center">
+                                    <img style="width: 18px;" src="./assets/icons/locationFilter.png" alt="">
+                                    <span class="filter-label">Ratings & Reviews</span>
+                                </div>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="collapse show" id="ratingsCollapse">
+                                <div class="rating-options">
+                                    <div class="rating-option">
+                                        <div class="d-flex g-2 ">
+                                            <span class="stars" style="font-size: 28px;">★</span>
+                                            <span class="stars" style="font-size: 28px;">★</span>
+                                            <span class="stars" style="font-size: 28px;">★</span>
+                                            <span class="stars" style="font-size: 28px;">★</span>
+                                            <span class="" style="font-size: 28px;">★</span>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Apply Filter Button -->
+                        <div class="apply-filter-section">
+                            <button class="apply-filter-btn">
+                                <span>Apply Filter</span>
+                                <i class="bi bi-arrow-right"
+                                    style="background-color: black; color: white; padding: 1px 4px; border-radius: 100%; font-size: 10px;"></i>
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <div class="promo-banner">
+                        <div class="promo-content">
+                            <h3>Ensuring credibility & authenticity within the community.</h3>
+                            <button class="verify-btn">
+                                <span>Verify Your Business</span>
+                                <i class="bi bi-arrow-right"
+                                    style="background-color: black; color: #F8CD0A; padding: 2px 4px; border-radius: 100%;"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column (Business Card - bigger) -->
+            <div class="col-12 col-md-7 col-lg-9 px-4">
+                <div class="row g-2">
+                    <div class="col-12">
+
+                        <div class="search-header ">
+                            <!-- Results Title -->
+                            <div class="results-section">
+                                <h1 class="results-title">
+                                    Showing Results <span class="results-count">(2,450)</span>
+                                </h1>
+                            </div>
+
+                            <!-- Controls Section -->
+                            <div class="controls-section">
+                                <!-- Sort Dropdown -->
+                                <div class="sort-section">
+                                    <span class="sort-label">Sort by:</span>
+                                    <button class="sort-dropdown">
+                                        Recently Added
+                                        <i class="fas fa-chevron-down dropdown-arrow"></i>
+                                    </button>
+                                </div>
+
+                                <!-- View Toggle Buttons -->
+                                <div class="view-toggles">
+                                    <button class="view-btn">
+                                        <span class="list-icon"></span>
+                                    </button>
+                                    <button class="view-btn active">
+                                        <span class="grid-icon"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-12 col-lg-6 ">
+
+
+                        <div class="business-card  ">
+                            <!-- Your existing business card content goes here -->
+                            <!-- Header -->
+                            <div style="background-color: #FAFAFA; padding: 20px; border-radius: 16px;">
+
+                                <div class="card-header d-flex justify-content-between">
+                                    <div class="d-flex gap-2 align-items-start">
+                                        <img style="width: 50px;" src="./assets/icons/logoCompany.png" alt="">
+                                        <div class="featured-badge">Featured</div>
+                                    </div>
+                                    <div class="header-actions">
+                                        <div class="rating">
+                                            <span class="stars">★</span>
+                                            <span>4.3</span>
+                                        </div>
+                                        <button class="bookmark-btn">
+                                            <img style="width: 14px;" src="./assets/icons/bookmark.png" alt=""> Bookmark
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Company Info -->
+
+                                <div class="company-info mt-2">
+                                    <a href="/bussiness-directory-2.html" style="text-decoration: none;">
+
+                                        <h2 class="company-name">
+                                            Aryana Tech Solutions
+                                            <img style="width: 16px;" src="./assets/icons/verified.png" alt="">
+                                        </h2>
+                                    </a>
+                                    <div class="company-details">
+                                        <div class="location">
+                                            <img style="width: 14px;" src="./assets/icons/location.png" alt="">
+                                            <span>Dubai, UAE</span>
+                                        </div>
+                                        <div class="category">
+                                            <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                            <span>Information Technology</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <!-- Description -->
+                                <p class="description">
+                                    Empowering businesses with cutting-edge software solutions.
+                                </p>
+
+                                <!-- Services -->
+                                <div class="services">
+                                    <span class="service-tag">Custom Software</span>
+                                    <span class="service-tag">Web & App Development</span>
+                                    <span class="service-tag">IT Consultancy</span>
+                                    <span class="service-tag">Branding</span>
+                                </div>
+
+                                <!-- Action Buttons -->
+                                <div class="action-buttons mt-3 d-flex gap-2">
+                                    <button class="btn-contact">
+                                        Contact Business
+                                        <i class="bi bi-arrow-right"
+                                            style="background-color: white; color: black; padding: 1px 4px; border-radius: 100%;"></i>
+                                    </button>
+                                    <a class="btn-profile" href="/bussiness-directory-2.html"
+                                        style="text-decoration: none;">
+
+
+                                        View Profile
+                                        <i class="bi bi-arrow-right"
+                                            style="background-color: black; color: white; padding: 1px 4px; border-radius: 100%;"></i>
+
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 ">
+
+
+                        <div class="business-card  ">
+                            <!-- Your existing business card content goes here -->
+                            <!-- Header -->
+                            <div style="background-color: #FAFAFA; padding: 20px; border-radius: 16px;">
+
+                                <div class="card-header d-flex justify-content-between">
+                                    <div class="d-flex gap-2 align-items-start">
+                                        <img style="width: 50px;" src="./assets/icons/logoCompany.png" alt="">
+                                        <div class="featured-badge">Featured</div>
+                                    </div>
+                                    <div class="header-actions">
+                                        <div class="rating">
+                                            <span class="stars">★</span>
+                                            <span>4.3</span>
+                                        </div>
+                                        <button class="bookmark-btn">
+                                            <img style="width: 14px;" src="./assets/icons/bookmark.png" alt=""> Bookmark
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Company Info -->
+                                <div class="company-info mt-2">
+                                    <a href="/bussiness-directory-2.html" style="text-decoration: none;">
+
+                                        <h2 class="company-name">
+                                            Aryana Tech Solutions
+                                            <img style="width: 16px;" src="./assets/icons/verified.png" alt="">
+                                        </h2>
+                                    </a>
+                                    <div class="company-details">
+                                        <div class="location">
+                                            <img style="width: 14px;" src="./assets/icons/location.png" alt="">
+                                            <span>Dubai, UAE</span>
+                                        </div>
+                                        <div class="category">
+                                            <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                            <span>Information Technology</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <!-- Description -->
+                                <p class="description">
+                                    Empowering businesses with cutting-edge software solutions.
+                                </p>
+
+                                <!-- Services -->
+                                <div class="services">
+                                    <span class="service-tag">Custom Software</span>
+                                    <span class="service-tag">Web & App Development</span>
+                                    <span class="service-tag">IT Consultancy</span>
+                                    <span class="service-tag">Branding</span>
+                                </div>
+
+                                <!-- Action Buttons -->
+                                <div class="action-buttons mt-3 d-flex gap-2">
+                                    <button class="btn-contact">
+                                        Contact Business
+                                        <i class="bi bi-arrow-right"
+                                            style="background-color: white; color: black; padding: 1px 4px; border-radius: 100%;"></i>
+                                    </button>
+                                    <a class="btn-profile" href="/bussiness-directory-2.html"
+                                        style="text-decoration: none;">
+
+
+                                        View Profile
+                                        <i class="bi bi-arrow-right"
+                                            style="background-color: black; color: white; padding: 1px 4px; border-radius: 100%;"></i>
+
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 ">
+
+
+                        <div class="business-card  ">
+                            <!-- Your existing business card content goes here -->
+                            <!-- Header -->
+                            <div style="background-color: #FAFAFA; padding: 20px; border-radius: 16px;">
+
+                                <div class="card-header d-flex justify-content-between">
+                                    <div class="d-flex gap-2 align-items-start">
+                                        <img style="width: 50px;" src="./assets/icons/logoCompany.png" alt="">
+                                        <div class="featured-badge">Featured</div>
+                                    </div>
+                                    <div class="header-actions">
+                                        <div class="rating">
+                                            <span class="stars">★</span>
+                                            <span>4.3</span>
+                                        </div>
+                                        <button class="bookmark-btn">
+                                            <img style="width: 14px;" src="./assets/icons/bookmark.png" alt=""> Bookmark
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Company Info -->
+                                <div class="company-info mt-2">
+                                    <h2 class="company-name">
+                                        Aryana Tech Solutions
+                                        <img style="width: 16px;" src="./assets/icons/verified.png" alt="">
+                                    </h2>
+                                    <div class="company-details">
+                                        <div class="location">
+                                            <img style="width: 14px;" src="./assets/icons/location.png" alt="">
+                                            <span>Dubai, UAE</span>
+                                        </div>
+                                        <div class="category">
+                                            <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                            <span>Information Technology</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <!-- Description -->
+                                <p class="description">
+                                    Empowering businesses with cutting-edge software solutions.
+                                </p>
+
+                                <!-- Services -->
+                                <div class="services">
+                                    <span class="service-tag">Custom Software</span>
+                                    <span class="service-tag">Web & App Development</span>
+                                    <span class="service-tag">IT Consultancy</span>
+                                    <span class="service-tag">Branding</span>
+                                </div>
+
+                                <!-- Action Buttons -->
+                                <div class="action-buttons mt-3 d-flex gap-2">
+                                    <button class="btn-contact">
+                                        Contact Business
+                                        <i class="bi bi-arrow-right"
+                                            style="background-color: white; color: black; padding: 1px 4px; border-radius: 100%;"></i>
+                                    </button>
+                                    <button class="btn-profile">
+                                        View Profile
+                                        <i class="bi bi-arrow-right"
+                                            style="background-color: black; color: white; padding: 1px 4px; border-radius: 100%;"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 ">
+
+
+                        <div class="business-card  ">
+                            <!-- Your existing business card content goes here -->
+                            <!-- Header -->
+                            <div style="background-color: #FAFAFA; padding: 20px; border-radius: 16px;">
+
+                                <div class="card-header d-flex justify-content-between">
+                                    <div class="d-flex gap-2 align-items-start">
+                                        <img style="width: 50px;" src="./assets/icons/logoCompany.png" alt="">
+                                        <div class="featured-badge">Featured</div>
+                                    </div>
+                                    <div class="header-actions">
+                                        <div class="rating">
+                                            <span class="stars">★</span>
+                                            <span>4.3</span>
+                                        </div>
+                                        <button class="bookmark-btn">
+                                            <img style="width: 14px;" src="./assets/icons/bookmark.png" alt=""> Bookmark
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Company Info -->
+                                <div class="company-info mt-2">
+                                    <h2 class="company-name">
+                                        Aryana Tech Solutions
+                                        <img style="width: 16px;" src="./assets/icons/verified.png" alt="">
+                                    </h2>
+                                    <div class="company-details">
+                                        <div class="location">
+                                            <img style="width: 14px;" src="./assets/icons/location.png" alt="">
+                                            <span>Dubai, UAE</span>
+                                        </div>
+                                        <div class="category">
+                                            <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                            <span>Information Technology</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <!-- Description -->
+                                <p class="description">
+                                    Empowering businesses with cutting-edge software solutions.
+                                </p>
+
+                                <!-- Services -->
+                                <div class="services">
+                                    <span class="service-tag">Custom Software</span>
+                                    <span class="service-tag">Web & App Development</span>
+                                    <span class="service-tag">IT Consultancy</span>
+                                    <span class="service-tag">Branding</span>
+                                </div>
+
+                                <!-- Action Buttons -->
+                                <div class="action-buttons mt-3 d-flex gap-2">
+                                    <button class="btn-contact">
+                                        Contact Business
+                                        <i class="bi bi-arrow-right"
+                                            style="background-color: white; color: black; padding: 1px 4px; border-radius: 100%;"></i>
+                                    </button>
+                                    <button class="btn-profile">
+                                        View Profile
+                                        <i class="bi bi-arrow-right"
+                                            style="background-color: black; color: white; padding: 1px 4px; border-radius: 100%;"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 ">
+
+
+                        <div class="business-card  ">
+                            <!-- Your existing business card content goes here -->
+                            <!-- Header -->
+                            <div style="background-color: #FAFAFA; padding: 20px; border-radius: 16px;">
+
+                                <div class="card-header d-flex justify-content-between">
+                                    <div class="d-flex gap-2 align-items-start">
+                                        <img style="width: 50px;" src="./assets/icons/logoCompany.png" alt="">
+                                        <div class="featured-badge">Featured</div>
+                                    </div>
+                                    <div class="header-actions">
+                                        <div class="rating">
+                                            <span class="stars">★</span>
+                                            <span>4.3</span>
+                                        </div>
+                                        <button class="bookmark-btn">
+                                            <img style="width: 14px;" src="./assets/icons/bookmark.png" alt=""> Bookmark
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Company Info -->
+                                <div class="company-info mt-2">
+                                    <h2 class="company-name">
+                                        Aryana Tech Solutions
+                                        <img style="width: 16px;" src="./assets/icons/verified.png" alt="">
+                                    </h2>
+                                    <div class="company-details">
+                                        <div class="location">
+                                            <img style="width: 14px;" src="./assets/icons/location.png" alt="">
+                                            <span>Dubai, UAE</span>
+                                        </div>
+                                        <div class="category">
+                                            <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                            <span>Information Technology</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <!-- Description -->
+                                <p class="description">
+                                    Empowering businesses with cutting-edge software solutions.
+                                </p>
+
+                                <!-- Services -->
+                                <div class="services">
+                                    <span class="service-tag">Custom Software</span>
+                                    <span class="service-tag">Web & App Development</span>
+                                    <span class="service-tag">IT Consultancy</span>
+                                    <span class="service-tag">Branding</span>
+                                </div>
+
+                                <!-- Action Buttons -->
+                                <div class="action-buttons mt-3 d-flex gap-2">
+                                    <button class="btn-contact">
+                                        Contact Business
+                                        <i class="bi bi-arrow-right"
+                                            style="background-color: white; color: black; padding: 1px 4px; border-radius: 100%;"></i>
+                                    </button>
+                                    <button class="btn-profile">
+                                        View Profile
+                                        <i class="bi bi-arrow-right"
+                                            style="background-color: black; color: white; padding: 1px 4px; border-radius: 100%;"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 ">
+
+
+                        <div class="business-card  ">
+                            <!-- Your existing business card content goes here -->
+                            <!-- Header -->
+                            <div style="background-color: #FAFAFA; padding: 20px; border-radius: 16px;">
+
+                                <div class="card-header d-flex justify-content-between">
+                                    <div class="d-flex gap-2 align-items-start">
+                                        <img style="width: 50px;" src="./assets/icons/logoCompany.png" alt="">
+                                        <div class="featured-badge">Featured</div>
+                                    </div>
+                                    <div class="header-actions">
+                                        <div class="rating">
+                                            <span class="stars">★</span>
+                                            <span>4.3</span>
+                                        </div>
+                                        <button class="bookmark-btn">
+                                            <img style="width: 14px;" src="./assets/icons/bookmark.png" alt=""> Bookmark
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Company Info -->
+                                <div class="company-info mt-2">
+                                    <h2 class="company-name">
+                                        Aryana Tech Solutions
+                                        <img style="width: 16px;" src="./assets/icons/verified.png" alt="">
+                                    </h2>
+                                    <div class="company-details">
+                                        <div class="location">
+                                            <img style="width: 14px;" src="./assets/icons/location.png" alt="">
+                                            <span>Dubai, UAE</span>
+                                        </div>
+                                        <div class="category">
+                                            <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                            <span>Information Technology</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <!-- Description -->
+                                <p class="description">
+                                    Empowering businesses with cutting-edge software solutions.
+                                </p>
+
+                                <!-- Services -->
+                                <div class="services">
+                                    <span class="service-tag">Custom Software</span>
+                                    <span class="service-tag">Web & App Development</span>
+                                    <span class="service-tag">IT Consultancy</span>
+                                    <span class="service-tag">Branding</span>
+                                </div>
+
+                                <!-- Action Buttons -->
+                                <div class="action-buttons mt-3 d-flex gap-2">
+                                    <button class="btn-contact">
+                                        Contact Business
+                                        <i class="bi bi-arrow-right"
+                                            style="background-color: white; color: black; padding: 1px 4px; border-radius: 100%;"></i>
+                                    </button>
+                                    <button class="btn-profile">
+                                        View Profile
+                                        <i class="bi bi-arrow-right"
+                                            style="background-color: black; color: white; padding: 1px 4px; border-radius: 100%;"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 ">
+
+
+                        <div class="business-card  ">
+                            <!-- Your existing business card content goes here -->
+                            <!-- Header -->
+                            <div style="background-color: #FAFAFA; padding: 20px; border-radius: 16px;">
+
+                                <div class="card-header d-flex justify-content-between">
+                                    <div class="d-flex gap-2 align-items-start">
+                                        <img style="width: 50px;" src="./assets/icons/logoCompany.png" alt="">
+                                        <div class="featured-badge">Featured</div>
+                                    </div>
+                                    <div class="header-actions">
+                                        <div class="rating">
+                                            <span class="stars">★</span>
+                                            <span>4.3</span>
+                                        </div>
+                                        <button class="bookmark-btn">
+                                            <img style="width: 14px;" src="./assets/icons/bookmark.png" alt=""> Bookmark
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Company Info -->
+                                <div class="company-info mt-2">
+                                    <h2 class="company-name">
+                                        Aryana Tech Solutions
+                                        <img style="width: 16px;" src="./assets/icons/verified.png" alt="">
+                                    </h2>
+                                    <div class="company-details">
+                                        <div class="location">
+                                            <img style="width: 14px;" src="./assets/icons/location.png" alt="">
+                                            <span>Dubai, UAE</span>
+                                        </div>
+                                        <div class="category">
+                                            <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                            <span>Information Technology</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <!-- Description -->
+                                <p class="description">
+                                    Empowering businesses with cutting-edge software solutions.
+                                </p>
+
+                                <!-- Services -->
+                                <div class="services">
+                                    <span class="service-tag">Custom Software</span>
+                                    <span class="service-tag">Web & App Development</span>
+                                    <span class="service-tag">IT Consultancy</span>
+                                    <span class="service-tag">Branding</span>
+                                </div>
+
+                                <!-- Action Buttons -->
+                                <div class="action-buttons mt-3 d-flex gap-2">
+                                    <button class="btn-contact">
+                                        Contact Business
+                                        <i class="bi bi-arrow-right"
+                                            style="background-color: white; color: black; padding: 1px 4px; border-radius: 100%;"></i>
+                                    </button>
+                                    <button class="btn-profile">
+                                        View Profile
+                                        <i class="bi bi-arrow-right"
+                                            style="background-color: black; color: white; padding: 1px 4px; border-radius: 100%;"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 ">
+
+
+                        <div class="business-card  ">
+                            <!-- Your existing business card content goes here -->
+                            <!-- Header -->
+                            <div style="background-color: #FAFAFA; padding: 20px; border-radius: 16px;">
+
+                                <div class="card-header d-flex justify-content-between">
+                                    <div class="d-flex gap-2 align-items-start">
+                                        <img style="width: 50px;" src="./assets/icons/logoCompany.png" alt="">
+                                        <div class="featured-badge">Featured</div>
+                                    </div>
+                                    <div class="header-actions">
+                                        <div class="rating">
+                                            <span class="stars">★</span>
+                                            <span>4.3</span>
+                                        </div>
+                                        <button class="bookmark-btn">
+                                            <img style="width: 14px;" src="./assets/icons/bookmark.png" alt=""> Bookmark
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Company Info -->
+                                <div class="company-info mt-2">
+                                    <h2 class="company-name">
+                                        Aryana Tech Solutions
+                                        <img style="width: 16px;" src="./assets/icons/verified.png" alt="">
+                                    </h2>
+                                    <div class="company-details">
+                                        <div class="location">
+                                            <img style="width: 14px;" src="./assets/icons/location.png" alt="">
+                                            <span>Dubai, UAE</span>
+                                        </div>
+                                        <div class="category">
+                                            <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                            <span>Information Technology</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <!-- Description -->
+                                <p class="description">
+                                    Empowering businesses with cutting-edge software solutions.
+                                </p>
+
+                                <!-- Services -->
+                                <div class="services">
+                                    <span class="service-tag">Custom Software</span>
+                                    <span class="service-tag">Web & App Development</span>
+                                    <span class="service-tag">IT Consultancy</span>
+                                    <span class="service-tag">Branding</span>
+                                </div>
+
+                                <!-- Action Buttons -->
+                                <div class="action-buttons mt-3 d-flex gap-2">
+                                    <button class="btn-contact">
+                                        Contact Business
+                                        <i class="bi bi-arrow-right"
+                                            style="background-color: white; color: black; padding: 1px 4px; border-radius: 100%;"></i>
+                                    </button>
+                                    <button class="btn-profile">
+                                        View Profile
+                                        <i class="bi bi-arrow-right"
+                                            style="background-color: black; color: white; padding: 1px 4px; border-radius: 100%;"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 ">
+
+
+                        <div class="business-card  ">
+                            <!-- Your existing business card content goes here -->
+                            <!-- Header -->
+                            <div style="background-color: #FAFAFA; padding: 20px; border-radius: 16px;">
+
+                                <div class="card-header d-flex justify-content-between">
+                                    <div class="d-flex gap-2 align-items-start">
+                                        <img style="width: 50px;" src="./assets/icons/logoCompany.png" alt="">
+                                        <div class="featured-badge">Featured</div>
+                                    </div>
+                                    <div class="header-actions">
+                                        <div class="rating">
+                                            <span class="stars">★</span>
+                                            <span>4.3</span>
+                                        </div>
+                                        <button class="bookmark-btn">
+                                            <img style="width: 14px;" src="./assets/icons/bookmark.png" alt=""> Bookmark
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Company Info -->
+                                <div class="company-info mt-2">
+                                    <h2 class="company-name">
+                                        Aryana Tech Solutions
+                                        <img style="width: 16px;" src="./assets/icons/verified.png" alt="">
+                                    </h2>
+                                    <div class="company-details">
+                                        <div class="location">
+                                            <img style="width: 14px;" src="./assets/icons/location.png" alt="">
+                                            <span>Dubai, UAE</span>
+                                        </div>
+                                        <div class="category">
+                                            <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                            <span>Information Technology</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <!-- Description -->
+                                <p class="description">
+                                    Empowering businesses with cutting-edge software solutions.
+                                </p>
+
+                                <!-- Services -->
+                                <div class="services">
+                                    <span class="service-tag">Custom Software</span>
+                                    <span class="service-tag">Web & App Development</span>
+                                    <span class="service-tag">IT Consultancy</span>
+                                    <span class="service-tag">Branding</span>
+                                </div>
+
+                                <!-- Action Buttons -->
+                                <div class="action-buttons mt-3 d-flex gap-2">
+                                    <button class="btn-contact">
+                                        Contact Business
+                                        <i class="bi bi-arrow-right"
+                                            style="background-color: white; color: black; padding: 1px 4px; border-radius: 100%;"></i>
+                                    </button>
+                                    <button class="btn-profile">
+                                        View Profile
+                                        <i class="bi bi-arrow-right"
+                                            style="background-color: black; color: white; padding: 1px 4px; border-radius: 100%;"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 ">
+
+
+                        <div class="business-card  ">
+                            <!-- Your existing business card content goes here -->
+                            <!-- Header -->
+                            <div style="background-color: #FAFAFA; padding: 20px; border-radius: 16px;">
+
+                                <div class="card-header d-flex justify-content-between">
+                                    <div class="d-flex gap-2 align-items-start">
+                                        <img style="width: 50px;" src="./assets/icons/logoCompany.png" alt="">
+                                        <div class="featured-badge">Featured</div>
+                                    </div>
+                                    <div class="header-actions">
+                                        <div class="rating">
+                                            <span class="stars">★</span>
+                                            <span>4.3</span>
+                                        </div>
+                                        <button class="bookmark-btn">
+                                            <img style="width: 14px;" src="./assets/icons/bookmark.png" alt=""> Bookmark
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Company Info -->
+                                <div class="company-info mt-2">
+                                    <h2 class="company-name">
+                                        Aryana Tech Solutions
+                                        <img style="width: 16px;" src="./assets/icons/verified.png" alt="">
+                                    </h2>
+                                    <div class="company-details">
+                                        <div class="location">
+                                            <img style="width: 14px;" src="./assets/icons/location.png" alt="">
+                                            <span>Dubai, UAE</span>
+                                        </div>
+                                        <div class="category">
+                                            <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                            <span>Information Technology</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <!-- Description -->
+                                <p class="description">
+                                    Empowering businesses with cutting-edge software solutions.
+                                </p>
+
+                                <!-- Services -->
+                                <div class="services">
+                                    <span class="service-tag">Custom Software</span>
+                                    <span class="service-tag">Web & App Development</span>
+                                    <span class="service-tag">IT Consultancy</span>
+                                    <span class="service-tag">Branding</span>
+                                </div>
+
+                                <!-- Action Buttons -->
+                                <div class="action-buttons mt-3 d-flex gap-2">
+                                    <button class="btn-contact">
+                                        Contact Business
+                                        <i class="bi bi-arrow-right"
+                                            style="background-color: white; color: black; padding: 1px 4px; border-radius: 100%;"></i>
+                                    </button>
+                                    <button class="btn-profile">
+                                        View Profile
+                                        <i class="bi bi-arrow-right"
+                                            style="background-color: black; color: white; padding: 1px 4px; border-radius: 100%;"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 ">
+
+
+                        <div class="business-card  ">
+                            <!-- Your existing business card content goes here -->
+                            <!-- Header -->
+                            <div style="background-color: #FAFAFA; padding: 20px; border-radius: 16px;">
+
+                                <div class="card-header d-flex justify-content-between">
+                                    <div class="d-flex gap-2 align-items-start">
+                                        <img style="width: 50px;" src="./assets/icons/logoCompany.png" alt="">
+                                        <div class="featured-badge">Featured</div>
+                                    </div>
+                                    <div class="header-actions">
+                                        <div class="rating">
+                                            <span class="stars">★</span>
+                                            <span>4.3</span>
+                                        </div>
+                                        <button class="bookmark-btn">
+                                            <img style="width: 14px;" src="./assets/icons/bookmark.png" alt=""> Bookmark
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Company Info -->
+                                <div class="company-info mt-2">
+                                    <h2 class="company-name">
+                                        Aryana Tech Solutions
+                                        <img style="width: 16px;" src="./assets/icons/verified.png" alt="">
+                                    </h2>
+                                    <div class="company-details">
+                                        <div class="location">
+                                            <img style="width: 14px;" src="./assets/icons/location.png" alt="">
+                                            <span>Dubai, UAE</span>
+                                        </div>
+                                        <div class="category">
+                                            <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                            <span>Information Technology</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <!-- Description -->
+                                <p class="description">
+                                    Empowering businesses with cutting-edge software solutions.
+                                </p>
+
+                                <!-- Services -->
+                                <div class="services">
+                                    <span class="service-tag">Custom Software</span>
+                                    <span class="service-tag">Web & App Development</span>
+                                    <span class="service-tag">IT Consultancy</span>
+                                    <span class="service-tag">Branding</span>
+                                </div>
+
+                                <!-- Action Buttons -->
+                                <div class="action-buttons mt-3 d-flex gap-2">
+                                    <button class="btn-contact">
+                                        Contact Business
+                                        <i class="bi bi-arrow-right"
+                                            style="background-color: white; color: black; padding: 1px 4px; border-radius: 100%;"></i>
+                                    </button>
+                                    <button class="btn-profile">
+                                        View Profile
+                                        <i class="bi bi-arrow-right"
+                                            style="background-color: black; color: white; padding: 1px 4px; border-radius: 100%;"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 ">
+
+
+                        <div class="business-card  ">
+                            <!-- Your existing business card content goes here -->
+                            <!-- Header -->
+                            <div style="background-color: #FAFAFA; padding: 20px; border-radius: 16px;">
+
+                                <div class="card-header d-flex justify-content-between">
+                                    <div class="d-flex gap-2 align-items-start">
+                                        <img style="width: 50px;" src="./assets/icons/logoCompany.png" alt="">
+                                        <div class="featured-badge">Featured</div>
+                                    </div>
+                                    <div class="header-actions">
+                                        <div class="rating">
+                                            <span class="stars">★</span>
+                                            <span>4.3</span>
+                                        </div>
+                                        <button class="bookmark-btn">
+                                            <img style="width: 14px;" src="./assets/icons/bookmark.png" alt=""> Bookmark
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Company Info -->
+                                <div class="company-info mt-2">
+                                    <h2 class="company-name">
+                                        Aryana Tech Solutions
+                                        <img style="width: 16px;" src="./assets/icons/verified.png" alt="">
+                                    </h2>
+                                    <div class="company-details">
+                                        <div class="location">
+                                            <img style="width: 14px;" src="./assets/icons/location.png" alt="">
+                                            <span>Dubai, UAE</span>
+                                        </div>
+                                        <div class="category">
+                                            <img style="width: 14px;" src="./assets/icons/category.png" alt="">
+                                            <span>Information Technology</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <!-- Description -->
+                                <p class="description">
+                                    Empowering businesses with cutting-edge software solutions.
+                                </p>
+
+                                <!-- Services -->
+                                <div class="services">
+                                    <span class="service-tag">Custom Software</span>
+                                    <span class="service-tag">Web & App Development</span>
+                                    <span class="service-tag">IT Consultancy</span>
+                                    <span class="service-tag">Branding</span>
+                                </div>
+
+                                <!-- Action Buttons -->
+                                <div class="action-buttons mt-3 d-flex gap-2">
+                                    <button class="btn-contact">
+                                        Contact Business
+                                        <i class="bi bi-arrow-right"
+                                            style="background-color: white; color: black; padding: 1px 4px; border-radius: 100%;"></i>
+                                    </button>
+                                    <button class="btn-profile">
+                                        View Profile
+                                        <i class="bi bi-arrow-right"
+                                            style="background-color: black; color: white; padding: 1px 4px; border-radius: 100%;"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div
+            style="padding: 30px 0px; background: linear-gradient(to bottom, #FFFFFF 50%, #030616 50%); display: flex; flex-wrap: wrap; justify-content: space-between;">
+            <div class="d-none d-md-flex footer-card"
+                style="width: 200px ; height: 300px; background-color: #7A86F9; padding: 20px 0px; display: flex; justify-content: start; align-items: flex-end; border-radius: 20px; border-top-left-radius:0 ;border-bottom-left-radius:0">
+
+                <div class="" style="padding: 0px 10px; ">
+
+
+
+                    <div style=" font-size: 14px; font-weight: 600;">
+                        Jobs & Talent
+                    </div>
+                    <div style="font-size: 20px; font-weight: 600;">
+                        Find Job
+                        Opportunities
+                    </div>
+                </div>
+
+            </div>
+            <div class="d-none d-md-flex footer-card"
+                style="width: 200px ; margin-top: 20px; height: 300px; background: url(./assets/icons/footerMen.png); background-size: cover; background-repeat: no-repeat; padding: 20px 0px; display: flex; justify-content: start; align-items: flex-end; border-radius: 20px;">
+
+
+
+            </div>
+            <div class="d-none d-md-flex footer-card"
+                style="width: 200px ; margin-top: -20px; height: 300px; background-color: #DCE0F9; padding: 20px 0px; display: flex; justify-content: center; align-items: flex-end; border-radius: 20px;">
+
+                <div class="" style=" padding: 0px 10px;">
+
+
+
+                    <div style="color: #8689A2; font-size: 14px; font-weight: 600;">
+                        Investment
+                    </div>
+                    <div style="font-size: 20px; font-weight: 600; color: #222A64;">
+                        Apply for or
+                        provide funding
+                    </div>
+                </div>
+
+            </div>
+            <div class="d-none d-lg-flex footer-card"
+                style="width: 200px ; margin-top: 0px; height: 300px; background: url(./assets/icons/footerMen2.png); background-size: cover; background-repeat: no-repeat;  padding: 20px 0px; display: flex; justify-content: start; align-items: flex-end; border-radius: 20px;">
+
+                <div class="" style=" ">
+
+
+
+
+                </div>
+
+            </div>
+            <div class="d-none d-xl-flex footer-card"
+                style="width: 200px ; margin-top: -20px; height: 300px; background-color: #B098FB; padding: 20px 0px; display: flex; justify-content: start; align-items: flex-end; border-radius: 20px;">
+
+                <div class="" style="padding: 0px 10px; ">
+
+
+
+                    <div style="font-size: 14px; font-weight: 600;">
+                        Business Directory
+                    </div>
+                    <div style="font-size: 20px; font-weight: 600;">
+                        Find Afghan
+                        Businesses
+                    </div>
+                </div>
+
+            </div>
+            <div class="d-none d-xxl-flex footer-card"
+                style="width: 200px ; margin-top: 20px; height: 300px; background: url(./assets/icons/footerMen3.png); background-size: cover; background-repeat: no-repeat;  padding: 20px 0px; display: flex; justify-content: start; align-items: flex-end; border-radius: 20px;">
+
+            </div>
+            <div class="d-none d-xl-flex footer-card"
+                style="width: 200px ; margin-top: -20px; height: 300px; background-color: #EFE9FE; padding: 20px 0px; display: flex; justify-content: start; align-items: flex-start; border-radius: 20px; border-top-right-radius:0; border-bottom-right-radius:0">
+
+                <div class="" style=" padding: 0px 10px;">
+
+
+
+                    <div style="font-size: 14px; font-weight: 600; color: #B3A6D3;">
+                        Networking
+                    </div>
+                    <div style="font-size: 20px; font-weight: 600; color: #42406B;">
+                        Join Business
+                        Meetups
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <!-- Logo and Main Content -->
+            <div class="text-center">
+                <img src="/assets/footerLogo.png" alt="Afghan Business Connect" class="footer-logo">
+                <h2 class="footer-heading">
+                    Join a thriving ecosystem where Afghan businesses, professionals, entrepreneurs, and investors come
+                    together to create opportunities, build partnerships, and drive success.
+                </h2>
+                <div class="footer-buttons">
+                    <a href="#" class="footer-btn-primary">
+                        Register Now
+
+                        <i class="bi bi-arrow-right"
+                            style="background-color: black; color: white; padding: 0px 3px; border-radius: 100%;"></i>
+                    </a>
+                    <a href="#" class="footer-btn-secondary">
+                        Explore Now
+                        <i class="bi bi-arrow-right"
+                            style="background-color: white; color: black; padding: 0px 3px; border-radius: 100%;"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="footer-links">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="footer-section-title">About</h5>
+                        <a href="#" class="footer-link">About Us</a>
+                        <a href="#" class="footer-link">Our Mission & Vision</a>
+                        <a href="#" class="footer-link">Why Join Us?</a>
+                        <a href="#" class="footer-link">Afghan Consulate Partnership</a>
+                        <a href="#" class="footer-link">Success Stories</a>
+                        <a href="#" class="footer-link">Testimonials</a>
+                        <a href="#" class="footer-link">Press & Media</a>
+
+
+                        <h5 class="footer-section-title" style="margin-top: 100px;">Social & News</h5>
+                        <a href="#" class="footer-link">Latest News & Insights</a>
+                        <a href="#" class="footer-link">Business Blog</a>
+                        <a href="#" class="footer-link">Community Stories</a>
+                        <a href="#" class="footer-link">Afghan Business Success Highlights</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="footer-section-title">Business</h5>
+                        <a href="#" class="footer-link">Business Directory</a>
+                        <a href="#" class="footer-link">List Your Business</a>
+                        <a href="#" class="footer-link">Verified Business Certification</a>
+                        <a href="#" class="footer-link">Top Rated Afghan Businesses</a>
+
+                        <h5 class="footer-section-title" style="margin-top: 100px;">Professionals</h5>
+                        <a href="#" class="footer-link">Job Listings</a>
+                        <a href="#" class="footer-link">Post a Job Vacancy</a>
+                        <a href="#" class="footer-link">Find Afghan Talent</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="footer-section-title">Investment</h5>
+                        <a href="#" class="footer-link">Apply for Business Funding</a>
+                        <a href="#" class="footer-link">Investor Opportunities</a>
+                        <a href="#" class="footer-link">Shariah Compliance</a>
+                        <a href="#" class="footer-link">Investment Calculator</a>
+
+                        <h5 class="footer-section-title" style="margin-top: 100px;">Networking & Events</h5>
+                        <a href="#" class="footer-link">Upcoming Business Events</a>
+                        <a href="#" class="footer-link">Networking Meetups</a>
+                        <a href="#" class="footer-link">Excellence Awards</a>
+                        <a href="#" class="footer-link">Latest News</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 ">
+                        <h5 class="footer-section-title">Support & Community</h5>
+                        <a href="#" class="footer-link">Help Center</a>
+                        <a href="#" class="footer-link">FAQs</a>
+                        <a href="#" class="footer-link">Contact Us</a>
+                        <a href="#" class="footer-link">Submit a Support Ticket</a>
+                        <a href="#" class="footer-link">Request a Feature</a>
+                        <a href="#" class="footer-link">Community Guidelines</a>
+
+                        <h5 class="footer-section-title " style="margin-top: 100px;">Legal & Security</h5>
+                        <a href="#" class="footer-link">Privacy Policy</a>
+                        <a href="#" class="footer-link">Terms & Conditions</a>
+                        <a href="#" class="footer-link">Data Protection Policy</a>
+                        <a href="#" class="footer-link">User Verification & Security</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © 2025 Afghan Business Connect. All rights reserved.
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><i class="bi bi-twitter-x"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1424 @@
+/* Champions hub — 12_stp_champions (Figma node 2:14531) */
+
+body.stp-page-champions {
+  background: #f8f9fc;
+}
+
+/* How to join → Competition Center: half default vertical gap */
+.stp-page-champions section[aria-label="How to join"] {
+  margin-bottom: 12px;
+}
+
+.stp-page-champions section[aria-label="How to join"] .stp-steps-track {
+  margin-bottom: 28px;
+}
+
+/* Hero (split hero pattern; trophy asset on RHS) */
+.stp-page-champions .stp-champ-hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 20px;
+  background: #ffe8e6;
+  color: var(--stp-primary, #e03528);
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.stp-page-champions .stp-champ-hero__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.12;
+  color: var(--stp-heading-deep, #0b0f20);
+  font-weight: 700;
+  max-width: 30rem;
+}
+
+.stp-page-champions .stp-champ-hero__lead {
+  font-size: 1.125rem;
+  color: #333;
+  max-width: 28rem;
+  line-height: 1.45;
+}
+
+.stp-page-champions .stp-champ-hero__figure {
+  max-width: min(100%, 640px);
+  margin-inline: auto;
+}
+
+.stp-page-champions .stp-champ-hero__figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Pill nav — same spacing model as VPS `.stp-signal-tabs`; track matches Figma (#f9f9f9 / #e7e7e7) */
+.stp-page-champions .stp-champ-pill-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: stretch;
+  width: 100%;
+  max-width: 1134px;
+  margin-inline: auto;
+  background: #f9f9f9;
+  border: 1px solid #e7e7e7;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+@media (min-width: 576px) {
+  .stp-page-champions .stp-champ-pill-tabs {
+    flex-direction: row;
+    gap: 10px;
+    border-radius: 100px;
+  }
+}
+
+.stp-page-champions .stp-champ-pill-tabs a {
+  flex: 1 1 0;
+  min-width: 0;
+  text-align: center;
+  text-decoration: none;
+  font-family: var(--stp-font-sans);
+  font-size: 16px;
+  font-weight: 600;
+  color: #0b0f20;
+  border-radius: 100px;
+  padding: 12px 10px;
+  transition: background 0.15s, color 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stp-page-champions .stp-champ-pill-tabs a:hover {
+  background: rgba(224, 53, 40, 0.07);
+}
+
+.stp-page-champions .stp-champ-pill-tabs a.stp-champ-pill-tabs__item--active {
+  background: #0b0f20;
+  color: #fff;
+  cursor: default;
+  pointer-events: none;
+}
+
+.stp-page-champions .stp-champ-pill-tabs a.stp-champ-pill-tabs__item--active:hover {
+  background: #0b0f20;
+}
+
+.stp-champ-kicker {
+  font-family: var(--stp-font-sans);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--stp-primary, #e03528);
+  margin-bottom: 8px;
+}
+
+.stp-champ-h2 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: #0b0f20;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+/* Coming soon + countdown */
+.stp-champ-round-card {
+  background: #252424;
+  border-radius: 20px;
+  padding: 24px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.stp-champ-round-card__glow {
+  position: absolute;
+  width: 366px;
+  height: 366px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(224, 53, 40, 0.28) 0%, transparent 70%);
+  top: -100px;
+  right: -120px;
+  pointer-events: none;
+}
+
+.stp-champ-round-inner {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 24px 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.stp-champ-round-eyebrow {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 4px;
+}
+
+.stp-champ-round-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.stp-champ-round-copy {
+  color: #d9d9d9;
+  font-size: 16px;
+  max-width: 28rem;
+  margin-bottom: 0;
+}
+
+.stp-champ-countdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.stp-champ-countdown__unit {
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px 8px 10px;
+  text-align: center;
+}
+
+.stp-champ-countdown__num {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #2f2f2f;
+  line-height: 1;
+}
+
+.stp-champ-countdown__lab {
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.stp-champ-prize-pool {
+  margin-top: 16px;
+  border-radius: 15px;
+  padding: 22px 28px;
+  background: linear-gradient(90deg, #fffffe 0%, #fff8e1 100%);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.stp-champ-prize-pool__eyebrow {
+  font-size: 16px;
+  font-weight: 600;
+  color: #9d9370;
+  width: 100%;
+}
+
+.stp-champ-prize-pool__amt {
+  font-size: 2.625rem;
+  font-weight: 800;
+  color: #000;
+  line-height: 1;
+}
+
+.stp-champ-prize-pool__hint {
+  width: 100%;
+  font-size: 14px;
+  color: #858585;
+  margin-top: 4px;
+}
+
+.stp-champ-prize-pool__trophy {
+  font-size: 4rem;
+  line-height: 1;
+}
+
+/* Prize distribution */
+.stp-champ-dist-card {
+  background: var(--stp-primary, #e03528);
+  border-radius: 20px;
+  padding: 28px 26px 24px;
+  color: #fff;
+  min-height: 100%;
+}
+
+.stp-champ-dist-card h3 {
+  font-size: 1.6875rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.stp-champ-dist-lead {
+  color: #ffb8b8;
+  font-size: 18px;
+  margin-bottom: 24px;
+  max-width: 30rem;
+  line-height: 1.4;
+}
+
+.stp-champ-podium {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  align-items: end;
+  margin-bottom: 16px;
+}
+
+.stp-champ-podium__slot {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.stp-champ-podium__slot--1st {
+  min-height: 200px;
+}
+.stp-champ-podium__slot--2nd {
+  min-height: 165px;
+}
+.stp-champ-podium__slot--3rd {
+  min-height: 130px;
+}
+
+.stp-champ-podium__label {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: auto;
+}
+
+.stp-champ-podium__amt {
+  font-size: 2.625rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.stp-champ-podium__sub {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 8px;
+}
+
+.stp-champ-dist-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.stp-champ-dist-bottom__cell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.stp-champ-dist-bottom__amt {
+  font-size: 1.6875rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+/* Leaderboard */
+.stp-champ-lb {
+  background: #fff;
+  border: 1px solid #e1e6ed;
+  border-radius: 20px;
+  padding: 28px 24px 24px;
+}
+
+.stp-champ-lb__head {
+  display: grid;
+  grid-template-columns: 72px 1fr 1fr 100px;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0b0f20;
+  padding: 0 8px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 12px;
+}
+
+.stp-champ-lb__row {
+  display: grid;
+  grid-template-columns: 72px 1fr 1fr 100px;
+  gap: 12px;
+  align-items: center;
+  background: #f8f9fc;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease;
+}
+
+.stp-champ-lb__row:hover {
+  background: var(--stp-compare-row-hover-bg, #fef2f2);
+  border-color: rgba(224, 53, 40, 0.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stp-champ-lb__row {
+    transition: none;
+  }
+}
+
+.stp-champ-lb__rank {
+  font-weight: 600;
+  color: #333;
+}
+
+.stp-champ-lb__id {
+  font-weight: 500;
+  color: #7c7c7c;
+}
+
+.stp-champ-lb__ach {
+  font-weight: 500;
+  color: #7c7c7c;
+}
+
+.stp-champ-lb__gain {
+  font-weight: 500;
+  color: #009688;
+  text-align: right;
+}
+
+@media (max-width: 767.98px) {
+  .stp-champ-countdown {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stp-champ-podium {
+    grid-template-columns: 1fr;
+  }
+
+  .stp-champ-podium__slot--1st,
+  .stp-champ-podium__slot--2nd,
+  .stp-champ-podium__slot--3rd {
+    min-height: 0;
+  }
+
+  .stp-champ-lb__head {
+    display: none;
+  }
+  .stp-champ-lb__row {
+    grid-template-columns: 1fr 1fr;
+    font-size: 15px;
+  }
+  .stp-champ-lb__gain {
+    text-align: left;
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .stp-champ-countdown {
+    grid-template-columns: 1fr;
+  }
+
+  .stp-champ-dist-bottom {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Competition Center cards */
+.stp-champ-cc-card {
+  --stp-champ-cc-pad: 25px;
+  background: #fff;
+  border: 1px solid #e1e6ed;
+  border-radius: 20px;
+  padding: var(--stp-champ-cc-pad);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.stp-champ-cc-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    225deg,
+    rgba(255, 230, 230, 0.9) 0%,
+    rgba(255, 238, 238, 0.35) 22%,
+    rgba(255, 255, 255, 0) 48%
+  );
+  pointer-events: none;
+}
+
+.stp-champ-cc-card__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.stp-champ-cc-card__body {
+  flex: 1 1 auto;
+  padding-bottom: 8px;
+}
+
+.stp-champ-cc-card__footer {
+  margin: 20px calc(-1 * var(--stp-champ-cc-pad)) calc(-1 * var(--stp-champ-cc-pad));
+  padding: 0 var(--stp-champ-cc-pad);
+  border-top: 1px solid #e1e6ed;
+}
+
+.stp-champ-cc-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: #ffefef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+
+.stp-champ-cc-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--stp-primary, #e03528);
+  fill: none;
+  stroke-width: 2;
+}
+
+.stp-champ-cc-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0a0e1e;
+  margin-bottom: 12px;
+}
+
+.stp-champ-cc-card p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.stp-champ-cc-link {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--stp-primary, #e03528);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  padding: 16px 0;
+}
+
+.stp-champ-cc-link:hover {
+  color: var(--stp-primary, #e03528);
+  text-decoration: none;
+}
+
+.stp-champ-cc-link__label {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.stp-champ-cc-link__arrow {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b0f20;
+}
+
+.stp-champ-cc-link__arrow svg {
+  display: block;
+}
+
+/* Champions FAQ — 13_stp_champions_faq (Figma node 2:14872) */
+.stp-page-champions-faq {
+  background: #f8f9fc;
+}
+
+.stp-page-champions-faq section[aria-label="Champions frequently asked questions"] {
+  padding-top: 24px;
+}
+
+.stp-champ-faq-panel {
+  margin-bottom: 32px;
+}
+
+.stp-champ-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.stp-champ-faq-item {
+  background: transparent;
+  border: 0;
+  border-radius: 10px;
+  transition: background-color 0.35s ease;
+}
+
+/* Collapsed rows: divider under the question only */
+.stp-champ-faq-item:not(.is-open) .stp-champ-faq-q {
+  border-bottom: 1px solid #d4e2f2;
+}
+
+/* No line above an opening card (previous row’s divider) */
+.stp-champ-faq-item:not(.is-open):has(+ .stp-champ-faq-item.is-open) .stp-champ-faq-q {
+  border-bottom: none;
+}
+
+.stp-champ-faq-item:last-child:not(.is-open) .stp-champ-faq-q {
+  border-bottom: none;
+}
+
+/* Open card: white surface + divider at the bottom of the full block */
+.stp-champ-faq-item.is-open {
+  border-radius: 10px;
+  border-bottom: 1px solid #d4e2f2;
+  background: #fff;
+}
+
+.stp-champ-faq-item__heading {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.stp-champ-faq-q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  padding: 22px 25px;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.stp-champ-faq-q__text {
+  flex: 1 1 auto;
+  font-family: var(--stp-font-sans, "Instrument Sans", sans-serif);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: #4a4b50;
+  transition: color 0.35s ease;
+}
+
+.stp-champ-faq-item.is-open .stp-champ-faq-q__text {
+  color: #e03528;
+}
+
+.stp-champ-faq-toggle {
+  position: relative;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #8b8d9a;
+  border-radius: 50%;
+  color: #4a4b50;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.stp-champ-faq-item.is-open .stp-champ-faq-toggle {
+  border-color: #043065;
+  color: #043065;
+}
+
+.stp-champ-faq-toggle__icon {
+  display: block;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.stp-champ-faq-toggle__icon--minus {
+  position: absolute;
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.85);
+}
+
+.stp-champ-faq-toggle__icon--plus {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.stp-champ-faq-item.is-open .stp-champ-faq-toggle__icon--plus {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.85);
+}
+
+.stp-champ-faq-item.is-open .stp-champ-faq-toggle__icon--minus {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.stp-champ-faq-a {
+  display: grid;
+  grid-template-rows: 0fr;
+  padding: 0 25px;
+  padding-bottom: 0;
+  transition:
+    grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    padding-bottom 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stp-champ-faq-item.is-open .stp-champ-faq-a {
+  grid-template-rows: 1fr;
+  padding-bottom: 22px;
+}
+
+.stp-champ-faq-a__inner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.stp-champ-faq-a p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #101827;
+}
+
+.stp-champ-faq-a a {
+  color: #e03528;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.stp-champ-faq-a a:hover {
+  color: #c42e22;
+}
+
+.stp-champ-faq-support {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px 32px;
+  padding: 28px 32px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(11, 15, 32, 0.08);
+}
+
+.stp-champ-faq-support__icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: #ffefef;
+  color: #e03528;
+}
+
+.stp-champ-faq-support__copy {
+  flex: 1 1 280px;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #333;
+}
+
+.stp-champ-faq-support__copy strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #e03528;
+}
+
+.stp-champ-faq-support__btn {
+  flex-shrink: 0;
+}
+
+@media (max-width: 767.98px) {
+  .stp-champ-faq-q {
+    padding: 18px 20px;
+  }
+
+  .stp-champ-faq-q__text {
+    font-size: 18px;
+  }
+
+  .stp-champ-faq-a {
+    padding: 0 20px 18px;
+  }
+
+  .stp-champ-faq-support {
+    padding: 22px 20px;
+  }
+
+  .stp-champ-faq-support__btn {
+    width: 100%;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+/* Champions Rules — 14_stp_champions_rules (Figma node 136:3604) */
+.stp-page-champions-rules {
+  background: #f8f9fc;
+}
+
+.stp-page-champions-rules section[aria-label="Champions competition rules"] {
+  padding-top: 24px;
+}
+
+.stp-champ-rules-panel {
+  display: flex;
+  align-items: flex-start;
+  gap: 21px;
+  margin-bottom: 32px;
+}
+
+.stp-champ-rules-nav {
+  flex: 0 0 291px;
+  max-width: 291px;
+  position: sticky;
+  top: 24px;
+  align-self: flex-start;
+  padding: 20px 15px;
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.stp-champ-rules-nav__label {
+  margin: 0 0 20px;
+  font-family: var(--stp-font-sans, "Instrument Sans", sans-serif);
+  font-size: 14px;
+  font-weight: 600;
+  color: #b5b5b5;
+}
+
+.stp-champ-rules-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stp-champ-rules-nav__item {
+  display: block;
+  padding: 10px;
+  border-radius: 6px;
+  font-family: var(--stp-font-sans, "Instrument Sans", sans-serif);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: #7e838c;
+  text-decoration: none;
+  background: #f9fafc;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.stp-champ-rules-nav__item:hover {
+  color: #4a4b50;
+  text-decoration: none;
+}
+
+.stp-champ-rules-nav__item.is-active {
+  font-weight: 600;
+  color: #fff;
+  background: #e03528;
+  box-shadow: 0 10px 10px rgba(224, 53, 40, 0.15);
+}
+
+.stp-champ-rules-content {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stp-champ-rule-section {
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  scroll-margin-top: 24px;
+}
+
+.stp-champ-rule-section__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 30px 25px 22px;
+  border-bottom: 1px solid #ececec;
+}
+
+.stp-champ-rule-section__icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: #ffefef;
+  color: #e03528;
+}
+
+.stp-champ-rule-section__icon svg {
+  display: block;
+}
+
+.stp-champ-rule-section__title {
+  margin: 0 0 8px;
+  font-family: var(--stp-font-sans, "Instrument Sans", sans-serif);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #0b0f20;
+}
+
+.stp-champ-rule-section__lead {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.45;
+  color: #5c5c5c;
+}
+
+.stp-champ-rule-section__body {
+  padding: 22px 25px 25px;
+}
+
+.stp-champ-rule-specs {
+  margin-bottom: 10px;
+}
+
+.stp-champ-rule-spec {
+  height: 100%;
+  padding: 19px;
+  background: var(--stp-surface-row, #f8f9fc);
+  border: 1px solid #f0f0f1;
+  border-radius: 10px;
+}
+
+.stp-champ-rule-spec__label {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #9a9a9a;
+}
+
+.stp-champ-rule-spec__value {
+  margin: 0 0 12px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #0b0f20;
+}
+
+.stp-champ-rule-spec__hint {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #333;
+}
+
+.stp-champ-rule-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stp-champ-rule-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0;
+  padding: 15px;
+  background: var(--stp-surface-row, #f8f9fc);
+  border: 1px solid #f0f0f1;
+  border-radius: 10px;
+}
+
+.stp-champ-rule-row__icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+  line-height: 0;
+}
+
+.stp-champ-rule-row__icon svg {
+  display: block;
+}
+
+.stp-champ-rule-row__text {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #333;
+}
+
+@media (max-width: 991.98px) {
+  .stp-champ-rules-panel {
+    flex-direction: column;
+  }
+
+  .stp-champ-rules-nav {
+    position: static;
+    flex: 1 1 auto;
+    max-width: none;
+    width: 100%;
+  }
+
+  .stp-champ-rules-nav__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .stp-champ-rules-nav__item {
+    flex: 1 1 auto;
+    text-align: center;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .stp-champ-rule-section__head {
+    padding: 22px 20px 18px;
+  }
+
+  .stp-champ-rule-section__body {
+    padding: 18px 20px 20px;
+  }
+
+  .stp-champ-rule-section__title {
+    font-size: 20px;
+  }
+
+  .stp-champ-rule-section__lead {
+    font-size: 16px;
+  }
+
+  .stp-champ-rule-spec__value {
+    font-size: 20px;
+  }
+}
+
+/* Champions Past Winners — 15_stp_champions_pastwinners (Figma node 2:15416) */
+.stp-page-champions-past-winners {
+  background: var(--stp-surface-row, #f8f9fc);
+}
+
+.stp-page-champions-past-winners section[aria-label="Past competition winners"] {
+  padding-top: 24px;
+}
+
+.stp-champ-pw-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 19px;
+  margin-bottom: 32px;
+}
+
+.stp-champ-pw-stat {
+  background: var(--stp-white, #fff);
+  border: 1px solid #e1e6ed;
+  border-radius: var(--stp-radius-card, 20px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 21px 20px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Icon rail — same treatment as .stp-champ-cc-icon */
+.stp-champ-pw-stat__icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: #ffefef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.stp-champ-pw-stat__icon svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+  stroke: var(--stp-primary, #e03528);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.stp-champ-pw-stat__value {
+  margin: 0 0 4px;
+  font-family: var(--stp-font-sans, "Instrument Sans", sans-serif);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--stp-heading-deep, #0b0f20);
+}
+
+.stp-champ-pw-stat__label {
+  margin: 0;
+  font-size: 14px;
+  color: var(--stp-body, #333);
+}
+
+.stp-champ-pw-intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px 24px;
+  margin-bottom: 28px;
+}
+
+.stp-champ-pw-filter {
+  flex-shrink: 0;
+  min-width: min(100%, 288px);
+  height: 53px;
+  padding: 0 44px 0 14px;
+  border: 1px solid #e1e6ed;
+  border-radius: 10px;
+  background-color: var(--stp-white, #fff);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%230b0f20' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 20px;
+  font-family: var(--stp-font-sans, "Instrument Sans", sans-serif);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--stp-heading-deep, #0b0f20);
+  appearance: none;
+  cursor: pointer;
+}
+
+.stp-champ-pw-rounds {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.stp-champ-pw-round {
+  background: var(--stp-white, #fff);
+  border: 1px solid var(--stp-card-border, #ececec);
+  border-radius: var(--stp-radius-card, 20px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  padding: 25px 28px 22px;
+}
+
+.stp-champ-pw-round__head {
+  display: grid;
+  grid-template-columns: 55px 1fr auto;
+  grid-template-rows: auto auto;
+  column-gap: 20px;
+  row-gap: 4px;
+  align-items: start;
+  margin-bottom: 24px;
+}
+
+.stp-champ-pw-round__badge {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  align-self: start;
+  position: relative;
+  width: 55px;
+  height: 55px;
+  border-radius: 15px;
+  background: var(--stp-primary, #e03528);
+  box-shadow: var(--stp-primary-shadow, 0 10px 20px rgba(224, 53, 40, 0.25));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+}
+
+.stp-champ-pw-round__title {
+  margin: 0;
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--stp-heading-deep, #0b0f20);
+}
+
+.stp-champ-pw-round__meta {
+  margin: 0;
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--stp-muted, #666);
+}
+
+.stp-champ-pw-round__status {
+  grid-column: 3;
+  grid-row: 1;
+  align-self: start;
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 15px;
+  border-radius: var(--stp-radius-btn, 100px);
+  background: rgba(0, 150, 136, 0.1);
+  font-size: 14px;
+  font-weight: 600;
+  color: #009688;
+  line-height: 1;
+}
+
+.stp-champ-pw-round__status svg {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.stp-champ-pw-dates {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.stp-champ-pw-date {
+  background: var(--stp-surface-row, #f8f9fc);
+  border: 1px solid #f0f0f1;
+  border-radius: 10px;
+  padding: 14px 20px 18px;
+  min-height: 80px;
+}
+
+.stp-champ-pw-date__label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #999ca3;
+}
+
+.stp-champ-pw-date__label svg {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  stroke: var(--stp-primary, #e03528);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.stp-champ-pw-date__value {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--stp-body, #333);
+}
+
+.stp-champ-pw-table-wrap {
+  border: 1px solid var(--stp-card-border, #ececec);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.stp-champ-pw-table {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.stp-champ-pw-table thead th {
+  padding: 15px 18px;
+  background: var(--stp-surface-row, #f8f9fc);
+  border-bottom: 1px solid var(--stp-card-border, #ececec);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #999ca3;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.stp-champ-pw-table tbody td {
+  padding: 15px 18px;
+  border-top: 1px solid #e5e5e5;
+  color: var(--stp-body, #333);
+  vertical-align: middle;
+}
+
+.stp-champ-pw-table tbody tr:first-child td {
+  border-top: 0;
+}
+
+.stp-champ-pw-rank {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.stp-champ-pw-rank__icon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.stp-champ-pw-rank__icon--gold {
+  color: #d4a017;
+}
+
+.stp-champ-pw-rank__icon--silver {
+  color: #9ca3af;
+}
+
+.stp-champ-pw-rank__icon--bronze {
+  color: #b87333;
+}
+
+.stp-champ-pw-rank__icon--muted {
+  color: #b5b5b5;
+}
+
+/* Matches .stp-champ-lb__gain on Champions hub */
+.stp-champ-pw-profit {
+  font-weight: 600;
+  color: #009688;
+}
+
+.stp-champ-pw-round__foot {
+  margin-top: 18px;
+  text-align: right;
+}
+
+.stp-champ-pw-round__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--stp-body, #333);
+  text-decoration: none;
+}
+
+.stp-champ-pw-round__link svg {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.stp-champ-pw-round__link:hover {
+  color: var(--stp-primary, #e03528);
+  text-decoration: none;
+}
+
+@media (max-width: 1199.98px) {
+  .stp-champ-pw-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .stp-champ-pw-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stp-champ-pw-dates {
+    grid-template-columns: 1fr;
+  }
+
+  .stp-champ-pw-round {
+    padding: 20px 16px 18px;
+  }
+
+  .stp-champ-pw-round__head {
+    grid-template-columns: 55px 1fr;
+  }
+
+  .stp-champ-pw-round__status {
+    grid-column: 2;
+    grid-row: 3;
+    justify-self: start;
+    margin-top: 8px;
+  }
+
+  .stp-champ-pw-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .stp-champ-pw-table {
+    min-width: 640px;
+  }
+}

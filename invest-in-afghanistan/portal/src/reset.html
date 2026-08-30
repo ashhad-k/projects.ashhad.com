@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="../media/favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Set a new password — Investor & Business Portal</title>
+<meta name="description" content="Choose a new password for your Invest in Afghanistan portal account.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/portal.css">
+</head>
+<body>
+<main class="auth">
+ <div class="gmesh"></div>
+
+ <div class="card">
+  <a class="lg" href="../index.html"><img class="logoimg" src="../media/logo_grey.png" alt="Invest in Afghanistan" width="691" height="289"></a>
+
+  <form class="af" data-af data-next="login.html">
+   <div class="h">Set a new password</div>
+   <div class="sub">Choose a strong password you don&rsquo;t use anywhere else.</div>
+
+   <div class="fld"><label>New password</label>
+    <div class="ip ic"><input type="password" placeholder="New password" data-pw data-strength="#pwm" required style="padding-right:62px">
+     <svg class="lic" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>
+     <button type="button" class="toggle" data-toggle>Show</button></div>
+    <div class="pw-meter" id="pwm"><i></i><i></i><i></i><i></i></div>
+    <div class="pw-lab">At least 8 characters, with a capital and a number.</div></div>
+
+   <div class="fld"><label>Confirm new password</label>
+    <div class="ip ic"><input type="password" placeholder="Re-enter password" required style="padding-right:62px">
+     <svg class="lic" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg></div></div>
+
+   <button type="submit" class="pillbtn ink btn" style="margin-top:6px">Save new password &rarr;</button>
+
+   <div class="alt"><a class="a-back" href="login.html" style="margin:0"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>Back to sign in</a></div>
+  </form>
+ </div>
+
+ <p class="foot-note">Ministry of Industry &amp; Commerce &middot; Investor &amp; Business Portal</p>
+</main>
+<script src="assets/portal.js"></script>
+</body>
+</html>

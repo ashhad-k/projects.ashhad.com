@@ -1,0 +1,87 @@
+/* ============ SS · emergency help ============
+   Red is used once, for the thing that is actually urgent. The rest of
+   the page stays calm on purpose — someone reading it is not. */
+.sosh{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:0;border-radius:var(--r-lg);overflow:hidden;
+  background:linear-gradient(158deg,#153259,var(--navy) 58%,#091730);color:#F2EFE8;margin-bottom:22px;
+  box-shadow:0 2px 6px rgba(13,33,72,.2), 0 28px 56px -34px rgba(13,33,72,.62);position:relative}
+@media(max-width:860px){.sosh{grid-template-columns:1fr}}
+.sosh::after{content:"";position:absolute;right:-60px;bottom:-90px;width:250px;height:250px;pointer-events:none;
+  background:var(--sunsvg) center/contain no-repeat;opacity:.13;
+  -webkit-mask-image:radial-gradient(circle at 50% 50%,transparent 34%,#000 43%);
+  mask-image:radial-gradient(circle at 50% 50%,transparent 34%,#000 43%)}
+.sosh>*{position:relative;z-index:2}
+.sos-m{padding:28px 30px}
+.sos-m em{font-style:normal;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.19em;
+  text-transform:uppercase;color:#FF8A93;display:flex;align-items:center;gap:9px;margin-bottom:13px}
+.sos-m em i{width:7px;height:7px;border-radius:50%;background:#FF4E5B;display:block;
+  animation:sospulse 2s ease-in-out infinite}
+@keyframes sospulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(255,78,91,.6)}
+  70%{opacity:.75;box-shadow:0 0 0 7px rgba(255,78,91,0)}}
+.sos-m h1{font-size:clamp(25px,3vw,36px);line-height:1.06;letter-spacing:-.04em;color:#fff;max-width:min(100%,26ch)}
+.sos-m p{margin:13px 0 0;font-size:14.5px;line-height:1.6;color:rgba(242,239,232,.8);max-width:52ch}
+.sos-n{padding:28px 26px;border-left:1px solid rgba(255,255,255,.13);display:grid;align-content:center;gap:4px}
+@media(max-width:860px){.sos-n{border-left:0;border-top:1px solid rgba(255,255,255,.13)}}
+.sos-n span.l2{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold-fill)}
+.sos-n a,.sos-n .num{display:block;font-family:"Funnel Display",sans-serif;font-size:27px;letter-spacing:-.03em;
+  color:#fff;margin-top:7px;text-decoration:none}
+.sos-n small{display:block;font-size:12.5px;color:rgba(242,239,232,.68);margin-top:8px;line-height:1.5}
+.sos-n .k-btn{margin-top:15px;width:100%;background:#C81F2E}
+.sos-n .k-btn:hover{background:#A8151F}
+
+/* ss4 · auto-fill left the last row short and the empty track read as a
+   hole in the page. There are exactly six cases, so three columns divide
+   cleanly at every width the grid is used at. */
+.sgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media(max-width:1180px){.sgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){.sgrid{grid-template-columns:1fr}}
+
+/* the out-of-hours route, printed under the number it qualifies */
+.sos-alt{display:grid;grid-template-columns:20px minmax(0,1fr);gap:11px;align-items:start;
+  margin:16px 0 18px;padding-top:15px;border-top:1px solid rgba(242,239,232,.16)}
+.sos-alt svg{width:17px;height:17px;color:var(--gold-fill);margin-top:2px}
+.sos-alt b{display:block;font-size:13px;color:#F2EFE8;margin-bottom:3px}
+.sos-alt p{margin:0;font-size:12.5px;line-height:1.5;color:rgba(242,239,232,.72)}
+a.num{text-decoration:none}
+.scase{background:var(--white);border:1px solid var(--line);border-radius:var(--r-md);padding:17px 18px;
+  text-align:start;width:100%;display:flex;flex-direction:column;box-shadow:var(--sh-1);
+  transition:border-color .2s,box-shadow .22s var(--ease),transform .22s var(--ease)}
+.scase:hover{border-color:var(--bad-line);box-shadow:var(--sh-2);transform:translateY(-2px)}
+.scase .si{width:40px;height:40px;border-radius:12px;background:var(--bad-soft);display:grid;place-items:center;
+  margin-bottom:13px}
+.scase .si svg{width:19px;height:19px;color:var(--bad)}
+.scase b{display:block;font-family:"Funnel Display",sans-serif;font-size:16px;letter-spacing:-.03em;line-height:1.2}
+.scase small{display:block;font-size:12.5px;color:var(--ink-3);margin-top:7px;line-height:1.5}
+.scase .sgo{margin-top:auto;padding-top:14px;display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;
+  color:var(--pri)}
+.scase .sgo svg{width:13px;height:13px;transition:transform .2s var(--ease)}
+.scase:hover .sgo svg{transform:translateX(3px)}
+
+.first{display:grid;gap:0;counter-reset:fs}
+.first div{display:grid;grid-template-columns:30px minmax(0,1fr);gap:14px;padding:14px 0;
+  border-bottom:1px solid var(--line)}
+.first div:last-child{border-bottom:0;padding-bottom:0}
+.first div:first-child{padding-top:0}
+.first .fn{width:30px;height:30px;border-radius:50%;background:var(--bad);color:#fff;display:grid;
+  place-items:center;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600}
+.first b{display:block;font-size:14.5px;font-weight:600;line-height:1.35}
+.first p{margin:5px 0 0;font-size:13px;color:var(--ink-2);line-height:1.55}
+
+/* ---- the exit control ---------------------------------------------
+   The catalogue promised this and it was never built. Someone reading an
+   assistance page may be doing it while being watched. One tap, or the
+   Escape key, and the screen is the dashboard with nothing in the
+   history to go back to. */
+.xbar{position:sticky;top:56px;z-index:40;display:flex;align-items:center;gap:12px;
+  background:var(--white);border:1px solid var(--bad-line);border-radius:var(--r-pill);
+  padding:7px 8px 7px 16px;margin-bottom:20px;box-shadow:var(--sh-1)}
+.xbar .xt{font-size:12.5px;color:var(--ink-2);line-height:1.4}
+.xbar .xb{margin-left:auto;display:inline-flex;align-items:center;gap:8px;padding:8px 15px;min-height:38px;
+  border-radius:var(--r-pill);background:var(--bad);color:#fff;font-size:13px;font-weight:600;
+  white-space:nowrap;transition:background .16s,transform .12s var(--ease)}
+.xbar .xb:hover{background:#A8151F}
+.xbar .xb:active{transform:scale(.985)}
+.xbar .xb svg{color:#fff}
+.xbar kbd{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--ink-3);border:1px solid var(--line);
+  border-radius:5px;padding:2px 6px;background:var(--paper)}
+@media(max-width:620px){.xbar{padding-left:13px}.xbar .xt{font-size:12px}.xbar kbd{display:none}}

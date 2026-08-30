@@ -1,0 +1,335 @@
+/**
+ * Account Types page — pilot layout aligned with Figma /given/2_stp_accounttypes.png
+ */
+
+body.stp-page-account-types {
+  background: var(--stp-page-bg);
+}
+
+/* Footer is a sibling of the shell — match horizontal gutters from .stp-shell */
+body.stp-page-account-types > .stp-footer {
+  margin-left: var(--stp-shell-gap);
+  margin-right: var(--stp-shell-gap);
+  width: auto;
+  max-width: calc(100% - (2 * var(--stp-shell-gap)));
+  margin-inline: auto;
+}
+
+.stp-acct-kicker {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--stp-primary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--stp-stack-kicker-mb);
+}
+
+.stp-acct-section-title {
+  font-size: clamp(1.5rem, 4.5vw, 2.25rem);
+  font-weight: 700;
+  color: var(--stp-heading-deep, #0b0f20);
+  max-width: 52rem;
+  line-height: 1.28;
+  margin-bottom: var(--stp-stack-title-mb);
+}
+
+/* Account cards */
+.stp-acct-card {
+  background: #fff;
+  border: 1px solid #e1e6ed;
+  border-radius: var(--stp-radius-card, 16px);
+  padding: 20px 18px 18px;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+  height: 100%;
+}
+
+.stp-acct-card-top {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: 16px 0;
+  padding-bottom: 20px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #ececec;
+}
+
+.stp-acct-card-top__divider {
+  display: none;
+}
+
+.stp-acct-name {
+  font-size: clamp(1.375rem, 4vw, 2rem);
+  font-weight: 700;
+  color: var(--stp-heading-deep);
+  line-height: 1.12;
+}
+
+.stp-acct-desc {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--stp-body, #333333);
+  margin-top: 8px;
+  line-height: 1.45;
+  max-width: none;
+}
+
+.stp-spread-block {
+  text-align: left;
+  min-width: 0;
+  padding-top: 0;
+}
+
+.stp-spread-label {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--stp-body);
+  display: block;
+}
+
+.stp-spread-value {
+  font-size: clamp(2.5rem, 12vw, 4rem);
+  font-weight: 400;
+  color: var(--stp-primary);
+  line-height: 1;
+  display: inline;
+  letter-spacing: -0.04em;
+}
+
+.stp-spread-pips {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  font-weight: 700;
+  color: var(--stp-primary);
+  margin-left: 2px;
+  vertical-align: super;
+}
+
+/* Compose generic pieces: .stp-badge-solid-dark, .stp-row-kv, .stp-btn-outline-block (stp-components.css) */
+.stp-acct-card .stp-badge-solid-dark {
+  margin-top: 16px;
+}
+
+.stp-acct-card > .stp-btn-outline-block {
+  margin-top: 20px;
+}
+
+/* Steps row — dotted connector; equal-height cards */
+.row.stp-steps-track {
+  align-items: stretch !important;
+}
+
+.row.stp-steps-track > .col:not(.col-auto) {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  min-width: 0;
+  min-height: 0;
+}
+
+.stp-steps-track {
+  position: relative;
+  margin-bottom: var(--stp-stack-block-gap);
+  isolation: isolate;
+}
+
+.stp-steps-track::before {
+  display: none;
+}
+
+.row.stp-steps-track {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch !important;
+}
+
+.row.stp-steps-track > .col-auto.stp-step-arrow {
+  display: none !important;
+}
+
+.row.stp-steps-track > .col:not(.col-auto) {
+  flex: 0 0 auto !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.stp-step-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--stp-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.stp-step-card {
+  flex: 1 1 auto;
+  align-self: stretch;
+  width: 100%;
+  min-height: 0;
+  background: #fff;
+  border-radius: var(--stp-radius-card, 16px);
+  padding: var(--stp-card-pad-sm);
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+}
+
+body.stp-site .stp-step-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.stp-step-num {
+  font-size: 12px;
+  font-weight: 600;
+  color: #bbb;
+  letter-spacing: 0.06em;
+}
+
+.stp-step-icon svg {
+  color: #fff;
+}
+
+.stp-step-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--stp-heading-deep);
+  margin-bottom: 12px;
+}
+
+.stp-step-desc {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--stp-body);
+  line-height: 1.55;
+}
+
+.stp-step-arrow {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #d1d5db;
+}
+
+.stp-step-arrow svg {
+  display: block;
+}
+
+.stp-step-arrow svg circle {
+  fill: #fff;
+}
+
+.stp-step-arrow svg path {
+  fill: none;
+}
+
+.stp-cta-banner {
+  background: #ecedf3;
+  border-radius: var(--stp-radius-card, 16px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.stp-cta-banner h3 {
+  font-size: clamp(1.125rem, 4vw, 1.375rem);
+  font-weight: 600;
+  color: var(--stp-heading-deep);
+  margin: 0;
+  line-height: 1.35;
+  max-width: none;
+}
+
+.stp-steps-track::before {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .stp-acct-card {
+    padding: 28px 28px 24px;
+  }
+
+  .stp-acct-card-top {
+    grid-template-columns: 1fr auto auto;
+    gap: 0 20px;
+    padding-bottom: 24px;
+  }
+
+  .stp-acct-card-top__divider {
+    display: block;
+    width: 1px;
+    min-height: 108px;
+    background: linear-gradient(180deg, transparent, #e0e4ea 12%, #e0e4ea 88%, transparent);
+    align-self: stretch;
+    margin-top: 4px;
+  }
+
+  .stp-acct-desc {
+    font-size: 16px;
+    max-width: 17rem;
+  }
+
+  .stp-spread-block {
+    text-align: right;
+    min-width: 128px;
+    padding-top: 2px;
+  }
+
+  .stp-spread-label {
+    font-size: 16px;
+  }
+
+  .stp-cta-banner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 36px;
+    gap: 24px;
+  }
+
+  .stp-cta-banner h3 {
+    max-width: 36rem;
+  }
+
+  .stp-steps-track::before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 8%;
+    right: 8%;
+    top: 52.5%;
+    height: 0;
+    border-top: 2px dotted #d1d5db;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .row.stp-steps-track {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch !important;
+  }
+
+  .row.stp-steps-track > .col-auto.stp-step-arrow {
+    display: flex !important;
+  }
+
+  .row.stp-steps-track > .col:not(.col-auto) {
+    flex: 1 1 0 !important;
+    width: auto !important;
+    max-width: none !important;
+  }
+
+  .stp-step-icon {
+    margin: 52px 0 28px;
+  }
+}

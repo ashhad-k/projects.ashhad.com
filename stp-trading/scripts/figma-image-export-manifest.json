@@ -1,0 +1,586 @@
+{
+  "fileKey": "odbqunya6ae6IAOFjnTPNR",
+  "generatedAt": "2026-05-03T19:50:58.559Z",
+  "sourceXml": "scripts/figma-page-metadata.xml",
+  "countsByFolder": {
+    "home": 23,
+    "announcements": 8,
+    "license": 13,
+    "awards": 4,
+    "special-service-4": 1,
+    "special-service-5": 1,
+    "special-service-6": 1,
+    "special-service-7": 11,
+    "special-service-8": 1,
+    "mt5": 2,
+    "stp-portal": 2,
+    "social-trading": 7,
+    "champions": 1,
+    "champions-faq": 1,
+    "champions-rules": 1,
+    "champions-pastwinners": 1,
+    "account-types-more": 2
+  },
+  "items": [
+    {
+      "nodeId": "2:4930",
+      "folder": "home",
+      "screen": "1_stp_homepage",
+      "figmaImageName": "image 120",
+      "file": "feature-01.png"
+    },
+    {
+      "nodeId": "2:4986",
+      "folder": "home",
+      "screen": "1_stp_homepage",
+      "figmaImageName": "image 119",
+      "file": "feature-02.png"
+    },
+    {
+      "nodeId": "2:5007",
+      "folder": "home",
+      "screen": "1_stp_homepage",
+      "figmaImageName": "image 121",
+      "file": "feature-03.png"
+    },
+    {
+      "nodeId": "2:5012",
+      "folder": "home",
+      "screen": "1_stp_homepage",
+      "figmaImageName": "image 121",
+      "file": "feature-04.png"
+    },
+    {
+      "nodeId": "2:5017",
+      "folder": "home",
+      "screen": "1_stp_homepage",
+      "figmaImageName": "image 121",
+      "file": "feature-05.png"
+    },
+    {
+      "nodeId": "2:5022",
+      "folder": "home",
+      "screen": "1_stp_homepage",
+      "figmaImageName": "image 121",
+      "file": "feature-06.png"
+    },
+    {
+      "nodeId": "2:5035",
+      "folder": "home",
+      "screen": "1_stp_homepage",
+      "figmaImageName": "image 124",
+      "file": "feature-07.png"
+    },
+    {
+      "nodeId": "2:5042",
+      "folder": "home",
+      "screen": "1_stp_homepage",
+      "figmaImageName": "image 125",
+      "file": "feature-08.png"
+    },
+    {
+      "nodeId": "2:5048",
+      "folder": "home",
+      "screen": "1_stp_homepage",
+      "figmaImageName": "image 126",
+      "file": "feature-09.png"
+    },
+    {
+      "nodeId": "2:5153",
+      "folder": "home",
+      "screen": "1_stp_homepage",
+      "figmaImageName": "image 127",
+      "file": "feature-10.png"
+    },
+    {
+      "nodeId": "2:5161",
+      "folder": "home",
+      "screen": "1_stp_homepage",
+      "figmaImageName": "image 127",
+      "file": "feature-11.png"
+    },
+    {
+      "nodeId": "2:5166",
+      "folder": "home",
+      "screen": "1_stp_homepage",
+      "figmaImageName": "image 127",
+      "file": "feature-12.png"
+    },
+    {
+      "nodeId": "2:5171",
+      "folder": "home",
+      "screen": "1_stp_homepage",
+      "figmaImageName": "image 127",
+      "file": "feature-13.png"
+    },
+    {
+      "nodeId": "2:5174",
+      "folder": "home",
+      "screen": "1_stp_homepage",
+      "figmaImageName": "image 127",
+      "file": "feature-14.png"
+    },
+    {
+      "nodeId": "2:5179",
+      "folder": "home",
+      "screen": "1_stp_homepage",
+      "figmaImageName": "image 127",
+      "file": "feature-15.png"
+    },
+    {
+      "nodeId": "2:5194",
+      "folder": "home",
+      "screen": "1_stp_homepage",
+      "figmaImageName": "image 54",
+      "file": "feature-16.png"
+    },
+    {
+      "nodeId": "2:5204",
+      "folder": "home",
+      "screen": "1_stp_homepage",
+      "figmaImageName": "image 54",
+      "file": "feature-17.png"
+    },
+    {
+      "nodeId": "2:5214",
+      "folder": "home",
+      "screen": "1_stp_homepage",
+      "figmaImageName": "image 54",
+      "file": "feature-18.png"
+    },
+    {
+      "nodeId": "2:5224",
+      "folder": "home",
+      "screen": "1_stp_homepage",
+      "figmaImageName": "image 54",
+      "file": "feature-19.png"
+    },
+    {
+      "nodeId": "2:5346",
+      "folder": "home",
+      "screen": "1_stp_homepage",
+      "figmaImageName": "image 55",
+      "file": "feature-20.png"
+    },
+    {
+      "nodeId": "2:5369",
+      "folder": "home",
+      "screen": "1_stp_homepage",
+      "figmaImageName": "image 128",
+      "file": "feature-21.png"
+    },
+    {
+      "nodeId": "2:5584",
+      "folder": "home",
+      "screen": "1_stp_homepage",
+      "figmaImageName": "image 122",
+      "file": "feature-22.png"
+    },
+    {
+      "nodeId": "2:5585",
+      "folder": "home",
+      "screen": "1_stp_homepage",
+      "figmaImageName": "image 123",
+      "file": "feature-23.png"
+    },
+    {
+      "nodeId": "2:6028",
+      "folder": "announcements",
+      "screen": "21_stp_annourcements",
+      "figmaImageName": "image 112",
+      "file": "feature-01.png"
+    },
+    {
+      "nodeId": "2:6036",
+      "folder": "announcements",
+      "screen": "21_stp_annourcements",
+      "figmaImageName": "image 112",
+      "file": "feature-02.png"
+    },
+    {
+      "nodeId": "2:6044",
+      "folder": "announcements",
+      "screen": "21_stp_annourcements",
+      "figmaImageName": "image 112",
+      "file": "feature-03.png"
+    },
+    {
+      "nodeId": "2:6052",
+      "folder": "announcements",
+      "screen": "21_stp_annourcements",
+      "figmaImageName": "image 112",
+      "file": "feature-04.png"
+    },
+    {
+      "nodeId": "2:6060",
+      "folder": "announcements",
+      "screen": "21_stp_annourcements",
+      "figmaImageName": "image 112",
+      "file": "feature-05.png"
+    },
+    {
+      "nodeId": "2:6068",
+      "folder": "announcements",
+      "screen": "21_stp_annourcements",
+      "figmaImageName": "image 112",
+      "file": "feature-06.png"
+    },
+    {
+      "nodeId": "2:6076",
+      "folder": "announcements",
+      "screen": "21_stp_annourcements",
+      "figmaImageName": "image 112",
+      "file": "feature-07.png"
+    },
+    {
+      "nodeId": "2:6084",
+      "folder": "announcements",
+      "screen": "21_stp_annourcements",
+      "figmaImageName": "image 112",
+      "file": "feature-08.png"
+    },
+    {
+      "nodeId": "2:6237",
+      "folder": "license",
+      "screen": "22_stp_license",
+      "figmaImageName": "image 113",
+      "file": "feature-01.png"
+    },
+    {
+      "nodeId": "2:6258",
+      "folder": "license",
+      "screen": "22_stp_license",
+      "figmaImageName": "image 113",
+      "file": "feature-02.png"
+    },
+    {
+      "nodeId": "2:6284",
+      "folder": "license",
+      "screen": "22_stp_license",
+      "figmaImageName": "image 114",
+      "file": "feature-03.png"
+    },
+    {
+      "nodeId": "2:6296",
+      "folder": "license",
+      "screen": "22_stp_license",
+      "figmaImageName": "image 117",
+      "file": "feature-04.png"
+    },
+    {
+      "nodeId": "2:6302",
+      "folder": "license",
+      "screen": "22_stp_license",
+      "figmaImageName": "image 116",
+      "file": "feature-05.png"
+    },
+    {
+      "nodeId": "2:6307",
+      "folder": "license",
+      "screen": "22_stp_license",
+      "figmaImageName": "image 116",
+      "file": "feature-06.png"
+    },
+    {
+      "nodeId": "2:6312",
+      "folder": "license",
+      "screen": "22_stp_license",
+      "figmaImageName": "image 116",
+      "file": "feature-07.png"
+    },
+    {
+      "nodeId": "2:6317",
+      "folder": "license",
+      "screen": "22_stp_license",
+      "figmaImageName": "image 116",
+      "file": "feature-08.png"
+    },
+    {
+      "nodeId": "2:6322",
+      "folder": "license",
+      "screen": "22_stp_license",
+      "figmaImageName": "image 116",
+      "file": "feature-09.png"
+    },
+    {
+      "nodeId": "2:6327",
+      "folder": "license",
+      "screen": "22_stp_license",
+      "figmaImageName": "image 116",
+      "file": "feature-10.png"
+    },
+    {
+      "nodeId": "2:6332",
+      "folder": "license",
+      "screen": "22_stp_license",
+      "figmaImageName": "image 116",
+      "file": "feature-11.png"
+    },
+    {
+      "nodeId": "2:6337",
+      "folder": "license",
+      "screen": "22_stp_license",
+      "figmaImageName": "image 116",
+      "file": "feature-12.png"
+    },
+    {
+      "nodeId": "2:6342",
+      "folder": "license",
+      "screen": "22_stp_license",
+      "figmaImageName": "image 116",
+      "file": "feature-13.png"
+    },
+    {
+      "nodeId": "2:6544",
+      "folder": "awards",
+      "screen": "23_stp_awards",
+      "figmaImageName": "image 118",
+      "file": "feature-01.png"
+    },
+    {
+      "nodeId": "2:6559",
+      "folder": "awards",
+      "screen": "23_stp_awards",
+      "figmaImageName": "image 118",
+      "file": "feature-02.png"
+    },
+    {
+      "nodeId": "2:6574",
+      "folder": "awards",
+      "screen": "23_stp_awards",
+      "figmaImageName": "image 118",
+      "file": "feature-03.png"
+    },
+    {
+      "nodeId": "2:6589",
+      "folder": "awards",
+      "screen": "23_stp_awards",
+      "figmaImageName": "image 118",
+      "file": "feature-04.png"
+    },
+    {
+      "nodeId": "2:6982",
+      "folder": "special-service-4",
+      "screen": "4_stp_specialservice",
+      "figmaImageName": "image 59",
+      "file": "feature-01.png"
+    },
+    {
+      "nodeId": "2:7162",
+      "folder": "special-service-5",
+      "screen": "5_stp_specialservice",
+      "figmaImageName": "image 60",
+      "file": "feature-01.png"
+    },
+    {
+      "nodeId": "2:7525",
+      "folder": "special-service-6",
+      "screen": "6_stp_specialservice",
+      "figmaImageName": "image 62",
+      "file": "feature-01.png"
+    },
+    {
+      "nodeId": "2:8212",
+      "folder": "special-service-7",
+      "screen": "7_stp_specialservice",
+      "figmaImageName": "image 65",
+      "file": "feature-01.png"
+    },
+    {
+      "nodeId": "2:8231",
+      "folder": "special-service-7",
+      "screen": "7_stp_specialservice",
+      "figmaImageName": "image 64",
+      "file": "feature-02.png"
+    },
+    {
+      "nodeId": "2:8259",
+      "folder": "special-service-7",
+      "screen": "7_stp_specialservice",
+      "figmaImageName": "image 64",
+      "file": "feature-03.png"
+    },
+    {
+      "nodeId": "2:8277",
+      "folder": "special-service-7",
+      "screen": "7_stp_specialservice",
+      "figmaImageName": "image 64",
+      "file": "feature-04.png"
+    },
+    {
+      "nodeId": "2:8295",
+      "folder": "special-service-7",
+      "screen": "7_stp_specialservice",
+      "figmaImageName": "image 64",
+      "file": "feature-05.png"
+    },
+    {
+      "nodeId": "2:8313",
+      "folder": "special-service-7",
+      "screen": "7_stp_specialservice",
+      "figmaImageName": "image 64",
+      "file": "feature-06.png"
+    },
+    {
+      "nodeId": "2:8331",
+      "folder": "special-service-7",
+      "screen": "7_stp_specialservice",
+      "figmaImageName": "image 64",
+      "file": "feature-07.png"
+    },
+    {
+      "nodeId": "2:8349",
+      "folder": "special-service-7",
+      "screen": "7_stp_specialservice",
+      "figmaImageName": "image 64",
+      "file": "feature-08.png"
+    },
+    {
+      "nodeId": "2:8367",
+      "folder": "special-service-7",
+      "screen": "7_stp_specialservice",
+      "figmaImageName": "image 64",
+      "file": "feature-09.png"
+    },
+    {
+      "nodeId": "2:8385",
+      "folder": "special-service-7",
+      "screen": "7_stp_specialservice",
+      "figmaImageName": "image 64",
+      "file": "feature-10.png"
+    },
+    {
+      "nodeId": "2:8403",
+      "folder": "special-service-7",
+      "screen": "7_stp_specialservice",
+      "figmaImageName": "image 64",
+      "file": "feature-11.png"
+    },
+    {
+      "nodeId": "2:8600",
+      "folder": "special-service-8",
+      "screen": "8_stp_specialservice",
+      "figmaImageName": "image 66",
+      "file": "feature-01.png"
+    },
+    {
+      "nodeId": "2:8926",
+      "folder": "mt5",
+      "screen": "9_stp_mt5",
+      "figmaImageName": "image 69",
+      "file": "feature-01.png"
+    },
+    {
+      "nodeId": "2:13852",
+      "folder": "mt5",
+      "screen": "9_stp_mt5",
+      "figmaImageName": "image 68",
+      "file": "feature-02.png"
+    },
+    {
+      "nodeId": "2:14022",
+      "folder": "stp-portal",
+      "screen": "10_stp_stpportal",
+      "figmaImageName": "image 70",
+      "file": "feature-01.png"
+    },
+    {
+      "nodeId": "2:14098",
+      "folder": "stp-portal",
+      "screen": "10_stp_stpportal",
+      "figmaImageName": "image 71",
+      "file": "feature-02.png"
+    },
+    {
+      "nodeId": "2:14306",
+      "folder": "social-trading",
+      "screen": "11_stp_socialtrading",
+      "figmaImageName": "image 73",
+      "file": "feature-01.png"
+    },
+    {
+      "nodeId": "2:14351",
+      "folder": "social-trading",
+      "screen": "11_stp_socialtrading",
+      "figmaImageName": "image 101",
+      "file": "feature-02.png"
+    },
+    {
+      "nodeId": "2:14376",
+      "folder": "social-trading",
+      "screen": "11_stp_socialtrading",
+      "figmaImageName": "image 101",
+      "file": "feature-03.png"
+    },
+    {
+      "nodeId": "2:14401",
+      "folder": "social-trading",
+      "screen": "11_stp_socialtrading",
+      "figmaImageName": "image 101",
+      "file": "feature-04.png"
+    },
+    {
+      "nodeId": "2:14426",
+      "folder": "social-trading",
+      "screen": "11_stp_socialtrading",
+      "figmaImageName": "image 101",
+      "file": "feature-05.png"
+    },
+    {
+      "nodeId": "2:14451",
+      "folder": "social-trading",
+      "screen": "11_stp_socialtrading",
+      "figmaImageName": "image 101",
+      "file": "feature-06.png"
+    },
+    {
+      "nodeId": "2:14508",
+      "folder": "social-trading",
+      "screen": "11_stp_socialtrading",
+      "figmaImageName": "image 102",
+      "file": "feature-07.png"
+    },
+    {
+      "nodeId": "2:14688",
+      "folder": "champions",
+      "screen": "12_stp_champions",
+      "figmaImageName": "image 103",
+      "file": "feature-01.png"
+    },
+    {
+      "nodeId": "2:15029",
+      "folder": "champions-faq",
+      "screen": "13_stp_champions_faq",
+      "figmaImageName": "image 103",
+      "file": "feature-01.png"
+    },
+    {
+      "nodeId": "2:15368",
+      "folder": "champions-rules",
+      "screen": "14_stp_champions_rules",
+      "figmaImageName": "image 103",
+      "file": "feature-01.png"
+    },
+    {
+      "nodeId": "2:15573",
+      "folder": "champions-pastwinners",
+      "screen": "15_stp_champions_pastwinners",
+      "figmaImageName": "image 103",
+      "file": "feature-01.png"
+    },
+    {
+      "nodeId": "2:17788",
+      "folder": "account-types-more",
+      "screen": "3_stp_accounttypes",
+      "figmaImageName": "image 57",
+      "file": "feature-01.png"
+    },
+    {
+      "nodeId": "2:17935",
+      "folder": "account-types-more",
+      "screen": "3_stp_accounttypes",
+      "figmaImageName": "image 58",
+      "file": "feature-02.png"
+    }
+  ]
+}

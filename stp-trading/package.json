@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "deploy": "node scripts/deploy.mjs",
+    "deploy:all": "node scripts/deploy.mjs --all",
+    "deploy:verbose": "node scripts/deploy.mjs --verbose"
+  },
+  "dependencies": {
+    "locomotive-scroll": "^5.0.1"
+  },
+  "devDependencies": {
+    "basic-ftp": "^5.0.5"
+  }
+}

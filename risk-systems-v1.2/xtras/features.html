@@ -1,0 +1,1583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Features — Risk System | Every Tool You Need to Protect &amp; Optimize Your Brokerage</title>
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- AOS – Animate On Scroll (uncomment when ready to activate) -->
+  <!-- <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" /> -->
+
+  <!-- Design System — loads AFTER Bootstrap so it wins specificity -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Locomotive Scroll — smooth scrolling -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
+</head>
+<body class="has-fixed-site-header page-features">
+
+<!-- NAV — outside Locomotive (normal fixed/sticky at viewport; page scrolls inside #loco-main) -->
+<!-- ══════════════════════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════════════════════ -->
+<nav class="navbar navbar-expand-lg fixed-top site-header">
+  <div class="container">
+
+    <!-- 1. Logo + lockup — Figma Features header (node 1:1033) -->
+    <a class="navbar-brand navbar-brand--features d-flex align-items-center gap-2 gap-md-3 mb-0" href="index.html">
+      <img src="assets/logo.svg" alt="Risk System" width="200" height="auto" class="flex-shrink-0" />
+      <span class="navbar-brand-lockup d-none d-md-inline-flex align-items-center gap-3">
+        <span class="navbar-brand-lockup__name text-white fw-semibold">Risk System</span>
+        <span class="navbar-brand-lockup__divider" aria-hidden="true"></span>
+        <span class="navbar-brand-lockup__tagline">Risk Management System</span>
+      </span>
+    </a>
+
+    <!-- Mobile toggle -->
+    <button class="navbar-toggler border-0" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navMenu"
+            aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- 2. Navigation — center (pill container) -->
+    <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+      <div class="nav-pill-wrap">
+        <a href="index.html#hero" class="nav-pill-link">Home</a>
+        <a href="#hero" class="nav-pill-link active">Features</a>
+        <a href="#section-intel" class="nav-pill-link">Global Exposure</a>
+        <a href="#cta" class="nav-pill-link">Pricing</a>
+        <a href="#" class="nav-pill-link">About</a>
+        <a href="#" class="nav-pill-link">Contact</a>
+      </div>
+    </div>
+
+    <!-- 3. CTA — right (56px height variant of primary button) -->
+    <div class="d-none d-lg-block">
+      <a href="contact.html" class="btn btn-gradient btn-nav">Join the Waitlist</a>
+    </div>
+
+  </div>
+</nav>
+
+<div id="loco-main" data-scroll-container>
+
+<!-- ══════════════════════════════════════════════════════
+     HERO — Features (Figma: node 1:1033)
+     https://www.figma.com/design/rwPdLUp9HoUcC3W7MW9zrk/Risk-System?node-id=1-1033
+══════════════════════════════════════════════════════ -->
+<section id="hero" class="hero--features">
+  <div class="hero-features-bg" aria-hidden="true">
+    <div class="hero-features-bg__stars"></div>
+    <div class="hero-features-bg__glow"></div>
+  </div>
+
+  <div class="container text-center position-relative">
+
+    <!-- Feature tags -->
+    <div class="hero-feature-tags mb-4">
+      <span class="hero-feature-tag">Real-Time Processing</span>
+      <span class="hero-feature-tag">AI-Powered Detection</span>
+      <span class="hero-feature-tag">Profit Optimization</span>
+    </div>
+
+    <h1 class="hero-title hero-title--features mx-auto">
+      Every Tool You Need to Protect &amp; Optimize Your Brokerage.
+    </h1>
+
+    <p class="hero-desc hero-desc--features mx-auto">
+      From real-time exposure monitoring to AI-powered fraud detection, RiskShield Pro provides institutional-grade
+      risk management tools designed specifically for forex and CFD brokers.
+    </p>
+
+    <div class="hero-actions mb-5">
+      <!-- <a href="#" class="btn btn-ghost">Schedule Demo</a> -->
+      <a href="contact.html" class="btn btn-gradient">Join the Waitlist</a>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ══════════════════════════════════════════════════════
+     2ND FOLD — Competitors protected + stats
+══════════════════════════════════════════════════════ -->
+<section class="fold fold-home" id="fold-stats">
+
+  <!-- ══════════════════════════════════════════════════════
+     TICKER (Figma header stats)
+══════════════════════════════════════════════════════ -->
+<section class="ticker-strip" aria-label="Key platform statistics">
+  <div class="ticker-marquee" aria-hidden="true">
+    <div class="ticker-set">
+      <div class="ticker-item"><span class="ticker-item__value">$1T+</span><span class="ticker-item__label">Exposure</span></div>
+      <div class="ticker-item"><span class="ticker-item__value">&lt;100ms</span><span class="ticker-item__label">Detection Speed</span></div>
+      <div class="ticker-item"><span class="ticker-item__value">100+</span><span class="ticker-item__label">Brokers</span></div>
+      <div class="ticker-item"><span class="ticker-item__value">99.2%</span><span class="ticker-item__label">Fraud Detection</span></div>
+      <div class="ticker-item"><span class="ticker-item__value">99.2%</span><span class="ticker-item__label">Trades Analyzed</span></div>
+      <div class="ticker-item"><span class="ticker-item__value">1,000,000+</span><span class="ticker-item__label">Account Monitored</span></div>
+    </div>
+    <div class="ticker-set">
+      <div class="ticker-item"><span class="ticker-item__value">$1T+</span><span class="ticker-item__label">Exposure</span></div>
+      <div class="ticker-item"><span class="ticker-item__value">&lt;100ms</span><span class="ticker-item__label">Detection Speed</span></div>
+      <div class="ticker-item"><span class="ticker-item__value">100+</span><span class="ticker-item__label">Brokers</span></div>
+      <div class="ticker-item"><span class="ticker-item__value">99.2%</span><span class="ticker-item__label">Fraud Detection</span></div>
+      <div class="ticker-item"><span class="ticker-item__value">99.2%</span><span class="ticker-item__label">Trades Analyzed</span></div>
+      <div class="ticker-item"><span class="ticker-item__value">1,000,000+</span><span class="ticker-item__label">Account Monitored</span></div>
+    </div>
+  </div>
+</section>
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-12 col-lg-4">
+        <h1 class="fold-title">About Risk System</h1>
+        <p class="fold-desc">
+          RiskSystem is a real-time risk management and trading intelligence platform built for modern brokers.
+
+It provides complete visibility into trading exposure, helping financial institutions detect risks early, manage their books efficiently, and make faster, data-driven decisions. </p>
+      </div>
+      <div class="col-12 col-lg-6 offset-lg-2">
+        <!-- 2×2 features: titles + body copy match design screenshot → assets/reference/fold-features-2x2-text-ref.png -->
+        <div class="row g-4 fold-feature-grid">
+          <div class="col-12 col-sm-6">
+            <article class="fold-feature">
+              <div class="fold-feature-icon" aria-hidden="true">
+                <!-- Figma node 1:992 — Risk-System -->
+                <img src="assets/icons/fold-feature-icon.svg" width="36" height="36" alt="" />
+              </div>
+              <h3 class="fold-feature-title">Real-Time Risk Intelligence</h3>
+              <p class="fold-feature-text">Gain instant visibility into trading exposure, positions, and client activity across your entire brokerage infrastructure.</p>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6">
+            <article class="fold-feature">
+              <div class="fold-feature-icon" aria-hidden="true">
+                <img src="assets/icons/fold-feature-icon.svg" width="36" height="36" alt="" />
+              </div>
+              <h3 class="fold-feature-title">Precision Exposure Control</h3>
+              <p class="fold-feature-text">Optimize A-Book and B-Book allocation with advanced analytics and real-time hedge coverage monitoring.</p>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6">
+            <article class="fold-feature">
+              <div class="fold-feature-icon" aria-hidden="true">
+                <img src="assets/icons/fold-feature-icon.svg" width="36" height="36" alt="" />
+              </div>
+              <h3 class="fold-feature-title">Proactive Threat Detection</h3>
+              <p class="fold-feature-text">Identify toxic flow, abnormal trading behavior, and market risks before they impact your book.</p>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6">
+            <article class="fold-feature">
+              <div class="fold-feature-icon" aria-hidden="true">
+                <img src="assets/icons/fold-feature-icon.svg" width="36" height="36" alt="" />
+              </div>
+              <h3 class="fold-feature-title">Unified Trading Infrastructure</h3>
+              <p class="fold-feature-text">Connect MT4, MT5, and cTrader into one centralized risk intelligence platform.</p>
+            </article>
+          </div>
+        </div>
+
+        </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     GENERIC GLOW SECTION (reusable: section > container > bg)
+══════════════════════════════════════════════════════ -->
+<section class="section-glowed">
+  <div class="container">
+    <div class="section-glowed-bg" aria-hidden="true"></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     FOLD — Hero structure with 6 boxes (pill + title + boxes + buttons)
+     Alignment: use .fold-hero-structure--center or .fold-hero-structure--left on section
+══════════════════════════════════════════════════════ -->
+<section class="fold fold-hero-structure fold-hero-structure--center" id="fold-pain">
+  <div class="container">
+    <div class="mb-4">
+      <span class="hero-pill">The Reality</span>
+    </div>
+    <h2 class="hero-title">
+      Every Day Without Risk System, <br />You're Losing Money
+    </h2>
+
+    <div class="fold-boxes row g-4 mb-5">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="fold-box shade-gray">
+          <div class="fold-box__row1">
+            <div class="fold-box__icon icon-red" aria-hidden="true">
+              <img src="assets/icons/graph-orange-48.svg" width="80" height="80" alt="">
+            </div>
+            <h3 class="fold-box__title">Toxic Traders Drain You B-Book</h3>
+          </div>
+          <p class="fold-box__desc">Exploiting your B-Book with strategies designed to extract maximum profit while you're blind to their patterns.</p>
+          <p class="fold-box__value text-red">$2.3M <span class="muted">annually</span></p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="fold-box shade-yellow">
+          <div class="fold-box__row1">
+            <div class="fold-box__icon icon-orange" aria-hidden="true">
+              <img src="assets/icons/graph-white-48.svg" width="80" height="80" alt="">
+            </div>
+            <h3 class="fold-box__title">Copy Trading Networks Attack Simultaneously</h3>
+          </div>
+          <p class="fold-box__desc">Coordinated groups of copy traders create massive one-sided exposure that can wipe out your monthly profits in minutes.</p>
+          <p class="fold-box__value text-yellow">$847K <span class="muted">per incident</span></p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="fold-box shade-gray">
+          <div class="fold-box__row1">
+            <div class="fold-box__icon icon-red" aria-hidden="true">
+              <img src="assets/icons/graph-orange-48.svg" width="80" height="80" alt="">
+            </div>
+            <h3 class="fold-box__title">Manual Monitoring Catches Fraud Too Late</h3>
+          </div>
+          <p class="fold-box__desc">By the time your risk team notices suspicious activity, the damage is already done. You're 3 days behind the fraudsters.</p>
+          <p class="fold-box__value text-red">72 Hrs <span class="muted">average</span></p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="fold-box shade-gray">
+          <div class="fold-box__row1">
+            <div class="fold-box__icon icon-red" aria-hidden="true">
+              <img src="assets/icons/graph-orange-48.svg" width="80" height="80" alt="">
+            </div>
+            <h3 class="fold-box__title">No Real-Time Symbol Normalization</h3>
+          </div>
+          <p class="fold-box__desc">Different symbol names across platforms create blind spots in your exposure. You think you're hedged, but you're not.</p>
+          <p class="fold-box__value text-red">$2.3M <span class="muted">in errors</span></p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="fold-box shade-gray">
+          <div class="fold-box__row1">
+            <div class="fold-box__icon icon-red" aria-hidden="true">
+              <img src="assets/icons/graph-orange-48.svg" width="80" height="80" alt="">
+            </div>
+            <h3 class="fold-box__title">Scalpers &amp; HFT Bots Exploit Latency</h3>
+          </div>
+          <p class="fold-box__desc">High-frequency traders and scalpers exploit microsecond advantages, turning your spreads into their profits.</p>
+          <p class="fold-box__value text-red">$450K <span class="muted">monthly</span></p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="fold-box shade-gray">
+          <div class="fold-box__row1">
+            <div class="fold-box__icon icon-red" aria-hidden="true">
+              <img src="assets/icons/graph-orange-48.svg" width="80" height="80" alt="">
+            </div>
+            <h3 class="fold-box__title">Zero Visibility Into Global Exposure</h3>
+          </div>
+          <p class="fold-box__desc">Multiple servers, platforms, and accounts create a fragmented view. You have no idea what your real exposure is until it's too late.</p>
+          <p class="fold-box__value text-red">Unknown <span class="muted">risk</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-actions">
+      <!-- <a href="#" class="btn btn-ghost">Schedule Demo</a> -->
+      <a href="contact.html" class="btn btn-gradient">Join the Waitlist</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SECTION — See What You're Missing
+══════════════════════════════════════════════════════ -->
+<section class="fold fold-hero-structure fold-hero-structure--center section-py" id="section-comparison">
+  <div class="container">
+    <div class="mb-4">
+      <span class="hero-pill">See What You're Missing</span>
+    </div>
+    <h2 class="hero-title">
+      From Reactive Risk Management<br />to Real-Time Control
+    </h2>
+
+    <!-- Figma node 1:341 — Without / With RiskShield tabs -->
+    <div class="compare-switch-wrap">
+      <div class="compare-switch" role="tablist" aria-label="RiskShield comparison">
+        <button type="button" class="compare-switch__tab" role="tab" id="compare-tab-without" aria-selected="false" aria-controls="compare-panel-without" data-compare="without">
+          Without RiskShield
+        </button>
+        <button type="button" class="compare-switch__tab compare-switch__tab--active" role="tab" id="compare-tab-with" aria-selected="true" aria-controls="compare-panel-with" data-compare="with">
+          With RiskShield
+        </button>
+      </div>
+    </div>
+
+    <div class="fold-content-placeholder mb-5">
+      <!-- Figma 1:346 — tab panels (With = design reference; Without = alternate copy) -->
+      <div class="compare-dashboard" id="compare-panels">
+
+        <!-- WITH RISKSHIELD — Figma node 1:346 -->
+        <div class="compare-panel compare-panel--with" id="compare-panel-with" role="tabpanel" aria-labelledby="compare-tab-with" aria-hidden="false">
+          <div class="compare-board">
+            <div class="row g-3 compare-kpi-row">
+              <div class="col-12 col-md-4">
+                <article class="compare-metric-card">
+                  <div class="compare-metric-card__title">All Servers</div>
+                  <div class="compare-metric-card__value">$2.4M</div>
+                  <div class="compare-metric-card__sub">Total Exposure</div>
+                </article>
+              </div>
+              <div class="col-12 col-md-4">
+                <article class="compare-metric-card">
+                  <div class="compare-metric-card__title">Net P&amp;L</div>
+                  <div class="compare-metric-card__value">+$847K</div>
+                  <div class="compare-metric-card__sub">Protected profit</div>
+                </article>
+              </div>
+              <div class="col-12 col-md-4">
+                <article class="compare-metric-card">
+                  <div class="compare-metric-card__title">Risk Score</div>
+                  <div class="compare-metric-card__value">23/100</div>
+                  <div class="compare-metric-card__sub">Low risk</div>
+                </article>
+              </div>
+            </div>
+
+            <div class="compare-threats-block">
+              <h3 class="compare-threats-block__title">Threats Detected &amp; Blocked:</h3>
+              <div class="row g-3 compare-threats-grid">
+                <div class="col-12 col-sm-6 col-lg-3">
+                  <article class="compare-threat-card">
+                    <div class="compare-threat-card__head">Toxic Trader:<br />User ID: HP-47382</div>
+                    <p class="compare-threat-card__desc">Auto-routed to A-Book</p>
+                    <div class="compare-threat-card__saved">
+                      <span class="compare-threat-card__saved-label">Saved</span>
+                      <span class="compare-threat-card__saved-val">$128,492</span>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                  <article class="compare-threat-card">
+                    <div class="compare-threat-card__head">Copy Trading<br />Network</div>
+                    <p class="compare-threat-card__desc">23 accounts flagged &amp; isolated</p>
+                    <div class="compare-threat-card__saved">
+                      <span class="compare-threat-card__saved-label">Saved</span>
+                      <span class="compare-threat-card__saved-val">$128,492</span>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                  <article class="compare-threat-card">
+                    <div class="compare-threat-card__head">HFT Scalper Bot</div>
+                    <p class="compare-threat-card__desc">Detected &amp; restricted</p>
+                    <div class="compare-threat-card__saved">
+                      <span class="compare-threat-card__saved-label">Saved</span>
+                      <span class="compare-threat-card__saved-val">$23,847</span>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                  <article class="compare-threat-card">
+                    <div class="compare-threat-card__head">Symbol Normalization</div>
+                    <p class="compare-threat-card__desc">XAUUSD/GOLD unified exposure</p>
+                    <div class="compare-threat-card__saved">
+                      <span class="compare-threat-card__saved-label">Saved</span>
+                      <span class="compare-threat-card__saved-val">$2.4M</span>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <div class="compare-total-banner">
+              <div class="compare-total-banner__left">Total Losses<br />Prevented Today</div>
+              <div class="compare-total-banner__right">
+                <div class="compare-total-banner__big">+$199,721</div>
+                <p class="compare-total-banner__sub">Detected in real-time. Protected automatically</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WITHOUT RISKSHIELD — alternate metrics (not in Figma) -->
+        <div class="compare-panel compare-panel--without" id="compare-panel-without" role="tabpanel" aria-labelledby="compare-tab-without" aria-hidden="true" hidden>
+          <div class="compare-board compare-board--without">
+            <div class="row g-3 compare-kpi-row">
+              <div class="col-12 col-md-4">
+                <article class="compare-metric-card">
+                  <div class="compare-metric-card__title">Server Status</div>
+                  <div class="compare-metric-card__value">Active</div>
+                  <div class="compare-metric-card__sub">Fragmented — no single view</div>
+                </article>
+              </div>
+              <div class="col-12 col-md-4">
+                <article class="compare-metric-card">
+                  <div class="compare-metric-card__title">Net P&amp;L</div>
+                  <div class="compare-metric-card__value compare-metric-card__value--bad">−$412K</div>
+                  <div class="compare-metric-card__sub">Bleeding on unhedged flow</div>
+                </article>
+              </div>
+              <div class="col-12 col-md-4">
+                <article class="compare-metric-card">
+                  <div class="compare-metric-card__title">Risk Score</div>
+                  <div class="compare-metric-card__value compare-metric-card__value--bad">78/100</div>
+                  <div class="compare-metric-card__sub">Elevated — manual reviews only</div>
+                </article>
+              </div>
+            </div>
+
+            <div class="compare-threats-block compare-threats-block--without">
+              <h3 class="compare-threats-block__title">Blind Spots &amp; Undetected Threats</h3>
+              <div class="row g-3 compare-threats-grid">
+                <div class="col-12 col-sm-6 col-lg-3">
+                  <article class="compare-threat-card compare-threat-card--bad">
+                    <div class="compare-threat-card__head">Toxic flow<br />User ID: XR-99104</div>
+                    <p class="compare-threat-card__desc">Still on B-Book — no routing rules</p>
+                    <div class="compare-threat-card__saved">
+                      <span class="compare-threat-card__saved-label compare-threat-card__saved-label--bad">At risk</span>
+                      <span class="compare-threat-card__saved-val compare-threat-card__saved-val--bad">~$94K</span>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                  <article class="compare-threat-card compare-threat-card--bad">
+                    <div class="compare-threat-card__head">Copy cluster</div>
+                    <p class="compare-threat-card__desc">17 linked accounts — not flagged</p>
+                    <div class="compare-threat-card__saved">
+                      <span class="compare-threat-card__saved-label compare-threat-card__saved-label--bad">At risk</span>
+                      <span class="compare-threat-card__saved-val compare-threat-card__saved-val--bad">~$61K</span>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                  <article class="compare-threat-card compare-threat-card--bad">
+                    <div class="compare-threat-card__head">Latency arbitrage</div>
+                    <p class="compare-threat-card__desc">HFT pattern unseen by ops</p>
+                    <div class="compare-threat-card__saved">
+                      <span class="compare-threat-card__saved-label compare-threat-card__saved-label--bad">At risk</span>
+                      <span class="compare-threat-card__saved-val compare-threat-card__saved-val--bad">~$18K</span>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                  <article class="compare-threat-card compare-threat-card--bad">
+                    <div class="compare-threat-card__head">Symbol mismatch</div>
+                    <p class="compare-threat-card__desc">XAU / GOLD double-counted</p>
+                    <div class="compare-threat-card__saved">
+                      <span class="compare-threat-card__saved-label compare-threat-card__saved-label--bad">At risk</span>
+                      <span class="compare-threat-card__saved-val compare-threat-card__saved-val--bad">~$2.1M</span>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <div class="compare-total-banner compare-total-banner--bad">
+              <div class="compare-total-banner__left">Estimated Daily<br />Leakage Exposure</div>
+              <div class="compare-total-banner__right">
+                <div class="compare-total-banner__big compare-total-banner__big--bad">−$847K+</div>
+                <p class="compare-total-banner__sub">No automated detection. Losses compound until someone notices.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="hero-actions mb-4">
+      <!-- <a href="#" class="btn btn-ghost">Schedule Demo</a> -->
+      <a href="contact.html" class="btn btn-gradient">Join the Waitlist</a>
+    </div>
+    <div class="section-footnote text-center">
+      <p class="footnote-title">The difference is crystal clear.</p>
+      <p class="footnote-sub">Every broker using RiskShield Pro sees this level of protection. Why aren't you?</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SECTION — Connect & Start Saving
+══════════════════════════════════════════════════════ -->
+<section class="fold fold-hero-structure fold-hero-structure--center section-py bg-dark-alt" id="section-connect">
+  <div class="container">
+    <div class="mb-4">
+      <span class="hero-pill">Connect &amp; Start Saving</span>
+    </div>
+    <h2 class="hero-title">
+      Go Live in Minutes — Not Months
+    </h2>
+    <p class="hero-desc mx-auto text-center">
+      Connect directly to MT4, MT5, or cTrader via Manager API. Import accounts instantly.
+      Monitor exposure in real time. No infrastructure changes required.
+    </p>
+    <div class="fold-content-placeholder mb-5">
+      <!-- Figma node 1:997 — Go Live steps (orbit + number + icon + title + body) -->
+      <div class="connect-steps">
+        <div class="connect-steps__track" aria-hidden="true"></div>
+        <div class="row g-4 g-lg-5 justify-content-center text-start">
+          <div class="col-12 col-md-4">
+            <article class="connect-step">
+              <div class="connect-step__visual">
+                <span class="connect-step__num">1</span>
+                <div class="connect-step__orbit">
+                  <div class="connect-step__icon" aria-hidden="true">
+                    <img src="assets/icons/fold-feature-icon.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <h3 class="connect-step__title">
+                <span class="connect-step__title-line1">Connect Your</span><br />
+                <span class="connect-step__title-line2">Trading Platform</span>
+              </h3>
+              <p class="connect-step__desc">
+                Securely connect MT4, MT5, or cTrader using Manager API credentials. RiskSystem automatically imports accounts, positions, and exposure.
+              </p>
+            </article>
+          </div>
+          <div class="col-12 col-md-4">
+            <article class="connect-step">
+              <div class="connect-step__visual">
+                <span class="connect-step__num">2</span>
+                <div class="connect-step__orbit">
+                  <div class="connect-step__icon" aria-hidden="true">
+                    <img src="assets/icons/fold-feature-icon.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <h3 class="connect-step__title">
+                <span class="connect-step__title-line1">Sync Symbols</span><br />
+                <span class="connect-step__title-line2">&amp; Coverage</span>
+              </h3>
+              <p class="connect-step__desc">
+                Automatically normalize symbols across platforms and connect your hedge or coverage accounts.
+              </p>
+            </article>
+          </div>
+          <div class="col-12 col-md-4">
+            <article class="connect-step">
+              <div class="connect-step__visual">
+                <span class="connect-step__num">3</span>
+                <div class="connect-step__orbit">
+                  <div class="connect-step__icon" aria-hidden="true">
+                    <img src="assets/icons/fold-feature-icon.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <h3 class="connect-step__title">
+                <span class="connect-step__title-line1">Monitor &amp; Optimize</span><br />
+                <span class="connect-step__title-line2">Risk</span>
+              </h3>
+              <p class="connect-step__desc">
+                Track exposure, detect toxic flow, and manage A-Book and B-Book routing in real time.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-actions mb-4">
+      <!-- <a href="#" class="btn btn-ghost">Schedule Demo</a> -->
+      <a href="contact.html" class="btn btn-gradient">Join the Waitlist</a>
+    </div>
+    <div class="section-footnote text-center">
+      <p class="footnote-title mb-2">Be fully operational in under 15 minutes.</p>
+      <p class="footnote-sub">Join 100+ brokers • Access 1M+ lots of data • Free tier available</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     GLOW SEPARATOR (glow-down)
+══════════════════════════════════════════════════════ -->
+<section class="section-glowed section-glowed--down">
+  <div class="container">
+    <div class="section-glowed-bg section-glowed-bg--down" aria-hidden="true"></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SECTION — The RiskShield Pro Advantage
+══════════════════════════════════════════════════════ -->
+<section class="fold fold-hero-structure fold-hero-structure--center section-py" id="section-advantage">
+  <div class="container">
+    <div class="mb-4">
+      <span class="hero-pill">The RiskShield Pro Advantage</span>
+    </div>
+    <h2 class="hero-title">
+      How RiskShield Protects Your<br />Trading Infrastructure
+    </h2>
+
+    <p class="pain-section-lead mx-auto text-center">
+      Built by hedge fund managers, traders, and risk analysts with <strong>$10B+</strong> assets managed
+    </p>
+
+    <!-- Figma 1:530 — 3×3 feature grid (hover bg image) -->
+    <div class="pain-feature-grid">
+      <div class="row g-0">
+        <div class="col-12 col-md-4">
+          <div class="pain-feature-card">
+            <div class="pain-feature-card__bg pain-feature-card__bg--p1" aria-hidden="true"></div>
+            <div class="pain-feature-card__inner">
+              <div class="pain-feature-card__icon" aria-hidden="true">
+                <img src="assets/icons/pain-grid-user.svg" width="24" height="24" alt="">
+              </div>
+              <div class="pain-feature-card__text">
+                <span class="pain-feature-card__line">Real-time fraud detection</span>
+                <span class="pain-feature-card__line">(&lt; 1 second)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="pain-feature-card">
+            <div class="pain-feature-card__bg" aria-hidden="true"></div>
+            <div class="pain-feature-card__inner">
+              <div class="pain-feature-card__icon" aria-hidden="true">
+                <img src="assets/icons/pain-grid-user.svg" width="24" height="24" alt="">
+              </div>
+              <div class="pain-feature-card__text">
+                <span class="pain-feature-card__line">AI-powered pattern recognition</span>
+                <span class="pain-feature-card__line">(98% accuracy)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="pain-feature-card">
+            <div class="pain-feature-card__bg pain-feature-card__bg--p3" aria-hidden="true"></div>
+            <div class="pain-feature-card__inner">
+              <div class="pain-feature-card__icon" aria-hidden="true">
+                <img src="assets/icons/pain-grid-user.svg" width="24" height="24" alt="">
+              </div>
+              <div class="pain-feature-card__text">
+                <span class="pain-feature-card__line">Multi-platform symbol normalization</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="pain-feature-card">
+            <div class="pain-feature-card__bg pain-feature-card__bg--p4" aria-hidden="true"></div>
+            <div class="pain-feature-card__inner">
+              <div class="pain-feature-card__icon" aria-hidden="true">
+                <img src="assets/icons/pain-grid-user.svg" width="24" height="24" alt="">
+              </div>
+              <div class="pain-feature-card__text">
+                <span class="pain-feature-card__line">Automatic A/B-Book routing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="pain-feature-card">
+            <div class="pain-feature-card__bg pain-feature-card__bg--p5" aria-hidden="true"></div>
+            <div class="pain-feature-card__inner">
+              <div class="pain-feature-card__icon" aria-hidden="true">
+                <img src="assets/icons/pain-grid-user.svg" width="24" height="24" alt="">
+              </div>
+              <div class="pain-feature-card__text">
+                <span class="pain-feature-card__line">Global Trading Intelligence network</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="pain-feature-card">
+            <div class="pain-feature-card__bg pain-feature-card__bg--p6" aria-hidden="true"></div>
+            <div class="pain-feature-card__inner">
+              <div class="pain-feature-card__icon" aria-hidden="true">
+                <img src="assets/icons/pain-grid-user.svg" width="24" height="24" alt="">
+              </div>
+              <div class="pain-feature-card__text">
+                <span class="pain-feature-card__line">Setup in 5 minutes, not 12 months</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="pain-feature-card">
+            <div class="pain-feature-card__bg pain-feature-card__bg--p7" aria-hidden="true"></div>
+            <div class="pain-feature-card__inner">
+              <div class="pain-feature-card__icon" aria-hidden="true">
+                <img src="assets/icons/pain-grid-user.svg" width="24" height="24" alt="">
+              </div>
+              <div class="pain-feature-card__text">
+                <span class="pain-feature-card__line">24/7 fully automated monitoring</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="pain-feature-card">
+            <div class="pain-feature-card__bg pain-feature-card__bg--p8" aria-hidden="true"></div>
+            <div class="pain-feature-card__inner">
+              <div class="pain-feature-card__icon" aria-hidden="true">
+                <img src="assets/icons/pain-grid-user.svg" width="24" height="24" alt="">
+              </div>
+              <div class="pain-feature-card__text">
+                <span class="pain-feature-card__line">Industry-first real-time risk system</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="pain-feature-card">
+            <div class="pain-feature-card__bg pain-feature-card__bg--p9" aria-hidden="true"></div>
+            <div class="pain-feature-card__inner">
+              <div class="pain-feature-card__icon" aria-hidden="true">
+                <img src="assets/icons/pain-grid-user.svg" width="24" height="24" alt="">
+              </div>
+              <div class="pain-feature-card__text">
+                <span class="pain-feature-card__line">Proven ROI: 847% average return</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fold-content-placeholder mb-5">
+      <!-- Stats row — Figma 1:573: 3 cols, 80px glow value, 16px label, 5px gap, start-aligned -->
+      <div class="row g-4 g-lg-5 advantage-stats-row advantage-stats-row--3col">
+        <div class="col-12 col-md-4">
+          <div class="fold-stat text-start">
+            <div class="fold-stat-value">98%</div>
+            <div class="fold-stat-desc">Fraud detection accuracy</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="fold-stat text-start">
+            <div class="fold-stat-value">5 min</div>
+            <div class="fold-stat-desc">Setup Time</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="fold-stat text-start">
+            <div class="fold-stat-value">847%</div>
+            <div class="fold-stat-desc">Average ROI</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-actions mb-4">
+      <!-- <a href="#" class="btn btn-ghost">Schedule Demo</a> -->
+      <a href="contact.html" class="btn btn-gradient">Join the Waitlist</a>
+    </div>
+    <div class="section-footnote text-center">
+      <p class="footnote-title">The difference is crystal clear.</p>
+      <p class="footnote-sub">Every broker using RiskShield Pro sees this level of protection. Why aren't you?</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SECTION — 17 Essential Features (intro)
+══════════════════════════════════════════════════════ -->
+<section class="fold fold-hero-structure fold-hero-structure--center section-py section-features-intro" id="section-essential-features">
+  <div class="container">
+    <div class="mb-4 text-center">
+      <span class="hero-pill hero-pill--on-dark">17 Essential Features</span>
+    </div>
+    <h2 class="hero-title text-center mx-auto">
+      Everything You Need to Control<br />
+      Risk — in One System
+    </h2>
+    <p class="features-intro-lead mx-auto text-center">
+      Every tool you need to monitor, analyze, and protect your brokerage — organized by function
+    </p>
+
+    <!-- Figma 1:487 — Client Intelligence row -->
+    <div class="features-intel-block mt-5 pt-3">
+      <div class="features-intel-decor" aria-hidden="true">
+        <img src="assets/ui/features-intel-shape-a.svg" width="136" height="136" alt="" class="features-intel-decor__img" />
+        <img src="assets/ui/features-intel-shape-b.svg" width="136" height="136" alt="" class="features-intel-decor__img" />
+        <img src="assets/ui/features-intel-shape-hero.svg" width="200" height="200" alt="" class="features-intel-decor__img features-intel-decor__img--hero" />
+        <img src="assets/ui/features-intel-shape-b.svg" width="136" height="136" alt="" class="features-intel-decor__img" />
+        <img src="assets/ui/features-intel-shape-c.svg" width="136" height="136" alt="" class="features-intel-decor__img" />
+      </div>
+
+      <div class="features-intel-heading">
+        <div class="features-intel-heading__line features-intel-heading__line--left">
+          <img src="assets/ui/features-intel-line-accent.svg" width="433" height="1" alt="" />
+        </div>
+        <h3 class="features-intel-title">Client Intelligence</h3>
+        <div class="features-intel-heading__line features-intel-heading__line--right">
+          <img src="assets/ui/features-intel-line-muted.svg" width="433" height="1" alt="" />
+        </div>
+      </div>
+
+      <div class="row g-4 g-lg-5 mt-4 features-intel-grid">
+        <div class="col-12 col-md-6 col-lg-3">
+          <article class="features-intel-card">
+            <div class="features-intel-card__icon" aria-hidden="true">
+              <img src="assets/icons/pain-grid-user.svg" width="24" height="24" alt="">
+            </div>
+            <div class="features-intel-card__body">
+              <div class="features-intel-card__title">
+                <span class="d-block">Client Risk</span>
+                <span class="d-block">Profiling</span>
+              </div>
+              <p class="features-intel-card__desc">Individual account monitoring with equity and margin tracking</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <article class="features-intel-card">
+            <div class="features-intel-card__icon" aria-hidden="true">
+              <img src="assets/icons/pain-grid-user.svg" width="24" height="24" alt="">
+            </div>
+            <div class="features-intel-card__body">
+              <div class="features-intel-card__title">
+                <span class="d-block">Pattern Detection</span>
+                <span class="d-block">Suite</span>
+              </div>
+              <p class="features-intel-card__desc">HFT, scalping, martingale, grid trading, news trading detection</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <article class="features-intel-card">
+            <div class="features-intel-card__icon" aria-hidden="true">
+              <img src="assets/icons/pain-grid-user.svg" width="24" height="24" alt="">
+            </div>
+            <div class="features-intel-card__body">
+              <div class="features-intel-card__title">
+                <span class="d-block">IP or Any</span>
+                <span class="d-block">Device Risk</span>
+              </div>
+              <p class="features-intel-card__desc">Multi-account detection and fraud prevention</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <article class="features-intel-card">
+            <div class="features-intel-card__icon" aria-hidden="true">
+              <img src="assets/icons/pain-grid-user.svg" width="24" height="24" alt="">
+            </div>
+            <div class="features-intel-card__body">
+              <div class="features-intel-card__title">
+                <span class="d-block">Toxic Client</span>
+                <span class="d-block">Identification</span>
+              </div>
+              <p class="features-intel-card__desc">Protect your book from harmful trading patterns</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <!-- Figma 36:1793 — two equal-height panels (content for box 2 TBD) -->
+    <div class="row g-4 mt-5 align-items-stretch features-panels-row">
+      <div class="col-12 col-lg-6 d-flex">
+        <article class="features-panel-card features-panel-card--roi w-100 h-100">
+          <div class="features-panel-card__head">
+            <h3 class="features-panel-card__title rs-gradient-heading">
+              <span class="d-block">Average Broker</span>
+              <span class="d-block">Saves Big</span>
+            </h3>
+            <span class="features-panel-card__badge">ROI Calculator</span>
+          </div>
+          <p class="features-panel-card__desc">Real savings from brokers using risksystem.io</p>
+
+          <!-- 2×2 metric grid (same inner tile style as Figma 1:595) -->
+          <div class="row g-0 features-roi-grid">
+            <div class="col-6 d-flex">
+              <div class="features-roi-tile w-100">
+                <div class="features-roi-tile__icon" aria-hidden="true">
+                  <img src="assets/icons/pain-grid-user.svg" width="24" height="24" alt="">
+                </div>
+                <div class="features-roi-tile__body">
+                  <p class="features-roi-tile__label">Annual Savings</p>
+                  <p class="features-roi-tile__value">$50K–$200K</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 d-flex">
+              <div class="features-roi-tile w-100">
+                <div class="features-roi-tile__icon" aria-hidden="true">
+                  <img src="assets/icons/pain-grid-user.svg" width="24" height="24" alt="">
+                </div>
+                <div class="features-roi-tile__body">
+                  <p class="features-roi-tile__label">Time Saved Weekly</p>
+                  <p class="features-roi-tile__value">15–20 hours</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 d-flex">
+              <div class="features-roi-tile w-100">
+                <div class="features-roi-tile__icon" aria-hidden="true">
+                  <img src="assets/icons/pain-grid-user.svg" width="24" height="24" alt="">
+                </div>
+                <div class="features-roi-tile__body">
+                  <p class="features-roi-tile__label">Hedging Cost Reduction</p>
+                  <p class="features-roi-tile__value">30%</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 d-flex">
+              <div class="features-roi-tile w-100">
+                <div class="features-roi-tile__icon" aria-hidden="true">
+                  <img src="assets/icons/pain-grid-user.svg" width="24" height="24" alt="">
+                </div>
+                <div class="features-roi-tile__body">
+                  <p class="features-roi-tile__label">Profitability Improvement</p>
+                  <p class="features-roi-tile__value">25%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Figma 36:1830 — payback (footer of card) -->
+          <div class="features-payback features-panel-card__payback">
+            <p class="features-payback__label">Typical Payback Period</p>
+            <p class="features-payback__value">2-3 months</p>
+          </div>
+        </article>
+      </div>
+      <div class="col-12 col-lg-6 d-flex">
+        <article class="features-panel-card features-panel-card--brokers w-100 h-100">
+          <div class="features-panel-card__head">
+            <h3 class="features-panel-card__title rs-gradient-heading">
+              <span class="d-block">Built For</span>
+              <span class="d-block">Modern Brokers</span>
+            </h3>
+            <span class="features-panel-card__badge">Ideal For</span>
+          </div>
+          <p class="features-panel-card__desc">Perfect for brokers who demand excellence</p>
+
+          <!-- Figma 1:620 default row / 1:626 hover + image + gradient -->
+          <ul class="features-broker-list list-unstyled" role="list">
+            <li class="features-broker-list__item">
+              <span class="features-broker-list__hover" aria-hidden="true"></span>
+              <span class="features-broker-list__label">Forex &amp; CFD Brokers (all sizes)</span>
+            </li>
+            <li class="features-broker-list__item">
+              <span class="features-broker-list__hover" aria-hidden="true"></span>
+              <span class="features-broker-list__label">Multi-platform operations</span>
+            </li>
+            <li class="features-broker-list__item">
+              <span class="features-broker-list__hover" aria-hidden="true"></span>
+              <span class="features-broker-list__label">A-Book/B-Book hybrid models</span>
+            </li>
+            <li class="features-broker-list__item">
+              <span class="features-broker-list__hover" aria-hidden="true"></span>
+              <span class="features-broker-list__label">Brokers with 500+ accounts</span>
+            </li>
+            <li class="features-broker-list__item">
+              <span class="features-broker-list__hover" aria-hidden="true"></span>
+              <span class="features-broker-list__label">Risk management teams</span>
+            </li>
+            <li class="features-broker-list__item">
+              <span class="features-broker-list__hover" aria-hidden="true"></span>
+              <span class="features-broker-list__label">Trading desk operators</span>
+            </li>
+            <li class="features-broker-list__item">
+              <span class="features-broker-list__hover" aria-hidden="true"></span>
+              <span class="features-broker-list__label">Prime liquidity &amp; execution</span>
+            </li>
+            <li class="features-broker-list__item">
+              <span class="features-broker-list__hover" aria-hidden="true"></span>
+              <span class="features-broker-list__label">Compliance &amp; reporting teams</span>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     GLOW SEPARATOR (angular)
+══════════════════════════════════════════════════════ -->
+<section class="section-glowed section-glowed--angular">
+  <div class="container">
+    <div class="section-glowed-bg section-glowed-bg--angular" aria-hidden="true"></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SECTION — Global Trading Intelligence
+══════════════════════════════════════════════════════ -->
+<section class="fold fold-hero-structure fold-hero-structure--center section-py bg-dark-alt" id="section-intel">
+  <div class="container">
+    <div class="mb-4">
+      <span class="hero-pill">Latest Feature</span>
+    </div>
+    <h2 class="hero-title">
+      Global Trading Intelligence
+    </h2>
+    <p class="hero-desc mx-auto text-center">
+      Access anonymized positioning data from thousands of brokers worldwide.
+      Understand retail sentiment, detect market shifts, and validate exposure with confidence.
+    </p>
+
+    <!-- Stacked cards: 2 border-only layers + front card (copy + chart art) -->
+    <div class="intel-stacked-visual mb-4" aria-labelledby="intel-stacked-heading">
+      <div class="intel-stacked-visual__wrap">
+        <div class="intel-stacked-visual__ghost intel-stacked-visual__ghost--back" aria-hidden="true"></div>
+        <div class="intel-stacked-visual__ghost intel-stacked-visual__ghost--mid" aria-hidden="true"></div>
+        <div class="intel-stacked-visual__card">
+          <div class="intel-stacked-visual__body">
+            <div class="intel-stacked-visual__copy">
+              <h3 id="intel-stacked-heading" class="intel-stacked-visual__title">
+                Market Sentiment<br />Intelligence
+              </h3>
+              <p class="intel-stacked-visual__desc">
+                See real-time retail positioning across all major symbols. Know when retail is 78% LONG on
+                XAUUSD—a powerful signal.
+              </p>
+              <div class="intel-stacked-visual__features">
+                <div class="intel-stacked-visual__feature">
+                  <img
+                    class="intel-stacked-visual__feature-icon"
+                    src="assets/icons/intel-feature-user.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                    aria-hidden="true"
+                  />
+                  <span class="intel-stacked-visual__feature-label">
+                    <span class="intel-stacked-visual__feature-line">Volume spike</span>
+                    <span class="intel-stacked-visual__feature-line">detection</span>
+                  </span>
+                </div>
+                <div class="intel-stacked-visual__feature">
+                  <img
+                    class="intel-stacked-visual__feature-icon"
+                    src="assets/icons/intel-feature-user.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                    aria-hidden="true"
+                  />
+                  <span class="intel-stacked-visual__feature-label">
+                    <span class="intel-stacked-visual__feature-line">Exposure validation</span>
+                    <span class="intel-stacked-visual__feature-line">vs. global data</span>
+                  </span>
+                </div>
+                <div class="intel-stacked-visual__feature">
+                  <img
+                    class="intel-stacked-visual__feature-icon"
+                    src="assets/icons/intel-feature-user.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                    aria-hidden="true"
+                  />
+                  <span class="intel-stacked-visual__feature-label">
+                    <span class="intel-stacked-visual__feature-line">AI pattern</span>
+                    <span class="intel-stacked-visual__feature-line">recognition</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="intel-stacked-visual__art" aria-hidden="true">
+              <div class="intel-stacked-visual__chart-burst">
+                <div class="intel-stacked-visual__chart-icon">
+                  <svg viewBox="0 0 64 64" width="140" height="140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect x="10" y="36" width="12" height="18" rx="2" fill="#0d0d0d" />
+                    <rect x="26" y="22" width="12" height="32" rx="2" fill="#0d0d0d" />
+                    <rect x="42" y="30" width="12" height="24" rx="2" fill="#0d0d0d" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero-desc–style band: 4 columns of stats -->
+    <div class="intel-stats-band mx-auto text-center">
+      <div class="row g-4 justify-content-center">
+        <div class="col-6 col-lg-3">
+          <div class="intel-stats-band__cell">
+            <div class="intel-stats-band__num">1M+</div>
+            <div class="intel-stats-band__lbl">Lots Analyzed Daily</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="intel-stats-band__cell">
+            <div class="intel-stats-band__num">68%</div>
+            <div class="intel-stats-band__lbl">Prediction Accuracy</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="intel-stats-band__cell">
+            <div class="intel-stats-band__num">2K+</div>
+            <div class="intel-stats-band__lbl">Participating Brokers</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="intel-stats-band__cell">
+            <div class="intel-stats-band__num">100%</div>
+            <div class="intel-stats-band__lbl">Anonymized &amp; Secure</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- How it works — dashed connector + 3 steps -->
+    <div class="how-it-works mb-5 text-start">
+      <h3 class="how-it-works__section-heading rs-gradient-heading">How it works</h3>
+      <div class="how-it-works__diagram connect-steps">
+        <div class="connect-steps__track" aria-hidden="true"></div>
+        <div class="row g-4 g-lg-5 justify-content-center text-start">
+          <div class="col-12 col-md-4">
+            <article class="how-it-works__step">
+              <div class="connect-step__visual" aria-hidden="true">
+                <div class="connect-step__orbit">
+                  <div class="connect-step__icon">
+                    <img
+                      src="assets/icons/graph-white-shadow-gray.svg"
+                      alt=""
+                      width="48"
+                      height="46"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+              </div>
+              <h4 class="how-it-works__headline">
+                <span class="how-it-works__headline-line">Share</span>
+                <span class="how-it-works__headline-line how-it-works__headline-line--muted">Anonymized Data</span>
+              </h4>
+              <p class="how-it-works__desc">
+                Your net exposure data is anonymized and encrypted before transmission
+              </p>
+            </article>
+          </div>
+          <div class="col-12 col-md-4">
+            <article class="how-it-works__step">
+              <div class="connect-step__visual" aria-hidden="true">
+                <div class="connect-step__orbit">
+                  <div class="connect-step__icon">
+                    <img
+                      src="assets/icons/graph-white-shadow-gray.svg"
+                      alt=""
+                      width="48"
+                      height="46"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+              </div>
+              <h4 class="how-it-works__headline">
+                <span class="how-it-works__headline-line">Network</span>
+                <span class="how-it-works__headline-line how-it-works__headline-line--muted">Aggregates</span>
+              </h4>
+              <p class="how-it-works__desc">
+                1,800+ brokers' data combined into massive global intelligence database
+              </p>
+            </article>
+          </div>
+          <div class="col-12 col-md-4">
+            <article class="how-it-works__step">
+              <div class="connect-step__visual" aria-hidden="true">
+                <div class="connect-step__orbit">
+                  <div class="connect-step__icon">
+                    <img
+                      src="assets/icons/graph-white-shadow-gray.svg"
+                      alt=""
+                      width="48"
+                      height="46"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+              </div>
+              <h4 class="how-it-works__headline">
+                <span class="how-it-works__headline-line">Access Real-time</span>
+                <span class="how-it-works__headline-line how-it-works__headline-line--muted">Insights</span>
+              </h4>
+              <p class="how-it-works__desc">Get real-time sentiment, volume trends, and predictive signals</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-actions mb-4">
+      <!-- <a href="#" class="btn btn-ghost">Schedule Demo</a> -->
+      <a href="contact.html" class="btn btn-gradient">Join the Waitlist</a>
+    </div>
+    <div class="section-footnote text-center">
+      <p class="footnote-title">Explore Global Trading Intelligence</p>
+      <p class="footnote-sub">Join 1,800+ brokers • Access 1M+ lots of data • Free tier available</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     GLOW SEPARATOR
+══════════════════════════════════════════════════════ -->
+<section class="section-glowed">
+  <div class="container">
+    <div class="section-glowed-bg" aria-hidden="true"></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     FINAL CTA
+══════════════════════════════════════════════════════ -->
+<section id="cta">
+  <div class="container text-center">
+    <div class="cta-logo mb-0" data-aos="fade-up">
+      <img src="assets/logo/logo-block.svg" alt="RiskSystem" width="100" height="100" />
+    </div>
+    <h2 class="hero-title cta-title" data-aos="fade-up">
+      Stop Guessing.<br /><span>Start Controlling Risk.</span>
+    </h2>
+    <p class="hero-desc mx-auto" data-aos="fade-up" data-aos-delay="80">
+      Join 2,800+ brokers who protect their book, prevent fraud, and grow profitability with real-time intelligence.
+    </p>
+    <div class="hero-actions" data-aos="fade-up" data-aos-delay="160">
+      <!-- <a href="#" class="btn btn-ghost">Schedule Demo</a> -->
+      <a href="contact.html" class="btn btn-gradient">Join the Waitlist</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+
+    <div class="row g-5 pb-5" style="border-bottom:1px solid var(--border-color);">
+
+      <!-- Brand -->
+      <div class="col-12 col-lg-5">
+        <a href="#" class="navbar-brand">
+          <img src="assets/logo.svg" alt="risksystem.io" width="256" />
+        </a>
+        <p class="footer-tagline">
+          Real-Time Risk Management For<br />Modern Brokerages
+        </p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Instagram">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="X (Twitter)">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="YouTube">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Product -->
+      <div class="col-6 col-sm-4 col-lg">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Request Demo</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Resources -->
+      <div class="col-6 col-sm-4 col-lg">
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Calculators</a></li>
+            <li><a href="#">Risk Assessment</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Company -->
+      <div class="col-6 col-sm-4 col-lg">
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap gap-3 pt-4">
+      <span>© 2026 Risksystems.io — All Rights Reserved</span>
+      <div class="d-flex gap-4">
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+</div><!-- /#loco-main [data-scroll-container] -->
+
+<button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top">
+  <span class="back-to-top__icon" aria-hidden="true">↑</span>
+</button>
+
+<!-- Bootstrap 5.3 JS Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+<script>
+(function () {
+  var prefersReduced =
+    typeof window.matchMedia === 'function' &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function easeOutCubic(t) {
+    return 1 - Math.pow(1 - t, 3);
+  }
+
+  function locoUpdate() {
+    if (window.__locoScroll && typeof window.__locoScroll.update === 'function') {
+      window.__locoScroll.update();
+    }
+  }
+
+  function runStatCounter(el) {
+    if (!el || el.getAttribute('data-counter-done') === '1') return;
+    el.setAttribute('data-counter-done', '1');
+
+    var target = parseInt(el.getAttribute('data-counter-target'), 10);
+    var suffix = el.getAttribute('data-counter-suffix') || '';
+    var full = el.getAttribute('data-counter-full') || '';
+
+    if (prefersReduced || isNaN(target)) {
+      el.textContent = full;
+      locoUpdate();
+      return;
+    }
+
+    var duration = 1400;
+    var startTime = null;
+
+    function frame(now) {
+      if (startTime === null) startTime = now;
+      var t = Math.min(1, (now - startTime) / duration);
+      var n = Math.round(easeOutCubic(t) * target);
+      el.textContent = String(n) + suffix;
+      if (t < 1) {
+        requestAnimationFrame(frame);
+      } else {
+        el.textContent = full;
+        locoUpdate();
+      }
+    }
+
+    el.textContent = '0' + suffix;
+    requestAnimationFrame(frame);
+  }
+
+  function prepareStatCounterElements() {
+    var list = [];
+    document.querySelectorAll('.fold-stat-value, .intel-stats-band__num').forEach(function (el) {
+      var raw = (el.textContent || '').trim();
+      var m = raw.match(/^(\d+)(.*)$/);
+      if (!m) return;
+      el.setAttribute('data-counter-target', m[1]);
+      el.setAttribute('data-counter-suffix', m[2]);
+      el.setAttribute('data-counter-full', raw);
+      if (!prefersReduced) {
+        el.textContent = '0' + m[2];
+      }
+      list.push(el);
+    });
+    return list;
+  }
+
+  var statCounterEls = prepareStatCounterElements();
+
+  var container = document.querySelector('#loco-main[data-scroll-container]');
+  if (!container || typeof LocomotiveScroll === 'undefined') {
+    console.warn('Locomotive Scroll failed to load.');
+    if (statCounterEls.length && !prefersReduced && typeof IntersectionObserver !== 'undefined') {
+      var ioFallback = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            ioFallback.unobserve(entry.target);
+            runStatCounter(entry.target);
+          });
+        },
+        { threshold: 0.2, rootMargin: '0px 0px -8% 0px' }
+      );
+      statCounterEls.forEach(function (el) {
+        ioFallback.observe(el);
+      });
+    }
+    return;
+  }
+
+  var scroll = new LocomotiveScroll({
+    el: container,
+    smooth: !prefersReduced,
+    smartphone: { smooth: !prefersReduced },
+    tablet: { smooth: !prefersReduced },
+  });
+
+  window.__locoScroll = scroll;
+
+  var nav = document.querySelector('.navbar');
+  var threshold = 24;
+
+  function updateNavScrollState(scrollY) {
+    if (!nav) return;
+    if (scrollY > threshold) {
+      nav.classList.add('navbar-scrolled');
+    } else {
+      nav.classList.remove('navbar-scrolled');
+    }
+  }
+
+  var backToTop = document.getElementById('back-to-top');
+
+  scroll.on('scroll', function (args) {
+    if (args && args.scroll) {
+      updateNavScrollState(args.scroll.y);
+      if (backToTop) {
+        backToTop.classList.toggle('back-to-top--visible', args.scroll.y > 360);
+      }
+    }
+  });
+
+  updateNavScrollState(0);
+
+  function refreshLoco() {
+    scroll.update();
+  }
+
+  window.addEventListener(
+    'load',
+    function () {
+      refreshLoco();
+      setTimeout(refreshLoco, 300);
+    },
+    { once: true }
+  );
+  requestAnimationFrame(refreshLoco);
+
+  var resizeTimer;
+  window.addEventListener('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(refreshLoco, 200);
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      if (anchor.hasAttribute('data-bs-toggle') || anchor.hasAttribute('data-bs-target')) return;
+      var href = anchor.getAttribute('href');
+      if (!href || href === '#' || href.length < 2) return;
+      var target = document.querySelector(href);
+      if (!target) return;
+      e.preventDefault();
+      scroll.scrollTo(target, {
+        offset: -92,
+        duration: 900,
+        easing: [0.25, 0.0, 0.35, 1.0],
+      });
+      var navMenu = document.getElementById('navMenu');
+      if (navMenu && window.bootstrap && navMenu.classList.contains('show')) {
+        var Collapse = bootstrap.Collapse.getInstance(navMenu);
+        if (Collapse) Collapse.hide();
+      }
+    });
+  });
+
+  if (backToTop) {
+    backToTop.addEventListener('click', function () {
+      var hero = document.getElementById('hero');
+      if (!hero) return;
+      scroll.scrollTo(hero, {
+        offset: -92,
+        duration: prefersReduced ? 0 : 700,
+        easing: [0.25, 0.0, 0.35, 1.0],
+      });
+    });
+  }
+
+  /* Stats — Locomotive data-scroll-call when .fold-stat-value / .intel-stats-band__num enter view */
+  if (statCounterEls.length && !prefersReduced) {
+    statCounterEls.forEach(function (el, i) {
+      el.setAttribute('data-scroll', '');
+      el.setAttribute('data-scroll-call', 'statCounter-' + i);
+    });
+    scroll.update();
+    scroll.on('call', function (value, way, obj) {
+      var match = String(value).match(/^statCounter-(\d+)$/);
+      if (!match) return;
+      if (way === 'exit') return;
+      var idx = parseInt(match[1], 10);
+      var el = statCounterEls[idx];
+      if (el) runStatCounter(el);
+    });
+  }
+})();
+
+/* Compare section — tabs toggle Figma 1:346 panels */
+(function () {
+  var tabs = document.querySelectorAll('.compare-switch__tab');
+  var panelWith = document.getElementById('compare-panel-with');
+  var panelWithout = document.getElementById('compare-panel-without');
+  if (!tabs.length || !panelWith || !panelWithout) return;
+  function showMode(mode) {
+    var isWith = mode === 'with';
+    panelWith.hidden = !isWith;
+    panelWith.setAttribute('aria-hidden', isWith ? 'false' : 'true');
+    panelWithout.hidden = isWith;
+    panelWithout.setAttribute('aria-hidden', isWith ? 'true' : 'false');
+  }
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var mode = tab.getAttribute('data-compare');
+      tabs.forEach(function (t) {
+        var on = t === tab;
+        t.classList.toggle('compare-switch__tab--active', on);
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+      showMode(mode);
+    });
+  });
+  showMode('with');
+})();
+</script>
+
+<!-- AOS – Animate On Scroll (uncomment both lines when ready to activate) -->
+<!-- <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script> -->
+<!-- <script>AOS.init({ duration: 600, once: true, easing: 'ease-out-cubic' });</script> -->
+
+</body>
+</html>

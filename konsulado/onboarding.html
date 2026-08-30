@@ -1,0 +1,1960 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Konsulado · Araw</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/fonts.css">
+</head>
+<body>
+<style>
+:root{--sunimg:url(assets/img/i02.jpg);--guilloche:url(assets/img/i03.jpg);--rays:url(assets/img/i01.svg)}
+</style>
+<script>
+(function(){
+  if(!document.querySelector('meta[name="viewport"]')){
+    var m=document.createElement("meta");
+    m.name="viewport";
+    m.content="width=device-width, initial-scale=1, viewport-fit=cover";
+    (document.head||document.documentElement).appendChild(m);
+  }
+})();
+</script>
+<style>
+:root{
+  --ground:#FAF8F3; --surface:#FFFFFF; --sunken:#F4EFE6; --deep:#0E2450; --deep-2:#16305F;
+  --line:#E8E1D4; --line-2:#D2C6B1;
+  --ink:#161927; --ink-2:#4E576F; --ink-3:#7C8595;
+  --pri:#123B7A; --pri-h:#0C2C60; --pri-soft:#E6EDF7; --on-pri:#FFFFFF;
+  --acc:#7A5600; --acc-fill:#E29B0B; --acc-soft:#FCF1CE;
+  --ok:#186346; --ok-soft:#DDEFE6; --bad:#B80E20; --bad-soft:#FAE2E4;
+  --r-xl:26px; --r-lg:18px; --r-md:12px; --r-sm:9px; --r-pill:999px;
+  --sh-1:0 1px 2px rgba(22,25,39,.05);
+  --sh-2:0 2px 4px rgba(22,25,39,.04), 0 14px 30px -14px rgba(22,25,39,.22);
+  --sh-3:0 2px 6px rgba(22,25,39,.05), 0 30px 70px -28px rgba(14,36,80,.34);
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;min-height:100%}
+body{
+  background:var(--ground);color:var(--ink);
+  font-family:"Inter",system-ui,sans-serif;font-size:16px;line-height:1.55;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+input{font:inherit}
+:focus-visible{outline:3px solid var(--pri);outline-offset:3px;border-radius:8px}
+h1,h2,h3{font-family:"Funnel Display","Inter",sans-serif;margin:0;letter-spacing:-.03em;font-weight:700}
+.mn{font-family:"IBM Plex Mono",ui-monospace,monospace}
+
+/* ============ ambient canvas ============ */
+.bg{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.bg .glow{
+  position:absolute;width:1100px;height:1100px;border-radius:50%;
+  background:radial-gradient(circle,rgba(226,155,11,.11) 0%,rgba(226,155,11,.04) 38%,transparent 64%);
+  top:-460px;right:-320px;animation:drift 26s var(--ease) infinite alternate;
+}
+.bg .glow2{
+  position:absolute;width:900px;height:900px;border-radius:50%;
+  background:radial-gradient(circle,rgba(18,59,122,.10) 0%,transparent 62%);
+  bottom:-500px;left:-280px;animation:drift2 32s var(--ease) infinite alternate;
+}
+@keyframes drift{to{transform:translate3d(-70px,60px,0) scale(1.08)}}
+@keyframes drift2{to{transform:translate3d(60px,-50px,0) scale(1.06)}}
+.bg .sun{
+  position:absolute;right:-230px;top:-200px;width:760px;height:760px;opacity:.11;
+  background:var(--sunimg);background-size:contain;background-repeat:no-repeat;
+}
+.bg .rays{
+  position:absolute;left:0;right:0;bottom:0;height:46vh;opacity:.5;
+  background:var(--rays);background-size:cover;background-position:center bottom;
+}
+.bg .grain{
+  position:absolute;inset:0;opacity:.5;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.055'/%3E%3C/svg%3E");
+}
+@media (prefers-reduced-motion: reduce){.bg .glow,.bg .glow2{animation:none}}
+
+/* ============ frame ============ */
+.wrap{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column}
+.top{
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+  padding:20px 34px;max-width:1240px;width:100%;margin:0 auto;
+}
+@media(max-width:760px){.top{padding:14px 18px}}
+.brand{display:flex;align-items:center;gap:11px}
+.brand .mark{width:32px;height:32px;color:var(--acc-fill);flex:none}
+.brand b{font-family:"Funnel Display",sans-serif;font-weight:700;font-size:19px;letter-spacing:-.028em}
+.brand small{display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:600;margin-top:-2px}
+@media(max-width:520px){.brand small{display:none}.brand b{font-size:17px}}
+
+.topr{display:flex;align-items:center;gap:16px}
+.ring{position:relative;width:44px;height:44px;flex:none}
+.ring svg{width:44px;height:44px;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:3.2;stroke-linecap:round}
+.ring .bg-c{stroke:var(--line)}
+.ring .fg-c{stroke:var(--acc-fill);stroke-dasharray:119.4;stroke-dashoffset:119.4;transition:stroke-dashoffset .7s var(--ease)}
+.ring i{
+  position:absolute;inset:0;display:grid;place-items:center;font-style:normal;
+  font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:500;color:var(--ink-2);
+}
+/* .later and .btn both land on <a> now: the two exits from this journey are
+   real links, so they work with no script and can be opened in a new tab. */
+.later{display:inline-block;text-decoration:none;font-size:13.5px;font-weight:600;color:var(--ink-2);
+  padding:9px 14px;border-radius:var(--r-pill);transition:background .16s,color .16s}
+a.btn{text-decoration:none}
+.later:hover{background:var(--sunken);color:var(--ink)}
+@media(max-width:520px){.later{display:none}}
+
+/* ============ sheet ============ */
+.stage{flex:1;display:flex;align-items:center;justify-content:center;padding:10px 24px 40px;min-height:0}
+@media(max-width:760px){.stage{padding:6px 14px 30px}}
+.sheet{
+  width:100%;max-width:1120px;height:clamp(560px,78vh,760px);background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--r-xl);box-shadow:var(--sh-3);overflow:hidden;position:relative;
+}
+@media(max-width:940px){.sheet{height:auto}}
+@media(max-width:760px){.sheet{border-radius:var(--r-lg)}}
+.sheet::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--acc-fill),#F0C25A 42%,var(--pri) 100%);
+  transform:scaleX(var(--p,0));transform-origin:left;transition:transform .7s var(--ease);
+}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 340px;height:100%}
+@media(max-width:940px){.grid{grid-template-columns:1fr;height:auto}}
+.col-a{min-width:0;display:flex;flex-direction:column;overflow:hidden}
+.a-head{padding:26px 46px 0;flex:none}
+.a-body{flex:1;min-height:0;overflow-y:auto;padding:6px 46px 26px;scrollbar-width:thin;
+  display:flex;flex-direction:column;justify-content:center;justify-content:safe center}
+@media(max-width:940px){.a-body{display:block}}
+.a-body::-webkit-scrollbar{width:7px}
+.a-body::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:9px}
+.a-foot{flex:none;padding:18px 46px 24px;border-top:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,0),var(--surface) 40%);display:grid;gap:0}
+.a-foot:empty{display:none}
+@media(max-width:760px){.a-head{padding:18px 20px 0}.a-body{padding:4px 20px 20px}.a-foot{padding:14px 20px 18px}}
+@media(max-width:940px){.a-body{overflow:visible}}
+.col-b{
+  border-left:1px solid var(--line);background:linear-gradient(180deg,#FBF8F2,var(--sunken));
+  padding:30px 30px 26px;display:flex;flex-direction:column;min-width:0;overflow-y:auto;scrollbar-width:thin;
+}
+.col-b::-webkit-scrollbar{width:7px}
+.col-b::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:9px}
+@media(max-width:940px){.col-b{border-left:0;border-top:1px solid var(--line);padding:24px 20px 26px;overflow:visible}}
+
+.back{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:600;color:var(--ink-2);margin-bottom:20px;padding:6px 10px 6px 6px;border-radius:var(--r-pill);transition:background .16s,color .16s}
+.back:hover{background:var(--sunken);color:var(--ink)}
+.back svg{width:15px;height:15px;transition:transform .18s var(--ease)}
+.back:hover svg{transform:translateX(-2px)}
+.back[hidden]{display:none}
+
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin:0 0 13px;font-weight:500;display:flex;align-items:center;gap:9px}
+.eyebrow::after{content:"";flex:1;height:1px;background:var(--line);max-width:70px}
+h1.q{font-size:clamp(27px,3.2vw,36px);line-height:1.08}
+p.sub{font-size:16.5px;line-height:1.56;color:var(--ink-2);margin:13px 0 0;max-width:52ch}
+.gap{height:28px}.gap.s{height:16px}.gap.l{height:38px}
+
+/* col-b blocks */
+.blk{display:grid;gap:10px;padding:0 0 22px;margin-bottom:22px;border-bottom:1px solid var(--line)}
+.blk:last-of-type{border-bottom:0;margin-bottom:0}
+.blk h4{
+  font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:500;margin:0;display:flex;align-items:center;gap:8px;
+}
+.blk h4 svg{width:14px;height:14px;color:var(--acc);flex:none}
+.blk p{margin:0;font-size:13.5px;line-height:1.62;color:var(--ink-2)}
+.blk ul{margin:0;padding:0;list-style:none;display:grid;gap:9px}
+.blk li{display:grid;grid-template-columns:15px 1fr;gap:10px;font-size:13.5px;line-height:1.5;color:var(--ink-2)}
+.blk li svg{width:15px;height:15px;margin-top:2px;color:var(--ok)}
+.blk li.no svg{color:var(--ink-3)}
+.lnk{color:var(--pri);font-weight:600;cursor:pointer;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line-2)}
+.lnk:hover{text-decoration-color:var(--pri)}
+.seal{
+  margin-top:auto;display:flex;gap:12px;align-items:center;padding-top:20px;border-top:2px solid var(--line-2);
+}
+.seal .s{width:36px;height:36px;border-radius:50%;background:var(--pri);display:grid;place-items:center;flex:none}
+.seal .s svg{width:17px;height:17px;color:#fff}
+.seal p{margin:0;font-size:12px;line-height:1.42;color:var(--ink-3)}
+.seal b{display:block;color:var(--ink-2);font-size:12.5px;font-weight:600}
+
+/* ============ controls ============ */
+.opts{display:grid;gap:11px}
+.opt{
+  width:100%;text-align:start;background:var(--surface);border:1px solid var(--line-2);
+  border-radius:var(--r-lg);padding:18px 20px;display:grid;gap:5px;position:relative;
+  transition:border-color .18s,box-shadow .18s,transform .16s var(--ease);
+}
+.opt:hover{border-color:var(--pri);box-shadow:var(--sh-2);transform:translateY(-2px)}
+.opt:focus,.opt:focus-visible{outline:none !important;border-color:var(--pri);box-shadow:0 0 0 4px var(--pri-soft)}
+.opt:active{transform:translateY(0) scale(.996)}
+.opt b{font-size:16.5px;font-weight:600;line-height:1.3}
+.opt span{font-size:13.5px;color:var(--ink-2);line-height:1.45;max-width:46ch}
+.opt.rec{border:1.5px solid var(--pri);background:linear-gradient(180deg,#fff,var(--pri-soft))}
+.opt .pill{
+  position:absolute;top:16px;right:18px;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+  background:var(--pri);color:#fff;padding:4px 9px;border-radius:var(--r-pill);
+}
+@media(max-width:520px){.opt .pill{position:static;justify-self:start;margin-bottom:3px}}
+
+.fw{margin-bottom:20px}
+.lbl{display:block;font-size:14px;font-weight:600;margin-bottom:6px}
+.hintl{display:block;font-size:12.5px;color:var(--ink-3);margin:-2px 0 8px;line-height:1.45}
+.field{
+  width:100%;background:var(--surface);border:1.5px solid var(--line-2);border-radius:var(--r-md);
+  padding:15px 16px;font-size:16px;color:var(--ink);min-height:56px;
+  transition:border-color .16s,box-shadow .16s;
+}
+.field::placeholder{color:var(--ink-3)}
+.field:focus{outline:none;border-color:var(--pri);box-shadow:0 0 0 4px var(--pri-soft)}
+.field.err{border-color:var(--bad);box-shadow:0 0 0 4px var(--bad-soft)}
+.emsg{font-size:13px;color:var(--bad);font-weight:600;margin:8px 0 0;display:flex;gap:7px;align-items:flex-start}
+.emsg svg{width:15px;height:15px;flex:none;margin-top:2px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:520px){.row2{grid-template-columns:1fr}}
+
+.otp{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;max-width:400px}
+.otp input{
+  width:100%;min-width:0;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:23px;font-weight:500;
+  padding:16px 2px;background:var(--surface);border:1.5px solid var(--line-2);border-radius:var(--r-md);color:var(--ink);
+  transition:border-color .16s,box-shadow .16s,transform .16s var(--ease);
+}
+.otp input:focus{outline:none;border-color:var(--pri);box-shadow:0 0 0 4px var(--pri-soft);transform:translateY(-2px)}
+@media(max-width:420px){.otp{gap:7px}.otp input{font-size:19px;padding:14px 2px}}
+
+.btns{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.a-foot .btns{margin:0}
+.a-body .btns{margin-top:30px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:16px 30px;border-radius:var(--r-md);font-size:16px;font-weight:600;
+  background:var(--pri);color:var(--on-pri);min-height:56px;box-shadow:0 1px 2px rgba(14,36,80,.2);
+  transition:background .16s,transform .14s var(--ease),box-shadow .2s;
+}
+.btn:hover{background:var(--pri-h);box-shadow:0 8px 20px -8px rgba(14,36,80,.5)}
+.btn:active{transform:scale(.985)}
+.btn svg{width:16px;height:16px;transition:transform .2s var(--ease)}
+.btn:hover svg{transform:translateX(3px)}
+.btn[disabled]{background:var(--sunken);color:var(--ink-3);box-shadow:none;cursor:default}
+.btn[disabled]:hover{background:var(--sunken);box-shadow:none}
+.btn.sec{background:transparent;color:var(--ink-2);border:1.5px solid var(--line-2);box-shadow:none}
+.btn.sec:hover{background:var(--sunken);color:var(--ink);border-color:var(--line-2);box-shadow:none}
+.btn.ghost{background:transparent;color:var(--pri);padding:14px 6px;min-height:auto;box-shadow:none}
+.btn.ghost:hover{background:transparent;color:var(--pri-h);text-decoration:underline;text-underline-offset:4px;box-shadow:none}
+
+.reassure{display:flex;gap:10px;align-items:flex-start;margin-top:26px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--ink-3);line-height:1.5}
+.reassure svg{width:16px;height:16px;flex:none;margin-top:1px;color:var(--ink-3)}
+
+.note{background:var(--sunken);border-radius:var(--r-md);padding:15px 17px;font-size:13.5px;line-height:1.55;color:var(--ink-2);margin:0}
+.note b{color:var(--ink);font-weight:600}
+
+/* ============ record card (passport data page) ============ */
+.rec{
+  border:1px solid var(--line-2);border-radius:var(--r-lg);overflow:hidden;background:var(--surface);
+  position:relative;box-shadow:var(--sh-2);
+}
+.rec::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.34;
+  background:var(--guilloche);background-size:118px;
+}
+.rec-h{
+  background:var(--deep);color:#fff;padding:13px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;
+  font-size:11px;letter-spacing:.13em;text-transform:uppercase;font-family:"IBM Plex Mono",monospace;position:relative;z-index:2;
+}
+.rec-h .ok{display:inline-flex;align-items:center;gap:6px;color:#FCD87A}
+.rec-h .ok svg{width:13px;height:13px}
+.rec-b{display:grid;grid-template-columns:96px 1fr;gap:22px;padding:22px 20px;position:relative;z-index:2}
+@media(max-width:520px){.rec-b{grid-template-columns:74px 1fr;gap:16px;padding:18px 16px}}
+.rec-photo{
+  aspect-ratio:.78;border-radius:6px;background:linear-gradient(160deg,var(--sunken),#E7E0D2);
+  border:1px solid var(--line-2);display:grid;place-items:center;position:relative;overflow:hidden;
+}
+.rec-photo svg{width:52%;color:var(--line-2)}
+.rec-photo::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.75) 48%,transparent 62%);
+  transform:translateX(-130%);animation:sheen 2.4s .5s var(--ease) forwards;
+}
+@keyframes sheen{to{transform:translateX(130%)}}
+@media (prefers-reduced-motion: reduce){.rec-photo::after{animation:none;opacity:0}}
+.rec dl{margin:0;display:grid;gap:11px;align-content:start}
+.rec .r{display:grid;grid-template-columns:112px 1fr;gap:12px;align-items:baseline}
+@media(max-width:520px){.rec .r{grid-template-columns:1fr;gap:1px}}
+.rec dt{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);margin:0}
+.rec dd{margin:0;font-size:15px;font-weight:600;color:var(--ink)}
+.rec dd.m{font-family:"IBM Plex Mono",monospace;letter-spacing:.03em;font-weight:500}
+.mrz{
+  border-top:1px dashed var(--line-2);padding:12px 20px 14px;font-family:"IBM Plex Mono",monospace;
+  font-size:11px;letter-spacing:.08em;color:var(--ink-3);overflow:hidden;white-space:nowrap;
+  text-overflow:ellipsis;position:relative;z-index:2;background:rgba(244,239,230,.6);
+}
+
+/* ============ checks — icons stacked correctly ============ */
+.checks{display:grid;gap:2px;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;background:var(--line)}
+.chk{
+  display:grid;grid-template-columns:26px 1fr auto;gap:14px;align-items:center;
+  background:var(--surface);padding:15px 18px;transition:background .3s;
+}
+.chk.busy{background:var(--pri-soft)}
+.bx{position:relative;width:26px;height:26px;border-radius:var(--r-pill);border:2px solid var(--line-2);background:var(--surface);transition:background .3s,border-color .3s}
+.bx>*{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+.bx .tick{width:13px;height:13px;color:#fff;opacity:0;transform:translate(-50%,-50%) scale(.4);transition:opacity .3s,transform .34s var(--ease)}
+.bx .spin{
+  width:14px;height:14px;border:2px solid rgba(18,59,122,.22);border-top-color:var(--pri);border-radius:50%;
+  opacity:0;transition:opacity .2s;animation:spin .75s linear infinite;
+  transform-origin:center;margin:-7px 0 0 -7px;top:50%;left:50%;
+}
+@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+.chk.busy .bx{border-color:var(--pri)}
+.chk.busy .bx .spin{opacity:1}
+.chk.done .bx{background:var(--ok);border-color:var(--ok)}
+.chk.done .bx .tick{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.chk b{font-size:14.5px;font-weight:600;display:block;line-height:1.35}
+.chk small{font-size:12.5px;color:var(--ink-3);display:block;margin-top:1px;line-height:1.4}
+.chk .ms{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--ink-3);opacity:0;transition:opacity .3s}
+.chk.done .ms{opacity:1}
+
+/* ============ liveness ============ */
+/* ---------- the Emirates ID, and the read-back form ----------
+   The residency screen reuses .sfwrap/.sfview so the framing corners are the
+   same ones the selfie step draws — one capture idiom, two documents. */
+.eidcard{
+  aspect-ratio:1.585;border-radius:12px;border:1px solid var(--line-2);
+  background:linear-gradient(150deg,#F7F4EC,#EDE7DA 62%,#E4DCCB);
+  box-shadow:0 14px 30px -20px rgba(13,33,72,.5), inset 0 1px 0 rgba(255,255,255,.8);
+  position:relative;overflow:hidden;padding:11px 12px;
+}
+.eid-t{display:block;font-family:"IBM Plex Mono",monospace;font-size:6.5px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--ink-3)}
+.eid-face{position:absolute;left:12px;top:26px;width:38px;height:48px;border-radius:4px;
+  background:radial-gradient(120% 100% at 50% 26%,#fff,var(--sunken));border:1px solid var(--line-2)}
+.eid-l{position:absolute;left:60px;height:5px;border-radius:3px;background:var(--line-2)}
+.eid-l.a{top:30px;width:46%}
+.eid-l.b{top:44px;width:34%;opacity:.8}
+.eid-l.c{top:58px;width:40%;opacity:.65}
+.eid-mrz{position:absolute;left:12px;right:12px;bottom:10px;height:12px;border-radius:2px;
+  background:repeating-linear-gradient(90deg,var(--line-2) 0 3px,transparent 3px 6px);opacity:.55}
+@media(max-width:760px){.eidcard{padding:9px 10px}.eid-face{width:32px;height:40px;top:22px}
+  .eid-l{left:52px}}
+/* two fields on one row where the pair belongs together */
+.rd2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+@media(max-width:480px){.rd2{grid-template-columns:1fr}}
+.sfwrap{max-width:270px;margin:0}
+.sfview{position:relative;padding:7px}
+.sfview i{position:absolute;width:22px;height:22px;border:2.5px solid var(--acc-fill);border-radius:3px;opacity:.85}
+.sfview i:nth-child(1){top:0;left:0;border-right:0;border-bottom:0}
+.sfview i:nth-child(2){top:0;right:0;border-left:0;border-bottom:0}
+.sfview i:nth-child(3){bottom:0;left:0;border-right:0;border-top:0}
+.sfview i:nth-child(4){bottom:0;right:0;border-left:0;border-top:0}
+.selfie{
+  aspect-ratio:.84;border-radius:50%/36%;border:3px solid var(--pri);
+  background:radial-gradient(120% 100% at 50% 28%,#fff,var(--sunken));
+  display:grid;place-items:center;position:relative;overflow:hidden;
+}
+.selfie .bust{width:92px;color:var(--line-2);opacity:.7}
+.flash{position:absolute;inset:0;opacity:0}
+.flash.go{animation:fseq 2.4s ease-in-out}
+@keyframes fseq{
+  0%,100%{opacity:0;background:#fff}
+  12%{opacity:.85;background:#7FD4FF}26%{opacity:.85;background:#FFE07F}
+  40%{opacity:.85;background:#FF9FB0}54%{opacity:.85;background:#9FFFC4}
+  68%{opacity:.85;background:#C9A7FF}82%{opacity:.35;background:#fff}
+}
+@media (prefers-reduced-motion: reduce){.flash.go{animation:none}}
+
+/* handoff */
+.hand{display:grid;grid-template-columns:auto 1fr;gap:30px;align-items:start}
+@media(max-width:620px){.hand{grid-template-columns:1fr;gap:22px}}
+.qr{
+  width:184px;height:184px;padding:13px;background:#fff;border:1px solid var(--line-2);
+  border-radius:var(--r-md);box-shadow:var(--sh-2);position:relative;
+}
+.qr .m{display:grid;grid-template-columns:repeat(25,1fr);width:100%;height:100%}
+.qr .m span{background:var(--deep);border-radius:.5px}
+.qr .m span.o{background:transparent}
+.qr .scan{
+  position:absolute;left:13px;right:13px;height:2px;background:var(--acc-fill);border-radius:2px;
+  box-shadow:0 0 14px 3px rgba(226,155,11,.55);animation:scan 2.6s var(--ease) infinite;
+}
+@keyframes scan{0%,100%{top:14px}50%{top:167px}}
+@media (prefers-reduced-motion: reduce){.qr .scan{animation:none;top:50%}}
+.hsteps{display:grid;gap:0}
+.hs{display:grid;grid-template-columns:24px 1fr;gap:13px;align-items:start;padding:9px 0;color:var(--ink-3);transition:color .3s}
+.hs .d{position:relative;width:24px;height:24px;border-radius:50%;border:2px solid var(--line-2);background:var(--surface);transition:all .3s}
+.hs .d>*{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+.hs .d .tick{width:12px;height:12px;color:#fff;opacity:0;transition:opacity .3s}
+.hs .d .pulse{width:9px;height:9px;border-radius:50%;background:var(--pri);opacity:0;transform:translate(-50%,-50%) scale(.75)}
+.hs.now .d .pulse{animation:pul 1.3s ease-in-out infinite}
+@keyframes pul{0%,100%{transform:translate(-50%,-50%) scale(.75);opacity:.45}50%{transform:translate(-50%,-50%) scale(1.1);opacity:1}}
+.hs.now{color:var(--ink);font-weight:600}
+.hs.now .d{border-color:var(--pri)}
+
+.hs.done{color:var(--ink-2)}
+.hs.done .d{background:var(--ok);border-color:var(--ok)}
+.hs.done .d .tick{opacity:1}
+.hs b{font-size:14.5px;font-weight:inherit;display:block;line-height:1.35}
+.hs small{display:block;font-size:12.5px;color:var(--ink-3);margin-top:1px}
+
+/* ============ document capture ============ */
+.capture{
+  aspect-ratio:1.42;border-radius:var(--r-md);border:2px dashed var(--line-2);background:var(--sunken);
+  display:grid;place-items:center;text-align:center;padding:24px;position:relative;max-width:420px;
+}
+.capture .frame{position:absolute;inset:18px;border:2px solid var(--pri);border-radius:7px;opacity:.45}
+.capture p{margin:0;font-size:13.5px;color:var(--ink-2);position:relative;z-index:2;max-width:28ch}
+.capture svg.pg{width:44px;height:44px;color:var(--line-2);margin:0 auto 10px;display:block}
+
+
+/* ============ booking: calendar + slots ============ */
+.bk{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:30px;align-items:start}
+@media(max-width:860px){.bk{grid-template-columns:1fr;gap:22px}}
+
+.bk-loc{display:grid;gap:9px;margin-bottom:22px}
+.lc{
+  width:100%;text-align:start;background:var(--surface);border:1.5px solid var(--line);border-radius:var(--r-md);
+  padding:13px 15px;display:grid;grid-template-columns:20px minmax(0,1fr);gap:12px;align-items:start;
+  transition:border-color .18s,background .18s;
+}
+.lc:hover{border-color:var(--line-2);background:var(--sunken)}
+.lc .rd{width:20px;height:20px;border-radius:50%;border:2px solid var(--line-2);margin-top:2px;position:relative;transition:all .2s}
+.lc .rd::after{content:"";position:absolute;inset:3.5px;border-radius:50%;background:var(--pri);transform:scale(0);transition:transform .2s var(--ease)}
+.lc.on{border-color:var(--pri);background:var(--pri-soft)}
+.lc.on .rd{border-color:var(--pri)}
+.lc.on .rd::after{transform:scale(1)}
+.lc b{font-size:14.5px;font-weight:600;display:block;line-height:1.3}
+.lc small{font-size:12.5px;color:var(--ink-2);display:block;margin-top:2px;line-height:1.45}
+
+.cal{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:16px 16px 14px;box-shadow:var(--sh-1)}
+.cal-h{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.cal-h b{font-size:15.5px;font-weight:600;font-family:"Funnel Display",sans-serif;letter-spacing:-.02em}
+.cal-nav{display:flex;gap:4px}
+.cal-nav button{width:32px;height:32px;border-radius:var(--r-sm);display:grid;place-items:center;color:var(--ink-2);transition:background .16s,color .16s}
+.cal-nav button:hover:not([disabled]){background:var(--sunken);color:var(--ink)}
+.cal-nav button[disabled]{opacity:.3;cursor:default}
+.cal-nav svg{width:15px;height:15px}
+.cal-dow{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px;margin-bottom:4px}
+.cal-dow span{text-align:center;font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.08em;color:var(--ink-3);padding:4px 0}
+.cal-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px}
+/* NOT a bare .d. The handoff step marker is <span class="d"> too, and this
+   rule's min-height stretched it from a 24px circle into a 24x38 oval —
+   .hs .d wins on height, but nothing was overriding min-height. */
+.cal-grid .d{
+  position:relative;aspect-ratio:1;min-height:38px;border-radius:var(--r-sm);display:grid;place-items:center;
+  font-size:13.5px;font-weight:500;color:var(--ink);background:transparent;
+  transition:background .16s,color .16s,box-shadow .16s;
+}
+.cal-grid .d.void{visibility:hidden}
+.cal-grid .d.ok,.cal-grid .d.few{background:var(--sunken);cursor:pointer}
+.cal-grid .d.ok:hover,.cal-grid .d.few:hover{background:var(--pri-soft);color:var(--pri)}
+.cal-grid .d.dot::after{content:"";position:absolute;bottom:5px;left:50%;transform:translateX(-50%);width:4px;height:4px;border-radius:50%}
+.cal-grid .d.ok.dot::after{background:var(--ok)}
+.cal-grid .d.few.dot::after{background:var(--acc-fill)}
+.cal-grid .d.full,.cal-grid .d.closed,.cal-grid .d.past{color:var(--ink-3);cursor:default;opacity:.55}
+.cal-grid .d.full{text-decoration:line-through;text-decoration-color:var(--line-2)}
+.cal-grid .d.today{box-shadow:inset 0 0 0 1.5px var(--line-2)}
+.cal-grid .d.sel{background:var(--pri);color:#fff;font-weight:700;box-shadow:0 3px 10px -3px rgba(18,59,122,.6)}
+.cal-grid .d.sel::after{background:#fff !important}
+.cal-none{display:flex;gap:9px;align-items:flex-start;margin:12px 0 0;padding:11px 12px;border-radius:var(--r-sm);background:var(--acc-soft);font-size:12.5px;line-height:1.45;color:#4A3A08}
+.cal-none svg{width:15px;height:15px;flex:none;margin-top:1px;color:var(--acc)}
+.cal-none b{cursor:pointer;text-decoration:underline;text-underline-offset:3px;font-weight:600}
+.cal-key{display:flex;flex-wrap:wrap;gap:12px;margin-top:13px;padding-top:11px;border-top:1px solid var(--line)}
+.cal-key span{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--ink-3)}
+.cal-key i{width:7px;height:7px;border-radius:50%;display:block}
+.cal-key .k1 i{background:var(--ok)}.cal-key .k2 i{background:var(--acc-fill)}
+.cal-key .k3 i{background:var(--line-2)}
+
+.slots{min-width:0}
+.slots-empty{
+  border:1.5px dashed var(--line-2);border-radius:var(--r-lg);padding:30px 22px;text-align:center;
+  color:var(--ink-3);font-size:13.5px;line-height:1.55;background:var(--sunken);
+}
+.slots-empty svg{width:26px;height:26px;color:var(--line-2);display:block;margin:0 auto 10px}
+.slot-h{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.slot-h b{font-size:17px;font-family:"Funnel Display",sans-serif;font-weight:700;letter-spacing:-.02em}
+.slot-h span{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc)}
+.slot-g{margin-bottom:16px}
+.slot-g h5{margin:0 0 8px;font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:500}
+.slot-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:7px}
+.sl{
+  padding:11px 6px;border-radius:var(--r-sm);border:1.5px solid var(--line);background:var(--surface);
+  font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:500;color:var(--ink);
+  transition:all .16s;min-height:44px;
+}
+.sl:hover:not([disabled]){border-color:var(--pri);color:var(--pri);background:var(--pri-soft)}
+.sl[disabled]{color:var(--ink-3);background:var(--sunken);border-color:transparent;text-decoration:line-through;text-decoration-color:var(--line-2);cursor:default}
+.sl.on{background:var(--pri);border-color:var(--pri);color:#fff;font-weight:600}
+.walkin{background:var(--ok-soft);border-radius:var(--r-md);padding:15px 17px;display:grid;grid-template-columns:18px 1fr;gap:12px;align-items:start}
+.walkin svg{width:18px;height:18px;color:var(--ok);margin-top:2px}
+.walkin b{font-size:14.5px;font-weight:600;display:block}
+.walkin p{margin:3px 0 0;font-size:13px;color:var(--ink-2);line-height:1.5}
+.a-foot #bksum:not(:empty){margin-bottom:14px}
+.bk-sum{
+  margin-top:0;padding:14px 16px;border-radius:var(--r-md);background:var(--sunken);
+  display:flex;gap:11px;align-items:center;font-size:13.5px;color:var(--ink-2);
+}
+.bk-sum svg{width:16px;height:16px;color:var(--pri);flex:none}
+.bk-sum b{color:var(--ink);font-weight:600}
+
+/* ============ success ============ */
+.hero-ok{display:grid;justify-items:start;gap:22px}
+.sring{width:66px;height:66px;border-radius:50%;background:var(--ok-soft);display:grid;place-items:center;position:relative}
+.sring::after{content:"";position:absolute;inset:-8px;border-radius:50%;border:2px solid var(--ok);opacity:0;animation:halo 1.1s .2s var(--ease) forwards}
+@keyframes halo{40%{opacity:.4}100%{opacity:0;transform:scale(1.22)}}
+.sring svg{width:33px;height:33px;color:var(--ok)}
+.sring.warn{background:var(--acc-soft);border-color:var(--acc-fill)}
+.sring.warn svg{color:var(--acc)}
+.sring.warn svg path{stroke-dasharray:none;stroke-dashoffset:0;animation:none}
+
+.sring svg path{stroke-dasharray:34;stroke-dashoffset:34;animation:draw .6s .18s var(--ease) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion: reduce){.sring svg path{animation:none;stroke-dashoffset:0}.sring::after{animation:none;opacity:0}}
+
+.unlocked{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden}
+.unlocked div{background:var(--surface);padding:16px 18px;display:grid;grid-template-columns:19px 1fr;gap:13px;align-items:start}
+.unlocked svg{width:19px;height:19px;margin-top:2px}
+.unlocked b{font-size:14.5px;font-weight:600;display:block}
+.unlocked small{font-size:12.5px;color:var(--ink-3);display:block;margin-top:2px;line-height:1.48}
+.unlocked .yes svg{color:var(--ok)}
+.unlocked .no svg{color:var(--acc)}
+.unlocked .yes{background:linear-gradient(90deg,var(--ok-soft),#fff 34%)}
+
+.cards{display:grid;gap:11px}
+.card{border:1px solid var(--line);border-radius:var(--r-md);padding:15px 17px;background:var(--surface);display:grid;gap:3px;box-shadow:var(--sh-1)}
+.card b{font-size:14.5px;font-weight:600}
+.card p{margin:0;font-size:13px;color:var(--ink-2);line-height:1.5}
+.card .tag{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);margin-bottom:2px}
+
+.langrow{display:flex;gap:8px;margin-top:24px;flex-wrap:wrap}
+.langrow button{font-size:13px;font-weight:600;padding:9px 16px;border-radius:var(--r-pill);border:1.5px solid var(--line-2);color:var(--ink-2);transition:all .16s}
+.langrow button.on{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+.langrow button:not(.on):hover{border-color:var(--pri);color:var(--pri)}
+
+.stat{display:flex;gap:10px;flex-wrap:wrap;margin:0}
+.a-foot .stat{margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
+.stat div{display:grid;grid-template-columns:26px 1fr;gap:10px;align-items:center;flex:1 1 150px}
+.stat .si{width:26px;height:26px;border-radius:50%;background:var(--pri-soft);display:grid;place-items:center}
+.stat .si svg{width:14px;height:14px;color:var(--pri)}
+.stat b{font-family:"Funnel Display",sans-serif;font-size:19px;font-weight:700;letter-spacing:-.03em;line-height:1.05;display:block}
+.stat small{font-size:11px;color:var(--ink-3);display:block;line-height:1.3}
+
+/* step motion */
+.step>*{opacity:0;transform:translateY(12px);animation:rise .5s var(--ease) forwards}
+.step>*:nth-child(1){animation-delay:.02s}.step>*:nth-child(2){animation-delay:.06s}
+.step>*:nth-child(3){animation-delay:.1s}.step>*:nth-child(4){animation-delay:.14s}
+.step>*:nth-child(5){animation-delay:.18s}.step>*:nth-child(6){animation-delay:.22s}
+.step>*:nth-child(n+7){animation-delay:.26s}
+@keyframes rise{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){.step>*{animation:none;opacity:1;transform:none}}
+
+/* ==================================================================
+   MOBILE — a different layout, not a narrow desktop.
+   No card, no side column. Sticky header, sticky action bar,
+   context folded away behind one disclosure.
+   ================================================================== */
+@media(max-width:940px){
+  body{background:var(--ground)}
+  .bg .glow,.bg .glow2{opacity:.7}
+  .bg .sun{right:-190px;top:-230px;width:480px;height:480px;opacity:.07}
+  .bg .rays{height:30vh;opacity:.35}
+
+  .wrap{min-height:100dvh}
+  .stage{padding:0;align-items:stretch;display:block}
+
+  /* header becomes a slim sticky bar with the progress line under it */
+  .top{
+    position:sticky;top:0;z-index:30;padding:11px 18px 10px;
+    background:rgba(250,248,243,.92);backdrop-filter:blur(14px) saturate(1.3);
+    border-bottom:1px solid var(--line);
+  }
+  .brand .mark{width:26px;height:26px}
+  .brand b{font-size:16.5px}
+  .brand small{display:none}
+  .later{display:none}
+  .ring{width:34px;height:34px}
+  .ring svg{width:34px;height:34px}
+  .ring circle{stroke-width:3}
+  .ring .fg-c{stroke-dasharray:92.4}
+  .ring i{font-size:9.5px}
+
+  /* the sheet stops being a card */
+  .sheet{
+    max-width:none;height:auto;min-height:calc(100dvh - 56px);
+    background:transparent;border:0;border-radius:0;box-shadow:none;overflow:visible;
+    display:flex;flex-direction:column;
+  }
+  .sheet::before{display:none}
+  .grid{display:flex;flex-direction:column;flex:1;height:auto}
+
+  .col-a{display:flex;flex-direction:column;flex:1;overflow:visible}
+  .a-head{padding:14px 18px 0}
+  .back{font-size:14px;padding:8px 12px 8px 8px;background:var(--surface);border:1px solid var(--line);margin-bottom:14px}
+  .a-body{
+    display:flex;flex-direction:column;overflow:visible;flex:1;
+    padding:2px 18px 24px;
+  }
+  .a-body .step{flex:none}
+  .a-body .ctx{margin-top:auto;margin-block-start:auto}
+  .a-body .step{margin-bottom:26px}
+
+  /* the desktop context column is emptied into a disclosure below */
+  .col-b{display:none}
+
+  /* sticky action bar */
+  .a-foot{
+    position:sticky;bottom:0;z-index:26;padding:12px 18px;
+    padding-bottom:max(14px,env(safe-area-inset-bottom));
+    background:rgba(255,255,255,.93);backdrop-filter:blur(16px) saturate(1.3);
+    border-top:1px solid var(--line);box-shadow:0 -8px 24px -18px rgba(22,25,39,.5);
+  }
+  .a-foot .btns{display:grid;gap:8px}
+  .a-foot .btn{width:100%;padding:16px 20px;min-height:54px}
+  .a-foot .btn.ghost{padding:11px 8px;min-height:44px}
+  .a-foot .stat{margin-top:12px;padding-top:12px;gap:6px}
+  .a-foot .stat div{flex:1 1 96px;grid-template-columns:1fr;gap:1px;text-align:start}
+  .a-foot .stat .si{display:none}
+  .a-foot .stat b{font-size:15px}
+  .a-foot .stat small{font-size:10px}
+  .a-foot #bksum:not(:empty){margin-bottom:10px}
+  .bk-sum{padding:11px 13px;font-size:12.5px}
+
+  /* type scales up, measure stays honest */
+  h1.q{font-size:clamp(25px,7.4vw,31px);line-height:1.12}
+  p.sub{font-size:15.5px;margin-top:11px}
+  .eyebrow{margin-bottom:10px}
+  .eyebrow::after{max-width:38px}
+  .gap{height:22px}.gap.s{height:14px}.gap.l{height:28px}
+
+  /* controls sized for thumbs */
+  .opt{padding:16px 17px;border-radius:var(--r-md)}
+  .opt:hover{transform:none;box-shadow:var(--sh-1)}
+  .opt b{font-size:16px}
+  .opt .pill{position:static;justify-self:start;margin-bottom:4px}
+  .field{font-size:16px;min-height:54px}
+  .fw{margin-bottom:16px}
+  .btns{margin-top:24px}
+  .reassure{margin-top:20px;padding-top:16px;font-size:12.5px}
+  .note{font-size:13px;padding:13px 15px}
+
+  /* record card fits the width */
+  .rec-b{grid-template-columns:62px minmax(0,1fr);gap:13px;padding:14px 13px}
+  .rec dl{gap:7px}
+  .rec .r{grid-template-columns:82px minmax(0,1fr);gap:9px;align-items:baseline}
+  .rec dt{font-size:8.5px;letter-spacing:.09em}
+  .rec dd{font-size:14px}
+  .mrz{font-size:9px;padding:8px 13px;letter-spacing:.05em}
+  .rec-h{padding:10px 13px;font-size:8.5px;letter-spacing:.08em}
+
+  /* checks read as rows */
+  .chk{padding:13px 14px;gap:12px}
+  .chk .ms{display:none}
+  .chk b{font-size:14px}
+
+  /* liveness fills the screen properly */
+  .sfwrap{max-width:230px;margin:0 auto}
+  .selfie .bust{width:78px}
+
+  /* booking */
+  .bk{gap:18px}
+  .cal{padding:13px 12px 12px}
+  .cal-nav button{width:40px;height:40px}
+  .cal-nav svg{width:17px;height:17px}
+  .cal-grid .d{min-height:42px;font-size:14px}
+  .cal-h b{font-size:16px}
+  .slot-row{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+  .sl{font-size:13px;padding:12px 4px}
+  .lc{padding:14px}
+  .unlocked div{padding:14px 15px}
+  .cards{gap:9px}
+
+  /* ---- the one disclosure that replaces the whole side column ---- */
+  .ctx{
+    margin-top:26px;border:1px solid var(--line);border-radius:var(--r-md);
+    background:var(--surface);overflow:hidden;box-shadow:var(--sh-1);
+  }
+    .ctx summary{
+    list-style:none;cursor:pointer;padding:15px 16px;display:flex;align-items:center;gap:11px;
+    font-size:14px;font-weight:600;color:var(--ink);
+  }
+  .ctx summary::-webkit-details-marker{display:none}
+  .ctx summary .ci{width:20px;height:20px;color:var(--acc);flex:none}
+  .ctx summary .cv{margin-left:auto;width:16px;height:16px;color:var(--ink-3);transition:transform .26s var(--ease)}
+  .ctx[open] summary .cv{transform:rotate(180deg)}
+  .ctx[open] summary{border-bottom:1px solid var(--line)}
+  .ctx-in{padding:16px 16px 18px;display:block}
+  .ctx-in .blk{padding-bottom:16px;margin-bottom:16px}
+  .ctx-in .blk:last-child{padding-bottom:0;margin-bottom:0;border-bottom:0}
+  .ctx-in .seal{display:none}
+}
+
+@media(max-width:360px){
+  .a-head,.a-body,.a-foot,.top{padding-left:14px;padding-right:14px}
+  .cal{padding:11px 9px 10px}
+  .cal-grid,.cal-dow{gap:2px}
+  .cal-grid .d{min-height:36px;font-size:12.5px}
+  .cal-h b{font-size:15px}
+  .slot-row{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+</style>
+
+<div class="bg"><span class="glow"></span><span class="glow2"></span><span class="sun"></span><span class="rays"></span><span class="grain"></span></div>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10.4" stroke="currentColor" stroke-width="1.3"/><circle cx="12" cy="12" r="7.4" stroke="currentColor" stroke-width=".7" opacity=".55"/><path d="M12 4.2v15.6M4.2 12h15.6M6.5 6.5l11 11M17.5 6.5l-11 11" stroke="currentColor" stroke-width=".8" opacity=".55"/><circle cx="12" cy="12" r="2.6" fill="currentColor"/></svg>
+      <span><b>Konsulado</b><small>Philippine Consulate General · Dubai</small></span>
+    </div>
+    <div class="topr">
+      <a class="later" href="index.html">Save and finish later</a>
+      <div class="ring" id="ring" aria-hidden="true">
+        <svg viewBox="0 0 44 44"><circle class="bg-c" cx="22" cy="22" r="19"/><circle class="fg-c" id="rfg" cx="22" cy="22" r="19"/></svg>
+        <i id="rtxt"></i>
+      </div>
+    </div>
+  </header>
+
+  <div class="stage">
+    <div class="sheet" id="sheet">
+      <div class="grid">
+        <section class="col-a">
+          <div class="a-head"><button class="back" id="back" hidden><svg viewBox="0 0 16 16" fill="none"><path d="M10 3 5 8l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Back</button></div>
+          <div class="a-body"><div id="main"></div></div>
+          <div class="a-foot" id="foot"></div>
+        </section>
+        <aside class="col-b" id="side"></aside>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var MOBILE="(max-width:940px)";
+  var CI='<svg class="ci" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M8 8a2 2 0 1 1 2.6 2.3v1.1M10 14.1v.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>';
+  var CV='<svg class="cv" viewBox="0 0 16 16" fill="none"><path d="m3.5 6 4.5 4.5L12.5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+  function isMobile(){ return window.matchMedia(MOBILE).matches; }
+
+  window.KH={
+    chrome:function(c){
+      var sheet=document.getElementById("sheet"), rfg=document.getElementById("rfg"),
+          rtxt=document.getElementById("rtxt"), ring=document.getElementById("ring");
+      sheet.style.setProperty("--p",c.pct);
+      var len = isMobile() ? 92.4 : 119.4;
+      rfg.style.strokeDashoffset = len*(1-c.pct);
+      rtxt.textContent = c.last ? "✓" : (c.pct===0 ? "" : c.n+"/"+c.total);
+      ring.style.opacity = (c.pct===0 && !c.last) ? ".4" : "1";
+    },
+    after:function(def){
+      var foot=document.getElementById("foot"); foot.innerHTML="";
+      var body=document.querySelector(".a-body");
+      var step=body.querySelector(".step");
+
+      /* drop anything the mobile layout already folded away */
+      var oldCtx=body.querySelector(".ctx"); if(oldCtx) oldCtx.remove();
+
+      var sum=step.querySelector("#bksum");
+      var btns=step.querySelector(".step > .btns")||body.querySelector(".step > .btns");
+      var stat=body.querySelector(".step > .stat");
+      if(sum) foot.appendChild(sum);
+      if(btns) foot.appendChild(btns);
+      if(stat) foot.appendChild(stat);
+
+      /* on a phone the whole context column collapses into one disclosure */
+      if(isMobile() && def.side){
+        var d=document.createElement("details");
+        d.className="ctx";
+        d.innerHTML='<summary>'+CI+'<span>Why we ask, and what happens next</span>'+CV+'</summary>'+
+                    '<div class="ctx-in">'+def.side+'</div>';
+        body.appendChild(d);
+      }
+
+      body.scrollTop=0;
+      var col=document.querySelector(".col-b"); if(col) col.scrollTop=0;
+      window.scrollTo({top:0,behavior:"auto"});
+    }
+  };
+
+  /* crossing the breakpoint rebuilds the step in the other layout */
+  var wasMobile=null;
+  function check(){
+    var m=isMobile();
+    if(wasMobile===null){ wasMobile=m; return; }
+    if(m!==wasMobile){ wasMobile=m; if(window.KRender) window.KRender(); }
+  }
+  window.addEventListener("resize",function(){ clearTimeout(window.__rt); window.__rt=setTimeout(check,180); });
+  check();
+})();
+</script>
+<script>
+(function(){
+  "use strict";
+  var T='<svg class="tick" viewBox="0 0 16 16" fill="none"><path d="m3 8.4 3.2 3.2L13 4.8" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  var LOCK='<svg viewBox="0 0 16 16" fill="none"><rect x="3" y="7" width="10" height="7" rx="1.6" stroke="currentColor" stroke-width="1.5"/><path d="M5.5 7V5.2a2.5 2.5 0 0 1 5 0V7" stroke="currentColor" stroke-width="1.5"/></svg>';
+  var TC='<svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.6" stroke="currentColor" stroke-width="1.5"/><path d="m5.2 8.2 2 2 3.6-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  var XC='<svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.6" stroke="currentColor" stroke-width="1.5"/><path d="M8 4.8v4.1M8 11.1v.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>';
+  var WARN='<svg viewBox="0 0 16 16" fill="none"><path d="M8 2.6 14.5 13.4h-13z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8 6.6v3M8 11.6v.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>';
+  var BUST='<svg class="bust" viewBox="0 0 100 108" fill="none" aria-hidden="true"><circle cx="50" cy="34" r="22" stroke="currentColor" stroke-width="2.4"/><path d="M10 106c0-22 18-34 40-34s40 12 40 34" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>';
+  var PAGE='<svg class="pg" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/><circle cx="8.5" cy="10" r="2.2" stroke="currentColor" stroke-width="1.4"/><path d="M13.5 9h4M13.5 12h4M5.5 15.5h13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>';
+  var SEAL='<svg viewBox="0 0 20 20" fill="none"><path d="M10 2.2 12 5l3.3-.6L15 7.7l2.6 2-2.6 2 .3 3.3L12 14.4 10 17.2 8 14.4l-3.3.9.3-3.3-2.6-2 2.6-2-.3-3.3L8 5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="m7.6 10 1.7 1.7L12.6 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  var ARR='<svg viewBox="0 0 16 16" fill="none"><path d="M2.5 8h11M9.5 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+
+  var IC={
+    fork:'<svg viewBox="0 0 16 16" fill="none"><path d="M5 2v5a3 3 0 0 0 3 3h3M11 2v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>',
+    help:'<svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.4" stroke="currentColor" stroke-width="1.4"/><path d="M6.4 6.3a1.7 1.7 0 1 1 2.2 1.9v.9M8 11.4v.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>',
+    lock:'<svg viewBox="0 0 16 16" fill="none"><rect x="3" y="7" width="10" height="7" rx="1.6" stroke="currentColor" stroke-width="1.4"/><path d="M5.5 7V5.2a2.5 2.5 0 0 1 5 0V7" stroke="currentColor" stroke-width="1.4"/></svg>',
+    edit:'<svg viewBox="0 0 16 16" fill="none"><path d="M11.4 2.6a1.7 1.7 0 0 1 2.4 2.4L6 12.8l-3.2.8.8-3.2z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>',
+    shield:'<svg viewBox="0 0 16 16" fill="none"><path d="M8 1.8 13.4 4v4c0 3-2.3 5.2-5.4 6.2C4.9 13.2 2.6 11 2.6 8V4z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>',
+    file:'<svg viewBox="0 0 16 16" fill="none"><path d="M4 2h5l3 3v9H4z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M9 2v3h3M6 9h4M6 11.4h4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>',
+    steps:'<svg viewBox="0 0 16 16" fill="none"><path d="M2.6 12h3.2V8.4h3.4V4.8h4.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    star:'<svg viewBox="0 0 16 16" fill="none"><path d="M8 2.2 9.8 6l4.1.5-3 2.8.8 4.1L8 11.5l-3.7 1.9.8-4.1-3-2.8L6.2 6z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>',
+    doc:'<svg viewBox="0 0 16 16" fill="none"><rect x="2.6" y="3.4" width="10.8" height="9.2" rx="1.4" stroke="currentColor" stroke-width="1.4"/><circle cx="6" cy="7.2" r="1.4" stroke="currentColor" stroke-width="1.2"/><path d="M9 6.6h3M9 8.8h3M4.4 10.8h7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>',
+    key:'<svg viewBox="0 0 16 16" fill="none"><circle cx="5.4" cy="5.4" r="2.8" stroke="currentColor" stroke-width="1.4"/><path d="m7.5 7.5 5 5M10.6 10.6l1.3-1.3M12 12l1.2-1.2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>',
+    phone:'<svg viewBox="0 0 16 16" fill="none"><rect x="4.4" y="1.8" width="7.2" height="12.4" rx="1.6" stroke="currentColor" stroke-width="1.4"/><path d="M7 12.4h2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>',
+    clock:'<svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.4" stroke="currentColor" stroke-width="1.4"/><path d="M8 4.6V8l2.4 1.6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>'
+  };
+  function li(t,ok){return '<li class="'+(ok===false?'no':'')+'">'+(ok===false?XC:TC)+'<span>'+t+'</span></li>';}
+  function blk(h,body,ic){return '<div class="blk">'+(ic?'<h4>'+ic+'<span>'+h+'</span></h4>':'<h4><span>'+h+'</span></h4>')+body+'</div>';}
+  var SEALBLK='<div class="seal"><span class="s">'+SEAL+'</span><p><b>Consular-grade verification</b>Operated by the Consulate General. Your details are never shared with an employer or an agency.</p></div>';
+
+  var FLOW={
+    /* One journey, and it asks nothing of any system but this one.
+       The old `ex` path opened by searching a consular register for the
+       person — name, date of birth, passport number — which assumes a
+       database this post has not got and may never expose. Everything the
+       journey needs is now read off the documents in the person's hand:
+       a Philippine ID for who they are, an Emirates ID for where they live,
+       and their own face to bind the two. Nothing is typed that a document
+       already answers, and nothing outside this post has to reply. */
+    nw:["welcome","account","otpNew","pickdoc","capture","docheck","confirmread",
+        "residency","rescheck","live","matching","address","result","secured","done"],
+    /* Signing in is a journey too. Two routes through it: a device that
+       already knows you goes straight to the end — that is the whole point of
+       a passkey — and an unknown device proves the number with a code and the
+       person with a face, which is what the side column has always promised. */
+    si:["signin","siotp","silive","sicheck","sidone"],
+    rec:["recover","live","checking","recheck","secured","otp","sidone"],
+    rn:["recover","siotp","live","checking","secured","sidone"],
+    hlp:["helpme"],
+    vid:["video","videodone"],
+    vis:["bookvisit","visitdone"],
+    ntf:["notify"],
+    nf:["notfound","pickdoc","capture","docheck","confirmread","residency","rescheck","live","matching","address","result","secured","done"],
+    wr:["wrong","pickdoc","capture","docheck","confirmread","residency","rescheck","live","matching","address","result","secured","done"],
+    /* No card to hand. Identity still finishes — the face check runs and the
+       passport is properly proved — so this is not a lesser person, it is an
+       unfinished eligibility. What it does not buy is service: the account
+       opens at browsing, drafts and appointments and stops there until a
+       residence card is added. S.result and S.done both branch on this. */
+    nores:["live","matching","address","result","secured","done"],
+    rev:["review"]
+  };
+  var path="nw", idx=0, live=false;
+  function steps(){return FLOW[path];}
+  function cur(){return steps()[idx];}
+
+  /* ---------- QR ---------- */
+  function qr(){
+    var n=25, seed=20260825, out=[];
+    function rnd(){seed=(seed*1103515245+12345)&0x7fffffff;return seed/0x7fffffff;}
+    function finder(r,c){return (r<7&&c<7)||(r<7&&c>=n-7)||(r>=n-7&&c<7);}
+    function fdot(r,c){
+      var rr=r<7?r:r-(n-7), cc=c<7?c:c-(n-7);
+      var e=(rr===0||rr===6||cc===0||cc===6), i=(rr>=2&&rr<=4&&cc>=2&&cc<=4);
+      return e||i;
+    }
+    for(var r=0;r<n;r++)for(var c=0;c<n;c++){
+      var on;
+      if(finder(r,c)) on=fdot(r,c);
+      else if((r<8&&c<8)||(r<8&&c>=n-8)||(r>=n-8&&c<8)) on=false;
+      else on=rnd()>.47;
+      out.push('<span class="'+(on?'':'o')+'"></span>');
+    }
+    return '<div class="qr"><div class="m">'+out.join("")+'</div><span class="scan"></span></div>';
+  }
+
+  /* ---------- steps ---------- */
+  var S={};
+
+  S.welcome=function(){return{
+    ring:false,
+    main:
+      '<h1 class="q">Kumusta.<br>Let us set you up.</h1>'+
+      '<p class="sub">Konsulado is how you deal with the Consulate without going to the Consulate — renewals, certificates, powers of attorney, and help in an emergency.</p>'+
+      '<div class="langrow"><button class="on">English</button><button>Filipino</button><button>Bisaya</button></div>'+
+      '<div class="btns"><button class="btn" data-next>Get started'+ARR+'</button><button class="btn ghost" data-jump="si">I already have an account</button></div>'+
+      '<div class="stat">'+
+        '<div><span class="si">'+IC.star+'</span><span><b>43 of 50</b><small>services need no visit</small></span></div>'+
+        '<div><span class="si">'+IC.clock+'</span><span><b>~2 minutes</b><small>to set up, once</small></span></div>'+
+        '<div><span class="si">'+IC.shield+'</span><span><b>24/7</b><small>Philippine holidays too</small></span></div>'+
+      '</div>',
+    side:
+      blk("Afterwards you can",'<ul>'+li("Renew a passport, no visit")+li("Have certificates posted to you")+li("Sign an SPA by video")+li("Reach the duty officer, any hour")+'</ul>',IC.star)+
+      blk("What you need",'<p>Nothing, if you have held a Philippine passport. First one? Bring a photo ID.</p>',IC.doc)+
+      blk("There is no password",'<p>Your face sets the account up; your phone gets you back in. Nothing to forget, nothing to phish.</p>',IC.key)+
+      SEALBLK
+  };};
+
+  /* S.branch is gone. It asked "have you held a Philippine passport before?"
+     only so it could route the yes answer into a register search. There is no
+     register, so there is nothing to branch on: everyone takes one journey and
+     shows a document. */
+
+  /* S.find and S.confirm are gone with it. They looked a person up by name,
+     date of birth and passport number against records this post holds — the
+     one dependency the whole product is designed not to have. What replaced
+     them is S.confirmread, which shows what was read off the document in the
+     person's own hand and lets them correct it. */
+
+  S.account=function(){return{
+    main:
+      '<p class="eyebrow">Creating your account</p>'+
+      '<h1 class="q">Two things, and we can start</h1>'+
+      '<p class="sub">You can add the rest later. We will send a code to the number you give us.</p>'+
+      '<div class="gap"></div>'+
+      '<div class="fw"><label class="lbl" for="n1">Mobile number</label><span class="hintl">UAE or Philippine number — both work</span><input class="field mn" id="n1" placeholder="+971 50 000 0000"></div>'+
+      '<div class="fw"><label class="lbl" for="n2">Email</label><span class="hintl">Where we send receipts and document copies</span><input class="field" id="n2" placeholder="you@example.com"></div>'+
+      '<div class="btns"><button class="btn" data-next>Send me a code'+ARR+'</button></div>'+
+      '<div class="reassure">'+LOCK+'<span>Your details are held by the Consulate and nobody else. We will never pass them to an employer, a recruitment agency or a travel shop.</span></div>',
+    side:
+      blk("Using a shared phone?",'<p>That is common and it is fine. Sign-in will use a passcode instead of a fingerprint, and you can change the number later without proving yourself again.</p>')+
+      blk("What we never do",'<ul>'+li("Send you a link by text",false)+li("Ask for your password by phone",false)+li("Charge for creating an account",false)+'</ul>')+
+      SEALBLK
+  };};
+
+  S.about=function(){return{
+    main:
+      '<p class="eyebrow">Who you are</p>'+
+      '<h1 class="q">What is your full name?</h1>'+
+      '<p class="sub">Exactly as it appears on the document you are about to show us — including your middle name.</p>'+
+      '<div class="gap"></div>'+
+      '<div class="fw"><label class="lbl" for="g1">Given names</label><input class="field" id="g1" placeholder="Maria Cristina"></div>'+
+      '<div class="fw"><label class="lbl" for="g2">Middle name</label><span class="hintl">Your mother’s maiden surname, as used on Philippine documents</span><input class="field" id="g2" placeholder="Bautista"></div>'+
+      '<div class="fw"><label class="lbl" for="g3">Surname</label><input class="field" id="g3" placeholder="Reyes"></div>'+
+      '<div class="fw"><label class="lbl" for="g4">Date of birth</label><input class="field mn" id="g4" placeholder="DD / MM / YYYY" style="max-width:230px"></div>'+
+      '<div class="btns"><button class="btn" data-next>Continue'+ARR+'</button></div>',
+    side:
+      blk("Why the middle name matters",'<p>Philippine records are indexed by the mother’s maiden surname. Leaving it out is the single most common reason a record cannot be found later.</p>')+
+      blk("Married name?",'<p>Enter the name on your document now. You can add a married name afterwards with your marriage certificate — it does not have to hold this up.</p>')+
+      SEALBLK
+  };};
+
+  S.pickdoc=function(){return{
+    main:
+      '<p class="eyebrow">Proving you are Filipino</p>'+
+      '<h1 class="q">Which Philippine document do you have?</h1>'+
+      '<p class="sub">One is enough. It is read here on your device, and the photograph on it is matched to your face.</p>'+
+      '<div class="gap"></div>'+
+      '<div class="opts">'+
+        '<button class="opt rec" data-next><span class="pill">Most people</span><b>Philippine passport</b><span>Current or expired. The two lines of type along the bottom of the photo page are what we read.</span></button>'+
+        '<button class="opt" data-next><b>National ID &middot; PhilSys</b><span>The card or the printed copy. Both carry the same details and the same photograph.</span></button>'+
+        '<button class="opt" data-next><b>Another Philippine government photo ID</b><span>UMID, PRC, driving licence, voter&rsquo;s ID &mdash; or a PSA birth certificate with any photo ID beside it.</span></button>'+
+      '</div>'+
+      '<div class="reassure">'+WARN+'<span>None of these to hand &mdash; an employer is holding it, or it is lost? Choose <b>help me another way</b> on the next screen and a consular officer will do it with you by video.</span></div>',
+    side:
+      blk("What we check on it",'<ul>'+li("Layout, fonts and check digits")+li("That it is not a photograph of a screen")+li("That the face on it is your face")+'</ul>')+
+      blk("Why not ask you to type it",'<p>Because the document already says it. Anything you type is a second version that can disagree with the first.</p>')+
+      blk("We keep the image",'<p>Encrypted, for as long as your record exists, because a later officer may need to see what you showed. You can view it any time in your account.</p>')+
+      SEALBLK
+  };};
+
+  S.capture=function(){return{
+    main:
+      '<p class="eyebrow">Capture</p>'+
+      '<h1 class="q">Photograph the page with your picture on it</h1>'+
+      '<p class="sub">Flat on a dark surface, no flash, all four corners inside the frame.</p>'+
+      '<div class="gap"></div>'+
+      '<div class="capture"><span class="frame"></span><div>'+PAGE+'<p>Position the document inside the frame</p></div></div>'+
+      '<div class="btns"><button class="btn" data-next>Take the photo'+ARR+'</button><button class="btn ghost" data-next>Upload a file instead</button></div>',
+    side:
+      blk("If it keeps failing",'<ul>'+li("Move away from a window or lamp")+li("Use a plain dark table, not a patterned one")+li("Wipe the camera lens")+li("A person can check it instead — just ask")+'</ul>')+
+      blk("A failed check is not an accusation",'<p>Most rejections are glare or a shadow, not fraud. You will never be locked out for a bad photo.</p>')+
+      SEALBLK
+  };};
+
+  /* ---- liveness: phone-first ---- */
+  S.live=function(){
+    var onPhone = live || window.matchMedia("(max-width:760px)").matches;
+    if(onPhone) return {
+      main:
+        '<p class="eyebrow">Proving it is you</p>'+
+        '<h1 class="q">Now look at your phone</h1>'+
+        '<p class="sub">You do not need to blink, smile or turn your head. Just hold still for two seconds.</p>'+
+        '<div class="gap"></div>'+
+        '<div class="sfwrap"><div class="sfview"><i></i><i></i><i></i><i></i>'+
+          '<div class="selfie"><span class="flash" id="flash"></span>'+BUST+'</div></div></div>'+
+        '<p class="note" style="margin-top:18px"><b>The screen will flash a few colours.</b> The way that light falls on a real face cannot be reproduced by a photograph, a printed mask or a video played back at the camera.</p>'+
+        '<div class="btns"><button class="btn" id="startScan">Start'+ARR+'</button><button class="btn ghost" data-jump="hlp">I cannot do this — help me another way</button></div>',
+      side:
+        blk("What we are testing",'<ul>'+li("That you are a live person, now")+li("That your face matches your file")+li("That nobody is enrolled twice")+'</ul>')+
+        blk("If you wear a hijab or glasses",'<p>Neither is a problem. Nothing needs to be removed. If a check fails twice, a consular officer takes over by video rather than refusing you.</p>')+
+        SEALBLK,
+      after:function(el){
+        var b=el.querySelector("#startScan"), f=el.querySelector("#flash");
+        b.addEventListener("click",function(){
+          b.disabled=true;b.textContent="Hold still…";
+          if(f)f.classList.add("go");
+          setTimeout(next,2300);
+        });
+      }
+    };
+    return {
+      main:
+        '<p class="eyebrow">Proving it is you</p>'+
+        '<h1 class="q">Finish this bit on your phone</h1>'+
+        '<p class="sub">The liveness check needs a front camera we can trust. Scan this with your phone camera and it will open where you left off — then come back here.</p>'+
+        '<div class="gap"></div>'+
+        '<div class="hand">'+qr()+
+          '<div class="hsteps" id="hsteps">'+
+            hs("Waiting for your phone","Scan the code, or have the link sent to you")+
+            hs("Link opened","We will know the moment it does")+
+            hs("Camera ready","Your phone asks permission, not us")+
+            hs("Checked and approved","Then this page moves on by itself")+
+          '</div>'+
+        '</div>'+
+        '<div class="btns"><button class="btn sec" id="sms">Text the link to +971 50 ••• 4567</button><button class="btn ghost" id="usehere">Use this computer’s camera instead</button><button class="btn ghost" data-jump="hlp">I cannot do either</button></div>'+
+        '<div class="reassure">'+LOCK+'<span>The link works once, expires in ten minutes, and does nothing at all unless it is opened on a phone signing in as you.</span></div>',
+      side:
+        blk("Why not the laptop camera?",'<p>Most laptop cameras cannot be checked for injection attacks — where a video is fed straight into the camera feed rather than held up to it. Injection is now the more common attack of the two, so the phone route is the honest one.</p>')+
+        blk("No phone with you?",'<ul>'+li("Use this computer’s camera at a lower level")+li("43 services still open either way")+li("Or book five minutes at the counter")+'</ul>')+
+        SEALBLK,
+      after:function(el){
+        var rows=el.querySelectorAll(".hs"), i=0;
+        rows[0].classList.add("now");
+        var t=setInterval(function(){
+          rows[i].classList.remove("now");rows[i].classList.add("done");
+          i++;
+          if(i<rows.length){rows[i].classList.add("now");}
+          else{clearInterval(t);setTimeout(next,700);}
+        },1150);
+        el.querySelector("#usehere").addEventListener("click",function(){live=true;render();});
+        el.querySelector("#sms").addEventListener("click",function(){this.textContent="Link sent ✓";this.disabled=true;});
+      }
+    };
+  };
+  function hs(t,s){
+    return '<div class="hs"><span class="d"><span class="pulse"></span>'+T+'</span><span><b>'+t+'</b><small>'+s+'</small></span></div>';
+  }
+
+  /* ---- checks ---- */
+  function checksStep(eyebrow,title,sub,items,label,sideA,sideB){
+    return function(){return{
+      main:
+        '<p class="eyebrow">'+eyebrow+'</p>'+
+        '<h1 class="q">'+title+'</h1>'+
+        '<p class="sub">'+sub+'</p>'+
+        '<div class="gap"></div>'+
+        '<div class="checks" id="cks">'+items.map(function(c){
+          return '<div class="chk"><span class="bx"><span class="spin"></span>'+T+'</span>'+
+                 '<span><b>'+c[0]+'</b><small>'+c[1]+'</small></span><span class="ms">'+c[2]+'</span></div>';
+        }).join("")+'</div>'+
+        '<div class="btns"><button class="btn" id="cont" disabled>'+label+ARR+'</button></div>',
+      side:sideA+sideB+SEALBLK,
+      after:function(el){
+        var cs=el.querySelectorAll(".chk"), btn=el.querySelector("#cont");
+        function run(i){
+          if(i>=cs.length){btn.disabled=false;btn.addEventListener("click",next);return;}
+          cs[i].classList.add("busy");
+          setTimeout(function(){cs[i].classList.remove("busy");cs[i].classList.add("done");run(i+1);},640);
+        }
+        setTimeout(function(){run(0);},240);
+      }
+    };};
+  }
+
+  S.checking=checksStep("Checking","Give us a moment","Four checks, run at the same time. Nothing here is a judgement about you.",[
+    ["Record matched","Against the three details you gave us","0.4s"],
+    ["Face matched to your file photograph","The picture already on your consular record","1.1s"],
+    ["Live person confirmed","Challenge by light — not a photograph or a video","0.9s"],
+    ["No duplicate identity found","Checked across everyone already enrolled","1.6s"]
+  ],"Continue",
+    blk("What a failure would mean",'<p>Not a refusal. A failed check moves you to a video call with a consular officer, usually the same working day. Nobody is turned away by a machine.</p>'),
+    blk("Duplicate check",'<p>The fourth check is the one that matters most for fraud: one person, one identity, across every service. It is what makes a stolen record worthless.</p>')
+  );
+
+  S.docheck=checksStep("Reading your document","Reading what you sent","Hold on — this is done on our servers, not on your phone.",[
+    ["Page read","Name, date of birth, number and issuing office","0.6s"],
+    ["Details are consistent","Every field agrees with every other field","0.5s"],
+    ["Security features present","Checked against the official layout for this document","1.2s"]
+  ],"Continue",
+    blk("If a feature is missing",'<p>Old documents and reissued copies legitimately differ. We flag rather than reject, and a person looks at the flag.</p>'),
+    blk("Check digits",'<p>Machine-readable documents carry arithmetic that only works if the data is genuine. It is the cheapest strong signal there is.</p>')
+  );
+
+  S.matching=checksStep("Checking","Give us a moment","Four checks on what you have just given us.",[
+    ["Document is well formed","Layout, fonts and check digits","0.6s"],
+    ["Not a screen or a photocopy","Capture integrity and moir\u00e9 analysis","0.8s"],
+    ["Face matched to your documents","The passport page, and the Emirates ID if you showed one","1.2s"],
+    ["Live person confirmed","Challenge by light","0.9s"]
+  ],"See what this unlocks",
+    blk("Why two photographs help",'<p>A Philippine passport lasts ten years, so the picture in it can be a decade old. The photograph on an Emirates ID is at most a few years old, and matching against both is a great deal fairer than matching against one old one.</p>'),
+    blk("Which one decides",'<p>The passport. It is the document that proves you are Filipino, so it is the one that carries the result. The card corroborates &mdash; it cannot substitute.</p>')
+  );
+
+  S.confirmread=function(){return{
+    main:
+      '<p class="eyebrow">What we read</p>'+
+      '<h1 class="q">Is this right?</h1>'+
+      '<p class="sub">Taken off the page exactly as printed. Change anything that is wrong &mdash; you are the one who knows.</p>'+
+      '<div class="gap"></div>'+
+      '<div class="fw"><label class="lbl" for="r1">Surname</label><input class="field" id="r1" value="REYES"></div>'+
+      '<div class="fw"><label class="lbl" for="r2">Given names</label><input class="field" id="r2" value="MARIA CRISTINA"></div>'+
+      '<div class="fw"><label class="lbl" for="r3">Middle name</label><span class="hintl">Your mother&rsquo;s maiden surname. A passport does not carry it, and Philippine records are indexed by it.</span><input class="field" id="r3" placeholder="Santos"></div>'+
+      '<div class="rd2">'+
+        '<div class="fw"><label class="lbl" for="r4">Date of birth</label><input class="field mn" id="r4" value="06 / 03 / 1991"></div>'+
+        '<div class="fw"><label class="lbl" for="r5">Sex</label><input class="field" id="r5" value="F"></div>'+
+      '</div>'+
+      '<div class="rd2">'+
+        '<div class="fw"><label class="lbl" for="r6">Document number</label><input class="field mn" id="r6" value="P44••••8•A"></div>'+
+        '<div class="fw"><label class="lbl" for="r7">Expires</label><input class="field mn" id="r7" value="11 / 09 / 2027"></div>'+
+      '</div>'+
+      '<div class="btns"><button class="btn" data-next>That is right'+ARR+'</button>'+
+        '<button class="btn ghost" data-jump="nw@4">Photograph it again</button></div>'+
+      '<div class="reassure">'+TC+'<span>Only the middle name is empty, because a passport does not print one.</span></div>',
+    side:
+      blk("Why nothing was typed",'<p>Every field a person types is a field that can disagree with the document. These came off the page, so they cannot.</p>')+
+      blk("Married name?",'<p>Put the name on the document now. A married name is added afterwards with the marriage certificate, and it does not hold this up.</p>')+
+      blk("If a letter is wrong",'<p>Change it. A misread character is far likelier than a forged page, and correcting it here is not a red flag.</p>')+
+      SEALBLK
+  };};
+
+  /* ---------- residence: the gate, not a second identity check ----------
+     Two different claims got conflated here and the copy paid for it.
+
+     IDENTITY is the Philippine document plus the live face. That is settled
+     before this screen and this screen adds nothing to it.
+
+     ELIGIBILITY is separate and this screen is the whole of it. A consulate
+     may only act for the people in its jurisdiction, and Konsulado is for
+     Filipinos in the UAE. Without a residence card there is nothing at all
+     saying where in the world somebody is, and an account anyone anywhere
+     could open is worth nothing to the people who queue outside the building.
+     So the card gates SERVICE, and the screen must say that plainly.
+
+     What is still true, and still said out loud: nothing here is confirmed
+     with ICA. There is no link and there may never be one. The card is read
+     on the device, the name on it is compared with the Philippine document
+     already shown, and the emirate is taken from the address. That is held as
+     GIVEN BY YOU with the card behind it, not as proved — and an officer looks
+     at the card himself the moment a service needs it to be worth more.
+
+     Skipping is still allowed, because employers hold documents and people are
+     not always at home. It does not buy a verified account: `nores` still runs
+     the face check, so identity finishes, and then stops at browse, drafts and
+     bookings until a card is added. See S.result. */
+  S.residency=function(){return{
+    main:
+      '<p class="eyebrow">Who this post can serve</p>'+
+      '<h1 class="q">Show that you live in the UAE</h1>'+
+      '<p class="sub">Your passport proved you are Filipino. Your residence card is what shows you are <b>here</b>, which is the only thing that entitles you to be served by this post &mdash; and its photograph gives the face check on the next screen something far more recent to work with.</p>'+
+      '<div class="gap"></div>'+
+      '<div class="sfwrap"><div class="sfview"><i></i><i></i><i></i><i></i>'+
+        '<div class="eidcard"><span class="eid-t">United Arab Emirates &middot; Identity Card</span>'+
+          '<span class="eid-face"></span>'+
+          '<span class="eid-l a"></span><span class="eid-l b"></span><span class="eid-l c"></span>'+
+          '<span class="eid-mrz"></span></div>'+
+        '</div></div>'+
+      '<p class="note" style="margin-top:18px"><b>We do not check this with the UAE authorities.</b> '+
+        'There is no link between this post and ICA, and we are not going to pretend there is. '+
+        'The card is read here on your device, the name on it is compared with your passport, and '+
+        'the emirate comes off the address. An officer looks at the card himself the moment a '+
+        'service needs it to be worth more than your word.</p>'+
+      '<div class="btns"><button class="btn" data-next>Photograph the card'+ARR+'</button>'+
+        '<button class="btn ghost" data-jump="nores">It is not on me right now</button></div>'+
+      '<div class="reassure">'+LOCK+'<span>Your employer is never told that you did this, and cannot look you up.</span></div>',
+    side:
+      blk("Why a consulate asks at all",'<ul>'+li("Whether this post can act for you at all")+li("Which outreach missions reach you")+li("Where a sealed document is couriered")+'</ul>')+
+      blk("This is the part that qualifies you",'<p>Konsulado is for Filipinos living in the UAE. Your passport says you are Filipino; nothing so far says where in the world you are. This card does, and without it an account could be opened from anywhere by anyone &mdash; which is worth nothing to the people who queue outside this building.</p>')+
+      blk("Between visas, or cancelled",'<p>It does not stop anything. A lapsed visa is very often the reason someone needs consular help in the first place.</p>')+
+      blk("Not on you right now",'<p>Carry on. The face check still runs and your identity finishes properly. The account then opens at browsing, drafts and appointments, and everything that has to be filed or issued waits until a card is added &mdash; about twenty seconds, from your account, whenever you have it to hand.</p>')+
+      blk("Outside this jurisdiction",'<p>Abu Dhabi and Al Dhafra are served by the Embassy. We say so plainly and hand you across, rather than taking your application and sitting on it.</p>')+
+      SEALBLK
+  };};
+
+  /* no card: the same answer, typed, and held on exactly the same terms */
+  /* No card to photograph: the same fields the card would have filled in,
+     typed. It is the card's contents that matter here, not an address — the
+     address is its own screen, for everybody, because a UAE address is not
+     one line and getting it wrong means a document goes nowhere. */
+  /* S.nocard is gone. It asked a person to type an Emirates ID number, the
+     name on the card, and two dates — none of which anybody can check, and
+     none of which the product does anything with. What the card was actually
+     for is the emirate and the address, and those are asked properly on the
+     next screen. Somebody whose employer is holding the card now skips it in
+     one tap and adds it later from their account. */
+
+  S.address=function(){
+    var read = path!=="nores";     /* the card route filled these in already */
+    var v=function(x){ return read ? ' value="'+x+'"' : ' placeholder="'+x+'"'; };
+    return{
+      main:
+        '<p class="eyebrow">Where a document goes</p>'+
+        '<h1 class="q">'+(read?'Is this address right?':'Where should we send things?')+'</h1>'+
+        '<p class="sub">'+(read
+          ? 'Taken off the card. Change anything that is out of date &mdash; the card is often behind where you actually live.'
+          : 'A courier has to find this without calling you, and a passport will not be left with a stranger.')+'</p>'+
+        '<div class="gap"></div>'+
+        '<div class="rd2">'+
+          '<div class="fw"><label class="lbl" for="a1">Emirate</label><input class="field" id="a1"'+v("Dubai")+'></div>'+
+          '<div class="fw"><label class="lbl" for="a2">Area or community</label><input class="field" id="a2"'+v("Al Qusais 2")+'></div>'+
+        '</div>'+
+        '<div class="fw"><label class="lbl" for="a3">Building, tower or villa</label><input class="field" id="a3"'+v("Al Nahda Tower B")+'></div>'+
+        '<div class="rd2">'+
+          '<div class="fw"><label class="lbl" for="a4">Flat or room</label><span class="hintl">Leave empty if there is not one</span><input class="field" id="a4"'+v("1204")+'></div>'+
+          '<div class="fw"><label class="lbl" for="a5">Street</label><span class="hintl">Optional</span><input class="field" id="a5"'+v("Damascus Street")+'></div>'+
+        '</div>'+
+        '<div class="fw"><label class="lbl" for="a6">Nearest landmark</label><span class="hintl">What you would tell a taxi driver. This is the field couriers actually use.</span><input class="field" id="a6" placeholder="Behind Al Bustan Centre, opposite the mosque"></div>'+
+        '<div class="fw"><label class="lbl" for="a7">PO Box</label><span class="hintl">Optional. Many employers have one and it is often the safest route.</span><input class="field mn" id="a7" placeholder="94778"></div>'+
+        '<div class="btns"><button class="btn" data-next>'+(read?'That is right':'Continue')+ARR+'</button>'+
+          '<button class="btn ghost" data-jump="hlp">I cannot receive post where I live</button></div>'+
+        '<div class="reassure">'+LOCK+'<span>Used for couriering and for telling you about outreach missions near you. It is never given to an employer or an agency.</span></div>',
+      side:
+        blk("Why so many fields",'<p>Because a passport is not a parcel. It is handed over against an identity check, and a driver who cannot find the door takes it back to the depot.</p>')+
+        blk("No flat number?",'<ul>'+li("Very common in shared accommodation")+li("The landmark is what gets it there")+li("A PO Box works instead, if you have one")+'</ul>')+
+        blk("If you would rather collect",'<p>Choose collection at the counter or at an outreach mission when you file something. This address is then only used to tell you which missions are near you.</p>')+
+        SEALBLK
+    };
+  };
+
+  S.rescheck=checksStep("Where you live","Reading your card",
+    "Two things read off the card, and one comparison. Nothing is asked of anybody outside this post.",[
+    ["Card read","Name, number and address, off the front","0.4s"],
+    ["The names agree","With the Philippine document you showed a moment ago","0.9s"],
+    ["Dubai \u2014 inside this jurisdiction","So this post is the one that can act for you","0.5s"]
+  ],"Continue",
+    blk("What this is worth",'<p>It is your word with a card behind it, and the record says exactly that. It is not confirmed with the UAE authorities, because there is no link to confirm it against.</p>'),
+    blk("If the names differ",'<p>They often do &mdash; a middle name dropped, a surname ordered differently. A difference is a note for an officer, not a refusal, and the account still works.</p>')
+  );
+
+  S.review=function(){return{
+    ring:"full",
+    main:
+      '<div class="hero-ok"><span class="sring"><svg viewBox="0 0 32 32" fill="none"><path d="M16 9v9.5M16 23.2v.01" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/></svg></span>'+
+      '<div><h1 class="q">An officer is looking at this.</h1>'+
+      '<p class="sub">One check did not pass on its own. That is not an accusation, and it is not a refusal.</p></div></div>'+
+      '<div class="gap"></div>'+
+      '<div class="cards">'+
+        '<div class="card"><span class="tag">Usually the same day</span><b>What happens now</b><p>A consular officer looks at what you sent, in the order it arrived. You get a message on this number either way.</p></div>'+
+        '<div class="card"><span class="tag">Meanwhile</span><b>Your account already works</b><p>Browse every service, see the fees and the times, save a draft, book an appointment. Nothing you have done is lost.</p></div>'+
+        '<div class="card"><span class="tag">If you would rather not wait</span><b>Speak to an officer by video</b><p>Ten minutes, and it settles in one go. Usually the same working day.</p></div>'+
+      '</div>'+
+      '<div class="btns"><a class="btn" href="konsulado.html">Go to my home screen'+ARR+'</a>'+
+        '<button class="btn ghost" data-jump="vid">Book the video call</button></div>'+
+      '<div class="reassure">'+LOCK+'<span>Nobody has been told anything about you. A check that needs a person is an ordinary thing, not a mark against you.</span></div>',
+    side:
+      blk("Why we do not say which check",'<p>Naming the check that failed is how a person learns what to change and try again. The officer sees all of it; you see that it is being looked at.</p>')+
+      blk("What it usually is",'<ul>'+li("A worn or laminated page")+li("A name spelled two ways across two documents")+li("A photograph fifteen years old")+'</ul>')+
+      blk("You are not stuck",'<p>Every way out of this screen is a way forward. None of them is a queue you cannot see the end of.</p>')+
+      SEALBLK
+  };};
+
+  /* Two outcomes, because identity and eligibility are two different things.
+     The card route finishes both and the services open. The `nores` route
+     finishes identity only — the face check ran, the passport is proved — and
+     stops at browsing, drafts and appointments, because a post cannot act for
+     somebody who has not shown they are in its jurisdiction. The screen says
+     which of the two happened and what closes the gap, and it does not call
+     the second one a failure, because it is not one. */
+  S.result=function(){
+    var noc = path==="nores";
+    return{
+    main: noc ?
+      ('<div class="hero-ok"><span class="sring"><svg viewBox="0 0 32 32" fill="none"><path d="m8 16.5 5.5 5.5L24 11" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>'+
+      '<div><h1 class="q">Your identity is proved. Your residence is not.</h1><p class="sub">One is finished for good. The other is twenty seconds, whenever you have the card.</p></div></div>'+
+      '<div class="gap"></div>'+
+      '<div class="unlocked">'+
+        '<div class="yes">'+TC+'<span><b>Your passport, proved</b><small>Read off the page on your own phone and matched to your live face. That part is done, and it is never done again</small></span></div>'+
+        '<div class="no">'+XC+'<span><b>Nothing can be filed or issued yet</b><small>This post serves Filipinos living in the UAE. Until a residence card puts you in Dubai or the Northern Emirates, it is not the post that can act for you</small></span></div>'+
+        '<div class="yes">'+TC+'<span><b>Browse, plan, and book</b><small>Every service, every fee, every waiting time. Save a draft and hold an appointment &mdash; both wait for you</small></span></div>'+
+        '<div class="yes">'+TC+'<span><b>Adding the card opens all of it</b><small>From your account, in one step, the same minute. Nothing you have done here is repeated</small></span></div>'+
+      '</div>'+
+      '<div class="btns"><button class="btn" data-next>Continue'+ARR+'</button><button class="btn ghost" data-jump="nw@7">I have the card here after all</button></div>')
+      :
+      ('<div class="hero-ok"><span class="sring"><svg viewBox="0 0 32 32" fill="none"><path d="m8 16.5 5.5 5.5L24 11" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>'+
+      '<div><h1 class="q">You are verified.</h1><p class="sub">Here is exactly what that means, with nothing dressed up.</p></div></div>'+
+      '<div class="gap"></div>'+
+      '<div class="unlocked">'+
+        '<div class="yes">'+TC+'<span><b>43 of the 50 consular services, from today</b><small>Certificates, powers of attorney, legalisation, civil registry reports, appointments, and help in an emergency</small></span></div>'+
+        '<div class="no">'+XC+'<span><b>A first passport still needs one visit</b><small>Fingerprints and a photograph have to be taken in person. Twenty minutes, once, and never again for ten years</small></span></div>'+
+        '<div class="yes">'+TC+'<span><b>This post is the one that serves you</b><small>Your residence card puts you in Dubai or the Northern Emirates, so applications go here rather than being handed on.</small></span></div>'+
+        '<div class="yes">'+TC+'<span><b>That visit covers everything at once</b><small>National ID, voter registration and police clearance prints in the same session &mdash; you will not be asked to come back for those</small></span></div>'+
+      '</div>'+
+      '<div class="btns"><button class="btn" data-next>Continue'+ARR+'</button><button class="btn ghost" data-jump="vis">Book that visit now</button></div>'),
+    side: noc ?
+      (blk("Why the door is not simply shut",'<p>Employers hold documents, cards get renewed, and people are not always at home. Refusing the whole account over a card somebody will have next week helps nobody. What we will not do is call it verified when the one thing that qualifies you is missing.</p>')+
+       blk("Why residence is the gate",'<p>Every consulate has a jurisdiction. Ours is Dubai and the Northern Emirates. If where you live is unknown, an application filed here is one this post has no standing to act on, and it would sit until somebody noticed.</p>')+
+       blk("Nothing expires",'<ul>'+li("Your proved passport stays proved")+li("Drafts and appointments are kept")+li("You never repeat the face check")+'</ul>')+
+       SEALBLK)
+      :
+      (blk("Why we say this here",'<p>Every other government service tells you what it can do. Telling you what it cannot do, before you have spent an hour finding out, is the whole design.</p>')+
+       blk("Outreach missions",'<p>If you are in Al Ain, Fujairah or RAK, wait for the next mobile mission in your emirate rather than travelling to Dubai. We will tell you when one is announced.</p>')+
+       SEALBLK)
+  };};
+
+  S.secured=function(){return{
+    main:
+      '<div class="hero-ok"><span class="sring"><svg viewBox="0 0 32 32" fill="none"><path d="m8 16.5 5.5 5.5L24 11" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>'+
+      '<div><h1 class="q">'+(path==="nores"?"Your account is open, Maria.":"Verified. Salamat, Maria.")+'</h1><p class="sub">Last thing: how do you want to get back in?</p></div></div>'+
+      '<div class="gap"></div>'+
+      '<div class="opts">'+
+        '<button class="opt rec" data-next><span class="pill">Recommended</span><b>Your fingerprint or face</b><span>Nothing to remember, and nothing anyone can phish out of you over the phone.</span></button>'+
+        '<button class="opt" data-next><b>A six-digit passcode</b><span>If you share this phone, or would rather not use biometrics.</span></button>'+
+      '</div>'+
+      '<div class="reassure">'+LOCK+'<span>We will never send you a link by text message. Anything asking you to tap a link and sign in is not from us.</span></div>',
+    side:
+      blk("This is your account",'<p>No username, no password, nothing to reset. Your number identifies you; your face proved it; this device gets you back in.</p>',IC.key)+
+      blk("On another device",'<ul>'+li("A code to your number")+li("Then that device\u2019s fingerprint")+li("You never repeat the face check")+'</ul>',IC.phone)+
+      blk("If you lose the phone",'<p>Sign in anywhere else and the old handset is cut off at once. Nothing of yours lives on it.</p>',IC.shield)+
+      SEALBLK
+  };};
+
+  S.contact=function(){return{
+    main:
+      '<p class="eyebrow">Almost done</p>'+
+      '<h1 class="q">How should we reach you?</h1>'+
+      '<p class="sub">One number and one email. This is how you hear that a document is ready, not marketing.</p>'+
+      '<div class="gap"></div>'+
+      '<div class="fw"><label class="lbl" for="c1">Mobile number</label><input class="field mn" id="c1" value="+971 50 447 4567"></div>'+
+      '<div class="fw"><label class="lbl" for="c2">Email</label><input class="field" id="c2" value="maria.reyes@example.com"></div>'+
+      '<div class="fw"><label class="lbl" for="c3">Where you live now</label><span class="hintl">So we can tell you about outreach missions near you</span><input class="field" id="c3" value="Al Qusais, Dubai"></div>'+
+      '<div class="btns"><button class="btn" data-next>Send me a code'+ARR+'</button></div>',
+    side:
+      blk("What we will send you",'<ul>'+li("A document is ready or posted")+li("Something is about to expire")+li("An outreach mission in your emirate")+li("Marketing of any kind",false)+'</ul>')+
+      blk("Changing this later",'<p>Any of it, any time, without proving who you are again — the account is already tied to your face.</p>')+
+      SEALBLK
+  };};
+
+  S.otp=S.otpNew=function(){return{
+    main:
+      '<p class="eyebrow">Confirming your number</p>'+
+      '<h1 class="q">Enter the code we sent</h1>'+
+      '<p class="sub">Six digits, sent to <b style="color:var(--ink)">+971 50 ••• 4567</b>. It expires in ten minutes.</p>'+
+      '<div class="gap"></div>'+
+      '<div class="otp" id="otp">'+[0,1,2,3,4,5].map(function(i){
+        return '<input maxlength="1" inputmode="numeric" aria-label="Digit '+(i+1)+'">';
+      }).join("")+'</div>'+
+      '<div class="btns"><button class="btn" data-next>Continue'+ARR+'</button><button class="btn ghost resend">Send it again</button></div>'+
+      '<div class="reassure">'+TC+'<span>You can paste the code straight in — we never block pasting, because blocking it stops password managers from working and helps nobody.</span></div>',
+    side:
+      blk("Code not arriving?",'<ul>'+li("UAE networks can take up to a minute")+li("Ask for a voice call instead")+li("Roaming on a Philippine number also works")+'</ul>')+
+      blk("Why a code at all",'<p>It proves the number reaches you today. It is not the identity check — your face already did that, and a SIM swap alone gets nobody in.</p>')+
+      SEALBLK,
+    after:function(el){
+      var ins=el.querySelectorAll(".otp input");
+      ins.forEach(function(inp,i){
+        inp.addEventListener("input",function(){if(inp.value&&ins[i+1])ins[i+1].focus();});
+        inp.addEventListener("keydown",function(e){if(e.key==="Backspace"&&!inp.value&&ins[i-1])ins[i-1].focus();});
+      });
+      setTimeout(function(){ins[0].focus();},280);
+    }
+  };};
+
+  /* The end of setting up used to say "three things already need you — we
+     found them while you were setting up", and list a passport renewal, a
+     Report of Birth and a CENOMAR. It cannot know any of that. There is no
+     link to a consular register, and a person setting up for the first time
+     has no history here at all. What it can honestly show is what the account
+     now IS: one document proved, a vault this post will fill, and the three
+     tiers everything in it will carry. */
+  S.done=function(){return{
+    ring:"full",
+    main:
+      '<div class="hero-ok"><span class="sring"><svg viewBox="0 0 32 32" fill="none"><path d="m8 16.5 5.5 5.5L24 11" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>'+
+      '<div><h1 class="q">Your record starts here.</h1>'+
+      '<p class="sub">One document, proved. Everything this post issues you from now on lands beside it.</p></div></div>'+
+      '<div class="gap"></div>'+
+      '<div class="cards">'+
+        '<div class="card"><span class="tag">Proved</span><b>Your Philippine passport</b><p>Read off the page on your own phone and matched to your face. Not something you told us &mdash; something we checked.</p></div>'+
+        (path==="nores"
+          ? '<div class="card"><span class="tag">Still needed</span><b>Where you live</b><p>Nothing yet shows which country you are in, so this post cannot file or issue anything for you. Add your residence card from your account and that opens the same minute.</p></div>'
+          : '<div class="card"><span class="tag">Given by you</span><b>Where you live</b><p>Your residence card puts you in this post&rsquo;s jurisdiction and gives us somewhere to courier a document. Held as your word, with the card behind it.</p></div>')+
+        '<div class="card"><span class="tag">Empty, for now</span><b>Your vault</b><p>Every certificate, seal and clearance this post issues you goes in here, and is never asked for again.</p></div>'+
+      '</div>'+
+      '<div class="btns"><a class="btn" href="konsulado.html">Go to my home screen'+ARR+'</a></div>'+
+      '<div class="reassure">'+TC+'<span>You will not set this up again on another device &mdash; signing in is enough, on any phone or computer.</span></div>',
+    side:
+      blk("What just happened",'<ul>'+li("Your identity is verified to level 2")+
+        (path==="nores"
+          ? li("Your residence is not shown yet",false)+li("Services open the moment it is")
+          : li("43 services are open to you")+li("This post is the one that serves you"))+'</ul>')+
+      blk("The three tiers",'<p><b>Proved</b> was read off a document and matched to your face. <b>Given by you</b> is your word, reused rather than re-collected. <b>Issued by this post</b> carries our seal.</p>')+
+      blk("Nothing was shared",'<p>No employer, agency or third party was told that you did this, and none of them can look you up.</p>')+
+      SEALBLK
+  };};
+
+  S.signin=function(){return{
+    ring:false,
+    main:
+      '<p class="eyebrow">Welcome back</p>'+
+      '<h1 class="q">Sign in</h1>'+
+      '<p class="sub">There is no password to remember. Your phone and your face are the account.</p>'+
+      '<div class="gap"></div>'+
+      '<div class="fw"><label class="lbl" for="s1">Mobile number</label><span class="hintl">The number on your Konsulado account</span><input class="field mn" id="s1" value="+971 50 447 4567"></div>'+
+      '<div class="opts">'+
+        '<button class="opt rec" data-jump="si@4"><span class="pill">This device</span><b>Use your fingerprint or face</b><span>Instant. Nothing is sent anywhere and nothing can be intercepted.</span></button>'+
+        '<button class="opt" data-next><b>Send a code to this number</b><span>For a new phone, a borrowed computer, or a shared handset.</span></button>'+
+      '</div>'+
+      '<div class="btns"><button class="btn ghost" data-jump="rec">I cannot get in — I changed my number or lost my phone</button></div>'+
+      '<div class="reassure">'+LOCK+'<span>We will never text you a link. A message asking you to tap a link and sign in is not from us.</span></div>',
+    side:
+      blk("There is no password",'<p>Nothing to forget, nothing to reset, nothing a caller can talk out of you.</p>',IC.key)+
+      blk("On a new device",'<ul>'+li("A code to your number")+li("Then that device’s fingerprint")+li("The old device loses access at once")+'</ul>',IC.phone)+
+      blk("Not set up yet?",'<p><a class="lnk" data-jump="nw">Set up an account</a> — about two minutes, once.</p>',IC.star)+
+      SEALBLK
+  };};
+
+  /* ---------- signing in: the face, the checks, the welcome ---------- */
+
+  S.silive=function(){
+    var onPhone = live || window.matchMedia("(max-width:760px)").matches;
+    return {
+      ring:false,
+      main:
+        '<p class="eyebrow">Signing in</p>'+
+        '<h1 class="q">'+(onPhone?'Now look at your phone':'Now look at the camera')+'</h1>'+
+        '<p class="sub">The code proved the number still reaches you. This proves it is you holding it.</p>'+
+        '<div class="gap"></div>'+
+        '<div class="sfwrap"><div class="sfview"><i></i><i></i><i></i><i></i>'+
+          '<div class="selfie"><span class="flash" id="flash"></span>'+BUST+'</div></div></div>'+
+        '<p class="note" style="margin-top:18px"><b>Nothing to do but hold still.</b> No blinking, no smiling, '+
+          'no turning your head. The screen flashes a few colours and the way that light falls on a real face '+
+          'is what a photograph or a video cannot fake.</p>'+
+        '<div class="btns"><button class="btn" id="startScan">Start'+ARR+'</button>'+
+          '<button class="btn ghost" data-jump="rec">This is not working</button></div>',
+      side:
+        blk("Why a face and not a password",'<p>A password can be phished out of you by a caller, guessed, '+
+          'reused, or sold. A face on a live check in front of you cannot.</p>',IC.key)+
+        blk("If it will not match",'<ul>'+li("Two tries, then a video call with an officer")+
+          li("Usually the same working day")+li("Nobody is locked out by a camera")+'</ul>',IC.shield)+
+        SEALBLK,
+      after:function(el){
+        var b=el.querySelector("#startScan"), f=el.querySelector("#flash");
+        b.addEventListener("click",function(){
+          b.disabled=true; b.textContent="Hold still\u2026";
+          if(f) f.classList.add("go");
+          setTimeout(next,2300);
+        });
+      }
+    };
+  };
+
+  S.sicheck=checksStep("Signing you in","Give us a moment",
+    "Three checks, and one of them is about the device you are on rather than about you.",[
+    ["Code confirmed","The number still reaches you","0.3s"],
+    ["Live person confirmed","Challenge by light \u2014 not a photograph or a video","0.9s"],
+    ["Face matched to your record","The picture already on your consular file","1.2s"]
+  ],"Continue",
+    blk("This device is now yours",'<p>It is registered to your account, so next time your fingerprint '+
+      'is enough and none of this happens again.</p>',IC.phone),
+    blk("If you did not do this",'<p>Every sign-in is written into your record with the device and the '+
+      'place. You will find it under <b>Profile and security</b>, and you can end any session from there.</p>')
+  );
+
+  /* Signing in cannot know what moved either. It knows what it just did, and
+     it knows the account exists. What is waiting is the dashboard's job to
+     say, from data this system actually holds. */
+  S.sidone=function(){return{
+    ring:"full",
+    main:
+      '<div class="hero-ok"><span class="sring"><svg viewBox="0 0 32 32" fill="none"><path d="m8 16.5 5.5 5.5L24 11" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>'+
+      '<div><h1 class="q">You are in.</h1>'+
+      '<p class="sub">Whatever has moved since you were last here is on your home screen.</p></div></div>'+
+      '<div class="gap"></div>'+
+      '<div class="unlocked">'+
+        '<div class="yes">'+TC+'<span><b>The number still reaches you</b><small>The code you entered proved it, just now.</small></span></div>'+
+        '<div class="yes">'+TC+'<span><b>You were holding the phone</b><small>A live face check, matched to what is already on your record.</small></span></div>'+
+        '<div class="yes">'+TC+'<span><b>This device is registered</b><small>Next time your fingerprint is enough and none of this happens again.</small></span></div>'+
+      '</div>'+
+      '<div class="btns"><a class="btn" href="konsulado.html">Go to my home screen'+ARR+'</a></div>'+
+      '<div class="reassure">'+TC+'<span>Signing in is written into your record with the device and the place, including when we do it.</span></div>',
+    side:
+      blk("If this was not you",'<p>End the session from <b>Profile and security</b> on your home screen. Every sign-in is logged, including ours.</p>')+
+      blk("On another device",'<ul>'+li("A code to your number")+li("Then a face check, once")+li("The old device keeps working until you end it")+'</ul>')+
+      SEALBLK
+  };};
+
+  S.siotp=function(){return{
+    main:
+      '<p class="eyebrow">Signing in</p>'+
+      '<h1 class="q">Enter the code we sent</h1>'+
+      '<p class="sub">Six digits, sent to <b style="color:var(--ink)">+971 50 &bull;&bull;&bull; 4567</b>.</p>'+
+      '<div class="gap"></div>'+
+      '<div class="otp" id="otp">'+[0,1,2,3,4,5].map(function(i){
+        return '<input maxlength="1" inputmode="numeric" aria-label="Digit '+(i+1)+'">';
+      }).join("")+'</div>'+
+      '<div class="btns"><button class="btn" data-next>Continue'+ARR+'</button><button class="btn ghost resend">Send it again</button></div>'+
+      '<div class="reassure">'+TC+'<span>Paste it straight in — we never block pasting.</span></div>',
+    side:
+      blk("Code not arriving?",'<ul>'+li("UAE networks can take a minute")+li("Ask for a voice call instead")+li("Roaming numbers work too")+'</ul>',IC.clock)+
+      blk("Why a code as well",'<p>It proves the number still reaches you. On its own it would not be enough — a swapped SIM gets nobody in.</p>',IC.shield)+
+      SEALBLK,
+    after:function(el){
+      var ins=el.querySelectorAll(".otp input");
+      ins.forEach(function(inp,i){
+        inp.addEventListener("input",function(){if(inp.value&&ins[i+1])ins[i+1].focus();});
+        inp.addEventListener("keydown",function(e){if(e.key==="Backspace"&&!inp.value&&ins[i-1])ins[i-1].focus();});
+      });
+      setTimeout(function(){ins[0].focus();},280);
+    }
+  };};
+
+  S.recover=function(){return{
+    ring:false,
+    main:
+      '<p class="eyebrow">Getting you back in</p>'+
+      '<h1 class="q">Lost the phone, or changed the number?</h1>'+
+      '<p class="sub">Your account is not on the handset. It is your face, held by the Consulate — so we can give it back to you.</p>'+
+      '<div class="gap"></div>'+
+      '<div class="opts">'+
+        '<button class="opt rec" data-next><span class="pill">Usually 2 minutes</span><b>Prove it is you again</b><span>The same liveness check you did at the start, then set a new number.</span></button>'+
+        '<button class="opt" data-jump="rn@1"><b>I have my old number back</b><span>A code to that number, then your face to confirm.</span></button>'+
+        '<button class="opt" data-jump="vid"><b>Speak to a consular officer</b><span>By video, if the checks will not pass. Same working day, usually.</span></button>'+
+      '</div>'+
+      '<div class="reassure">'+WARN+'<span>Whoever now holds your old number cannot get in with it. The number alone has never been enough.</span></div>',
+    side:
+      blk("Why this is safe",'<p>Recovery runs the same face check as enrolment. A stolen phone and a stolen SIM together still fail it.</p>',IC.shield)+
+      blk("What changes",'<ul>'+li("Your record stays exactly as it was")+li("The old device is signed out")+li("Anything in flight keeps going")+'</ul>',IC.file)+
+      SEALBLK
+  };};
+
+  S.recheck=function(){return{
+    main:
+      '<p class="eyebrow">Getting you back in</p>'+
+      '<h1 class="q">Where should we reach you now?</h1>'+
+      '<p class="sub">Give us the new number. We will confirm it after your face check, not before.</p>'+
+      '<div class="gap"></div>'+
+      '<div class="fw"><label class="lbl" for="r1">New mobile number</label><input class="field mn" id="r1" placeholder="+971 50 000 0000"></div>'+
+      '<p class="note"><b>The old number keeps nothing.</b> It stops working the moment the new one is confirmed, even if somebody else is using it.</p>'+
+      '<div class="btns"><button class="btn" data-next>Continue'+ARR+'</button></div>',
+    side:
+      blk("Order matters",'<p>Face first, number second. Doing it the other way round is how account-takeover works everywhere else.</p>',IC.steps)+
+      SEALBLK
+  };};
+
+  S.notfound=function(){return{
+    ring:false,
+    main:
+      '<div class="hero-ok"><span class="sring warn"><svg viewBox="0 0 32 32" fill="none"><path d="M16 9v9M16 22.4v.3" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></span>'+
+      '<div><h1 class="q">We could not find that record.</h1>'+
+      '<p class="sub">This is common and it is not a problem. It almost always means your last passport was issued somewhere other than Dubai.</p></div></div>'+
+      '<div class="gap"></div>'+
+      '<div class="unlocked">'+
+        '<div class="no">'+XC+'<span><b>Issued in Manila, or at another post</b><small>Those records sit with that office, not with this one. We take the document route instead — it works just as well</small></span></div>'+
+        '<div class="no">'+XC+'<span><b>A detail did not match</b><small>A middle name left out, or a birthplace recorded differently. Worth one more try</small></span></div>'+
+        '<div class="yes">'+TC+'<span><b>Either way you are not stuck</b><small>Showing us the passport itself reaches the same level of assurance</small></span></div>'+
+      '</div>'+
+      '<div class="btns"><button class="btn" data-next>Show my passport instead'+ARR+'</button><button class="btn sec" data-jump="nw@3">Show a different document</button></div>',
+    side:
+      blk("Why we say this plainly",'<p>The usual version of this screen says “record not found” and stops. That sends people to the counter for nothing.</p>',IC.help)+
+      blk("Nothing was lost",'<ul>'+li("Nothing you typed was stored")+li("No failed attempt on your name")+li("The other route is not second best")+'</ul>',IC.shield)+
+      SEALBLK
+  };};
+
+  S.wrong=function(){return{
+    main:
+      '<p class="eyebrow">Correcting your record</p>'+
+      '<h1 class="q">What is wrong with it?</h1>'+
+      '<p class="sub">Tell us now and we carry the correction into the application. You do not have to fix the record before you can use it.</p>'+
+      '<div class="gap"></div>'+
+      '<div class="opts">'+
+        '<button class="opt" data-next><b>I have married, or my name changed</b><span>Bring the marriage certificate at the application stage — not now.</span></button>'+
+        '<button class="opt" data-next><b>A name is misspelled</b><span>We compare against your birth record and correct it with the renewal.</span></button>'+
+        '<button class="opt" data-next><b>Date or place of birth is wrong</b><span>This one needs a civil registry document. We will tell you which.</span></button>'+
+        '<button class="opt" data-next><b>Something else</b><span>Describe it and a consular officer reads it before your application starts.</span></button>'+
+      '</div>'+
+      '<div class="reassure">'+TC+'<span>Reporting an error never blocks you. You can carry on and settle it inside the application.</span></div>',
+    side:
+      blk("Why not fix it first",'<p>A correction needs evidence you may not have to hand tonight. Blocking you until then is how people give up.</p>',IC.help)+
+      blk("What we do with it",'<ul>'+li("Flagged on your file")+li("Shown to the officer who decides")+li("Never silently overwritten")+'</ul>',IC.file)+
+      SEALBLK
+  };};
+
+
+
+  /* ================= booking engine ================= */
+  var MON=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var DOW=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+  var DAYL=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+  var CHEV_L='<svg viewBox="0 0 16 16" fill="none"><path d="M10 3 5 8l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  var CHEV_R='<svg viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  var CAL_I='<svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="16" rx="2.4" stroke="currentColor" stroke-width="1.6"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>';
+  var PIN='<svg viewBox="0 0 16 16" fill="none"><path d="M8 14.5S13 10.2 13 6.6a5 5 0 0 0-10 0C3 10.2 8 14.5 8 14.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="8" cy="6.5" r="1.9" stroke="currentColor" stroke-width="1.4"/></svg>';
+
+  /* Philippine posts abroad observe both sets of holidays */
+  var HOL={"1-1":"New Year’s Day","4-9":"Araw ng Kagitingan","5-1":"Labour Day","6-12":"Independence Day",
+           "8-31":"National Heroes’ Day","11-30":"Bonifacio Day","12-2":"UAE National Day",
+           "12-25":"Christmas Day","12-30":"Rizal Day","12-31":"Last day of the year"};
+  function key(d){return (d.getMonth()+1)+"-"+d.getDate();}
+  function iso(d){return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();}
+  function sameDay(a,b){return a&&b&&iso(a)===iso(b);}
+  function midnight(d){var x=new Date(d.getFullYear(),d.getMonth(),d.getDate());return x;}
+  function dowIdx(d){return (d.getDay()+6)%7;}          /* 0 = Monday */
+  function rnd(d,salt){
+    var n=(d.getFullYear()*10000+(d.getMonth()+1)*100+d.getDate())*2654435761+salt*97;
+    n=(n^(n>>>13))>>>0; return (n%1000)/1000;
+  }
+  function nthWeekdayDates(year,month,wd){          /* all dates in month with Mon-index wd */
+    var out=[],d=new Date(year,month,1);
+    while(d.getMonth()===month){ if(dowIdx(d)===wd) out.push(new Date(d)); d.setDate(d.getDate()+1); }
+    return out;
+  }
+
+  function gone(d,h,m){                 /* a slot earlier today is not bookable */
+    var now=new Date();
+    if(!sameDay(d,midnight(now))) return false;
+    return (h*60+m) <= (now.getHours()*60+now.getMinutes()+45);
+  }
+  function monthHasRoom(cfg,y,m){
+    var last=new Date(y,m+1,0).getDate();
+    for(var i=1;i<=last;i++){ var st=dayState(cfg,new Date(y,m,i)); if(st.s==="ok"||st.s==="few") return true; }
+    return false;
+  }
+  function firstOpenMonth(cfg){          /* open the calendar where something is actually free */
+    var t=new Date();
+    for(var k=0;k<4;k++){
+      var y=t.getFullYear(), m=t.getMonth()+k;
+      if(monthHasRoom(cfg,y,m)) return new Date(y,m,1);
+    }
+    return new Date(t.getFullYear(),t.getMonth(),1);
+  }
+
+  var BK={loc:0,date:null,time:null,view:null};
+
+  /* --- availability rules per venue --- */
+  function dayState(cfg,d){
+    var today=midnight(new Date());
+    if(d<today) return {s:"past"};
+    if(HOL[key(d)]) return {s:"closed",why:HOL[key(d)]};
+    return cfg.rule(d,today);
+  }
+
+  var VENUES={
+    video:{
+      rule:function(d,today){
+        if(dowIdx(d)===6) return {s:"closed",why:"Sunday — no video clinics"};
+        var r=rnd(d,11);
+        if(sameDay(d,today)) return r>0.55?{s:"few",n:2}:{s:"few",n:1};
+        if(r<0.13) return {s:"full"};
+        if(r<0.34) return {s:"few",n:1+Math.floor(r*9)};
+        return {s:"ok",n:6+Math.floor(r*14)};
+      },
+      slots:function(d){
+        var out=[],r0=rnd(d,23);
+        for(var h=9;h<18;h++){ for(var m=0;m<60;m+=15){
+          if(h===13) continue;                              /* lunch */
+          if(dowIdx(d)===5 && h>12) continue;               /* Saturday mornings only */
+          var t=(h<10?"0":"")+h+":"+(m<10?"0":"")+m;
+          out.push({t:t,free:rnd(d,h*60+m)>(0.3+r0*0.35) && !gone(d,h,m)});
+        }}
+        return out;
+      },
+      group:function(t){var h=parseInt(t,10);return h<12?"Morning":(h<16?"Afternoon":"Late afternoon");},
+      dur:"15 minutes"
+    },
+    consulate:{
+      rule:function(d,today){
+        var wd=dowIdx(d);
+        if(wd>4) return {s:"closed",why:"Weekend — the counter is closed"};
+        var ahead=Math.round((d-today)/86400000);
+        if(ahead>14) return {s:"closed",why:"Slots open fourteen days ahead"};
+        if(ahead<1) return {s:"full"};
+        var r=rnd(d,41);
+        if(r<0.22) return {s:"full"};
+        if(r<0.5) return {s:"few",n:1+Math.floor(r*7)};
+        return {s:"ok",n:8+Math.floor(r*12)};
+      },
+      slots:function(d){
+        var out=[];
+        for(var h=8;h<12;h++){ for(var m=0;m<60;m+=20){
+          var t=(h<10?"0":"")+h+":"+(m<10?"0":"")+m;
+          out.push({t:t,free:rnd(d,h*77+m)>0.42 && !gone(d,h,m)});
+        }}
+        return out;
+      },
+      group:function(){return "Weekday mornings";},
+      dur:"20 minutes"
+    },
+    outreach:{
+      rule:function(d,today){
+        var sats=nthWeekdayDates(d.getFullYear(),d.getMonth(),5);
+        var isMission=sats.some(function(x,i){return (i===1||i===3)&&sameDay(x,d);});
+        if(!isMission) return {s:"closed"};
+        return {s:"ok",n:0,walkin:true,where:EMIRATE(d)};
+      },
+      slots:function(){return null;},
+      dur:"20 minutes, no appointment"
+    }
+  };
+  function EMIRATE(d){
+    var list=["Al Qusais, Dubai","Al Ain","Sharjah","Ras Al Khaimah","Fujairah","Abu Dhabi"];
+    return list[(d.getFullYear()*12+d.getMonth()+ (d.getDate()>15?1:0))%list.length];
+  }
+
+  function calendarHTML(cfg){
+    var v=BK.view, y=v.getFullYear(), m=v.getMonth();
+    var first=new Date(y,m,1), lead=dowIdx(first);
+    var days=new Date(y,m+1,0).getDate();
+    var today=midnight(new Date());
+    var minMonth=new Date(today.getFullYear(),today.getMonth(),1);
+    var maxMonth=new Date(today.getFullYear(),today.getMonth()+3,1);
+    var cells="";
+    for(var i=0;i<lead;i++) cells+='<span class="d void"></span>';
+    for(var dd=1;dd<=days;dd++){
+      var d=new Date(y,m,dd), st=dayState(cfg,d);
+      var cls="d "+st.s+(st.s==="ok"||st.s==="few"?" dot":"");
+      if(sameDay(d,today)) cls+=" today";
+      if(sameDay(d,BK.date)) cls+=" sel";
+      var lab=DAYL[dowIdx(d)]+" "+dd+" "+MON[m]+" — "+
+        (st.s==="ok"?"available":st.s==="few"?"few slots left":st.s==="full"?"fully booked":st.why||"closed");
+      var act=(st.s==="ok"||st.s==="few");
+      cells+='<button class="'+cls+'" '+(act?'data-day="'+dd+'"':'disabled')+' aria-label="'+lab+'">'+dd+'</button>';
+    }
+    return '<div class="cal">'+
+      '<div class="cal-h"><b>'+MON[m]+' '+y+'</b><span class="cal-nav">'+
+        '<button data-mv="-1" aria-label="Previous month"'+(v<=minMonth?" disabled":"")+'>'+CHEV_L+'</button>'+
+        '<button data-mv="1" aria-label="Next month"'+(v>=maxMonth?" disabled":"")+'>'+CHEV_R+'</button>'+
+      '</span></div>'+
+      '<div class="cal-dow">'+DOW.map(function(x){return "<span>"+x+"</span>";}).join("")+'</div>'+
+      '<div class="cal-grid">'+cells+'</div>'+
+      (monthHasRoom(cfg,y,m)?'':'<p class="cal-none">'+WARNSVG+'<span>Nothing available in '+MON[m]+'. <b data-mv="1">Try '+MON[(m+1)%12]+'</b></span></p>')+
+      '<div class="cal-key"><span class="k1"><i></i>Available</span><span class="k2"><i></i>Few left</span>'+
+      '<span class="k3"><i></i>Full or closed</span></div>'+
+    '</div>';
+  }
+
+  function slotsHTML(cfg){
+    if(!BK.date) return '<div class="slots-empty">'+CAL_I+'Pick a day on the calendar and the times open here.</div>';
+    var st=dayState(cfg,BK.date);
+    var head='<div class="slot-h"><b>'+DAYL[dowIdx(BK.date)]+' '+BK.date.getDate()+' '+MON[BK.date.getMonth()]+'</b><span>'+cfg.dur+'</span></div>';
+    if(st.walkin){
+      return head+'<div class="walkin">'+TICKSVG+'<span><b>Walk in any time, 08:00 to 17:00</b>'+
+        '<p>'+st.where+'. No appointment and no slot to miss — bring nothing but yourself.</p></span></div>';
+    }
+    var list=cfg.slots(BK.date), groups={}, order=[];
+    list.forEach(function(x){
+      var g=cfg.group(x.t);
+      if(!groups[g]){groups[g]=[];order.push(g);}
+      groups[g].push(x);
+    });
+    var out=head;
+    order.forEach(function(g){
+      out+='<div class="slot-g"><h5>'+g+'</h5><div class="slot-row">'+groups[g].map(function(x){
+        return '<button class="sl'+(BK.time===x.t?" on":"")+'" '+(x.free?'data-slot="'+x.t+'"':'disabled')+'>'+x.t+'</button>';
+      }).join("")+'</div></div>';
+    });
+    return out;
+  }
+  var WARNSVG='<svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/><path d="M8 4.6v4M8 11.2v.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>';
+  var TICKSVG='<svg viewBox="0 0 16 16" fill="none"><path d="m3 8.4 3.2 3.2L13 4.8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+  function bookingStep(o){
+    return function(){return{
+      ring:false,
+      main:
+        '<p class="eyebrow">'+o.eyebrow+'</p>'+
+        '<h1 class="q">'+o.title+'</h1>'+
+        '<p class="sub">'+o.sub+'</p>'+
+        '<div class="gap"></div>'+
+        (o.venues?'<div class="bk-loc" id="bkloc"></div>':'')+
+        '<div class="bk"><div id="bkcal"></div><div class="slots" id="bkslot"></div></div>'+
+        '<div id="bksum"></div>'+
+        '<div class="btns"><button class="btn" id="bkgo" disabled>'+o.cta+ARR+'</button>'+
+          (o.alt||'')+'</div>',
+      side:o.side,
+      after:function(el){
+        BK.loc=0; BK.date=null; BK.time=null; BK.view=null;
+        var loc=el.querySelector("#bkloc"), cal=el.querySelector("#bkcal"),
+            slot=el.querySelector("#bkslot"), sum=el.querySelector("#bksum"), go=el.querySelector("#bkgo");
+        function cfg(){ return VENUES[o.venues?o.venues[BK.loc].venue:o.venue]; }
+        BK.view=firstOpenMonth(cfg());
+        function paint(){
+          if(loc) loc.innerHTML=o.venues.map(function(v,i){
+            return '<button class="lc'+(i===BK.loc?" on":"")+'" data-loc="'+i+'"><span class="rd"></span>'+
+              '<span><b>'+v.label+'</b><small>'+v.note+'</small></span></button>';
+          }).join("");
+          cal.innerHTML=calendarHTML(cfg());
+          slot.innerHTML=slotsHTML(cfg());
+          var st=BK.date?dayState(cfg(),BK.date):null;
+          var ready = !!BK.date && (!!(st&&st.walkin) || !!BK.time);
+          go.disabled=!ready;
+          sum.innerHTML = ready
+            ? '<div class="bk-sum">'+PIN+'<span><b>'+DAYL[dowIdx(BK.date)]+' '+BK.date.getDate()+' '+MON[BK.date.getMonth()]+
+              (BK.time?' at '+BK.time:', walk in any time')+'</b> · '+
+              (o.venues?o.venues[BK.loc].label:o.where)+'</span></div>'
+            : '';
+        }
+        el.addEventListener("click",function(e){
+          var t;
+          if((t=e.target.closest("[data-loc]"))){ BK.loc=+t.getAttribute("data-loc"); BK.date=null; BK.time=null; BK.view=firstOpenMonth(cfg()); paint(); return; }
+          if((t=e.target.closest("[data-mv]"))){ BK.view=new Date(BK.view.getFullYear(),BK.view.getMonth()+ +t.getAttribute("data-mv"),1); paint(); return; }
+          if((t=e.target.closest("[data-day]"))){
+            BK.date=new Date(BK.view.getFullYear(),BK.view.getMonth(),+t.getAttribute("data-day"));
+            BK.time=null; paint(); return;
+          }
+          if((t=e.target.closest("[data-slot]"))){ BK.time=t.getAttribute("data-slot"); paint(); return; }
+        });
+        go.addEventListener("click",next);
+        paint();
+      }
+    };};
+  }
+
+  function bookedLine(){
+    if(!BK.date) return "Your booking is confirmed";
+    return DAYL[dowIdx(BK.date)]+" "+BK.date.getDate()+" "+MON[BK.date.getMonth()]+(BK.time?", "+BK.time:"");
+  }
+
+  /* ---- destinations that the side routes need ---- */
+  S.helpme=function(){return{
+    ring:false,
+    main:
+      '<p class="eyebrow">Another way</p>'+
+      '<h1 class="q">The camera check is not the only way.</h1>'+
+      '<p class="sub">Nobody is refused because a camera would not cooperate. Pick whichever of these suits you.</p>'+
+      '<div class="gap"></div>'+
+      '<div class="opts">'+
+        '<button class="opt rec" data-jump="nw@7"><span class="pill">Most people</span><b>Try again with better light</b><span>Face a window, take off nothing, hold the phone at eye level. Two thirds of second attempts pass.</span></button>'+
+        '<button class="opt" data-jump="vid"><b>Talk to a consular officer by video</b><span>A person does the check instead of the camera. Usually the same working day.</span></button>'+
+        '<button class="opt" data-jump="vis"><b>Come in once instead</b><span>Five minutes at the counter, or at the next outreach mission in your emirate.</span></button>'+
+      '</div>'+
+      '<div class="reassure">'+TC+'<span>Nothing you have done so far is lost. Whichever you choose, you carry on from here.</span></div>',
+    side:
+      blk("Why checks fail",'<ul>'+li("Backlight from a window behind you")+li("A cracked or dirty front lens")+li("An older phone with a slow camera")+'</ul>',IC.help)+
+      blk("What never causes it",'<ul>'+li("A hijab, glasses or a beard",false)+li("Your age or your skin",false)+li("Anything on your record",false)+'</ul>',IC.shield)+
+      blk("A failure is not a judgement",'<p>It is not recorded against you and it does not slow anything down later.</p>',IC.file)+
+      SEALBLK
+  };};
+
+  S.video=bookingStep({
+    eyebrow:"By video",
+    title:"Talk to a consular officer",
+    sub:"Fifteen minutes, on your phone or your computer. The officer does in person what the camera could not. Pick a day, then a time.",
+    venue:"video",
+    where:"Video call",
+    cta:"Confirm this slot",
+    side:
+      blk("Opening hours",'<ul>'+li("Monday to Friday, 09:00 to 18:00")+li("Saturday mornings only")+li("Closed Sundays and holidays")+'</ul>',IC.clock)+
+      blk("What happens on the call",'<ul>'+li("The officer confirms it is you")+li("You show a document if you have one")+li("Your account opens on the call")+'</ul>',IC.steps)+
+      blk("Interpreters",'<p>Filipino, Bisaya and Ilocano, on request. Ask when you arrive on the call — no need to book it separately.</p>',IC.help)+
+      blk("If you miss it",'<p>Nothing is lost and nothing is charged. Book another whenever you like.</p>',IC.shield)+
+      SEALBLK
+  });
+  S.videodone=function(){return{
+    ring:"full",
+    main:
+      '<div class="hero-ok"><span class="sring"><svg viewBox="0 0 32 32" fill="none"><path d="m8 16.5 5.5 5.5L24 11" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>'+
+      '<div><h1 class="q">Booked.</h1><p class="sub">'+bookedLine()+', Gulf Standard Time. We will text you the link fifteen minutes before, and email it as well.</p></div></div>'+
+      '<div class="gap"></div>'+
+      '<div class="cards">'+
+        '<div class="card"><span class="tag">Reference</span><b class="mn">KON-VID-7741</b><p>Quote this if you need to move it.</p></div>'+
+        '<div class="card"><span class="tag">Have ready</span><b>Any photo document, if you hold one</b><p>Not essential. The officer can work without it.</p></div>'+
+        '<div class="card"><span class="tag">If you cannot make it</span><b>Move or cancel any time</b><p>No fee and no mark on your file.</p></div>'+
+      '</div>'+
+      '<div class="btns"><button class="btn" id="fin">Back to the start'+ARR+'</button></div>',
+    side:
+      blk("You do not need an account yet",'<p>The call creates it. Nothing has to be set up beforehand.</p>',IC.key)+
+      blk("Nothing was charged",'<p>Consular identity verification carries no fee, by video or in person.</p>',IC.shield)+
+      SEALBLK,
+    after:function(el){ el.querySelector("#fin").addEventListener("click",function(){window.KReset();}); }
+  };};
+
+  S.bookvisit=bookingStep({
+    eyebrow:"The one visit",
+    title:"Book the visit that covers everything",
+    sub:"Twenty minutes, once. Fingerprints and a photograph — and while you are there, national ID, voter registration and police clearance prints in the same session.",
+    venues:[
+      {label:"Outreach mission near you",note:"Weekend missions that travel to your emirate. Walk in, no slot to miss.",venue:"outreach"},
+      {label:"Consulate General \u00b7 Al Qusais Road",note:"Weekday mornings. Slots open fourteen days ahead.",venue:"consulate"}
+    ],
+    cta:"Confirm this visit",
+    alt:'<button class="btn ghost" data-jump="ntf">Just tell me when a mission comes to my emirate</button>',
+    side:
+      blk("What the visit covers",'<ul>'+li("Ten fingerprints and a photograph")+li("National ID enrolment")+li("Voter registration or transfer")+li("Police clearance prints")+'</ul>',IC.star)+
+      blk("Missions travel to you",'<p>Two Saturdays a month, rotating through Al Ain, Sharjah, Ras Al Khaimah, Fujairah and Abu Dhabi. If one is coming to your emirate, wait for it rather than travelling to Dubai.</p>',IC.file)+
+      blk("How long it lasts",'<p>Ten years. You will not be asked to come in again inside that time.</p>',IC.clock)+
+      blk("Bring nothing",'<p>Your account already holds everything the counter needs.</p>',IC.doc)+
+      SEALBLK
+  });
+  S.visitdone=function(){return{
+    ring:"full",
+    main:
+      '<div class="hero-ok"><span class="sring"><svg viewBox="0 0 32 32" fill="none"><path d="m8 16.5 5.5 5.5L24 11" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>'+
+      '<div><h1 class="q">'+bookedLine()+'.</h1><p class="sub">'+(BK.time?'Consulate General, Al Qusais Road. Arrive five minutes early.':'Outreach mission — walk in any time between 08:00 and 17:00. No slot to miss.')+'</p></div></div>'+
+      '<div class="gap"></div>'+
+      '<div class="cards">'+
+        '<div class="card"><span class="tag">Reference</span><b class="mn">KON-ENR-2288</b><p>Show this on your phone at the door.</p></div>'+
+        '<div class="card"><span class="tag">Bring</span><b>Yourself</b><p>Nothing else. We already hold what the counter needs.</p></div>'+
+        '<div class="card"><span class="tag">While you are there</span><b>Four things at once</b><p>Passport prints, national ID, voter registration, police clearance.</p></div>'+
+      '</div>'+
+      '<div class="btns"><button class="btn" id="fin">Back to the start'+ARR+'</button></div>',
+    side:
+      blk("Between now and then",'<ul>'+li("43 services stay open to you")+li("Nothing is on hold")+li("You can move it any time")+'</ul>',IC.steps)+
+      blk("If a mission is cancelled",'<p>We message you and rebook. You will not turn up to a closed door.</p>',IC.shield)+
+      SEALBLK,
+    after:function(el){ el.querySelector("#fin").addEventListener("click",function(){window.KReset();}); }
+  };};
+
+  S.notify=function(){return{
+    ring:"full",
+    main:
+      '<div class="hero-ok"><span class="sring"><svg viewBox="0 0 32 32" fill="none"><path d="m8 16.5 5.5 5.5L24 11" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>'+
+      '<div><h1 class="q">We will tell you.</h1><p class="sub">The moment a mission is announced for your emirate, you get a message. Nothing to remember and nothing to check.</p></div></div>'+
+      '<div class="gap"></div>'+
+      '<div class="cards">'+
+        '<div class="card"><span class="tag">Watching for</span><b>Al Ain, Sharjah, RAK, Fujairah, Abu Dhabi</b><p>Change this any time in your account.</p></div>'+
+        '<div class="card"><span class="tag">Typical notice</span><b>Three to four weeks</b><p>Enough to arrange the day off, or to find out you do not need one.</p></div>'+
+        '<div class="card"><span class="tag">Meanwhile</span><b>43 services stay open to you</b><p>Nothing is waiting on this visit except the last seven.</p></div>'+
+      '</div>'+
+      '<div class="btns"><button class="btn" id="fin">Back to the start'+ARR+'</button>'+
+        '<button class="btn ghost" data-jump="vis">Book a Dubai slot instead</button></div>',
+    side:
+      blk("Why not just book Dubai",'<p>A day of travel from Fujairah costs more than the passport does. Waiting three weeks for a mission is usually the cheaper choice.</p>',IC.help)+
+      blk("If nothing is announced",'<p>After eight weeks with no mission near you, we offer you a Dubai slot rather than leave you waiting.</p>',IC.clock)+
+      SEALBLK,
+    after:function(el){ el.querySelector("#fin").addEventListener("click",function(){window.KReset();}); }
+  };};
+
+  /* ---------- shared engine (shell supplies hooks) ---------- */
+  var H = window.KH || {};
+  var main=document.getElementById("main"), side=document.getElementById("side"),
+      back=document.getElementById("back");
+
+  function render(){
+    var def=S[cur()]();
+    var total=Math.max(1,steps().length-2), n=Math.min(total,Math.max(0,idx-1));
+    var pct = def.ring===false ? 0 : (def.ring==="full" ? 1 : n/total);
+    main.innerHTML='<div class="step">'+def.main+'</div>';
+    if(side) side.innerHTML=def.side||"";
+    if(def.after) def.after(main.firstChild);
+    if(back) back.hidden = idx===0;
+    if(H.chrome) H.chrome({pct:pct, n:n, total:total, first:idx===0, last:def.ring==="full", name:cur(), path:path});
+    if(H.after) H.after(def);
+    window.scrollTo({top:0,behavior:"smooth"});
+  }
+  function next(){ if(idx<steps().length-1){ idx++; render(); } }
+  function prev(){ if(idx>0){ idx--; render(); } }
+  window.KNext=next; window.KPrev=prev; window.KRender=render;
+  window.KState=function(){return {path:path, idx:idx, steps:steps()};};
+  window.KReset=function(){path="nw";idx=0;live=false;render();};
+
+  document.addEventListener("click",function(e){
+    var r=e.target.closest(".resend");
+    if(r){ r.textContent="Sent again \u2713"; r.disabled=true; return; }
+    var lg=e.target.closest(".langrow button");
+    if(lg){ lg.parentElement.querySelectorAll("button").forEach(function(b){b.classList.remove("on");}); lg.classList.add("on"); return; }
+    var j=e.target.closest("[data-jump]");
+    if(j){
+      var t=j.getAttribute("data-jump").split("@");
+      path=t[0]; idx=t[1]?parseInt(t[1],10):0; live=false; render(); return;
+    }
+    var g=e.target.closest("[data-go]");
+    if(g){ path=g.getAttribute("data-go"); next(); return; }
+    if(e.target.closest("[data-next]")){ next(); return; }
+  });
+  if(back) back.addEventListener("click",prev);
+  render();
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+.DS_Store
+Thumbs.db
+Xtras/
+.cursor/
+node_modules/
+scripts/figma-image-export-urls.json
+.deploy-cache.json
+.vscode/sftp.json

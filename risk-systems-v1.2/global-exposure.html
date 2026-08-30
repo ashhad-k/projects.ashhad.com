@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Exposure — Risk System</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
+</head>
+<body class="has-fixed-site-header page-internal">
+
+<nav class="navbar navbar-expand-lg fixed-top site-header">
+  <div class="container">
+    <a class="navbar-brand navbar-brand--internal" href="index.html">
+      <img src="assets/logo.svg" alt="risksystem.io" width="256" />
+    </a>
+
+    <button class="navbar-toggler border-0" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navMenu"
+            aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+      <div class="nav-pill-wrap">
+        <a href="index.html#hero" class="nav-pill-link">Home</a>
+        <a href="features.html#hero" class="nav-pill-link">Features</a>
+        <a href="#hero" class="nav-pill-link active">Global Exposure</a>
+        <a href="pricing.html#hero" class="nav-pill-link">Pricing</a>
+        <a href="about.html#hero" class="nav-pill-link">About</a>
+        <a href="contact.html#hero" class="nav-pill-link">Contact</a>
+      </div>
+    </div>
+
+    <div class="d-none d-lg-block">
+      <a href="contact.html#contact-message" class="btn btn-gradient btn-nav">Join the Waitlist</a>
+    </div>
+  </div>
+</nav>
+
+<div id="loco-main" data-scroll-container>
+
+<section id="hero" class="hero--internal">
+  <div class="internal-hero-bg" aria-hidden="true">
+    <div class="internal-hero-bg__stars"></div>
+    <div class="internal-hero-bg__glow"></div>
+  </div>
+
+  <div class="container text-center position-relative">
+    <div class="internal-hero-tags mb-4">
+      <span class="internal-hero-tag">Global Trading Intelligence Network</span>
+    </div>
+
+    <h1 class="hero-title hero-title--internal mx-auto">
+      See What 1M+ Retail Traders Are Doing in Real-Time
+    </h1>
+
+    <p class="hero-desc hero-desc--internal mx-auto">
+      Join 100+ brokers sharing anonymized exposure data to access massive retail sentiment intelligence and make smarter hedging decisions.
+    </p>
+
+    <div class="hero-actions mb-5">
+      <!-- <a href="#" class="btn btn-ghost">Schedule Demo</a> -->
+      <a href="contact.html#contact-message" class="btn btn-gradient">Join the Waitlist</a>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="fold-content-placeholder mb-5">
+    <!-- Stats row — 3 cols, center-aligned -->
+    <div class="row g-4 g-lg-5 advantage-stats-row advantage-stats-row--3col">
+      <div class="col-12 col-md-4">
+        <div class="fold-stat text-center">
+          <div class="fold-stat-value">1M+</div>
+          <div class="fold-stat-desc">Lots Daily</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="fold-stat text-center">
+          <div class="fold-stat-value">100+</div>
+          <div class="fold-stat-desc">Brokers</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="fold-stat text-center">
+          <div class="fold-stat-value">100%</div>
+          <div class="fold-stat-desc">Anonymous</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     HOW IT WORKS — 3 columns (Data Contribution → Network → Insights) + CTAs
+     Next: section-generic-2 Technical Architecture + diagram
+═══════════════════════════════════════════════════════════════════ -->
+<section class="fold section-how-it-works section-py section-after-hero bg-dark-alt" id="section-how-it-works">
+  <div class="container">
+    <div class="text-center mb-3 mb-md-4">
+      <span class="internal-hero-tag internal-hero-tag--how-it-works">How It Works</span>
+    </div>
+    <h2 id="how-it-works-lead-title" class="how-it-works-lead">
+      A collaborative market data<br />
+      network creating massive retail<br />
+      sentiment intelligence
+    </h2>
+
+    <!-- Figma node 100:4232 — panel (dev) -->
+    <div class="glow-panel glow-panel--how-it-works glow-panel--hiw-figma glow-panel--mt-section">
+      <div class="glow-panel__glow" aria-hidden="true"></div>
+      <img class="hiw-figma-glow-asset" src="assets/figma-how-it-works/panel-glow.svg" alt="" width="421" height="50" decoding="async" aria-hidden="true" />
+      <div class="how-it-works-panel-body w-100 hiw-figma-body">
+        <div class="row gx-4 gx-lg-5 gy-0 hiw-figma-row how-it-works-cols">
+              <div class="col-12 col-lg-4">
+                <article class="hiw-figma-col how-it-works__step">
+                  <div class="hiw-figma-icon hiw-figma-icon--glyph-data" aria-hidden="true">
+                    <span class="hiw-figma-icon__shell">
+                      <span class="hiw-figma-icon__plate">
+                        <span class="hiw-figma-icon__tray">
+                          <span class="hiw-figma-icon__bars">
+                            <span class="hiw-figma-icon__bar hiw-figma-icon__bar--short"></span>
+                            <span class="hiw-figma-icon__bar hiw-figma-icon__bar--tall"></span>
+                            <span class="hiw-figma-icon__bar hiw-figma-icon__bar--mid"></span>
+                          </span>
+                        </span>
+                      </span>
+                    </span>
+                  </div>
+                  <h3 class="hiw-figma-title mb-3">Data Contribution</h3>
+                  <p class="hiw-figma-lead mb-2">What you share</p>
+                  <p class="how-it-works-body mb-3">Net exposure per symbol (e.g., XAUUSD: +125 lots)</p>
+                  <p class="hiw-figma-lead mb-2">What You DON'T Share:</p>
+                  <p class="how-it-works-body mb-3 mb-lg-4">Client info, account numbers, broker identity</p>
+                  <div class="how-it-works-example">
+                    <p class="how-it-works-example__label">Example Data Sent:</p>
+                    <div class="how-it-works-kv">
+                      <span class="how-it-works-kv__k">XAUUSD:</span>
+                      <span class="how-it-works-kv__v">+125 lots BUY</span>
+                      <span class="how-it-works-kv__k">EURUSD:</span>
+                      <span class="how-it-works-kv__v">-85 lots SELL</span>
+                      <span class="how-it-works-kv__k">BTCUSD:</span>
+                      <span class="how-it-works-kv__v">+45 lots BUY</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-12 col-lg-4">
+                <article class="hiw-figma-col how-it-works__step">
+                  <div class="hiw-figma-icon hiw-figma-icon--glyph-network" aria-hidden="true">
+                    <span class="hiw-figma-icon__shell">
+                      <span class="hiw-figma-icon__plate">
+                        <span class="hiw-figma-icon__tray">
+                          <span class="hiw-figma-icon__mesh">
+                            <span class="hiw-figma-icon__mesh-link hiw-figma-icon__mesh-link--1"></span>
+                            <span class="hiw-figma-icon__mesh-link hiw-figma-icon__mesh-link--2"></span>
+                            <span class="hiw-figma-icon__mesh-link hiw-figma-icon__mesh-link--3"></span>
+                            <span class="hiw-figma-icon__mesh-node hiw-figma-icon__mesh-node--a"></span>
+                            <span class="hiw-figma-icon__mesh-node hiw-figma-icon__mesh-node--b"></span>
+                            <span class="hiw-figma-icon__mesh-node hiw-figma-icon__mesh-node--c"></span>
+                            <span class="hiw-figma-icon__mesh-hub"></span>
+                          </span>
+                        </span>
+                      </span>
+                    </span>
+                  </div>
+                  <h3 class="hiw-figma-title mb-3">Network Aggregates</h3>
+                  <ul class="list-unstyled how-it-works-list hiw-figma-list mb-4">
+                    <li class="how-it-works-li">
+                      <img src="assets/figma-how-it-works/bullet-chart.svg" alt="" width="16" height="16" loading="lazy" decoding="async" />
+                      <span>Anonymization engine processes all data</span>
+                    </li>
+                    <li class="how-it-works-li">
+                      <img src="assets/figma-how-it-works/bullet-chart.svg" alt="" width="16" height="16" loading="lazy" decoding="async" />
+                      <span>100+ brokers into global database</span>
+                    </li>
+                    <li class="how-it-works-li">
+                      <img src="assets/figma-how-it-works/bullet-chart.svg" alt="" width="16" height="16" loading="lazy" decoding="async" />
+                      <span>AI analyzes patterns across 1M+ lots</span>
+                    </li>
+                  </ul>
+                  <div class="how-it-works-example">
+                    <p class="how-it-works-example__label">Network Processing:</p>
+                    <div class="how-it-works-kv">
+                      <span class="how-it-works-kv__k">Total Brokers:</span>
+                      <span class="how-it-works-kv__v">100+</span>
+                      <span class="how-it-works-kv__k">Daily Volume:</span>
+                      <span class="how-it-works-kv__v">1M+ lots</span>
+                      <span class="how-it-works-kv__k">Update Frequency:</span>
+                      <span class="how-it-works-kv__v">Real-time</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-12 col-lg-4">
+                <article class="hiw-figma-col how-it-works__step">
+                  <div class="hiw-figma-icon hiw-figma-icon--glyph-insights" aria-hidden="true">
+                    <span class="hiw-figma-icon__shell">
+                      <span class="hiw-figma-icon__plate">
+                        <span class="hiw-figma-icon__tray">
+                          <span class="hiw-figma-icon__trend"></span>
+                        </span>
+                      </span>
+                    </span>
+                  </div>
+                  <h3 class="hiw-figma-title mb-3">Access Real-time Insights</h3>
+                  <ul class="list-unstyled how-it-works-list hiw-figma-list mb-4">
+                    <li class="how-it-works-li">
+                      <img src="assets/figma-how-it-works/bullet-chart.svg" alt="" width="16" height="16" loading="lazy" decoding="async" />
+                      <span>Real-time sentiment per symbol</span>
+                    </li>
+                    <li class="how-it-works-li">
+                      <img src="assets/figma-how-it-works/bullet-chart.svg" alt="" width="16" height="16" loading="lazy" decoding="async" />
+                      <span>Volume trends &amp; spike detection</span>
+                    </li>
+                    <li class="how-it-works-li">
+                      <img src="assets/figma-how-it-works/bullet-chart.svg" alt="" width="16" height="16" loading="lazy" decoding="async" />
+                      <span>Predictive contrarian signals</span>
+                    </li>
+                  </ul>
+                  <div class="how-it-works-example">
+                    <p class="how-it-works-example__label">Example Insight:</p>
+                    <div class="how-it-works-kv">
+                      <span class="how-it-works-kv__k">XAUUSD Sentiment:</span>
+                      <span class="how-it-works-kv__v how-it-works-kv__v--long">78% LONG</span>
+                      <span class="how-it-works-kv__k">Signal:</span>
+                      <span class="how-it-works-kv__v how-it-works-kv__v--signal">Extreme</span>
+                      <span class="how-it-works-kv__k">Action:</span>
+                      <span class="how-it-works-kv__v how-it-works-kv__v--action">Hedge Now</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+      </div>
+    </div>
+
+    <div class="hero-actions justify-content-center mt-5 mb-4">
+      <!-- <a href="#" class="btn btn-ghost">Schedule Demo</a> -->
+      <a href="contact.html#contact-message" class="btn btn-gradient">Join the Waitlist</a>
+    </div>
+    <div class="section-footnote text-center">
+      <p class="footnote-title">The difference is crystal clear.</p>
+      <p class="footnote-sub">Every broker using RiskShield Pro sees this level of protection. Why aren't you?</p>
+    </div>
+  </div>
+</section>
+
+<!-- Technical Architecture — distinct headline vs “How it works” above -->
+<section class="fold section-how-it-works section-py bg-dark-alt" id="section-generic-2">
+  <div class="container">
+    <div class="text-center mb-3 mb-md-4">
+      <span class="internal-hero-tag internal-hero-tag--technical-architecture">Technical Architecture</span>
+    </div>
+    <h2 id="technical-architecture-lead-title" class="how-it-works-lead">
+      From your brokerage platform<br />
+      through the global network<br />
+      to intelligence in your dashboard
+    </h2>
+
+    <!-- Figma 1:3021 — 1200×631 frame, mathematics texture -->
+    <div class="arch-frame" role="img" aria-label="Architecture from your broker through the global network to your dashboard">
+      <div class="arch-frame__math-bg" aria-hidden="true"></div>
+      <div class="arch-frame__content">
+        <div class="arch-frame__row">
+          <div class="arch-col arch-col--cyan">
+            <div class="arch-cell arch-cell--cyan arch-cell--lg">
+              <span class="arch-cell__head">YOUR BROKER</span>
+            </div>
+            <div class="arch-cell arch-cell--cyan arch-cell--sm">MT4 / MT5 / cTrader</div>
+            <div class="arch-cell arch-cell--cyan arch-cell--sm">RiskShield Pro</div>
+            <div class="arch-cell arch-cell--cyan arch-cell--sm">Anonymizer</div>
+          </div>
+
+          <p class="arch-bridge">
+            <span class="d-none d-lg-block">Encrypted,<br />Anonymized<br />Data</span>
+            <span class="d-lg-none">Encrypted, Anonymized Data</span>
+          </p>
+
+          <div class="arch-col arch-col--green">
+            <div class="arch-cell arch-cell--green arch-cell--lg">
+              <span class="arch-cell__head arch-cell__head--twoline">GLOBAL TRADING<br />INTELLIGENCE NETWORK</span>
+            </div>
+            <div class="arch-cell arch-cell--green arch-cell--sm">1,800+ Brokers</div>
+            <div class="arch-cell arch-cell--green arch-cell--sm">Aggregation Engine</div>
+            <div class="arch-cell arch-cell--green arch-cell--sm">Real-Time Analytics</div>
+            <div class="arch-cell arch-cell--green arch-cell--sm">AI Pattern Recognition</div>
+            <div class="arch-cell arch-cell--green arch-cell--sm">1M+ Lots Analyzed</div>
+          </div>
+
+          <p class="arch-bridge">
+            <span class="d-none d-lg-block">Aggregated<br />Insights</span>
+            <span class="d-lg-none">Aggregated Insights</span>
+          </p>
+
+          <div class="arch-col arch-col--purple">
+            <div class="arch-cell arch-cell--purple arch-cell--lg">
+              <span class="arch-cell__head">YOUR DASHBOARD</span>
+            </div>
+            <div class="arch-cell arch-cell--purple arch-cell--sm">Global Sentiment</div>
+            <div class="arch-cell arch-cell--purple arch-cell--sm">Retail Positioning</div>
+            <div class="arch-cell arch-cell--purple arch-cell--sm">Volume Trends</div>
+            <div class="arch-cell arch-cell--purple arch-cell--sm">Contrarian Signals</div>
+            <div class="arch-cell arch-cell--purple arch-cell--sm">Predictive Insights</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-actions justify-content-center text-center mt-5 mb-4">
+      <!-- <a href="#" class="btn btn-ghost">Schedule Demo</a> -->
+      <a href="contact.html#contact-message" class="btn btn-gradient">Join the Waitlist</a>
+    </div>
+    <div class="section-footnote text-center">
+      <p class="footnote-title">The difference is crystal clear.</p>
+      <p class="footnote-sub">Every broker using RiskShield Pro sees this level of protection. Why aren't you?</p>
+    </div>
+  </div>
+</section>
+
+<section class="fold fold-hero-structure fold-hero-structure--center section-py bg-dark-alt" id="section-generic-3">
+  <div class="container">
+    <div class="mb-4">
+      <span class="hero-pill">Key Benefits</span>
+    </div>
+    <h2 class="hero-title">
+      Powerful advantages that give you an edge in risk management and profitability
+    </h2>
+
+    <!-- Tab heads: same pattern as index.html compare-switch-wrap / compare-switch__tab -->
+    <div class="compare-switch-wrap mt-4 mb-5">
+      <div class="compare-switch" role="tablist" aria-label="Key benefits">
+        <button type="button" class="compare-switch__tab" role="tab" id="benefit-tab-market" aria-selected="false" aria-controls="benefit-panel-market" data-compare="market">
+          Market Intelligence
+        </button>
+        <button type="button" class="compare-switch__tab" role="tab" id="benefit-tab-risk" aria-selected="false" aria-controls="benefit-panel-risk" data-compare="risk">
+          Risk Management
+        </button>
+        <button type="button" class="compare-switch__tab compare-switch__tab--active" role="tab" id="benefit-tab-competitive" aria-selected="true" aria-controls="benefit-panel-competitive" data-compare="competitive">
+          Competitive Intelligence
+        </button>
+        <button type="button" class="compare-switch__tab" role="tab" id="benefit-tab-predictive" aria-selected="false" aria-controls="benefit-panel-predictive" data-compare="predictive">
+          Predictive Power
+        </button>
+        <button type="button" class="compare-switch__tab" role="tab" id="benefit-tab-network" aria-selected="false" aria-controls="benefit-panel-network" data-compare="network">
+          Network Effect
+        </button>
+      </div>
+    </div>
+
+    <div class="benefit-dashboard" id="benefit-panels">
+        <div class="benefit-panel" id="benefit-panel-market" role="tabpanel" aria-labelledby="benefit-tab-market" aria-hidden="true" hidden>
+          <p class="hero-desc mx-auto text-center mb-0">Content coming soon.</p>
+        </div>
+        <div class="benefit-panel" id="benefit-panel-risk" role="tabpanel" aria-labelledby="benefit-tab-risk" aria-hidden="true" hidden>
+          <p class="hero-desc mx-auto text-center mb-0">Content coming soon.</p>
+        </div>
+        <div class="benefit-panel benefit-panel--active" id="benefit-panel-competitive" role="tabpanel" aria-labelledby="benefit-tab-competitive" aria-hidden="false">
+          <!-- Copied from index.html: intel-stacked-visual + intel-stats-band -->
+          <div class="intel-stacked-visual intel-stacked-visual--benefit mb-4">
+            <div class="intel-stacked-visual__wrap">
+              <div class="intel-stacked-visual__ghost intel-stacked-visual__ghost--back" aria-hidden="true"></div>
+              <div class="intel-stacked-visual__ghost intel-stacked-visual__ghost--mid" aria-hidden="true"></div>
+              <div class="intel-stacked-visual__card">
+                <div class="intel-stacked-visual__body">
+                  <div class="intel-stacked-visual__copy">
+                    <h3 class="intel-stacked-visual__title">
+                      Competitive Intelligence
+                    </h3>
+                    <p class="intel-stacked-visual__desc">
+                      Benchmark your metrics against 1,800+ participating brokers
+                    </p>
+                    <div class="intel-stacked-visual__features">
+                      <div class="intel-stacked-visual__feature">
+                        <span class="intel-stacked-visual__feature-icon intel-feature-glyph intel-feature-glyph--benchmark" aria-hidden="true"></span>
+                        <span class="intel-stacked-visual__feature-label">
+                          <span class="intel-stacked-visual__feature-line">
+                            <span class="intel-stacked-visual__feature-key">Industry benchmarks:</span><span class="intel-stacked-visual__feature-val">Compare your metrics to global averages</span>
+                          </span>
+                        </span>
+                      </div>
+                      <div class="intel-stacked-visual__feature">
+                        <span class="intel-stacked-visual__feature-icon intel-feature-glyph intel-feature-glyph--symbols" aria-hidden="true"></span>
+                        <span class="intel-stacked-visual__feature-label">
+                          <span class="intel-stacked-visual__feature-line">
+                            <span class="intel-stacked-visual__feature-key">Symbol popularity:</span><span class="intel-stacked-visual__feature-val">Which instruments are trending globally?</span>
+                          </span>
+                        </span>
+                      </div>
+                      <div class="intel-stacked-visual__feature">
+                        <span class="intel-stacked-visual__feature-icon intel-feature-glyph intel-feature-glyph--volume-bars" aria-hidden="true"></span>
+                        <span class="intel-stacked-visual__feature-label">
+                          <span class="intel-stacked-visual__feature-line">
+                            <span class="intel-stacked-visual__feature-key">Volume trends:</span><span class="intel-stacked-visual__feature-val">See what retail is trading most</span>
+                          </span>
+                        </span>
+                      </div>
+                      <div class="intel-stacked-visual__feature">
+                        <span class="intel-stacked-visual__feature-icon intel-feature-glyph intel-feature-glyph--share" aria-hidden="true"></span>
+                        <span class="intel-stacked-visual__feature-label">
+                          <span class="intel-stacked-visual__feature-line">
+                            <span class="intel-stacked-visual__feature-key">Market share insights:</span><span class="intel-stacked-visual__feature-val">Understand your position in the market</span>
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="intel-stacked-visual__art" aria-hidden="true">
+                    <div class="intel-stacked-visual__chart-burst intel-stacked-visual__chart-burst--green">
+                      <div class="intel-stacked-visual__chart-icon intel-stacked-visual__chart-icon--green">
+                        <svg viewBox="0 0 64 64" width="140" height="140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                          <rect x="14" y="34" width="10" height="18" rx="2" fill="#0d0d0d" />
+                          <rect x="28" y="18" width="10" height="34" rx="2" fill="#0d0d0d" />
+                          <rect x="42" y="26" width="10" height="26" rx="2" fill="#0d0d0d" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Figma 1:3296 — 4 KPIs, gold glow values -->
+          <div class="intel-stats-band intel-stats-band--key-benefits mx-auto text-center">
+            <div class="intel-stats-band__flex" role="list">
+              <div class="intel-stats-band__cell" role="listitem">
+                <p class="intel-stats-band__num">15-20 hrs</p>
+                <p class="intel-stats-band__lbl">Weekly Time Saved</p>
+              </div>
+              <div class="intel-stats-band__cell" role="listitem">
+                <p class="intel-stats-band__num">$50K-$200K</p>
+                <p class="intel-stats-band__lbl">Average Annual Savings</p>
+              </div>
+              <div class="intel-stats-band__cell" role="listitem">
+                <p class="intel-stats-band__num">30%</p>
+                <p class="intel-stats-band__lbl">Hedging Cost Reduction</p>
+              </div>
+              <div class="intel-stats-band__cell" role="listitem">
+                <p class="intel-stats-band__num">2-3 months</p>
+                <p class="intel-stats-band__lbl">Typical Payback Period</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="benefit-panel" id="benefit-panel-predictive" role="tabpanel" aria-labelledby="benefit-tab-predictive" aria-hidden="true" hidden>
+          <p class="hero-desc mx-auto text-center mb-0">Content coming soon.</p>
+        </div>
+        <div class="benefit-panel" id="benefit-panel-network" role="tabpanel" aria-labelledby="benefit-tab-network" aria-hidden="true" hidden>
+          <p class="hero-desc mx-auto text-center mb-0">Content coming soon.</p>
+        </div>
+      </div>
+
+    <div class="hero-actions mb-4">
+      <!-- <a href="#" class="btn btn-ghost">Schedule Demo</a> -->
+      <a href="contact.html#contact-message" class="btn btn-gradient">Join the Waitlist</a>
+    </div>
+
+    <div class="section-footnote text-center">
+      <p class="footnote-title">The difference is crystal clear.</p>
+      <p class="footnote-sub">Every broker using RiskShield Pro sees this level of protection. Why aren't you?</p>
+    </div>
+  </div>
+</section>
+
+<section class="fold fold-hero-structure fold-hero-structure--center section-py bg-dark-alt fold-with-home-hero-glow" id="section-generic-4">
+  <div class="fold-dashboard-hero-slab">
+    <div class="container position-relative text-center dashboard-hero-heading">
+      <div class="mb-4">
+        <span class="hero-pill">Dashboard Features</span>
+      </div>
+      <h2 class="hero-title">
+        Access powerful analytics and insights from 1M+ lots of global trading data
+      </h2>
+    </div>
+
+    <div class="container-fluid px-0 dashboard-hero-wide-art-wrap">
+      <img class="dashboard-hero-wide-art" src="assets/bg/home-hero.svg" width="1920" height="600" alt="" aria-hidden="true" decoding="async" />
+    </div>
+
+    <div class="container position-relative text-center dashboard-hero-cta">
+      <div class="hero-actions justify-content-center mt-5 mb-4">
+        <!-- <a href="#" class="btn btn-ghost">Schedule Demo</a> -->
+        <a href="contact.html#contact-message" class="btn btn-gradient">Join the Waitlist</a>
+      </div>
+      <div class="section-footnote text-center">
+        <p class="footnote-title">The difference is crystal clear.</p>
+        <p class="footnote-sub">Every broker using RiskShield Pro sees this level of protection. Why aren't you?</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fold fold-hero-structure fold-hero-structure--center section-how-it-works section-py section-before-footer bg-dark-alt" id="section-generic-5">
+  <div class="container">
+    <div class="mb-4">
+      <span class="hero-pill">Real-World Use Cases</span>
+    </div>
+    <h2 class="hero-title hero-title--gti-use-cases">
+      See how brokers use GTI to make<br />
+      smarter decisions and protect<br />
+      their books
+    </h2>
+
+    <div class="compare-switch-wrap mt-4 mb-5">
+      <div class="compare-switch" role="tablist" aria-label="Real-world use cases by case">
+        <button type="button" class="compare-switch__tab compare-switch__tab--active" role="tab"
+                id="gti-case-tab-01" aria-selected="true" aria-controls="gti-case-panel-case01"
+                data-compare="case01">
+          Case 01
+        </button>
+        <button type="button" class="compare-switch__tab" role="tab"
+                id="gti-case-tab-02" aria-selected="false" aria-controls="gti-case-panel-case02"
+                data-compare="case02">
+          Case 02
+        </button>
+        <button type="button" class="compare-switch__tab" role="tab"
+                id="gti-case-tab-03" aria-selected="false" aria-controls="gti-case-panel-case03"
+                data-compare="case03">
+          Case 03
+        </button>
+      </div>
+    </div>
+
+    <div id="gti-case-panels">
+      <!-- Case 01 — original hedge / XAUUSD flow -->
+      <div class="gti-case-panel gti-case-panel--active" id="gti-case-panel-case01" role="tabpanel"
+           aria-labelledby="gti-case-tab-01" data-gti-panel="case01" aria-hidden="false">
+        <div class="gti-case-flow">
+          <div class="glow-panel glow-panel--gti-case-study" role="region"
+               aria-label="Case 01: Hedging optimization — problem statement">
+            <div class="glow-panel__glow" aria-hidden="true"></div>
+            <div class="gti-case-study">
+              <h3 class="gti-case-study__title">Case 1: Hedging Optimization</h3>
+              <span class="gti-case-study__badge">Problem</span>
+              <p class="gti-case-study__body">
+                You have 125 lots net LONG on XAUUSD. Should you hedge this position? Is this exposure risky?
+              </p>
+            </div>
+          </div>
+
+          <div class="glow-panel glow-panel--gti-intelligence-cyan" role="region"
+               aria-label="Case 01: Global intelligence summary">
+            <div class="glow-panel__glow" aria-hidden="true"></div>
+            <div class="gti-intelligence-panel">
+              <span class="gti-intelligence-panel__badge">Global Intelligence Shows</span>
+              <div class="row g-3 g-lg-4 gti-intelligence-panel__grid">
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="gti-stat-card">
+                    <p class="gti-stat-card__label">Global Retail Sentiment:</p>
+                    <div class="gti-stat-card__value gti-stat-card__value--coral">
+                      <span>78% LONG</span>
+                      <span>(Extreme)</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="gti-stat-card">
+                    <p class="gti-stat-card__label">Global Retail Sentiment:</p>
+                    <div class="gti-stat-card__value gti-stat-card__value--gold">
+                      <span>3x Normal</span>
+                      <span>Volume</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="gti-stat-card">
+                    <p class="gti-stat-card__label">Global Retail Sentiment:</p>
+                    <div class="gti-stat-card__value gti-stat-card__value--gold">
+                      <span>Price drops 68%</span>
+                      <span>when &gt;75% long</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="gti-stat-card">
+                    <p class="gti-stat-card__label">Global Retail Sentiment:</p>
+                    <div class="gti-stat-card__value gti-stat-card__value--coral">
+                      <span>Hedge</span>
+                      <span>Immediately</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="glow-panel glow-panel--gti-action-amber" role="region"
+               aria-label="Case 01: Recommended actions">
+            <div class="glow-panel__glow" aria-hidden="true"></div>
+            <div class="gti-action-panel">
+              <span class="gti-action-panel__badge">Action</span>
+              <div class="row g-3 g-lg-4 gti-action-panel__grid">
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="gti-action-tile">
+                    <p class="gti-action-tile__text mb-0">
+                      <span class="d-block">Hedge your 125 lots LONG</span>
+                      <span class="d-block">position immediately</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="gti-action-tile">
+                    <p class="gti-action-tile__text mb-0">
+                      <span class="d-block">Move XAUUSD clients to</span>
+                      <span class="d-block">A-Book (high risk)</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="gti-action-tile">
+                    <p class="gti-action-tile__text mb-0">
+                      <span class="d-block">Tighten risk limits on gold</span>
+                      <span class="d-block">positions</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="gti-action-tile">
+                    <p class="gti-action-tile__text mb-0">Monitor for sentiment reversal</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="glow-panel glow-panel--gti-result-violet" role="region" aria-label="Case 01 outcome">
+            <div class="glow-panel__glow" aria-hidden="true"></div>
+            <div class="gti-result-panel">
+              <span class="gti-result-panel__badge">Result</span>
+              <p class="gti-result-panel__body mb-0">
+                Avoided potential $50K+ loss when gold dropped 2% within 4 hours. Hedging saved your book.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 02 — EURUSD / liquidity -->
+      <div class="gti-case-panel" id="gti-case-panel-case02" role="tabpanel"
+           aria-labelledby="gti-case-tab-02" data-gti-panel="case02" aria-hidden="true" hidden>
+        <div class="gti-case-flow">
+          <div class="glow-panel glow-panel--gti-case-study" role="region"
+               aria-label="Case 02: Spread stress — problem statement">
+            <div class="glow-panel__glow" aria-hidden="true"></div>
+            <div class="gti-case-study">
+              <h3 class="gti-case-study__title">Case 2: Spread &amp; Flow Stress</h3>
+              <span class="gti-case-study__badge">Problem</span>
+              <p class="gti-case-study__body">
+                EURUSD spreads blew out 2.3&times; normal during London open while your book is net LONG retail on the pair. Is this toxic flow or a hedge gap?
+              </p>
+            </div>
+          </div>
+
+          <div class="glow-panel glow-panel--gti-intelligence-cyan" role="region"
+               aria-label="Case 02: Global intelligence summary">
+            <div class="glow-panel__glow" aria-hidden="true"></div>
+            <div class="gti-intelligence-panel">
+              <span class="gti-intelligence-panel__badge">Global Intelligence Shows</span>
+              <div class="row g-3 g-lg-4 gti-intelligence-panel__grid">
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="gti-stat-card">
+                    <p class="gti-stat-card__label">Global Retail Sentiment:</p>
+                    <div class="gti-stat-card__value gti-stat-card__value--gold">
+                      <span>62% LONG</span>
+                      <span>EURUSD</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="gti-stat-card">
+                    <p class="gti-stat-card__label">Global Retail Sentiment:</p>
+                    <div class="gti-stat-card__value gti-stat-card__value--coral">
+                      <span>LP spread spike</span>
+                      <span>peer avg +1.8&times;</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="gti-stat-card">
+                    <p class="gti-stat-card__label">Global Retail Sentiment:</p>
+                    <div class="gti-stat-card__value gti-stat-card__value--gold">
+                      <span>Widening clusters</span>
+                      <span>with news events</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="gti-stat-card">
+                    <p class="gti-stat-card__label">Global Retail Sentiment:</p>
+                    <div class="gti-stat-card__value gti-stat-card__value--coral">
+                      <span>Reduce</span>
+                      <span>Aggressive flow</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="glow-panel glow-panel--gti-action-amber" role="region"
+               aria-label="Case 02: Recommended actions">
+            <div class="glow-panel__glow" aria-hidden="true"></div>
+            <div class="gti-action-panel">
+              <span class="gti-action-panel__badge">Action</span>
+              <div class="row g-3 g-lg-4 gti-action-panel__grid">
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="gti-action-tile">
+                    <p class="gti-action-tile__text mb-0">
+                      <span class="d-block">Throttle aggressive EURUSD</span>
+                      <span class="d-block">market orders temporarily</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="gti-action-tile">
+                    <p class="gti-action-tile__text mb-0">
+                      <span class="d-block">Route volatile flow to</span>
+                      <span class="d-block">B-Book with tight caps</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="gti-action-tile">
+                    <p class="gti-action-tile__text mb-0">
+                      <span class="d-block">Hedge delta vs</span>
+                      <span class="d-block">primary LP ladder</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="gti-action-tile">
+                    <p class="gti-action-tile__text mb-0">Alert compliance on spread regime shift</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="glow-panel glow-panel--gti-result-violet" role="region" aria-label="Case 02 outcome">
+            <div class="glow-panel__glow" aria-hidden="true"></div>
+            <div class="gti-result-panel">
+              <span class="gti-result-panel__badge">Result</span>
+              <p class="gti-result-panel__body mb-0">
+                Kept execution quality within policy while the spike resolved. Estimated $18K in slip and churn avoided on that session.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 03 — concentration / copy-trading pattern -->
+      <div class="gti-case-panel" id="gti-case-panel-case03" role="tabpanel"
+           aria-labelledby="gti-case-tab-03" data-gti-panel="case03" aria-hidden="true" hidden>
+        <div class="gti-case-flow">
+          <div class="glow-panel glow-panel--gti-case-study" role="region"
+               aria-label="Case 03: Concentration — problem statement">
+            <div class="glow-panel__glow" aria-hidden="true"></div>
+            <div class="gti-case-study">
+              <h3 class="gti-case-study__title">Case 3: Hidden Concentration</h3>
+              <span class="gti-case-study__badge">Problem</span>
+              <p class="gti-case-study__body">
+                Four high-value accounts are opening correlated US30 positions within minutes of each other. Is this coordinated risk or coincidence?
+              </p>
+            </div>
+          </div>
+
+          <div class="glow-panel glow-panel--gti-intelligence-cyan" role="region"
+               aria-label="Case 03: Global intelligence summary">
+            <div class="glow-panel__glow" aria-hidden="true"></div>
+            <div class="gti-intelligence-panel">
+              <span class="gti-intelligence-panel__badge">Global Intelligence Shows</span>
+              <div class="row g-3 g-lg-4 gti-intelligence-panel__grid">
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="gti-stat-card">
+                    <p class="gti-stat-card__label">Global Retail Sentiment:</p>
+                    <div class="gti-stat-card__value gti-stat-card__value--coral">
+                      <span>71% LONG</span>
+                      <span>US indices</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="gti-stat-card">
+                    <p class="gti-stat-card__label">Global Retail Sentiment:</p>
+                    <div class="gti-stat-card__value gti-stat-card__value--gold">
+                      <span>Cluster match</span>
+                      <span>92% signal overlap</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="gti-stat-card">
+                    <p class="gti-stat-card__label">Global Retail Sentiment:</p>
+                    <div class="gti-stat-card__value gti-stat-card__value--gold">
+                      <span>Vol spike risk</span>
+                      <span>if news misses</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="gti-stat-card">
+                    <p class="gti-stat-card__label">Global Retail Sentiment:</p>
+                    <div class="gti-stat-card__value gti-stat-card__value--coral">
+                      <span>Flag for review</span>
+                      <span>before rollover</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="glow-panel glow-panel--gti-action-amber" role="region"
+               aria-label="Case 03: Recommended actions">
+            <div class="glow-panel__glow" aria-hidden="true"></div>
+            <div class="gti-action-panel">
+              <span class="gti-action-panel__badge">Action</span>
+              <div class="row g-3 g-lg-4 gti-action-panel__grid">
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="gti-action-tile">
+                    <p class="gti-action-tile__text mb-0">
+                      <span class="d-block">Link accounts into a</span>
+                      <span class="d-block">single exposure bucket</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="gti-action-tile">
+                    <p class="gti-action-tile__text mb-0">
+                      <span class="d-block">Lower max position per</span>
+                      <span class="d-block">cluster &amp; enforce margin</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="gti-action-tile">
+                    <p class="gti-action-tile__text mb-0">
+                      <span class="d-block">Move cluster to</span>
+                      <span class="d-block">agency-only execution</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="gti-action-tile">
+                    <p class="gti-action-tile__text mb-0">Open AML / surveillance ticket with timeline</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="glow-panel glow-panel--gti-result-violet" role="region" aria-label="Case 03 outcome">
+            <div class="glow-panel__glow" aria-hidden="true"></div>
+            <div class="gti-result-panel">
+              <span class="gti-result-panel__badge">Result</span>
+              <p class="gti-result-panel__body mb-0">
+                Exposure was capped before a gap-down open. The desk saw a clean audit trail and avoided a single-point blow-up on US30.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-actions justify-content-center mt-5 mb-4">
+      <!-- <a href="#" class="btn btn-ghost">Schedule Demo</a> -->
+      <a href="contact.html#contact-message" class="btn btn-gradient">Join the Waitlist</a>
+    </div>
+
+    <div class="section-footnote text-center">
+      <p class="footnote-title">The difference is crystal clear.</p>
+      <p class="footnote-sub">Every broker using RiskShield Pro sees this level of protection. Why aren't you?</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     Footer Starts here — GLOW SEPARATOR
+══════════════════════════════════════════════════════ -->
+<section class="section-glowed">
+  <div class="container">
+    <div class="section-glowed-bg" aria-hidden="true"></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     FINAL CTA
+══════════════════════════════════════════════════════ -->
+<section id="cta">
+  <div class="container text-center">
+    <div class="cta-logo mb-0" data-aos="fade-up">
+      <img src="assets/logo/logo-block.svg" alt="RiskSystem" width="100" height="100" />
+    </div>
+    <h2 class="hero-title cta-title" data-aos="fade-up">
+      Stop Guessing.<br /><span>Start Controlling Risk.</span>
+    </h2>
+    <p class="hero-desc mx-auto" data-aos="fade-up" data-aos-delay="80">
+      Join 2,800+ brokers who protect their book, prevent fraud, and grow profitability with real-time intelligence.
+    </p>
+    <div class="hero-actions" data-aos="fade-up" data-aos-delay="160">
+      <!-- <a href="#" class="btn btn-ghost">Schedule Demo</a> -->
+      <a href="contact.html#contact-message" class="btn btn-gradient">Join the Waitlist</a>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="container">
+    <div class="row g-5 pb-5" style="border-bottom:1px solid var(--border-color);">
+      <div class="col-12 col-lg-5">
+        <a href="index.html" class="navbar-brand">
+          <img src="assets/logo.svg" alt="risksystem.io" width="256" />
+        </a>
+        <p class="footer-tagline">
+          Real-Time Risk Management For<br />Modern Brokerages
+        </p>
+      </div>
+      <div class="col-12 col-lg-7">
+        <div class="footer-col footer-col--nav">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html#hero">Home</a></li>
+            <li><a href="features.html#hero">Features</a></li>
+            <li><a href="global-exposure.html#hero">Global Exposure</a></li>
+            <li><a href="pricing.html#hero">Pricing</a></li>
+            <li><a href="about.html#hero">About</a></li>
+            <li><a href="contact.html#hero">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap gap-3 pt-4">
+      <span>© 2026 Risksystems.io — All Rights Reserved</span>
+      <div class="d-flex gap-4">
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div><!-- /#loco-main [data-scroll-container] -->
+
+<button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top">
+  <span class="back-to-top__icon" aria-hidden="true">↑</span>
+ </button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+<script>
+(function () {
+  var container = document.querySelector('#loco-main[data-scroll-container]');
+  if (!container || typeof LocomotiveScroll === 'undefined') return;
+
+  var prefersReduced =
+    typeof window.matchMedia === 'function' &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var scroll = new LocomotiveScroll({
+    el: container,
+    smooth: !prefersReduced,
+    smartphone: { smooth: false },
+    tablet: { smooth: false },
+  });
+  window.__locoScroll = scroll;
+
+  var nav = document.querySelector('.navbar');
+  var backToTop = document.getElementById('back-to-top');
+
+  function updateNavScrollState(scrollY) {
+    if (!nav) return;
+    nav.classList.toggle('navbar-scrolled', scrollY > 24);
+  }
+
+  scroll.on('scroll', function (args) {
+    if (!args || !args.scroll) return;
+    updateNavScrollState(args.scroll.y);
+    if (backToTop) backToTop.classList.toggle('back-to-top--visible', args.scroll.y > 360);
+  });
+  updateNavScrollState(0);
+
+  function refreshLoco() { scroll.update(); }
+  window.addEventListener('load', function () { refreshLoco(); setTimeout(refreshLoco, 300); }, { once: true });
+  requestAnimationFrame(refreshLoco);
+  window.addEventListener('resize', function () { setTimeout(refreshLoco, 200); });
+
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      if (anchor.hasAttribute('data-bs-toggle') || anchor.hasAttribute('data-bs-target')) return;
+      var href = anchor.getAttribute('href');
+      if (!href || href === '#' || href.length < 2) return;
+      var target = document.querySelector(href);
+      if (!target) return;
+      e.preventDefault();
+      scroll.scrollTo(target, { offset: -92, duration: 900, easing: [0.25, 0.0, 0.35, 1.0] });
+    });
+  });
+
+  if (backToTop) {
+    backToTop.addEventListener('click', function () {
+      var hero = document.getElementById('hero');
+      if (!hero) return;
+      scroll.scrollTo(hero, { offset: -92, duration: prefersReduced ? 0 : 700, easing: [0.25, 0.0, 0.35, 1.0] });
+    });
+  }
+})();
+
+/* Key Benefits — 5-tab switcher (same classes as index compare-switch; default: Competitive Intelligence) */
+(function () {
+  var section = document.getElementById('section-generic-3');
+  if (!section) return;
+  var tabs = section.querySelectorAll('.compare-switch__tab');
+  var panelsWrap = document.getElementById('benefit-panels');
+  if (!tabs.length || !panelsWrap) return;
+
+  function setActive(mode) {
+    tabs.forEach(function (t) {
+      var on = t.getAttribute('data-compare') === mode;
+      t.classList.toggle('compare-switch__tab--active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    panelsWrap.querySelectorAll('.benefit-panel').forEach(function (p) {
+      var on = p.id === 'benefit-panel-' + mode;
+      p.hidden = !on;
+      p.classList.toggle('benefit-panel--active', on);
+      p.setAttribute('aria-hidden', on ? 'false' : 'true');
+    });
+    if (window.__locoScroll && typeof window.__locoScroll.update === 'function') {
+      window.__locoScroll.update();
+    }
+  }
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      setActive(tab.getAttribute('data-compare'));
+    });
+  });
+
+  setActive('competitive');
+})();
+
+/* Real-World Use Cases — Case 01 / 02 / 03 tabs (compare-switch pattern) */
+(function () {
+  var section = document.getElementById('section-generic-5');
+  if (!section) return;
+  var tabs = section.querySelectorAll('.compare-switch__tab');
+  var panelsWrap = document.getElementById('gti-case-panels');
+  if (!tabs.length || !panelsWrap) return;
+
+  function setActive(mode) {
+    tabs.forEach(function (t) {
+      var on = t.getAttribute('data-compare') === mode;
+      t.classList.toggle('compare-switch__tab--active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    panelsWrap.querySelectorAll('.gti-case-panel').forEach(function (p) {
+      var on = p.getAttribute('data-gti-panel') === mode;
+      p.hidden = !on;
+      p.classList.toggle('gti-case-panel--active', on);
+      p.setAttribute('aria-hidden', on ? 'false' : 'true');
+    });
+    if (window.__locoScroll && typeof window.__locoScroll.update === 'function') {
+      window.__locoScroll.update();
+    }
+  }
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      setActive(tab.getAttribute('data-compare'));
+    });
+  });
+
+  setActive('case01');
+})();
+</script>
+<script>
+(function () {
+  var root = document.getElementById('loco-main');
+  if (!root) return;
+  var sectionTitles = root.querySelectorAll('.hero-title');
+  var prefersReduced =
+    typeof window.matchMedia === 'function' &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  root.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(function (el) {
+    el.classList.add('loco-reveal-heading');
+  });
+
+  root.querySelectorAll(':scope > section').forEach(function (section) {
+    section.classList.add('loco-reveal-section');
+    section.setAttribute('data-scroll', '');
+    section.setAttribute('data-scroll-class', 'is-inview');
+    section.setAttribute('data-scroll-repeat', '');
+  });
+
+  root.querySelectorAll('section .row').forEach(function (row) {
+    var hasColumns = Array.from(row.children).some(function (child) {
+      return /\bcol-/.test(child.className);
+    });
+    if (!hasColumns || row.children.length < 2) return;
+    row.classList.add('loco-stagger');
+    row.setAttribute('data-scroll', '');
+    row.setAttribute('data-scroll-class', 'is-inview');
+    row.setAttribute('data-scroll-repeat', '');
+  });
+
+  function revealVisibleHeadings() {
+    var triggerY = window.innerHeight * 0.82;
+    root.querySelectorAll('.loco-reveal-heading').forEach(function (el) {
+      var rect = el.getBoundingClientRect();
+      var shouldReveal = rect.top <= triggerY && rect.bottom >= 0;
+      el.classList.toggle('is-inview', shouldReveal);
+    });
+  }
+
+  function clamp01(n) {
+    return Math.max(0, Math.min(1, n));
+  }
+
+  function updateSectionTitleScale() {
+    if (!sectionTitles.length) return;
+    if (prefersReduced) {
+      sectionTitles.forEach(function (title) {
+        title.style.setProperty('--loco-title-scale', '1');
+      });
+      return;
+    }
+    var vh = Math.max(1, window.innerHeight || document.documentElement.clientHeight || 1);
+    sectionTitles.forEach(function (title) {
+      var rect = title.getBoundingClientRect();
+      var start = vh * 0.95;
+      var end = vh * 0.25;
+      var progress = clamp01((start - rect.top) / (start - end));
+      var eased = 1 - Math.pow(1 - progress, 2);
+      var scale = 1 + (eased * 0.15); // 1.00 -> 1.15
+      title.style.setProperty('--loco-title-scale', scale.toFixed(3));
+      title.style.transformOrigin = '50% 50%';
+    });
+  }
+
+  function runLocoFx() {
+    revealVisibleHeadings();
+    updateSectionTitleScale();
+  }
+
+  runLocoFx();
+  if (window.__locoScroll && typeof window.__locoScroll.on === 'function') {
+    window.__locoScroll.on('scroll', runLocoFx);
+    window.__locoScroll.update();
+  } else {
+    window.addEventListener('scroll', runLocoFx, { passive: true });
+  }
+  window.addEventListener('resize', runLocoFx, { passive: true });
+})();
+</script>
+</body>
+</html>

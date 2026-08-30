@@ -1,0 +1,200 @@
+/* ============ _ui · the page kit ============
+   Every page built after the dashboard is assembled from these. They
+   exist so the eighteen views that follow share one language instead
+   of each inventing its own spacing, its own row and its own header. */
+
+/* ---- page head ------------------------------------------------- */
+.uh{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px 28px;align-items:end;
+  padding-bottom:19px;margin-bottom:20px;border-bottom:1px solid var(--line);position:relative}
+.uh::after{content:"";position:absolute;left:0;bottom:-1px;width:56px;height:2px;background:var(--gold-fill)}
+.uh .kk{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.19em;text-transform:uppercase;
+  color:var(--pri);font-weight:600;display:block;margin-bottom:11px}
+.uh h1{font-size:clamp(26px,3.1vw,38px);line-height:1.04;letter-spacing:-.04em;color:var(--navy);max-width:min(100%,30ch)}
+.uh .lede{margin:11px 0 0;font-size:15px;line-height:1.6;color:var(--ink-2);max-width:60ch}
+.uh .uacts{display:flex;gap:9px;flex-wrap:wrap;align-items:center}
+@media(max-width:820px){.uh{grid-template-columns:1fr;align-items:start}
+  .uh .uacts{width:100%}.uh .uacts .k-btn{flex:1}}
+
+/* back — one control, one look, on every second-level page */
+.uback{display:inline-flex;align-items:center;gap:9px;font-size:13.5px;font-weight:600;color:var(--ink-2);
+  padding:8px 13px 8px 9px;margin:0 0 15px -9px;border-radius:var(--r-pill);min-height:38px;
+  transition:background .16s,color .16s}
+.uback svg{width:16px;height:16px;transform:rotate(180deg);transition:transform .2s var(--ease)}
+.uback:hover{background:var(--white);color:var(--navy);box-shadow:var(--sh-1)}
+.uback:hover svg{transform:rotate(180deg) translateX(3px)}
+
+/* ---- filter chips ---------------------------------------------- */
+.ufilt{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.uf{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;min-height:38px;border-radius:var(--r-pill);
+  font-size:13px;font-weight:600;color:var(--ink-2);background:var(--white);border:1px solid var(--line);
+  transition:border-color .16s,color .16s,background .16s,box-shadow .18s}
+.uf:hover{border-color:var(--line-3);color:var(--navy);box-shadow:var(--sh-1)}
+.uf .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-4);transition:color .16s}
+.uf.on{background:var(--navy);border-color:var(--navy);color:#F2EFE8}
+.uf.on .n{color:rgba(242,239,232,.6)}
+
+/* ---- section head inside a page --------------------------------- */
+.ush{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:30px 0 13px}
+.ush:first-child{margin-top:0}
+.ush h2{font-size:19px;letter-spacing:-.03em;color:var(--navy)}
+.ush .cnt{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-3)}
+.ush p{margin:4px 0 0;font-size:13px;color:var(--ink-3);flex-basis:100%}
+
+/* ---- the list: a hairline stack, not a table -------------------- */
+.ulist{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);
+  border-radius:var(--r-md);overflow:hidden}
+.uli{background:var(--white);padding:15px 17px;display:grid;gap:14px;align-items:center;
+  grid-template-columns:40px minmax(0,1fr) auto;text-align:start;width:100%;
+  transition:background .16s;position:relative}
+button.uli{cursor:pointer}
+button.uli::after{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--gold-fill);
+  transform:scaleY(0);transform-origin:center;transition:transform .2s var(--ease)}
+button.uli:hover{background:var(--paper-2)}
+button.uli:hover::after{transform:scaleY(1)}
+.uli .uic{width:40px;height:40px;border-radius:11px;background:var(--sunken);border:1px solid var(--line);
+  display:grid;place-items:center;transition:border-color .16s,background .16s}
+.uli .uic svg{width:18px;height:18px;color:var(--ink-3)}
+button.uli:hover .uic{background:var(--white);border-color:var(--line-3)}
+/* the generic block wrapper — a span used as a container needs this,
+   see trap 3 */
+.um{display:block;min-width:0}
+.uli b{display:block;font-size:14.5px;font-weight:600;line-height:1.3}
+.uli small{display:block;font-size:12.5px;color:var(--ink-3);margin-top:3px;line-height:1.45}
+.uli .uend{display:flex;align-items:center;gap:12px;justify-self:end}
+.uli .uref{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink-3);white-space:nowrap}
+.uli .uarr{width:16px;height:16px;color:var(--ink-4);flex:none;transition:transform .2s var(--ease),color .16s}
+button.uli:hover .uarr{transform:translateX(3px);color:var(--pri)}
+@media(max-width:640px){
+  .uli{grid-template-columns:36px minmax(0,1fr);gap:12px}
+  .uli .uic{width:36px;height:36px}
+  .uli .uend{grid-column:2;justify-self:start;margin-top:2px}
+}
+
+/* ---- two-up page body ------------------------------------------- */
+.u2{display:grid;grid-template-columns:minmax(0,1fr) 336px;gap:18px;align-items:start}
+@media(max-width:1100px){.u2{grid-template-columns:1fr}}
+.u2 .urail{display:grid;gap:14px;position:sticky;top:76px}
+@media(max-width:1100px){.u2 .urail{position:static}}
+
+/* ---- a plain panel (lighter than .card, used inside pages) ------- */
+.upan{background:var(--white);border:1px solid var(--line);border-radius:var(--r-md);
+  box-shadow:var(--sh-1);overflow:hidden}
+.upan-h{padding:14px 17px;border-bottom:1px solid var(--line);display:flex;align-items:center;
+  justify-content:space-between;gap:12px}
+.upan-h h3{font-size:15px;letter-spacing:-.02em}
+.upan-b{padding:16px 17px}
+.upan-b.flush{padding:0}
+.upan-f{padding:12px 17px;border-top:1px solid var(--line);background:var(--paper);
+  display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:12.5px;color:var(--ink-3)}
+
+/* key/value rows, used in every detail view */
+.ukv{display:grid;gap:0}
+.ukv div{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;
+  padding:10px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+.ukv div:last-child{border-bottom:0;padding-bottom:0}
+.ukv div:first-child{padding-top:0}
+.ukv span{color:var(--ink-3)}
+.ukv b{font-weight:600;text-align:right}
+.ukv b.mono{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:500}
+
+/* ---- the stage rail --------------------------------------------- */
+.urail-v{display:grid;gap:0;position:relative}
+.ust{display:grid;grid-template-columns:26px minmax(0,1fr);gap:14px;padding:0 0 20px;position:relative}
+.ust:last-child{padding-bottom:0}
+.ust::before{content:"";position:absolute;left:12.5px;top:22px;bottom:-2px;width:1.5px;background:var(--line-2)}
+.ust:last-child::before{display:none}
+.ust.done::before{background:var(--ok)}
+.ust .udot{width:26px;height:26px;border-radius:50%;background:var(--white);border:1.5px solid var(--line-2);
+  display:grid;place-items:center;position:relative;z-index:2}
+.ust .udot svg{width:14px;height:14px;color:var(--ink-4)}
+.ust.done .udot{background:var(--ok);border-color:var(--ok)}
+.ust.done .udot svg{color:#fff}
+.ust.now .udot{background:var(--white);border-color:var(--pri);border-width:2px}
+.ust.now .udot::after{content:"";width:9px;height:9px;border-radius:50%;background:var(--pri)}
+.ust.now .udot svg{display:none}
+.ust.now::after{content:"";position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;
+  border:2px solid var(--pri);animation:upulse 2.4s var(--ease) infinite}
+@keyframes upulse{0%{transform:scale(1);opacity:.5}70%{transform:scale(1.85);opacity:0}100%{opacity:0}}
+.ust b{display:block;font-size:14px;font-weight:600;line-height:1.35;padding-top:3px}
+.ust p{margin:4px 0 0;font-size:12.5px;color:var(--ink-3);line-height:1.5}
+.ust time{display:block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.05em;
+  color:var(--ink-4);margin-top:5px}
+.ust.now b{color:var(--pri)}
+.ust.wait b,.ust.wait p{color:var(--ink-4)}
+
+/* horizontal rail, for a card that has to show progress in one line */
+.urh{display:flex;align-items:center;gap:0;margin:14px 0 0}
+.urh i{height:4px;flex:1;background:var(--line-2);border-radius:2px;position:relative}
+.urh i+i{margin-left:4px}
+.urh i.done{background:var(--ok)}
+.urh i.now{background:linear-gradient(90deg,var(--ok) 45%,var(--line-2) 45%)}
+.urh i.now::after{content:"";position:absolute;left:45%;top:-3px;width:10px;height:10px;margin-left:-5px;
+  border-radius:50%;background:var(--white);border:2.5px solid var(--pri)}
+
+/* ---- empty state ------------------------------------------------ */
+.uempty{background:var(--white);border:1px dashed var(--line-2);border-radius:var(--r-md);
+  padding:44px 26px;text-align:center;display:grid;justify-items:center;gap:5px}
+.uempty .ue-i{width:52px;height:52px;border-radius:15px;background:var(--sunken);display:grid;place-items:center;
+  margin-bottom:9px}
+.uempty .ue-i svg{width:24px;height:24px;color:var(--ink-4)}
+.uempty b{font-family:"Funnel Display",sans-serif;font-size:18px;letter-spacing:-.03em}
+.uempty p{margin:0;font-size:13.5px;color:var(--ink-3);max-width:44ch;line-height:1.55}
+.uempty .k-btn{margin-top:14px}
+
+/* ---- a note strip ----------------------------------------------- */
+.unote{display:grid;grid-template-columns:20px minmax(0,1fr);gap:12px;align-items:start;
+  padding:13px 15px;border-radius:var(--r-md);font-size:13px;line-height:1.55;
+  background:var(--pri-soft);color:var(--pri);border:1px solid #CFDDF2}
+.unote svg{width:20px;height:20px;flex:none;margin-top:1px}
+.unote b{display:block;font-weight:600;margin-bottom:2px;color:var(--navy)}
+.unote p{margin:0;color:var(--ink-2)}
+.unote.warn{background:var(--gold-soft);border-color:var(--gold-line);color:var(--gold)}
+.unote.bad{background:var(--bad-soft);border-color:var(--bad-line);color:var(--bad)}
+.unote.ok{background:var(--ok-soft);border-color:var(--ok-line);color:var(--ok)}
+.unote .lk{grid-column:2;margin-top:8px}
+
+/* ---- the paper surface, for anything that represents a document -- */
+.upaper{background:#FCFAF4;border:1px solid var(--line-2);border-radius:var(--r-md);position:relative;
+  overflow:hidden;
+  background-image:repeating-linear-gradient(58deg,rgba(13,33,72,.028) 0 1px,transparent 1px 7px),
+                   repeating-linear-gradient(-58deg,rgba(13,33,72,.028) 0 1px,transparent 1px 7px)}
+.upaper::after{content:"";position:absolute;right:-46px;bottom:-58px;width:186px;height:186px;pointer-events:none;
+  background:var(--sunsvg) center/contain no-repeat;opacity:.07;
+  -webkit-mask-image:radial-gradient(circle at 50% 50%,transparent 34%,#000 43%);
+  mask-image:radial-gradient(circle at 50% 50%,transparent 34%,#000 43%)}
+.upaper>*{position:relative;z-index:2}
+
+/* ---- a link that behaves like a link ---------------------------- */
+.lk{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--pri);
+  cursor:pointer;transition:color .16s}
+.lk svg{width:14px;height:14px;transition:transform .2s var(--ease)}
+.lk:hover{color:var(--pri-h)}
+.lk:hover svg{transform:translateX(3px)}
+
+/* ---- a metric, when a page opens on a number -------------------- */
+.umets{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0;
+  background:var(--white);border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden}
+.umet{padding:16px 18px;border-right:1px solid var(--line);min-width:0}
+.umet:last-child{border-right:0}
+.umet em{font-style:normal;font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink-4);display:block;margin-bottom:8px}
+.umet b{font-family:"Funnel Display",sans-serif;font-size:26px;letter-spacing:-.04em;color:var(--navy);
+  display:block;line-height:1}
+.umet small{display:block;font-size:11.5px;color:var(--ink-3);margin-top:5px;line-height:1.4}
+.umet.ok b{color:var(--ok)}.umet.bad b{color:var(--bad)}.umet.gold b{color:var(--gold)}
+@media(max-width:700px){.umet{border-right:0;border-bottom:1px solid var(--line)}
+  .umet:last-child{border-bottom:0}}
+
+/* ---- segmented control ------------------------------------------ */
+.useg{display:inline-flex;background:var(--sunken);border:1px solid var(--line);border-radius:var(--r-pill);
+  padding:3px;gap:2px}
+.useg button{padding:7px 15px;min-height:34px;border-radius:var(--r-pill);font-size:13px;font-weight:600;
+  color:var(--ink-3);transition:background .18s var(--ease),color .18s,box-shadow .18s}
+.useg button:hover{color:var(--navy)}
+.useg button.on{background:var(--white);color:var(--navy);box-shadow:var(--sh-1)}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;
+    transition-duration:.001ms!important;scroll-behavior:auto!important}
+}
+.mt0{margin-top:0}.mt10{margin-top:10px}.mt16{margin-top:16px}

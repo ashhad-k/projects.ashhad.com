@@ -1,0 +1,185 @@
+/* ============ M · MODULES — the platform as a set of modules ============ */
+.mhead{margin-bottom:30px}
+@media(max-width:760px){.mhead{margin-bottom:22px}}
+.mhead .top3{display:flex;align-items:center;gap:16px;margin-bottom:16px}
+.mhead .kk3{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--pri);font-weight:600}
+.mhead .badge{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.15em;
+  text-transform:uppercase;padding:6px 12px;border-radius:5px;background:var(--gold-soft);
+  border:1px solid var(--gold-line);color:var(--gold)}
+.mhead h1{font-family:"Funnel Display",sans-serif;font-size:clamp(34px,5.2vw,62px);line-height:.98;
+  letter-spacing:-.045em;color:var(--navy);max-width:min(100%,26ch);margin:0}
+.mhead .lede2{margin:16px 0 0;font-size:16px;line-height:1.6;color:var(--ink-2);max-width:62ch}
+
+/* the module grid */
+.mods{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+@media(max-width:1080px){.mods{grid-template-columns:1fr}}
+.mod{background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;
+  display:flex;flex-direction:column;position:relative;
+  transition:border-color .2s,box-shadow .26s,transform .26s var(--ease)}
+.mod::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:transparent}
+.mod.on{border-color:var(--line-2);box-shadow:0 2px 4px rgba(18,20,30,.04), 0 26px 52px -34px rgba(13,33,72,.45)}
+.mod.on::before{background:linear-gradient(90deg,var(--navy),var(--gold-fill))}
+.mod.on:hover{transform:translateY(-2px);box-shadow:0 2px 4px rgba(18,20,30,.05), 0 32px 62px -34px rgba(13,33,72,.55)}
+.mod-h{padding:24px 26px 0;display:grid;grid-template-columns:50px minmax(0,1fr) auto;gap:16px;align-items:start}
+@media(max-width:560px){.mod-h{padding:20px 18px 0;grid-template-columns:44px minmax(0,1fr)}}
+.mod-h .mt2{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;
+  background:var(--sunken);border:1px solid var(--line)}
+.mod-h .mt2 svg{width:24px;height:24px;color:var(--ink-3)}
+.mod.on .mod-h .mt2{background:var(--navy);border-color:var(--navy)}
+.mod.on .mod-h .mt2 svg{color:var(--gold-fill)}
+@media(max-width:560px){.mod-h .mt2{width:44px;height:44px;border-radius:12px}.mod-h .mt2 svg{width:21px;height:21px}}
+.mod-h .st4{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--ink-4);display:block;margin-bottom:6px}
+.mod.on .mod-h .st4{color:var(--ok)}
+.mod-h h3{font-family:"Funnel Display",sans-serif;font-size:clamp(20px,2.1vw,26px);letter-spacing:-.035em;
+  line-height:1.1;margin:0;color:var(--ink)}
+.mod-h .rc{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;
+  padding:5px 11px;border-radius:5px;border:1px solid var(--line-2);color:var(--ink-4);white-space:nowrap}
+.mod.on .mod-h .rc{background:var(--ok-soft);border-color:var(--ok-line);color:var(--ok)}
+@media(max-width:560px){.mod-h .rc{display:none}}
+.mod .desc{margin:14px 26px 0;font-size:14.5px;line-height:1.55;color:var(--ink-2)}
+@media(max-width:560px){.mod .desc{margin:12px 18px 0}}
+
+.mod-l{margin:18px 26px 0;border-top:1px solid var(--line)}
+@media(max-width:560px){.mod-l{margin:16px 18px 0}}
+.mod-s{display:grid;grid-template-columns:30px minmax(0,1fr) auto;gap:14px;align-items:center;
+  padding:13px 0;border-bottom:1px solid var(--line)}
+.mod-s:last-child{border-bottom:0}
+.mod-s .nn{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-4)}
+.mod-s b{font-size:14.5px;font-weight:500;color:var(--ink-2);line-height:1.35}
+.mod.on .mod-s b{color:var(--ink)}
+.mod-s .tg{font-family:"IBM Plex Mono",monospace;font-size:8.5px;letter-spacing:.13em;text-transform:uppercase;
+  padding:4px 9px;border-radius:4px;border:1px solid var(--line);background:var(--sunken);color:var(--ink-3);
+  white-space:nowrap}
+.mod-s .tg.demo{background:var(--ok-soft);border-color:var(--ok-line);color:var(--ok);font-weight:600}
+.mod .more2{margin:12px 26px 0;font-size:12.5px;color:var(--ink-4);font-family:"IBM Plex Mono",monospace;
+  letter-spacing:.05em}
+@media(max-width:560px){.mod .more2{margin:12px 18px 0}}
+
+.mod-f{margin-top:auto;padding:22px 26px 24px}
+@media(max-width:560px){.mod-f{padding:18px}}
+.mod-f .go6{width:100%;display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:52px;border-radius:var(--r-sm);font-size:14.5px;font-weight:600;
+  background:var(--navy);color:#fff;transition:background .18s,transform .18s var(--ease)}
+.mod-f .go6 svg{width:15px;height:15px;transition:transform .2s var(--ease)}
+.mod-f .go6:hover{background:#0A1B3B}
+.mod.on:hover .mod-f .go6 svg{transform:translateX(4px)}
+.mod-f .go6.off{background:var(--sunken);border:1px solid var(--line);color:var(--ink-3);cursor:default}
+.mod-f .go6.off:hover{background:var(--sunken)}
+
+/* ---- the router ---- */
+.rt{margin-bottom:26px}
+.rt-top{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:34px;align-items:start;margin-bottom:34px}
+@media(max-width:1080px){.rt-top{grid-template-columns:1fr;gap:22px}}
+.rt-top .kk3{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--pri);font-weight:600;display:block;margin-bottom:14px}
+.rt-top h1{font-family:"Funnel Display",sans-serif;font-size:clamp(30px,4.4vw,54px);line-height:1.02;
+  letter-spacing:-.045em;color:var(--navy);margin:0;max-width:min(100%,24ch)}
+.rt-top p{margin:16px 0 0;font-size:16px;line-height:1.6;color:var(--ink-2);max-width:56ch}
+.pcard{background:var(--white);border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;
+  box-shadow:var(--sh-1)}
+.pcard .ph2{display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:13px;align-items:center;
+  padding:16px 18px;border-bottom:1px solid var(--line)}
+.pcard .ph2 .ic4{width:40px;height:40px;border-radius:11px;background:var(--pri-soft);display:grid;place-items:center}
+.pcard .ph2 .ic4 svg{width:19px;height:19px;color:var(--pri)}
+.pcard .ph2 em{font-style:normal;font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--ink-4);display:block;margin-bottom:4px}
+.pcard .ph2 b{font-family:"IBM Plex Mono",monospace;font-size:15px;letter-spacing:.02em}
+.pcard .ph2 .okk{display:inline-flex;align-items:center;gap:7px;font-family:"IBM Plex Mono",monospace;
+  font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--ok)}
+.pcard .ph2 .okk svg{width:14px;height:14px}
+.pcard .rw2{display:flex;justify-content:space-between;gap:16px;padding:13px 18px;
+  border-bottom:1px solid var(--line);font-size:13.5px}
+.pcard .rw2:last-child{border-bottom:0}
+.pcard .rw2 span{color:var(--ink-3)}
+.pcard .rw2 b{font-weight:600;text-align:right}
+
+.rt-q{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;margin-bottom:16px}
+.rt-q h2{font-family:"Funnel Display",sans-serif;font-size:clamp(22px,2.4vw,30px);letter-spacing:-.035em;
+  line-height:1.1;margin:0}
+.rt-q .hint3{margin-left:auto;font-size:13px;color:var(--ink-3)}
+@media(max-width:760px){.rt-q .hint3{margin-left:0}}
+.rt-kk{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--pri);font-weight:600;display:block;margin-bottom:9px}
+
+.routes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden}
+@media(max-width:1100px){.routes{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){.routes{grid-template-columns:1fr}}
+.rte{background:var(--white);padding:22px 24px 20px;text-align:start;display:flex;flex-direction:column;
+  position:relative;min-height:210px;transition:background .16s}
+.rte .ic5{width:44px;height:44px;border-radius:12px;background:var(--sunken);border:1px solid var(--line);
+  display:grid;place-items:center;margin-bottom:16px}
+.rte .ic5 svg{width:21px;height:21px;color:var(--ink-3)}
+.rte .kt{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--ink-4);display:block;margin-bottom:7px}
+.rte b{font-family:"Funnel Display",sans-serif;font-size:19px;letter-spacing:-.03em;line-height:1.14;
+  display:block;color:var(--ink)}
+.rte p{margin:9px 0 0;font-size:13.5px;line-height:1.55;color:var(--ink-2);max-width:34ch}
+.rte .rd2{position:absolute;top:22px;right:24px;width:22px;height:22px;border-radius:50%;
+  border:1.5px solid var(--line-2);transition:border-color .16s,background .16s}
+.rte .rd2::after{content:"";position:absolute;inset:4px;border-radius:50%;background:var(--pri);
+  transform:scale(0);transition:transform .2s var(--ease)}
+.rte .nx{margin-top:auto;padding-top:16px;font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.rte[disabled]{cursor:default}
+.rte[disabled]:hover{background:var(--sunken)}
+.rte.live2{background:linear-gradient(160deg,#FFFDF8,#FEF7E9 70%,#FBEFD6);cursor:pointer}
+.rte.live2:hover{background:linear-gradient(160deg,#FEF7E9,#FBEFD6)}
+.rte.live2 .ic5{background:var(--gold-fill);border-color:var(--gold-fill)}
+.rte.live2 .ic5 svg{color:#3A2800}
+.rte.live2 .kt{color:var(--gold)}
+.rte.live2 .rd2{border-color:var(--pri)}
+.rte.live2 .rd2::after{transform:scale(1)}
+.rte.live2 .nx{color:var(--pri);font-weight:600;display:inline-flex;align-items:center;gap:7px}
+.rte.live2 .nx svg{width:13px;height:13px;transition:transform .18s var(--ease)}
+.rte.live2:hover .nx svg{transform:translateX(3px)}
+.rte.warn2 .ic5{background:var(--bad-soft);border-color:var(--bad-line)}
+.rte.warn2 .ic5 svg{color:var(--bad)}
+
+.urg2{margin-top:22px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+  background:var(--bad-soft);border:1px solid var(--bad-line);border-radius:var(--r-md);padding:18px 22px}
+.urg2 svg{width:22px;height:22px;color:var(--bad);flex:none}
+.urg2 b{display:block;font-size:15px;font-weight:600;color:var(--bad)}
+.urg2 p{margin:4px 0 0;font-size:13.5px;color:var(--ink-2)}
+.urg2 .lk{margin-left:auto;display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;
+  color:var(--bad);white-space:nowrap}
+.urg2 .lk svg{width:14px;height:14px;transition:transform .18s var(--ease)}
+.urg2 .lk:hover svg{transform:translateX(3px)}
+@media(max-width:760px){.urg2 .lk{margin-left:0}}
+.rback{display:inline-flex;align-items:center;gap:9px;font-size:13.5px;font-weight:600;color:var(--ink-2);
+  min-height:38px;margin-bottom:18px}
+.rback svg{width:14px;height:14px;transform:rotate(180deg);transition:transform .18s var(--ease)}
+.rback:hover{color:var(--ink)}
+.rback:hover svg{transform:rotate(180deg) translateX(3px)}
+/* the grid is three wide; the last cell earns its place */
+.rte.help2{background:linear-gradient(160deg,var(--sunken),var(--white) 70%);cursor:default}
+.rte.help2 .ic5{background:var(--pri-soft);border-color:rgba(18,59,122,.2)}
+.rte.help2 .ic5 svg{color:var(--pri)}
+.rte.help2 .kt{color:var(--pri)}
+.rte.help2 .nx{color:var(--ink-3)}
+.rte:hover{background:var(--white)}
+.rte[disabled]:hover{background:var(--sunken)}
+
+/* ---- the router grid must not leave the line colour showing where a
+   row runs short. Two fillers absorb whatever the last row leaves. --- */
+.rfill{display:block;background:var(--white)}
+@media(max-width:680px){.rfill{display:none}}
+
+/* ---- the catalogue is the deliverable for the seven modules that are
+   listed but not built, so it carries the fee and the verdict rather
+   than a bare "planned" tag. ------------------------------------------ */
+.mod-s{grid-template-columns:26px minmax(0,1fr) auto auto}
+.mod-s .fee6{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-3);white-space:nowrap}
+/* the fee used to be dropped here, contradicting the comment above: the fee
+   and the verdict ARE the deliverable for the seven listed modules, and the fee
+   is the half you cannot infer. The row stacks instead of shedding it. */
+@media(max-width:520px){.mod-s{grid-template-columns:26px minmax(0,1fr);row-gap:5px}
+  .mod-s .fee6,.mod-s .tg{grid-column:2}
+  .mod-s .fee6{font-size:11.5px}
+  .mod-s .tg{justify-self:start}}
+.rte .fee5{display:block;margin-top:11px;font-family:"IBM Plex Mono",monospace;font-size:11px;
+  color:var(--ink-3)}
+div.rte{cursor:default}
+div.rte .nx{color:var(--ink-3)}

@@ -1,0 +1,84 @@
+:root{--paperimg2:url(../img/i03.jpg);--sealimg:url(../img/i02.jpg);--photo:url(../img/i04.jpg)}
+/* ================= Konsulado · shared foundation ================= */
+:root{
+  --paper:#FAF8F3; --paper-2:#F4F0E7; --white:#FFFFFF; --sunken:#F1ECE1;
+  --navy:#0D2148; --navy-2:#16305F; --navy-3:#1E4079;
+  --line:#E9E2D5; --line-2:#D4C9B4; --line-3:#BFB39A;
+  /* AA contrast, checked rather than guessed. The old --ink-3 (#7A8394)
+     and --ink-4 (#A5ACB9) ran at 3.6:1 and 2.2:1 on paper — 864 text runs
+     across 77 views below the 4.5:1 that a government client's tender will
+     ask for, and visibly washed out at pitch scale. */
+  --ink:#12141E; --ink-2:#495166; --ink-3:#5B6272; --ink-4:#5E6573;
+  --pri:#123B7A; --pri-h:#0C2C60; --pri-soft:#E6EDF8; --on-pri:#fff;
+  --gold:#8F5F00; --gold-fill:#E29B0B; --gold-soft:#FBF1D2; --gold-line:#EBD9A4;
+  --ok:#1B6F4E; --ok-soft:#DDEFE6; --ok-line:#B7DCC8;
+  --bad:#C81F2E; --bad-soft:#FAE2E4; --bad-line:#EFC3C7;
+  --blue:#2359A8;
+  --r-xs:6px; --r-sm:10px; --r-md:14px; --r-lg:20px; --r-xl:28px; --r-pill:999px;
+  --sh-1:0 1px 2px rgba(18,20,30,.05);
+  --sh-2:0 2px 5px rgba(18,20,30,.05), 0 14px 30px -16px rgba(18,20,30,.24);
+  --sh-3:0 3px 8px rgba(18,20,30,.06), 0 34px 70px -34px rgba(13,33,72,.42);
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;min-height:100%}
+body{background:var(--paper);color:var(--ink);font-family:"Inter",system-ui,sans-serif;
+  font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+input{font:inherit}
+:focus-visible{outline:2.5px solid var(--pri);outline-offset:2px;border-radius:6px}
+/* ...but not when the control already sits inside a container that lights up
+   on :focus-within. The global ring is drawn INSIDE that container's own
+   border, so you get two rings, one square inside one pill. The container
+   keeps signalling focus; the inner ring is suppressed. Any new wrapper that
+   uses :focus-within belongs in this list. */
+.akin :focus-visible,
+.fsearch :focus-visible,
+.rin :focus-visible,
+.sbar :focus-visible{outline:none}
+h1,h2,h3,h4{font-family:"Funnel Display","Inter",sans-serif;margin:0;letter-spacing:-.03em;font-weight:700}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+.lbl{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-3);font-weight:500}
+/* ROOT CAUSE, found the hard way: an inline <svg viewBox="0 0 24 24"> with
+   no width in a flex or grid box expands to fill it. Every icon in this
+   application is emitted inline, so ONE unstyled container produced a
+   400px arrow. A default belongs here, not in fifty component rules —
+   anything that genuinely wants a big svg (the QR, the seal, the sun)
+   sets its own size and wins by coming later in the cascade. */
+svg{width:18px;height:18px;flex:none}
+.k-arr{width:15px;height:15px;flex:none;transition:transform .18s var(--ease)}
+.k-btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 22px;
+  border-radius:var(--r-sm);font-size:14.5px;font-weight:600;background:var(--pri);color:var(--on-pri);
+  min-height:46px;transition:background .16s,transform .12s var(--ease),box-shadow .2s;box-shadow:0 1px 2px rgba(13,33,72,.18)}
+.k-btn:hover{background:var(--pri-h);box-shadow:0 8px 20px -9px rgba(13,33,72,.55)}
+.k-btn:active{transform:scale(.985)}
+.k-btn:hover .k-arr{transform:translateX(3px)}
+.k-btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line-2);box-shadow:none}
+.k-btn.ghost:hover{background:var(--white);border-color:var(--line-3);box-shadow:var(--sh-1)}
+.k-btn.gold{background:var(--gold-fill);color:#3A2800;box-shadow:0 1px 2px rgba(120,80,0,.2)}
+.k-btn.gold:hover{background:#D08F08}
+.k-btn svg{width:17px;height:17px;flex:none}
+.k-btn .k-arr{width:15px;height:15px}
+.k-btn.sm{padding:9px 15px;min-height:38px;font-size:13.5px}
+.k-chip{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;padding:4px 10px;
+  border-radius:var(--r-pill);white-space:nowrap;letter-spacing:.01em}
+.k-chip svg{width:12px;height:12px}
+.k-chip.ok{background:var(--ok-soft);color:var(--ok)}
+.k-chip.warn{background:var(--gold-soft);color:var(--gold)}
+.k-chip.bad{background:var(--bad-soft);color:var(--bad)}
+.k-chip.info{background:var(--pri-soft);color:var(--blue)}
+.k-chip.mute{background:var(--sunken);color:var(--ink-3)}
+#ktip{position:fixed;z-index:300;background:var(--navy);color:#fff;font-size:12px;line-height:1.45;
+  padding:8px 11px;border-radius:7px;pointer-events:none;opacity:0;transition:opacity .14s;max-width:240px;box-shadow:var(--sh-2)}
+#ktip.on{opacity:1}
+#ktip b{display:block;font-weight:600;margin-bottom:2px}
+
+/* span-based block containers */
+.obj-life,.obj-mrz,.obj-b,.obj-f,.obj-h,.obj-cta,.obj-life .bar,
+.dr .life,.jrn-bar,.st .lbl,.st .v,.fact .lbl,.fact .v,
+.rg .rail,.rg .ttl,.rg .mid,.rg .when,.rg .go,.rg .ic,
+.fe .rw,.al span,.va span,.vf span,.vnote span,.ac .tx{display:block}
+.obj-life .bar{height:5px;border-radius:3px;overflow:hidden;background:var(--sunken)}
+.obj-life .lg2,.obj-cta,.obj-h,.st .lbl,.st .v,.fact .lbl,.fact .v,.fe .rw{display:flex}
+.obj-b,.obj-f .rw,.rg .ic,.va span:not(.ic),.vf span:not(.d),.vnote span:not(.ic),.ac .tx{display:grid}
+.obj-f{display:grid}

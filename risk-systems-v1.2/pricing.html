@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing — Risk System</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
+</head>
+<body class="has-fixed-site-header page-internal">
+
+<nav class="navbar navbar-expand-lg fixed-top site-header">
+  <div class="container">
+    <a class="navbar-brand navbar-brand--internal" href="index.html">
+      <img src="assets/logo.svg" alt="risksystem.io" width="256" />
+    </a>
+
+    <button class="navbar-toggler border-0" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navMenu"
+            aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+      <div class="nav-pill-wrap">
+        <a href="index.html#hero" class="nav-pill-link">Home</a>
+        <a href="features.html#hero" class="nav-pill-link">Features</a>
+        <a href="global-exposure.html#hero" class="nav-pill-link">Global Exposure</a>
+        <a href="#hero" class="nav-pill-link active">Pricing</a>
+        <a href="about.html#hero" class="nav-pill-link">About</a>
+        <a href="contact.html#hero" class="nav-pill-link">Contact</a>
+      </div>
+    </div>
+
+    <div class="d-none d-lg-block">
+      <a href="contact.html#contact-message" class="btn btn-gradient btn-nav">Join the Waitlist</a>
+    </div>
+  </div>
+</nav>
+
+<div id="loco-main" data-scroll-container>
+
+<section id="hero" class="hero--internal">
+  <div class="internal-hero-bg" aria-hidden="true">
+    <div class="internal-hero-bg__stars"></div>
+    <div class="internal-hero-bg__glow"></div>
+  </div>
+
+  <div class="container text-center position-relative">
+    <div class="internal-hero-tags mb-4">
+      <span class="internal-hero-tag">14-day free trial</span>
+      <span class="internal-hero-tag">No credit card required</span>
+      <span class="internal-hero-tag">Cancel anytime</span>
+    </div>
+
+    <h1 class="hero-title hero-title--internal mx-auto">
+      Simple, Transparent<br />Pricing That Scales With You
+    </h1>
+
+    <p class="hero-desc hero-desc--internal mx-auto">
+      Start free, scale as you grow. No hidden fees, no surprises. Just powerful risk management that pays for itself.
+    </p>
+
+    <div class="hero-actions mb-5">
+      <!-- <a href="#" class="btn btn-ghost">Schedule Demo</a> -->
+      <a href="contact.html#contact-message" class="btn btn-gradient">Join the Waitlist</a>
+    </div>
+  </div>
+</section>
+
+<section class="fold fold-hero-structure fold-hero-structure--center section-pricing-plans section-after-hero" id="section-pricing-plans">
+  <div class="container">
+    <div class="pricing-plan-heading text-center">
+      <h2 class="pricing-plan-heading__title">Start with a 14-day free trial.<br />Cancel anytime.</h2>
+    </div>
+    <div class="pricing-billing-toggle" role="group" aria-label="Billing cycle toggle">
+      <span class="pricing-billing-toggle__label pricing-billing-toggle__label--active" data-billing-label="monthly">Charged Monthly</span>
+      <label class="pricing-billing-switch" for="billing-cycle-toggle">
+        <input type="checkbox" id="billing-cycle-toggle" class="pricing-billing-switch__input" aria-label="Toggle yearly billing" />
+        <span class="pricing-billing-switch__track" aria-hidden="true">
+          <span class="pricing-billing-switch__thumb"></span>
+        </span>
+      </label>
+      <span class="pricing-billing-toggle__label" data-billing-label="yearly">Charged Annually <small>(15% Off)</small></span>
+    </div>
+    <div class="fold-boxes row g-4 mb-0 pricing-plan-grid">
+      <div class="col-12 col-md-6 col-xl-4">
+        <article class="pricing-plan-card">
+          <h3 class="pricing-plan-card__name">Starter</h3>
+          <p class="pricing-plan-card__desc">For small-to-mid brokerages building risk infrastructure.</p>
+          <p class="pricing-plan-card__price" data-monthly="$5,000/mo" data-yearly="$51,000/yr">$5,000/mo</p>
+          <ul class="pricing-plan-card__list">
+            <li>Up to 1,000 active accounts</li>
+            <li>Real-time risk monitoring</li>
+            <li>Basic A-Book/B-Book routing</li>
+            <li>Email support</li>
+            <li>MT4/MT5 integration</li>
+            <li>Standard analytics dashboard</li>
+            <li>Daily reports</li>
+          </ul>
+          <a href="contact.html#contact-message" class="btn btn-ghost pricing-plan-card__btn">Join the Waitlist</a>
+        </article>
+      </div>
+
+      <div class="col-12 col-md-6 col-xl-4">
+        <article class="pricing-plan-card pricing-plan-card--featured">
+          <h3 class="pricing-plan-card__name">Standard</h3>
+          <p class="pricing-plan-card__desc">For growing brokers managing multi-platform exposure.</p>
+          <p class="pricing-plan-card__price" data-monthly="$12,500/mo" data-yearly="$127,500/yr">$12,500/mo</p>
+          <ul class="pricing-plan-card__list pricing-plan-card__list--strong">
+            <li>Up to 10,000 active accounts</li>
+            <li>Advanced toxic flow detection</li>
+            <li>Smart automated hedging</li>
+            <li>Priority support (24/7)</li>
+            <li>Multi-platform integration</li>
+            <li>Advanced analytics &amp; AI insights</li>
+            <li>Real-time alerts &amp; notifications</li>
+            <li>Custom symbol mapping</li>
+            <li>API access</li>
+          </ul>
+          <a href="contact.html#contact-message" class="btn btn-ghost pricing-plan-card__btn pricing-plan-card__btn--featured">Join the Waitlist</a>
+        </article>
+      </div>
+
+      <div class="col-12 col-md-6 col-xl-4">
+        <article class="pricing-plan-card">
+          <h3 class="pricing-plan-card__name">Enterprise</h3>
+          <p class="pricing-plan-card__desc">For institutions requiring full customization.</p>
+          <p class="pricing-plan-card__price" data-monthly="$25,000/mo" data-yearly="$255,000/yr">$25,000/mo</p>
+          <ul class="pricing-plan-card__list">
+            <li>Unlimited accounts</li>
+            <li>White-label solution</li>
+            <li>Dedicated account manager</li>
+            <li>Custom integrations</li>
+            <li>On-premise deployment option</li>
+            <li>Advanced compliance tools</li>
+            <li>Custom reporting &amp; analytics</li>
+            <li>SLA guarantees</li>
+            <li>Training &amp; onboarding</li>
+          </ul>
+          <a href="contact.html#contact-message" class="btn btn-ghost pricing-plan-card__btn">Join the Waitlist</a>
+        </article>
+      </div>
+    </div>
+    <section class="pricing-addons" aria-label="Additional capabilities">
+      <h3 class="pricing-addons__title">Enhance your plan with additional capabilities</h3>
+      <div class="row g-4 pricing-addons__grid">
+        <div class="col-12 col-lg-6">
+          <article class="pricing-addon-card">
+            <h4 class="pricing-addon-card__title">Additional Server</h4>
+            <p class="pricing-addon-card__desc">Connect additional trading servers to expand your infrastructure and scale your operations</p>
+            <p class="pricing-addon-card__price pricing-toggle-price" data-monthly="$5,000/mo. <span>(Per Server)</span>" data-yearly="$51,000/yr. <span>(Per Server)</span>">$5,000/mo. <span>(Per Server)</span></p>
+          </article>
+        </div>
+        <div class="col-12 col-lg-6">
+          <article class="pricing-addon-card">
+            <h4 class="pricing-addon-card__title">Global Trading Intelligence</h4>
+            <p class="pricing-addon-card__desc">Access cross-broker insights and advanced retail trader behavior analysis</p>
+            <p class="pricing-addon-card__price pricing-toggle-price" data-monthly="$7,500/mo." data-yearly="$76,500/yr.">$7,500/mo.</p>
+          </article>
+        </div>
+      </div>
+      <p class="pricing-addons__note">
+        Pricing is subject to change based on market conditions and service requirements. Add-on modules require an active base plan subscription.
+        Additional Server pricing applies per server per month. Global Trading Intelligence requires Professional or Enterprise plan.
+        Custom enterprise solutions available upon request. All prices are in USD and exclude applicable taxes. Final pricing will be confirmed during onboarding.
+      </p>
+      <div class="hero-actions mb-4">
+        <!-- <a href="#" class="btn btn-ghost">Schedule Demo</a> -->
+        <a href="contact.html#contact-message" class="btn btn-gradient">Join the Waitlist</a>
+      </div>
+      <div class="section-footnote text-center">
+        <p class="footnote-title">The difference is crystal clear.</p>
+        <p class="footnote-sub">Every broker using RiskShield Pro sees this level of protection. Why aren't you?</p>
+      </div>
+    </section>
+  </div>
+</section>
+
+<section class="section-pricing-faq" id="section-pricing-faq">
+  <div class="container">
+    <div class="pricing-faq-heading text-center">
+      <span class="pricing-faq-heading__badge">Frequently Asked Questions</span>
+      <h2 class="pricing-faq-heading__title">Can't find what you're looking for? Contact our support team</h2>
+    </div>
+    <div class="pricing-faq-list" role="list">
+      <article class="pricing-faq-item" role="listitem">
+        <button class="pricing-faq-item__trigger" type="button" aria-expanded="false">
+          <span>How long does it take to set up risksystem.io?</span>
+          <span class="pricing-faq-item__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M11.9997 13.1719L16.9497 8.22192L18.3637 9.63592L11.9997 15.9999L5.63574 9.63592L7.04974 8.22192L11.9997 13.1719Z" fill="#5C5C5C"></path>
+            </svg>
+          </span>
+        </button>
+        <div class="pricing-faq-item__content" hidden>
+          <p>Most brokerages complete setup in 1-3 business days. We handle onboarding, environment checks, and initial routing policies so your team can go live quickly without service interruption.</p>
+        </div>
+      </article>
+
+      <article class="pricing-faq-item is-open" role="listitem">
+        <button class="pricing-faq-item__trigger" type="button" aria-expanded="true">
+          <span>Which trading platforms does risksystem.io support?</span>
+          <span class="pricing-faq-item__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M11.9997 13.1719L16.9497 8.22192L18.3637 9.63592L11.9997 15.9999L5.63574 9.63592L7.04974 8.22192L11.9997 13.1719Z" fill="#5C5C5C"></path>
+            </svg>
+          </span>
+        </button>
+        <div class="pricing-faq-item__content">
+          <p>We support MT4, MT5, cTrader, and custom FIX/API-based setups. Our team maps symbols, account structures, and risk rules during onboarding to match your current stack.</p>
+        </div>
+      </article>
+
+      <article class="pricing-faq-item" role="listitem">
+        <button class="pricing-faq-item__trigger" type="button" aria-expanded="false">
+          <span>Do I need to make changes to my existing infrastructure?</span>
+          <span class="pricing-faq-item__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M11.9997 13.1719L16.9497 8.22192L18.3637 9.63592L11.9997 15.9999L5.63574 9.63592L7.04974 8.22192L11.9997 13.1719Z" fill="#5C5C5C"></path>
+            </svg>
+          </span>
+        </button>
+        <div class="pricing-faq-item__content" hidden>
+          <p>No major rebuild is required. risksystem.io is designed to integrate with your existing broker infrastructure while letting you phase in advanced monitoring and automation safely.</p>
+        </div>
+      </article>
+
+      <article class="pricing-faq-item" role="listitem">
+        <button class="pricing-faq-item__trigger" type="button" aria-expanded="false">
+          <span>How does the 14-day free trial work?</span>
+          <span class="pricing-faq-item__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M11.9997 13.1719L16.9497 8.22192L18.3637 9.63592L11.9997 15.9999L5.63574 9.63592L7.04974 8.22192L11.9997 13.1719Z" fill="#5C5C5C"></path>
+            </svg>
+          </span>
+        </button>
+        <div class="pricing-faq-item__content" hidden>
+          <p>You get full platform access for 14 days with guided setup and support. No credit card is required, and you can cancel anytime before your first billing cycle.</p>
+        </div>
+      </article>
+
+      <article class="pricing-faq-item" role="listitem">
+        <button class="pricing-faq-item__trigger" type="button" aria-expanded="false">
+          <span>What kind of support do you provide?</span>
+          <span class="pricing-faq-item__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M11.9997 13.1719L16.9497 8.22192L18.3637 9.63592L11.9997 15.9999L5.63574 9.63592L7.04974 8.22192L11.9997 13.1719Z" fill="#5C5C5C"></path>
+            </svg>
+          </span>
+        </button>
+        <div class="pricing-faq-item__content" hidden>
+          <p>All plans include onboarding and technical assistance. Higher tiers include priority response, dedicated success support, and 24/7 monitoring guidance for critical incidents.</p>
+        </div>
+      </article>
+
+      <article class="pricing-faq-item" role="listitem">
+        <button class="pricing-faq-item__trigger" type="button" aria-expanded="false">
+          <span>Is my data secure with risksystem.io?</span>
+          <span class="pricing-faq-item__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M11.9997 13.1719L16.9497 8.22192L18.3637 9.63592L11.9997 15.9999L5.63574 9.63592L7.04974 8.22192L11.9997 13.1719Z" fill="#5C5C5C"></path>
+            </svg>
+          </span>
+        </button>
+        <div class="pricing-faq-item__content" hidden>
+          <p>Yes. We use encrypted data transport, role-based access controls, and auditable controls to help you maintain strict operational and compliance standards.</p>
+        </div>
+      </article>
+    </div>
+    <div class="pricing-faq-cta text-center">
+      <div class="hero-actions">
+        <!-- <a href="#" class="btn btn-ghost">Schedule Demo</a> -->
+        <a href="contact.html#contact-message" class="btn btn-gradient">Join the Waitlist</a>
+      </div>
+      <p class="pricing-faq-cta__note">
+        Still have questions?
+        <a href="contact.html">Contact our support team</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section-pricing-testimonials section-before-footer" id="section-pricing-testimonials">
+  <div class="container">
+    <div class="pricing-testimonials-heading text-center">
+      <span class="pricing-testimonials-heading__badge pricing-faq-heading__badge">Testimonials</span>
+      <h2 class="pricing-testimonials-heading__title">Trusted by Leading Brokers Worldwide</h2>
+      <p class="pricing-testimonials-heading__desc hero-desc hero-desc--internal mx-auto">
+        See what our customers say about transforming their risk management with risksystem.io.
+      </p>
+    </div>
+    <div class="intel-stats-band mx-auto text-center">
+      <div class="row g-4 justify-content-center">
+        <div class="col-12 col-md-4">
+          <div class="intel-stats-band__cell">
+            <div class="intel-stats-band__num">4.9/5</div>
+            <div class="intel-stats-band__lbl">Average Rating</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="intel-stats-band__cell">
+            <div class="intel-stats-band__num">100+</div>
+            <div class="intel-stats-band__lbl">Happy Brokers</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="intel-stats-band__cell">
+            <div class="intel-stats-band__num">98%</div>
+            <div class="intel-stats-band__lbl">Would Recommend</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pricing-testimonials-marquee" aria-label="Client testimonials">
+    <div class="pricing-testimonials-row pricing-testimonials-row--left">
+      <div class="pricing-testimonials-track">
+        <article class="features-panel-card features-panel-card--roi w-100 h-100 pricing-testimonial-card">
+          <p class="pricing-testimonial-card__text">"risksystem.io transformed our operations. We reduced risk exposure by 65% and increased profitability by 40% in just 3 months. The ROI was immediate."</p>
+          <div class="pricing-testimonial-card__author">
+            <img src="assets/avatars/milad-shams.jpg" alt="Milad Shams" class="pricing-testimonial-card__avatar" width="49" height="49" />
+            <div>
+              <p class="pricing-testimonial-card__name">Milad Shams</p>
+              <p class="pricing-testimonial-card__role">CEO, GlobalFX Trading</p>
+            </div>
+          </div>
+        </article>
+        <article class="features-panel-card features-panel-card--roi w-100 h-100 pricing-testimonial-card">
+          <p class="pricing-testimonial-card__text">"The toxic flow detection caught patterns we had been missing for months. Our dealing desk now acts faster and with far more confidence in every market condition."</p>
+          <div class="pricing-testimonial-card__author">
+            <img src="assets/avatars/joao-silas.jpg" alt="Joao Silas" class="pricing-testimonial-card__avatar" width="49" height="49" />
+            <div>
+              <p class="pricing-testimonial-card__name">Joao Silas</p>
+              <p class="pricing-testimonial-card__role">Head of Risk, Nova Markets</p>
+            </div>
+          </div>
+        </article>
+        <article class="features-panel-card features-panel-card--roi w-100 h-100 pricing-testimonial-card">
+          <p class="pricing-testimonial-card__text">"Setup was smooth and the team guided every integration step. Within the first week we had actionable insights across MT4, MT5, and our custom bridge."</p>
+          <div class="pricing-testimonial-card__author">
+            <img src="assets/avatars/analise-benevides.jpg" alt="Analise Benevides" class="pricing-testimonial-card__avatar" width="49" height="49" />
+            <div>
+              <p class="pricing-testimonial-card__name">Analise Benevides</p>
+              <p class="pricing-testimonial-card__role">CTO, Meridian Brokers</p>
+            </div>
+          </div>
+        </article>
+        <article class="features-panel-card features-panel-card--roi w-100 h-100 pricing-testimonial-card">
+          <p class="pricing-testimonial-card__text">"Automation rules helped us standardize risk responses globally. We now spend less time firefighting and more time improving execution quality."</p>
+          <div class="pricing-testimonial-card__author">
+            <img src="assets/avatars/alfred-kenneally.jpg" alt="Alfred Kenneally" class="pricing-testimonial-card__avatar" width="49" height="49" />
+            <div>
+              <p class="pricing-testimonial-card__name">Alfred Kenneally</p>
+              <p class="pricing-testimonial-card__role">Operations Director, PrimeDelta</p>
+            </div>
+          </div>
+        </article>
+        <article class="features-panel-card features-panel-card--roi w-100 h-100 pricing-testimonial-card" aria-hidden="true">
+          <p class="pricing-testimonial-card__text">"risksystem.io transformed our operations. We reduced risk exposure by 65% and increased profitability by 40% in just 3 months. The ROI was immediate."</p>
+          <div class="pricing-testimonial-card__author">
+            <img src="assets/avatars/milad-shams.jpg" alt="" class="pricing-testimonial-card__avatar" width="49" height="49" />
+            <div>
+              <p class="pricing-testimonial-card__name">Milad Shams</p>
+              <p class="pricing-testimonial-card__role">CEO, GlobalFX Trading</p>
+            </div>
+          </div>
+        </article>
+        <article class="features-panel-card features-panel-card--roi w-100 h-100 pricing-testimonial-card" aria-hidden="true">
+          <p class="pricing-testimonial-card__text">"The toxic flow detection caught patterns we had been missing for months. Our dealing desk now acts faster and with far more confidence in every market condition."</p>
+          <div class="pricing-testimonial-card__author">
+            <img src="assets/avatars/joao-silas.jpg" alt="" class="pricing-testimonial-card__avatar" width="49" height="49" />
+            <div>
+              <p class="pricing-testimonial-card__name">Joao Silas</p>
+              <p class="pricing-testimonial-card__role">Head of Risk, Nova Markets</p>
+            </div>
+          </div>
+        </article>
+        <article class="features-panel-card features-panel-card--roi w-100 h-100 pricing-testimonial-card" aria-hidden="true">
+          <p class="pricing-testimonial-card__text">"Setup was smooth and the team guided every integration step. Within the first week we had actionable insights across MT4, MT5, and our custom bridge."</p>
+          <div class="pricing-testimonial-card__author">
+            <img src="assets/avatars/analise-benevides.jpg" alt="" class="pricing-testimonial-card__avatar" width="49" height="49" />
+            <div>
+              <p class="pricing-testimonial-card__name">Analise Benevides</p>
+              <p class="pricing-testimonial-card__role">CTO, Meridian Brokers</p>
+            </div>
+          </div>
+        </article>
+        <article class="features-panel-card features-panel-card--roi w-100 h-100 pricing-testimonial-card" aria-hidden="true">
+          <p class="pricing-testimonial-card__text">"Automation rules helped us standardize risk responses globally. We now spend less time firefighting and more time improving execution quality."</p>
+          <div class="pricing-testimonial-card__author">
+            <img src="assets/avatars/alfred-kenneally.jpg" alt="" class="pricing-testimonial-card__avatar" width="49" height="49" />
+            <div>
+              <p class="pricing-testimonial-card__name">Alfred Kenneally</p>
+              <p class="pricing-testimonial-card__role">Operations Director, PrimeDelta</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="pricing-testimonials-row pricing-testimonials-row--right">
+      <div class="pricing-testimonials-track">
+        <article class="features-panel-card features-panel-card--roi w-100 h-100 pricing-testimonial-card">
+          <p class="pricing-testimonial-card__text">"The real-time dashboard gave our executives clear exposure visibility for the first time. Decision-making is now faster and backed by reliable data."</p>
+          <div class="pricing-testimonial-card__author">
+            <img src="assets/avatars/amelia-barklid.jpg" alt="Amelia Barklid" class="pricing-testimonial-card__avatar" width="49" height="49" />
+            <div>
+              <p class="pricing-testimonial-card__name">Amelia Barklid</p>
+              <p class="pricing-testimonial-card__role">Operations Director, PrimeDelta</p>
+            </div>
+          </div>
+        </article>
+        <article class="features-panel-card features-panel-card--roi w-100 h-100 pricing-testimonial-card">
+          <p class="pricing-testimonial-card__text">"We scaled from one server to four without losing control. Alerting and routing adjustments are now proactive instead of reactive."</p>
+          <div class="pricing-testimonial-card__author">
+            <img src="assets/avatars/laurence-cruz.jpg" alt="Laurence Cruz" class="pricing-testimonial-card__avatar" width="49" height="49" />
+            <div>
+              <p class="pricing-testimonial-card__name">Laurence Cruz</p>
+              <p class="pricing-testimonial-card__role">CEO, GlobalFX Trading</p>
+            </div>
+          </div>
+        </article>
+        <article class="features-panel-card features-panel-card--roi w-100 h-100 pricing-testimonial-card">
+          <p class="pricing-testimonial-card__text">"Support quality has been outstanding. Every release includes improvements we can apply immediately to strengthen controls and profitability."</p>
+          <div class="pricing-testimonial-card__author">
+            <img src="assets/avatars/tyler-nix.jpg" alt="Tyler Nix" class="pricing-testimonial-card__avatar" width="49" height="49" />
+            <div>
+              <p class="pricing-testimonial-card__name">Tyler Nix</p>
+              <p class="pricing-testimonial-card__role">Head of Risk, Nova Markets</p>
+            </div>
+          </div>
+        </article>
+        <article class="features-panel-card features-panel-card--roi w-100 h-100 pricing-testimonial-card">
+          <p class="pricing-testimonial-card__text">"Implementation required minimal internal effort. The platform fit our existing infrastructure and immediately improved our risk governance workflow."</p>
+          <div class="pricing-testimonial-card__author">
+            <img src="assets/avatars/tiffany-collins.jpg" alt="Tiffany Collins" class="pricing-testimonial-card__avatar" width="49" height="49" />
+            <div>
+              <p class="pricing-testimonial-card__name">Tiffany Collins</p>
+              <p class="pricing-testimonial-card__role">CTO, Meridian Brokers</p>
+            </div>
+          </div>
+        </article>
+        <article class="features-panel-card features-panel-card--roi w-100 h-100 pricing-testimonial-card" aria-hidden="true">
+          <p class="pricing-testimonial-card__text">"The real-time dashboard gave our executives clear exposure visibility for the first time. Decision-making is now faster and backed by reliable data."</p>
+          <div class="pricing-testimonial-card__author">
+            <img src="assets/avatars/amelia-barklid.jpg" alt="" class="pricing-testimonial-card__avatar" width="49" height="49" />
+            <div>
+              <p class="pricing-testimonial-card__name">Amelia Barklid</p>
+              <p class="pricing-testimonial-card__role">Operations Director, PrimeDelta</p>
+            </div>
+          </div>
+        </article>
+        <article class="features-panel-card features-panel-card--roi w-100 h-100 pricing-testimonial-card" aria-hidden="true">
+          <p class="pricing-testimonial-card__text">"We scaled from one server to four without losing control. Alerting and routing adjustments are now proactive instead of reactive."</p>
+          <div class="pricing-testimonial-card__author">
+            <img src="assets/avatars/laurence-cruz.jpg" alt="" class="pricing-testimonial-card__avatar" width="49" height="49" />
+            <div>
+              <p class="pricing-testimonial-card__name">Laurence Cruz</p>
+              <p class="pricing-testimonial-card__role">CEO, GlobalFX Trading</p>
+            </div>
+          </div>
+        </article>
+        <article class="features-panel-card features-panel-card--roi w-100 h-100 pricing-testimonial-card" aria-hidden="true">
+          <p class="pricing-testimonial-card__text">"Support quality has been outstanding. Every release includes improvements we can apply immediately to strengthen controls and profitability."</p>
+          <div class="pricing-testimonial-card__author">
+            <img src="assets/avatars/tyler-nix.jpg" alt="" class="pricing-testimonial-card__avatar" width="49" height="49" />
+            <div>
+              <p class="pricing-testimonial-card__name">Tyler Nix</p>
+              <p class="pricing-testimonial-card__role">Head of Risk, Nova Markets</p>
+            </div>
+          </div>
+        </article>
+        <article class="features-panel-card features-panel-card--roi w-100 h-100 pricing-testimonial-card" aria-hidden="true">
+          <p class="pricing-testimonial-card__text">"Implementation required minimal internal effort. The platform fit our existing infrastructure and immediately improved our risk governance workflow."</p>
+          <div class="pricing-testimonial-card__author">
+            <img src="assets/avatars/tiffany-collins.jpg" alt="" class="pricing-testimonial-card__avatar" width="49" height="49" />
+            <div>
+              <p class="pricing-testimonial-card__name">Tiffany Collins</p>
+              <p class="pricing-testimonial-card__role">CTO, Meridian Brokers</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+  <div class="pricing-testimonials-cta text-center">
+    <div class="hero-actions">
+      <!-- <a href="#" class="btn btn-ghost">Schedule Demo</a> -->
+      <a href="contact.html#contact-message" class="btn btn-gradient">Join the Waitlist</a>
+    </div>
+    <div class="section-footnote text-center">
+      <p class="footnote-title">Explore Global Trading Intelligence</p>
+      <p class="footnote-sub">Join 100+ brokers • Access 1M+ lots of data • Free tier available</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-glowed">
+  <div class="container">
+    <div class="section-glowed-bg" aria-hidden="true"></div>
+  </div>
+</section>
+
+
+ 
+<section id="cta">
+  <div class="container text-center">
+    <div class="cta-logo mb-0" data-aos="fade-up">
+      <img src="assets/logo/logo-block.svg" alt="RiskSystem" width="100" height="100" />
+    </div>
+    <h2 class="hero-title cta-title" data-aos="fade-up">
+      Stop Guessing.<br /><span>Start Controlling Risk.</span>
+    </h2>
+    <p class="hero-desc mx-auto" data-aos="fade-up" data-aos-delay="80">
+      Join 2,800+ brokers who protect their book, prevent fraud, and grow profitability with real-time intelligence.
+    </p>
+    <div class="hero-actions" data-aos="fade-up" data-aos-delay="160">
+      <!-- <a href="#" class="btn btn-ghost">Schedule Demo</a> -->
+      <a href="contact.html#contact-message" class="btn btn-gradient">Join the Waitlist</a>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="container">
+    <div class="row g-5 pb-5" style="border-bottom:1px solid var(--border-color);">
+      <div class="col-12 col-lg-5">
+        <a href="index.html" class="navbar-brand">
+          <img src="assets/logo.svg" alt="risksystem.io" width="256" />
+        </a>
+        <p class="footer-tagline">
+          Real-Time Risk Management For<br />Modern Brokerages
+        </p>
+      </div>
+      <div class="col-12 col-lg-7">
+        <div class="footer-col footer-col--nav">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html#hero">Home</a></li>
+            <li><a href="features.html#hero">Features</a></li>
+            <li><a href="global-exposure.html#hero">Global Exposure</a></li>
+            <li><a href="pricing.html#hero">Pricing</a></li>
+            <li><a href="about.html#hero">About</a></li>
+            <li><a href="contact.html#hero">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap gap-3 pt-4">
+      <span>(c) 2026 Risksystems.io - All Rights Reserved</span>
+      <div class="d-flex gap-4">
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div><!-- /#loco-main [data-scroll-container] -->
+
+<button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top">
+  <span class="back-to-top__icon" aria-hidden="true">^</span>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+<script>
+(function () {
+  var container = document.querySelector('#loco-main[data-scroll-container]');
+  if (!container || typeof LocomotiveScroll === 'undefined') return;
+
+  var prefersReduced =
+    typeof window.matchMedia === 'function' &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var scroll = new LocomotiveScroll({
+    el: container,
+    smooth: !prefersReduced,
+    smartphone: { smooth: false },
+    tablet: { smooth: false },
+  });
+  window.__locoScroll = scroll;
+
+  var nav = document.querySelector('.navbar');
+  var backToTop = document.getElementById('back-to-top');
+
+  function updateNavScrollState(scrollY) {
+    if (!nav) return;
+    nav.classList.toggle('navbar-scrolled', scrollY > 24);
+  }
+
+  scroll.on('scroll', function (args) {
+    if (!args || !args.scroll) return;
+    updateNavScrollState(args.scroll.y);
+    if (backToTop) backToTop.classList.toggle('back-to-top--visible', args.scroll.y > 360);
+  });
+  updateNavScrollState(0);
+
+  function refreshLoco() { scroll.update(); }
+  window.addEventListener('load', function () { refreshLoco(); setTimeout(refreshLoco, 300); }, { once: true });
+  requestAnimationFrame(refreshLoco);
+  window.addEventListener('resize', function () { setTimeout(refreshLoco, 200); });
+
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      if (anchor.hasAttribute('data-bs-toggle') || anchor.hasAttribute('data-bs-target')) return;
+      var href = anchor.getAttribute('href');
+      if (!href || href === '#' || href.length < 2) return;
+      var target = document.querySelector(href);
+      if (!target) return;
+      e.preventDefault();
+      scroll.scrollTo(target, { offset: -92, duration: 900, easing: [0.25, 0.0, 0.35, 1.0] });
+    });
+  });
+
+  if (backToTop) {
+    backToTop.addEventListener('click', function () {
+      var hero = document.getElementById('hero');
+      if (!hero) return;
+      scroll.scrollTo(hero, { offset: -92, duration: prefersReduced ? 0 : 700, easing: [0.25, 0.0, 0.35, 1.0] });
+    });
+  }
+
+  var billingToggle = document.getElementById('billing-cycle-toggle');
+  var pricingValues = document.querySelectorAll('.pricing-toggle-price');
+  var billingLabels = document.querySelectorAll('[data-billing-label]');
+  if (billingToggle && pricingValues.length) {
+    function updateBillingCycle() {
+      var yearly = billingToggle.checked;
+      pricingValues.forEach(function (el) {
+        var next = yearly ? el.getAttribute('data-yearly') : el.getAttribute('data-monthly');
+        if (next) el.innerHTML = next;
+      });
+      billingLabels.forEach(function (el) {
+        var isYearlyLabel = el.getAttribute('data-billing-label') === 'yearly';
+        el.classList.toggle('pricing-billing-toggle__label--active', yearly ? isYearlyLabel : !isYearlyLabel);
+      });
+    }
+    billingToggle.addEventListener('change', updateBillingCycle);
+    updateBillingCycle();
+  }
+
+  var faqItems = document.querySelectorAll('.pricing-faq-item');
+  if (faqItems.length) {
+    function setFaqItemState(item, open) {
+      var trigger = item.querySelector('.pricing-faq-item__trigger');
+      var content = item.querySelector('.pricing-faq-item__content');
+      if (!trigger || !content) return;
+      item.classList.toggle('is-open', open);
+      trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      content.hidden = false;
+      content.setAttribute('aria-hidden', open ? 'false' : 'true');
+      if (!open) {
+        content.style.maxHeight = '0px';
+        return;
+      }
+      requestAnimationFrame(function () {
+        content.style.maxHeight = (content.scrollHeight + 36) + 'px';
+      });
+    }
+
+    faqItems.forEach(function (item) {
+      var trigger = item.querySelector('.pricing-faq-item__trigger');
+      var isOpen = item.classList.contains('is-open');
+      setFaqItemState(item, isOpen);
+      if (!trigger) return;
+      trigger.addEventListener('click', function () {
+        var willOpen = !item.classList.contains('is-open');
+        faqItems.forEach(function (otherItem) { setFaqItemState(otherItem, false); });
+        setFaqItemState(item, willOpen);
+        setTimeout(refreshLoco, 220);
+      });
+    });
+
+    window.addEventListener('resize', function () {
+      faqItems.forEach(function (item) {
+        if (!item.classList.contains('is-open')) return;
+        var content = item.querySelector('.pricing-faq-item__content');
+        if (!content) return;
+        content.style.maxHeight = (content.scrollHeight + 36) + 'px';
+      });
+    });
+  }
+})();
+</script>
+<script>
+(function () {
+  var root = document.getElementById('loco-main');
+  if (!root) return;
+  var sectionTitles = root.querySelectorAll('.hero-title');
+  var prefersReduced =
+    typeof window.matchMedia === 'function' &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  root.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(function (el) {
+    el.classList.add('loco-reveal-heading');
+  });
+
+  root.querySelectorAll(':scope > section').forEach(function (section) {
+    section.classList.add('loco-reveal-section');
+    section.setAttribute('data-scroll', '');
+    section.setAttribute('data-scroll-class', 'is-inview');
+    section.setAttribute('data-scroll-repeat', '');
+  });
+
+  root.querySelectorAll('section .row').forEach(function (row) {
+    var hasColumns = Array.from(row.children).some(function (child) {
+      return /\bcol-/.test(child.className);
+    });
+    if (!hasColumns || row.children.length < 2) return;
+    row.classList.add('loco-stagger');
+    row.setAttribute('data-scroll', '');
+    row.setAttribute('data-scroll-class', 'is-inview');
+    row.setAttribute('data-scroll-repeat', '');
+  });
+
+  function revealVisibleHeadings() {
+    var triggerY = window.innerHeight * 0.82;
+    root.querySelectorAll('.loco-reveal-heading').forEach(function (el) {
+      var rect = el.getBoundingClientRect();
+      var shouldReveal = rect.top <= triggerY && rect.bottom >= 0;
+      el.classList.toggle('is-inview', shouldReveal);
+    });
+  }
+
+  function clamp01(n) {
+    return Math.max(0, Math.min(1, n));
+  }
+
+  function updateSectionTitleScale() {
+    if (!sectionTitles.length) return;
+    if (prefersReduced) {
+      sectionTitles.forEach(function (title) {
+        title.style.setProperty('--loco-title-scale', '1');
+      });
+      return;
+    }
+    var vh = Math.max(1, window.innerHeight || document.documentElement.clientHeight || 1);
+    sectionTitles.forEach(function (title) {
+      var rect = title.getBoundingClientRect();
+      var start = vh * 0.95;
+      var end = vh * 0.25;
+      var progress = clamp01((start - rect.top) / (start - end));
+      var eased = 1 - Math.pow(1 - progress, 2);
+      var scale = 1 + (eased * 0.15); // 1.00 -> 1.15
+      title.style.setProperty('--loco-title-scale', scale.toFixed(3));
+      title.style.transformOrigin = '50% 50%';
+    });
+  }
+
+  function runLocoFx() {
+    revealVisibleHeadings();
+    updateSectionTitleScale();
+  }
+
+  runLocoFx();
+  if (window.__locoScroll && typeof window.__locoScroll.on === 'function') {
+    window.__locoScroll.on('scroll', runLocoFx);
+    window.__locoScroll.update();
+  } else {
+    window.addEventListener('scroll', runLocoFx, { passive: true });
+  }
+  window.addEventListener('resize', runLocoFx, { passive: true });
+})();
+</script>
+</body>
+</html>
