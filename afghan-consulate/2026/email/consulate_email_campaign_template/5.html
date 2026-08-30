@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Together Towards a Digitally Empowered Future</title>
+  <style>
+    body, table, td, p, a { -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
+    table, td { mso-table-lspace:0pt; mso-table-rspace:0pt; }
+    img { -ms-interpolation-mode:bicubic; border:0; outline:none; text-decoration:none; display:block; }
+    body { margin:0 !important; padding:0 !important; width:100% !important; background:#f3f6fb; }
+    a { color:#1d4ed8; text-decoration:none; }
+
+    .preheader { display:none !important; visibility:hidden; opacity:0; color:transparent; height:0; width:0; overflow:hidden; mso-hide:all; }
+    .wrapper { width:100%; background:#f3f6fb; padding:24px 0; }
+    .container { width:100%; max-width:680px; margin:0 auto; background:#ffffff; border-radius:24px; overflow:hidden; box-shadow:0 20px 50px rgba(20,39,88,0.12); }
+
+    .hero { background:#102b86; background-image:linear-gradient(135deg,#0d2579 0%,#1237b8 70%,#1e4ddd 100%); color:#ffffff; text-align:center; padding:28px 28px 36px; border-bottom:4px solid #d5ad3d; }
+    .logo-row { font-family:Arial, Helvetica, sans-serif; font-size:12px; color:rgba(255,255,255,0.9); letter-spacing:.02em; margin-bottom:16px; }
+    .hero-title-grid { width:100%; border-collapse:collapse; }
+    .hero-title-cell { width:50%; vertical-align:top; text-align:left; padding:0 14px 0 0; }
+    .hero-title-cell-ps { width:50%; vertical-align:top; text-align:right; direction:rtl; padding:0 0 0 14px; font-family:Tahoma, Arial, sans-serif; }
+    .headline { margin:0; font-family:Arial, Helvetica, sans-serif; font-size:25px; line-height:1.22; font-weight:800; color:#ffffff; }
+    .headline-ps { margin:0; font-family:Tahoma, Arial, sans-serif; font-size:25px; line-height:1.5; font-weight:800; color:#ffffff; direction:rtl; }
+    .subhead { margin:12px 0 0; font-family:Arial, Helvetica, sans-serif; font-size:13px; line-height:1.55; color:rgba(255,255,255,0.86); }
+    .subhead-ps { margin:12px 0 0; font-family:Tahoma, Arial, sans-serif; font-size:13px; line-height:1.8; color:rgba(255,255,255,0.86); direction:rtl; }
+
+    .profile-wrap { margin:-28px auto 18px; width:86px; height:86px; border-radius:24px; background:#ffffff; padding:5px; box-shadow:0 12px 26px rgba(15,35,88,0.22); }
+    .profile { width:86px; height:86px; border-radius:20px; object-fit:cover; background:#e5e7eb; }
+
+    .ambassador { padding:0 34px 24px; font-family:Arial, Helvetica, sans-serif; }
+    .name-grid { width:100%; border-collapse:collapse; }
+    .name-cell { width:50%; vertical-align:top; text-align:left; padding:0 14px; }
+    .name-cell-ps { width:50%; vertical-align:top; text-align:right; direction:rtl; padding:0 14px; font-family:Tahoma, Arial, sans-serif; }
+    .amb-name { margin:0; color:#111827; font-size:19px; line-height:1.28; font-weight:800; }
+    .amb-title { margin:7px 0 0; color:#64748b; font-size:13px; line-height:1.6; }
+    .amb-name-ps { margin:0; color:#111827; font-size:17px; line-height:1.65; font-weight:700; }
+    .amb-title-ps { margin:6px 0 0; color:#64748b; font-size:13px; line-height:1.9; }
+
+    .inner { padding:0 34px 34px; }
+    .message-card { background:transparent; }
+    .pair { border:1px solid #e6ebf3; border-radius:22px; overflow:hidden; background:#ffffff; margin:0 0 18px; }
+    .pair:last-child { margin-bottom:0; }
+    .en { font-family:Arial, Helvetica, sans-serif; padding:24px 24px 22px; }
+    .ps { font-family:Tahoma, Arial, sans-serif; direction:rtl; text-align:right; padding:24px 24px 24px; border-top:1px solid #e6ebf3; background:#f8fafc; }
+    .section-kicker { margin:0 0 6px; color:#1237b8; font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:1.4; font-weight:800; letter-spacing:.04em; text-transform:uppercase; }
+    .section-kicker-ps { margin:0 0 6px; color:#8a6500; font-family:Tahoma, Arial, sans-serif; font-size:13px; line-height:1.7; font-weight:700; }
+    h3 { margin:0 0 10px; color:#0f172a; font-size:18px; line-height:1.35; font-weight:800; }
+    .ps h3 { font-family:Tahoma, Arial, sans-serif; font-size:18px; line-height:1.7; }
+    p { margin:0; }
+    .body-text { color:#475569; font-size:15px; line-height:1.76; }
+    .ps .body-text { font-size:15px; line-height:2.05; color:#475569; }
+
+    .quote-area { margin:0; border-radius:18px; overflow:hidden; border:1px solid #f3e4b8; background:#fffaf0; }
+    .quote-en { padding:17px 20px; border-left:4px solid #d5ad3d; font-family:Arial, Helvetica, sans-serif; color:#3f3f46; font-size:15px; line-height:1.7; }
+    .quote-ps { padding:17px 20px; border-top:1px solid #f3e4b8; border-right:4px solid #d5ad3d; font-family:Tahoma, Arial, sans-serif; color:#3f3f46; font-size:15px; line-height:2; direction:rtl; text-align:right; }
+
+    .cta-wrap { text-align:center; padding:26px 0 8px; }
+    .cta { display:inline-block; background:#1237b8; color:#ffffff !important; font-family:Arial, Helvetica, sans-serif; font-size:15px; font-weight:700; line-height:1; padding:16px 24px; border-radius:999px; }
+
+    .signature { border-top:1px solid #e6ebf3; padding-top:20px; margin-top:24px; }
+    .signature-grid { width:100%; border-collapse:collapse; }
+    .signature-cell { width:50%; vertical-align:top; text-align:left; padding:0 14px 0 0; font-family:Arial, Helvetica, sans-serif; color:#475569; font-size:14px; line-height:1.7; }
+    .signature-cell-ps { width:50%; vertical-align:top; text-align:right; direction:rtl; padding:0 0 0 14px; font-family:Tahoma, Arial, sans-serif; color:#475569; font-size:14px; line-height:2; }
+    .signature strong { color:#111827; }
+
+    .footer { background:#0f172a; padding:26px 34px 28px; text-align:center; font-family:Arial, Helvetica, sans-serif; }
+    .footer p { margin:0; color:#cbd5e1; font-size:12px; line-height:1.7; }
+    .footer-title { margin:0 0 6px !important; color:#ffffff !important; font-size:14px !important; line-height:1.5 !important; font-weight:700; }
+    .footer-intro { margin:0 auto !important; max-width:560px; color:#cbd5e1 !important; font-size:12px !important; line-height:1.7 !important; }
+
+    .app-buttons { margin:18px 0 12px; text-align:center; }
+    .app-btn {
+      display:inline-block;
+      margin:5px;
+      text-decoration:none;
+      vertical-align:middle;
+    }
+    .app-btn img {
+      display:block;
+      max-width:170px;
+      width:100%;
+      height:auto;
+      border:0;
+    }
+
+    .review-wrap { margin:18px 0 4px; text-align:center; }
+    .review-btn {
+      display:inline-block;
+      padding:13px 22px;
+      border-radius:999px;
+      background:#d5ad3d;
+      color:#0f172a !important;
+      font-family:Arial, Helvetica, sans-serif;
+      font-size:14px;
+      font-weight:800;
+      line-height:1;
+      text-decoration:none;
+    }
+
+    .footer .disclaimer { margin-top:16px; color:#94a3b8; font-size:11px; line-height:1.65; }
+
+    @media screen and (max-width:600px) {
+      .wrapper { padding:0; }
+      .container { border-radius:0; box-shadow:none; }
+      .hero { padding:24px 20px 34px; }
+      .hero-title-cell, .hero-title-cell-ps { display:block; width:100% !important; padding:0 !important; text-align:center !important; }
+      .hero-title-cell-ps { margin-top:18px; }
+      .headline { font-size:23px; }
+      .headline-ps { font-size:23px; }
+      .ambassador { padding-left:22px; padding-right:22px; }
+      .name-cell, .name-cell-ps, .signature-cell, .signature-cell-ps { display:block; width:100% !important; padding:0 !important; text-align:center !important; direction:ltr; }
+      .name-cell-ps, .signature-cell-ps { direction:rtl; margin-top:16px; }
+      .inner { padding:0 20px 28px; }
+      .pair { margin-bottom:16px; }
+      .en, .ps { padding:20px 18px; }
+      .body-text, .ps .body-text, .quote-en, .quote-ps { font-size:14px; }
+      .footer { padding-left:22px; padding-right:22px; }
+      .app-btn { display:block; max-width:170px; margin:8px auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="preheader">A message from the Consulate General of Afghanistan in Dubai on digital services and citizen empowerment.</div>
+  <center class="wrapper">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td align="center">
+          <table role="presentation" class="container" width="680" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+              <td class="hero">
+                <div class="logo-row">Consulate General of Afghanistan · Dubai, U.A.E</div>
+                <table role="presentation" class="hero-title-grid" width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td class="hero-title-cell">
+                      <h1 class="headline">Together Towards a Digitally Empowered Future</h1>
+                      <p class="subhead">A message of gratitude, service, and progress for our valued citizens.</p>
+                    </td>
+                    <td class="hero-title-cell-ps" dir="rtl" lang="ps">
+                      <h1 class="headline-ps">د ډیجیټلي ځواکمن راتلونکي پر لور یو ځای</h1>
+                      <p class="subhead-ps">د قدر، خدمت او پرمختګ پیغام زموږ درنو هېوادوالو ته.</p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <div class="profile-wrap">
+                  <img alt="Abdul Rahman Fida" height="86" src="https://afghanconsulate.ae/img/email/campaign-may2026/pic-rahman-fida.jpg" style="display:block; width:86px; height:86px; border-radius:20px; border:0;" width="86"/>
+
+                  <!-- <img class="profile" src="https://via.placeholder.com/172x172.png?text=Photo" width="86" height="86" alt="H.E. Abdul Rahman Fida"> -->
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="ambassador">
+                <table role="presentation" class="name-grid" width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td class="name-cell">
+                      <h2 class="amb-name">H.E. Abdul Rahman Fida</h2>
+                      <p class="amb-title">Consulate General of the Islamic Emirates of Afghanistan, in Dubai, U.A.E</p>
+                    </td>
+                    <td class="name-cell-ps" dir="rtl" lang="ps">
+                      <h2 class="amb-name-ps">جلالتمآب عبدالرحمن فدا</h2>
+                      <p class="amb-title-ps">د افغانستان اسلامي امارت قونسل جنرال، دوبۍ، متحده عربي امارات</p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td class="inner">
+                <div class="message-card">
+                  <div class="pair">
+                    <div class="en">
+                      <h3>Dear Esteemed Citizen,</h3>
+                      <p class="body-text">On behalf of our country and myself, I express my deepest gratitude for choosing to utilize our online services. Your trust in this platform represents a shared vision of progress and commitment to a brighter future for our nation.</p>
+                    </div>
+                    <div class="ps" dir="rtl" lang="ps">
+                      <h3>ګرانه هېوادواله،</h3>
+                      <p class="body-text">د خپل ځان او د خپل هېواد په استازیتوب، له تاسو څخه د زړه له کومې مننه کوم چې زموږ آنلاین خدمات مو غوره کړي دي. په دې پلیټفارم ستاسو باور زموږ د پرمختګ د ګډ لید او د خپل هېواد لپاره د روښانه راتلونکي د ژمنتیا څرګندونه کوي.</p>
+                    </div>
+                  </div>
+
+                  <div class="pair">
+                    <div class="en">
+                      <p class="section-kicker">Our Mission</p>
+                      <h3>Seamless Access to Services</h3>
+                      <p class="body-text">Our mission is clear: to create a nation where every citizen has seamless access to the services they need. Through digitization, we are working tirelessly to bring convenience, transparency, and efficiency to your fingertips.</p>
+                    </div>
+                    <div class="ps" dir="rtl" lang="ps">
+                      <p class="section-kicker-ps">زموږ موخه</p>
+                      <h3>خدماتو ته اسانه لاسرسی</h3>
+                      <p class="body-text">زموږ موخه روښانه ده: داسې یو نظام رامنځته کول چې هر هېوادوال وکولای شي اړینو خدماتو ته په اسانه، چټکه او شفافه توګه لاسرسی ولري. د ډیجیټلي کېدو له لارې، موږ هڅه کوو چې اسانتیا، شفافیت او اغېزمنتیا ستاسو لاسونو ته نږدې کړو.</p>
+                    </div>
+                  </div>
+
+                  <div class="pair">
+                    <div class="en">
+                      <p class="section-kicker">Digital Transformation</p>
+                      <h3>Technology That Empowers Citizens</h3>
+                      <p class="body-text">This transformation is not just about technology — it is about empowering you, our valued citizen, and making life easier, more efficient, and more connected for everyone.</p>
+                    </div>
+                    <div class="ps" dir="rtl" lang="ps">
+                      <p class="section-kicker-ps">ډیجیټلي بدلون</p>
+                      <h3>ټکنالوژي د هېوادوالو د ځواکمنتیا لپاره</h3>
+                      <p class="body-text">دا بدلون یوازې د ټکنالوژۍ په اړه نه دی؛ بلکې دا ستاسو د ځواکمنتیا، د ژوند د اسانتیا، د کارونو د چټکتیا او د ټولو هېوادوالو ترمنځ د لا ښه اړیکې او لاسرسي لپاره یو مهم ګام دی.</p>
+                    </div>
+                  </div>
+
+                  <div class="pair">
+                    <div class="en">
+                      <p class="section-kicker">Commitment</p>
+                      <h3>Serving You Better</h3>
+                      <p class="body-text">As public servants, it is our privilege and duty to serve you to the fullest extent. We are committed to not only meeting your expectations but exceeding them. Every step we take is guided by the principle that our citizens deserve the very best — whether it is in accessing essential services, connecting with opportunities, or participating in the development of our great nation.</p>
+                    </div>
+                    <div class="ps" dir="rtl" lang="ps">
+                      <p class="section-kicker-ps">ژمنتیا</p>
+                      <h3>ستاسو غوره خدمت</h3>
+                      <p class="body-text">د عامه خدمتګارانو په توګه، ستاسو خدمت زموږ لپاره ویاړ او مسؤلیت دی. موږ ژمن یو چې یوازې ستاسو تمې پوره نه کړو، بلکې تر هغې هاخوا لاړ شو. زموږ هر ګام د دې اصل پر بنسټ ولاړ دی چې زموږ هېوادوال د غوره خدمت مستحق دي؛ که هغه اړینو خدماتو ته لاسرسی وي، له فرصتونو سره نښلول وي، یا د خپل هېواد په پرمختګ کې ګډون وي.</p>
+                    </div>
+                  </div>
+
+                  <div class="pair">
+                    <div class="quote-area">
+                      <div class="quote-en">Our journey towards digitization is a critical step in building a stronger and more resilient country — one where no citizen is left behind.</div>
+                      <div class="quote-ps" dir="rtl" lang="ps">د ډیجیټلي کېدو پر لور زموږ سفر د یو پیاوړي، باوري او پرمختللي هېواد د جوړولو لپاره مهم ګام دی — داسې راتلونکی چې پکې هېڅ هېوادوال له پامه ونه غورځول شي.</div>
+                    </div>
+                  </div>
+
+                  <div class="pair">
+                    <div class="en">
+                      <p class="section-kicker">Citizens First</p>
+                      <h3>You Are at the Heart of Everything We Do</h3>
+                      <p class="body-text">You, our citizens, are at the heart of everything we do. Your engagement with these digital services drives our efforts and inspires us to push the boundaries of what is possible. Please know that we value your trust and are committed to continuously improving and expanding these services to better serve you.</p>
+                    </div>
+                    <div class="ps" dir="rtl" lang="ps">
+                      <p class="section-kicker-ps">هېوادوال لومړی</p>
+                      <h3>تاسو زموږ د هر کار په مرکز کې یاست</h3>
+                      <p class="body-text">تاسو، زموږ هېوادوال، د هر هغه کار په مرکز کې یاست چې موږ یې ترسره کوو. په دې ډیجیټلي خدماتو کې ستاسو ګډون زموږ هڅې پیاوړې کوي او موږ هڅوي چې د لا ښه خدمت لپاره خپلې چارې لا پراخې او پرمختللې کړو. مهرباني وکړئ ډاډه اوسئ چې موږ ستاسو باور ته ارزښت ورکوو او د خدمتونو د لا ښه والي لپاره ژمن یو.</p>
+                    </div>
+                  </div>
+
+                  <div class="pair">
+                    <div class="en">
+                      <p class="section-kicker">Together Forward</p>
+                      <h3>A Shared Vision of Progress</h3>
+                      <p class="body-text">Together, let us move forward with determination, optimism, and unity. With your support, we will achieve a future where our nation stands as a beacon of progress and innovation — a country we can all be proud of.</p>
+                    </div>
+                    <div class="ps" dir="rtl" lang="ps">
+                      <p class="section-kicker-ps">ګډ پرمختګ</p>
+                      <h3>د پرمختګ ګډ لید</h3>
+                      <p class="body-text">راځئ چې په هوډ، هیله او یووالي سره د راتلونکي پر لور ګامونه واخلو. ستاسو په ملاتړ، موږ به داسې راتلونکی ترلاسه کړو چې زموږ هېواد د پرمختګ او نوښت د بېلګې په توګه ودرېږي — داسې هېواد چې ټول پرې ویاړ وکړای شو.</p>
+                    </div>
+                  </div>
+
+                  <div class="pair">
+                    <div class="en">
+                      <p class="section-kicker">Thank You</p>
+                      <h3>We Remain Here to Serve</h3>
+                      <p class="body-text">Thank you for your trust, your partnership, and your belief in this shared vision. We are here to serve you, and we remain unwavering in our commitment to helping you reach your fullest potential.</p>
+                    </div>
+                    <div class="ps" dir="rtl" lang="ps">
+                      <p class="section-kicker-ps">مننه</p>
+                      <h3>موږ ستاسو خدمت ته ژمن یو</h3>
+                      <p class="body-text">ستاسو د باور، همکارۍ او په دې ګډ لید کې ستاسو د باور لپاره مننه. موږ دلته ستاسو د خدمت لپاره یو او ژمن یو چې ستاسو د اړتیاوو په پوره کولو او د غوره راتلونکي په جوړولو کې له تاسو سره مرسته وکړو.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="cta-wrap">
+                  <a href="https://eafghans.com/" class="cta">Access Online Services</a>
+                </div>
+
+                <div class="signature">
+                  <table role="presentation" class="signature-grid" width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td class="signature-cell">
+                        Warm regards,<br>
+                        <strong>H.E. Abdul Rahman Fida</strong><br>
+                        Consulate General of the Islamic Emirates of Afghanistan, Dubai, U.A.E
+                      </td>
+                      <td class="signature-cell-ps" dir="rtl" lang="ps">
+                        په درنښت،<br>
+                        <strong>جلالتمآب عبدالرحمن فدا</strong><br>
+                        د افغانستان اسلامي امارت قونسل جنرال، دوبۍ، متحده عربي امارات
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="footer">
+                <p class="footer-title">Consulate General of Afghanistan in Dubai, U.A.E</p>
+                <p class="footer-intro">Download our mobile app or share your feedback to help us improve our digital services.</p>
+
+                <div class="app-buttons">
+                  <a href="PASTE_APP_STORE_LINK_HERE" class="app-btn">
+                    <img src="https://afghanconsulate.ae/img/email/campaign-may2026/logo-app-store.png" alt="Download on the App Store" width="170" style="max-width:170px;width:100%;height:auto;display:block;border:0;">
+                  </a>
+                  <a href="PASTE_PLAY_STORE_LINK_HERE" class="app-btn">
+                    <img src="https://afghanconsulate.ae/img/email/campaign-may2026/logo-google-play.png" alt="Get it on Google Play" width="170" style="max-width:170px;width:100%;height:auto;display:block;border:0;">
+                  </a>
+                </div>
+
+                <div class="review-wrap">
+                  <a href="PASTE_GOOGLE_REVIEW_LINK_HERE" class="review-btn">Leave a Google Review</a>
+                </div>
+
+                <p class="disclaimer">
+                  Disclaimer: This email is intended for informational communication from the Consulate General of Afghanistan in Dubai.
+                  Please do not reply with sensitive personal documents or confidential information through email unless requested through an
+                  official channel. For official services, always use the approved online service platform or verified consulate contact channels.
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+</html>

@@ -1,0 +1,31 @@
+
+.cn-tracker .rhs{ position: relative}
+.cn-tracker .rhs .alert{ 
+position: absolute;
+left: 4px;
+top: 10px;
+bottom: -10px;
+display: flex;
+align-items: center;
+justify-content: center;
+    text-align: center;
+right: 20px;
+}
+.cn-tracker .rhs #application-status{}
+.cn-tracker .rhs #application-status .data{ padding-top: 12px;}
+.cn-tracker .rhs #application-status .data .btn-secondary{  justify-content: center; border-radius: 6px; height: 100%; width: 100%; align-items: center;}
+.cn-tracker .rhs #application-status .data .form-control::placeholder {color: #19286C; font-size: 14px;}
+.cn-tracker .rhs #application-status .data .bg-white{ background: #fff; border-radius: 6px; padding: 6px;}
+/*    .cn-tracker .rhs #application-status .data  [class^="col-"] { background: #fff; border-radius: 6px; padding: 6px; border-right: 4px solid #19286C}*/
+.cn-tracker .rhs #application-status .data  [class^="col-"] INPUT { border: none}
+.cn-tracker .rhs #application-status .data  .col-md-4{ background: #fff; border-radius: 12px; padding: 6px; }
+.cn-tracker .rhs #application-status .data  .col-md-3{ background: #fff; border-radius: 12px; padding: 6px;  width: 208px; margin-right: 10px;}
+
+.cn-tracker .rhs #application-status .data .btn-secondary{background: var(--bg1); border-radius:12px;}
+.cn-tracker .rhs #application-status .data .btn-secondary:hover{ background: var(--bs-blue); color: var(--white);border-color: transparent;}
+@media (max-width: 575.98px) {
+    .cn-tracker .rhs #application-status .data{padding-top: 10px; padding-bottom: 20px;}
+    .cn-tracker .rhs #application-status .data  .col-md-3{width: 100%}
+    .cn-tracker .rhs .alert{ left: 0px; right: 0px;  }
+}
+

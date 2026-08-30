@@ -1,0 +1,265 @@
+/* Tiny reset */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+img,svg,video,canvas{display:block;max-width:100%;height:auto}
+button,input,select,textarea{font:inherit;color:inherit}
+a{text-decoration:none;color:inherit}
+ul,ol{list-style:none}
+table{border-collapse:collapse;border-spacing:0}
+
+
+:root {
+  --light-gray: #EBEDF5;
+     --blue1:#11172E; 
+  --blue2:#1E307F;
+  --gray-dark: #333333;
+  --gray: #CFD1D5;
+  --gray-border: #EEEEEE;
+  --white: #FFFFFF;
+ 
+}
+body {
+  padding: 0px;
+  margin: 0px;
+  color: var(--gray-dark);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.334em;
+  font-family: 'Inter', sans-serif;
+  background-color:var(--light-gray);
+
+}
+
+@media (max-width: 767.98px) {
+
+}
+
+
+
+/*--------------------------------------------------
+    ## Globals
+---------------------------------------------------*/
+.text-right {
+  text-align: right
+}
+.text-center {
+  text-align: center
+}
+
+.fw-bold{
+  font-weight: 700;
+}
+.fw-normal{
+  font-weight: 400;
+}
+.fs-6px {
+  font-size: 6px;
+}
+.fs-7px {
+  font-size: 7px;
+}
+.fs-8px {
+  font-size: 8px;
+}
+.fs-9px {
+  font-size: 9px;
+}
+.fs-10px {
+  font-size: 10px;
+}
+.fs-12px {
+  font-size: 12px;
+}
+.fs-14px {
+  font-size: 14px;
+}
+.lh-120 {
+  line-height: 120%
+}
+.lh-130 {
+  line-height: 130%
+}
+.lh-140 {
+  line-height: 140%
+}
+.lh-150 {
+  line-height: 150%
+}
+.h-100px {
+  height: 100px;
+}
+.w-25{
+  width: 25%;
+  flex-basis: 25% !important;
+    flex-grow: 0 !important;
+    flex-shrink: 1 !important;
+}
+.w-50{
+  width: 50%;
+  flex-basis: 50% !important;
+    flex-grow: 0 !important;
+    flex-shrink: 1 !important;
+}
+.w-75{width: 75%;}
+.w-100{width: 100%;}
+
+.d-block {
+  display: block;
+}
+.d-flex {
+  display: flex;
+}
+.flex-grow-1 {
+  flex-grow: 1;
+}
+.pb-10px {
+  padding-bottom: 10px;
+}
+.pb-20px {
+  padding-bottom: 20px;
+}
+.p-10px {
+  padding: 10px;
+}
+.p-5px {
+  padding: 5px;
+}
+
+
+
+/*--------------------------------------------------
+    ## structure
+---------------------------------------------------*/
+.cn1 {
+  width: 595px;
+  padding: 12px;
+  background: var(--light);
+  margin: 0 auto;
+}
+
+.cn2 {
+
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+/*--------------------------------------------------
+    ## Top
+---------------------------------------------------*/
+.top1 {
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  background: var(--blue1);
+  border-radius: 4px 4px 0px 0px;
+}
+
+
+.top2 {
+  padding: 4px 10px;
+  display: flex;
+  justify-content: space-between;
+  background: var(--blue2);
+  border-radius: 0px 0px 4px 4px;
+  color: var(--white);
+}
+
+
+/*--------------------------------------------------
+    ## data
+---------------------------------------------------*/
+.data{ 
+  display: flex; 
+  flex-direction:   column; 
+  grid-area: 10px;
+}
+
+.cn-block {
+  background: var(--white);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.cn-title{
+  background: var(--gray);
+  display: flex;
+  padding: 6px 10px;
+}
+.cn-title .col{
+  flex: 1;
+  padding: 4px;
+  font-weight: bold;
+}
+
+.tbody {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+}
+.tbody .tr{
+  display: flex;
+}
+.tbody .tr .td{
+  flex: 1;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--gray-border);
+}
+.tbody .tr:last-child .td{
+  border-bottom: none;
+}
+.tbody .tr .td:nth-child(2){ 
+border-right: 1px solid #eee;
+}
+
+/* has child */
+.has-child{display: flex; 
+  background: #ffffff;
+  padding: 10px;
+flex-direction: row;
+gap: 10px;
+}
+.has-child > .col{
+  flex: 1; 
+height: 100%;
+
+display: flex;
+flex-direction: column;
+gap: 10px;
+
+}
+.has-child > .col > .col-border{
+  flex: 1; 
+  border-radius: 4px 4px 0px 0px;
+  border: 1px solid var(--gray-border);
+overflow: hidden;
+height: 100%;
+}
+.has-child .data-2 {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}
+.has-child .data-2 .user-pic{
+  max-height: 75px;
+  border-radius: 8px;
+}
+/*--------------------------------------------------
+    ## footer
+---------------------------------------------------*/
+.footer {
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--blue1);
+  border-radius: 4px 4px 4px 4px;
+  text-align: center;
+  color: var(--white);
+ 
+}

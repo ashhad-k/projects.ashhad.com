@@ -1,0 +1,679 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!-- utf-8 works for most cases --><meta name="viewport" content="width=device-width"><!-- Forcing initial-scale shouldn't be necessary --><meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- Use the latest (edge) version of IE rendering engine -->
+<title></title>
+<!-- The title tag shows in email notifications, like Android 4.4. --><!-- Web Font / @font-face : BEGIN --><!-- NOTE: If web fonts are not required, lines 9 - 26 can be safely removed. --><!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. --><!--[if !mso]>
+		<style type="text/css">@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900');
+		</style>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800"   target="_blank" rel="stylesheet" target="_blank" type="text/css" /><!--<![endif]--><!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: https:stylecampaign.com/blog/2015/02/webfont-support-in-email/ --><!-- Web Font / @font-face : END --><!-- CSS Reset -->
+<style type="text/css">/* What it does: Remove spaces around the email design added by some email clients. */
+		/* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
+html, body {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+}
+/* What it does: Stops email clients resizing small text. */
+* {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+/* What is does: Centers email on Android 4.4 */
+div[style*="margin: 14px 0"] {
+    margin: 0 !important;
+}
+/* What it does: Stops Outlook from adding extra spacing to tables. */
+table, td {
+    mso-table-lspace: 0pt !important;
+    mso-table-rspace: 0pt !important;
+}
+/* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+table {
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    table-layout: fixed !important;
+    Margin: 0 auto !important;
+}
+table table table {
+    table-layout: auto;
+}
+/* What it does: Uses a better rendering method when resizing images in IE. */
+img {
+    -ms-interpolation-mode: bicubic;
+}
+/* What it does: A work-around for iOS meddling in triggered links. */
+.mobile-link--footer a, a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: underline !important;
+}
+</style>
+<!-- Progressive Enhancements -->
+<style type="text/css">/* What it does: Hover styles for buttons */
+
+
+
+
+
+.button-td, .button-a {
+    transition: all 100ms ease-in;
+}
+.button-td:hover, .button-a:hover {
+    background: #454e5f !important;
+    border-color: #454e5f !important;
+}
+.specialtd {
+    padding: 0 10px 0 30px;
+    width: 10%;
+    text-align: center;
+}
+.desktopoff {
+    display: none!important;
+}
+.desktopon {
+    display: table-row!important;
+}
+.imgbx img {
+    display: inline-block!important;
+}
+.imgbx span {
+    display: inline-block!important;
+    margin: 0 20px!important;
+    width: 70%!important;
+}
+.full-width {
+    margin-left: 30px;
+}
+.border-r {
+    border-right: 1px solid #dddddd;
+    padding-right: 15px;
+}
+.w60 {
+    width: 65%;
+    display: inline-block;
+}
+.w40 {
+    width: 45%;
+    display: inline-block;
+}
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.textblock, .imgblock {
+    box-sizing: border-box;
+}
+.smallcircle:last-child {
+    margin-bottom: 40px!important;
+}
+.smallcircle {
+    position: relative;
+    padding: 0!important;
+    padding-left: 80px!important;
+    padding-right: 20px!important;
+    min-height: 50px;
+    margin: 0!important;
+    font-size: 13px!important;
+}
+.smallcircle:before {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #DDDDDD;
+    border-radius: 100%;
+    content: '';
+    left: 40px;
+    top: 8px
+}
+.smallcircle:after {
+    position: absolute;
+    width: 1px;
+    height: 50px;
+    background: #DDDDDD;
+    border-radius: 100%;
+    content: '';
+    left: 43px;
+    top: 8px
+}
+p.smallcircle:nth-child(5):after {
+    display: none!important;
+}
+.smallcircle:nth-child(3):before, .smallcircle:nth-child(5):before {
+    background: #7cb445!important;
+    z-index: 99999999
+}
+.linespace br {
+    display: none!important;
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+.w60 {
+    width: 100%;
+    display: inline-block;
+}
+.w40 {
+    width: 100%;
+    display: inline-block;
+}
+.border-r {
+    border-right: 0px solid #dddddd;
+    padding-right: 0px;
+}
+.mobileoff {
+    display: none!important;
+}
+.img-container {
+    width: 100%;
+    height: auto!important;
+}
+.full-width.ml-0 {
+    margin-left: 0!important;
+}
+.imgbx img {
+    display: block!important;
+}
+.imgbx span {
+    display: block!important;
+    margin: 10px 0px!important;
+    width: 100%!important;
+}
+.full-width {
+    width: 100%;
+    height: auto!important;
+}
+.desktopoff {
+    display: grid!important;
+}
+.desktopon {
+    display: none!important;
+}
+.gridbox {
+    display: grid;
+}
+.gridimg {
+    width: 100%;
+    height: auto!important;
+}
+.imgbanner {
+    max-height: inherit;
+    height: auto;
+}
+.imgbanner2 {
+    width: 100% !important;
+    margin: auto !important;
+    max-width: 100%!important;
+    max-height: inherit;
+    height: auto;
+}
+.padd30 {
+    padding: 0 30px 20px!important;
+}
+.email-container {
+    width: 100% !important;
+    margin: auto !important;
+    max-width: 100%!important;
+}
+/* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+.fluid, .fluid-centered {
+    max-width: 100% !important;
+    height: auto !important;
+    Margin-left: auto !important;
+    Margin-right: auto !important;
+}
+/* And center justify these ones. */
+.fluid-centered {
+    Margin-left: auto !important;
+    Margin-right: auto !important;
+}
+/* What it does: Forces table cells into full-width rows. */
+.stack-column, .stack-column-center {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    direction: ltr !important;
+}
+/* And center justify these ones. */
+.stack-column-center {
+    text-align: center !important;
+}
+/* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+.center-on-narrow {
+    text-align: center !important;
+    display: block !important;
+    Margin-left: auto !important;
+    Margin-right: auto !important;
+    float: none !important;
+}
+table.center-on-narrow {
+    display: inline-block !important;
+}
+.right2 {
+    text-align: right!important;
+    display: block !important;
+    Margin-left: 0px !important;
+    Margin-right: auto !important;
+    float: right!important;
+}
+.text-center {
+    text-align: center!important;
+}
+.specialtd {
+    padding: 0 10px!important;
+    width: 20%;
+}
+.specialtd+td {
+    padding: 0 20px 0 10px!important;
+    width: 80%!important;
+}
+.webopti {
+    image-rendering: -webkit-optimize-contrast;
+}
+.padding1015 {
+    padding: 10px 15px 0;
+}
+.f13 {
+    font-size: 13px!important;
+}
+.margin-l0 {
+    margin-left: 0!important;
+}
+.sm-padding {
+    padding: 10px 0!important;
+}
+.pdbtm {
+    padding-bottom: 15px;
+}
+.d-flex {
+    display: block;
+}
+.textblock.fl-left {
+    margin-bottom: 25px;
+}
+.imgblock.fl-right {
+    margin-bottom: 0px;
+}
+.textblock.fl-right {
+    margin-bottom: 25px;
+    padding: 0 30px;
+}
+.imgblock.fl-right {
+    margin-bottom: 0px;
+}
+.d-flex {
+    padding: 0!important;
+}
+.imgblock.fl-right, .textblock.fl-left, .textblock.fl-right {
+    text-align: center!important;
+}
+.textblock.fl-left h3 {
+    font-size: 18px!important;
+    line-height: 20px!important;
+    margin: 0!important;
+}
+.textblock.fl-right h3 {
+    font-size: 24px!important;
+    line-height: 30px;
+    margin: 0!important;
+}
+.textmob {
+    font-size: 18px!important;
+    padding: 50px 30px 5px!important;
+}
+.mt150 {
+    margin-top: 175px;
+}
+.featable p {
+    display: block!important;
+    text-align: center!important;
+}
+.featable img {
+    display: table!important;
+    margin: 0 auto 15px!important
+}
+.featable p .smimg {
+    margin: 0!important;
+}
+.featable p {
+    padding-top: 0!important;
+    font-size: 16px!important;
+    margin-top: 10px
+}
+.featable .gridbox td {
+    padding-top: 5px!important;
+    padding-bottom: 10px!important;
+}
+p.heading2 {
+    padding: 30px 0px 10px 20px!important;
+    text-align: center!important;
+}
+p.heading2 br {
+    display: none!important;
+}
+.textblock {
+    text-align: center!important;
+}
+.textblock h3 {
+    text-align: center!important;
+}
+.textblock h3+a {
+    margin-left: auto!important;
+    margin-right: auto!important
+}
+.padding-0 {
+    padding-top: 0!important
+}
+div.imgblock.fl-right {
+    margin-top: 30px!important;
+}
+a.smimg {
+    margin-right: 0!important
+}
+.mt-0 {
+    margin-top: 0!important;
+}
+.pd20 {
+    padding: 20px!important
+}
+.bgnone {
+    background: none!important;
+}
+.smallcircle {
+    min-height: inherit!important;
+    padding-left: 60px!important;
+    padding-bottom: 30px!important;
+    padding-right: 15px!important
+}
+.smallcircle:after {
+    display: none!important;
+}
+.linespace br {
+    display: block!important;
+}
+.pd20.bgnone {
+    margin-top: 25px!important
+}
+.pad-left0 {
+    padding: 0 20px 30px!important;
+}
+.imgh {
+    width: 60%!important;
+    margin-top: 30px!important
+}
+}
+ul {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+}
+ul li {
+    position: relative; /* Allows for absolute positioning of the pseudo-element */
+    padding-left: 20px; /* Adds space for the custom bullet */
+    color: #333333; /* Change the text color to white */
+    margin-left: 10px;
+}
+ul li::before {
+    content: '•'; /* Unicode character for the bullet */
+    position: absolute; /* Absolute positioning relative to the li */
+    left: 0; /* Position it at the left edge of the li */
+    color: #333333; /* Change the bullet color to white */
+    font-size: 30px;
+    line-height: 18px;
+}
+</style>
+<style type="text/css">:root {
+    color-scheme: light only;
+}
+table, a, p, div {
+    font-family: 'Montserrat', sans-serif
+}
+a.smimg {
+    margin-right: 0!important
+}
+    
+    
+/*    responsive    */
+    @media only screen and (max-width: 600px) {
+            .responsive-column {
+                width: 100% !important;
+                display: block !important;
+                padding: 0 !important;
+            }
+            .responsive-table {
+                width: 100% !important;
+            }
+        }
+    
+/* responsive    */
+  @media only screen and (max-width: 480px){
+        #templateColumns{
+            width:100% !important;
+        }
+
+        .templateColumnContainer{
+            display:block !important;
+            width:100% !important;
+        }
+
+        .columnImage{
+            height:auto !important;
+            max-width:480px !important;
+            width:100% !important;
+        }
+
+        .leftColumnContent{
+            font-size:16px !important;
+            line-height:125% !important;
+        }
+
+        .rightColumnContent{
+            font-size:16px !important;
+            line-height:125% !important;
+        }
+    }
+.responsive-table {                width: 100% !important;
+}
+.responsive-table1 {                width: 100% !important;
+}
+.responsive-table1 {width: 100% !important;
+}
+</style>
+<center style="width: 100%; background: #eaeaea;"><!-- Visually Hidden Preheader Text : BEGIN -->
+<div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: 'Montserrat', sans-serif;">Afghan Consulate</div>
+<!-- Visually Hidden Preheader Text : END --><!-- Email Body : BEGIN -->
+
+<table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="email-container" style="margin: auto; border-radius: 0px; max-width: 680px;" width="100%"><!-- Hero Image, Flush : BEGIN -->
+	<tbody><!-- Thumbnail Left, Text Right : BEGIN -->
+		<tr>
+			<td align="center" dir="ltr" style="padding: 10px 10px 10px 10px; background-color: #19286C;" valign="top" width="100%"><a href="https://www.afghanconsulate.ae/" target="_blank"><img alt="Afghan Consulate" src="https://saphyte.io/portfolio/afgcons/email/logo-oslo.png" style="image-rendering: -webkit-optimize-contrast" width="90%" /></a></td>
+		</tr>
+	</tbody>
+</table>
+
+<table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="email-container" style="margin: auto; border-radius: 0px; max-width: 100%;" width="680px"><!-- Hero Image, Flush : BEGIN -->
+	<tbody><!-- Thumbnail Left, Text Right : BEGIN --><!--Column Text : BEGIN --><!--Column Text : BEGIN -->
+		<tr class="gridbox">
+			<td align="left" style="padding: 50px 20px">
+			<p style="text-align: left;"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#333333;letter-spacing:0;word-break:normal;">Dear {{first_name}},</span></p>
+
+			<p>&nbsp;</p>
+
+			<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#333333;letter-spacing:0;word-break:normal;">Pament Link for your Consular Application -&nbsp;<b>Action Required Within 30 Minutes.&nbsp;</b></span></div>
+
+			<p><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#333333;letter-spacing:0;word-break:normal;">Thank you for submitting your application.&nbsp;To proceed, please complete the payment of your application fee using the link below:&nbsp;</span></p>
+
+			<p><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#333333;letter-spacing:0;word-break:normal;">Please note the following details for your reference:</span></p>
+
+			<p><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#333333;letter-spacing:0;word-break:normal;"><b>Application Reference Number: </b>{{formsubmission_id}}<br />
+			<b>Application Type:</b> Passport Renewal</span></p>
+
+			<p><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#333333;letter-spacing:0;word-break:normal;"><b>NOTE:</b> The Payment must be made within 30 minutes of receving this email to avoid automatic rejection of your application.&nbsp;</span></p>
+
+			<p><br />
+			<u><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#333333;letter-spacing:0;word-break:normal;"><b>Fees:</b></span></u></p>
+
+			<table border="0" cellpadding="5" cellspacing="0" width="100%">
+				<tbody>
+					<tr>
+						<td style="border-bottom: 1px solid #ccc" width="50%"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#333333;letter-spacing:0;word-break:normal;"><b>Consular Service Fee</b></span></td>
+						<td style="border-bottom: 1px solid #ccc" width="50%">
+                            <span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#333333;letter-spacing:0;word-break:normal;">
+                            USD 20</span></td>
+					</tr>
+					<tr>
+						<td style="border-bottom: 1px solid #ccc"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#333333;letter-spacing:0;word-break:normal;"><b>Processing Fee</b></span></td>
+						<td style="border-bottom: 1px solid #ccc"> <span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#333333;letter-spacing:0;word-break:normal;">
+                            USD 20</span></td>
+					</tr>
+					<tr>
+					  <td style="border-bottom: 1px solid #ccc"><span style="font-family: Poppins, sans-serif; text-align: left; direction: ltr; line-height: 22.50px; font-size: 15px; margin: 0; color: #333333; letter-spacing: 0; word-break: normal;"><b>Payment Service Fee)</b></span></td>
+					  <td style="border-bottom: 1px solid #ccc"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#333333;letter-spacing:0;word-break:normal;"> USD 20</span></td>
+				  </tr>
+					<tr>
+					  <td style="border-bottom: 1px solid #ccc"><span style="font-family: Poppins, sans-serif; text-align: left; direction: ltr; line-height: 22.50px; font-size: 15px; margin: 0; color: #333333; letter-spacing: 0; word-break: normal;"><b>Total</b></span></td>
+					  <td style="border-bottom: 1px solid #ccc"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#333333;letter-spacing:0;word-break:normal;"> USD 20</span></td>
+				  </tr>
+				</tbody>
+			</table>
+
+			<p><br />
+			<u><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#333333;letter-spacing:0;word-break:normal;"><b>Payment:</b></span></u></p>
+
+			<p><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#333333;letter-spacing:0;word-break:normal;">To make a payment click the button below.&nbsp;Please note that the payment link expires on {{payment_expiry}}. If the amount is not paid, your application will be rejected.</span></p>
+
+			<p><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#333333;letter-spacing:0;word-break:normal;"><b>IMPORTANT:</b>&nbsp;</span><span style="color:#ff0000;"><span style="font-family: Poppins, sans-serif; text-align: left; direction: ltr; line-height: 22.5px; font-size: 15px; margin: 0px; letter-spacing: 0px; word-break: normal;">Your application is attached. Please carefully review the attached PDF to ensure all details are accurate before making the initial payment.&nbsp;All fees are non-refundable, regardless of whether your application is approved, rejected, or withdrawn.</span></span></p>
+
+			<p style="text-align: left;"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#5f5f5f;letter-spacing:0;word-break:normal;margin:15px 0"><a class="smimg" height="60" href="{{payment_url}}" style="background: #f2bd01;font-size: 14px;color:#121212;text-decoration: none;font-weight: 600;width: 200px;height: 40px;float:left;line-height: 40px;text-align: center;" target="_blank" width="115">Pay Now</a></span><br />
+			&nbsp;</p>
+
+			<p><br />
+			<u><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#333333;letter-spacing:0;word-break:normal;"><b>Next Steps:</b></span></u></p>
+
+			<p><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#333333;letter-spacing:0;word-break:normal;">1. Complete the payment process by clicking on the above link.<br />
+			2. After the payment is confirmed, you may proceed and present your application form and payment receipt to the Consulate Staff.<br />
+			3. Visit our website for any further guidelines and requirements.</span></p>
+
+			<p><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#333333;letter-spacing:0;word-break:normal;">If you have any questions or need further assistance, please do not hesitate to contact us.</span></p>
+
+			<p><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#333333;letter-spacing:0;word-break:normal;">Thank you for your cooperation.</span></p>
+
+			<p><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#333333;letter-spacing:0;word-break:normal;">If you need to travel urgently or require further information, please do not hesitate to contact our office or email us at dubai@afghanconsulate.ae.</span></p>
+
+			<p>&nbsp;</p>
+
+			<p><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:15px;margin:0;color:#333333;letter-spacing:0;word-break:normal;">Best regards,<br />
+			Afghan Consulate Team</span></p>
+			<!-- Add more content as needed --></td>
+		</tr>
+		<tr>
+			<td align="center" dir="ltr" style="height: 30px" valign="top" width="100%">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="center" dir="ltr" style="height: 10px; background-color: #F2BD01;" valign="top" width="100%">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="center" dir="ltr" style="height: 30px" valign="top" width="100%">&nbsp;</td>
+		</tr>
+		<tr>
+			<td class="text-left" dir="ltr" style="padding:0px 20px 0px 20px" valign="top">
+			<table border="0" cellpadding="0" cellspacing="0" id="templateColumns" width="100%">
+				<tbody>
+					<tr>
+						<td align="center" class="templateColumnContainer" valign="top" width="50%">
+						<table border="0" cellpadding="0" cellspacing="0" class="responsive-table1" width="100%">
+							<tbody>
+								<tr>
+									<td colspan="2">
+									<p style="text-align: left;"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:14px;margin:0;color:#333333;letter-spacing:0;word-break:normal;">Consulate General of Afghanistan - Dubai, United Arab Emirates</span></p>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+									<p style="text-align: left;"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:12px;margin:0;color:#333333;letter-spacing:0;word-break:normal;">Address: 27727 92292 Villa 23, 29B Str. - Makani No.: Al Jafiliya, Dubai, United Arab Emirates<br />
+									القنصلیة العامة لإمارة أفغانستان الإسلامية دبي.</span></p>
+
+									<p style="text-align: left;"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:12px;margin:0;color:#333333;letter-spacing:0;word-break:normal;">Telephone: <a href="tel:+971 44 398 8229" style="color: #333333" target="_blank">+971 44 398 8229 </a><br />
+									8:30 - 14:00 &amp; , Monday to Friday (until 12:00) </span></p>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+									<p style="text-align: left;"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:12px;margin:0;color:#333333;letter-spacing:0;word-break:normal;">Quick Links</span></p>
+									</td>
+								</tr>
+								<tr>
+									<td width="50">
+									<table cellpadding="0" cellspacing="0" width="100%">
+										<tbody>
+											<tr>
+												<td align="center" valign="top" width="20"><span style="color:#333333;">&bull;</span></td>
+												<td align="left" valign="top"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:12px;margin:0;color:#333333;letter-spacing:0;word-break:normal;"><a href="#" style="color: #333333" target="_blank">Home</a></span></td>
+											</tr>
+											<tr>
+												<td align="center" valign="top" width="20"><span style="color:#333333;">&bull;</span></td>
+												<td align="left" valign="top"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:12px;margin:0;color:#333333;letter-spacing:0;word-break:normal;"><a href="#" style="color: #333333" target="_blank">Consulate</a></span></td>
+											</tr>
+											<tr>
+												<td align="center" valign="top" width="20"><span style="color:#333333;">&bull;</span></td>
+												<td align="left" valign="top"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:12px;margin:0;color:#333333;letter-spacing:0;word-break:normal;"><a href="#" style="color: #333333" target="_blank">Services</a></span></td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+									<td width="50%">
+									<table cellpadding="0" cellspacing="0" width="100%">
+										<tbody>
+											<tr>
+												<td align="center" valign="top" width="20"><span style="color:#333333;">&bull;</span></td>
+												<td align="left" valign="top"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:12px;margin:0;color:#333333;letter-spacing:0;word-break:normal;"><a href="#" style="color: #333333" target="_blank">Info Hub</a></span></td>
+											</tr>
+											<tr>
+												<td align="center" valign="top" width="20"><span style="color:#333333;">&bull;</span></td>
+												<td align="left" valign="top"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:12px;margin:0;color:#333333;letter-spacing:0;word-break:normal;"><a href="#" style="color: #333333" target="_blank">Media</a></span></td>
+											</tr>
+											<tr>
+												<td align="center" valign="top" width="20"><span style="color:#333333;">&bull;</span></td>
+												<td align="left" valign="top"><span style="font-family:Poppins,sans-serif;text-align:left;direction:ltr;line-height:22.50px;font-size:12px;margin:0;color:#333333;letter-spacing:0;word-break:normal;"><a href="#" style="color: #333333" target="_blank">Contact</a></span></td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">&nbsp;</td>
+								</tr>
+								<tr>
+									<td colspan="2"><a href="https://www.afghanconsulate.ae/" target="_blank"><img alt="Afghan Consulate" height="72" src="https://saphyte.io/portfolio/afgcons/email/logos3.png" style="image-rendering: -webkit-optimize-contrast" width="210" /></a></td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" class="templateColumnContainer" valign="top">&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<!-- Hero Image, Flush : END -->
+	</tbody>
+</table>
+
+<table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="email-container" style="margin: auto; max-width: 680px;" width="100%">
+	<tbody>
+		<tr>
+			<td style="padding: 10px 20px;width: 100%;font-size: 12px; font-family: 'Montserrat', sans-serif; font-weight: 400; mso-height-rule: exactly; line-height:22px; text-align: left; color: #8E8E8E;text-align:left">
+			<p>Copyright &copy; Afghanistan Consulate General in Dubai and North Emirates.</p>
+
+			<p>Confidentiality/Disclosure Notice: This email and any attachments are intended solely for the use of the individual or entity to whom they are addressed. It may contain confidential and/or privileged information. If you are not the intended recipient, you are hereby notified that any unauthorized review, use, disclosure, or distribution is strictly prohibited. If you have received this email in error, please contact the sender immediately and delete the original message and any copies. This service is operated by e-afghans.com. Please ensure that all data provided is accurate to facilitate a smooth transaction. Providing false information may delay your application. After submitting your application, you will be contacted via email for the next steps.</p>
+			</td>
+		</tr>
+		<tr>
+			<td align="center" dir="ltr" style="height: 30px" valign="top" width="100%">&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+<!-- Email Footer : END --></center>
+
+<div id="__genieContainer" style="all: initial; display: none;">&nbsp;</div>

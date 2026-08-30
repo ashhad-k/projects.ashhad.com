@@ -169,15 +169,7 @@
             <div class="data">
               <h2>Visa Requirement
               </h2>
-                    <div data-aos="fade-up"  class="get-app">
-<p>Get the <strong>eAfghans</strong> app now on your device:</p>
-<div class="logos">
-  <a href="https://apps.apple.com/ae/app/e-afghans/id6755007493"> <i><img src="/img/logo/appstore-1.svg" alt="" /></i></a>
- <a href="https://play.google.com/store/apps/details?id=com.afg.eafghans"> <i><img src="/img/logo/google-play.svg" alt="" /></i></a> 
-</div>
-                
-            </div>
-            <!-- get-app -->
+                   
             </div>
           </div>
         </div>
@@ -200,29 +192,32 @@
      
          <div class="row mt-4">
         <div class="col-lg-4">
-          <div class="box1"  style="row-gap: 4px; height: auto;"> <i class="has-bg">
+          <div class="box1"  style="row-gap: 4px; height:  100%;"> <i class="has-bg">
            <img src="/img/icons/calendar2.svg" alt="">
             </i>
             <p class="lead mt-3 mb-0">Duration of Stay</p>
-            <div class="fs28 fw-m color1">Up to 30 days</div>
+            <div class="fs28 fw-m color1">Up to 30 days from the date of entry
+</div>
             
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="box1 mb-sm-3"  style="row-gap: 4px; height: auto;"> <i class="has-bg">
+          <div class="box1 mb-sm-3"  style="row-gap: 4px; height: 100%;"> <i class="has-bg">
               <img src="/img/icons/login.svg" alt="">
             </i>
             <p class="lead mt-3 mb-0">Entry Type</p>
             <div class="fs28 fw-m color1">Single Entry</div>
+            <p class="lead mt-1 mb-0">Entry only through Kabul International Airport</p>
+           
            
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="box1" style="row-gap: 4px; height: auto;"> <i class="has-bg">
+          <div class="box1" style="row-gap: 4px; height: 100%;"> <i class="has-bg">
                <img src="/img/icons/check-multi.svg" alt="">
             </i>
              <p class="lead mt-3 mb-0">Validity</p>
-            <div class="fs28 fw-m color1">Expires upon exit</div>
+            <div class="fs28 fw-m color1">Expires 90 days from the date of issue</div>
            
           </div>
         </div>
@@ -404,17 +399,26 @@
     //    You can replace this with your full country dataset.
     // =============================
     const countries = [
-      // --- Common / sample ---
-      "Afghanistan","Albania","Algeria","Andorra","Angola","Argentina","Armenia","Australia","Austria","Azerbaijan",
-      "Bahrain","Bangladesh","Belarus","Belgium","Bolivia","Bosnia and Herzegovina","Brazil","Bulgaria","Cambodia","Canada",
-      "Chile","China","Colombia","Costa Rica","Croatia","Cyprus","Czech Republic","Denmark","Dominican Republic","Ecuador",
-      "Egypt","Estonia","Ethiopia","Finland","France","Georgia","Germany","Ghana","Greece","Hong Kong",
-      "Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Japan",
-      "Jordan","Kazakhstan","Kenya","Kuwait","Kyrgyzstan","Latvia","Lebanon","Lithuania","Luxembourg","Malaysia",
-      "Maldives","Malta","Mexico","Mongolia","Morocco","Netherlands","New Zealand","Nigeria","North Macedonia","Norway",
-      "Oman","Pakistan","Peru","Philippines","Poland","Portugal","Qatar","Romania","Russia","Saudi Arabia",
-      "Serbia","Singapore","Slovakia","Slovenia","South Africa","South Korea","Spain","Sri Lanka","Sweden","Switzerland",
-      "Tajikistan","Thailand","Turkey","Turkmenistan","Ukraine","United Arab Emirates","United Kingdom","United States","Uzbekistan","Vietnam",
+      "Afghanistan","Albania","Algeria","Andorra","Angola","Antigua and Barbuda","Argentina","Armenia","Australia","Austria",
+      "Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bhutan",
+      "Bolivia","Bosnia and Herzegovina","Botswana","Brazil","Brunei","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia",
+      "Cameroon","Canada","Central African Republic","Chad","Chile","China","Colombia","Comoros","Congo (Democratic Republic)","Congo (Republic)",
+      "Costa Rica","Cote d'Ivoire","Croatia","Cuba","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic",
+      "Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Eswatini","Ethiopia","Fiji","Finland",
+      "France","Gabon","Gambia","Georgia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea",
+      "Guinea-Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran",
+      "Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati",
+      "Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein",
+      "Lithuania","Luxembourg","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania",
+      "Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar",
+      "Namibia","Nauru","Nepal","Netherlands","New Zealand","Nicaragua","Niger","Nigeria","North Korea","North Macedonia",
+      "Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines",
+      "Poland","Portugal","Qatar","Romania","Russia","Rwanda","Saint Kitts and Nevis","Saint Lucia","Saint Vincent and the Grenadines","Samoa",
+      "San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia",
+      "Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Sweden",
+      "Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tonga","Trinidad and Tobago",
+      "Tunisia","Turkey","Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay",
+      "Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Yemen","Zambia","Zimbabwe",
     ].sort((a,b)=>a.localeCompare(b));
 
     // =============================
@@ -595,10 +599,12 @@
     <div class="row">
       <div class="col-md-9">
         <h6>Required Documents</h6>
-        <p>Follow these steps to renew your passport through E-Afghan:</p>
+        <p>Ensure that you possess the following documents in clear copy:</p>
+
+       
         </div>
         <div class="row">
-          <div class="col-md-9">
+          <div class="col-md-8">
              <section class="bsb-timeline-1 pb-0 pt-5 ps-4">
   <ul class="timeline">
     <li class="timeline-item mb-5">
@@ -607,11 +613,17 @@
           <div class="card border-0">
             <div class="card-body p-0">
               <div class="number-svg"><img src="/img/icons/tl-globe.svg" alt=""></div>
-              <div class="fw-b">Passport</div>
-              <p class="mb-2 fw-m">Biometric page scan | 6+ Months Validity</p>
-              <ul>
-                <li>Upload a clear scan of the biodata page.</li>
-                <li>Must be valid for at least 6 months beyond your arrival date.</li>
+
+             
+
+
+
+
+              <div class="fw-b"> Electronic Passport</div>
+              <ul style="list-style-type:disc"  class="ps-4">
+                <li>Upload a clear scan of your passport biodata page.</li>
+                <li>It must be valid for at least 6 months from the expiration date.</li>
+                <li>For applicants  <b>less than 18 years old</b>, a clear copy of parent’s passport is required.</li>
               </ul>
             </div>
           </div>
@@ -625,11 +637,12 @@
           <div class="card border-0">
             <div class="card-body p-0">
               <div class="number-svg"><img src="/img/icons/tl-photo.svg" alt=""></div>
-              <div class="fw-b">Photograph</div>
-              <p class="mb-2 fw-m">Recent color photo | White Background</p>
-              <ul>
-                <li>High-resolution, color photo.</li>
-                <li>Plain white background and good lighting.</li>
+              <div class="fw-b">Colored Photograph</div>
+              <ul style="list-style-type:disc"  class="ps-4">
+               <li>Printed in color with WHITE BACKGROUND;
+</li>
+                <li>With a size of 45 mm x 35 mm</li>
+             
               </ul>
             </div>
           </div>
@@ -643,10 +656,10 @@
           <div class="card border-0">
             <div class="card-body p-0">
               <div class="number-svg"><img src="/img/icons/tl-id.svg" alt=""></div>
-              <div class="fw-b">Identification</div>
-              <p class="mb-2 fw-m">National ID or Residence Permit</p>
-              <ul>
-                <li>Clear copy of National Identity Card (CNIC/ID) or residence permit (if applicable).</li>
+              <div class="fw-b">Other Identification Documents
+</div>
+               <ul style="list-style-type:disc"  class="ps-4">
+                <li>Clear copy of National Identity Card or residence permit (if applicable).</li>
               </ul>
             </div>
           </div>
@@ -661,10 +674,10 @@
             <div class="card-body p-0">
               <div class="number-svg"><img src="/img/icons/tl-docs.svg" alt=""></div>
               <div class="fw-b">Supporting Documents (Optional)</div>
-              <p class="mb-2 fw-m">Invitation Letter | Accommodation Proof</p>
-              <ul>
-                <li>Invitation letter (if applicable).</li>
-                <li>Evidence of accommodation (hotel booking or host details).</li>
+             
+              <ul style="list-style-type:disc"  class="ps-4">
+                <li>Itinerary</li>
+                <li>Accommodation proof</li>
               </ul>
             </div>
           </div>
@@ -674,14 +687,24 @@
   </ul>
 </section>
           </div>
-  <div class="col-md-3">
+  <div class="col-md-4">
 
                         <div class="box1 quick-links bg-white-10" style="row-gap: 12px; height: auto; background: var(--white-10);">
-                          <div class="fs26">Need help? </div>
-                          <p><strong>Important:</strong> Make sure all documents are clear and valid. Incomplete applications may be delayed or rejected.  </p>
-                          <p>Contact support or view FAQs before applying.</p>
-                          <a class="btn has-arrow rounded-pill btn-outline w-100 justify-content-center" href="/support/index.html" target="_blank">Contact Support</a>
-                        </div>
+                          <div class="fs26">Avoid Rejection </div>
+                          <strong> Ensure you follow these guidelines!</strong>
+                          <ul>
+
+                            <li>Make sure all the details you provided on the information are correct and accurate.</li>
+
+</li>
+                            <li>Upload documents that are clear and valid. Incomplete applications may be delayed or rejected.
+</li>
+                            <li>Read the FAQs below for more information.
+</li>
+                            <li>Download our guide on e-Visa application by clicking the button below.
+</li>
+                          </ul>
+                          <a class="btn has-arrow rounded-pill btn-outline w-100 justify-content-center" href="https://eafghans.com/downloads/Visa_Portal_Apply_for_e-visa.pdf" target="_blank">Download Guide</a>
                     
 
       </div>
@@ -697,29 +720,33 @@
   </section>
   </div>
 
-  <section >
+   <section >
     <div class="container">
      
          <div class="row pd-top-60">
         <div class="col-lg-5">
           <h4 class="has-bar">Frequently Asked Questions</h4>
-          <div class="tab-heads faq-tabs" id="myTab" role="tablist"> 
+              <div class="tab-heads faq-tabs" id="myTab" role="tablist"> 
             <a class="btn rounded-pill btn-outline active"
               id="technical-support-tab" data-bs-toggle="tab" data-bs-target="#technical-support" type="button"
-              role="tab" aria-controls="technical-support" aria-selected="true">Traveling to Afghanistan</a> 
+              role="tab" aria-controls="technical-support" aria-selected="true">Visa Application</a> 
               <a
               class="btn rounded-pill btn-outline" id="payment-tab" data-bs-toggle="tab" data-bs-target="#payment"
-              type="button" role="tab" aria-controls="payment" aria-selected="false">Afghanistan Visa</a> 
+              type="button" role="tab" aria-controls="payment" aria-selected="false">Payment</a> 
               <a
               class="btn rounded-pill btn-outline" id="data-security-tab" data-bs-toggle="tab"
               data-bs-target="#data-security" type="button" role="tab" aria-controls="data-security"
-              aria-selected="false">General Questions</a> 
-            
-            
+              aria-selected="false">Data Security</a> 
+              <a
+              class="btn rounded-pill btn-outline" id="help-support-tab" data-bs-toggle="tab" data-bs-target="#help-support"
+              type="button" role="tab" aria-controls="help-support" aria-selected="false">Help &amp; Support</a>
+              <a
+              class="btn rounded-pill btn-outline" id="refund-cancellation-tab" data-bs-toggle="tab" data-bs-target="#refund-cancellation"
+              type="button" role="tab" aria-controls="refund-cancellation" aria-selected="false">Refund &amp; Cancellation</a>
             </div>
-          <p>
+            <p>
             If you need assistance during the passport
-renewal process, please visit our <a href="#">Helpdesk</a>
+renewal process, please visit our <a href="https://www.eafghans.com/support/">Helpdesk</a>
 or contact us at <a href="mailto:visa@afghanconsulate.ae">visa@afghanconsulate.ae</a>
 for more information.
 
@@ -733,14 +760,236 @@ for more information.
             <div class="tab-pane fade show active" id="technical-support" role="tabpanel"
               aria-labelledby="technical-support-tab">
               <div class="accordion mt-3 border-0" id="technicalSupportAccordion">
+                <!-- NEW Accordion Items from DOCX: insert at top -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="visaQ1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#visaA1"
+                      aria-expanded="true" aria-controls="visaA1"> How do I know if I am eligible to apply for an e-visa to Afghanistan? </button>
+                  </h2>
+                  <div id="visaA1" class="accordion-collapse collapse show" aria-labelledby="visaQ1"
+                    data-bs-parent="#technicalSupportAccordion">
+                    <div class="accordion-body">Before proceeding with your application, ensure that you meet the eligibility requirements. Find more information on this page <a href="visa-requirements.html">Visa Requirements</a>.</div>
+                  </div>
+                </div>
+
+                <!-- What is the processing time for my visa? -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="visaQ2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#visaA2"
+                      aria-expanded="false" aria-controls="visaA2"> What is the processing time for my visa? </button>
+                  </h2>
+                  <div id="visaA2" class="accordion-collapse collapse" aria-labelledby="visaQ2"
+                    data-bs-parent="#technicalSupportAccordion">
+                    <div class="accordion-body">
+                      <p>Applicants can choose between two processing types: <strong>Standard</strong> or <strong>Express</strong></p>
+                      <ul>
+                        <li><strong>Standard Processing:</strong> Takes 1–4 weeks</li>
+                        <li><strong>VIP Processing:</strong> Takes up to 1 business day</li>
+                      </ul>
+                      <p>Please note that the timeframe stated above applies only to applications that are submitted with complete, clear, and correct documentation and do not require further review.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- How much are the Visa fees? -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="visaQ3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#visaA3"
+                      aria-expanded="false" aria-controls="visaA3"> How much are the Visa fees? </button>
+                  </h2>
+                  <div id="visaA3" class="accordion-collapse collapse" aria-labelledby="visaQ3"
+                    data-bs-parent="#technicalSupportAccordion">
+                    <div class="accordion-body">
+                      <p>Visa Fees depend on the processing type. We have <strong>Standard</strong> or <strong>Express</strong> processing.</p>
+                      <p>The online visa application fees are divided into two stages: <strong>Initial Fee</strong> and <strong>Remainder Fee</strong></p>
+                      <p>The <strong>Initial fee</strong> is required to be paid to begin the processing and review of your e-visa application.</p>
+                      <ul>
+                        <li>This must be paid at the time of application submission</li>
+                        <li><strong>You have 48 hours to pay the Initial Fee</strong>—failure to pay it will automatically cancel and close your application, and you will have to reapply.</li>
+                        <li>The initial fee is non-refundable</li>
+                        <li>A payment link for the Initial Fee will be sent to you via email. You can also pay the Initial Fee via the E-Afghans VisaPortal.</li>
+                      </ul>
+                      <p><strong>Here is the breakdown of the initial fee payment.</strong></p>
+                      <table class="table table-bordered mb-4">
+                        <thead>
+                          <tr>
+                            <th>Initial Fee</th>
+                            <th>Online Service Fee</th>
+                            <th>Payment Processing Fee</th>
+                            <th>Total</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><strong>Standard</strong></td>
+                            <td>USD 8</td>
+                            <td>USD 0.25</td>
+                            <td>USD 8.25</td>
+                          </tr>
+                          <tr>
+                            <td><strong>Express</strong></td>
+                            <td>USD 8</td>
+                            <td>USD 0.25</td>
+                            <td>USD 8.25</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <p>The <strong>Remainder fee</strong> is paid once the application is approved and is required to be paid to proceed with the e-visa issuance.</p>
+                      <ul>
+                        <li><strong>You have 7 days to pay the Remainder Fee</strong>—failure to pay it will automatically cancel and close your application, and you will have to reapply.</li>
+                        <li>Upon the approval of your application, you will receive a payment link via email. You can also pay the Remainder Fee via the E-Afghans Visa Portal.</li>
+                      </ul>
+                      <p><strong>Below is the detailed breakdown of fees for the online passport application.</strong></p>
+                      <table class="table table-bordered mb-4">
+                        <thead>
+                          <tr>
+                            <th>Remainder Fee</th>
+                            <th>Country</th>
+                            <th>e-Visa Fee (Tourist - 30 days)</th>
+                            <th>Payment Processing fee</th>
+                            <th>Total</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td rowspan="2"><strong>Standard</strong></td>
+                            <td>USA</td>
+                            <td>USD 200</td>
+                            <td>USD 6.19</td>
+                            <td>USD 206.19</td>
+                          </tr>
+                          <tr>
+                            <td>Others</td>
+                            <td>USD 120</td>
+                            <td>USD 3.71</td>
+                            <td>USD 123.71</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <table class="table table-bordered mb-3">
+                        <thead>
+                          <tr>
+                            <th>Remainder Fee</th>
+                            <th>Country</th>
+                            <th>e-Visa Fee (Tourist - 30 days)</th>
+                            <th>Express fee</th>
+                            <th>Payment Processing Fee</th>
+                            <th>Total</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td rowspan="2"><strong>Express</strong></td>
+                            <td>USA</td>
+                            <td>USD 200</td>
+                            <td>USD 50</td>
+                            <td>USD 7.73</td>
+                            <td>USD 257.73</td>
+                          </tr>
+                          <tr>
+                            <td>Others</td>
+                            <td>USD 120</td>
+                            <td>USD 50</td>
+                            <td>USD 5.26</td>
+                            <td>USD 175.26</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Am I eligible to apply for an e-visa? -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="visaQ4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#visaA4"
+                      aria-expanded="false" aria-controls="visaA4"> Am I eligible to apply for an e-visa? </button>
+                  </h2>
+                  <div id="visaA4" class="accordion-collapse collapse" aria-labelledby="visaQ4"
+                    data-bs-parent="#technicalSupportAccordion">
+                    <div class="accordion-body">
+                      You may check your eligibility by visiting this link: <a href="https://www.eafghans.com/e-visa/visa-requirements.html">https://www.eafghans.com/e-visa/visa-requirements.html</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- I have entered my information incorrectly -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="visaQ5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#visaA5"
+                      aria-expanded="false" aria-controls="visaA5"> I have entered my information incorrectly. I would like to change my details. What should I do? </button>
+                  </h2>
+                  <div id="visaA5" class="accordion-collapse collapse" aria-labelledby="visaQ5"
+                    data-bs-parent="#technicalSupportAccordion">
+                    <div class="accordion-body">
+                      <p>You may contact <a href="mailto:visa@afghanconsulate.ae">visa@afghanconsulate.ae</a> for this matter.</p>
+                      <p>Any changes on your application may result in delay of processing and issuance of your e-visa.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="visaQ6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#visaA6"
+                      aria-expanded="false" aria-controls="visaA6"> I need to travel to Afghanistan urgently. What should I do? </button>
+                  </h2>
+                  <div id="visaA6" class="accordion-collapse collapse" aria-labelledby="visaQ6"
+                    data-bs-parent="#technicalSupportAccordion">
+                    
+                    <div class="accordion-body">
+                      You may apply for an Express Visa if you need to travel urgently to Afghanistan. <br>
+
+The processing time for Express E-Visa applications is typically one (1) business day from the time a complete and accurate application is successfully submitted. <br><br>
+
+Please note that the one-business-day timeframe applies only to applications that are submitted with complete, clear, and correct documentation and do not require further review.
+<br><br>
+Find more information on this page <a href="visa-requirements.html"> https://www.eafghans.com/e-visa/visa-requirements.html  </a> about the e-Visa requirements before submitting an application.
+
+                      
+                     </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="visaQ7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#visaA7"
+                      aria-expanded="false" aria-controls="visaA7"> What e-visa type can I apply for? </button>
+                  </h2>
+                  <div id="visaA7" class="accordion-collapse collapse" aria-labelledby="visaQ7"
+                    data-bs-parent="#technicalSupportAccordion">
+                    <div class="accordion-body">Currently, we only issue a single-entry Tourist e-Visa valid for 30 days. <br>
+                       For other visa types, please visit the Afghan Consulate or Embassy nearest to you.</div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="visaQ8">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#visaA8"
+                      aria-expanded="false" aria-controls="visaA8"> Where can I download my e-visa? </button>
+                  </h2>
+                  <div id="visaA8" class="accordion-collapse collapse" aria-labelledby="visaQ8"
+                    data-bs-parent="#technicalSupportAccordion">
+                    <div class="accordion-body">
+                      You can download the e-visa from the Afghanistan Visa Portal.
+<br>
+The e-visa document will also be issued to you via your email.
+<br>
+Ensure that you have a working email to receive timely updates about your e-visa application.
+
+                   </div>
+                  </div>
+                </div>
+
+                <!-- end NEW items -->
+
                 <!-- Accordion Item 1 -->
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="supportQ1">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#supportA1"
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#supportA1"
                       aria-expanded="true" aria-controls="supportA1"> Can I update my details after submitting my
                       application? </button>
                   </h2>
-                  <div id="supportA1" class="accordion-collapse collapse show" aria-labelledby="supportQ1"
+                  <div id="supportA1" class="accordion-collapse collapse" aria-labelledby="supportQ1"
                     data-bs-parent="#technicalSupportAccordion">
                     <div class="accordion-body"> Once submitted, changes to your application details are limited.
                       However, you can contact support if there is a need to update any critical information. </div>
@@ -756,9 +1005,12 @@ for more information.
                   </h2>
                   <div id="supportA2" class="accordion-collapse collapse" aria-labelledby="supportQ2"
                     data-bs-parent="#technicalSupportAccordion">
-                    <div class="accordion-body"> If you're unable to log in, try resetting your password by clicking
-                      "Forgot Password" on the login page. If issues persist, please contact support by raising a
-                      ticket, and our team will help restore your account access. </div>
+                    <div class="accordion-body">
+                      If you are unable to log in to the Visa Portal, reset your password through this link:
+                      <a href="https://visaportal.eafghans.com/forgot-password">https://visaportal.eafghans.com/forgot-password</a>
+                      <p>You will receive an email with the link to reset your password. Follow the instructions to reset your password. You will receive a confirmation email once your password has been reset successfully. After which, you may now log in.</p>
+                      <p><strong>Note:</strong> If you are not able to access the email via your inbox, check your Spam or Junk folder.</p>
+                    </div>
                   </div>
                 </div>
 
@@ -771,68 +1023,15 @@ for more information.
                   </h2>
                   <div id="supportA3" class="accordion-collapse collapse" aria-labelledby="supportQ3"
                     data-bs-parent="#technicalSupportAccordion">
-                    <div class="accordion-body"> Ensure your documents are clear, scanned, and legible. If issues
-                      persist, contact our support team by raising a support ticket in the portal. </div>
+                    <div class="accordion-body"> Please ensure your uploads are in JPG, PNG, or PDF format. Individual files must not exceed 50 MB. Ensure your documents are clear, scanned, and legible. If issues persist, contact our technical support team at <a href="mailto:support@eafghans.com">support@eafghans.com</a> and include the error you are facing.
+                    </div>
                   </div>
                 </div>
 
                 <!-- Accordion Item 4 -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="supportQ4">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#supportA4" aria-expanded="false" aria-controls="supportA4"> How can I get help if
-                      I encounter issues during the application process? </button>
-                  </h2>
-                  <div id="supportA4" class="accordion-collapse collapse" aria-labelledby="supportQ4"
-                    data-bs-parent="#technicalSupportAccordion">
-                    <div class="accordion-body"> The e-Afghan portal offers support options, including FAQs, live chat,
-                      and a helpdesk, to assist you through each step of the application process. </div>
-                  </div>
-                </div>
+                <!-- moved some Help & Support items to the new Help & Support tab -->
 
-                <!-- Accordion Item 5 -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="supportQ5">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#supportA5" aria-expanded="false" aria-controls="supportA5"> Who can I contact if
-                      I have more questions? </button>
-                  </h2>
-                  <div id="supportA5" class="accordion-collapse collapse" aria-labelledby="supportQ5"
-                    data-bs-parent="#technicalSupportAccordion">
-                    <div class="accordion-body"> If you need further assistance, please raise a support ticket through
-                      your E-Afghans account, and our team will be happy to assist. </div>
-                  </div>
-                </div>
-
-                <!-- Accordion Item 6 -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="supportQ6">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#supportA6" aria-expanded="false" aria-controls="supportA6"> How long does it take
-                      to get a response to my support ticket? </button>
-                  </h2>
-                  <div id="supportA6" class="accordion-collapse collapse" aria-labelledby="supportQ6"
-                    data-bs-parent="#technicalSupportAccordion">
-                    <div class="accordion-body"> Response times may vary based on ticket volume, but our support team
-                      aims to respond within 24-48 hours. You’ll receive updates on your ticket status through your
-                      account. </div>
-                  </div>
-                </div>
-
-                <!-- Accordion Item 7 -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="supportQ7">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#supportA7" aria-expanded="false" aria-controls="supportA7"> Who can I contact for
-                      urgent support? </button>
-                  </h2>
-                  <div id="supportA7" class="accordion-collapse collapse" aria-labelledby="supportQ7"
-                    data-bs-parent="#technicalSupportAccordion">
-                    <div class="accordion-body"> For urgent issues, raising a support ticket is the quickest way to
-                      receive assistance. Currently, E-Afghans Portal support is handled online, with no dedicated
-                      hotline, but we prioritize critical requests. </div>
-                  </div>
-                </div>
+                <!-- Accordion Item 6 and 7 moved to Help & Support -->
 
                 <!-- Accordion Item 8 -->
                 <div class="accordion-item">
@@ -843,40 +1042,39 @@ for more information.
                   </h2>
                   <div id="supportA8" class="accordion-collapse collapse" aria-labelledby="supportQ8"
                     data-bs-parent="#technicalSupportAccordion">
-                    <div class="accordion-body"> If your application status doesn’t update within the expected
-                      timeframe, please raise a support ticket to have our team investigate and provide an update.
+                    <div class="accordion-body">
+                      <p>E-Visa applications follow a standard processing time:</p>
+                      <ul>
+                        <li>Standard - 1-4 weeks</li>
+                        <li>Express - 1 Business Day</li>
+                      </ul>
+
+                      <p>We request you to monitor the progress of your application via the Visa Portal. The Visa Portal
+                        dashboard reflects the real-time status of your application.</p>
+
+                      <p>Processing may be delayed in the following circumstances:</p>
+                      <ul>
+                        <li>Submission of incorrect, incomplete, or expired documents</li>
+                        <li>Blurred, cropped, or unreadable passport copies or supporting documents</li>
+                        <li>Mismatch between application details and submitted documents</li>
+                        <li>Inconsistencies in personal information (e.g., name spelling, date of birth, passport number)</li>
+                        <li>Failure to meet visa eligibility requirements</li>
+                        <li>Missing mandatory information in the application form</li>
+                        <li>Pending or unsuccessful payment confirmation</li>
+                        <li>Requirement for additional verification or security checks</li>
+                        <li>Requests for supplementary documents or clarifications</li>
+                        <li>Technical issues affecting document uploads or data submission</li>
+                      </ul>
+
+                      <p>If your application status doesn’t update within the expected timeframe, you may contact
+                        <a href="mailto:visa@afghanconsulate.ae">visa@afghanconsulate.ae</a>.</p>
                     </div>
                   </div>
                 </div>
 
-                <!-- Accordion Item 9 -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="supportQ9">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#supportA9" aria-expanded="false" aria-controls="supportA9"> Can I access
-                      technical support in multiple languages? </button>
-                  </h2>
-                  <div id="supportA9" class="accordion-collapse collapse" aria-labelledby="supportQ9"
-                    data-bs-parent="#technicalSupportAccordion">
-                    <div class="accordion-body"> Yes, our support team is equipped to assist in multiple languages,
-                      including English, Dari and Pashto, to help Afghan citizens worldwide access assistance. </div>
-                  </div>
-                </div>
+               
 
-                <!-- Accordion Item 10 -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="supportQ10">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#supportA10" aria-expanded="false" aria-controls="supportA10"> How can I check the
-                      status of my support ticket? </button>
-                  </h2>
-                  <div id="supportA10" class="accordion-collapse collapse" aria-labelledby="supportQ10"
-                    data-bs-parent="#technicalSupportAccordion">
-                    <div class="accordion-body"> You can track the status of your support ticket through your E-Afghans
-                      account under the “Support” section. Notifications are also sent at each stage to keep you
-                      updated. </div>
-                  </div>
-                </div>
+                <!-- moved support ticket status and contact items to Help & Support tab -->
               </div>
             </div>
 
@@ -892,9 +1090,9 @@ for more information.
                   </h2>
                   <div id="paymentA1" class="accordion-collapse collapse show" aria-labelledby="paymentQ1"
                     data-bs-parent="#paymentAccordion">
-                    <div class="accordion-body"> The E-Afghans Portal accepts a variety of secure online payment
-                      methods, including credit and debit cards, as well as other online payment options depending on
-                      your location. Accepted methods will be shown at the time of payment. </div>
+                    <div class="accordion-body"> 
+                     The E-Afghans Portal accepts a variety of secure online payment methods, including credit and debit cards. Accepted methods are Visa / Mastercard / American Express.
+</div>
                   </div>
                 </div>
 
@@ -922,9 +1120,8 @@ for more information.
                   </h2>
                   <div id="paymentA3" class="accordion-collapse collapse" aria-labelledby="paymentQ3"
                     data-bs-parent="#paymentAccordion">
-                    <div class="accordion-body"> Yes, a digital receipt is provided immediately after payment via email.
-                      You can also access and download your receipt from your E-Afghans account under the "Payments"
-                      section. </div>
+                    <div class="accordion-body">Yes, a digital receipt is provided immediately after payment via email.
+</div>
                   </div>
                 </div>
 
@@ -952,10 +1149,16 @@ for more information.
                   </h2>
                   <div id="paymentA5" class="accordion-collapse collapse" aria-labelledby="paymentQ5"
                     data-bs-parent="#paymentAccordion">
-                    <div class="accordion-body"> If your payment fails, check your internet connection and ensure you
-                      have entered all payment details correctly. If the issue persists, try using a different payment
-                      method or contact your bank. You can also raise a support ticket through the E-Afghans Portal for
-                      assistance. </div>
+
+
+                    <div class="accordion-body">If your payment fails, it may be due to one of the following reasons:
+                      <ul>
+                        <li><strong>Internet disconnection</strong> - Check your internet connection and ensure continued connectivity while making a payment.</li>
+                        <li><strong>Incomplete details</strong> - Ensure that you have entered all payment details correctly.</li>
+                        <li><strong>Unaccepted payment method</strong> - Currently, Visa / Mastercard / American Express are accepted. Try using a different payment method or contact your bank if the issue persists.</li>
+                      </ul>
+                      If the issue persists, raise a support ticket through the E-Afghans Portal for assistance.
+                    </div>
                   </div>
                 </div>
 
@@ -968,9 +1171,10 @@ for more information.
                   </h2>
                   <div id="paymentA6" class="accordion-collapse collapse" aria-labelledby="paymentQ6"
                     data-bs-parent="#paymentAccordion">
-                    <div class="accordion-body"> Yes, you can track the status of your payment in your E-Afghans account
-                      under the "Payments" or "Application Status" section. Notifications will also be sent at each key
-                      stage of the payment and application process. </div>
+                    <div class="accordion-body">Yes, you can track the status of your payment on your Visa Portal Dashboard.
+
+Each application shows the status of the application and if Payment is still pending.
+</div>
                   </div>
                 </div>
 
@@ -998,9 +1202,7 @@ for more information.
                   </h2>
                   <div id="paymentA8" class="accordion-collapse collapse" aria-labelledby="paymentQ8"
                     data-bs-parent="#paymentAccordion">
-                    <div class="accordion-body"> Generally, refunds are only available in specific circumstances, such
-                      as duplicate payments or system errors. Contact support through your account if you need
-                      assistance with a refund request. </div>
+                    <div class="accordion-body"> All fees are non-refundable. For more details about the refund policy, visit <a href="/e-visa/visa-requirements.html">https://www.eafghans.com/e-visa/visa-requirements.html</a>.</div>
                   </div>
                 </div>
 
@@ -1028,8 +1230,7 @@ for more information.
                   </h2>
                   <div id="paymentA10" class="accordion-collapse collapse" aria-labelledby="paymentQ10"
                     data-bs-parent="#paymentAccordion">
-                    <div class="accordion-body"> For any payment issues, you can raise a support ticket through the
-                      E-Afghans Portal. Our support team will assist with resolving your payment concerns. </div>
+                    <div class="accordion-body"> If you think that the payment might have been erroneous or a duplicate, you may contact your bank to file a chargeback case. </div>
                   </div>
                 </div>
               </div>
@@ -1139,9 +1340,9 @@ for more information.
                   </h2>
                   <div id="securityA7" class="accordion-collapse collapse" aria-labelledby="securityQ7"
                     data-bs-parent="#dataSecurityAccordion">
-                    <div class="accordion-body"> If you suspect any security issues or unauthorized access to your
-                      account, please contact E-Afghans support immediately by raising a support ticket. Our team will
-                      assist in securing your account and investigating the concern. </div>
+                    <div class="accordion-body"> If you suspect any security issues or unauthorized access to your account, please contact E-Afghans support at <a href="mailto:support@eafghans.com">support@eafghans.com</a>. Our team will assist in securing your account and investigating the concern. 
+                    </div>
+
                   </div>
                 </div>
 
@@ -1178,6 +1379,146 @@ for more information.
             </div>
             <!--            /data-security tab end-->
 
+            <!-- Help & Support Tab Content -->
+            <div class="tab-pane fade" id="help-support" role="tabpanel" aria-labelledby="help-support-tab">
+              <div class="accordion mt-3" id="helpSupportAccordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="helpQ1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#helpA1"
+                      aria-expanded="true" aria-controls="helpA1"> How do I reset my password? </button>
+                  </h2>
+                  <div id="helpA1" class="accordion-collapse collapse show" aria-labelledby="helpQ1"
+                    data-bs-parent="#helpSupportAccordion">
+                    <div class="accordion-body">If you're unable to log in, reset your password here: <a href="https://visaportal.eafghans.com/forgot-password">https://visaportal.eafghans.com/forgot-password</a>. Follow the instructions in the email to regain access.</div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="helpQ2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#helpA2"
+                      aria-expanded="false" aria-controls="helpA2"> What file formats and sizes are accepted for uploads? </button>
+                  </h2>
+                  <div id="helpA2" class="accordion-collapse collapse" aria-labelledby="helpQ2"
+                    data-bs-parent="#helpSupportAccordion">
+                    <div class="accordion-body">Accepted file formats: JPG, PNG, PDF. Individual files must not exceed 50 MB. For persistent issues contact <a href="mailto:support@eafghans.com">support@eafghans.com</a>.</div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="helpQ3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#helpA3"
+                      aria-expanded="false" aria-controls="helpA3"> My application status hasn’t updated — what now? </button>
+                  </h2>
+                  <div id="helpA3" class="accordion-collapse collapse" aria-labelledby="helpQ3"
+                    data-bs-parent="#helpSupportAccordion">
+                    <div class="accordion-body">See the processing time guidance:
+                      <ul>
+                        <li><strong>Standard:</strong> 1–4 weeks</li>
+                        <li><strong>Express:</strong> 1 business day (complete applications)</li>
+                      </ul>
+                      If status hasn't changed within the expected timeframe, email <a href="mailto:visa@afghanconsulate.ae">visa@afghanconsulate.ae</a> with your application reference for assistance.</div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="helpQ4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#helpA4"
+                      aria-expanded="false" aria-controls="helpA4"> How long does it take to get a response to my inquiry? </button>
+                  </h2>
+                  <div id="helpA4" class="accordion-collapse collapse" aria-labelledby="helpQ4"
+                    data-bs-parent="#helpSupportAccordion">
+                    <div class="accordion-body">Response times may vary based on ticket volume, but our support team aims to respond within 2 business days.</div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="helpQ5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#helpA5"
+                      aria-expanded="false" aria-controls="helpA5"> How can I get help if I encounter issues during the application process? </button>
+                  </h2>
+                  <div id="helpA5" class="accordion-collapse collapse" aria-labelledby="helpQ5"
+                    data-bs-parent="#helpSupportAccordion">
+                    <div class="accordion-body">For any inquiries regarding eligibility and requirements, refunds, updates, or changes related to your e-visa application, kindly reach out directly to <a href="mailto:visa@afghanconsulate.ae">visa@afghanconsulate.ae</a>.
+
+                      <p>For any technical issues encountered while using the platform, contact <a href="mailto:support@eafghans.com">support@eafghans.com</a>.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="helpQ6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#helpA6"
+                      aria-expanded="false" aria-controls="helpA6"> Who can I contact for emergency support?
+ </button>
+                  </h2>
+                  <div id="helpA6" class="accordion-collapse collapse" aria-labelledby="helpQ6"
+                    data-bs-parent="#helpSupportAccordion">
+                    <div class="accordion-body">
+For emergency issues, please contact <a href="tel:+97143988229">+971 4 398 8229</a>.</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Refund & Cancellation Tab Content -->
+            <div class="tab-pane fade" id="refund-cancellation" role="tabpanel" aria-labelledby="refund-cancellation-tab">
+              <div class="accordion mt-3" id="refundCancellationAccordion">
+                <!-- Accordion Item 1: What is your refund policy? -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="refundQ1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#refundA1"
+                      aria-expanded="true" aria-controls="refundA1"> What is your refund policy? </button>
+                  </h2>
+                  <div id="refundA1" class="accordion-collapse collapse show" aria-labelledby="refundQ1"
+                    data-bs-parent="#refundCancellationAccordion">
+                    <div class="accordion-body">
+                      <p>All refund requests are subject to verification and approval by the Afghan Consulate. Refunds cannot be claimed for delays or issues related to applicant-provided incorrect information.</p>
+                      
+                      <p class="lead">Initial Fees</p>
+                      <p>The initial fee is non-refundable.<br>
+                      This fee covers the administrative and processing costs required to initiate the application.</p>
+                      
+                      <p class="lead">Remainder Fees</p>
+                      Once the e-visa has been issued, no refunds can be requested.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Accordion Item 2: Duplicate charge -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="refundQ2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#refundA2"
+                      aria-expanded="false" aria-controls="refundA2"> I was charged twice for my payment. I would like to get a refund for the duplicate charge. </button>
+                  </h2>
+                  <div id="refundA2" class="accordion-collapse collapse" aria-labelledby="refundQ2"
+                    data-bs-parent="#refundCancellationAccordion">
+                    <div class="accordion-body">
+                      <p>If a payment is made in duplicate, applicants may submit a dispute for review to their bank.</p>
+                      <p>Refunds for duplicate payments will be processed after verification by the consulate or relevant payment processor.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Accordion Item 3: How can I cancel my application? -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="refundQ3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#refundA3"
+                      aria-expanded="false" aria-controls="refundA3"> How can I cancel my application? </button>
+                  </h2>
+                  <div id="refundA3" class="accordion-collapse collapse" aria-labelledby="refundQ3"
+                    data-bs-parent="#refundCancellationAccordion">
+                    <div class="accordion-body">
+                      <p>Applicants may request cancellation before the application is processed.</p>
+                      <ul>
+                        <li><strong>Initial fees are non-refundable and will not be returned upon cancellation.</strong></li>
+                        <li><strong>Once the application has been approved and the e-visa has been issued, the remainder fee cannot be refunded, even if the applicant cancels.</strong></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
          
           </div>
         </div>
@@ -1200,6 +1541,7 @@ for more information.
                 <li><a href="/citizen-services/#passport-services/passport-new">Passport Renewal Application</a></li>
                <li><a href="/citizen-services/#special-services/emergency-assistance">Lost or Stolen Passport
                     Reporting </a></li>
+                     <li><a href="/e-visa/visa-requirements.html">e-Visa Services </a></li>
               </ul>
             </div>
             <div class="col ">

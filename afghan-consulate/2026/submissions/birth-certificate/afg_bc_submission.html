@@ -1,0 +1,320 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=420, initial-scale=1.0">
+<title>afg_bc_submission</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="afg_returnee_submission.css">
+<style>
+.passport-imgs {
+  text-align: center;
+  padding: 14px 10px 18px !important;
+  display: block;
+  border-right: 1px solid var(--gray-border);
+}
+.passport-imgs:last-child {
+  border-right: none;
+}
+.passport-imgs .doc-placeholder {
+  width: 100%;
+  max-width: 220px;
+  height: 100px;
+  margin: 0 auto 10px;
+  border-radius: 8px;
+  background: #d9d9d9;
+}
+.cn-block .tbody .tr:last-child .passport-imgs:first-child .doc-placeholder {
+  max-width: 140px;
+  height: 175px;
+}
+.passport-imgs .fw-bold {
+  font-size: 9px;
+  line-height: 1.35;
+}
+.declaration-text {
+  padding: 10px;
+  line-height: 1.5;
+  flex: 3;
+}
+</style>
+</head>
+
+<body>
+<div class="cn1">
+  <div class="cn2">
+    <div class="header">
+      <div class="top1">
+        <img src="img/logo--s-1.svg" alt="">
+        <img src="img/logo--s-2.svg" alt="">
+        <img src="img/logo--s-3.svg" alt="">
+      </div>
+
+      <div class="top2">
+        <div class="col">Birth Certificate Application Form</div>
+        <div class="col">Application Reference Number: {{request.deal_number}}</div>
+      </div>
+    </div>
+
+    <div class="data">
+
+      <div class="cn-block">
+        <div class="cn-title">
+          <div class="col">Applicant Details</div>
+          <div class="col text-right fs-14px">د عارض جزئیات</div>
+        </div>
+        <div class="tbody">
+          <div class="tr">
+            <div class="td">First Name</div>
+            <div class="td fw-bold">{}</div>
+            <div class="td text-right fw-bold">{}</div>
+            <div class="td text-right">لومړی نوم</div>
+          </div>
+          <div class="tr">
+            <div class="td">Given Name</div>
+            <div class="td fw-bold">{}</div>
+            <div class="td text-right fw-bold">{}</div>
+            <div class="td text-right">اصلي نوم</div>
+          </div>
+          <div class="tr">
+            <div class="td">Gender</div>
+            <div class="td fw-bold">{}</div>
+            <div class="td text-right fw-bold">{}</div>
+            <div class="td text-right">جنس</div>
+          </div>
+          <div class="tr">
+            <div class="td">Date of Birth</div>
+            <div class="td fw-bold">{}</div>
+            <div class="td text-right fw-bold">{}</div>
+            <div class="td text-right">د زیږېدو نېټه</div>
+          </div>
+          <div class="tr">
+            <div class="td">Birthplace Country</div>
+            <div class="td fw-bold">{}</div>
+            <div class="td text-right fw-bold">{}</div>
+            <div class="td text-right">د زیږېدو هېواد</div>
+          </div>
+          <div class="tr">
+            <div class="td">Province</div>
+            <div class="td fw-bold">{}</div>
+            <div class="td text-right fw-bold">{}</div>
+            <div class="td text-right">ولایت</div>
+          </div>
+          <div class="tr">
+            <div class="td">District</div>
+            <div class="td fw-bold">{}</div>
+            <div class="td text-right fw-bold">{}</div>
+            <div class="td text-right">ولسوالي</div>
+          </div>
+          <div class="tr">
+            <div class="td">Village</div>
+            <div class="td fw-bold">{}</div>
+            <div class="td text-right fw-bold">{}</div>
+            <div class="td text-right">کلی</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cn-block">
+        <div class="cn-title">
+          <div class="col">Identification Details</div>
+          <div class="col text-right fs-14px">د پېژندنې جزئیات</div>
+        </div>
+        <div class="tbody">
+          <div class="tr">
+            <div class="td">Passport Number</div>
+            <div class="td fw-bold">{}</div>
+            <div class="td text-right fw-bold">{}</div>
+            <div class="td text-right">د پاسپورټ شمېره</div>
+          </div>
+          <div class="tr">
+            <div class="td">Passport Issue Date</div>
+            <div class="td fw-bold">{}</div>
+            <div class="td text-right fw-bold">{}</div>
+            <div class="td text-right">د پاسپورټ د صدور نېټه</div>
+          </div>
+          <div class="tr">
+            <div class="td">Passport Expiry Date</div>
+            <div class="td fw-bold">{}</div>
+            <div class="td text-right fw-bold">{}</div>
+            <div class="td text-right">د پاسپورټ د پای نېټه</div>
+          </div>
+          <div class="tr">
+            <div class="td">Tazkira / ID Card Number</div>
+            <div class="td fw-bold">{}</div>
+            <div class="td text-right fw-bold">{}</div>
+            <div class="td text-right">د تذکرې / پېژندپاڼې شمېره</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cn-block">
+        <div class="cn-title">
+          <div class="col">Parents Details</div>
+          <div class="col text-right fs-14px">د والدینو جزئیات</div>
+        </div>
+        <div class="tbody">
+          <div class="tr">
+            <div class="td">Grandfather's Name</div>
+            <div class="td fw-bold">{}</div>
+            <div class="td text-right fw-bold">{}</div>
+            <div class="td text-right">د نیکه نوم</div>
+          </div>
+          <div class="tr">
+            <div class="td">Father's Name</div>
+            <div class="td fw-bold">{}</div>
+            <div class="td text-right fw-bold">{}</div>
+            <div class="td text-right">د پلار نوم</div>
+          </div>
+          <div class="tr">
+            <div class="td">Father's Passport Number</div>
+            <div class="td fw-bold">{}</div>
+            <div class="td text-right fw-bold">{}</div>
+            <div class="td text-right">د پلار د پاسپورټ شمېره</div>
+          </div>
+          <div class="tr">
+            <div class="td">Father's Tazkira Number</div>
+            <div class="td fw-bold">{}</div>
+            <div class="td text-right fw-bold">{}</div>
+            <div class="td text-right">د پلار د تذکرې شمېره</div>
+          </div>
+          <div class="tr">
+            <div class="td">Mother's Passport Number</div>
+            <div class="td fw-bold">{}</div>
+            <div class="td text-right fw-bold">{}</div>
+            <div class="td text-right">د مور د پاسپورټ شمېره</div>
+          </div>
+          <div class="tr">
+            <div class="td">Mother's Tazkira Number</div>
+            <div class="td fw-bold">{}</div>
+            <div class="td text-right fw-bold">{}</div>
+            <div class="td text-right">د مور د تذکرې شمېره</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cn-block">
+        <div class="cn-title">
+          <div class="col">Contact Details</div>
+          <div class="col text-right fs-14px">د اړیکو جزئیات</div>
+        </div>
+        <div class="tbody">
+          <div class="tr">
+            <div class="td">Email Address</div>
+            <div class="td fw-bold">{}</div>
+            <div class="td text-right fw-bold">{}</div>
+            <div class="td text-right">برېښنالیک پته</div>
+          </div>
+          <div class="tr">
+            <div class="td">Mobile Number</div>
+            <div class="td fw-bold">{}</div>
+            <div class="td text-right fw-bold">{}</div>
+            <div class="td text-right">د موبایل شمېره</div>
+          </div>
+          <div class="tr">
+            <div class="td">Country of Residence</div>
+            <div class="td fw-bold">{}</div>
+            <div class="td text-right fw-bold">{}</div>
+            <div class="td text-right">د استوګنې هېواد</div>
+          </div>
+          <div class="tr">
+            <div class="td">Address Line 1</div>
+            <div class="td fw-bold">{}</div>
+            <div class="td text-right fw-bold">{}</div>
+            <div class="td text-right">د پتې کرښه ۱</div>
+          </div>
+          <div class="tr">
+            <div class="td">Address Line 2</div>
+            <div class="td fw-bold">{}</div>
+            <div class="td text-right fw-bold">{}</div>
+            <div class="td text-right">د پتې کرښه ۲</div>
+          </div>
+          <div class="tr">
+            <div class="td">City / Town</div>
+            <div class="td fw-bold">{}</div>
+            <div class="td text-right fw-bold">{}</div>
+            <div class="td text-right">ښار / ښارګوټی</div>
+          </div>
+          <div class="tr">
+            <div class="td">State/Province/Region</div>
+            <div class="td fw-bold">{}</div>
+            <div class="td text-right fw-bold">{}</div>
+            <div class="td text-right">ایالت / ولایت / سیمه</div>
+          </div>
+          <div class="tr">
+            <div class="td">Postal / Zip Code</div>
+            <div class="td fw-bold">{}</div>
+            <div class="td text-right fw-bold">{}</div>
+            <div class="td text-right">پوستي کوډ / زپ کوډ</div>
+          </div>
+          <div class="tr">
+            <div class="td">City</div>
+            <div class="td fw-bold">{}</div>
+            <div class="td text-right fw-bold">{}</div>
+            <div class="td text-right">ښار</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cn-block">
+        <div class="cn-title">
+          <div class="col">Passports</div>
+        </div>
+        <div class="tbody">
+          <div class="tr text-center">
+            <div class="td passport-imgs">
+              <div class="doc-placeholder" aria-hidden="true"></div>
+              <div class="fw-bold">Tazkira Front / د تذکرې مخامخ اړخ</div>
+            </div>
+            <div class="td passport-imgs">
+              <div class="doc-placeholder" aria-hidden="true"></div>
+              <div class="fw-bold">Tazkira Back / د تذکرې شا اړخ</div>
+            </div>
+          </div>
+          <div class="tr text-center">
+            <div class="td passport-imgs">
+              <div class="doc-placeholder" aria-hidden="true"></div>
+              <div class="fw-bold">Passport / پاسپورټ</div>
+            </div>
+            <div class="td passport-imgs">
+              <div class="doc-placeholder" aria-hidden="true"></div>
+              <div class="fw-bold">Other Document / نور سند</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cn-block">
+        <div class="cn-title">
+          <div class="col">Declaration</div>
+        </div>
+        <div class="tbody">
+          <div class="tr">
+            <div class="td declaration-text w-100">I declare that all the information provided here is true and correct and that i agree to the terms and conditions</div>
+          </div>
+        </div>
+        <div class="tbody has-child">
+          <div class="col">
+            <div class="col-border">
+              <div class="cn-title">
+                <div class="col">Signature</div>
+              </div>
+              <div class="data-2"><img src="img/signature.svg" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <div><img src="img/logo--s-footer.svg" alt=""></div>
+      <footer> Website: www.afghanconsulate.ae | E-mail: dubai@afghanconsulate.ae | Tel: 00971 4 3988229 </footer>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

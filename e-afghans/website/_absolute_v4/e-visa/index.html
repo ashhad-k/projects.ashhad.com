@@ -52,6 +52,10 @@
   <!-- Fonts -->
   <link href="https://api.fontshare.com/v2/css?f[]=switzer@100,200,300,400,500,600,700&display=swap" rel="stylesheet">
 
+  <style>
+    .action2  .btn-blur{ background: var(--bg1); font-weight: 600;}
+    #fold1 .data1 .action2 a.btn-blur{ background: var(--accent); color: #fff; font-weight: 600;}
+  </style>
 
 </head>
 
@@ -168,15 +172,6 @@
             <div class="data">
               <h2>Foreign Services
               </h2>
-                    <div data-aos="fade-up"  class="get-app">
-<p>Get the <strong>eAfghans</strong> app now on your device:</p>
-<div class="logos">
-  <a href="https://apps.apple.com/ae/app/e-afghans/id6755007493"> <i><img src="/img/logo/appstore-1.svg" alt="" /></i></a>
- <a href="https://play.google.com/store/apps/details?id=com.afg.eafghans"> <i><img src="/img/logo/google-play.svg" alt="" /></i></a> 
-</div>
-                
-            </div>
-            <!-- get-app -->
             </div>
           </div>
         </div>
@@ -209,7 +204,7 @@
 
                       </a>
                       <a class="btn btn-blur fw-b" href="visa-requirements.html">
-                        Check Requirements</a>
+                        Check Requirements </a>
                     </div>
 
                   </div>
@@ -379,12 +374,19 @@ your selected visa type.</p>
                 <!--/item-->
                 <div class="content"> <span>3</span>
                   <div class="data">
+                    <h6>Complete the identity verification</h6>
+                    <p>You must complete the identity verification step by taking a live photo of yourself and a photo of your passport page.</p>
+                  </div>
+                </div>
+                <!--/item-->
+                <div class="content"> <span>4</span>
+                  <div class="data">
                     <h6>Fill out the Visa Application Form</h6>
                     <p>Submit all required information and documents.</p>
                   </div>
                 </div>
                 <!--/item-->
-                <div class="content"> <span>4</span>
+                <div class="content"> <span>5</span>
                   <div class="data">
                     <h6>Pay the Visa Fees</h6>
                     <p>Once the payment is successful, your visa will be in process.</p>
@@ -993,23 +995,29 @@ your selected visa type.</p>
          <div class="row pd-top-60">
         <div class="col-lg-5">
           <h4 class="has-bar">Frequently Asked Questions</h4>
-          <div class="tab-heads faq-tabs" id="myTab" role="tablist"> 
+              <div class="tab-heads faq-tabs" id="myTab" role="tablist"> 
             <a class="btn rounded-pill btn-outline active"
               id="technical-support-tab" data-bs-toggle="tab" data-bs-target="#technical-support" type="button"
-              role="tab" aria-controls="technical-support" aria-selected="true">Traveling to Afghanistan</a> 
+              role="tab" aria-controls="technical-support" aria-selected="true">Visa Application</a> 
               <a
               class="btn rounded-pill btn-outline" id="payment-tab" data-bs-toggle="tab" data-bs-target="#payment"
-              type="button" role="tab" aria-controls="payment" aria-selected="false">Afghanistan Visa</a> 
+              type="button" role="tab" aria-controls="payment" aria-selected="false">Payment</a> 
               <a
               class="btn rounded-pill btn-outline" id="data-security-tab" data-bs-toggle="tab"
               data-bs-target="#data-security" type="button" role="tab" aria-controls="data-security"
-              aria-selected="false">General Questions</a> 
+              aria-selected="false">Data Security</a> 
+              <a
+              class="btn rounded-pill btn-outline" id="help-support-tab" data-bs-toggle="tab" data-bs-target="#help-support"
+              type="button" role="tab" aria-controls="help-support" aria-selected="false">Help &amp; Support</a>
             
+              <a
+              class="btn rounded-pill btn-outline" id="verification-tab" data-bs-toggle="tab" data-bs-target="#verification"
+              type="button" role="tab" aria-controls="verification" aria-selected="false">Verification</a>
             
             </div>
-          <p>
+            <p>
             If you need assistance during the passport
-renewal process, please visit our <a href="#">Helpdesk</a>
+renewal process, please visit our <a href="https://www.eafghans.com/support/">Helpdesk</a>
 or contact us at <a href="mailto:visa@afghanconsulate.ae">visa@afghanconsulate.ae</a>
 for more information.
 
@@ -1023,14 +1031,80 @@ for more information.
             <div class="tab-pane fade show active" id="technical-support" role="tabpanel"
               aria-labelledby="technical-support-tab">
               <div class="accordion mt-3 border-0" id="technicalSupportAccordion">
+                <!-- NEW Accordion Items from DOCX: insert at top -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="visaQ1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#visaA1"
+                      aria-expanded="true" aria-controls="visaA1"> How do I know if I am eligible to apply for an e-visa to Afghanistan? </button>
+                  </h2>
+                  <div id="visaA1" class="accordion-collapse collapse show" aria-labelledby="visaQ1"
+                    data-bs-parent="#technicalSupportAccordion">
+                    <div class="accordion-body">Before proceeding with your application, ensure that you meet the eligibility requirements. Find more information on this page <a href="visa-requirements.html">Visa Requirements</a>.</div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="visaQ2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#visaA2"
+                      aria-expanded="false" aria-controls="visaA2"> I need to travel to Afghanistan urgently. What should I do? </button>
+                  </h2>
+                  <div id="visaA2" class="accordion-collapse collapse" aria-labelledby="visaQ2"
+                    data-bs-parent="#technicalSupportAccordion">
+                    
+                    <div class="accordion-body">
+                      You may apply for an Express Visa if you need to travel urgently to Afghanistan. <br>
+
+The processing time for Express E-Visa applications is typically one (1) business day from the time a complete and accurate application is successfully submitted. <br><br>
+
+Please note that the one-business-day timeframe applies only to applications that are submitted with complete, clear, and correct documentation and do not require further review.
+<br><br>
+Find more information on this page <a href="visa-requirements.html"> https://www.eafghans.com/e-visa/visa-requirements.html  </a> about the e-Visa requirements before submitting an application.
+
+                      
+                     </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="visaQ3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#visaA3"
+                      aria-expanded="false" aria-controls="visaA3"> What e-visa type can I apply for? </button>
+                  </h2>
+                  <div id="visaA3" class="accordion-collapse collapse" aria-labelledby="visaQ3"
+                    data-bs-parent="#technicalSupportAccordion">
+                    <div class="accordion-body">Currently, we only issue a single-entry Tourist e-Visa valid for 30 days. <br>
+                       For other visa types, please visit the Afghan Consulate or Embassy nearest to you.</div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="visaQ4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#visaA4"
+                      aria-expanded="false" aria-controls="visaA4"> Where can I download my e-visa? </button>
+                  </h2>
+                  <div id="visaA4" class="accordion-collapse collapse" aria-labelledby="visaQ4"
+                    data-bs-parent="#technicalSupportAccordion">
+                    <div class="accordion-body">
+                      You can download the e-visa from the Afghanistan Visa Portal.
+<br>
+The e-visa document will also be issued to you via your email.
+<br>
+Ensure that you have a working email to receive timely updates about your e-visa application.
+
+                   </div>
+                  </div>
+                </div>
+
+                <!-- end NEW items -->
+
                 <!-- Accordion Item 1 -->
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="supportQ1">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#supportA1"
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#supportA1"
                       aria-expanded="true" aria-controls="supportA1"> Can I update my details after submitting my
                       application? </button>
                   </h2>
-                  <div id="supportA1" class="accordion-collapse collapse show" aria-labelledby="supportQ1"
+                  <div id="supportA1" class="accordion-collapse collapse" aria-labelledby="supportQ1"
                     data-bs-parent="#technicalSupportAccordion">
                     <div class="accordion-body"> Once submitted, changes to your application details are limited.
                       However, you can contact support if there is a need to update any critical information. </div>
@@ -1046,9 +1120,12 @@ for more information.
                   </h2>
                   <div id="supportA2" class="accordion-collapse collapse" aria-labelledby="supportQ2"
                     data-bs-parent="#technicalSupportAccordion">
-                    <div class="accordion-body"> If you're unable to log in, try resetting your password by clicking
-                      "Forgot Password" on the login page. If issues persist, please contact support by raising a
-                      ticket, and our team will help restore your account access. </div>
+                    <div class="accordion-body">
+                      If you are unable to log in to the Visa Portal, reset your password through this link:
+                      <a href="https://visaportal.eafghans.com/forgot-password">https://visaportal.eafghans.com/forgot-password</a>
+                      <p>You will receive an email with the link to reset your password. Follow the instructions to reset your password. You will receive a confirmation email once your password has been reset successfully. After which, you may now log in.</p>
+                      <p><strong>Note:</strong> If you are not able to access the email via your inbox, check your Spam or Junk folder.</p>
+                    </div>
                   </div>
                 </div>
 
@@ -1061,68 +1138,15 @@ for more information.
                   </h2>
                   <div id="supportA3" class="accordion-collapse collapse" aria-labelledby="supportQ3"
                     data-bs-parent="#technicalSupportAccordion">
-                    <div class="accordion-body"> Ensure your documents are clear, scanned, and legible. If issues
-                      persist, contact our support team by raising a support ticket in the portal. </div>
+                    <div class="accordion-body"> Please ensure your uploads are in JPG, PNG, or PDF format. Individual files must not exceed 50 MB. Ensure your documents are clear, scanned, and legible. If issues persist, contact our technical support team at <a href="mailto:support@eafghans.com">support@eafghans.com</a> and include the error you are facing.
+                    </div>
                   </div>
                 </div>
 
                 <!-- Accordion Item 4 -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="supportQ4">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#supportA4" aria-expanded="false" aria-controls="supportA4"> How can I get help if
-                      I encounter issues during the application process? </button>
-                  </h2>
-                  <div id="supportA4" class="accordion-collapse collapse" aria-labelledby="supportQ4"
-                    data-bs-parent="#technicalSupportAccordion">
-                    <div class="accordion-body"> The e-Afghan portal offers support options, including FAQs, live chat,
-                      and a helpdesk, to assist you through each step of the application process. </div>
-                  </div>
-                </div>
+                <!-- moved some Help & Support items to the new Help & Support tab -->
 
-                <!-- Accordion Item 5 -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="supportQ5">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#supportA5" aria-expanded="false" aria-controls="supportA5"> Who can I contact if
-                      I have more questions? </button>
-                  </h2>
-                  <div id="supportA5" class="accordion-collapse collapse" aria-labelledby="supportQ5"
-                    data-bs-parent="#technicalSupportAccordion">
-                    <div class="accordion-body"> If you need further assistance, please raise a support ticket through
-                      your E-Afghans account, and our team will be happy to assist. </div>
-                  </div>
-                </div>
-
-                <!-- Accordion Item 6 -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="supportQ6">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#supportA6" aria-expanded="false" aria-controls="supportA6"> How long does it take
-                      to get a response to my support ticket? </button>
-                  </h2>
-                  <div id="supportA6" class="accordion-collapse collapse" aria-labelledby="supportQ6"
-                    data-bs-parent="#technicalSupportAccordion">
-                    <div class="accordion-body"> Response times may vary based on ticket volume, but our support team
-                      aims to respond within 24-48 hours. You’ll receive updates on your ticket status through your
-                      account. </div>
-                  </div>
-                </div>
-
-                <!-- Accordion Item 7 -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="supportQ7">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#supportA7" aria-expanded="false" aria-controls="supportA7"> Who can I contact for
-                      urgent support? </button>
-                  </h2>
-                  <div id="supportA7" class="accordion-collapse collapse" aria-labelledby="supportQ7"
-                    data-bs-parent="#technicalSupportAccordion">
-                    <div class="accordion-body"> For urgent issues, raising a support ticket is the quickest way to
-                      receive assistance. Currently, E-Afghans Portal support is handled online, with no dedicated
-                      hotline, but we prioritize critical requests. </div>
-                  </div>
-                </div>
+                <!-- Accordion Item 6 and 7 moved to Help & Support -->
 
                 <!-- Accordion Item 8 -->
                 <div class="accordion-item">
@@ -1133,40 +1157,39 @@ for more information.
                   </h2>
                   <div id="supportA8" class="accordion-collapse collapse" aria-labelledby="supportQ8"
                     data-bs-parent="#technicalSupportAccordion">
-                    <div class="accordion-body"> If your application status doesn’t update within the expected
-                      timeframe, please raise a support ticket to have our team investigate and provide an update.
+                    <div class="accordion-body">
+                      <p>E-Visa applications follow a standard processing time:</p>
+                      <ul>
+                        <li>Standard - 1-4 weeks</li>
+                        <li>Express - 1 Business Day</li>
+                      </ul>
+
+                      <p>We request you to monitor the progress of your application via the Visa Portal. The Visa Portal
+                        dashboard reflects the real-time status of your application.</p>
+
+                      <p>Processing may be delayed in the following circumstances:</p>
+                      <ul>
+                        <li>Submission of incorrect, incomplete, or expired documents</li>
+                        <li>Blurred, cropped, or unreadable passport copies or supporting documents</li>
+                        <li>Mismatch between application details and submitted documents</li>
+                        <li>Inconsistencies in personal information (e.g., name spelling, date of birth, passport number)</li>
+                        <li>Failure to meet visa eligibility requirements</li>
+                        <li>Missing mandatory information in the application form</li>
+                        <li>Pending or unsuccessful payment confirmation</li>
+                        <li>Requirement for additional verification or security checks</li>
+                        <li>Requests for supplementary documents or clarifications</li>
+                        <li>Technical issues affecting document uploads or data submission</li>
+                      </ul>
+
+                      <p>If your application status doesn’t update within the expected timeframe, you may contact
+                        <a href="mailto:visa@afghanconsulate.ae">visa@afghanconsulate.ae</a>.</p>
                     </div>
                   </div>
                 </div>
 
-                <!-- Accordion Item 9 -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="supportQ9">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#supportA9" aria-expanded="false" aria-controls="supportA9"> Can I access
-                      technical support in multiple languages? </button>
-                  </h2>
-                  <div id="supportA9" class="accordion-collapse collapse" aria-labelledby="supportQ9"
-                    data-bs-parent="#technicalSupportAccordion">
-                    <div class="accordion-body"> Yes, our support team is equipped to assist in multiple languages,
-                      including English, Dari and Pashto, to help Afghan citizens worldwide access assistance. </div>
-                  </div>
-                </div>
+               
 
-                <!-- Accordion Item 10 -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="supportQ10">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#supportA10" aria-expanded="false" aria-controls="supportA10"> How can I check the
-                      status of my support ticket? </button>
-                  </h2>
-                  <div id="supportA10" class="accordion-collapse collapse" aria-labelledby="supportQ10"
-                    data-bs-parent="#technicalSupportAccordion">
-                    <div class="accordion-body"> You can track the status of your support ticket through your E-Afghans
-                      account under the “Support” section. Notifications are also sent at each stage to keep you
-                      updated. </div>
-                  </div>
-                </div>
+                <!-- moved support ticket status and contact items to Help & Support tab -->
               </div>
             </div>
 
@@ -1182,9 +1205,9 @@ for more information.
                   </h2>
                   <div id="paymentA1" class="accordion-collapse collapse show" aria-labelledby="paymentQ1"
                     data-bs-parent="#paymentAccordion">
-                    <div class="accordion-body"> The E-Afghans Portal accepts a variety of secure online payment
-                      methods, including credit and debit cards, as well as other online payment options depending on
-                      your location. Accepted methods will be shown at the time of payment. </div>
+                    <div class="accordion-body"> 
+                     The E-Afghans Portal accepts a variety of secure online payment methods, including credit and debit cards. Accepted methods are Visa / Mastercard / American Express.
+</div>
                   </div>
                 </div>
 
@@ -1212,9 +1235,8 @@ for more information.
                   </h2>
                   <div id="paymentA3" class="accordion-collapse collapse" aria-labelledby="paymentQ3"
                     data-bs-parent="#paymentAccordion">
-                    <div class="accordion-body"> Yes, a digital receipt is provided immediately after payment via email.
-                      You can also access and download your receipt from your E-Afghans account under the "Payments"
-                      section. </div>
+                    <div class="accordion-body">Yes, a digital receipt is provided immediately after payment via email.
+</div>
                   </div>
                 </div>
 
@@ -1242,10 +1264,16 @@ for more information.
                   </h2>
                   <div id="paymentA5" class="accordion-collapse collapse" aria-labelledby="paymentQ5"
                     data-bs-parent="#paymentAccordion">
-                    <div class="accordion-body"> If your payment fails, check your internet connection and ensure you
-                      have entered all payment details correctly. If the issue persists, try using a different payment
-                      method or contact your bank. You can also raise a support ticket through the E-Afghans Portal for
-                      assistance. </div>
+
+
+                    <div class="accordion-body">If your payment fails, it may be due to one of the following reasons:
+                      <ul>
+                        <li><strong>Internet disconnection</strong> - Check your internet connection and ensure continued connectivity while making a payment.</li>
+                        <li><strong>Incomplete details</strong> - Ensure that you have entered all payment details correctly.</li>
+                        <li><strong>Unaccepted payment method</strong> - Currently, Visa / Mastercard / American Express are accepted. Try using a different payment method or contact your bank if the issue persists.</li>
+                      </ul>
+                      If the issue persists, raise a support ticket through the E-Afghans Portal for assistance.
+                    </div>
                   </div>
                 </div>
 
@@ -1258,9 +1286,10 @@ for more information.
                   </h2>
                   <div id="paymentA6" class="accordion-collapse collapse" aria-labelledby="paymentQ6"
                     data-bs-parent="#paymentAccordion">
-                    <div class="accordion-body"> Yes, you can track the status of your payment in your E-Afghans account
-                      under the "Payments" or "Application Status" section. Notifications will also be sent at each key
-                      stage of the payment and application process. </div>
+                    <div class="accordion-body">Yes, you can track the status of your payment on your Visa Portal Dashboard.
+
+Each application shows the status of the application and if Payment is still pending.
+</div>
                   </div>
                 </div>
 
@@ -1288,9 +1317,7 @@ for more information.
                   </h2>
                   <div id="paymentA8" class="accordion-collapse collapse" aria-labelledby="paymentQ8"
                     data-bs-parent="#paymentAccordion">
-                    <div class="accordion-body"> Generally, refunds are only available in specific circumstances, such
-                      as duplicate payments or system errors. Contact support through your account if you need
-                      assistance with a refund request. </div>
+                    <div class="accordion-body"> All fees are non-refundable. For more details about the refund policy, visit <a href="/e-visa/visa-requirements.html">https://www.eafghans.com/e-visa/visa-requirements.html</a>.</div>
                   </div>
                 </div>
 
@@ -1318,8 +1345,7 @@ for more information.
                   </h2>
                   <div id="paymentA10" class="accordion-collapse collapse" aria-labelledby="paymentQ10"
                     data-bs-parent="#paymentAccordion">
-                    <div class="accordion-body"> For any payment issues, you can raise a support ticket through the
-                      E-Afghans Portal. Our support team will assist with resolving your payment concerns. </div>
+                    <div class="accordion-body"> If you think that the payment might have been erroneous or a duplicate, you may contact your bank to file a chargeback case. </div>
                   </div>
                 </div>
               </div>
@@ -1429,9 +1455,9 @@ for more information.
                   </h2>
                   <div id="securityA7" class="accordion-collapse collapse" aria-labelledby="securityQ7"
                     data-bs-parent="#dataSecurityAccordion">
-                    <div class="accordion-body"> If you suspect any security issues or unauthorized access to your
-                      account, please contact E-Afghans support immediately by raising a support ticket. Our team will
-                      assist in securing your account and investigating the concern. </div>
+                    <div class="accordion-body"> If you suspect any security issues or unauthorized access to your account, please contact E-Afghans support at <a href="mailto:support@eafghans.com">support@eafghans.com</a>. Our team will assist in securing your account and investigating the concern. 
+                    </div>
+
                   </div>
                 </div>
 
@@ -1468,6 +1494,191 @@ for more information.
             </div>
             <!--            /data-security tab end-->
 
+            <!-- Help & Support Tab Content -->
+            <div class="tab-pane fade" id="help-support" role="tabpanel" aria-labelledby="help-support-tab">
+              <div class="accordion mt-3" id="helpSupportAccordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="helpQ1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#helpA1"
+                      aria-expanded="true" aria-controls="helpA1"> How do I reset my password? </button>
+                  </h2>
+                  <div id="helpA1" class="accordion-collapse collapse show" aria-labelledby="helpQ1"
+                    data-bs-parent="#helpSupportAccordion">
+                    <div class="accordion-body">If you're unable to log in, reset your password here: <a href="https://visaportal.eafghans.com/forgot-password">https://visaportal.eafghans.com/forgot-password</a>. Follow the instructions in the email to regain access.</div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="helpQ2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#helpA2"
+                      aria-expanded="false" aria-controls="helpA2"> What file formats and sizes are accepted for uploads? </button>
+                  </h2>
+                  <div id="helpA2" class="accordion-collapse collapse" aria-labelledby="helpQ2"
+                    data-bs-parent="#helpSupportAccordion">
+                    <div class="accordion-body">Accepted file formats: JPG, PNG, PDF. Individual files must not exceed 50 MB. For persistent issues contact <a href="mailto:support@eafghans.com">support@eafghans.com</a>.</div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="helpQ3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#helpA3"
+                      aria-expanded="false" aria-controls="helpA3"> My application status hasn’t updated — what now? </button>
+                  </h2>
+                  <div id="helpA3" class="accordion-collapse collapse" aria-labelledby="helpQ3"
+                    data-bs-parent="#helpSupportAccordion">
+                    <div class="accordion-body">See the processing time guidance:
+                      <ul>
+                        <li><strong>Standard:</strong> 1–4 weeks</li>
+                        <li><strong>Express:</strong> 1 business day (complete applications)</li>
+                      </ul>
+                      If status hasn't changed within the expected timeframe, email <a href="mailto:visa@afghanconsulate.ae">visa@afghanconsulate.ae</a> with your application reference for assistance.</div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="helpQ4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#helpA4"
+                      aria-expanded="false" aria-controls="helpA4"> How long does it take to get a response to my inquiry? </button>
+                  </h2>
+                  <div id="helpA4" class="accordion-collapse collapse" aria-labelledby="helpQ4"
+                    data-bs-parent="#helpSupportAccordion">
+                    <div class="accordion-body">Response times may vary based on ticket volume, but our support team aims to respond within 2 business days.</div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="helpQ5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#helpA5"
+                      aria-expanded="false" aria-controls="helpA5"> How can I get help if I encounter issues during the application process? </button>
+                  </h2>
+                  <div id="helpA5" class="accordion-collapse collapse" aria-labelledby="helpQ5"
+                    data-bs-parent="#helpSupportAccordion">
+                    <div class="accordion-body">For any inquiries regarding eligibility and requirements, refunds, updates, or changes related to your e-visa application, kindly reach out directly to <a href="mailto:visa@afghanconsulate.ae">visa@afghanconsulate.ae</a>.
+
+                      <p>For any technical issues encountered while using the platform, contact <a href="mailto:support@eafghans.com">support@eafghans.com</a>.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="helpQ6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#helpA6"
+                      aria-expanded="false" aria-controls="helpA6"> Who can I contact for emergency support?
+ </button>
+                  </h2>
+                  <div id="helpA6" class="accordion-collapse collapse" aria-labelledby="helpQ6"
+                    data-bs-parent="#helpSupportAccordion">
+                    <div class="accordion-body">
+For emergency issues, please contact <a href="tel:+97143988229">+971 4 398 8229</a>.</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Verification Tab Content -->
+            <div class="tab-pane fade" id="verification" role="tabpanel" aria-labelledby="verification-tab">
+              <div class="accordion mt-3" id="verificationAccordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="verificationQ1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#verificationA1"
+                      aria-expanded="true" aria-controls="verificationA1">Why do I have to complete the verification step?</button>
+                  </h2>
+                  <div id="verificationA1" class="accordion-collapse collapse show" aria-labelledby="verificationQ1"
+                    data-bs-parent="#verificationAccordion">
+                    <div class="accordion-body">The identity verification step is mandatory to safeguard the integrity of the visa application process and prevent fraudulent activities. This procedure ensures that the individual submitting the application is the rightful holder of the identification document provided.</div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="verificationQ2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#verificationA2"
+                      aria-expanded="false" aria-controls="verificationA2">I am having issues with the verification step. What should I do?</button>
+                  </h2>
+                  <div id="verificationA2" class="accordion-collapse collapse" aria-labelledby="verificationQ2"
+                    data-bs-parent="#verificationAccordion">
+                    <div class="accordion-body">
+                      <p>Your identity verification was not approved due to one or more of the following reasons:</p>
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th><strong>Rejection reasons:</strong></th>
+                            <th><strong>How to resolve this:</strong></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>The <strong>identity card image is unclear, cropped, blurred, or key details are not readable.</strong></td>
+                            <td>Ensure images are not cropped, blurry, or dark, and all details are clearly readable</td>
+                          </tr>
+                          <tr>
+                            <td><strong>The type of document provided is not accepted</strong> or compatible with the current verification process.</td>
+                            <td>Upload a clear, high-resolution image of your <strong>valid passport only (other document types are not accepted)</strong></td>
+                          </tr>
+                          <tr>
+                            <td>The <strong>information on the identity card does not match</strong> the details provided during registration.</td>
+                            <td>Ensure that the <strong>personal details on your passport exactly match your registration</strong> information</td>
+                          </tr>
+                          <tr>
+                            <td>The <strong>face captured during the liveness check does not match the photo</strong> on the identity card.</td>
+                            <td>Capture a clear selfie that closely matches your <strong>passport photo.</strong><br><br><strong>Note:</strong> For applicants under the age of 18, one of the parents must perform the online verification using the parent's passport and liveness check.</td>
+                          </tr>
+                          <tr>
+                            <td>The <strong>liveness (selfie) check was unsuccessful</strong> due to poor lighting, face obstruction, or incomplete capture.</td>
+                            <td>You <strong>complete the liveness check in good lighting, with your full face visible and no accessories (hats, masks, or glasses)</strong><br><br><strong>Use ONLY the front camera</strong> to take the selfie/liveness check.<br><br><strong>The applicant must perform the whole process of verification without any assistance from another person.</strong> Any presence of another person on the camera will affect the face match process.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="verificationQ3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#verificationA3"
+                      aria-expanded="false" aria-controls="verificationA3">My child has already grown up and he/she doesn't look the same anymore as the passport photo. How can I proceed with the verification?</button>
+                  </h2>
+                  <div id="verificationA3" class="accordion-collapse collapse" aria-labelledby="verificationQ3"
+                    data-bs-parent="#verificationAccordion">
+                    <div class="accordion-body">For applicants under the age of 18, one of the parents must perform the online verification on behalf of the child using the parent's passport and liveness check.</div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="verificationQ4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#verificationA4"
+                      aria-expanded="false" aria-controls="verificationA4">Is there any other method I can use to complete the identity verification?</button>
+                  </h2>
+                  <div id="verificationA4" class="accordion-collapse collapse" aria-labelledby="verificationQ4"
+                    data-bs-parent="#verificationAccordion">
+                    <div class="accordion-body">No. You must complete the identity verification online via the E-Afghans Visa Portal only.</div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="verificationQ5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#verificationA5"
+                      aria-expanded="false" aria-controls="verificationA5">Can I bypass the verification step?</button>
+                  </h2>
+                  <div id="verificationA5" class="accordion-collapse collapse" aria-labelledby="verificationQ5"
+                    data-bs-parent="#verificationAccordion">
+                    <div class="accordion-body">No. The identity verification is a mandatory step to the e-visa application. Failure to complete the verification step will result in ineligibility to apply for an e-visa in Afghanistan.</div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="verificationQ6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#verificationA6"
+                      aria-expanded="false" aria-controls="verificationA6">My passport is already expired. Is there any other way I can complete the verification using another document?</button>
+                  </h2>
+                  <div id="verificationA6" class="accordion-collapse collapse" aria-labelledby="verificationQ6"
+                    data-bs-parent="#verificationAccordion">
+                    <div class="accordion-body">We only accept valid passports for the identity verification. Any other document type presented during the verification step will be rejected.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
          
           </div>
         </div>
@@ -1490,6 +1701,8 @@ for more information.
                 <li><a href="/citizen-services/#passport-services/passport-new">Passport Renewal Application</a></li>
                <li><a href="/citizen-services/#special-services/emergency-assistance">Lost or Stolen Passport
                     Reporting </a></li>
+                     <li><a href="/e-visa/visa-requirements.html">e-Visa Services </a></li>
+
               </ul>
             </div>
             <div class="col ">
@@ -1584,15 +1797,7 @@ raise a support ticket
                <a class="navbar-brand mb-5" href="https://afghanconsulate.ae/">
                 <img src="/img/logo/consulate_lightbg.svg" alt="Logo" class="img-fluid my-2"> </a>
             </div>
-              <div data-aos="fade-up" data-aos-delay="200" class="get-app mt-4 mb-4">
-<p>Get the <strong>eAfghans</strong> app now on your device:</p>
-<div class="logos">
-  <a href="https://apps.apple.com/ae/app/e-afghans/id6755007493"> <i><img src="/img/logo/appstore-1.svg" alt="" /></i></a>
- <a href="https://play.google.com/store/apps/details?id=com.afg.eafghans"> <i><img src="/img/logo/google-play.svg" alt="" /></i></a> 
-</div>
-           
-
-            </div>
+            
            
           </div>
           <hr>

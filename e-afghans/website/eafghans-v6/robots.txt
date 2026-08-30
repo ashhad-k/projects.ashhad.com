@@ -1,0 +1,3 @@
+# Internal / draft pages — do not crawl or index
+User-agent: *
+Disallow: /xtras/
