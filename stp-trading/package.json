@@ -8,6 +8,6 @@
     "locomotive-scroll": "^5.0.1"
   },
   "devDependencies": {
-    "basic-ftp": "^5.0.5"
+    "basic-ftp": "^6.2.4"
   }
 }
